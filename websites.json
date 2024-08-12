@@ -1,0 +1,102 @@
+{
+    "ebay": {
+        "url": "https://www.ebay.com",
+        "search": "/sch/i.html?_nkw=",
+        "item": "/itm/"
+    },
+    "amazon": {
+        "url": "https://www.amazon.com",
+        "search": "/s?k=",
+        "item": "/dp/"
+    },
+    "airbnb": {
+        "url": "https://www.airbnb.ca/s/Italy/homes?tab_id=home_tab&refinement_paths%5B%5D=%2Fhomes&flexible_trip_lengths%5B%5D=one_week&monthly_start_date=2024-09-01&monthly_length=3&monthly_end_date=2024-12-01&price_filter_input_type=0&channel=EXPLORE&place_id=ChIJA9KNRIL-1BIRb15jJFz1LOI&date_picker_type=calendar&checkin=2024-08-15&checkout=2024-09-28&adults=2&source=structured_search_input_header&search_type=filter_change",
+        "search": "/s/",
+        "item": "/rooms/"
+    },
+    "ubereats": {
+        "url": "https://www.ubereats.com/ca/feed?diningMode=DELIVERY&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjEwODAlMjBSdWUlMjBTYWludC1NYXRoaWV1JTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyMjhkYmNlNzctMjY4Ny04YWQ0LTAwMGMtZjQwNTAzOTVkZGQ1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0NS40OTE5NDglMkMlMjJsb25naXR1ZGUlMjIlM0EtNzMuNTc2MzY4JTdE",
+        "search": "/search/?q=",
+        "item": "/order/"
+    },
+    "aliexpress": {
+        "url": "https://www.aliexpress.com",
+        "search": "/wholesale?catId=0&initiative_id=SB_20210901123447&SearchText=",
+        "item": "/item/"
+    },
+    "walmart": {
+        "url": "https://www.walmart.com",
+        "search": "/search/?query=",
+        "item": "/ip/"
+    },
+    "linkedin": {
+        "url": "https://www.linkedin.com",
+        "search": "/search/results/people/?keywords=",
+        "item": "/in/"
+    },
+    "glassdoor": {
+        "url": "https://www.glassdoor.ca/Job/index.htm",
+        "search": "/Job/",
+        "item": "/Job/"
+    },
+    "ziprecruiter": {
+        "url": "https://www.ziprecruiter.com/jobseeker/home?lvk=EQyHH0IdSf6f7hUZtyS95A.--NTwpOTufF",
+        "search": "/search?search=",
+        "item": "/job/"
+    },
+    "behance": {
+        "url": "https://www.behance.net",
+        "search": "/search?content=projects&sort=featured&time=week&featured=1&field=",
+        "item": "/gallery/"
+    },
+    "github": {
+        "url": "https://github.com",
+        "search": "/search?q=",
+        "item": "/"
+    },
+    "reddit": {
+        "url": "https://www.reddit.com",
+        "search": "/search/?q=",
+        "item": "/r/"
+    },
+    "quora": {
+        "url": "https://www.quora.com",
+        "search": "/search?q=",
+        "item": "/"
+    },
+    "facebook": {
+        "url": "https://www.facebook.com",
+        "search": "/search/top/?q=",
+        "item": "/"
+    },
+    "twitter": {
+        "url": "https://x.com/home?lang=en",
+        "search": "/search?q=",
+        "item": "/"
+    },
+    "pinterest": {
+        "url": "https://www.pinterest.com/ideas",
+        "search": "/search/pins/?q=",
+        "item": "/pin/"
+    },
+    "medium": {
+        "url": "https://medium.com",
+        "search": "/search?q=",
+        "item": "/"
+    },
+    "youtube": {
+        "url": "https://www.youtube.com",
+        "search": "/results?search_query=",
+        "item": "/watch?v="
+    },
+    "netflix": {
+        "url": "https://www.netflix.com/browse",
+        "search": "/search?q=",
+        "item": "/title/"
+    },
+    "twitch": {
+        "url": "https://www.twitch.tv",
+        "search": "/search?term=",
+        "item": "/videos/"
+    }
+}
