@@ -136,12 +136,10 @@ def generate_lh_production_reports():
 
     return results
 
-
-
 def main():
     # generate_lighthouse_reports(lh_report_original_dir)
-    # generate_lighthouse_reports(lh_report_llm_dir)
-    generate_lh_production_reports()
+    generate_lighthouse_reports(lh_report_llm_dir)
+    # generate_lh_production_reports()
     
 if __name__ == "__main__":
     main()
