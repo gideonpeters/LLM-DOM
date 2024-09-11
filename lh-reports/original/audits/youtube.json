@@ -1,0 +1,3486 @@
+{
+    "is-on-https": {
+        "id": "is-on-https",
+        "title": "Does not use HTTPS",
+        "description": "All sites should be protected with HTTPS, even ones that don't handle sensitive data. This includes avoiding [mixed content](https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content), where some resources are loaded over HTTP despite the initial request being served over HTTPS. HTTPS prevents intruders from tampering with or passively listening in on the communications between your app and your users, and is a prerequisite for HTTP/2 and many new web platform APIs. [Learn more about HTTPS](https://developer.chrome.com/docs/lighthouse/pwa/is-on-https/).",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "displayValue": "6 insecure requests found",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "Insecure URL"
+                },
+                {
+                    "key": "resolution",
+                    "valueType": "text",
+                    "label": "Request Resolution"
+                }
+            ],
+            "items": [
+                {
+                    "url": "http://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=YouTube+Sans:wght@300..900&display=swap",
+                    "resolution": "Allowed"
+                },
+                {
+                    "url": "http://fonts.gstatic.com/s/roboto/v32/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2",
+                    "resolution": "Allowed"
+                },
+                {
+                    "url": "http://googleads.g.doubleclick.net/pagead/id",
+                    "resolution": "Allowed"
+                },
+                {
+                    "url": "http://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmWUlfBBc4AMP6lQ.woff2",
+                    "resolution": "Allowed"
+                },
+                {
+                    "url": "http://fonts.gstatic.com/s/youtubesans/v30/Qw38ZQNGEDjaO2m6tqIqX5E-AVS5_rSejo46_PCTRspJ0OosolrBEJL3HO_T7fHoCVHx.woff2",
+                    "resolution": "Allowed"
+                },
+                {
+                    "url": "http://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmEU9fBBc4AMP6lQ.woff2",
+                    "resolution": "Allowed"
+                }
+            ]
+        }
+    },
+    "viewport": {
+        "id": "viewport",
+        "title": "Does not have a `<meta name=\"viewport\">` tag with `width` or `initial-scale`",
+        "description": "A `<meta name=\"viewport\">` not only optimizes your app for mobile screen sizes, but also prevents [a 300 millisecond delay to user input](https://developer.chrome.com/blog/300ms-tap-delay-gone-away/). [Learn more about using the viewport meta tag](https://developer.chrome.com/docs/lighthouse/pwa/viewport/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "explanation": "No `<meta name=\"viewport\">` tag found",
+        "metricSavings": {
+            "INP": 300
+        },
+        "guidanceLevel": 3
+    },
+    "first-contentful-paint": {
+        "id": "first-contentful-paint",
+        "title": "First Contentful Paint",
+        "description": "First Contentful Paint marks the time at which the first text or image is painted. [Learn more about the First Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/).",
+        "score": 0.15,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 4487.090500000001,
+        "numericUnit": "millisecond",
+        "displayValue": "4.5\u00a0s",
+        "scoringOptions": {
+            "p10": 1800,
+            "median": 3000
+        }
+    },
+    "largest-contentful-paint": {
+        "id": "largest-contentful-paint",
+        "title": "Largest Contentful Paint",
+        "description": "Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+        "score": 0,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 18560.129000000008,
+        "numericUnit": "millisecond",
+        "displayValue": "18.6\u00a0s",
+        "scoringOptions": {
+            "p10": 2500,
+            "median": 4000
+        }
+    },
+    "speed-index": {
+        "id": "speed-index",
+        "title": "Speed Index",
+        "description": "Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/).",
+        "score": 0.27,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 7413.195673208625,
+        "numericUnit": "millisecond",
+        "displayValue": "7.4\u00a0s",
+        "scoringOptions": {
+            "p10": 3387,
+            "median": 5800
+        }
+    },
+    "total-blocking-time": {
+        "id": "total-blocking-time",
+        "title": "Total Blocking Time",
+        "description": "Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds. [Learn more about the Total Blocking Time metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/).",
+        "score": 0.02,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 3084.1645000000008,
+        "numericUnit": "millisecond",
+        "displayValue": "3,080\u00a0ms",
+        "scoringOptions": {
+            "p10": 200,
+            "median": 600
+        }
+    },
+    "max-potential-fid": {
+        "id": "max-potential-fid",
+        "title": "Max Potential First Input Delay",
+        "description": "The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).",
+        "score": 0,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 2308.0000000000036,
+        "numericUnit": "millisecond",
+        "displayValue": "2,310\u00a0ms"
+    },
+    "errors-in-console": {
+        "id": "errors-in-console",
+        "title": "Browser errors were logged to the console",
+        "description": "Errors logged to the console indicate unresolved problems. They can come from network request failures and other browser concerns. [Learn more about this errors in console diagnostic audit](https://developer.chrome.com/docs/lighthouse/best-practices/errors-in-console/)",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "sourceLocation",
+                    "valueType": "source-location",
+                    "label": "Source"
+                },
+                {
+                    "key": "description",
+                    "valueType": "code",
+                    "label": "Description"
+                }
+            ],
+            "items": [
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_fill/creator_studio_red_logo/v1/24px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_fill/creator_studio_red_logo/v1/24px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_fill/creator_studio_red_logo/v1/24px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_fill/offline_no_content/v1/192px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_fill/offline_no_content/v1/192px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_fill/offline_no_content/v1/192px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_fill/play-arrow/v1/24px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_fill/play-arrow/v1/24px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_fill/play-arrow/v1/24px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_fill/shorts-comment/v2/32px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_fill/shorts-comment/v2/32px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_fill/shorts-comment/v2/32px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_fill/shorts-dislike/v2/32px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_fill/shorts-dislike/v2/32px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_fill/shorts-dislike/v2/32px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_fill/shorts-like/v2/32px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_fill/shorts-like/v2/32px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_fill/shorts-like/v2/32px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_fill/shorts-share/v2/32px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_fill/shorts-share/v2/32px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_fill/shorts-share/v2/32px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_fill/unplugged_logo/v1/24px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_fill/unplugged_logo/v1/24px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_fill/unplugged_logo/v1/24px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_fill/volume-off/v1/24px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_fill/volume-off/v1/24px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_fill/volume-off/v1/24px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_fill/volume-up/v1/24px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_fill/volume-up/v1/24px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_fill/volume-up/v1/24px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_fill/youtube_kids_round/v1/24px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_fill/youtube_kids_round/v1/24px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_fill/youtube_kids_round/v1/24px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_fill/youtube_music/v1/24px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_fill/youtube_music/v1/24px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_fill/youtube_music/v1/24px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_fill/youtube_round/v1/24px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_fill/youtube_round/v1/24px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_fill/youtube_round/v1/24px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_fill/yt-logo-updated/v2/24px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_fill/yt-logo-updated/v2/24px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_fill/yt-logo-updated/v2/24px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_outline/keyboard-arrow-up/v1/24px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_outline/keyboard-arrow-up/v1/24px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_outline/keyboard-arrow-up/v1/24px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_outline/refresh/v1/24px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_outline/refresh/v1/24px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_outline/refresh/v1/24px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_outline/waveform/v1/24px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_outline/waveform/v1/24px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://www.gstatic.com/youtube/img/icons/web/youtube_outline/waveform/v1/24px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to image at 'https://www.gstatic.com/youtube/img/icons/web/youtube_fill/yt-logo-updated/v2/24px.svg' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to XMLHttpRequest at 'http://googleads.g.doubleclick.net/pagead/id' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/youtube.html",
+                        "urlProvider": "network",
+                        "line": 674,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://googleads.g.doubleclick.net/pagead/id",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/yt-logo-updated/v2/24px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_outline/keyboard-arrow-up/v1/24px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_outline/refresh/v1/24px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/creator_studio_red_logo/v1/24px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/offline_no_content/v1/192px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/unplugged_logo/v1/24px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/youtube_kids_round/v1/24px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/youtube_music/v1/24px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/youtube_round/v1/24px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/play-arrow/v1/24px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/shorts-comment/v2/32px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/shorts-dislike/v2/32px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/shorts-like/v2/32px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/shorts-share/v2/32px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/volume-off/v1/24px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/volume-up/v1/24px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_outline/waveform/v1/24px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/yt-logo-updated/v2/24px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_outline/keyboard-arrow-up/v1/24px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_outline/refresh/v1/24px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/creator_studio_red_logo/v1/24px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/offline_no_content/v1/192px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/unplugged_logo/v1/24px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/youtube_kids_round/v1/24px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/youtube_music/v1/24px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/youtube_round/v1/24px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/play-arrow/v1/24px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/shorts-comment/v2/32px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/shorts-dislike/v2/32px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/shorts-like/v2/32px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/shorts-share/v2/32px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/volume-off/v1/24px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/volume-up/v1/24px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_outline/waveform/v1/24px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/yt-logo-updated/v2/24px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/yt-logo-updated/v2/24px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_outline/keyboard-arrow-up/v1/24px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_outline/refresh/v1/24px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/unplugged_logo/v1/24px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/youtube_kids_round/v1/24px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/creator_studio_red_logo/v1/24px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/offline_no_content/v1/192px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/youtube_music/v1/24px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/youtube_round/v1/24px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/play-arrow/v1/24px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/shorts-comment/v2/32px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/shorts-dislike/v2/32px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/shorts-like/v2/32px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/shorts-share/v2/32px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/volume-off/v1/24px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/volume-up/v1/24px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_outline/waveform/v1/24px.svg",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: the server responded with a status of 403 ()",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den-GB%26next%3D%252Fsignin_passive%26feature%3Dpassive&hl=en-GB&ifkv=Ab5oB3rUhqpFNIrOQ1_IlCB6kACcdzTRdICFrluUOT5w5FKJ4xcx5sxmLeW7IXGkUD3gQaqzNGyjAw&passive=true&service=youtube&uilel=3&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1862044193%3A1723578301708952&ddm=0",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: the server responded with a status of 404 (File not found)",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/s/search/audio/failure.mp3",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: the server responded with a status of 404 (File not found)",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/s/search/audio/no_input.mp3",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: the server responded with a status of 404 (File not found)",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/s/search/audio/open.mp3",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: the server responded with a status of 404 (File not found)",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/s/search/audio/success.mp3",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: the server responded with a status of 404 (File not found)",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/s/player/1c78e434/www-player.css",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: the server responded with a status of 404 (File not found)",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/s/player/1c78e434/player_ias.vflset/en_GB/base.js",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/youtubei/v1/att/get?prettyPrint=false",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/youtubei/v1/guide?prettyPrint=false",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/youtubei/v1/feedback?prettyPrint=false",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/youtubei/v1/att/get?prettyPrint=false",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                }
+            ]
+        }
+    },
+    "interactive": {
+        "id": "interactive",
+        "title": "Time to Interactive",
+        "description": "Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).",
+        "score": 0.02,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 19378.08455000001,
+        "numericUnit": "millisecond",
+        "displayValue": "19.4\u00a0s"
+    },
+    "deprecations": {
+        "id": "deprecations",
+        "title": "Uses deprecated APIs",
+        "description": "Deprecated APIs will eventually be removed from the browser. [Learn more about deprecated APIs](https://developer.chrome.com/docs/lighthouse/best-practices/deprecations/).",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "displayValue": "1 warning found",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "value",
+                    "valueType": "text",
+                    "label": "Deprecation / Warning"
+                },
+                {
+                    "key": "source",
+                    "valueType": "source-location",
+                    "label": "Source"
+                }
+            ],
+            "items": [
+                {
+                    "value": "UnloadHandler",
+                    "source": {
+                        "type": "source-location",
+                        "url": "https://www.youtube.com/s/desktop/ed565dc3/jsbin/desktop_polymer_legacy_browsers.vflset/desktop_polymer_legacy_browsers.js",
+                        "urlProvider": "network",
+                        "line": 10660,
+                        "column": 7
+                    }
+                }
+            ]
+        }
+    },
+    "mainthread-work-breakdown": {
+        "id": "mainthread-work-breakdown",
+        "title": "Minimize main-thread work",
+        "description": "Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to minimize main-thread work](https://developer.chrome.com/docs/lighthouse/performance/mainthread-work-breakdown/)",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 10004.111999999863,
+        "numericUnit": "millisecond",
+        "displayValue": "10.0\u00a0s",
+        "metricSavings": {
+            "TBT": 3100
+        },
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "groupLabel",
+                    "valueType": "text",
+                    "label": "Category"
+                },
+                {
+                    "key": "duration",
+                    "valueType": "ms",
+                    "granularity": 1,
+                    "label": "Time Spent"
+                }
+            ],
+            "items": [
+                {
+                    "group": "scriptEvaluation",
+                    "groupLabel": "Script Evaluation",
+                    "duration": 5833.755999999898
+                },
+                {
+                    "group": "other",
+                    "groupLabel": "Other",
+                    "duration": 1616.3959999999668
+                },
+                {
+                    "group": "styleLayout",
+                    "groupLabel": "Style & Layout",
+                    "duration": 1137.004
+                },
+                {
+                    "group": "parseHTML",
+                    "groupLabel": "Parse HTML & CSS",
+                    "duration": 692.4719999999998
+                },
+                {
+                    "group": "scriptParseCompile",
+                    "groupLabel": "Script Parsing & Compilation",
+                    "duration": 550.916
+                },
+                {
+                    "group": "garbageCollection",
+                    "groupLabel": "Garbage Collection",
+                    "duration": 150.22800000000004
+                },
+                {
+                    "group": "paintCompositeRender",
+                    "groupLabel": "Rendering",
+                    "duration": 23.33999999999999
+                }
+            ],
+            "sortedBy": [
+                "duration"
+            ]
+        },
+        "guidanceLevel": 1
+    },
+    "bootup-time": {
+        "id": "bootup-time",
+        "title": "Reduce JavaScript execution time",
+        "description": "Consider reducing the time spent parsing, compiling, and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to reduce Javascript execution time](https://developer.chrome.com/docs/lighthouse/performance/bootup-time/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 5555.211999999953,
+        "numericUnit": "millisecond",
+        "displayValue": "5.6\u00a0s",
+        "metricSavings": {
+            "TBT": 2350
+        },
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "total",
+                    "granularity": 1,
+                    "valueType": "ms",
+                    "label": "Total CPU Time"
+                },
+                {
+                    "key": "scripting",
+                    "granularity": 1,
+                    "valueType": "ms",
+                    "label": "Script Evaluation"
+                },
+                {
+                    "key": "scriptParseCompile",
+                    "granularity": 1,
+                    "valueType": "ms",
+                    "label": "Script Parse"
+                }
+            ],
+            "items": [
+                {
+                    "url": "https://www.youtube.com/s/desktop/ed565dc3/jsbin/desktop_polymer_legacy_browsers.vflset/desktop_polymer_legacy_browsers.js",
+                    "total": 5937.787999999955,
+                    "scripting": 3925.4319999999543,
+                    "scriptParseCompile": 491.108
+                },
+                {
+                    "url": "Unattributable",
+                    "total": 2258.58399999998,
+                    "scripting": 800.6439999999994,
+                    "scriptParseCompile": 0
+                },
+                {
+                    "url": "http://localhost:8000/youtube.html",
+                    "total": 444.7040000000001,
+                    "scripting": 42.78399999999999,
+                    "scriptParseCompile": 43.444
+                },
+                {
+                    "url": "https://www.youtube.com/s/desktop/ed565dc3/jsbin/web-animations-next-lite.min.vflset/web-animations-next-lite.min.js",
+                    "total": 290.49599999999947,
+                    "scripting": 248.79599999999954,
+                    "scriptParseCompile": 3.004
+                },
+                {
+                    "url": "https://www.youtube.com/s/_/ytmainappweb/_/ss/k=ytmainappweb.kevlar_base.cqHBwRr8PRU.L.X.O/am=AAAQKA/d=0/br=1/rs=AGKMywHY_fwuIl4Aksb_ywn5gQRTanasnw",
+                    "total": 219.796,
+                    "scripting": 0,
+                    "scriptParseCompile": 0
+                }
+            ],
+            "summary": {
+                "wastedMs": 5555.211999999953
+            },
+            "sortedBy": [
+                "total"
+            ]
+        },
+        "guidanceLevel": 1
+    },
+    "uses-rel-preconnect": {
+        "id": "uses-rel-preconnect",
+        "title": "Preconnect to required origins",
+        "description": "Consider adding `preconnect` or `dns-prefetch` resource hints to establish early connections to important third-party origins. [Learn how to preconnect to required origins](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 281.36499999713897,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 280\u00a0ms",
+        "warnings": [],
+        "metricSavings": {
+            "LCP": 300,
+            "FCP": 0
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "wastedMs",
+                    "valueType": "timespanMs",
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "url": "https://i.ytimg.com",
+                    "wastedMs": 281.36499999713897
+                },
+                {
+                    "url": "http://fonts.gstatic.com",
+                    "wastedMs": 152.91
+                }
+            ],
+            "overallSavingsMs": 281.36499999713897,
+            "sortedBy": [
+                "wastedMs"
+            ]
+        },
+        "guidanceLevel": 3
+    },
+    "third-party-summary": {
+        "id": "third-party-summary",
+        "title": "Reduce the impact of third-party code",
+        "description": "Third-party code can significantly impact load performance. Limit the number of redundant third-party providers and try to load third-party code after your page has primarily finished loading. [Learn how to minimize third-party impact](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "displayValue": "Third-party code blocked the main thread for 2,890\u00a0ms",
+        "metricSavings": {
+            "TBT": 2900
+        },
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "entity",
+                    "valueType": "text",
+                    "label": "Third-Party",
+                    "subItemsHeading": {
+                        "key": "url",
+                        "valueType": "url"
+                    }
+                },
+                {
+                    "key": "transferSize",
+                    "granularity": 1,
+                    "valueType": "bytes",
+                    "label": "Transfer Size",
+                    "subItemsHeading": {
+                        "key": "transferSize"
+                    }
+                },
+                {
+                    "key": "blockingTime",
+                    "granularity": 1,
+                    "valueType": "ms",
+                    "label": "Main-Thread Blocking Time",
+                    "subItemsHeading": {
+                        "key": "blockingTime"
+                    }
+                }
+            ],
+            "items": [
+                {
+                    "mainThreadTime": 6535.651999999979,
+                    "blockingTime": 2890.0280060976775,
+                    "transferSize": 2114936,
+                    "tbtImpact": 2890.0280060976775,
+                    "entity": "YouTube",
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "url": "https://www.youtube.com/s/desktop/ed565dc3/jsbin/desktop_polymer_legacy_browsers.vflset/desktop_polymer_legacy_browsers.js",
+                                "mainThreadTime": 5937.787999999976,
+                                "blockingTime": 2669.674609138561,
+                                "transferSize": 1778874,
+                                "tbtImpact": 2669.674609138561
+                            },
+                            {
+                                "url": "https://www.youtube.com/s/_/ytmainappweb/_/ss/k=ytmainappweb.kevlar_base.cqHBwRr8PRU.L.X.O/am=AAAQKA/d=0/br=1/rs=AGKMywHY_fwuIl4Aksb_ywn5gQRTanasnw",
+                                "mainThreadTime": 219.796,
+                                "blockingTime": 170,
+                                "transferSize": 250090,
+                                "tbtImpact": 170
+                            },
+                            {
+                                "url": "https://www.youtube.com/s/desktop/ed565dc3/jsbin/web-animations-next-lite.min.vflset/web-animations-next-lite.min.js",
+                                "mainThreadTime": 290.4960000000031,
+                                "blockingTime": 40.981554300421756,
+                                "transferSize": 15239,
+                                "tbtImpact": 40.981554300421756
+                            },
+                            {
+                                "url": "https://www.youtube.com/s/desktop/ed565dc3/jsbin/webcomponents-all-noPatch.vflset/webcomponents-all-noPatch.js",
+                                "mainThreadTime": 49.40399999999999,
+                                "blockingTime": 7.018817526830047,
+                                "transferSize": 33460,
+                                "tbtImpact": 7.018817526830047
+                            },
+                            {
+                                "url": "https://www.youtube.com/s/desktop/ed565dc3/jsbin/spf.vflset/spf.js",
+                                "mainThreadTime": 11.335999999999999,
+                                "blockingTime": 0.8800496431896647,
+                                "transferSize": 13697,
+                                "tbtImpact": 0.8800496431896647
+                            },
+                            {
+                                "url": "https://www.youtube.com/s/desktop/ed565dc3/jsbin/www-tampering.vflset/www-tampering.js",
+                                "mainThreadTime": 4.095999999999999,
+                                "blockingTime": 0.4448029785912979,
+                                "transferSize": 4131,
+                                "tbtImpact": 0.4448029785912979
+                            },
+                            {
+                                "url": "https://www.youtube.com/s/desktop/ed565dc3/jsbin/network.vflset/network.js",
+                                "mainThreadTime": 3.88,
+                                "blockingTime": 0.3166614955011653,
+                                "transferSize": 5644,
+                                "tbtImpact": 0.3166614955011653
+                            },
+                            {
+                                "url": "https://www.youtube.com/s/desktop/ed565dc3/jsbin/scheduler.vflset/scheduler.js",
+                                "mainThreadTime": 15.139999999999967,
+                                "blockingTime": 0.3079739373253574,
+                                "transferSize": 3768,
+                                "tbtImpact": 0.3079739373253574
+                            },
+                            {
+                                "url": "https://www.youtube.com/s/desktop/ed565dc3/jsbin/www-i18n-constants-en_GB.vflset/www-i18n-constants.js",
+                                "mainThreadTime": 1.5,
+                                "blockingTime": 0.1628917157927674,
+                                "transferSize": 1725,
+                                "tbtImpact": 0.1628917157927674
+                            },
+                            {
+                                "url": "https://www.youtube.com/s/desktop/ed565dc3/jsbin/fetch-polyfill.vflset/fetch-polyfill.js",
+                                "mainThreadTime": 1.468,
+                                "blockingTime": 0.15941669252228508,
+                                "transferSize": 2857,
+                                "tbtImpact": 0.15941669252228508
+                            },
+                            {
+                                "url": "https://www.youtube.com/s/desktop/ed565dc3/jsbin/intersection-observer.min.vflset/intersection-observer.min.js",
+                                "mainThreadTime": 0.748,
+                                "blockingTime": 0.08122866894200342,
+                                "transferSize": 2147,
+                                "tbtImpact": 0.08122866894200342
+                            },
+                            {
+                                "url": "https://www.youtube.com/s/desktop/ed565dc3/cssbin/www-main-desktop-watch-page-skeleton.css",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 1601,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.youtube.com/s/desktop/ed565dc3/cssbin/www-main-desktop-home-page-skeleton.css",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 1059,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.youtube.com/s/desktop/ed565dc3/cssbin/www-onepick.css",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 527,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://i.ytimg.com/generate_204",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 117,
+                                "tbtImpact": 0
+                            }
+                        ]
+                    }
+                },
+                {
+                    "mainThreadTime": 3.184,
+                    "blockingTime": 0.00640234495526433,
+                    "transferSize": 5623,
+                    "tbtImpact": 0,
+                    "entity": "Other Google APIs/SDKs",
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "url": "https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den-GB%26next%3D%252Fsignin_passive%26feature%3Dpassive&hl=en-GB&ifkv=Ab5oB3rUhqpFNIrOQ1_IlCB6kACcdzTRdICFrluUOT5w5FKJ4xcx5sxmLeW7IXGkUD3gQaqzNGyjAw&passive=true&service=youtube&uilel=3&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1862044193%3A1723578301708952&ddm=0",
+                                "mainThreadTime": 3.184,
+                                "blockingTime": 0.00640234495526433,
+                                "transferSize": 2559,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den-GB%26next%3D%252Fsignin_passive%26feature%3Dpassive&hl=en-GB",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 1397,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://accounts.google.com/InteractiveLogin?continue=https://www.youtube.com/signin?action_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den-GB%26next%3D%252Fsignin_passive%26feature%3Dpassive&hl=en-GB&passive=true&service=youtube&uilel=3&ifkv=Ab5oB3qxIx9i-Zx2fxg9RTtp_PVu2jeVfU_jL15Tgsi4pJ91_iVr6spYmmNbkPFrbHtObATcOzclQQ",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 865,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.google.com/pagead/lvz?evtid=ACd6Ktzl63c4wgi3_3UcqZc7Lpxhz47DRd_ePeho6qbwpyy2ZOHwHe2HgD9tJmcqIpod23UnAs-W_i9cYyMliVKbY-aSvV73pQ&req_ts=1723487680&pg=MainAppBootstrap%3AHome&az=1&sigh=AB9vU41CUP4IBYA_ikH3SDApvudnfe8dsg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 401,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.google.ca/pagead/lvz?evtid=ACd6Ktzl63c4wgi3_3UcqZc7Lpxhz47DRd_ePeho6qbwpyy2ZOHwHe2HgD9tJmcqIpod23UnAs-W_i9cYyMliVKbY-aSvV73pQ&req_ts=1723487680&pg=MainAppBootstrap%3AHome&az=1&sigh=AB9vU41CUP4IBYA_ikH3SDApvudnfe8dsg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 401,
+                                "tbtImpact": 0
+                            }
+                        ]
+                    }
+                },
+                {
+                    "mainThreadTime": 0,
+                    "blockingTime": 0,
+                    "transferSize": 117059,
+                    "tbtImpact": 0,
+                    "entity": "Google Fonts",
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "url": "http://fonts.gstatic.com/s/youtubesans/v30/Qw38ZQNGEDjaO2m6tqIqX5E-AVS5_rSejo46_PCTRspJ0OosolrBEJL3HO_T7fHoCVHx.woff2",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 33015,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "http://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=YouTube+Sans:wght@300..900&display=swap",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 15285,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "http://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmEU9fBBc4AMP6lQ.woff2",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 14192,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "http://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmWUlfBBc4AMP6lQ.woff2",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 14168,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "http://fonts.gstatic.com/s/roboto/v32/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 14148,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_outline/volume_off/v4/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 937,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_outline/x_mark/v4/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 715,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_outline/gear/v6/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 668,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_outline/radar_live/v7/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 529,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_outline/fire/v8/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 518,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_fill/broadcast/v2/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 516,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_outline/thumb_up/v17/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 510,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_fill/radar_live/v7/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 508,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_outline/youtube_shorts/v8/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 497,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_outline/question_circle/v5/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 467,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_outline/arrow_time/v8/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 451,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_outline/person_circle/v8/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 449,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_outline/broadcast/v2/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 447,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_outline/bell/v8/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 427,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_outline/lightbulb/v1/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 415,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_fill/gear/v6/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 408,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_outline/fashion/v2/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 404,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_outline/gaming/v1/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 404,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_fill/fire/v8/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 383,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_fill/youtube_shorts/v8/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 382,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_outline/location_point/v5/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 381,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_outline/volume_on/v3/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 380,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_fill/bag/v4/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 378,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_fill/mic/v8/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 376,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_fill/bell/v8/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 365,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_outline/trophy/v1/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 364,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_outline/bag/v4/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 363,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_fill/fashion/v2/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 363,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_fill/thumb_up/v17/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 353,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_outline/audio/v5/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 350,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_outline/mic/v8/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 348,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_fill/arrow_time/v8/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 348,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_outline/news/v2/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 348,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_fill/trophy/v1/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 345,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_fill/gaming/v1/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 329,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_outline/search/v9/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 319,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_outline/trash_can/v5/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 319,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_outline/video_camera_add/v1/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 319,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_fill/search/v9/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 315,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_outline/subscriptions/v7/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 315,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_outline/overflow_vertical/v10/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 309,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_fill/news/v2/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 309,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_outline/clock/v7/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 307,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_fill/lightbulb/v1/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 306,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_outline/play_arrow/v7/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 306,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_outline/add_circle/v3/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 305,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_outline/flag/v6/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 304,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_fill/clapperboard/v1/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 302,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_fill/home/v7/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 301,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_outline/home/v7/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 299,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_fill/clock/v7/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 297,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_fill/list_play_arrow/v7/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 287,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_fill/subscriptions/v7/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 286,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_fill/library/v6/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 285,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_outline/download/v9/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 282,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_fill/arrow_up/v2/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 279,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_outline/copy/v2/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 277,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_outline/my_videos/v6/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 276,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_outline/overflow_horizontal/v4/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 276,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_fill/arrow_down/v2/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 276,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_fill/pause/v6/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 276,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_outline/arrow_up/v2/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 272,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_outline/clapperboard/v1/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 271,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_outline/message_bubble_alert/v6/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 271,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_fill/message_bubble_alert/v6/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 270,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_fill/flag/v6/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 268,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_outline/library/v6/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 263,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_outline/arrow_down/v2/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 261,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_fill/audio/v5/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 260,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_outline/list_play_arrow/v7/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 260,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_outline/bars_3/v2/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 257,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_fill/download/v9/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 238,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://fonts.gstatic.com/s/i/youtube_fill/bars_3/v2/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 202,
+                                "tbtImpact": 0
+                            }
+                        ]
+                    }
+                },
+                {
+                    "mainThreadTime": 0,
+                    "blockingTime": 0,
+                    "transferSize": 0,
+                    "tbtImpact": 0,
+                    "entity": "Google/Doubleclick Ads",
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "url": "http://googleads.g.doubleclick.net/pagead/id",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            }
+                        ]
+                    }
+                },
+                {
+                    "mainThreadTime": 0,
+                    "blockingTime": 0,
+                    "transferSize": 0,
+                    "tbtImpact": 0,
+                    "entity": "Google CDN",
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/yt-logo-updated/v2/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_outline/keyboard-arrow-up/v1/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_outline/refresh/v1/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/creator_studio_red_logo/v1/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/offline_no_content/v1/192px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/unplugged_logo/v1/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/youtube_kids_round/v1/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/youtube_music/v1/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/youtube_round/v1/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/play-arrow/v1/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/shorts-comment/v2/32px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/shorts-dislike/v2/32px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/shorts-like/v2/32px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/shorts-share/v2/32px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/volume-off/v1/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_fill/volume-up/v1/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.gstatic.com/youtube/img/icons/web/youtube_outline/waveform/v1/24px.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            }
+                        ]
+                    }
+                }
+            ],
+            "summary": {
+                "wastedBytes": 2237618,
+                "wastedMs": 2890.034408442633
+            },
+            "isEntityGrouped": true
+        },
+        "guidanceLevel": 1
+    },
+    "largest-contentful-paint-element": {
+        "id": "largest-contentful-paint-element",
+        "title": "Largest Contentful Paint element",
+        "description": "This is the largest contentful element painted within the viewport. [Learn more about the Largest Contentful Paint element](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "displayValue": "18,560\u00a0ms",
+        "metricSavings": {
+            "LCP": 16050
+        },
+        "details": {
+            "type": "list",
+            "items": [
+                {
+                    "type": "table",
+                    "headings": [
+                        {
+                            "key": "node",
+                            "valueType": "node",
+                            "label": "Element"
+                        }
+                    ],
+                    "items": [
+                        {
+                            "node": {
+                                "type": "node",
+                                "lhId": "page-0-DIV",
+                                "path": "1,HTML,1,BODY,4,YTD-APP,7,DIV,3,YTD-PAGE-MANAGER,2,YTD-BROWSE,11,YTD-TWO-COLUMN-BROWSE-RESULTS-RENDERER,2,DIV,0,YTD-RICH-GRID-RENDERER,7,DIV,0,YTD-RICH-SECTION-RENDERER,2,DIV,0,YTD-FEED-NUDGE-RENDERER,2,DIV,1,DIV,1,DIV,0,DIV",
+                                "selector": "div#dismissible > div#content-wrapper > div#text-container > div#title-container",
+                                "boundingRect": {
+                                    "top": 104,
+                                    "bottom": 136,
+                                    "left": 341,
+                                    "right": 639,
+                                    "width": 299,
+                                    "height": 32
+                                },
+                                "snippet": "<div id=\"title-container\" class=\"style-scope ytd-feed-nudge-renderer\">",
+                                "nodeLabel": "Try searching to get started"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "table",
+                    "headings": [
+                        {
+                            "key": "phase",
+                            "valueType": "text",
+                            "label": "Phase"
+                        },
+                        {
+                            "key": "percent",
+                            "valueType": "text",
+                            "label": "% of LCP"
+                        },
+                        {
+                            "key": "timing",
+                            "valueType": "ms",
+                            "label": "Timing"
+                        }
+                    ],
+                    "items": [
+                        {
+                            "phase": "TTFB",
+                            "timing": 455.391,
+                            "percent": "2%"
+                        },
+                        {
+                            "phase": "Load Delay",
+                            "timing": 0,
+                            "percent": "0%"
+                        },
+                        {
+                            "phase": "Load Time",
+                            "timing": 0,
+                            "percent": "0%"
+                        },
+                        {
+                            "phase": "Render Delay",
+                            "timing": 18104.73800000001,
+                            "percent": "98%"
+                        }
+                    ]
+                }
+            ]
+        },
+        "guidanceLevel": 1
+    },
+    "aria-dialog-name": {
+        "id": "aria-dialog-name",
+        "title": "Elements with `role=\"dialog\"` or `role=\"alertdialog\"` do not have accessible names.",
+        "description": "ARIA dialog elements without accessible names may prevent screen readers users from discerning the purpose of these elements. [Learn how to make ARIA dialog elements more accessible](https://dequeuniversity.com/rules/axe/4.9/aria-dialog-name).",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "node",
+                    "valueType": "node",
+                    "subItemsHeading": {
+                        "key": "relatedNode",
+                        "valueType": "node"
+                    },
+                    "label": "Failing Elements"
+                }
+            ],
+            "items": [
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-0-DIV",
+                        "path": "1,HTML,1,BODY,4,YTD-APP,6,YTD-MINIPLAYER,3,DIV",
+                        "selector": "body > ytd-app > ytd-miniplayer.style-scope > div.miniplayer",
+                        "boundingRect": {
+                            "top": 1499,
+                            "bottom": 2173,
+                            "left": 569,
+                            "right": 969,
+                            "width": 400,
+                            "height": 674
+                        },
+                        "snippet": "<div class=\"miniplayer style-scope ytd-miniplayer\" role=\"dialog\">",
+                        "nodeLabel": "\n            \n          ",
+                        "explanation": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+                    }
+                }
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "impact": "serious",
+                "tags": [
+                    "cat.aria",
+                    "best-practice"
+                ]
+            }
+        }
+    },
+    "aria-tooltip-name": {
+        "id": "aria-tooltip-name",
+        "title": "ARIA `tooltip` elements do not have accessible names.",
+        "description": "When a tooltip element doesn't have an accessible name, screen readers announce it with a generic name, making it unusable for users who rely on screen readers. [Learn how to name `tooltip` elements](https://dequeuniversity.com/rules/axe/4.9/aria-tooltip-name).",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "node",
+                    "valueType": "node",
+                    "subItemsHeading": {
+                        "key": "relatedNode",
+                        "valueType": "node"
+                    },
+                    "label": "Failing Elements"
+                }
+            ],
+            "items": [
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-1-TP-YT-PAPER-TOOLTIP",
+                        "path": "1,HTML,1,BODY,4,YTD-APP,7,DIV,0,DIV,0,YTD-MASTHEAD,6,DIV,1,DIV,1,YTD-SEARCHBOX,3,BUTTON,1,TP-YT-PAPER-TOOLTIP",
+                        "selector": "div#center > ytd-searchbox#search > button#search-icon-legacy > tp-yt-paper-tooltip.style-scope",
+                        "boundingRect": {
+                            "top": 40,
+                            "bottom": 40,
+                            "left": 627,
+                            "right": 627,
+                            "width": 0,
+                            "height": 0
+                        },
+                        "snippet": "<tp-yt-paper-tooltip prefix=\"\" class=\"style-scope ytd-searchbox\" role=\"tooltip\" tabindex=\"-1\">",
+                        "nodeLabel": "div#center > ytd-searchbox#search > button#search-icon-legacy > tp-yt-paper-tooltip.style-scope",
+                        "explanation": "Fix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-2-TP-YT-PAPER-TOOLTIP",
+                        "path": "1,HTML,1,BODY,4,YTD-APP,7,DIV,0,DIV,0,YTD-MASTHEAD,6,DIV,1,DIV,3,DIV,0,YTD-BUTTON-RENDERER,1,TP-YT-PAPER-TOOLTIP",
+                        "selector": "div#center > div#voice-search-button > ytd-button-renderer.style-scope > tp-yt-paper-tooltip",
+                        "boundingRect": {
+                            "top": 48,
+                            "bottom": 48,
+                            "left": 700,
+                            "right": 700,
+                            "width": 0,
+                            "height": 0
+                        },
+                        "snippet": "<tp-yt-paper-tooltip offset=\"8\" role=\"tooltip\" tabindex=\"-1\">",
+                        "nodeLabel": "div#center > div#voice-search-button > ytd-button-renderer.style-scope > tp-yt-paper-tooltip",
+                        "explanation": "Fix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+                    }
+                }
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "impact": "serious",
+                "tags": [
+                    "cat.aria",
+                    "wcag2a",
+                    "wcag412",
+                    "EN-301-549",
+                    "EN-9.4.1.2"
+                ]
+            }
+        }
+    },
+    "total-byte-weight": {
+        "id": "total-byte-weight",
+        "title": "Avoid enormous network payloads",
+        "description": "Large network payloads cost users real money and are highly correlated with long load times. [Learn how to reduce payload sizes](https://developer.chrome.com/docs/lighthouse/performance/total-byte-weight/).",
+        "score": 0.5,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 2757455,
+        "numericUnit": "byte",
+        "displayValue": "Total size was 2,693\u00a0KiB",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "totalBytes",
+                    "valueType": "bytes",
+                    "label": "Transfer Size"
+                }
+            ],
+            "items": [
+                {
+                    "url": "https://www.youtube.com/s/desktop/ed565dc3/jsbin/desktop_polymer_legacy_browsers.vflset/desktop_polymer_legacy_browsers.js",
+                    "totalBytes": 1778874
+                },
+                {
+                    "url": "http://localhost:8000/youtube.html",
+                    "totalBytes": 514071
+                },
+                {
+                    "url": "https://www.youtube.com/s/_/ytmainappweb/_/ss/k=ytmainappweb.kevlar_base.cqHBwRr8PRU.L.X.O/am=AAAQKA/d=0/br=1/rs=AGKMywHY_fwuIl4Aksb_ywn5gQRTanasnw",
+                    "totalBytes": 250090
+                },
+                {
+                    "url": "https://www.youtube.com/s/desktop/ed565dc3/jsbin/webcomponents-all-noPatch.vflset/webcomponents-all-noPatch.js",
+                    "totalBytes": 33460
+                },
+                {
+                    "url": "http://fonts.gstatic.com/s/youtubesans/v30/Qw38ZQNGEDjaO2m6tqIqX5E-AVS5_rSejo46_PCTRspJ0OosolrBEJL3HO_T7fHoCVHx.woff2",
+                    "totalBytes": 33015
+                },
+                {
+                    "url": "http://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=YouTube+Sans:wght@300..900&display=swap",
+                    "totalBytes": 15285
+                },
+                {
+                    "url": "https://www.youtube.com/s/desktop/ed565dc3/jsbin/web-animations-next-lite.min.vflset/web-animations-next-lite.min.js",
+                    "totalBytes": 15239
+                },
+                {
+                    "url": "http://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmEU9fBBc4AMP6lQ.woff2",
+                    "totalBytes": 14192
+                },
+                {
+                    "url": "http://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmWUlfBBc4AMP6lQ.woff2",
+                    "totalBytes": 14168
+                },
+                {
+                    "url": "http://fonts.gstatic.com/s/roboto/v32/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2",
+                    "totalBytes": 14148
+                }
+            ],
+            "sortedBy": [
+                "totalBytes"
+            ]
+        },
+        "guidanceLevel": 1
+    },
+    "render-blocking-resources": {
+        "id": "render-blocking-resources",
+        "title": "Eliminate render-blocking resources",
+        "description": "Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn how to eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 1270,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 1,270\u00a0ms",
+        "metricSavings": {
+            "FCP": 1250,
+            "LCP": 1250
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "totalBytes",
+                    "valueType": "bytes",
+                    "label": "Transfer Size"
+                },
+                {
+                    "key": "wastedMs",
+                    "valueType": "timespanMs",
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "url": "https://www.youtube.com/s/desktop/ed565dc3/jsbin/web-animations-next-lite.min.vflset/web-animations-next-lite.min.js",
+                    "totalBytes": 15239,
+                    "wastedMs": 153
+                },
+                {
+                    "url": "https://www.youtube.com/s/desktop/ed565dc3/jsbin/webcomponents-all-noPatch.vflset/webcomponents-all-noPatch.js",
+                    "totalBytes": 33460,
+                    "wastedMs": 153
+                },
+                {
+                    "url": "https://www.youtube.com/s/desktop/ed565dc3/jsbin/scheduler.vflset/scheduler.js",
+                    "totalBytes": 3768,
+                    "wastedMs": 810
+                },
+                {
+                    "url": "https://www.youtube.com/s/desktop/ed565dc3/jsbin/spf.vflset/spf.js",
+                    "totalBytes": 13697,
+                    "wastedMs": 153
+                },
+                {
+                    "url": "http://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=YouTube+Sans:wght@300..900&display=swap",
+                    "totalBytes": 15285,
+                    "wastedMs": 807
+                }
+            ],
+            "overallSavingsMs": 1270
+        },
+        "guidanceLevel": 2
+    },
+    "unused-css-rules": {
+        "id": "unused-css-rules",
+        "title": "Reduce unused CSS",
+        "description": "Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 1370,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 253\u00a0KiB",
+        "metricSavings": {
+            "FCP": 0,
+            "LCP": 1350
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "totalBytes",
+                    "valueType": "bytes",
+                    "label": "Transfer Size"
+                },
+                {
+                    "key": "wastedBytes",
+                    "valueType": "bytes",
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "url": "https://www.youtube.com/s/_/ytmainappweb/_/ss/k=ytmainappweb.kevlar_base.cqHBwRr8PRU.L.X.O/am=AAAQKA/d=0/br=1/rs=AGKMywHY_fwuIl4Aksb_ywn5gQRTanasnw",
+                    "wastedBytes": 244029,
+                    "wastedPercent": 97.79949919729401,
+                    "totalBytes": 249520
+                },
+                {
+                    "url": "http://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=YouTube+Sans:wght@300..900&display=swap",
+                    "wastedBytes": 14669,
+                    "wastedPercent": 100,
+                    "totalBytes": 14669
+                }
+            ],
+            "overallSavingsMs": 1370,
+            "overallSavingsBytes": 258698,
+            "sortedBy": [
+                "wastedBytes"
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "metricSavings": {
+                    "FCP": 0,
+                    "LCP": 1370
+                }
+            }
+        },
+        "guidanceLevel": 1
+    },
+    "unused-javascript": {
+        "id": "unused-javascript",
+        "title": "Reduce unused JavaScript",
+        "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 5190,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 994\u00a0KiB",
+        "metricSavings": {
+            "FCP": 0,
+            "LCP": 5200
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "subItemsHeading": {
+                        "key": "source",
+                        "valueType": "code"
+                    },
+                    "label": "URL"
+                },
+                {
+                    "key": "totalBytes",
+                    "valueType": "bytes",
+                    "subItemsHeading": {
+                        "key": "sourceBytes"
+                    },
+                    "label": "Transfer Size"
+                },
+                {
+                    "key": "wastedBytes",
+                    "valueType": "bytes",
+                    "subItemsHeading": {
+                        "key": "sourceWastedBytes"
+                    },
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "url": "https://www.youtube.com/s/desktop/ed565dc3/jsbin/desktop_polymer_legacy_browsers.vflset/desktop_polymer_legacy_browsers.js",
+                    "totalBytes": 1778789,
+                    "wastedBytes": 1017367,
+                    "wastedPercent": 57.19438846685693
+                }
+            ],
+            "overallSavingsMs": 5190,
+            "overallSavingsBytes": 1017367,
+            "sortedBy": [
+                "wastedBytes"
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "metricSavings": {
+                    "FCP": 0,
+                    "LCP": 5190
+                }
+            }
+        },
+        "guidanceLevel": 1
+    },
+    "uses-text-compression": {
+        "id": "uses-text-compression",
+        "title": "Enable text compression",
+        "description": "Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more about text compression](https://developer.chrome.com/docs/lighthouse/performance/uses-text-compression/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 1950,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 372\u00a0KiB",
+        "metricSavings": {
+            "FCP": 1950,
+            "LCP": 1950
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "totalBytes",
+                    "valueType": "bytes",
+                    "label": "Transfer Size"
+                },
+                {
+                    "key": "wastedBytes",
+                    "valueType": "bytes",
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "url": "http://localhost:8000/youtube.html",
+                    "totalBytes": 513882,
+                    "wastedBytes": 380693
+                }
+            ],
+            "overallSavingsMs": 1950,
+            "overallSavingsBytes": 380693,
+            "sortedBy": [
+                "wastedBytes"
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "metricSavings": {
+                    "FCP": 1950,
+                    "LCP": 1950
+                }
+            }
+        },
+        "guidanceLevel": 3
+    },
+    "legacy-javascript": {
+        "id": "legacy-javascript",
+        "title": "Avoid serving legacy JavaScript to modern browsers",
+        "description": "Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. For your bundled JavaScript, adopt a modern script deployment strategy using module/nomodule feature detection to reduce the amount of code shipped to modern browsers, while retaining support for legacy browsers. [Learn how to use modern JavaScript](https://web.dev/articles/publish-modern-javascript)",
+        "score": 0.5,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 0,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 9\u00a0KiB",
+        "metricSavings": {
+            "FCP": 0,
+            "LCP": 0
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "subItemsHeading": {
+                        "key": "location",
+                        "valueType": "source-location"
+                    },
+                    "label": "URL"
+                },
+                {
+                    "key": null,
+                    "valueType": "code",
+                    "subItemsHeading": {
+                        "key": "signal"
+                    },
+                    "label": ""
+                },
+                {
+                    "key": "wastedBytes",
+                    "valueType": "bytes",
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "url": "https://www.youtube.com/s/desktop/ed565dc3/jsbin/webcomponents-all-noPatch.vflset/webcomponents-all-noPatch.js",
+                    "wastedBytes": 9077,
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "signal": "Array.from",
+                                "location": {
+                                    "type": "source-location",
+                                    "url": "https://www.youtube.com/s/desktop/ed565dc3/jsbin/webcomponents-all-noPatch.vflset/webcomponents-all-noPatch.js",
+                                    "urlProvider": "network",
+                                    "line": 16,
+                                    "column": 13
+                                }
+                            }
+                        ]
+                    },
+                    "totalBytes": 0
+                }
+            ],
+            "overallSavingsMs": 0,
+            "overallSavingsBytes": 9077,
+            "sortedBy": [
+                "wastedBytes"
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "metricSavings": {
+                    "FCP": 0,
+                    "LCP": 0
+                }
+            }
+        },
+        "guidanceLevel": 2
+    },
+    "charset": {
+        "id": "charset",
+        "title": "Charset declaration is missing or occurs too late in the HTML",
+        "description": "A character encoding declaration is required. It can be done with a `<meta>` tag in the first 1024 bytes of the HTML or in the Content-Type HTTP response header. [Learn more about declaring the character encoding](https://developer.chrome.com/docs/lighthouse/best-practices/charset/).",
+        "score": 0,
+        "scoreDisplayMode": "binary"
+    },
+    "dom-size": {
+        "id": "dom-size",
+        "title": "Avoid an excessive DOM size",
+        "description": "A large DOM will increase memory usage, cause longer [style calculations](https://developers.google.com/web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations), and produce costly [layout reflows](https://developers.google.com/speed/articles/reflow). [Learn how to avoid an excessive DOM size](https://developer.chrome.com/docs/lighthouse/performance/dom-size/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 4068,
+        "numericUnit": "element",
+        "displayValue": "4,068 elements",
+        "metricSavings": {
+            "TBT": 400
+        },
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "statistic",
+                    "valueType": "text",
+                    "label": "Statistic"
+                },
+                {
+                    "key": "node",
+                    "valueType": "node",
+                    "label": "Element"
+                },
+                {
+                    "key": "value",
+                    "valueType": "numeric",
+                    "label": "Value"
+                }
+            ],
+            "items": [
+                {
+                    "statistic": "Total DOM Elements",
+                    "value": {
+                        "type": "numeric",
+                        "granularity": 1,
+                        "value": 4068
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-16-path",
+                        "path": "1,HTML,1,BODY,4,YTD-APP,7,DIV,3,YTD-PAGE-MANAGER,3,YTD-WATCH-FLEXY,10,DIV,0,DIV,0,DIV,1,DIV,1,YTD-PLAYLIST-PANEL-RENDERER,2,DIV,0,DIV,0,DIV,0,DIV,2,YT-ICON-BUTTON,4,BUTTON,0,YT-ICON,4,SPAN,0,DIV,0,svg,0,path",
+                        "selector": "span.yt-icon-shape > div > svg > path",
+                        "boundingRect": {
+                            "top": 0,
+                            "bottom": 0,
+                            "left": 0,
+                            "right": 0,
+                            "width": 0,
+                            "height": 0
+                        },
+                        "snippet": "<path d=\"m12.71 12 8.15 8.15-.71.71L12 12.71l-8.15 8.15-.71-.71L11.29 12 3.15 3.85l\u2026\">",
+                        "nodeLabel": "span.yt-icon-shape > div > svg > path"
+                    },
+                    "statistic": "Maximum DOM Depth",
+                    "value": {
+                        "type": "numeric",
+                        "granularity": 1,
+                        "value": 21
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-17-defs",
+                        "path": "1,HTML,1,BODY,24,IRON-ICONSET-SVG,0,svg,0,defs",
+                        "selector": "body > iron-iconset-svg > svg > defs",
+                        "boundingRect": {
+                            "top": 0,
+                            "bottom": 0,
+                            "left": 0,
+                            "right": 0,
+                            "width": 0,
+                            "height": 0
+                        },
+                        "snippet": "<defs>",
+                        "nodeLabel": "body > iron-iconset-svg > svg > defs"
+                    },
+                    "statistic": "Maximum Child Elements",
+                    "value": {
+                        "type": "numeric",
+                        "granularity": 1,
+                        "value": 468
+                    }
+                }
+            ]
+        },
+        "guidanceLevel": 1
+    },
+    "inspector-issues": {
+        "id": "inspector-issues",
+        "title": "Issues were logged in the `Issues` panel in Chrome Devtools",
+        "description": "Issues logged to the `Issues` panel in Chrome Devtools indicate unresolved problems. They can come from network request failures, insufficient security controls, and other browser concerns. Open up the Issues panel in Chrome DevTools for more details on each issue.",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "issueType",
+                    "valueType": "text",
+                    "subItemsHeading": {
+                        "key": "url",
+                        "valueType": "url"
+                    },
+                    "label": "Issue type"
+                }
+            ],
+            "items": [
+                {
+                    "issueType": "Cookie",
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "url": "https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den-GB%26next%3D%252Fsignin_passive%26feature%3Dpassive&hl=en-GB"
+                            },
+                            {
+                                "url": "https://accounts.google.com/InteractiveLogin?continue=https://www.youtube.com/signin?action_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den-GB%26next%3D%252Fsignin_passive%26feature%3Dpassive&hl=en-GB&passive=true&service=youtube&uilel=3&ifkv=Ab5oB3qxIx9i-Zx2fxg9RTtp_PVu2jeVfU_jL15Tgsi4pJ91_iVr6spYmmNbkPFrbHtObATcOzclQQ"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    "uses-passive-event-listeners": {
+        "id": "uses-passive-event-listeners",
+        "title": "Does not use passive listeners to improve scrolling performance",
+        "description": "Consider marking your touch and wheel event listeners as `passive` to improve your page's scroll performance. [Learn more about adopting passive event listeners](https://developer.chrome.com/docs/lighthouse/best-practices/uses-passive-event-listeners/).",
+        "score": 0.5,
+        "scoreDisplayMode": "metricSavings",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "source",
+                    "valueType": "source-location",
+                    "label": "Source"
+                }
+            ],
+            "items": [
+                {
+                    "source": {
+                        "type": "source-location",
+                        "url": "https://www.youtube.com/s/desktop/ed565dc3/jsbin/desktop_polymer_legacy_browsers.vflset/desktop_polymer_legacy_browsers.js",
+                        "urlProvider": "network",
+                        "line": 3705,
+                        "column": 54
+                    }
+                },
+                {
+                    "source": {
+                        "type": "source-location",
+                        "url": "https://www.youtube.com/s/desktop/ed565dc3/jsbin/desktop_polymer_legacy_browsers.vflset/desktop_polymer_legacy_browsers.js",
+                        "urlProvider": "network",
+                        "line": 14063,
+                        "column": 102
+                    }
+                },
+                {
+                    "source": {
+                        "type": "source-location",
+                        "url": "https://www.youtube.com/s/desktop/ed565dc3/jsbin/desktop_polymer_legacy_browsers.vflset/desktop_polymer_legacy_browsers.js",
+                        "urlProvider": "network",
+                        "line": 7245,
+                        "column": 252
+                    }
+                }
+            ]
+        },
+        "guidanceLevel": 3
+    },
+    "font-size": {
+        "id": "font-size",
+        "title": "Document doesn't use legible font sizes",
+        "description": "Font sizes less than 12px are too small to be legible and require mobile visitors to \u201cpinch to zoom\u201d in order to read. Strive to have >60% of page text \u226512px. [Learn more about legible font sizes](https://developer.chrome.com/docs/lighthouse/seo/font-size/).",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "explanation": "Text is illegible because there's no viewport meta tag optimized for mobile screens."
+    },
+    "crawlable-anchors": {
+        "id": "crawlable-anchors",
+        "title": "Links are not crawlable",
+        "description": "Search engines may use `href` attributes on links to crawl websites. Ensure that the `href` attribute of anchor elements links to an appropriate destination, so more pages of the site can be discovered. [Learn how to make links crawlable](https://support.google.com/webmasters/answer/9112205)",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "node",
+                    "valueType": "node",
+                    "label": "Uncrawlable Link"
+                }
+            ],
+            "items": [
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-5-A",
+                        "path": "1,HTML,1,BODY,4,YTD-APP,6,YTD-MINIPLAYER,3,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,H1,0,A",
+                        "selector": "div#info-bar > div.metadata > h1.title > a.style-scope",
+                        "boundingRect": {
+                            "top": 0,
+                            "bottom": 0,
+                            "left": 0,
+                            "right": 0,
+                            "width": 0,
+                            "height": 0
+                        },
+                        "snippet": "<a tabindex=\"0\" class=\"style-scope ytd-miniplayer\">",
+                        "nodeLabel": "\n              \n            "
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-9-A",
+                        "path": "1,HTML,1,BODY,4,YTD-APP,7,DIV,0,DIV,0,YTD-MASTHEAD,6,DIV,2,DIV,1,DIV,0,YTD-TOPBAR-MENU-BUTTON-RENDERER,3,DIV,0,A",
+                        "selector": "div#buttons > ytd-topbar-menu-button-renderer.style-scope > div#button > a.yt-simple-endpoint",
+                        "boundingRect": {
+                            "top": 8,
+                            "bottom": 48,
+                            "left": 818,
+                            "right": 858,
+                            "width": 40,
+                            "height": 40
+                        },
+                        "snippet": "<a class=\"yt-simple-endpoint style-scope ytd-topbar-menu-button-renderer\" tabindex=\"-1\">",
+                        "nodeLabel": "Settings"
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-12-A",
+                        "path": "1,HTML,1,BODY,4,YTD-APP,7,DIV,3,YTD-PAGE-MANAGER,3,YTD-WATCH-FLEXY,10,DIV,0,DIV,0,DIV,1,DIV,8,YTD-WATCH-METADATA,2,DIV,1,DIV,0,DIV,0,YTD-VIDEO-OWNER-RENDERER,2,A",
+                        "selector": "div#top-row > div#owner > ytd-video-owner-renderer.style-scope > a.yt-simple-endpoint",
+                        "boundingRect": {
+                            "top": 0,
+                            "bottom": 0,
+                            "left": 0,
+                            "right": 0,
+                            "width": 0,
+                            "height": 0
+                        },
+                        "snippet": "<a class=\"yt-simple-endpoint style-scope ytd-video-owner-renderer\" tabindex=\"-1\">",
+                        "nodeLabel": "div#top-row > div#owner > ytd-video-owner-renderer.style-scope > a.yt-simple-endpoint"
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-13-A",
+                        "path": "1,HTML,1,BODY,4,YTD-APP,7,DIV,3,YTD-PAGE-MANAGER,3,YTD-WATCH-FLEXY,10,DIV,0,DIV,0,DIV,1,DIV,9,DIV,0,DIV,1,DIV,0,YTD-VIDEO-PRIMARY-INFO-RENDERER,2,DIV,1,A",
+                        "selector": "div#info-contents > ytd-video-primary-info-renderer.style-scope > div#container > a.yt-simple-endpoint",
+                        "boundingRect": {
+                            "top": 0,
+                            "bottom": 0,
+                            "left": 0,
+                            "right": 0,
+                            "width": 0,
+                            "height": 0
+                        },
+                        "snippet": "<a class=\"yt-simple-endpoint style-scope ytd-video-primary-info-renderer\" hidden=\"\">",
+                        "nodeLabel": "div#info-contents > ytd-video-primary-info-renderer.style-scope > div#container > a.yt-simple-endpoint"
+                    }
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,1627 @@
+{
+    "first-contentful-paint": {
+        "id": "first-contentful-paint",
+        "title": "First Contentful Paint",
+        "description": "First Contentful Paint marks the time at which the first text or image is painted. [Learn more about the First Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/).",
+        "score": 0.02,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 6700.8240000000005,
+        "numericUnit": "millisecond",
+        "displayValue": "6.7\u00a0s",
+        "scoringOptions": {
+            "p10": 1800,
+            "median": 3000
+        }
+    },
+    "largest-contentful-paint": {
+        "id": "largest-contentful-paint",
+        "title": "Largest Contentful Paint",
+        "description": "Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+        "score": 0.01,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 8534.796000000002,
+        "numericUnit": "millisecond",
+        "displayValue": "8.5\u00a0s",
+        "scoringOptions": {
+            "p10": 2500,
+            "median": 4000
+        }
+    },
+    "speed-index": {
+        "id": "speed-index",
+        "title": "Speed Index",
+        "description": "Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/).",
+        "score": 0.03,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 12333.695708250605,
+        "numericUnit": "millisecond",
+        "displayValue": "12.3\u00a0s",
+        "scoringOptions": {
+            "p10": 3387,
+            "median": 5800
+        }
+    },
+    "total-blocking-time": {
+        "id": "total-blocking-time",
+        "title": "Total Blocking Time",
+        "description": "Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds. [Learn more about the Total Blocking Time metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/).",
+        "score": 0.85,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 241.5,
+        "numericUnit": "millisecond",
+        "displayValue": "240\u00a0ms",
+        "scoringOptions": {
+            "p10": 200,
+            "median": 600
+        }
+    },
+    "max-potential-fid": {
+        "id": "max-potential-fid",
+        "title": "Max Potential First Input Delay",
+        "description": "The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).",
+        "score": 0.73,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 182,
+        "numericUnit": "millisecond",
+        "displayValue": "180\u00a0ms"
+    },
+    "errors-in-console": {
+        "id": "errors-in-console",
+        "title": "Browser errors were logged to the console",
+        "description": "Errors logged to the console indicate unresolved problems. They can come from network request failures and other browser concerns. [Learn more about this errors in console diagnostic audit](https://developer.chrome.com/docs/lighthouse/best-practices/errors-in-console/)",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "sourceLocation",
+                    "valueType": "source-location",
+                    "label": "Source"
+                },
+                {
+                    "key": "description",
+                    "valueType": "code",
+                    "label": "Description"
+                }
+            ],
+            "items": [
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_CONNECTION_REFUSED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://localhost/sgtm/g/collect?v=2&tid=G-2P6Q8PGG16&gtm=45je4880v874143154z8551874za200zb551874&_p=1723578834710&gcs=G100&gcd=13m3m3m3m5&npa=1&dma_cps=-&dma=0&tag_exp=0&cid=1102558929.1723578839&ecid=532384627&ul=en-us&sr=412x823&_fplc=0&ur=CA-QC&uaa=&uab=64&uafvl=Not)A%253BBrand%3B99.0.0.0%7CHeadlessChrome%3B127.0.6533.100%7CChromium%3B127.0.6533.100&uamb=1&uam=moto%20g%20power%20(2022)&uap=Android&uapv=11.0&uaw=0&are=1&frm=0&pscdl=denied&ec_mode=c&sst.rnd=1290981299.1723578839&sst.gse=1&sst.etld=google.ca&sst.gcd=13m3m3m3m5&sst.tft=1723578834710&sst.ude=0&_s=1&dp=%2Fairbnb.html&sid=1723578839&sct=1&seg=0&dl=http%3A%2F%2Flocalhost%2Fairbnb.html&dt=Italy%20Sublets%2C%20Short%20Term%20Rentals%20%26%20Rooms%20for%20Rent%20-%20Airbnb%20Italy&en=page_view&_fv=1&_nsi=1&_ss=2&ep.content_group=Other%20group&ep.fb_matching_url=http%3A%2F%2Flocalhost%3A8000%2Fairbnb.html&ep.fb_matching_city=&ep.fb_matching_country=&ep.fb_matching_state=&ep.fb_matching_email=&ep.fb_matching_phone=&ep.fb_matching_first_name=&ep.fb_matching_last_name=&ep.fb_matching_gender=&ep.fb_matching_dob=&ep.has_account=false&ep.fb_matching_eid_alternative=_&ep.tag_source=cGTM&ep.OnetrustActiveGroups=&ep.snap_uuid=&ep.page_hostname=localhost&ep.user_data.sha256_email_address=&ep.user_data.sha256_phone_number=&ep.user_data._tag_mode=CODE&up.OnetrustActiveGroups=&up.content_group=Other%20group&tfd=5376&richsstsse",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/tracking/jitney/logging/messages",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/api/v2/get-data-layer-variables?locale=en-CA",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/api/v2/get-data-layer-variables?locale=en-CA",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/tracking/jitney/logging/messages",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/tracking/jitney/logging/messages",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/api/v2/marketing_event_tracking?locale=en-CA",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/tracking/jitney/logging/messages",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "exception",
+                    "description": "HyperloopNotFoundError: No route found at /airbnb.html\n    at https://a0.muscache.com/airbnb/static/packages/web/common/frontend/core-guest-loop/routeHandler.3fb3d8a56e.js:14:579",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://a0.muscache.com/airbnb/static/packages/web/common/frontend/core-guest-loop/routeHandler.3fb3d8a56e.js",
+                        "urlProvider": "network",
+                        "line": 13,
+                        "column": 578
+                    }
+                },
+                {
+                    "source": "exception",
+                    "description": "Object",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://a0.muscache.com/airbnb/static/packages/web/en-CA/3af3.8f718fc83c.js",
+                        "urlProvider": "network",
+                        "line": 76,
+                        "column": 1228
+                    }
+                },
+                {
+                    "source": "exception",
+                    "description": "Object",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://a0.muscache.com/airbnb/static/packages/web/common/31c5.cd5006b406.js",
+                        "urlProvider": "network",
+                        "line": 19,
+                        "column": 952
+                    }
+                }
+            ]
+        }
+    },
+    "interactive": {
+        "id": "interactive",
+        "title": "Time to Interactive",
+        "description": "Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).",
+        "score": 0.1,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 13854.483800000002,
+        "numericUnit": "millisecond",
+        "displayValue": "13.9\u00a0s"
+    },
+    "mainthread-work-breakdown": {
+        "id": "mainthread-work-breakdown",
+        "title": "Minimize main-thread work",
+        "description": "Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to minimize main-thread work](https://developer.chrome.com/docs/lighthouse/performance/mainthread-work-breakdown/)",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 7515.923999999914,
+        "numericUnit": "millisecond",
+        "displayValue": "7.5\u00a0s",
+        "metricSavings": {
+            "TBT": 250
+        },
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "groupLabel",
+                    "valueType": "text",
+                    "label": "Category"
+                },
+                {
+                    "key": "duration",
+                    "valueType": "ms",
+                    "granularity": 1,
+                    "label": "Time Spent"
+                }
+            ],
+            "items": [
+                {
+                    "group": "other",
+                    "groupLabel": "Other",
+                    "duration": 3579.087999999937
+                },
+                {
+                    "group": "styleLayout",
+                    "groupLabel": "Style & Layout",
+                    "duration": 2125.1199999999994
+                },
+                {
+                    "group": "scriptEvaluation",
+                    "groupLabel": "Script Evaluation",
+                    "duration": 1121.9639999999765
+                },
+                {
+                    "group": "paintCompositeRender",
+                    "groupLabel": "Rendering",
+                    "duration": 221.26799999999983
+                },
+                {
+                    "group": "parseHTML",
+                    "groupLabel": "Parse HTML & CSS",
+                    "duration": 214.32400000000032
+                },
+                {
+                    "group": "scriptParseCompile",
+                    "groupLabel": "Script Parsing & Compilation",
+                    "duration": 205.39200000000002
+                },
+                {
+                    "group": "garbageCollection",
+                    "groupLabel": "Garbage Collection",
+                    "duration": 48.768000000000015
+                }
+            ],
+            "sortedBy": [
+                "duration"
+            ]
+        },
+        "guidanceLevel": 1
+    },
+    "third-party-summary": {
+        "id": "third-party-summary",
+        "title": "Reduce the impact of third-party code",
+        "description": "Third-party code can significantly impact load performance. Limit the number of redundant third-party providers and try to load third-party code after your page has primarily finished loading. [Learn how to minimize third-party impact](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "displayValue": "Third-party code blocked the main thread for 450\u00a0ms",
+        "metricSavings": {
+            "TBT": 400
+        },
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "entity",
+                    "valueType": "text",
+                    "label": "Third-Party",
+                    "subItemsHeading": {
+                        "key": "url",
+                        "valueType": "url"
+                    }
+                },
+                {
+                    "key": "transferSize",
+                    "granularity": 1,
+                    "valueType": "bytes",
+                    "label": "Transfer Size",
+                    "subItemsHeading": {
+                        "key": "transferSize"
+                    }
+                },
+                {
+                    "key": "blockingTime",
+                    "granularity": 1,
+                    "valueType": "ms",
+                    "label": "Main-Thread Blocking Time",
+                    "subItemsHeading": {
+                        "key": "blockingTime"
+                    }
+                }
+            ],
+            "items": [
+                {
+                    "mainThreadTime": 891.8600000000001,
+                    "blockingTime": 262.89182737609144,
+                    "transferSize": 1064541,
+                    "tbtImpact": 228.89182737609138,
+                    "entity": "muscache.com",
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "url": "https://a0.muscache.com/airbnb/static/packages/web/en-CA/frontend/core-guest-loop/apps/core-guest-spa/client.470a5d2665.js",
+                                "mainThreadTime": 154.24000000000018,
+                                "blockingTime": 103.90568726518995,
+                                "transferSize": 58761,
+                                "tbtImpact": 103.90568726518995
+                            },
+                            {
+                                "url": "https://a0.muscache.com/airbnb/static/packages/web/common/frontend/core-guest-loop/apps/core-guest-spa/initializer.189b558447.js",
+                                "mainThreadTime": 233.10000000000008,
+                                "blockingTime": 76.37721474372042,
+                                "transferSize": 3956,
+                                "tbtImpact": 76.37721474372042
+                            },
+                            {
+                                "url": "https://a0.muscache.com/airbnb/static/packages/web/common/frontend/core-guest-loop/apps/core-guest-spa/client.014acaf867.css",
+                                "mainThreadTime": 84.452,
+                                "blockingTime": 34,
+                                "transferSize": 158125,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://a0.muscache.com/airbnb/static/packages/web/common/9024.eee6159c60.js",
+                                "mainThreadTime": 72.29599999999996,
+                                "blockingTime": 15.143205382614209,
+                                "transferSize": 18903,
+                                "tbtImpact": 15.143205382614209
+                            },
+                            {
+                                "url": "https://a0.muscache.com/airbnb/static/packages/web/common/676e.59c15edae4.js",
+                                "mainThreadTime": 62.27999999999999,
+                                "blockingTime": 8.660634158905756,
+                                "transferSize": 24193,
+                                "tbtImpact": 8.660634158905756
+                            },
+                            {
+                                "url": "https://a0.muscache.com/airbnb/static/packages/web/common/frontend/hyperloop-browser/coreV2.2517bd5b12.js",
+                                "mainThreadTime": 37.15599999999996,
+                                "blockingTime": 3.18405357867405,
+                                "transferSize": 26048,
+                                "tbtImpact": 3.18405357867405
+                            },
+                            {
+                                "url": "https://a0.muscache.com/airbnb/static/packages/web/common/08da.0499dd44bb.js",
+                                "mainThreadTime": 8.536000000000001,
+                                "blockingTime": 2.835034636084291,
+                                "transferSize": 46759,
+                                "tbtImpact": 2.835034636084291
+                            },
+                            {
+                                "url": "https://a0.muscache.com/airbnb/static/packages/web/common/frontend/core-guest-loop/routeHandler.3fb3d8a56e.js",
+                                "mainThreadTime": 23.796,
+                                "blockingTime": 2.548297279931439,
+                                "transferSize": 8333,
+                                "tbtImpact": 2.548297279931439
+                            },
+                            {
+                                "url": "https://a0.muscache.com/airbnb/static/packages/web/en-CA/ca89.cb3f3f0eb3.js",
+                                "mainThreadTime": 4.716,
+                                "blockingTime": 1.5663101386790004,
+                                "transferSize": 21121,
+                                "tbtImpact": 1.5663101386790004
+                            },
+                            {
+                                "url": "https://a0.muscache.com/airbnb/static/packages/web/en-CA/9ff5.22a5f9f54b.js",
+                                "mainThreadTime": 3.3200000000000003,
+                                "blockingTime": 1.1026610815136313,
+                                "transferSize": 14602,
+                                "tbtImpact": 1.1026610815136313
+                            },
+                            {
+                                "url": "https://a0.muscache.com/airbnb/static/packages/web/en-CA/2953.6f915e37cf.js",
+                                "mainThreadTime": 3.2840000000000003,
+                                "blockingTime": 1.0907045155694801,
+                                "transferSize": 12840,
+                                "tbtImpact": 1.0907045155694801
+                            },
+                            {
+                                "url": "https://a0.muscache.com/airbnb/static/packages/web/common/frontend/niobe/minimalist/index.8735093809.js",
+                                "mainThreadTime": 22.412000000000006,
+                                "blockingTime": 1.0588962353476208,
+                                "transferSize": 12863,
+                                "tbtImpact": 1.0588962353476208
+                            },
+                            {
+                                "url": "https://a0.muscache.com/airbnb/static/packages/web/common/322b.cb5041703b.js",
+                                "mainThreadTime": 3.1319999999999997,
+                                "blockingTime": 1.040221237138753,
+                                "transferSize": 13701,
+                                "tbtImpact": 1.040221237138753
+                            },
+                            {
+                                "url": "https://a0.muscache.com/airbnb/static/packages/web/common/92d4.f248e80107.js",
+                                "mainThreadTime": 2.7479999999999998,
+                                "blockingTime": 0.9126845337348739,
+                                "transferSize": 12776,
+                                "tbtImpact": 0.9126845337348739
+                            },
+                            {
+                                "url": "https://a0.muscache.com/airbnb/static/packages/web/common/ccf1.64d4608ad1.js",
+                                "mainThreadTime": 2.736,
+                                "blockingTime": 0.9086990117530886,
+                                "transferSize": 11975,
+                                "tbtImpact": 0.9086990117530886
+                            },
+                            {
+                                "url": "https://a0.muscache.com/airbnb/static/packages/web/common/f4c9.fac2c7f552.js",
+                                "mainThreadTime": 2.672,
+                                "blockingTime": 0.8874428945189081,
+                                "transferSize": 12872,
+                                "tbtImpact": 0.8874428945189081
+                            },
+                            {
+                                "url": "https://a0.muscache.com/airbnb/static/packages/web/common/85ed.0673d5cab7.js",
+                                "mainThreadTime": 10.883999999999977,
+                                "blockingTime": 0.8821288652106641,
+                                "transferSize": 7536,
+                                "tbtImpact": 0.8821288652106641
+                            },
+                            {
+                                "url": "https://a0.muscache.com/airbnb/static/packages/web/en-CA/7feb.74fbcbd7ad.js",
+                                "mainThreadTime": 2.612,
+                                "blockingTime": 0.8675152846123908,
+                                "transferSize": 12159,
+                                "tbtImpact": 0.8675152846123908
+                            },
+                            {
+                                "url": "https://a0.muscache.com/airbnb/static/packages/web/common/75d4.0ca0aa9a05.js",
+                                "mainThreadTime": 18,
+                                "blockingTime": 0.8409451380699662,
+                                "transferSize": 11542,
+                                "tbtImpact": 0.8409451380699662
+                            },
+                            {
+                                "url": "https://a0.muscache.com/airbnb/static/packages/web/common/frontend/stays-search/routes/StaysSearchRoute/StaysSearchRoute.73ec66b7b3.js",
+                                "mainThreadTime": 2.4880000000000004,
+                                "blockingTime": 0.8263315574716928,
+                                "transferSize": 11236,
+                                "tbtImpact": 0.8263315574716928
+                            },
+                            {
+                                "url": "https://a0.muscache.com/airbnb/static/packages/web/common/22f4.4d35ad6da8.js",
+                                "mainThreadTime": 2.352,
+                                "blockingTime": 0.7811623083492099,
+                                "transferSize": 10501,
+                                "tbtImpact": 0.7811623083492099
+                            },
+                            {
+                                "url": "https://a0.muscache.com/airbnb/static/packages/web/common/ab12.92369a5132.js",
+                                "mainThreadTime": 2.2920000000000003,
+                                "blockingTime": 0.761234698441488,
+                                "transferSize": 11585,
+                                "tbtImpact": 0.761234698441488
+                            },
+                            {
+                                "url": "https://a0.muscache.com/airbnb/static/packages/web/common/2111.73041a4254.js",
+                                "mainThreadTime": 2.2520000000000002,
+                                "blockingTime": 0.7479496251720824,
+                                "transferSize": 9746,
+                                "tbtImpact": 0.7479496251720824
+                            },
+                            {
+                                "url": "https://a0.muscache.com/airbnb/static/packages/web/common/1742.dec90c42cb.js",
+                                "mainThreadTime": 2.204,
+                                "blockingTime": 0.7320075372449415,
+                                "transferSize": 9271,
+                                "tbtImpact": 0.7320075372449415
+                            },
+                            {
+                                "url": "https://a0.muscache.com/airbnb/static/packages/web/common/frontend/stays-search/routes/StaysSearchRoute/StaysSearchRoute.prepare.52f11a7018.js",
+                                "mainThreadTime": 2.0359999999999996,
+                                "blockingTime": 0.6762102295059703,
+                                "transferSize": 9637,
+                                "tbtImpact": 0.6762102295059703
+                            },
+                            {
+                                "url": "https://a0.muscache.com/airbnb/static/packages/web/common/f29e.66fc6bd74f.js",
+                                "mainThreadTime": 3.38,
+                                "blockingTime": 0.36196187620466214,
+                                "transferSize": 15958,
+                                "tbtImpact": 0.36196187620466214
+                            },
+                            {
+                                "url": "https://a0.muscache.com/airbnb/static/packages/web/common/frontend/guest-header/query/HeaderQuery.prepare.ed6fcb10c6.js",
+                                "mainThreadTime": 0.5800000000000001,
+                                "blockingTime": 0.19263356243287932,
+                                "transferSize": 2527,
+                                "tbtImpact": 0.19263356243287932
+                            },
+                            {
+                                "url": "https://a0.muscache.com/im/pictures/86b42fed-2741-4537-a104-eb69c00be2b5.jpg?im_w=720",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 87463,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://a0.muscache.com/airbnb/static/packages/web/en-CA/frontend/airmetro/browser/asyncRequire.931f2ce3c6.js",
+                                "mainThreadTime": 34.12799999999999,
+                                "blockingTime": 0,
+                                "transferSize": 79264,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://a0.muscache.com/airbnb/static/packages/web/common/5807.fcdb56d3cc.js",
+                                "mainThreadTime": 53.74799999999999,
+                                "blockingTime": 0,
+                                "transferSize": 71305,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://a0.muscache.com/airbnb/static/airbnb-dls-web/build/fonts/cereal-variable/AirbnbCerealVF_W_Wght.9c00198218646e3b3f345aa4bc3fda51.woff2",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 67790,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://a0.muscache.com/im/pictures/miso/Hosting-26987541/original/0267dc42-ce4f-4172-9056-91e660225600.jpeg?im_w=720",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 38297,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://a0.muscache.com/im/pictures/miso/Hosting-709979045179513474/original/24602b8d-040c-4e7f-b7aa-ef1e22a2b303.jpeg?im_w=720",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 33293,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://a0.muscache.com/im/pictures/8ac911b8-a8f0-4816-865e-2098c9fdd10b.jpg?im_w=720",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 30472,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://a0.muscache.com/im/pictures/miso/Hosting-700546111369530041/original/32ad1d28-beed-4e9e-88f2-79e811928c28.jpeg?im_w=720",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 24790,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://a0.muscache.com/airbnb/static/packages/web/en-CA/3af3.8f718fc83c.js",
+                                "mainThreadTime": 16.923999999999978,
+                                "blockingTime": 0,
+                                "transferSize": 21160,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://a0.muscache.com/airbnb/static/packages/web/common/a8e1.67d243b5f8.js",
+                                "mainThreadTime": 3.2680000000000002,
+                                "blockingTime": 0,
+                                "transferSize": 17874,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://a0.muscache.com/airbnb/static/packages/web/common/31c5.cd5006b406.js",
+                                "mainThreadTime": 3.5599999999999996,
+                                "blockingTime": 0,
+                                "transferSize": 15302,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://a0.muscache.com/airbnb/static/packages/dls/dls-lite_cereal-47d27fa833e062fe3413637eb751001f.css",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 2269,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://a0.muscache.com/airbnb/static/packages/web/common/frontend/hyperloop-browser/shims_post_modules.3a508a05ae.js",
+                                "mainThreadTime": 2.02,
+                                "blockingTime": 0,
+                                "transferSize": 2258,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://a0.muscache.com/airbnb/static/packages/web/common/frontend/hyperloop-browser/metroRequire.f041c10b23.js",
+                                "mainThreadTime": 1.46,
+                                "blockingTime": 0,
+                                "transferSize": 1845,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://a0.muscache.com/airbnb/static/packages/web/common/frontend/moment-more-formats/src/locale/en-ca.cbdc6c7fc4.js",
+                                "mainThreadTime": 6.795999999999997,
+                                "blockingTime": 0,
+                                "transferSize": 1633,
+                                "tbtImpact": 0
+                            }
+                        ]
+                    }
+                },
+                {
+                    "mainThreadTime": 384.90400000000045,
+                    "blockingTime": 182.99999999999895,
+                    "transferSize": 207580,
+                    "tbtImpact": 182.99999999999895,
+                    "entity": "Google Tag Manager",
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "url": "https://www.googletagmanager.com/gtag/js?id=G-2P6Q8PGG16&l=dataLayer&cx=c",
+                                "mainThreadTime": 187.12400000000045,
+                                "blockingTime": 131.999999999999,
+                                "transferSize": 98725,
+                                "tbtImpact": 131.999999999999
+                            },
+                            {
+                                "url": "https://www.googletagmanager.com/gtm.js?id=GTM-46MK",
+                                "mainThreadTime": 197.78,
+                                "blockingTime": 50.99999999999995,
+                                "transferSize": 108855,
+                                "tbtImpact": 50.99999999999995
+                            }
+                        ]
+                    }
+                },
+                {
+                    "mainThreadTime": 0,
+                    "blockingTime": 0,
+                    "transferSize": 5777,
+                    "tbtImpact": 0,
+                    "entity": "airbnb.com",
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "url": "https://www.airbnb.com/tracking/airdog",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 3992,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.airbnb.com/headerlogo/belo_airbnb.icon",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 1785,
+                                "tbtImpact": 0
+                            }
+                        ]
+                    }
+                },
+                {
+                    "mainThreadTime": 0,
+                    "blockingTime": 0,
+                    "transferSize": 455,
+                    "tbtImpact": 0,
+                    "entity": "Google/Doubleclick Ads",
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "url": "https://pagead2.googlesyndication.com/pagead/landing?gcs=G100&gcd=13m3m3m3m5&tag_exp=0&rnd=1290981299.1723578839&url=http%3A%2F%2Flocalhost%3A8000%2Fairbnb.html&dma_cps=-&dma=0&npa=1&gtm=45He4880n5146MKv551874za200",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 455,
+                                "tbtImpact": 0
+                            }
+                        ]
+                    }
+                },
+                {
+                    "mainThreadTime": 0,
+                    "blockingTime": 0,
+                    "transferSize": 0,
+                    "tbtImpact": 0,
+                    "entity": "airbnb.ca",
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "url": "https://www.airbnb.ca/headerlogo/belo_airbnb.icon?locale=en",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            }
+                        ]
+                    }
+                }
+            ],
+            "summary": {
+                "wastedBytes": 1278353,
+                "wastedMs": 445.8918273760904
+            },
+            "isEntityGrouped": true
+        },
+        "guidanceLevel": 1
+    },
+    "largest-contentful-paint-element": {
+        "id": "largest-contentful-paint-element",
+        "title": "Largest Contentful Paint element",
+        "description": "This is the largest contentful element painted within the viewport. [Learn more about the Largest Contentful Paint element](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "displayValue": "8,530\u00a0ms",
+        "metricSavings": {
+            "LCP": 6050
+        },
+        "details": {
+            "type": "list",
+            "items": [
+                {
+                    "type": "table",
+                    "headings": [
+                        {
+                            "key": "node",
+                            "valueType": "node",
+                            "label": "Element"
+                        }
+                    ],
+                    "items": [
+                        {
+                            "node": {
+                                "type": "node",
+                                "lhId": "page-0-DIV",
+                                "path": "1,HTML,1,BODY,5,DIV,0,DIV,0,DIV,0,DIV,0,DIV,2,DIV,0,HEADER,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,2,DIV,0,NAV,0,DIV,0,A,0,DIV",
+                                "selector": "nav._vuzcgs > div._176ugpa > a.chplgv4 > div.lloffz7",
+                                "boundingRect": {
+                                    "top": 31,
+                                    "bottom": 49,
+                                    "left": 430,
+                                    "right": 548,
+                                    "width": 118,
+                                    "height": 18
+                                },
+                                "snippet": "<div class=\"lloffz7 atm_h_1h6ojuz atm_9s_1txwivl atm_e2_1osqo2v atm_mk_h2mmj6 atm_wq_k\u2026\">",
+                                "nodeLabel": "Airbnb your home"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "table",
+                    "headings": [
+                        {
+                            "key": "phase",
+                            "valueType": "text",
+                            "label": "Phase"
+                        },
+                        {
+                            "key": "percent",
+                            "valueType": "text",
+                            "label": "% of LCP"
+                        },
+                        {
+                            "key": "timing",
+                            "valueType": "ms",
+                            "label": "Timing"
+                        }
+                    ],
+                    "items": [
+                        {
+                            "phase": "TTFB",
+                            "timing": 451.005,
+                            "percent": "5%"
+                        },
+                        {
+                            "phase": "Load Delay",
+                            "timing": 0,
+                            "percent": "0%"
+                        },
+                        {
+                            "phase": "Load Time",
+                            "timing": 0,
+                            "percent": "0%"
+                        },
+                        {
+                            "phase": "Render Delay",
+                            "timing": 8083.791000000002,
+                            "percent": "95%"
+                        }
+                    ]
+                }
+            ]
+        },
+        "guidanceLevel": 1
+    },
+    "aria-hidden-focus": {
+        "id": "aria-hidden-focus",
+        "title": "`[aria-hidden=\"true\"]` elements contain focusable descendents",
+        "description": "Focusable descendents within an `[aria-hidden=\"true\"]` element prevent those interactive elements from being available to users of assistive technologies like screen readers. [Learn how `aria-hidden` affects focusable elements](https://dequeuniversity.com/rules/axe/4.9/aria-hidden-focus).",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "node",
+                    "valueType": "node",
+                    "subItemsHeading": {
+                        "key": "relatedNode",
+                        "valueType": "node"
+                    },
+                    "label": "Failing Elements"
+                }
+            ],
+            "items": [
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-0-INPUT",
+                        "path": "1,HTML,1,BODY,5,DIV,0,DIV,0,DIV,0,DIV,0,DIV,2,DIV,0,HEADER,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,1,DIV,2,INPUT",
+                        "selector": "div.cmz1qwp > div.c1ezvxhy > div.c1ntbm87 > input.m1jhne8o",
+                        "boundingRect": {
+                            "top": 16,
+                            "bottom": 17,
+                            "left": 394,
+                            "right": 395,
+                            "width": 1,
+                            "height": 1
+                        },
+                        "snippet": "<input aria-hidden=\"true\" autocapitalize=\"off\" autocomplete=\"off\" autocorrect=\"off\" class=\"m1jhne8o atm_3f_idpfg4 atm_7h_hxbz6r atm_7i_ysn8ba atm_e2_t94yts atm_ks_zr\u2026\" spellcheck=\"false\" type=\"search\">",
+                        "nodeLabel": "div.cmz1qwp > div.c1ezvxhy > div.c1ntbm87 > input.m1jhne8o",
+                        "explanation": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM"
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-1-LABEL",
+                        "path": "1,HTML,1,BODY,5,DIV,0,DIV,0,DIV,0,DIV,0,DIV,2,DIV,0,HEADER,1,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,2,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,LABEL",
+                        "selector": "div.awuxh4x > div.cw9aemg > div.c14whb16 > label.c1rmt9x7",
+                        "boundingRect": {
+                            "top": 92,
+                            "bottom": 142,
+                            "left": 24,
+                            "right": 115,
+                            "width": 91,
+                            "height": 50
+                        },
+                        "snippet": "<label aria-hidden=\"true\" class=\"c1rmt9x7 atm_9s_1o8liyq atm_r3_1h6ojuz atm_c8_1uc0753 atm_g3_lonqig atm_fr\u2026\" tabindex=\"-1\">",
+                        "nodeLabel": "Your search",
+                        "explanation": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM"
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-2-INPUT",
+                                    "path": "1,HTML,1,BODY,5,DIV,0,DIV,0,DIV,0,DIV,0,DIV,2,DIV,0,HEADER,1,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,2,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,LABEL,0,INPUT",
+                                    "selector": "div.cw9aemg > div.c14whb16 > label.c1rmt9x7 > input.h192l0gc",
+                                    "boundingRect": {
+                                        "top": 99,
+                                        "bottom": 100,
+                                        "left": 74,
+                                        "right": 75,
+                                        "width": 1,
+                                        "height": 1
+                                    },
+                                    "snippet": "<input checked=\"\" class=\"h192l0gc atm_3f_idpfg4 atm_7h_hxbz6r atm_7i_ysn8ba atm_e2_t94yts atm_ks_zr\u2026\" name=\"categoryScroller\" type=\"radio\">",
+                                    "nodeLabel": "div.cw9aemg > div.c14whb16 > label.c1rmt9x7 > input.h192l0gc"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "impact": "serious",
+                "tags": [
+                    "cat.name-role-value",
+                    "wcag2a",
+                    "wcag412",
+                    "TTv5",
+                    "TT6.a",
+                    "EN-301-549",
+                    "EN-9.4.1.2"
+                ]
+            }
+        }
+    },
+    "aria-prohibited-attr": {
+        "id": "aria-prohibited-attr",
+        "title": "Elements use prohibited ARIA attributes",
+        "description": "Using ARIA attributes in roles where they are prohibited can mean that important information is not communicated to users of assistive technologies. [Learn more about prohibited ARIA roles](https://dequeuniversity.com/rules/axe/4.9/aria-prohibited-attr).",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "node",
+                    "valueType": "node",
+                    "subItemsHeading": {
+                        "key": "relatedNode",
+                        "valueType": "node"
+                    },
+                    "label": "Failing Elements"
+                }
+            ],
+            "items": [
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-3-DIV",
+                        "path": "1,HTML,1,BODY,5,DIV,0,DIV,0,DIV,0,DIV,0,DIV,2,DIV,1,DIV,0,MAIN,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,DIV,0,DIV",
+                        "selector": "div.l1icvf1x > div.c1yo0219 > div > div.fhuvlzf",
+                        "boundingRect": {
+                            "top": 226,
+                            "bottom": 9902,
+                            "left": 24,
+                            "right": 388,
+                            "width": 364,
+                            "height": 9676
+                        },
+                        "snippet": "<div aria-label=\"Loading\" class=\"fhuvlzf atm_1c_lgmto3 atm_y_dgicwn atm_12_1hrf63d atm_q_1kzeml1 dir dir-ltr\">",
+                        "nodeLabel": "Loading",
+                        "explanation": "Fix all of the following:\n  aria-label attribute cannot be used on a div with no valid role attribute."
+                    }
+                }
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "impact": "serious",
+                "tags": [
+                    "cat.aria",
+                    "wcag2a",
+                    "wcag412",
+                    "EN-301-549",
+                    "EN-9.4.1.2"
+                ]
+            }
+        }
+    },
+    "render-blocking-resources": {
+        "id": "render-blocking-resources",
+        "title": "Eliminate render-blocking resources",
+        "description": "Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn how to eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 917,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 920\u00a0ms",
+        "metricSavings": {
+            "FCP": 900,
+            "LCP": 900
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "totalBytes",
+                    "valueType": "bytes",
+                    "label": "Transfer Size"
+                },
+                {
+                    "key": "wastedMs",
+                    "valueType": "timespanMs",
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "url": "https://a0.muscache.com/airbnb/static/packages/web/common/frontend/core-guest-loop/apps/core-guest-spa/client.014acaf867.css",
+                    "totalBytes": 158125,
+                    "wastedMs": 1591
+                }
+            ],
+            "overallSavingsMs": 917
+        },
+        "guidanceLevel": 2
+    },
+    "unminified-css": {
+        "id": "unminified-css",
+        "title": "Minify CSS",
+        "description": "Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/).",
+        "score": 0.5,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 0,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 2\u00a0KiB",
+        "metricSavings": {
+            "FCP": 0,
+            "LCP": 0
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "totalBytes",
+                    "valueType": "bytes",
+                    "label": "Transfer Size"
+                },
+                {
+                    "key": "wastedBytes",
+                    "valueType": "bytes",
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "url": "/* stylelint-disable */  html {  /* stylelint-disable property-no-vendor-prefix */  -ms-text-size-ad\u2026 } \u2026",
+                    "totalBytes": 6508,
+                    "wastedBytes": 2221,
+                    "wastedPercent": 34.13247272168434
+                }
+            ],
+            "overallSavingsMs": 0,
+            "overallSavingsBytes": 2221,
+            "sortedBy": [
+                "wastedBytes"
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "metricSavings": {
+                    "FCP": 0,
+                    "LCP": 0
+                }
+            }
+        },
+        "guidanceLevel": 3
+    },
+    "unused-css-rules": {
+        "id": "unused-css-rules",
+        "title": "Reduce unused CSS",
+        "description": "Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 610,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 160\u00a0KiB",
+        "metricSavings": {
+            "FCP": 750,
+            "LCP": 600
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "totalBytes",
+                    "valueType": "bytes",
+                    "label": "Transfer Size"
+                },
+                {
+                    "key": "wastedBytes",
+                    "valueType": "bytes",
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "url": "https://a0.muscache.com/airbnb/static/packages/web/common/frontend/core-guest-loop/apps/core-guest-spa/client.014acaf867.css",
+                    "wastedBytes": 152359,
+                    "wastedPercent": 96.81755215784744,
+                    "totalBytes": 157367
+                },
+                {
+                    "url": "._vuzcgs{-webkit-box-pack:end !important;-ms-flex-pack:end !important; \u2026 } \u2026",
+                    "wastedBytes": 11833,
+                    "wastedPercent": 62.717973180685846,
+                    "totalBytes": 18867
+                }
+            ],
+            "overallSavingsMs": 610,
+            "overallSavingsBytes": 164192,
+            "sortedBy": [
+                "wastedBytes"
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "metricSavings": {
+                    "FCP": 760,
+                    "LCP": 610
+                }
+            }
+        },
+        "guidanceLevel": 1
+    },
+    "unused-javascript": {
+        "id": "unused-javascript",
+        "title": "Reduce unused JavaScript",
+        "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).",
+        "score": 0.5,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 0,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 147\u00a0KiB",
+        "metricSavings": {
+            "FCP": 0,
+            "LCP": 0
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "subItemsHeading": {
+                        "key": "source",
+                        "valueType": "code"
+                    },
+                    "label": "URL"
+                },
+                {
+                    "key": "totalBytes",
+                    "valueType": "bytes",
+                    "subItemsHeading": {
+                        "key": "sourceBytes"
+                    },
+                    "label": "Transfer Size"
+                },
+                {
+                    "key": "wastedBytes",
+                    "valueType": "bytes",
+                    "subItemsHeading": {
+                        "key": "sourceWastedBytes"
+                    },
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "url": "https://www.googletagmanager.com/gtm.js?id=GTM-46MK",
+                    "totalBytes": 108500,
+                    "wastedBytes": 37367,
+                    "wastedPercent": 34.43979497093726
+                },
+                {
+                    "url": "https://www.googletagmanager.com/gtag/js?id=G-2P6Q8PGG16&l=dataLayer&cx=c",
+                    "totalBytes": 98671,
+                    "wastedBytes": 35802,
+                    "wastedPercent": 36.284375678722505
+                },
+                {
+                    "url": "https://a0.muscache.com/airbnb/static/packages/web/common/08da.0499dd44bb.js",
+                    "totalBytes": 45998,
+                    "wastedBytes": 33043,
+                    "wastedPercent": 71.83573251167493
+                },
+                {
+                    "url": "https://a0.muscache.com/airbnb/static/packages/web/common/5807.fcdb56d3cc.js",
+                    "totalBytes": 70523,
+                    "wastedBytes": 23521,
+                    "wastedPercent": 33.35192917410211
+                },
+                {
+                    "url": "https://a0.muscache.com/airbnb/static/packages/web/en-CA/frontend/core-guest-loop/apps/core-guest-spa/client.470a5d2665.js",
+                    "totalBytes": 57979,
+                    "wastedBytes": 21295,
+                    "wastedPercent": 36.72842620811216
+                }
+            ],
+            "overallSavingsMs": 0,
+            "overallSavingsBytes": 151028,
+            "sortedBy": [
+                "wastedBytes"
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "metricSavings": {
+                    "FCP": 0,
+                    "LCP": 0
+                }
+            }
+        },
+        "guidanceLevel": 1
+    },
+    "uses-text-compression": {
+        "id": "uses-text-compression",
+        "title": "Enable text compression",
+        "description": "Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more about text compression](https://developer.chrome.com/docs/lighthouse/performance/uses-text-compression/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 3600,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 716\u00a0KiB",
+        "metricSavings": {
+            "FCP": 3600,
+            "LCP": 3600
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "totalBytes",
+                    "valueType": "bytes",
+                    "label": "Transfer Size"
+                },
+                {
+                    "key": "wastedBytes",
+                    "valueType": "bytes",
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "url": "http://localhost:8000/airbnb.html",
+                    "totalBytes": 820323,
+                    "wastedBytes": 733657
+                }
+            ],
+            "overallSavingsMs": 3600,
+            "overallSavingsBytes": 733657,
+            "sortedBy": [
+                "wastedBytes"
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "metricSavings": {
+                    "FCP": 3600,
+                    "LCP": 3600
+                }
+            }
+        },
+        "guidanceLevel": 3
+    },
+    "legacy-javascript": {
+        "id": "legacy-javascript",
+        "title": "Avoid serving legacy JavaScript to modern browsers",
+        "description": "Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. For your bundled JavaScript, adopt a modern script deployment strategy using module/nomodule feature detection to reduce the amount of code shipped to modern browsers, while retaining support for legacy browsers. [Learn how to use modern JavaScript](https://web.dev/articles/publish-modern-javascript)",
+        "score": 0.5,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 0,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 0\u00a0KiB",
+        "metricSavings": {
+            "FCP": 0,
+            "LCP": 0
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "subItemsHeading": {
+                        "key": "location",
+                        "valueType": "source-location"
+                    },
+                    "label": "URL"
+                },
+                {
+                    "key": null,
+                    "valueType": "code",
+                    "subItemsHeading": {
+                        "key": "signal"
+                    },
+                    "label": ""
+                },
+                {
+                    "key": "wastedBytes",
+                    "valueType": "bytes",
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "url": "https://a0.muscache.com/airbnb/static/packages/web/en-CA/2953.6f915e37cf.js",
+                    "wastedBytes": 49,
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "signal": "@babel/plugin-transform-classes",
+                                "location": {
+                                    "type": "source-location",
+                                    "url": "https://a0.muscache.com/airbnb/static/packages/web/en-CA/2953.6f915e37cf.js",
+                                    "urlProvider": "network",
+                                    "line": 77,
+                                    "column": 1559
+                                }
+                            }
+                        ]
+                    },
+                    "totalBytes": 0
+                },
+                {
+                    "url": "https://a0.muscache.com/airbnb/static/packages/web/common/08da.0499dd44bb.js",
+                    "wastedBytes": 46,
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "signal": "@babel/plugin-transform-classes",
+                                "location": {
+                                    "type": "source-location",
+                                    "url": "https://a0.muscache.com/airbnb/static/packages/web/common/08da.0499dd44bb.js",
+                                    "urlProvider": "network",
+                                    "line": 53,
+                                    "column": 1700
+                                }
+                            }
+                        ]
+                    },
+                    "totalBytes": 0
+                },
+                {
+                    "url": "https://a0.muscache.com/airbnb/static/packages/web/en-CA/3af3.8f718fc83c.js",
+                    "wastedBytes": 43,
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "signal": "@babel/plugin-transform-classes",
+                                "location": {
+                                    "type": "source-location",
+                                    "url": "https://a0.muscache.com/airbnb/static/packages/web/en-CA/3af3.8f718fc83c.js",
+                                    "urlProvider": "network",
+                                    "line": 38,
+                                    "column": 487
+                                }
+                            }
+                        ]
+                    },
+                    "totalBytes": 0
+                },
+                {
+                    "url": "https://a0.muscache.com/airbnb/static/packages/web/common/frontend/hyperloop-browser/coreV2.2517bd5b12.js",
+                    "wastedBytes": 41,
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "signal": "@babel/plugin-transform-classes",
+                                "location": {
+                                    "type": "source-location",
+                                    "url": "https://a0.muscache.com/airbnb/static/packages/web/common/frontend/hyperloop-browser/coreV2.2517bd5b12.js",
+                                    "urlProvider": "network",
+                                    "line": 10,
+                                    "column": 5465
+                                }
+                            }
+                        ]
+                    },
+                    "totalBytes": 0
+                },
+                {
+                    "url": "https://a0.muscache.com/airbnb/static/packages/web/common/ccf1.64d4608ad1.js",
+                    "wastedBytes": 40,
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "signal": "@babel/plugin-transform-classes",
+                                "location": {
+                                    "type": "source-location",
+                                    "url": "https://a0.muscache.com/airbnb/static/packages/web/common/ccf1.64d4608ad1.js",
+                                    "urlProvider": "network",
+                                    "line": 20,
+                                    "column": 490
+                                }
+                            }
+                        ]
+                    },
+                    "totalBytes": 0
+                },
+                {
+                    "url": "https://a0.muscache.com/airbnb/static/packages/web/en-CA/frontend/core-guest-loop/apps/core-guest-spa/client.470a5d2665.js",
+                    "wastedBytes": 39,
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "signal": "@babel/plugin-transform-classes",
+                                "location": {
+                                    "type": "source-location",
+                                    "url": "https://a0.muscache.com/airbnb/static/packages/web/en-CA/frontend/core-guest-loop/apps/core-guest-spa/client.470a5d2665.js",
+                                    "urlProvider": "network",
+                                    "line": 160,
+                                    "column": 448
+                                }
+                            }
+                        ]
+                    },
+                    "totalBytes": 0
+                }
+            ],
+            "overallSavingsMs": 0,
+            "overallSavingsBytes": 258,
+            "sortedBy": [
+                "wastedBytes"
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "metricSavings": {
+                    "FCP": 0,
+                    "LCP": 0
+                }
+            }
+        },
+        "guidanceLevel": 2
+    },
+    "dom-size": {
+        "id": "dom-size",
+        "title": "Avoid an excessive DOM size",
+        "description": "A large DOM will increase memory usage, cause longer [style calculations](https://developers.google.com/web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations), and produce costly [layout reflows](https://developers.google.com/speed/articles/reflow). [Learn how to avoid an excessive DOM size](https://developer.chrome.com/docs/lighthouse/performance/dom-size/).",
+        "score": 0.5,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 1113,
+        "numericUnit": "element",
+        "displayValue": "1,113 elements",
+        "metricSavings": {
+            "TBT": 0
+        },
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "statistic",
+                    "valueType": "text",
+                    "label": "Statistic"
+                },
+                {
+                    "key": "node",
+                    "valueType": "node",
+                    "label": "Element"
+                },
+                {
+                    "key": "value",
+                    "valueType": "numeric",
+                    "label": "Value"
+                }
+            ],
+            "items": [
+                {
+                    "statistic": "Total DOM Elements",
+                    "value": {
+                        "type": "numeric",
+                        "granularity": 1,
+                        "value": 1113
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-51-SPAN",
+                        "path": "1,HTML,1,BODY,5,DIV,0,DIV,0,DIV,0,DIV,0,DIV,2,DIV,0,HEADER,1,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,2,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,LABEL,1,DIV,0,SPAN,0,DIV,0,SPAN",
+                        "selector": "div.c1abgzgs > span.c1ozl2w2 > div.t192ua0c > span.ti7yjx",
+                        "boundingRect": {
+                            "top": 96,
+                            "bottom": 112,
+                            "left": 24,
+                            "right": 90,
+                            "width": 66,
+                            "height": 16
+                        },
+                        "snippet": "<span class=\"ti7yjx atm_ve_glywfm atm_vb_glywfm atm_9s_1o8liyq atm_uc_1bfgeka dir dir-l\u2026\">",
+                        "nodeLabel": "Your search"
+                    },
+                    "statistic": "Maximum DOM Depth",
+                    "value": {
+                        "type": "numeric",
+                        "granularity": 1,
+                        "value": 30
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-52-DIV",
+                        "path": "1,HTML,1,BODY,5,DIV,0,DIV,0,DIV,0,DIV,0,DIV,2,DIV,0,HEADER,1,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV",
+                        "selector": "div.cbdpsi8 > div.p1rmpakb > div.p3wm8pa > div.p166qgdb",
+                        "boundingRect": {
+                            "top": 80,
+                            "bottom": 154,
+                            "left": 0,
+                            "right": 412,
+                            "width": 412,
+                            "height": 74
+                        },
+                        "snippet": "<div class=\"p166qgdb atm_h_1h6ojuz atm_9s_1txwivl atm_cx_14cx8h9 atm_mj_glywfm atm_lj_\u2026\">",
+                        "nodeLabel": "div.cbdpsi8 > div.p1rmpakb > div.p3wm8pa > div.p166qgdb"
+                    },
+                    "statistic": "Maximum Child Elements",
+                    "value": {
+                        "type": "numeric",
+                        "granularity": 1,
+                        "value": 21
+                    }
+                }
+            ]
+        },
+        "guidanceLevel": 1
+    },
+    "inspector-issues": {
+        "id": "inspector-issues",
+        "title": "Issues were logged in the `Issues` panel in Chrome Devtools",
+        "description": "Issues logged to the `Issues` panel in Chrome Devtools indicate unresolved problems. They can come from network request failures, insufficient security controls, and other browser concerns. Open up the Issues panel in Chrome DevTools for more details on each issue.",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "issueType",
+                    "valueType": "text",
+                    "subItemsHeading": {
+                        "key": "url",
+                        "valueType": "url"
+                    },
+                    "label": "Issue type"
+                }
+            ],
+            "items": [
+                {
+                    "issueType": "Cookie",
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "url": "https://www.airbnb.com/tracking/airdog"
+                            },
+                            {
+                                "url": "https://www.airbnb.com/headerlogo/belo_airbnb.icon"
+                            },
+                            {
+                                "url": "https://www.airbnb.ca/headerlogo/belo_airbnb.icon?locale=en"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    "is-crawlable": {
+        "id": "is-crawlable",
+        "title": "Page is blocked from indexing",
+        "description": "Search engines are unable to include your pages in search results if they don't have permission to crawl them. [Learn more about crawler directives](https://developer.chrome.com/docs/lighthouse/seo/is-crawlable/).",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "warnings": [],
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "source",
+                    "valueType": "code",
+                    "label": "Blocking Directive Source"
+                }
+            ],
+            "items": [
+                {
+                    "source": {
+                        "type": "node",
+                        "lhId": "1-95-META",
+                        "path": "1,HTML,0,HEAD,80,META",
+                        "selector": "head > meta",
+                        "boundingRect": {
+                            "top": 0,
+                            "bottom": 0,
+                            "left": 0,
+                            "right": 0,
+                            "width": 0,
+                            "height": 0
+                        },
+                        "snippet": "<meta name=\"robots\" content=\"noindex, nofollow\" />",
+                        "nodeLabel": "head > meta"
+                    }
+                }
+            ]
+        }
+    }
+}

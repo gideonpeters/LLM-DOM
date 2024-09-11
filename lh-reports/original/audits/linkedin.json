@@ -1,0 +1,1787 @@
+{
+    "is-on-https": {
+        "id": "is-on-https",
+        "title": "Does not use HTTPS",
+        "description": "All sites should be protected with HTTPS, even ones that don't handle sensitive data. This includes avoiding [mixed content](https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content), where some resources are loaded over HTTP despite the initial request being served over HTTPS. HTTPS prevents intruders from tampering with or passively listening in on the communications between your app and your users, and is a prerequisite for HTTP/2 and many new web platform APIs. [Learn more about HTTPS](https://developer.chrome.com/docs/lighthouse/pwa/is-on-https/).",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "displayValue": "3 insecure requests found",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "Insecure URL"
+                },
+                {
+                    "key": "resolution",
+                    "valueType": "text",
+                    "label": "Request Resolution"
+                }
+            ],
+            "items": [
+                {
+                    "url": "http://platform.linkedin-ei.com/litms/utag/homepage-guest-frontend/utag.119.js?utv=ut4.51.202405021958",
+                    "resolution": "Allowed"
+                },
+                {
+                    "url": "http://platform.linkedin-ei.com/litms/utag/homepage-guest-frontend/utag.120.js?utv=ut4.51.202405021958",
+                    "resolution": "Allowed"
+                },
+                {
+                    "url": "http://platform.linkedin-ei.com/litms/utag/homepage-guest-frontend/utag.123.js?utv=ut4.51.202405021958",
+                    "resolution": "Allowed"
+                }
+            ]
+        }
+    },
+    "first-contentful-paint": {
+        "id": "first-contentful-paint",
+        "title": "First Contentful Paint",
+        "description": "First Contentful Paint marks the time at which the first text or image is painted. [Learn more about the First Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/).",
+        "score": 0.75,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 2269.74,
+        "numericUnit": "millisecond",
+        "displayValue": "2.3\u00a0s",
+        "scoringOptions": {
+            "p10": 1800,
+            "median": 3000
+        }
+    },
+    "largest-contentful-paint": {
+        "id": "largest-contentful-paint",
+        "title": "Largest Contentful Paint",
+        "description": "Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+        "score": 0.64,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 3490.8999999999996,
+        "numericUnit": "millisecond",
+        "displayValue": "3.5\u00a0s",
+        "scoringOptions": {
+            "p10": 2500,
+            "median": 4000
+        }
+    },
+    "speed-index": {
+        "id": "speed-index",
+        "title": "Speed Index",
+        "description": "Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/).",
+        "score": 0.86,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 3623.5547990470645,
+        "numericUnit": "millisecond",
+        "displayValue": "3.6\u00a0s",
+        "scoringOptions": {
+            "p10": 3387,
+            "median": 5800
+        }
+    },
+    "total-blocking-time": {
+        "id": "total-blocking-time",
+        "title": "Total Blocking Time",
+        "description": "Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds. [Learn more about the Total Blocking Time metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/).",
+        "score": 0.69,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 391.73050000000103,
+        "numericUnit": "millisecond",
+        "displayValue": "390\u00a0ms",
+        "scoringOptions": {
+            "p10": 200,
+            "median": 600
+        }
+    },
+    "max-potential-fid": {
+        "id": "max-potential-fid",
+        "title": "Max Potential First Input Delay",
+        "description": "The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).",
+        "score": 0,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 936.0000000000002,
+        "numericUnit": "millisecond",
+        "displayValue": "940\u00a0ms"
+    },
+    "errors-in-console": {
+        "id": "errors-in-console",
+        "title": "Browser errors were logged to the console",
+        "description": "Errors logged to the console indicate unresolved problems. They can come from network request failures and other browser concerns. [Learn more about this errors in console diagnostic audit](https://developer.chrome.com/docs/lighthouse/best-practices/errors-in-console/)",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "sourceLocation",
+                    "valueType": "source-location",
+                    "label": "Source"
+                },
+                {
+                    "key": "description",
+                    "valueType": "code",
+                    "label": "Description"
+                }
+            ],
+            "items": [
+                {
+                    "source": "javascript",
+                    "description": "Access to XMLHttpRequest at 'https://www.linkedin-ei.com/platform-telemetry/li/apfcDf' from origin 'http://localhost:8000' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/linkedin.html",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.linkedin-ei.com/platform-telemetry/li/apfcDf",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/li/track",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/li/track",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/li/track",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/li/track",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/li/track",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                }
+            ]
+        }
+    },
+    "interactive": {
+        "id": "interactive",
+        "title": "Time to Interactive",
+        "description": "Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).",
+        "score": 0.71,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 5490.203450000001,
+        "numericUnit": "millisecond",
+        "displayValue": "5.5\u00a0s"
+    },
+    "image-aspect-ratio": {
+        "id": "image-aspect-ratio",
+        "title": "Displays images with incorrect aspect ratio",
+        "description": "Image display dimensions should match natural aspect ratio. [Learn more about image aspect ratio](https://developer.chrome.com/docs/lighthouse/best-practices/image-aspect-ratio/).",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "node",
+                    "valueType": "node",
+                    "label": ""
+                },
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "displayedAspectRatio",
+                    "valueType": "text",
+                    "label": "Aspect Ratio (Displayed)"
+                },
+                {
+                    "key": "actualAspectRatio",
+                    "valueType": "text",
+                    "label": "Aspect Ratio (Actual)"
+                }
+            ],
+            "items": [
+                {
+                    "url": "https://static.licdn.com/aero-v1/sc/h/dxf91zhqd2z6b0bwg85ktm5s4",
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-164-IMG",
+                        "path": "1,HTML,1,BODY,11,MAIN,0,SECTION,1,IMG",
+                        "selector": "body > main#main-content > section.section > img.flip-rtl",
+                        "boundingRect": {
+                            "top": 436,
+                            "bottom": 650,
+                            "left": 19,
+                            "right": 393,
+                            "width": 374,
+                            "height": 214
+                        },
+                        "snippet": "<img alt=\"Welcome to your professional community\" class=\"flip-rtl block z-[-1] w-[700px] h-[560px] relative flex-shrink babybear:w-\u2026\" data-test-id=\"hero__illustration\" src=\"https://static.licdn.com/aero-v1/sc/h/dxf91zhqd2z6b0bwg85ktm5s4\">",
+                        "nodeLabel": "Welcome to your professional community"
+                    },
+                    "displayedAspectRatio": "374 x 214\n        (1.75)",
+                    "actualAspectRatio": "850 x 680\n        (1.25)",
+                    "doRatiosMatch": false
+                }
+            ]
+        }
+    },
+    "third-party-cookies": {
+        "id": "third-party-cookies",
+        "title": "Uses third-party cookies",
+        "description": "Support for third-party cookies will be removed in a future version of Chrome. [Learn more about phasing out third-party cookies](https://developer.chrome.com/en/docs/privacy-sandbox/third-party-cookie-phase-out/).",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "displayValue": "16 cookies found",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "name",
+                    "valueType": "text",
+                    "label": "Name"
+                },
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                }
+            ],
+            "items": [
+                {
+                    "name": "JSESSIONID",
+                    "url": "https://www.linkedin-ei.com/litms/api/metadata/user"
+                },
+                {
+                    "name": "lang",
+                    "url": "https://www.linkedin-ei.com/litms/api/metadata/user"
+                },
+                {
+                    "name": "bcookie",
+                    "url": "https://www.linkedin-ei.com/litms/api/metadata/user"
+                },
+                {
+                    "name": "bscookie",
+                    "url": "https://www.linkedin-ei.com/litms/api/metadata/user"
+                },
+                {
+                    "name": "li_gc",
+                    "url": "https://www.linkedin-ei.com/litms/api/metadata/user"
+                },
+                {
+                    "name": "lidc",
+                    "url": "https://www.linkedin-ei.com/litms/api/metadata/user"
+                },
+                {
+                    "name": "demdex",
+                    "url": "https://dpm.demdex.net/id?d_visid_ver=5.1.1&d_fieldgroup=MC&d_rtbd=json&d_ver=2&d_orgid=14215E3D5995C57C0A495C55%40AdobeOrg&d_nsid=0&ts=1723578089425"
+                },
+                {
+                    "name": "_dp",
+                    "url": "https://lnkd.demdex.net/dest5.html?d_nsid=0#http%3A%2F%2Flocalhost%3A8000"
+                },
+                {
+                    "name": "dextp",
+                    "url": "https://lnkd.demdex.net/dest5.html?d_nsid=0#http%3A%2F%2Flocalhost%3A8000"
+                },
+                {
+                    "name": "barometric[cuid]",
+                    "url": "https://trkn.us/pixel/conv/ppt=14086;g=linkedin_flagship_homepage;gid=36535"
+                },
+                {
+                    "name": "barometric[idfa]",
+                    "url": "https://trkn.us/pixel/conv/ppt=14086;g=linkedin_flagship_homepage;gid=36535;ip=132.205.229.100;cuidchk=1"
+                },
+                {
+                    "name": "test_cookie",
+                    "url": "https://cm.g.doubleclick.net/pixel?google_nid=adobe_dmp&google_cm&gdpr=0&gdpr_consent=&google_hm=NzEzMjM5NTk5MDg4MjYwMjMzNjMwMDg5Nzg2NDYyMTIyMjk1OTc="
+                },
+                {
+                    "name": "IDE",
+                    "url": "https://cm.g.doubleclick.net/pixel?google_nid=adobe_dmp&google_cm=&gdpr=0&gdpr_consent=&google_hm=NzEzMjM5NTk5MDg4MjYwMjMzNjMwMDg5Nzg2NDYyMTIyMjk1OTc=&google_tc="
+                },
+                {
+                    "name": "dpm",
+                    "url": "https://dpm.demdex.net/ibs:dpid=771&dpuuid=CAESELeqVO5HqTjAwBtzs-faq_M&google_cver=1?gdpr=0&gdpr_consent="
+                },
+                {
+                    "name": "MUID",
+                    "url": "https://c.bing.com/c.gif?uid=71323959908826023363008978646212229597&Red3=MSAdobe_pd&gdpr=0&gdpr_consent="
+                },
+                {
+                    "name": "MR",
+                    "url": "https://c.bing.com/c.gif?uid=71323959908826023363008978646212229597&Red3=MSAdobe_pd&gdpr=0&gdpr_consent="
+                }
+            ]
+        }
+    },
+    "mainthread-work-breakdown": {
+        "id": "mainthread-work-breakdown",
+        "title": "Minimize main-thread work",
+        "description": "Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to minimize main-thread work](https://developer.chrome.com/docs/lighthouse/performance/mainthread-work-breakdown/)",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 3917.775999999995,
+        "numericUnit": "millisecond",
+        "displayValue": "3.9\u00a0s",
+        "metricSavings": {
+            "TBT": 400
+        },
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "groupLabel",
+                    "valueType": "text",
+                    "label": "Category"
+                },
+                {
+                    "key": "duration",
+                    "valueType": "ms",
+                    "granularity": 1,
+                    "label": "Time Spent"
+                }
+            ],
+            "items": [
+                {
+                    "group": "scriptEvaluation",
+                    "groupLabel": "Script Evaluation",
+                    "duration": 2032.3679999999956
+                },
+                {
+                    "group": "styleLayout",
+                    "groupLabel": "Style & Layout",
+                    "duration": 968.576
+                },
+                {
+                    "group": "other",
+                    "groupLabel": "Other",
+                    "duration": 724.4999999999993
+                },
+                {
+                    "group": "scriptParseCompile",
+                    "groupLabel": "Script Parsing & Compilation",
+                    "duration": 94.036
+                },
+                {
+                    "group": "paintCompositeRender",
+                    "groupLabel": "Rendering",
+                    "duration": 48.75599999999998
+                },
+                {
+                    "group": "parseHTML",
+                    "groupLabel": "Parse HTML & CSS",
+                    "duration": 44.827999999999996
+                },
+                {
+                    "group": "garbageCollection",
+                    "groupLabel": "Garbage Collection",
+                    "duration": 4.711999999999999
+                }
+            ],
+            "sortedBy": [
+                "duration"
+            ]
+        },
+        "guidanceLevel": 1
+    },
+    "bootup-time": {
+        "id": "bootup-time",
+        "title": "Reduce JavaScript execution time",
+        "description": "Consider reducing the time spent parsing, compiling, and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to reduce Javascript execution time](https://developer.chrome.com/docs/lighthouse/performance/bootup-time/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 2091.4239999999963,
+        "numericUnit": "millisecond",
+        "displayValue": "2.1\u00a0s",
+        "metricSavings": {
+            "TBT": 250
+        },
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "total",
+                    "granularity": 1,
+                    "valueType": "ms",
+                    "label": "Total CPU Time"
+                },
+                {
+                    "key": "scripting",
+                    "granularity": 1,
+                    "valueType": "ms",
+                    "label": "Script Evaluation"
+                },
+                {
+                    "key": "scriptParseCompile",
+                    "granularity": 1,
+                    "valueType": "ms",
+                    "label": "Script Parse"
+                }
+            ],
+            "items": [
+                {
+                    "url": "https://static.licdn.com/aero-v1/sc/h/eh08muqvrde4h3hc6koyij5ti",
+                    "total": 2266.6679999999956,
+                    "scripting": 1613.015999999996,
+                    "scriptParseCompile": 14.596
+                },
+                {
+                    "url": "http://localhost:8000/linkedin.html",
+                    "total": 584.5279999999999,
+                    "scripting": 3.8880000000000003,
+                    "scriptParseCompile": 2.052
+                },
+                {
+                    "url": "Unattributable",
+                    "total": 524.8240000000004,
+                    "scripting": 26.823999999999995,
+                    "scriptParseCompile": 0
+                },
+                {
+                    "url": "https://platform.linkedin-ei.com/litms/utag/homepage-guest-frontend/utag.js?cb=1723578000000",
+                    "total": 336.4160000000003,
+                    "scripting": 264.6840000000003,
+                    "scriptParseCompile": 46.672
+                },
+                {
+                    "url": "https://static.licdn.com/aero-v1/sc/h/6tftfjbs07i6r9lmcfgxa4uxy",
+                    "total": 138.18800000000024,
+                    "scripting": 92.34800000000027,
+                    "scriptParseCompile": 27.344
+                }
+            ],
+            "summary": {
+                "wastedMs": 2091.4239999999963
+            },
+            "sortedBy": [
+                "total"
+            ]
+        },
+        "guidanceLevel": 1
+    },
+    "third-party-summary": {
+        "id": "third-party-summary",
+        "title": "Reduce the impact of third-party code",
+        "description": "Third-party code can significantly impact load performance. Limit the number of redundant third-party providers and try to load third-party code after your page has primarily finished loading. [Learn how to minimize third-party impact](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "displayValue": "Third-party code blocked the main thread for 1,100\u00a0ms",
+        "metricSavings": {
+            "TBT": 450
+        },
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "entity",
+                    "valueType": "text",
+                    "label": "Third-Party",
+                    "subItemsHeading": {
+                        "key": "url",
+                        "valueType": "url"
+                    }
+                },
+                {
+                    "key": "transferSize",
+                    "granularity": 1,
+                    "valueType": "bytes",
+                    "label": "Transfer Size",
+                    "subItemsHeading": {
+                        "key": "transferSize"
+                    }
+                },
+                {
+                    "key": "blockingTime",
+                    "granularity": 1,
+                    "valueType": "ms",
+                    "label": "Main-Thread Blocking Time",
+                    "subItemsHeading": {
+                        "key": "blockingTime"
+                    }
+                }
+            ],
+            "items": [
+                {
+                    "mainThreadTime": 2430.287999999993,
+                    "blockingTime": 940.0000000000006,
+                    "transferSize": 393270,
+                    "tbtImpact": 279.3533776702602,
+                    "entity": "LinkedIn Ads",
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "url": "https://static.licdn.com/aero-v1/sc/h/eh08muqvrde4h3hc6koyij5ti",
+                                "mainThreadTime": 2266.667999999993,
+                                "blockingTime": 934.0000000000006,
+                                "transferSize": 85909,
+                                "tbtImpact": 279.3533776702602
+                            },
+                            {
+                                "url": "https://static.licdn.com/aero-v1/sc/h/6tftfjbs07i6r9lmcfgxa4uxy",
+                                "mainThreadTime": 138.1880000000003,
+                                "blockingTime": 6.000000000000001,
+                                "transferSize": 167112,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://static.licdn.com/aero-v1/sc/h/292yd0en6qdvkbezeuj71yu4y",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 62364,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://static.licdn.com/aero-v1/sc/h/cqhvyhtd1xe3vd202mlsy7s5h",
+                                "mainThreadTime": 25.432000000000002,
+                                "blockingTime": 0,
+                                "transferSize": 54459,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://static.licdn.com/aero-v1/sc/h/dxf91zhqd2z6b0bwg85ktm5s4",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 9918,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://static.licdn.com/aero-v1/sc/h/8fkga714vy9b2wk5auqo5reeb",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 2043,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://static.licdn.com/aero-v1/sc/h/8wykgzgbqy0t3fnkgborvz54u",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 1740,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://static.licdn.com/aero-v1/sc/h/ddi43qwelxeqjxdd45pe3fvs1",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 1611,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://static.licdn.com/aero-v1/sc/h/29h8hsjuomfp50lam5ipnc3uh",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 1528,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://static.licdn.com/aero-v1/sc/h/4zqr0f9jf98vi2nkijyc3bex2",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 1314,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://static.licdn.com/aero-v1/sc/h/6ulnj3n2ijcmhej768y6oj1hr",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 1133,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://static.licdn.com/aero-v1/sc/h/92eb1xekc34eklevj0io6x4ki",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 1100,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://static.licdn.com/aero-v1/sc/h/7kb6sn3tm4cx918cx9a5jlb0",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 1064,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://static.licdn.com/aero-v1/sc/h/4chtt12k98xwnba1nimld2oyg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 1014,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://static.licdn.com/aero-v1/sc/h/e5ka7p8s9n5r0z9p6kpmm3hig",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 961,
+                                "tbtImpact": 0
+                            }
+                        ]
+                    }
+                },
+                {
+                    "mainThreadTime": 351.19200000000023,
+                    "blockingTime": 164.96955392966754,
+                    "transferSize": 57393,
+                    "tbtImpact": 164.96955392966754,
+                    "entity": "linkedin-ei.com",
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "url": "https://platform.linkedin-ei.com/litms/utag/homepage-guest-frontend/utag.js?cb=1723578000000",
+                                "mainThreadTime": 336.4160000000002,
+                                "blockingTime": 164.96955392966754,
+                                "transferSize": 47480,
+                                "tbtImpact": 164.96955392966754
+                            },
+                            {
+                                "url": "http://platform.linkedin-ei.com/litms/utag/homepage-guest-frontend/utag.119.js?utv=ut4.51.202405021958",
+                                "mainThreadTime": 4.316,
+                                "blockingTime": 0,
+                                "transferSize": 2847,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "http://platform.linkedin-ei.com/litms/utag/homepage-guest-frontend/utag.120.js?utv=ut4.51.202405021958",
+                                "mainThreadTime": 5.252,
+                                "blockingTime": 0,
+                                "transferSize": 2706,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "http://platform.linkedin-ei.com/litms/utag/homepage-guest-frontend/utag.123.js?utv=ut4.51.202405021958",
+                                "mainThreadTime": 5.207999999999999,
+                                "blockingTime": 0,
+                                "transferSize": 2703,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.linkedin-ei.com/litms/api/metadata/user",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 1657,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://ponf.linkedin-ei.com/pixel/tracking.png?reqid=adfc94bf-357b-4079-a4c6-d8e23d6f2b63&pageInstance=urn%3Ali%3Apage%3Ad_homepage-guest-home_jsbeacon%3BSs7CKRAiRraw0Cy69tEUfg%3D%3D&js=enabled",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.linkedin-ei.com/platform-telemetry/li/apfcDf",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            }
+                        ]
+                    }
+                },
+                {
+                    "mainThreadTime": 15.611999999999993,
+                    "blockingTime": 0,
+                    "transferSize": 6675,
+                    "tbtImpact": 0,
+                    "entity": "Adobe Tag Manager",
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "url": "https://lnkd.demdex.net/dest5.html?d_nsid=0",
+                                "mainThreadTime": 15.611999999999993,
+                                "blockingTime": 0,
+                                "transferSize": 3252,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://dpm.demdex.net/id?d_visid_ver=5.1.1&d_fieldgroup=MC&d_rtbd=json&d_ver=2&d_orgid=14215E3D5995C57C0A495C55%40AdobeOrg&d_nsid=0&ts=1723578089425",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 1042,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://lnkd.demdex.net/event?d_dil_ver=9.4&_ts=1723578089432",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 948,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://dpm.demdex.net/ibs:dpid=771&dpuuid=CAESELeqVO5HqTjAwBtzs-faq_M&google_cver=1?gdpr=0&gdpr_consent=",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 717,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://dpm.demdex.net/ibs:dpid=1957&dpuuid=3A523B0D1FB664372D952FD71E256592",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 716,
+                                "tbtImpact": 0
+                            }
+                        ]
+                    }
+                },
+                {
+                    "mainThreadTime": 0,
+                    "blockingTime": 0,
+                    "transferSize": 3779,
+                    "tbtImpact": 0,
+                    "entity": "trkn.us",
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "url": "https://trkn.us/pixel/conv/ppt=14086;g=linkedin_flagship_homepage;gid=36535;ip=132.205.229.100;cuidchk=1",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 721,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://trkn.us/pixel/conv/ppt=10786;g=linkedin_flagship_homepage;gid=32238;ip=132.205.229.100;cuidchk=1",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 721,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://trkn.us/pixel/conv/ppt=17688;g=flagship_page;gid=40658;ip=132.205.229.100;cuidchk=1",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 721,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://trkn.us/pixel/conv/ppt=14086;g=linkedin_flagship_homepage;gid=36535",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 543,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://trkn.us/pixel/conv/ppt=10786;g=linkedin_flagship_homepage;gid=32238",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 543,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://trkn.us/pixel/conv/ppt=17688;g=flagship_page;gid=40658",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 530,
+                                "tbtImpact": 0
+                            }
+                        ]
+                    }
+                },
+                {
+                    "mainThreadTime": 0,
+                    "blockingTime": 0,
+                    "transferSize": 957,
+                    "tbtImpact": 0,
+                    "entity": "Google/Doubleclick Ads",
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "url": "https://cm.g.doubleclick.net/pixel?google_nid=adobe_dmp&google_cm&gdpr=0&gdpr_consent=&google_hm=NzEzMjM5NTk5MDg4MjYwMjMzNjMwMDg5Nzg2NDYyMTIyMjk1OTc=",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 595,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://cm.g.doubleclick.net/pixel?google_nid=adobe_dmp&google_cm=&gdpr=0&gdpr_consent=&google_hm=NzEzMjM5NTk5MDg4MjYwMjMzNjMwMDg5Nzg2NDYyMTIyMjk1OTc=&google_tc=",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 362,
+                                "tbtImpact": 0
+                            }
+                        ]
+                    }
+                },
+                {
+                    "mainThreadTime": 0,
+                    "blockingTime": 0,
+                    "transferSize": 635,
+                    "tbtImpact": 0,
+                    "entity": "Bing Ads",
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "url": "https://c.bing.com/c.gif?uid=71323959908826023363008978646212229597&Red3=MSAdobe_pd&gdpr=0&gdpr_consent=",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 635,
+                                "tbtImpact": 0
+                            }
+                        ]
+                    }
+                }
+            ],
+            "summary": {
+                "wastedBytes": 462709,
+                "wastedMs": 1104.969553929668
+            },
+            "isEntityGrouped": true
+        },
+        "guidanceLevel": 1
+    },
+    "largest-contentful-paint-element": {
+        "id": "largest-contentful-paint-element",
+        "title": "Largest Contentful Paint element",
+        "description": "This is the largest contentful element painted within the viewport. [Learn more about the Largest Contentful Paint element](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "displayValue": "3,490\u00a0ms",
+        "metricSavings": {
+            "LCP": 1000
+        },
+        "details": {
+            "type": "list",
+            "items": [
+                {
+                    "type": "table",
+                    "headings": [
+                        {
+                            "key": "node",
+                            "valueType": "node",
+                            "label": "Element"
+                        }
+                    ],
+                    "items": [
+                        {
+                            "node": {
+                                "type": "node",
+                                "lhId": "page-0-IMG",
+                                "path": "1,HTML,1,BODY,11,MAIN,0,SECTION,1,IMG",
+                                "selector": "body > main#main-content > section.section > img.flip-rtl",
+                                "boundingRect": {
+                                    "top": 436,
+                                    "bottom": 650,
+                                    "left": 19,
+                                    "right": 393,
+                                    "width": 374,
+                                    "height": 214
+                                },
+                                "snippet": "<img alt=\"Welcome to your professional community\" class=\"flip-rtl block z-[-1] w-[700px] h-[560px] relative flex-shrink babybear:w-\u2026\" data-test-id=\"hero__illustration\" src=\"https://static.licdn.com/aero-v1/sc/h/dxf91zhqd2z6b0bwg85ktm5s4\">",
+                                "nodeLabel": "Welcome to your professional community"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "table",
+                    "headings": [
+                        {
+                            "key": "phase",
+                            "valueType": "text",
+                            "label": "Phase"
+                        },
+                        {
+                            "key": "percent",
+                            "valueType": "text",
+                            "label": "% of LCP"
+                        },
+                        {
+                            "key": "timing",
+                            "valueType": "ms",
+                            "label": "Timing"
+                        }
+                    ],
+                    "items": [
+                        {
+                            "phase": "TTFB",
+                            "timing": 450.7,
+                            "percent": "13%"
+                        },
+                        {
+                            "phase": "Load Delay",
+                            "timing": 0,
+                            "percent": "0%"
+                        },
+                        {
+                            "phase": "Load Time",
+                            "timing": 2628.931830015078,
+                            "percent": "75%"
+                        },
+                        {
+                            "phase": "Render Delay",
+                            "timing": 411.26816998492177,
+                            "percent": "12%"
+                        }
+                    ]
+                }
+            ]
+        },
+        "guidanceLevel": 1
+    },
+    "label-content-name-mismatch": {
+        "id": "label-content-name-mismatch",
+        "title": "Elements with visible text labels do not have matching accessible names.",
+        "description": "Visible text labels that do not match the accessible name can result in a confusing experience for screen reader users. [Learn more about accessible names](https://dequeuniversity.com/rules/axe/4.9/label-content-name-mismatch).",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "node",
+                    "valueType": "node",
+                    "subItemsHeading": {
+                        "key": "relatedNode",
+                        "valueType": "node"
+                    },
+                    "label": "Failing Elements"
+                }
+            ],
+            "items": [
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-0-A",
+                        "path": "1,HTML,1,BODY,11,MAIN,6,SECTION,1,DIV,1,UL,9,LI,0,A",
+                        "selector": "div.w-full > ul.show-more-less__list > li.top-product-categories__pill > a.btn-md",
+                        "boundingRect": {
+                            "top": 3347,
+                            "bottom": 3395,
+                            "left": 16,
+                            "right": 127,
+                            "width": 111,
+                            "height": 48
+                        },
+                        "snippet": "<a aria-label=\"Show full list of software and platforms\" class=\"btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary-em\u2026\" data-tracking-control-name=\"homepage-basic_top-product-categories_topic-pill\" data-tracking-will-navigate=\"\" href=\"https://www.linkedin.com/products/home\">",
+                        "nodeLabel": "Show all",
+                        "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+                    }
+                }
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "impact": "serious",
+                "tags": [
+                    "cat.semantics",
+                    "wcag21a",
+                    "wcag253",
+                    "EN-301-549",
+                    "EN-9.2.5.3",
+                    "experimental"
+                ]
+            }
+        }
+    },
+    "uses-long-cache-ttl": {
+        "id": "uses-long-cache-ttl",
+        "title": "Serve static assets with an efficient cache policy",
+        "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more about efficient cache policies](https://developer.chrome.com/docs/lighthouse/performance/uses-long-cache-ttl/).",
+        "score": 0.5,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 91389.86666666667,
+        "numericUnit": "byte",
+        "displayValue": "9 resources found",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "cacheLifetimeMs",
+                    "valueType": "ms",
+                    "label": "Cache TTL",
+                    "displayUnit": "duration"
+                },
+                {
+                    "key": "totalBytes",
+                    "valueType": "bytes",
+                    "label": "Transfer Size",
+                    "displayUnit": "kb",
+                    "granularity": 1
+                }
+            ],
+            "items": [
+                {
+                    "url": "https://platform.linkedin-ei.com/litms/utag/homepage-guest-frontend/utag.js?cb=1723578000000",
+                    "debugData": {
+                        "type": "debugdata",
+                        "max-age": 300
+                    },
+                    "cacheLifetimeMs": 300000,
+                    "cacheHitProbability": 0.041666666666666664,
+                    "totalBytes": 47480,
+                    "wastedBytes": 45501.66666666667
+                },
+                {
+                    "url": "http://platform.linkedin-ei.com/litms/utag/homepage-guest-frontend/utag.119.js?utv=ut4.51.202405021958",
+                    "debugData": {
+                        "type": "debugdata",
+                        "max-age": 300
+                    },
+                    "cacheLifetimeMs": 300000,
+                    "cacheHitProbability": 0.041666666666666664,
+                    "totalBytes": 2847,
+                    "wastedBytes": 2728.375
+                },
+                {
+                    "url": "http://platform.linkedin-ei.com/litms/utag/homepage-guest-frontend/utag.120.js?utv=ut4.51.202405021958",
+                    "debugData": {
+                        "type": "debugdata",
+                        "max-age": 300
+                    },
+                    "cacheLifetimeMs": 300000,
+                    "cacheHitProbability": 0.041666666666666664,
+                    "totalBytes": 2706,
+                    "wastedBytes": 2593.25
+                },
+                {
+                    "url": "http://platform.linkedin-ei.com/litms/utag/homepage-guest-frontend/utag.123.js?utv=ut4.51.202405021958",
+                    "debugData": {
+                        "type": "debugdata",
+                        "max-age": 300
+                    },
+                    "cacheLifetimeMs": 300000,
+                    "cacheHitProbability": 0.041666666666666664,
+                    "totalBytes": 2703,
+                    "wastedBytes": 2590.375
+                },
+                {
+                    "url": "https://static.licdn.com/aero-v1/sc/h/6tftfjbs07i6r9lmcfgxa4uxy",
+                    "debugData": {
+                        "type": "debugdata",
+                        "max-age": 604800,
+                        "immutable": true
+                    },
+                    "cacheLifetimeMs": 604800000,
+                    "cacheHitProbability": 0.9,
+                    "totalBytes": 167112,
+                    "wastedBytes": 16711.199999999997
+                },
+                {
+                    "url": "https://static.licdn.com/aero-v1/sc/h/eh08muqvrde4h3hc6koyij5ti",
+                    "debugData": {
+                        "type": "debugdata",
+                        "max-age": 604800,
+                        "immutable": true
+                    },
+                    "cacheLifetimeMs": 604800000,
+                    "cacheHitProbability": 0.9,
+                    "totalBytes": 85909,
+                    "wastedBytes": 8590.899999999998
+                },
+                {
+                    "url": "https://static.licdn.com/aero-v1/sc/h/292yd0en6qdvkbezeuj71yu4y",
+                    "debugData": {
+                        "type": "debugdata",
+                        "max-age": 604800,
+                        "immutable": true
+                    },
+                    "cacheLifetimeMs": 604800000,
+                    "cacheHitProbability": 0.9,
+                    "totalBytes": 62364,
+                    "wastedBytes": 6236.399999999999
+                },
+                {
+                    "url": "https://static.licdn.com/aero-v1/sc/h/cqhvyhtd1xe3vd202mlsy7s5h",
+                    "debugData": {
+                        "type": "debugdata",
+                        "max-age": 604800,
+                        "immutable": true
+                    },
+                    "cacheLifetimeMs": 604800000,
+                    "cacheHitProbability": 0.9,
+                    "totalBytes": 54459,
+                    "wastedBytes": 5445.899999999999
+                },
+                {
+                    "url": "https://static.licdn.com/aero-v1/sc/h/dxf91zhqd2z6b0bwg85ktm5s4",
+                    "debugData": {
+                        "type": "debugdata",
+                        "max-age": 604800,
+                        "immutable": true
+                    },
+                    "cacheLifetimeMs": 604800000,
+                    "cacheHitProbability": 0.9,
+                    "totalBytes": 9918,
+                    "wastedBytes": 991.7999999999997
+                }
+            ],
+            "summary": {
+                "wastedBytes": 91389.86666666667
+            },
+            "sortedBy": [
+                "totalBytes"
+            ],
+            "skipSumming": [
+                "cacheLifetimeMs"
+            ]
+        },
+        "guidanceLevel": 3
+    },
+    "offscreen-images": {
+        "id": "offscreen-images",
+        "title": "Defer offscreen images",
+        "description": "Consider lazy-loading offscreen and hidden images after all critical resources have finished loading to lower time to interactive. [Learn how to defer offscreen images](https://developer.chrome.com/docs/lighthouse/performance/offscreen-images/).",
+        "score": 0.5,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 0,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 60\u00a0KiB",
+        "warnings": [],
+        "metricSavings": {
+            "FCP": 0,
+            "LCP": 0
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "node",
+                    "valueType": "node",
+                    "label": ""
+                },
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "totalBytes",
+                    "valueType": "bytes",
+                    "label": "Resource Size"
+                },
+                {
+                    "key": "wastedBytes",
+                    "valueType": "bytes",
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-170-IMG",
+                        "path": "1,HTML,1,BODY,11,MAIN,10,SECTION,0,DIV,1,IMG",
+                        "selector": "main#main-content > section.section > div.flex > img.h-[840px]",
+                        "boundingRect": {
+                            "top": 0,
+                            "bottom": 0,
+                            "left": 0,
+                            "right": 0,
+                            "width": 0,
+                            "height": 0
+                        },
+                        "snippet": "<img alt=\"Who is LinkedIn for?\" class=\"h-[840px] self-center ml-[96px] flip-rtl babybear:hidden lazy-loaded\" aria-busy=\"false\" src=\"https://static.licdn.com/aero-v1/sc/h/292yd0en6qdvkbezeuj71yu4y\">",
+                        "nodeLabel": "Who is LinkedIn for?"
+                    },
+                    "url": "https://static.licdn.com/aero-v1/sc/h/292yd0en6qdvkbezeuj71yu4y",
+                    "requestStartTime": 462439729.32,
+                    "totalBytes": 61657,
+                    "wastedBytes": 61657,
+                    "wastedPercent": 100
+                }
+            ],
+            "overallSavingsMs": 0,
+            "overallSavingsBytes": 61657,
+            "sortedBy": [
+                "wastedBytes"
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "metricSavings": {
+                    "FCP": 0,
+                    "LCP": 0
+                }
+            }
+        },
+        "guidanceLevel": 2
+    },
+    "render-blocking-resources": {
+        "id": "render-blocking-resources",
+        "title": "Eliminate render-blocking resources",
+        "description": "Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn how to eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 814,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 810\u00a0ms",
+        "metricSavings": {
+            "FCP": 800,
+            "LCP": 0
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "totalBytes",
+                    "valueType": "bytes",
+                    "label": "Transfer Size"
+                },
+                {
+                    "key": "wastedMs",
+                    "valueType": "timespanMs",
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "url": "https://static.licdn.com/aero-v1/sc/h/cqhvyhtd1xe3vd202mlsy7s5h",
+                    "totalBytes": 54459,
+                    "wastedMs": 1069
+                }
+            ],
+            "overallSavingsMs": 814
+        },
+        "guidanceLevel": 2
+    },
+    "unused-css-rules": {
+        "id": "unused-css-rules",
+        "title": "Reduce unused CSS",
+        "description": "Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 150,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 43\u00a0KiB",
+        "metricSavings": {
+            "FCP": 300,
+            "LCP": 150
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "totalBytes",
+                    "valueType": "bytes",
+                    "label": "Transfer Size"
+                },
+                {
+                    "key": "wastedBytes",
+                    "valueType": "bytes",
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "url": "https://static.licdn.com/aero-v1/sc/h/cqhvyhtd1xe3vd202mlsy7s5h",
+                    "wastedBytes": 43897,
+                    "wastedPercent": 81.61311958204529,
+                    "totalBytes": 53787
+                }
+            ],
+            "overallSavingsMs": 150,
+            "overallSavingsBytes": 43897,
+            "sortedBy": [
+                "wastedBytes"
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "metricSavings": {
+                    "FCP": 310,
+                    "LCP": 150
+                }
+            }
+        },
+        "guidanceLevel": 1
+    },
+    "unused-javascript": {
+        "id": "unused-javascript",
+        "title": "Reduce unused JavaScript",
+        "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 760,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 159\u00a0KiB",
+        "metricSavings": {
+            "FCP": 0,
+            "LCP": 750
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "subItemsHeading": {
+                        "key": "source",
+                        "valueType": "code"
+                    },
+                    "label": "URL"
+                },
+                {
+                    "key": "totalBytes",
+                    "valueType": "bytes",
+                    "subItemsHeading": {
+                        "key": "sourceBytes"
+                    },
+                    "label": "Transfer Size"
+                },
+                {
+                    "key": "wastedBytes",
+                    "valueType": "bytes",
+                    "subItemsHeading": {
+                        "key": "sourceWastedBytes"
+                    },
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "url": "https://static.licdn.com/aero-v1/sc/h/6tftfjbs07i6r9lmcfgxa4uxy",
+                    "totalBytes": 166437,
+                    "wastedBytes": 113539,
+                    "wastedPercent": 68.21746973541985
+                },
+                {
+                    "url": "https://static.licdn.com/aero-v1/sc/h/eh08muqvrde4h3hc6koyij5ti",
+                    "totalBytes": 85210,
+                    "wastedBytes": 48795,
+                    "wastedPercent": 57.26494213606256
+                }
+            ],
+            "overallSavingsMs": 760,
+            "overallSavingsBytes": 162334,
+            "sortedBy": [
+                "wastedBytes"
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "metricSavings": {
+                    "FCP": 0,
+                    "LCP": 760
+                }
+            }
+        },
+        "guidanceLevel": 1
+    },
+    "modern-image-formats": {
+        "id": "modern-image-formats",
+        "title": "Serve images in next-gen formats",
+        "description": "Image formats like WebP and AVIF often provide better compression than PNG or JPEG, which means faster downloads and less data consumption. [Learn more about modern image formats](https://developer.chrome.com/docs/lighthouse/performance/uses-webp-images/).",
+        "score": 0.5,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 0,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 9\u00a0KiB",
+        "warnings": [],
+        "metricSavings": {
+            "FCP": 0,
+            "LCP": 0
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "node",
+                    "valueType": "node",
+                    "label": ""
+                },
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "totalBytes",
+                    "valueType": "bytes",
+                    "label": "Resource Size"
+                },
+                {
+                    "key": "wastedBytes",
+                    "valueType": "bytes",
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-170-IMG",
+                        "path": "1,HTML,1,BODY,11,MAIN,10,SECTION,0,DIV,1,IMG",
+                        "selector": "main#main-content > section.section > div.flex > img.h-[840px]",
+                        "boundingRect": {
+                            "top": 0,
+                            "bottom": 0,
+                            "left": 0,
+                            "right": 0,
+                            "width": 0,
+                            "height": 0
+                        },
+                        "snippet": "<img alt=\"Who is LinkedIn for?\" class=\"h-[840px] self-center ml-[96px] flip-rtl babybear:hidden lazy-loaded\" aria-busy=\"false\" src=\"https://static.licdn.com/aero-v1/sc/h/292yd0en6qdvkbezeuj71yu4y\">",
+                        "nodeLabel": "Who is LinkedIn for?"
+                    },
+                    "url": "https://static.licdn.com/aero-v1/sc/h/292yd0en6qdvkbezeuj71yu4y",
+                    "fromProtocol": true,
+                    "isCrossOrigin": true,
+                    "totalBytes": 61657,
+                    "wastedBytes": 8788.949999999997,
+                    "wastedWebpBytes": -13865
+                }
+            ],
+            "overallSavingsMs": 0,
+            "overallSavingsBytes": 8788.949999999997,
+            "sortedBy": [
+                "wastedBytes"
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "metricSavings": {
+                    "FCP": 0,
+                    "LCP": 0
+                }
+            }
+        },
+        "guidanceLevel": 3
+    },
+    "uses-text-compression": {
+        "id": "uses-text-compression",
+        "title": "Enable text compression",
+        "description": "Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more about text compression](https://developer.chrome.com/docs/lighthouse/performance/uses-text-compression/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 450,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 108\u00a0KiB",
+        "metricSavings": {
+            "FCP": 450,
+            "LCP": 450
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "totalBytes",
+                    "valueType": "bytes",
+                    "label": "Transfer Size"
+                },
+                {
+                    "key": "wastedBytes",
+                    "valueType": "bytes",
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "url": "http://localhost:8000/linkedin.html",
+                    "totalBytes": 125683,
+                    "wastedBytes": 110897
+                }
+            ],
+            "overallSavingsMs": 450,
+            "overallSavingsBytes": 110897,
+            "sortedBy": [
+                "wastedBytes"
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "metricSavings": {
+                    "FCP": 450,
+                    "LCP": 450
+                }
+            }
+        },
+        "guidanceLevel": 3
+    },
+    "legacy-javascript": {
+        "id": "legacy-javascript",
+        "title": "Avoid serving legacy JavaScript to modern browsers",
+        "description": "Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. For your bundled JavaScript, adopt a modern script deployment strategy using module/nomodule feature detection to reduce the amount of code shipped to modern browsers, while retaining support for legacy browsers. [Learn how to use modern JavaScript](https://web.dev/articles/publish-modern-javascript)",
+        "score": 0.5,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 0,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 0\u00a0KiB",
+        "metricSavings": {
+            "FCP": 0,
+            "LCP": 0
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "subItemsHeading": {
+                        "key": "location",
+                        "valueType": "source-location"
+                    },
+                    "label": "URL"
+                },
+                {
+                    "key": null,
+                    "valueType": "code",
+                    "subItemsHeading": {
+                        "key": "signal"
+                    },
+                    "label": ""
+                },
+                {
+                    "key": "wastedBytes",
+                    "valueType": "bytes",
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "url": "https://static.licdn.com/aero-v1/sc/h/6tftfjbs07i6r9lmcfgxa4uxy",
+                    "wastedBytes": 65,
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "signal": "@babel/plugin-transform-classes",
+                                "location": {
+                                    "type": "source-location",
+                                    "url": "https://static.licdn.com/aero-v1/sc/h/6tftfjbs07i6r9lmcfgxa4uxy",
+                                    "urlProvider": "network",
+                                    "line": 1,
+                                    "column": 68864
+                                }
+                            }
+                        ]
+                    },
+                    "totalBytes": 0
+                },
+                {
+                    "url": "https://static.licdn.com/aero-v1/sc/h/eh08muqvrde4h3hc6koyij5ti",
+                    "wastedBytes": 61,
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "signal": "@babel/plugin-transform-classes",
+                                "location": {
+                                    "type": "source-location",
+                                    "url": "https://static.licdn.com/aero-v1/sc/h/eh08muqvrde4h3hc6koyij5ti",
+                                    "urlProvider": "network",
+                                    "line": 0,
+                                    "column": 49733
+                                }
+                            }
+                        ]
+                    },
+                    "totalBytes": 0
+                }
+            ],
+            "overallSavingsMs": 0,
+            "overallSavingsBytes": 126,
+            "sortedBy": [
+                "wastedBytes"
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "metricSavings": {
+                    "FCP": 0,
+                    "LCP": 0
+                }
+            }
+        },
+        "guidanceLevel": 2
+    },
+    "charset": {
+        "id": "charset",
+        "title": "Charset declaration is missing or occurs too late in the HTML",
+        "description": "A character encoding declaration is required. It can be done with a `<meta>` tag in the first 1024 bytes of the HTML or in the Content-Type HTTP response header. [Learn more about declaring the character encoding](https://developer.chrome.com/docs/lighthouse/best-practices/charset/).",
+        "score": 0,
+        "scoreDisplayMode": "binary"
+    },
+    "inspector-issues": {
+        "id": "inspector-issues",
+        "title": "Issues were logged in the `Issues` panel in Chrome Devtools",
+        "description": "Issues logged to the `Issues` panel in Chrome Devtools indicate unresolved problems. They can come from network request failures, insufficient security controls, and other browser concerns. Open up the Issues panel in Chrome DevTools for more details on each issue.",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "issueType",
+                    "valueType": "text",
+                    "subItemsHeading": {
+                        "key": "url",
+                        "valueType": "url"
+                    },
+                    "label": "Issue type"
+                }
+            ],
+            "items": [
+                {
+                    "issueType": "Cookie",
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "url": "https://www.linkedin-ei.com/litms/api/metadata/user"
+                            },
+                            {
+                                "url": "https://platform.linkedin-ei.com/litms/utag/homepage-guest-frontend/utag.js?cb=1723578000000"
+                            },
+                            {
+                                "url": "https://dpm.demdex.net/id?d_visid_ver=5.1.1&d_fieldgroup=MC&d_rtbd=json&d_ver=2&d_orgid=14215E3D5995C57C0A495C55%40AdobeOrg&d_nsid=0&ts=1723578089425"
+                            },
+                            {
+                                "url": "https://lnkd.demdex.net/dest5.html?d_nsid=0#http%3A%2F%2Flocalhost%3A8000"
+                            },
+                            {
+                                "url": "https://lnkd.demdex.net/event?d_dil_ver=9.4&_ts=1723578089432"
+                            },
+                            {
+                                "url": "http://platform.linkedin-ei.com/litms/utag/homepage-guest-frontend/utag.123.js?utv=ut4.51.202405021958"
+                            },
+                            {
+                                "url": "http://platform.linkedin-ei.com/litms/utag/homepage-guest-frontend/utag.120.js?utv=ut4.51.202405021958"
+                            },
+                            {
+                                "url": "http://platform.linkedin-ei.com/litms/utag/homepage-guest-frontend/utag.119.js?utv=ut4.51.202405021958"
+                            },
+                            {
+                                "url": "https://trkn.us/pixel/conv/ppt=14086;g=linkedin_flagship_homepage;gid=36535"
+                            },
+                            {
+                                "url": "https://trkn.us/pixel/conv/ppt=14086;g=linkedin_flagship_homepage;gid=36535;ip=132.205.229.100;cuidchk=1"
+                            },
+                            {
+                                "url": "https://trkn.us/pixel/conv/ppt=10786;g=linkedin_flagship_homepage;gid=32238"
+                            },
+                            {
+                                "url": "https://trkn.us/pixel/conv/ppt=10786;g=linkedin_flagship_homepage;gid=32238;ip=132.205.229.100;cuidchk=1"
+                            },
+                            {
+                                "url": "https://trkn.us/pixel/conv/ppt=17688;g=flagship_page;gid=40658"
+                            },
+                            {
+                                "url": "https://trkn.us/pixel/conv/ppt=17688;g=flagship_page;gid=40658;ip=132.205.229.100;cuidchk=1"
+                            },
+                            {
+                                "url": "https://cm.g.doubleclick.net/pixel?google_nid=adobe_dmp&google_cm&gdpr=0&gdpr_consent=&google_hm=NzEzMjM5NTk5MDg4MjYwMjMzNjMwMDg5Nzg2NDYyMTIyMjk1OTc="
+                            },
+                            {
+                                "url": "https://cm.g.doubleclick.net/pixel?google_nid=adobe_dmp&google_cm=&gdpr=0&gdpr_consent=&google_hm=NzEzMjM5NTk5MDg4MjYwMjMzNjMwMDg5Nzg2NDYyMTIyMjk1OTc=&google_tc="
+                            },
+                            {
+                                "url": "https://dpm.demdex.net/ibs:dpid=771&dpuuid=CAESELeqVO5HqTjAwBtzs-faq_M&google_cver=1?gdpr=0&gdpr_consent="
+                            },
+                            {
+                                "url": "https://c.bing.com/c.gif?uid=71323959908826023363008978646212229597&Red3=MSAdobe_pd&gdpr=0&gdpr_consent="
+                            },
+                            {
+                                "url": "https://dpm.demdex.net/ibs:dpid=1957&dpuuid=3A523B0D1FB664372D952FD71E256592"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    "uses-passive-event-listeners": {
+        "id": "uses-passive-event-listeners",
+        "title": "Does not use passive listeners to improve scrolling performance",
+        "description": "Consider marking your touch and wheel event listeners as `passive` to improve your page's scroll performance. [Learn more about adopting passive event listeners](https://developer.chrome.com/docs/lighthouse/best-practices/uses-passive-event-listeners/).",
+        "score": 0.5,
+        "scoreDisplayMode": "metricSavings",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "source",
+                    "valueType": "source-location",
+                    "label": "Source"
+                }
+            ],
+            "items": [
+                {
+                    "source": {
+                        "type": "source-location",
+                        "url": "https://static.licdn.com/aero-v1/sc/h/6tftfjbs07i6r9lmcfgxa4uxy",
+                        "urlProvider": "network",
+                        "line": 1,
+                        "column": 266912
+                    }
+                },
+                {
+                    "source": {
+                        "type": "source-location",
+                        "url": "https://static.licdn.com/aero-v1/sc/h/6tftfjbs07i6r9lmcfgxa4uxy",
+                        "urlProvider": "network",
+                        "line": 1,
+                        "column": 266986
+                    }
+                }
+            ]
+        },
+        "guidanceLevel": 3
+    }
+}

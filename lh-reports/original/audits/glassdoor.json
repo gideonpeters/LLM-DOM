@@ -1,0 +1,156 @@
+{
+    "viewport": {
+        "id": "viewport",
+        "title": "Does not have a `<meta name=\"viewport\">` tag with `width` or `initial-scale`",
+        "description": "A `<meta name=\"viewport\">` not only optimizes your app for mobile screen sizes, but also prevents [a 300 millisecond delay to user input](https://developer.chrome.com/blog/300ms-tap-delay-gone-away/). [Learn more about using the viewport meta tag](https://developer.chrome.com/docs/lighthouse/pwa/viewport/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "explanation": "No `<meta name=\"viewport\">` tag found",
+        "metricSavings": {
+            "INP": 300
+        },
+        "guidanceLevel": 3
+    },
+    "document-title": {
+        "id": "document-title",
+        "title": "Document doesn't have a `<title>` element",
+        "description": "The title gives screen reader users an overview of the page, and search engine users rely on it heavily to determine if a page is relevant to their search. [Learn more about document titles](https://dequeuniversity.com/rules/axe/4.9/document-title).",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "node",
+                    "valueType": "node",
+                    "subItemsHeading": {
+                        "key": "relatedNode",
+                        "valueType": "node"
+                    },
+                    "label": "Failing Elements"
+                }
+            ],
+            "items": [
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-0-HTML",
+                        "path": "0,HTML",
+                        "selector": "html",
+                        "boundingRect": {
+                            "top": 0,
+                            "bottom": 1958,
+                            "left": 0,
+                            "right": 980,
+                            "width": 980,
+                            "height": 1958
+                        },
+                        "snippet": "<html>",
+                        "nodeLabel": "html",
+                        "explanation": "Fix any of the following:\n  Document does not have a non-empty <title> element"
+                    }
+                }
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "impact": "serious",
+                "tags": [
+                    "cat.text-alternatives",
+                    "wcag2a",
+                    "wcag242",
+                    "TTv5",
+                    "TT12.a",
+                    "EN-301-549",
+                    "EN-9.2.4.2",
+                    "ACT"
+                ]
+            }
+        }
+    },
+    "html-has-lang": {
+        "id": "html-has-lang",
+        "title": "`<html>` element does not have a `[lang]` attribute",
+        "description": "If a page doesn't specify a `lang` attribute, a screen reader assumes that the page is in the default language that the user chose when setting up the screen reader. If the page isn't actually in the default language, then the screen reader might not announce the page's text correctly. [Learn more about the `lang` attribute](https://dequeuniversity.com/rules/axe/4.9/html-has-lang).",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "node",
+                    "valueType": "node",
+                    "subItemsHeading": {
+                        "key": "relatedNode",
+                        "valueType": "node"
+                    },
+                    "label": "Failing Elements"
+                }
+            ],
+            "items": [
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-0-HTML",
+                        "path": "0,HTML",
+                        "selector": "html",
+                        "boundingRect": {
+                            "top": 0,
+                            "bottom": 1958,
+                            "left": 0,
+                            "right": 980,
+                            "width": 980,
+                            "height": 1958
+                        },
+                        "snippet": "<html>",
+                        "nodeLabel": "html",
+                        "explanation": "Fix any of the following:\n  The <html> element does not have a lang attribute"
+                    }
+                }
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "impact": "serious",
+                "tags": [
+                    "cat.language",
+                    "wcag2a",
+                    "wcag311",
+                    "TTv5",
+                    "TT11.a",
+                    "EN-301-549",
+                    "EN-9.3.1.1",
+                    "ACT"
+                ]
+            }
+        }
+    },
+    "doctype": {
+        "id": "doctype",
+        "title": "Page lacks the HTML doctype, thus triggering quirks-mode",
+        "description": "Specifying a doctype prevents the browser from switching to quirks-mode. [Learn more about the doctype declaration](https://developer.chrome.com/docs/lighthouse/best-practices/doctype/).",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "explanation": "Document must contain a doctype"
+    },
+    "charset": {
+        "id": "charset",
+        "title": "Charset declaration is missing or occurs too late in the HTML",
+        "description": "A character encoding declaration is required. It can be done with a `<meta>` tag in the first 1024 bytes of the HTML or in the Content-Type HTTP response header. [Learn more about declaring the character encoding](https://developer.chrome.com/docs/lighthouse/best-practices/charset/).",
+        "score": 0,
+        "scoreDisplayMode": "binary"
+    },
+    "meta-description": {
+        "id": "meta-description",
+        "title": "Document does not have a meta description",
+        "description": "Meta descriptions may be included in search results to concisely summarize page content. [Learn more about the meta description](https://developer.chrome.com/docs/lighthouse/seo/meta-description/).",
+        "score": 0,
+        "scoreDisplayMode": "binary"
+    },
+    "font-size": {
+        "id": "font-size",
+        "title": "Document doesn't use legible font sizes",
+        "description": "Font sizes less than 12px are too small to be legible and require mobile visitors to \u201cpinch to zoom\u201d in order to read. Strive to have >60% of page text \u226512px. [Learn more about legible font sizes](https://developer.chrome.com/docs/lighthouse/seo/font-size/).",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "explanation": "Text is illegible because there's no viewport meta tag optimized for mobile screens."
+    }
+}

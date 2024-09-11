@@ -1,0 +1,1666 @@
+{
+    "first-contentful-paint": {
+        "id": "first-contentful-paint",
+        "title": "First Contentful Paint",
+        "description": "First Contentful Paint marks the time at which the first text or image is painted. [Learn more about the First Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/).",
+        "score": 0,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 11479.194,
+        "numericUnit": "millisecond",
+        "displayValue": "11.5\u00a0s",
+        "scoringOptions": {
+            "p10": 1800,
+            "median": 3000
+        }
+    },
+    "largest-contentful-paint": {
+        "id": "largest-contentful-paint",
+        "title": "Largest Contentful Paint",
+        "description": "Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+        "score": 0,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 16347.911,
+        "numericUnit": "millisecond",
+        "displayValue": "16.3\u00a0s",
+        "scoringOptions": {
+            "p10": 2500,
+            "median": 4000
+        }
+    },
+    "speed-index": {
+        "id": "speed-index",
+        "title": "Speed Index",
+        "description": "Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/).",
+        "score": 0.05,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 11479.194,
+        "numericUnit": "millisecond",
+        "displayValue": "11.5\u00a0s",
+        "scoringOptions": {
+            "p10": 3387,
+            "median": 5800
+        }
+    },
+    "total-blocking-time": {
+        "id": "total-blocking-time",
+        "title": "Total Blocking Time",
+        "description": "Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds. [Learn more about the Total Blocking Time metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/).",
+        "score": 0.29,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 961,
+        "numericUnit": "millisecond",
+        "displayValue": "960\u00a0ms",
+        "scoringOptions": {
+            "p10": 200,
+            "median": 600
+        }
+    },
+    "max-potential-fid": {
+        "id": "max-potential-fid",
+        "title": "Max Potential First Input Delay",
+        "description": "The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).",
+        "score": 0,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 918,
+        "numericUnit": "millisecond",
+        "displayValue": "920\u00a0ms"
+    },
+    "interactive": {
+        "id": "interactive",
+        "title": "Time to Interactive",
+        "description": "Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).",
+        "score": 0.05,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 16532.21545,
+        "numericUnit": "millisecond",
+        "displayValue": "16.5\u00a0s"
+    },
+    "mainthread-work-breakdown": {
+        "id": "mainthread-work-breakdown",
+        "title": "Minimize main-thread work",
+        "description": "Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to minimize main-thread work](https://developer.chrome.com/docs/lighthouse/performance/mainthread-work-breakdown/)",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 2725.767999999994,
+        "numericUnit": "millisecond",
+        "displayValue": "2.7\u00a0s",
+        "metricSavings": {
+            "TBT": 950
+        },
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "groupLabel",
+                    "valueType": "text",
+                    "label": "Category"
+                },
+                {
+                    "key": "duration",
+                    "valueType": "ms",
+                    "granularity": 1,
+                    "label": "Time Spent"
+                }
+            ],
+            "items": [
+                {
+                    "group": "scriptEvaluation",
+                    "groupLabel": "Script Evaluation",
+                    "duration": 1526.9199999999926
+                },
+                {
+                    "group": "other",
+                    "groupLabel": "Other",
+                    "duration": 375.1880000000009
+                },
+                {
+                    "group": "scriptParseCompile",
+                    "groupLabel": "Script Parsing & Compilation",
+                    "duration": 362.37600000000003
+                },
+                {
+                    "group": "styleLayout",
+                    "groupLabel": "Style & Layout",
+                    "duration": 231.96800000000013
+                },
+                {
+                    "group": "parseHTML",
+                    "groupLabel": "Parse HTML & CSS",
+                    "duration": 168.82000000000016
+                },
+                {
+                    "group": "garbageCollection",
+                    "groupLabel": "Garbage Collection",
+                    "duration": 37.675999999999995
+                },
+                {
+                    "group": "paintCompositeRender",
+                    "groupLabel": "Rendering",
+                    "duration": 22.819999999999993
+                }
+            ],
+            "sortedBy": [
+                "duration"
+            ]
+        },
+        "guidanceLevel": 1
+    },
+    "bootup-time": {
+        "id": "bootup-time",
+        "title": "Reduce JavaScript execution time",
+        "description": "Consider reducing the time spent parsing, compiling, and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to reduce Javascript execution time](https://developer.chrome.com/docs/lighthouse/performance/bootup-time/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 1859.091999999992,
+        "numericUnit": "millisecond",
+        "displayValue": "1.9\u00a0s",
+        "metricSavings": {
+            "TBT": 950
+        },
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "total",
+                    "granularity": 1,
+                    "valueType": "ms",
+                    "label": "Total CPU Time"
+                },
+                {
+                    "key": "scripting",
+                    "granularity": 1,
+                    "valueType": "ms",
+                    "label": "Script Evaluation"
+                },
+                {
+                    "key": "scriptParseCompile",
+                    "granularity": 1,
+                    "valueType": "ms",
+                    "label": "Script Parse"
+                }
+            ],
+            "items": [
+                {
+                    "url": "https://assets.nflxext.com/web/ffe/wp/ui/login/client.e9908a16c0917b39fa99.js",
+                    "total": 1129.5039999999917,
+                    "scripting": 942.8959999999918,
+                    "scriptParseCompile": 115.536
+                },
+                {
+                    "url": "http://localhost:8000/netflix.html",
+                    "total": 562.428,
+                    "scripting": 77.284,
+                    "scriptParseCompile": 157.33999999999997
+                },
+                {
+                    "url": "Unattributable",
+                    "total": 391.1120000000012,
+                    "scripting": 81.72,
+                    "scriptParseCompile": 0
+                },
+                {
+                    "url": "https://www.gstatic.com/recaptcha/releases/hfUfsXWZFeg83qqxrK27GB8P/recaptcha__en.js",
+                    "total": 273.2680000000004,
+                    "scripting": 199.1040000000004,
+                    "scriptParseCompile": 58.611999999999995
+                },
+                {
+                    "url": "https://cdn.cookielaw.org/scripttemplates/202406.1.0/otBannerSdk.js",
+                    "total": 204.96399999999997,
+                    "scripting": 136.49999999999997,
+                    "scriptParseCompile": 28.072
+                },
+                {
+                    "url": "https://www.google.com/recaptcha/enterprise/anchor?ar=1&k=6Lf8hrcUAAAAAIpQAFW2VFjtiYnThOjZOA5xvLyR&co=aHR0cDovL2xvY2FsaG9zdDo4MDAw&hl=en&v=hfUfsXWZFeg83qqxrK27GB8P&size=invisible&cb=9exhqbmvsn0b",
+                    "total": 122.63600000000001,
+                    "scripting": 61.592,
+                    "scriptParseCompile": 0.436
+                }
+            ],
+            "summary": {
+                "wastedMs": 1859.091999999992
+            },
+            "sortedBy": [
+                "total"
+            ]
+        },
+        "guidanceLevel": 1
+    },
+    "uses-rel-preconnect": {
+        "id": "uses-rel-preconnect",
+        "title": "Preconnect to required origins",
+        "description": "Consider adding `preconnect` or `dns-prefetch` resource hints to establish early connections to important third-party origins. [Learn how to preconnect to required origins](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 308.198,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 310\u00a0ms",
+        "warnings": [],
+        "metricSavings": {
+            "LCP": 300,
+            "FCP": 0
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "wastedMs",
+                    "valueType": "timespanMs",
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "url": "https://www.google.com",
+                    "wastedMs": 308.198
+                },
+                {
+                    "url": "https://www.gstatic.com",
+                    "wastedMs": 304.336
+                },
+                {
+                    "url": "https://geolocation.onetrust.com",
+                    "wastedMs": 245.03699998521805
+                },
+                {
+                    "url": "https://cdn.cookielaw.org",
+                    "wastedMs": 135.98299999809265
+                }
+            ],
+            "overallSavingsMs": 308.198,
+            "sortedBy": [
+                "wastedMs"
+            ]
+        },
+        "guidanceLevel": 3
+    },
+    "font-display": {
+        "id": "font-display",
+        "title": "Ensure text remains visible during webfont load",
+        "description": "Leverage the `font-display` CSS feature to ensure text is user-visible while webfonts are loading. [Learn more about `font-display`](https://developer.chrome.com/docs/lighthouse/performance/font-display/).",
+        "score": 0.5,
+        "scoreDisplayMode": "metricSavings",
+        "warnings": [],
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "wastedMs",
+                    "valueType": "ms",
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "url": "https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2",
+                    "wastedMs": 65.4670000076294
+                }
+            ]
+        },
+        "guidanceLevel": 3
+    },
+    "third-party-summary": {
+        "id": "third-party-summary",
+        "title": "Reduce the impact of third-party code",
+        "description": "Third-party code can significantly impact load performance. Limit the number of redundant third-party providers and try to load third-party code after your page has primarily finished loading. [Learn how to minimize third-party impact](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "displayValue": "Third-party code blocked the main thread for 1,030\u00a0ms",
+        "metricSavings": {
+            "TBT": 1000
+        },
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "entity",
+                    "valueType": "text",
+                    "label": "Third-Party",
+                    "subItemsHeading": {
+                        "key": "url",
+                        "valueType": "url"
+                    }
+                },
+                {
+                    "key": "transferSize",
+                    "granularity": 1,
+                    "valueType": "bytes",
+                    "label": "Transfer Size",
+                    "subItemsHeading": {
+                        "key": "transferSize"
+                    }
+                },
+                {
+                    "key": "blockingTime",
+                    "granularity": 1,
+                    "valueType": "ms",
+                    "label": "Main-Thread Blocking Time",
+                    "subItemsHeading": {
+                        "key": "blockingTime"
+                    }
+                }
+            ],
+            "items": [
+                {
+                    "mainThreadTime": 1129.503999999994,
+                    "blockingTime": 934.0000000000053,
+                    "transferSize": 691161,
+                    "tbtImpact": 934.0000000000053,
+                    "entity": "NetFlix",
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "url": "https://assets.nflxext.com/web/ffe/wp/ui/login/client.e9908a16c0917b39fa99.js",
+                                "mainThreadTime": 1129.503999999994,
+                                "blockingTime": 934.0000000000053,
+                                "transferSize": 526573,
+                                "tbtImpact": 934.0000000000053
+                            },
+                            {
+                                "url": "https://assets.nflxext.com/ffe/siteui/vlv3/b2c3e95b-b7b5-4bb7-a883-f4bfc7472fb7/813635c2-ab2e-416f-aca0-2fe712618ed4/CA-en-20240805-POP_SIGNUP_TWO_WEEKS-perspective_WEB_9148549a-7358-4ba2-93c6-b061d704ac8e_small.jpg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 163276,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://assets.nflxext.com/web/ffe/wp/js/login/base.29784261571369c943e5.css",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 1312,
+                                "tbtImpact": 0
+                            }
+                        ]
+                    }
+                },
+                {
+                    "mainThreadTime": 276.0720000000001,
+                    "blockingTime": 54.70733944954353,
+                    "transferSize": 242734,
+                    "tbtImpact": 39.70733944954357,
+                    "entity": "Google CDN",
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "url": "https://www.gstatic.com/recaptcha/releases/hfUfsXWZFeg83qqxrK27GB8P/recaptcha__en.js",
+                                "mainThreadTime": 273.26800000000014,
+                                "blockingTime": 54.70733944954353,
+                                "transferSize": 215213,
+                                "tbtImpact": 39.70733944954357
+                            },
+                            {
+                                "url": "https://www.gstatic.com/recaptcha/releases/hfUfsXWZFeg83qqxrK27GB8P/styles__ltr.css",
+                                "mainThreadTime": 2.8040000000000003,
+                                "blockingTime": 0,
+                                "transferSize": 25153,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.gstatic.com/recaptcha/api2/logo_48.png",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 2368,
+                                "tbtImpact": 0
+                            }
+                        ]
+                    }
+                },
+                {
+                    "mainThreadTime": 232.0480000000002,
+                    "blockingTime": 30.000000000000007,
+                    "transferSize": 181474,
+                    "tbtImpact": 0,
+                    "entity": "Optanon",
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "url": "https://cdn.cookielaw.org/scripttemplates/202406.1.0/otBannerSdk.js",
+                                "mainThreadTime": 204.96400000000023,
+                                "blockingTime": 30.000000000000007,
+                                "transferSize": 112307,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://cdn.cookielaw.org/consent/87b6a5c0-0104-4e96-a291-092c11350111/0190934a-1a28-76d7-83d2-3d0544f00076/en.json",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 17243,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 16583,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://cdn.cookielaw.org/scripttemplates/202406.1.0/assets/v2/otPcTab.json",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 14006,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js",
+                                "mainThreadTime": 27.083999999999985,
+                                "blockingTime": 0,
+                                "transferSize": 7428,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://cdn.cookielaw.org/scripttemplates/202406.1.0/assets/otCommonStyles.css",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 4379,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://cdn.cookielaw.org/scripttemplates/202406.1.0/assets/otFlat.json",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 3310,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://cdn.cookielaw.org/consent/87b6a5c0-0104-4e96-a291-092c11350111/87b6a5c0-0104-4e96-a291-092c11350111.json",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 2635,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://cdn.cookielaw.org/logos/static/powered_by_logo.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 2175,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://cdn.cookielaw.org/logos/static/ot_close.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 600,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://cdn.cookielaw.org/logos/static/ot_guard_logo.svg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 494,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 314,
+                                "tbtImpact": 0
+                            }
+                        ]
+                    }
+                },
+                {
+                    "mainThreadTime": 129.90000000000003,
+                    "blockingTime": 14.292660550456425,
+                    "transferSize": 3002,
+                    "tbtImpact": 14.292660550456425,
+                    "entity": "Other Google APIs/SDKs",
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "url": "https://www.google.com/recaptcha/enterprise/anchor?ar=1&k=6Lf8hrcUAAAAAIpQAFW2VFjtiYnThOjZOA5xvLyR&co=aHR0cDovL2xvY2FsaG9zdDo4MDAw&hl=en&v=hfUfsXWZFeg83qqxrK27GB8P&size=invisible&cb=9exhqbmvsn0b",
+                                "mainThreadTime": 122.63600000000002,
+                                "blockingTime": 14.292660550456425,
+                                "transferSize": 1671,
+                                "tbtImpact": 14.292660550456425
+                            },
+                            {
+                                "url": "https://www.google.com/recaptcha/enterprise.js?render=6Lf8hrcUAAAAAIpQAFW2VFjtiYnThOjZOA5xvLyR",
+                                "mainThreadTime": 7.263999999999998,
+                                "blockingTime": 0,
+                                "transferSize": 1331,
+                                "tbtImpact": 0
+                            }
+                        ]
+                    }
+                },
+                {
+                    "mainThreadTime": 0,
+                    "blockingTime": 0,
+                    "transferSize": 11281,
+                    "tbtImpact": 0,
+                    "entity": "Google Fonts",
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "url": "https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 11281,
+                                "tbtImpact": 0
+                            }
+                        ]
+                    }
+                },
+                {
+                    "mainThreadTime": 0,
+                    "blockingTime": 0,
+                    "transferSize": 4377,
+                    "tbtImpact": 0,
+                    "entity": "netflix.com",
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "url": "https://logs.netflix.com/log/wwwhead/cl/2?fetchType=js&eventType=WebsiteScreen&winw=412&winh=823&screenw=980&screenh=1958&ratio=1.75",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 1504,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://logs.netflix.com/log/wwwhead/cl/2?fetchType=js&eventType=WebsiteDetect&modalView=login",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 1466,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://logs.netflix.com/log/www/cl/2",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 1407,
+                                "tbtImpact": 0
+                            }
+                        ]
+                    }
+                }
+            ],
+            "summary": {
+                "wastedBytes": 1134029,
+                "wastedMs": 1033.0000000000052
+            },
+            "isEntityGrouped": true
+        },
+        "guidanceLevel": 1
+    },
+    "largest-contentful-paint-element": {
+        "id": "largest-contentful-paint-element",
+        "title": "Largest Contentful Paint element",
+        "description": "This is the largest contentful element painted within the viewport. [Learn more about the Largest Contentful Paint element](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "displayValue": "16,350\u00a0ms",
+        "metricSavings": {
+            "LCP": 13850
+        },
+        "details": {
+            "type": "list",
+            "items": [
+                {
+                    "type": "table",
+                    "headings": [
+                        {
+                            "key": "node",
+                            "valueType": "node",
+                            "label": "Element"
+                        }
+                    ],
+                    "items": [
+                        {
+                            "node": {
+                                "type": "node",
+                                "lhId": "page-0-DIV",
+                                "path": "1,HTML,1,BODY,6,DIV,1,DIV,0,DIV,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV",
+                                "selector": "div.ot-sdk-row > div#onetrust-group-container > div#onetrust-policy > div#onetrust-policy-text",
+                                "boundingRect": {
+                                    "top": 77,
+                                    "bottom": 140,
+                                    "left": 43,
+                                    "right": 353,
+                                    "width": 310,
+                                    "height": 63
+                                },
+                                "snippet": "<div id=\"onetrust-policy-text\">",
+                                "nodeLabel": "Netflix uses cookies for personalization, to customize its online advertisement\u2026"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "table",
+                    "headings": [
+                        {
+                            "key": "phase",
+                            "valueType": "text",
+                            "label": "Phase"
+                        },
+                        {
+                            "key": "percent",
+                            "valueType": "text",
+                            "label": "% of LCP"
+                        },
+                        {
+                            "key": "timing",
+                            "valueType": "ms",
+                            "label": "Timing"
+                        }
+                    ],
+                    "items": [
+                        {
+                            "phase": "TTFB",
+                            "timing": 450.824,
+                            "percent": "3%"
+                        },
+                        {
+                            "phase": "Load Delay",
+                            "timing": 0,
+                            "percent": "0%"
+                        },
+                        {
+                            "phase": "Load Time",
+                            "timing": 0,
+                            "percent": "0%"
+                        },
+                        {
+                            "phase": "Render Delay",
+                            "timing": 15897.087,
+                            "percent": "97%"
+                        }
+                    ]
+                }
+            ]
+        },
+        "guidanceLevel": 1
+    },
+    "valid-source-maps": {
+        "id": "valid-source-maps",
+        "title": "Missing source maps for large first-party JavaScript",
+        "description": "Source maps translate minified code to the original source code. This helps developers debug in production. In addition, Lighthouse is able to provide further insights. Consider deploying source maps to take advantage of these benefits. [Learn more about source maps](https://developer.chrome.com/docs/devtools/javascript/source-maps/).",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "scriptUrl",
+                    "valueType": "url",
+                    "subItemsHeading": {
+                        "key": "error"
+                    },
+                    "label": "URL"
+                },
+                {
+                    "key": "sourceMapUrl",
+                    "valueType": "url",
+                    "label": "Map URL"
+                }
+            ],
+            "items": [
+                {
+                    "scriptUrl": "http://localhost:8000/netflix.html",
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "error": "Large JavaScript file is missing a source map"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    "meta-viewport": {
+        "id": "meta-viewport",
+        "title": "`[user-scalable=\"no\"]` is used in the `<meta name=\"viewport\">` element or the `[maximum-scale]` attribute is less than 5.",
+        "description": "Disabling zooming is problematic for users with low vision who rely on screen magnification to properly see the contents of a web page. [Learn more about the viewport meta tag](https://dequeuniversity.com/rules/axe/4.9/meta-viewport).",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "node",
+                    "valueType": "node",
+                    "subItemsHeading": {
+                        "key": "relatedNode",
+                        "valueType": "node"
+                    },
+                    "label": "Failing Elements"
+                }
+            ],
+            "items": [
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-0-META",
+                        "path": "1,HTML,0,HEAD,14,META",
+                        "selector": "head > meta",
+                        "boundingRect": {
+                            "top": 0,
+                            "bottom": 0,
+                            "left": 0,
+                            "right": 0,
+                            "width": 0,
+                            "height": 0
+                        },
+                        "snippet": "<meta content=\"width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0\" name=\"viewport\">",
+                        "nodeLabel": "head > meta",
+                        "explanation": "Fix any of the following:\n  maximum-scale on <meta> tag disables zooming on mobile devices"
+                    }
+                }
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "impact": "critical",
+                "tags": [
+                    "cat.sensory-and-visual-cues",
+                    "wcag2aa",
+                    "wcag144",
+                    "EN-301-549",
+                    "EN-9.1.4.4",
+                    "ACT"
+                ]
+            }
+        }
+    },
+    "uses-long-cache-ttl": {
+        "id": "uses-long-cache-ttl",
+        "title": "Serve static assets with an efficient cache policy",
+        "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more about efficient cache policies](https://developer.chrome.com/docs/lighthouse/performance/uses-long-cache-ttl/).",
+        "score": 0.5,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 124990.09776548922,
+        "numericUnit": "byte",
+        "displayValue": "9 resources found",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "cacheLifetimeMs",
+                    "valueType": "ms",
+                    "label": "Cache TTL",
+                    "displayUnit": "duration"
+                },
+                {
+                    "key": "totalBytes",
+                    "valueType": "bytes",
+                    "label": "Transfer Size",
+                    "displayUnit": "kb",
+                    "granularity": 1
+                }
+            ],
+            "items": [
+                {
+                    "url": "https://cdn.cookielaw.org/scripttemplates/202406.1.0/otBannerSdk.js",
+                    "debugData": {
+                        "type": "debugdata",
+                        "max-age": 86400
+                    },
+                    "cacheLifetimeMs": 86400000,
+                    "cacheHitProbability": 0.6,
+                    "totalBytes": 112307,
+                    "wastedBytes": 44922.8
+                },
+                {
+                    "url": "https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png",
+                    "debugData": {
+                        "type": "debugdata",
+                        "max-age": 86400
+                    },
+                    "cacheLifetimeMs": 86400000,
+                    "cacheHitProbability": 0.6,
+                    "totalBytes": 16583,
+                    "wastedBytes": 6633.200000000001
+                },
+                {
+                    "url": "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js",
+                    "debugData": {
+                        "type": "debugdata",
+                        "max-age": 86400
+                    },
+                    "cacheLifetimeMs": 86400000,
+                    "cacheHitProbability": 0.6,
+                    "totalBytes": 7428,
+                    "wastedBytes": 2971.2000000000003
+                },
+                {
+                    "url": "https://cdn.cookielaw.org/logos/static/powered_by_logo.svg",
+                    "debugData": {
+                        "type": "debugdata",
+                        "max-age": 86400
+                    },
+                    "cacheLifetimeMs": 86400000,
+                    "cacheHitProbability": 0.6,
+                    "totalBytes": 2175,
+                    "wastedBytes": 870
+                },
+                {
+                    "url": "https://cdn.cookielaw.org/logos/static/ot_close.svg",
+                    "debugData": {
+                        "type": "debugdata",
+                        "max-age": 86400
+                    },
+                    "cacheLifetimeMs": 86400000,
+                    "cacheHitProbability": 0.6,
+                    "totalBytes": 600,
+                    "wastedBytes": 240
+                },
+                {
+                    "url": "https://www.gstatic.com/recaptcha/api2/logo_48.png",
+                    "debugData": {
+                        "type": "debugdata",
+                        "public": true,
+                        "max-age": 604800
+                    },
+                    "cacheLifetimeMs": 604800000,
+                    "cacheHitProbability": 0.9,
+                    "totalBytes": 2368,
+                    "wastedBytes": 236.79999999999995
+                },
+                {
+                    "url": "https://assets.nflxext.com/web/ffe/wp/ui/login/client.e9908a16c0917b39fa99.js",
+                    "debugData": {
+                        "type": "debugdata",
+                        "max-age": 604801
+                    },
+                    "cacheLifetimeMs": 604801000,
+                    "cacheHitProbability": 0.9000000032329816,
+                    "totalBytes": 526573,
+                    "wastedBytes": 52657.2982975992
+                },
+                {
+                    "url": "https://assets.nflxext.com/ffe/siteui/vlv3/b2c3e95b-b7b5-4bb7-a883-f4bfc7472fb7/813635c2-ab2e-416f-aca0-2fe712618ed4/CA-en-20240805-POP_SIGNUP_TWO_WEEKS-perspective_WEB_9148549a-7358-4ba2-93c6-b061d704ac8e_small.jpg",
+                    "debugData": {
+                        "type": "debugdata",
+                        "max-age": 604801
+                    },
+                    "cacheLifetimeMs": 604801000,
+                    "cacheHitProbability": 0.9000000032329816,
+                    "totalBytes": 163276,
+                    "wastedBytes": 16327.5994721317
+                },
+                {
+                    "url": "https://assets.nflxext.com/web/ffe/wp/js/login/base.29784261571369c943e5.css",
+                    "debugData": {
+                        "type": "debugdata",
+                        "max-age": 604801
+                    },
+                    "cacheLifetimeMs": 604801000,
+                    "cacheHitProbability": 0.9000000032329816,
+                    "totalBytes": 1312,
+                    "wastedBytes": 131.19999575832819
+                }
+            ],
+            "summary": {
+                "wastedBytes": 124990.09776548922
+            },
+            "sortedBy": [
+                "totalBytes"
+            ],
+            "skipSumming": [
+                "cacheLifetimeMs"
+            ]
+        },
+        "guidanceLevel": 3
+    },
+    "offscreen-images": {
+        "id": "offscreen-images",
+        "title": "Defer offscreen images",
+        "description": "Consider lazy-loading offscreen and hidden images after all critical resources have finished loading to lower time to interactive. [Learn how to defer offscreen images](https://developer.chrome.com/docs/lighthouse/performance/offscreen-images/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 460,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 177\u00a0KiB",
+        "warnings": [],
+        "metricSavings": {
+            "FCP": 0,
+            "LCP": 450
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "node",
+                    "valueType": "node",
+                    "label": ""
+                },
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "totalBytes",
+                    "valueType": "bytes",
+                    "label": "Resource Size"
+                },
+                {
+                    "key": "wastedBytes",
+                    "valueType": "bytes",
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-49-IMG",
+                        "path": "1,HTML,1,BODY,0,DIV,0,DIV,0,DIV,0,DIV,0,IMG",
+                        "selector": "div > div.default-ltr-cache-k55181 > div.default-ltr-cache-pkc5fh > img.concord-img",
+                        "boundingRect": {
+                            "top": 0,
+                            "bottom": 0,
+                            "left": 0,
+                            "right": 0,
+                            "width": 0,
+                            "height": 0
+                        },
+                        "snippet": "<img class=\"concord-img vlv-creative\" src=\"https://assets.nflxext.com/ffe/siteui/vlv3/b2c3e95b-b7b5-4bb7-a883-f4bfc74\u2026\" srcset=\"https://assets.nflxext.com/ffe/siteui/vlv3/b2c3e95b-b7b5-4bb7-a883-f4bfc74\u2026\" alt=\"\">",
+                        "nodeLabel": "div > div.default-ltr-cache-k55181 > div.default-ltr-cache-pkc5fh > img.concord-img"
+                    },
+                    "url": "https://assets.nflxext.com/ffe/siteui/vlv3/b2c3e95b-b7b5-4bb7-a883-f4bfc7472fb7/813635c2-ab2e-416f-aca0-2fe712618ed4/CA-en-20240805-POP_SIGNUP_TWO_WEEKS-perspective_WEB_9148549a-7358-4ba2-93c6-b061d704ac8e_small.jpg",
+                    "requestStartTime": 462637911.46999997,
+                    "totalBytes": 162953,
+                    "wastedBytes": 162953,
+                    "wastedPercent": 100
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-50-IMG",
+                        "path": "1,HTML,1,BODY,6,DIV,2,DIV,0,DIV,1,DIV,1,DIV,0,IMG",
+                        "selector": "div > div.ot-pc-header > div.ot-pc-logo > img",
+                        "boundingRect": {
+                            "top": 0,
+                            "bottom": 0,
+                            "left": 0,
+                            "right": 0,
+                            "width": 0,
+                            "height": 0
+                        },
+                        "snippet": "<img alt=\"Netflix Logo\" src=\"https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345e\u2026\">",
+                        "nodeLabel": "Netflix Logo"
+                    },
+                    "url": "https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png",
+                    "requestStartTime": 462638593.872,
+                    "totalBytes": 16386,
+                    "wastedBytes": 16386,
+                    "wastedPercent": 100
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-51-IMG",
+                        "path": "1,HTML,1,BODY,6,DIV,2,DIV,0,DIV,8,DIV,1,DIV,0,A,0,IMG",
+                        "selector": "div.ot-pc-footer > div.ot-pc-footer-logo > a > img",
+                        "boundingRect": {
+                            "top": 0,
+                            "bottom": 0,
+                            "left": 0,
+                            "right": 0,
+                            "width": 0,
+                            "height": 0
+                        },
+                        "snippet": "<img alt=\"Powered by Onetrust\" src=\"https://cdn.cookielaw.org/logos/static/powered_by_logo.svg\">",
+                        "nodeLabel": "Powered by Onetrust"
+                    },
+                    "url": "https://cdn.cookielaw.org/logos/static/powered_by_logo.svg",
+                    "requestStartTime": 462638594.315,
+                    "totalBytes": 2175,
+                    "wastedBytes": 2175,
+                    "wastedPercent": 100
+                }
+            ],
+            "overallSavingsMs": 460,
+            "overallSavingsBytes": 181514,
+            "sortedBy": [
+                "wastedBytes"
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "metricSavings": {
+                    "FCP": 0,
+                    "LCP": 460
+                }
+            }
+        },
+        "guidanceLevel": 2
+    },
+    "render-blocking-resources": {
+        "id": "render-blocking-resources",
+        "title": "Eliminate render-blocking resources",
+        "description": "Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn how to eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 108,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 110\u00a0ms",
+        "metricSavings": {
+            "FCP": 100,
+            "LCP": 100
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "totalBytes",
+                    "valueType": "bytes",
+                    "label": "Transfer Size"
+                },
+                {
+                    "key": "wastedMs",
+                    "valueType": "timespanMs",
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "url": "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js",
+                    "totalBytes": 7428,
+                    "wastedMs": 771
+                },
+                {
+                    "url": "https://assets.nflxext.com/web/ffe/wp/js/login/base.29784261571369c943e5.css",
+                    "totalBytes": 1312,
+                    "wastedMs": 771
+                }
+            ],
+            "overallSavingsMs": 108
+        },
+        "guidanceLevel": 2
+    },
+    "unminified-javascript": {
+        "id": "unminified-javascript",
+        "title": "Minify JavaScript",
+        "description": "Minifying JavaScript files can reduce payload sizes and script parse time. [Learn how to minify JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unminified-javascript/).",
+        "score": 0.5,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 0,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 428\u00a0KiB",
+        "warnings": [],
+        "metricSavings": {
+            "FCP": 0,
+            "LCP": 0
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "totalBytes",
+                    "valueType": "bytes",
+                    "label": "Transfer Size"
+                },
+                {
+                    "key": "wastedBytes",
+                    "valueType": "bytes",
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "url": "inline: \n   /* Polyfill service v4.8.0\n * For d\u2026",
+                    "totalBytes": 1135011,
+                    "wastedBytes": 437985,
+                    "wastedPercent": 38.58861279758522
+                }
+            ],
+            "overallSavingsMs": 0,
+            "overallSavingsBytes": 437985,
+            "sortedBy": [
+                "wastedBytes"
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "metricSavings": {
+                    "FCP": 0,
+                    "LCP": 0
+                }
+            }
+        },
+        "guidanceLevel": 3
+    },
+    "unused-css-rules": {
+        "id": "unused-css-rules",
+        "title": "Reduce unused CSS",
+        "description": "Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/).",
+        "score": 0.5,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 0,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 41\u00a0KiB",
+        "metricSavings": {
+            "FCP": 0,
+            "LCP": 0
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "totalBytes",
+                    "valueType": "bytes",
+                    "label": "Transfer Size"
+                },
+                {
+                    "key": "wastedBytes",
+                    "valueType": "bytes",
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "url": "https://www.gstatic.com/recaptcha/releases/hfUfsXWZFeg83qqxrK27GB8P/styles__ltr.css",
+                    "wastedBytes": 23198,
+                    "wastedPercent": 94.1801664330453,
+                    "totalBytes": 24631
+                },
+                {
+                    "url": "#onetrust-banner-sdk .onetrust-vendors-list-handler{cursor:pointer;color:#1f96db;font-size:inherit; \u2026 } \u2026",
+                    "wastedBytes": 19072,
+                    "wastedPercent": 87.33412094403384,
+                    "totalBytes": 21838
+                }
+            ],
+            "overallSavingsMs": 0,
+            "overallSavingsBytes": 42270,
+            "sortedBy": [
+                "wastedBytes"
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "metricSavings": {
+                    "FCP": 0,
+                    "LCP": 0
+                }
+            }
+        },
+        "guidanceLevel": 1
+    },
+    "unused-javascript": {
+        "id": "unused-javascript",
+        "title": "Reduce unused JavaScript",
+        "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 6930,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 1,453\u00a0KiB",
+        "metricSavings": {
+            "FCP": 5550,
+            "LCP": 6950
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "subItemsHeading": {
+                        "key": "source",
+                        "valueType": "code"
+                    },
+                    "label": "URL"
+                },
+                {
+                    "key": "totalBytes",
+                    "valueType": "bytes",
+                    "subItemsHeading": {
+                        "key": "sourceBytes"
+                    },
+                    "label": "Transfer Size"
+                },
+                {
+                    "key": "wastedBytes",
+                    "valueType": "bytes",
+                    "subItemsHeading": {
+                        "key": "sourceWastedBytes"
+                    },
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "url": "http://localhost:8000/netflix.html",
+                    "totalBytes": 1135011,
+                    "wastedBytes": 920316,
+                    "wastedPercent": 81.08432429289232
+                },
+                {
+                    "url": "https://assets.nflxext.com/web/ffe/wp/ui/login/client.e9908a16c0917b39fa99.js",
+                    "totalBytes": 526138,
+                    "wastedBytes": 213667,
+                    "wastedPercent": 40.61045440620576
+                },
+                {
+                    "url": "https://www.gstatic.com/recaptcha/releases/hfUfsXWZFeg83qqxrK27GB8P/recaptcha__en.js",
+                    "totalBytes": 214665,
+                    "wastedBytes": 148952,
+                    "wastedPercent": 69.38785635793644
+                },
+                {
+                    "url": "https://www.gstatic.com/recaptcha/releases/hfUfsXWZFeg83qqxrK27GB8P/recaptcha__en.js",
+                    "totalBytes": 214665,
+                    "wastedBytes": 144174,
+                    "wastedPercent": 67.16233052669492
+                },
+                {
+                    "url": "https://cdn.cookielaw.org/scripttemplates/202406.1.0/otBannerSdk.js",
+                    "totalBytes": 112161,
+                    "wastedBytes": 60566,
+                    "wastedPercent": 53.999094683539916
+                }
+            ],
+            "overallSavingsMs": 6930,
+            "overallSavingsBytes": 1487675,
+            "sortedBy": [
+                "wastedBytes"
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "metricSavings": {
+                    "FCP": 5570,
+                    "LCP": 6930
+                }
+            }
+        },
+        "guidanceLevel": 1
+    },
+    "uses-text-compression": {
+        "id": "uses-text-compression",
+        "title": "Enable text compression",
+        "description": "Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more about text compression](https://developer.chrome.com/docs/lighthouse/performance/uses-text-compression/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 4950,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 991\u00a0KiB",
+        "metricSavings": {
+            "FCP": 4950,
+            "LCP": 4950
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "totalBytes",
+                    "valueType": "bytes",
+                    "label": "Transfer Size"
+                },
+                {
+                    "key": "wastedBytes",
+                    "valueType": "bytes",
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "url": "http://localhost:8000/netflix.html",
+                    "totalBytes": 1305634,
+                    "wastedBytes": 1014827
+                }
+            ],
+            "overallSavingsMs": 4950,
+            "overallSavingsBytes": 1014827,
+            "sortedBy": [
+                "wastedBytes"
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "metricSavings": {
+                    "FCP": 4950,
+                    "LCP": 4950
+                }
+            }
+        },
+        "guidanceLevel": 3
+    },
+    "legacy-javascript": {
+        "id": "legacy-javascript",
+        "title": "Avoid serving legacy JavaScript to modern browsers",
+        "description": "Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. For your bundled JavaScript, adopt a modern script deployment strategy using module/nomodule feature detection to reduce the amount of code shipped to modern browsers, while retaining support for legacy browsers. [Learn how to use modern JavaScript](https://web.dev/articles/publish-modern-javascript)",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 150,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 40\u00a0KiB",
+        "metricSavings": {
+            "FCP": 150,
+            "LCP": 150
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "subItemsHeading": {
+                        "key": "location",
+                        "valueType": "source-location"
+                    },
+                    "label": "URL"
+                },
+                {
+                    "key": null,
+                    "valueType": "code",
+                    "subItemsHeading": {
+                        "key": "signal"
+                    },
+                    "label": ""
+                },
+                {
+                    "key": "wastedBytes",
+                    "valueType": "bytes",
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "url": "http://localhost:8000/netflix.html",
+                    "wastedBytes": 33893,
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "signal": "Object.defineProperty",
+                                "location": {
+                                    "type": "source-location",
+                                    "url": "http://localhost:8000/netflix.html",
+                                    "urlProvider": "network",
+                                    "line": 2475,
+                                    "column": 6
+                                }
+                            },
+                            {
+                                "signal": "Array.from",
+                                "location": {
+                                    "type": "source-location",
+                                    "url": "http://localhost:8000/netflix.html",
+                                    "urlProvider": "network",
+                                    "line": 3296,
+                                    "column": 13
+                                }
+                            },
+                            {
+                                "signal": "Array.of",
+                                "location": {
+                                    "type": "source-location",
+                                    "url": "http://localhost:8000/netflix.html",
+                                    "urlProvider": "network",
+                                    "line": 3297,
+                                    "column": 13
+                                }
+                            }
+                        ]
+                    },
+                    "totalBytes": 0
+                },
+                {
+                    "url": "https://cdn.cookielaw.org/scripttemplates/202406.1.0/otBannerSdk.js",
+                    "wastedBytes": 7110,
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "signal": "Array.prototype.fill",
+                                "location": {
+                                    "type": "source-location",
+                                    "url": "https://cdn.cookielaw.org/scripttemplates/202406.1.0/otBannerSdk.js",
+                                    "urlProvider": "network",
+                                    "line": 6,
+                                    "column": 7371
+                                }
+                            }
+                        ]
+                    },
+                    "totalBytes": 0
+                },
+                {
+                    "url": "https://assets.nflxext.com/web/ffe/wp/ui/login/client.e9908a16c0917b39fa99.js",
+                    "wastedBytes": 48,
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "signal": "@babel/plugin-transform-classes",
+                                "location": {
+                                    "type": "source-location",
+                                    "url": "https://assets.nflxext.com/web/ffe/wp/ui/login/client.e9908a16c0917b39fa99.js",
+                                    "urlProvider": "network",
+                                    "line": 33,
+                                    "column": 16342
+                                }
+                            }
+                        ]
+                    },
+                    "totalBytes": 0
+                }
+            ],
+            "overallSavingsMs": 150,
+            "overallSavingsBytes": 41051,
+            "sortedBy": [
+                "wastedBytes"
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "metricSavings": {
+                    "FCP": 150,
+                    "LCP": 150
+                }
+            }
+        },
+        "guidanceLevel": 2
+    },
+    "inspector-issues": {
+        "id": "inspector-issues",
+        "title": "Issues were logged in the `Issues` panel in Chrome Devtools",
+        "description": "Issues logged to the `Issues` panel in Chrome Devtools indicate unresolved problems. They can come from network request failures, insufficient security controls, and other browser concerns. Open up the Issues panel in Chrome DevTools for more details on each issue.",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "issueType",
+                    "valueType": "text",
+                    "subItemsHeading": {
+                        "key": "url",
+                        "valueType": "url"
+                    },
+                    "label": "Issue type"
+                }
+            ],
+            "items": [
+                {
+                    "issueType": "Cookie",
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "url": "https://logs.netflix.com/log/wwwhead/cl/2?fetchType=js&eventType=WebsiteDetect&modalView=login"
+                            },
+                            {
+                                "url": "https://logs.netflix.com/log/wwwhead/cl/2?fetchType=js&eventType=WebsiteScreen&winw=412&winh=823&screenw=980&screenh=1958&ratio=1.75"
+                            },
+                            {
+                                "url": "https://logs.netflix.com/log/www/cl/2"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    "font-size": {
+        "id": "font-size",
+        "title": "Document doesn't use legible font sizes",
+        "description": "Font sizes less than 12px are too small to be legible and require mobile visitors to \u201cpinch to zoom\u201d in order to read. Strive to have >60% of page text \u226512px. [Learn more about legible font sizes](https://developer.chrome.com/docs/lighthouse/seo/font-size/).",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "displayValue": "57.08% legible text",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "source",
+                    "valueType": "source-location",
+                    "label": "Source"
+                },
+                {
+                    "key": "selector",
+                    "valueType": "code",
+                    "label": "Selector"
+                },
+                {
+                    "key": "coverage",
+                    "valueType": "text",
+                    "label": "% of Page Text"
+                },
+                {
+                    "key": "fontSize",
+                    "valueType": "text",
+                    "label": "Font Size"
+                }
+            ],
+            "items": [
+                {
+                    "source": {
+                        "type": "code",
+                        "value": "dynamic"
+                    },
+                    "selector": "#onetrust-banner-sdk #onetrust-policy-text, #onetrust-banner-sdk .ot-dpd-desc, #onetrust-banner-sdk .ot-b-addl-desc",
+                    "coverage": "41.39%",
+                    "fontSize": "10px"
+                },
+                {
+                    "source": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/recaptcha/releases/hfUfsXWZFeg83qqxrK27GB8P/styles__ltr.css",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 30326
+                    },
+                    "selector": ".rc-anchor-normal .rc-anchor-pt, .rc-anchor-invisible .rc-anchor-pt, .rc-anchor-compact .rc-anchor-pt",
+                    "coverage": "0.55%",
+                    "fontSize": "8px"
+                },
+                {
+                    "source": {
+                        "type": "code",
+                        "value": "dynamic"
+                    },
+                    "selector": "#onetrust-banner-sdk #onetrust-accept-btn-handler, #onetrust-banner-sdk #onetrust-reject-all-handler, #onetrust-banner-sdk #onetrust-pc-btn-handler",
+                    "coverage": "0.42%",
+                    "fontSize": "11px"
+                },
+                {
+                    "source": {
+                        "type": "source-location",
+                        "url": "https://www.gstatic.com/recaptcha/releases/hfUfsXWZFeg83qqxrK27GB8P/styles__ltr.css",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 29253
+                    },
+                    "selector": ".rc-anchor-logo-text",
+                    "coverage": "0.38%",
+                    "fontSize": "10px"
+                },
+                {
+                    "source": {
+                        "type": "code",
+                        "value": "dynamic"
+                    },
+                    "selector": "#onetrust-banner-sdk #onetrust-policy-text *",
+                    "coverage": "0.17%",
+                    "fontSize": "10px"
+                },
+                {
+                    "source": {
+                        "type": "code",
+                        "value": "Legible text"
+                    },
+                    "selector": "",
+                    "coverage": "57.08%",
+                    "fontSize": "\u2265 12px"
+                }
+            ]
+        }
+    },
+    "link-text": {
+        "id": "link-text",
+        "title": "Links do not have descriptive text",
+        "description": "Descriptive link text helps search engines understand your content. [Learn how to make links more accessible](https://developer.chrome.com/docs/lighthouse/seo/link-text/).",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "displayValue": "1 link found",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "href",
+                    "valueType": "url",
+                    "label": "Link destination"
+                },
+                {
+                    "key": "text",
+                    "valueType": "text",
+                    "label": "Link Text"
+                }
+            ],
+            "items": [
+                {
+                    "href": "https://help.netflix.com/legal/privacy#cookies",
+                    "text": "here"
+                }
+            ]
+        }
+    }
+}

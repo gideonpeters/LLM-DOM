@@ -1,0 +1,3615 @@
+{
+    "first-contentful-paint": {
+        "id": "first-contentful-paint",
+        "title": "First Contentful Paint",
+        "description": "First Contentful Paint marks the time at which the first text or image is painted. [Learn more about the First Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/).",
+        "score": 0.05,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 5595.41114,
+        "numericUnit": "millisecond",
+        "displayValue": "5.6\u00a0s",
+        "scoringOptions": {
+            "p10": 1800,
+            "median": 3000
+        }
+    },
+    "largest-contentful-paint": {
+        "id": "largest-contentful-paint",
+        "title": "Largest Contentful Paint",
+        "description": "Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+        "score": 0.02,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 8036.883809999999,
+        "numericUnit": "millisecond",
+        "displayValue": "8.0\u00a0s",
+        "scoringOptions": {
+            "p10": 2500,
+            "median": 4000
+        }
+    },
+    "speed-index": {
+        "id": "speed-index",
+        "title": "Speed Index",
+        "description": "Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/).",
+        "score": 0.53,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 5595.41114,
+        "numericUnit": "millisecond",
+        "displayValue": "5.6\u00a0s",
+        "scoringOptions": {
+            "p10": 3387,
+            "median": 5800
+        }
+    },
+    "total-blocking-time": {
+        "id": "total-blocking-time",
+        "title": "Total Blocking Time",
+        "description": "Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds. [Learn more about the Total Blocking Time metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/).",
+        "score": 0.02,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 3133.999999999998,
+        "numericUnit": "millisecond",
+        "displayValue": "3,130\u00a0ms",
+        "scoringOptions": {
+            "p10": 200,
+            "median": 600
+        }
+    },
+    "max-potential-fid": {
+        "id": "max-potential-fid",
+        "title": "Max Potential First Input Delay",
+        "description": "The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).",
+        "score": 0,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 1085.9999999999982,
+        "numericUnit": "millisecond",
+        "displayValue": "1,090\u00a0ms"
+    },
+    "errors-in-console": {
+        "id": "errors-in-console",
+        "title": "Browser errors were logged to the console",
+        "description": "Errors logged to the console indicate unresolved problems. They can come from network request failures and other browser concerns. [Learn more about this errors in console diagnostic audit](https://developer.chrome.com/docs/lighthouse/best-practices/errors-in-console/)",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "sourceLocation",
+                    "valueType": "source-location",
+                    "label": "Source"
+                },
+                {
+                    "key": "description",
+                    "valueType": "code",
+                    "label": "Description"
+                }
+            ],
+            "items": [
+                {
+                    "source": "console.error",
+                    "description": "[GSI_LOGGER]: The given origin is not allowed for the given client ID.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://www.redditstatic.com/shreddit/sentry-94f7e90f.js",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 12728
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "A bad HTTP response code (404) was received when fetching the script."
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://w3-reporting.reddit.com/policy' from origin 'http://localhost:8000' has been blocked by CORS policy: The 'Access-Control-Allow-Origin' header has a value 'https://www.reddit.com' that is not equal to the supplied origin. Have the server send the header with a valid value, or, if an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/reddit.html",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://w3-reporting.reddit.com/policy",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: the server responded with a status of 403 ()",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://accounts.google.com/gsi/status?client_id=705819728788-b2c1kcs7tst3b7ghv7at0hkqmtc68ckl.apps.googleusercontent.com&as=HhHXdPIFQ96rDDOuZzU%2BJA&has_opted_out_fedcm=false",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: the server responded with a status of 404 (File not found)",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/svc/shreddit/update-recaptcha?k=cG9wdWxhcnxpbml0aWFsfGU3NGZiYTMxLWFjMzktNGQ3ZC05NzBmLTc3OWIxMDE4YmUzMQ",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: the server responded with a status of 404 (File not found)",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/svc/shreddit/styling-overrides/?context=namespaced",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: the server responded with a status of 404 (File not found)",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/svc/shreddit/feeds/popular-feed?after=dDNfMWVxaTJrNQ%3D%3D&distance=3&sort=HOT&navigationSessionId=9eec75f5-7d81-454e-b7e8-5a0512b420e1&cursor=dDNfMWVxaTJrNQ%3D%3D",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/svc/shreddit/events",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/svc/shreddit/perfMetrics",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/svc/shreddit/events",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/svc/shreddit/graphql",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/svc/shreddit/events",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/svc/shreddit/events",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                }
+            ]
+        }
+    },
+    "interactive": {
+        "id": "interactive",
+        "title": "Time to Interactive",
+        "description": "Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).",
+        "score": 0.13,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 12845.903371501892,
+        "numericUnit": "millisecond",
+        "displayValue": "12.8\u00a0s"
+    },
+    "mainthread-work-breakdown": {
+        "id": "mainthread-work-breakdown",
+        "title": "Minimize main-thread work",
+        "description": "Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to minimize main-thread work](https://developer.chrome.com/docs/lighthouse/performance/mainthread-work-breakdown/)",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 8873.559999999905,
+        "numericUnit": "millisecond",
+        "displayValue": "8.9\u00a0s",
+        "metricSavings": {
+            "TBT": 3150
+        },
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "groupLabel",
+                    "valueType": "text",
+                    "label": "Category"
+                },
+                {
+                    "key": "duration",
+                    "valueType": "ms",
+                    "granularity": 1,
+                    "label": "Time Spent"
+                }
+            ],
+            "items": [
+                {
+                    "group": "scriptEvaluation",
+                    "groupLabel": "Script Evaluation",
+                    "duration": 4054.1519999999796
+                },
+                {
+                    "group": "other",
+                    "groupLabel": "Other",
+                    "duration": 2328.071999999925
+                },
+                {
+                    "group": "styleLayout",
+                    "groupLabel": "Style & Layout",
+                    "duration": 1728.5359999999991
+                },
+                {
+                    "group": "paintCompositeRender",
+                    "groupLabel": "Rendering",
+                    "duration": 321.2360000000027
+                },
+                {
+                    "group": "parseHTML",
+                    "groupLabel": "Parse HTML & CSS",
+                    "duration": 273.1919999999997
+                },
+                {
+                    "group": "scriptParseCompile",
+                    "groupLabel": "Script Parsing & Compilation",
+                    "duration": 126.19599999999996
+                },
+                {
+                    "group": "garbageCollection",
+                    "groupLabel": "Garbage Collection",
+                    "duration": 42.17599999999997
+                }
+            ],
+            "sortedBy": [
+                "duration"
+            ]
+        },
+        "guidanceLevel": 1
+    },
+    "bootup-time": {
+        "id": "bootup-time",
+        "title": "Reduce JavaScript execution time",
+        "description": "Consider reducing the time spent parsing, compiling, and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to reduce Javascript execution time](https://developer.chrome.com/docs/lighthouse/performance/bootup-time/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 4079.8399999999865,
+        "numericUnit": "millisecond",
+        "displayValue": "4.1\u00a0s",
+        "metricSavings": {
+            "TBT": 2750
+        },
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "total",
+                    "granularity": 1,
+                    "valueType": "ms",
+                    "label": "Total CPU Time"
+                },
+                {
+                    "key": "scripting",
+                    "granularity": 1,
+                    "valueType": "ms",
+                    "label": "Script Evaluation"
+                },
+                {
+                    "key": "scriptParseCompile",
+                    "granularity": 1,
+                    "valueType": "ms",
+                    "label": "Script Parse"
+                }
+            ],
+            "items": [
+                {
+                    "url": "Unattributable",
+                    "total": 1925.7519999999543,
+                    "scripting": 31.823999999999998,
+                    "scriptParseCompile": 0
+                },
+                {
+                    "url": "http://localhost:8000/reddit.html",
+                    "total": 1859.1600000000005,
+                    "scripting": 37.29599999999998,
+                    "scriptParseCompile": 14.328
+                },
+                {
+                    "url": "https://www.redditstatic.com/shreddit/en-US/shell-521789b6.js",
+                    "total": 1760.1119999999903,
+                    "scripting": 1492.2679999999905,
+                    "scriptParseCompile": 2.428
+                },
+                {
+                    "url": "https://www.redditstatic.com/shreddit/en-US/icon-1d6dbb2d.js",
+                    "total": 1172.7599999999952,
+                    "scripting": 1054.3039999999953,
+                    "scriptParseCompile": 0.616
+                },
+                {
+                    "url": "https://www.redditstatic.com/shreddit/en-US/index-a2d9e40b.js",
+                    "total": 525.1119999999999,
+                    "scripting": 521.1719999999998,
+                    "scriptParseCompile": 0.028
+                },
+                {
+                    "url": "https://www.gstatic.com/recaptcha/releases/_ZpyzC9NQw3gYt1GHTrnprhx/recaptcha__en.js",
+                    "total": 444.21600000000024,
+                    "scripting": 359.90800000000024,
+                    "scriptParseCompile": 63.164
+                },
+                {
+                    "url": "https://www.redditstatic.com/shreddit/en-US/shreddit-sort-dropdown-92118af7.js",
+                    "total": 243.94799999999995,
+                    "scripting": 104.61199999999998,
+                    "scriptParseCompile": 0.048
+                },
+                {
+                    "url": "https://www.redditstatic.com/shreddit/sentry-94f7e90f.js",
+                    "total": 173.23200000000037,
+                    "scripting": 165.34000000000037,
+                    "scriptParseCompile": 0.484
+                },
+                {
+                    "url": "https://accounts.google.com/gsi/client",
+                    "total": 172.42800000000017,
+                    "scripting": 147.69600000000017,
+                    "scriptParseCompile": 18.648
+                },
+                {
+                    "url": "https://www.redditstatic.com/shreddit/en-US/shreddit-gallery-carousel-40d678f0.js",
+                    "total": 145.464,
+                    "scripting": 3.4600000000000004,
+                    "scriptParseCompile": 0.064
+                },
+                {
+                    "url": "https://www.google.com/recaptcha/enterprise/anchor?ar=1&k=6LfirrMoAAAAAHZOipvza4kpp_VtTwLNuXVwURNQ&co=aHR0cDovL2xvY2FsaG9zdDo4MDAw&hl=en&v=_ZpyzC9NQw3gYt1GHTrnprhx&size=invisible&cb=hx4clx7j6x27",
+                    "total": 116.27200000000002,
+                    "scripting": 59.52400000000003,
+                    "scriptParseCompile": 0.376
+                },
+                {
+                    "url": "https://www.redditstatic.com/shreddit/en-US/faceplate-menu-6dce26c7.js",
+                    "total": 56.212,
+                    "scripting": 2.208,
+                    "scriptParseCompile": 0.044
+                }
+            ],
+            "summary": {
+                "wastedMs": 4079.8399999999865
+            },
+            "sortedBy": [
+                "total"
+            ]
+        },
+        "guidanceLevel": 1
+    },
+    "font-display": {
+        "id": "font-display",
+        "title": "Ensure text remains visible during webfont load",
+        "description": "Leverage the `font-display` CSS feature to ensure text is user-visible while webfonts are loading. [Learn more about `font-display`](https://developer.chrome.com/docs/lighthouse/performance/font-display/).",
+        "score": 0.5,
+        "scoreDisplayMode": "metricSavings",
+        "warnings": [],
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "wastedMs",
+                    "valueType": "ms",
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "url": "https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2",
+                    "wastedMs": 118.28500002622604
+                }
+            ]
+        },
+        "guidanceLevel": 3
+    },
+    "third-party-summary": {
+        "id": "third-party-summary",
+        "title": "Reduce the impact of third-party code",
+        "description": "Third-party code can significantly impact load performance. Limit the number of redundant third-party providers and try to load third-party code after your page has primarily finished loading. [Learn how to minimize third-party impact](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "displayValue": "Third-party code blocked the main thread for 3,050\u00a0ms",
+        "metricSavings": {
+            "TBT": 3050
+        },
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "entity",
+                    "valueType": "text",
+                    "label": "Third-Party",
+                    "subItemsHeading": {
+                        "key": "url",
+                        "valueType": "url"
+                    }
+                },
+                {
+                    "key": "transferSize",
+                    "granularity": 1,
+                    "valueType": "bytes",
+                    "label": "Transfer Size",
+                    "subItemsHeading": {
+                        "key": "transferSize"
+                    }
+                },
+                {
+                    "key": "blockingTime",
+                    "granularity": 1,
+                    "valueType": "ms",
+                    "label": "Main-Thread Blocking Time",
+                    "subItemsHeading": {
+                        "key": "blockingTime"
+                    }
+                }
+            ],
+            "items": [
+                {
+                    "mainThreadTime": 4313.139999999985,
+                    "blockingTime": 2805.9206237135145,
+                    "transferSize": 516339,
+                    "tbtImpact": 2805.9206237135145,
+                    "entity": "reddit",
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/shell-521789b6.js",
+                                "mainThreadTime": 1760.1119999999903,
+                                "blockingTime": 1319.7886528300019,
+                                "transferSize": 136484,
+                                "tbtImpact": 1319.7886528300019
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/icon-1d6dbb2d.js",
+                                "mainThreadTime": 1172.759999999995,
+                                "blockingTime": 729.2997185278316,
+                                "transferSize": 58368,
+                                "tbtImpact": 729.2997185278316
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/index-a2d9e40b.js",
+                                "mainThreadTime": 525.1119999999999,
+                                "blockingTime": 474.87443925731134,
+                                "transferSize": 518,
+                                "tbtImpact": 474.87443925731134
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/sentry-94f7e90f.js",
+                                "mainThreadTime": 173.23200000000034,
+                                "blockingTime": 98.00000000000003,
+                                "transferSize": 22406,
+                                "tbtImpact": 98.00000000000003
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/shreddit-sort-dropdown-92118af7.js",
+                                "mainThreadTime": 243.94799999999992,
+                                "blockingTime": 74.28305804269353,
+                                "transferSize": 2617,
+                                "tbtImpact": 74.28305804269353
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/faceplate-menu-6dce26c7.js",
+                                "mainThreadTime": 56.212,
+                                "blockingTime": 49.466203823079695,
+                                "transferSize": 1246,
+                                "tbtImpact": 49.466203823079695
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/shreddit-gallery-carousel-40d678f0.js",
+                                "mainThreadTime": 145.46399999999994,
+                                "blockingTime": 22.267938049675568,
+                                "transferSize": 2003,
+                                "tbtImpact": 22.267938049675568
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/shreddit-feed-51213318.js",
+                                "mainThreadTime": 27.528,
+                                "blockingTime": 8.303415184870943,
+                                "transferSize": 3679,
+                                "tbtImpact": 8.303415184870943
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/faceplate-number-1159a6bc.js",
+                                "mainThreadTime": 9.475999999999999,
+                                "blockingTime": 7.565256782376954,
+                                "transferSize": 483,
+                                "tbtImpact": 7.565256782376954
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/faceplate-dropdown-menu-27f0d70e.js",
+                                "mainThreadTime": 10.268,
+                                "blockingTime": 6.616090839909267,
+                                "transferSize": 2327,
+                                "tbtImpact": 6.616090839909267
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/alert-controller-client-js-6cbf1ba6.js",
+                                "mainThreadTime": 9.160000000000002,
+                                "blockingTime": 5.431822971554395,
+                                "transferSize": 1792,
+                                "tbtImpact": 5.431822971554395
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/index-a4e5a746.js",
+                                "mainThreadTime": 4.148,
+                                "blockingTime": 3.406514772750327,
+                                "transferSize": 3425,
+                                "tbtImpact": 3.406514772750327
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/shreddit-post-share-button-dd8b783c.js",
+                                "mainThreadTime": 2.648,
+                                "blockingTime": 2.099072194354349,
+                                "transferSize": 865,
+                                "tbtImpact": 2.099072194354349
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/faceplate-tooltip-d7d29df7.js",
+                                "mainThreadTime": 2.088,
+                                "blockingTime": 1.5748837309003973,
+                                "transferSize": 2206,
+                                "tbtImpact": 1.5748837309003973
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/click-card-4d1ab393.js",
+                                "mainThreadTime": 1.992,
+                                "blockingTime": 1.5366927839207258,
+                                "transferSize": 1418,
+                                "tbtImpact": 1.5366927839207258
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/faceplate-hovercard-9a38b765.js",
+                                "mainThreadTime": 1.08,
+                                "blockingTime": 0.6913326510409894,
+                                "transferSize": 2564,
+                                "tbtImpact": 0.6913326510409894
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/shreddit-post-03f71b89.js",
+                                "mainThreadTime": 1.624,
+                                "blockingTime": 0.5659614448938538,
+                                "transferSize": 11668,
+                                "tbtImpact": 0.5659614448938538
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/shreddit-signup-drawer-5cbd72b3.js",
+                                "mainThreadTime": 0.6200000000000001,
+                                "blockingTime": 0.08194562047191312,
+                                "transferSize": 3165,
+                                "tbtImpact": 0.08194562047191312
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/load-lazy-script-with-nonce-91b572d7.js",
+                                "mainThreadTime": 0.6319999999999999,
+                                "blockingTime": 0.03949361974383549,
+                                "transferSize": 546,
+                                "tbtImpact": 0.03949361974383549
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/shreddit-slotter-91511002.js",
+                                "mainThreadTime": 0.33199999999999996,
+                                "blockingTime": 0.028130586132959934,
+                                "transferSize": 797,
+                                "tbtImpact": 0.028130586132959934
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/base-f98841a8.js",
+                                "mainThreadTime": 0.6,
+                                "blockingTime": 0,
+                                "transferSize": 9495,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/pixels-75977024.js",
+                                "mainThreadTime": 0.664,
+                                "blockingTime": 0,
+                                "transferSize": 7635,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/with-post-actions-5fc4f8d9.js",
+                                "mainThreadTime": 0.648,
+                                "blockingTime": 0,
+                                "transferSize": 7599,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/mod-actions-controller-79bb1ef8.js",
+                                "mainThreadTime": 0.46399999999999997,
+                                "blockingTime": 0,
+                                "transferSize": 6382,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/auth-flow-sso-buttons-8a5e6f3d.js",
+                                "mainThreadTime": 0.37600000000000006,
+                                "blockingTime": 0,
+                                "transferSize": 6219,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/faceplate-carousel-83f7d928.js",
+                                "mainThreadTime": 0.38,
+                                "blockingTime": 0,
+                                "transferSize": 5652,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/text-input-51b5e454.js",
+                                "mainThreadTime": 1.6880000000000002,
+                                "blockingTime": 0,
+                                "transferSize": 5040,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/faceplate-carousel-clone-7b4179a9.js",
+                                "mainThreadTime": 0.752,
+                                "blockingTime": 0,
+                                "transferSize": 4883,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/community-colors-78353fef.js",
+                                "mainThreadTime": 0.43600000000000005,
+                                "blockingTime": 0,
+                                "transferSize": 4779,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/with-recaptcha-5fdc1fd5.js",
+                                "mainThreadTime": 1.04,
+                                "blockingTime": 0,
+                                "transferSize": 4479,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/hui-translation-button-client-js-23c8752e.js",
+                                "mainThreadTime": 0.37600000000000006,
+                                "blockingTime": 0,
+                                "transferSize": 4438,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/post-mod-actions-menu-6b8874d3.js",
+                                "mainThreadTime": 0.984,
+                                "blockingTime": 0,
+                                "transferSize": 4221,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/add-removal-reason-modal-8080c8e7.js",
+                                "mainThreadTime": 2.9400000000000004,
+                                "blockingTime": 0,
+                                "transferSize": 4212,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/unpacking-overflow-menu-6e96c9cb.js",
+                                "mainThreadTime": 0.7479999999999999,
+                                "blockingTime": 0,
+                                "transferSize": 4197,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/deprecated-content-client-js-77d2591c.js",
+                                "mainThreadTime": 0.39599999999999996,
+                                "blockingTime": 0,
+                                "transferSize": 3883,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/faceplate-form-0b38e413.js",
+                                "mainThreadTime": 0.332,
+                                "blockingTime": 0,
+                                "transferSize": 3822,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/popper-controller-d5415026.js",
+                                "mainThreadTime": 1.944,
+                                "blockingTime": 0,
+                                "transferSize": 3554,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/faceplate-bottom-sheet-ba159c78.js",
+                                "mainThreadTime": 0.392,
+                                "blockingTime": 0,
+                                "transferSize": 3192,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/auth-flow-sso-linking-46b6b856.js",
+                                "mainThreadTime": 0.384,
+                                "blockingTime": 0,
+                                "transferSize": 3170,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/shreddit-ad-post-021ae4ba.js",
+                                "mainThreadTime": 0.776,
+                                "blockingTime": 0,
+                                "transferSize": 2901,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/avatar-e3aabb94.js",
+                                "mainThreadTime": 0.444,
+                                "blockingTime": 0,
+                                "transferSize": 2737,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/mod-bulk-actions-menu-a1ffe5a4.js",
+                                "mainThreadTime": 0.9239999999999999,
+                                "blockingTime": 0,
+                                "transferSize": 2682,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/header-large-client-js-c3a38ea0.js",
+                                "mainThreadTime": 0.38799999999999996,
+                                "blockingTime": 0,
+                                "transferSize": 2596,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/mod-notes-1fee428b.js",
+                                "mainThreadTime": 0.896,
+                                "blockingTime": 0,
+                                "transferSize": 2544,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/auth-flow-modal-29b8d0b1.js",
+                                "mainThreadTime": 0.292,
+                                "blockingTime": 0,
+                                "transferSize": 2511,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/shreddit-dynamic-ad-link-a95b3c38.js",
+                                "mainThreadTime": 7.516,
+                                "blockingTime": 0,
+                                "transferSize": 2501,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/TinyGesture-6f7cc1aa.js",
+                                "mainThreadTime": 0.612,
+                                "blockingTime": 0,
+                                "transferSize": 2487,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/shreddit-post-translator-cae5b229.js",
+                                "mainThreadTime": 0.448,
+                                "blockingTime": 0,
+                                "transferSize": 2485,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/with-share-ff8e8518.js",
+                                "mainThreadTime": 0.9319999999999999,
+                                "blockingTime": 0,
+                                "transferSize": 2473,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/google-one-tap-9e9418f3.js",
+                                "mainThreadTime": 0.5840000000000001,
+                                "blockingTime": 0,
+                                "transferSize": 2432,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/list-item-715b3e95.js",
+                                "mainThreadTime": 0.272,
+                                "blockingTime": 0,
+                                "transferSize": 2325,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/faceplate-pagination-indicator-85cdc016.js",
+                                "mainThreadTime": 0.47600000000000003,
+                                "blockingTime": 0,
+                                "transferSize": 2290,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/input-element-346ffdc4.js",
+                                "mainThreadTime": 0.324,
+                                "blockingTime": 0,
+                                "transferSize": 2208,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/shreddit-media-lightbox-listener-c84717ad.js",
+                                "mainThreadTime": 2.612,
+                                "blockingTime": 0,
+                                "transferSize": 2164,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/index-4388f44a.js",
+                                "mainThreadTime": 0.388,
+                                "blockingTime": 0,
+                                "transferSize": 2160,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/large-297590fe.js",
+                                "mainThreadTime": 0.7239999999999999,
+                                "blockingTime": 0,
+                                "transferSize": 2118,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/faceplate-modal-f1623bce.js",
+                                "mainThreadTime": 0.264,
+                                "blockingTime": 0,
+                                "transferSize": 2082,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/marketplace-assets/v1/core/awards/popcorn_v1_40.png",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 2002,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/with-sso-linking-a29e1a4e.js",
+                                "mainThreadTime": 0.5,
+                                "blockingTime": 0,
+                                "transferSize": 1970,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/translation-feedback-modal-4fc3381c.js",
+                                "mainThreadTime": 0.33599999999999997,
+                                "blockingTime": 0,
+                                "transferSize": 1758,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/community-status-bottom-sheet-4370611a.js",
+                                "mainThreadTime": 1.264,
+                                "blockingTime": 0,
+                                "transferSize": 1756,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/TinyGesture-32f2fddd.js",
+                                "mainThreadTime": 0.296,
+                                "blockingTime": 0,
+                                "transferSize": 1649,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/faceplate-banner-a0c7f4ce.js",
+                                "mainThreadTime": 5.787999999999996,
+                                "blockingTime": 0,
+                                "transferSize": 1619,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/shreddit-post-overflow-menu-0b3057b4.js",
+                                "mainThreadTime": 1.032,
+                                "blockingTime": 0,
+                                "transferSize": 1607,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/dsa-transparency-modal-5436e4d0.js",
+                                "mainThreadTime": 0.536,
+                                "blockingTime": 0,
+                                "transferSize": 1595,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/faceplate-textarea-input-262719ea.js",
+                                "mainThreadTime": 0.288,
+                                "blockingTime": 0,
+                                "transferSize": 1548,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/faceplate-batch-3fb2e255.js",
+                                "mainThreadTime": 0.8599999999999999,
+                                "blockingTime": 0,
+                                "transferSize": 1508,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/render-toast-abbab97a.js",
+                                "mainThreadTime": 1.044,
+                                "blockingTime": 0,
+                                "transferSize": 1472,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/content-tags-44694d77.js",
+                                "mainThreadTime": 0.368,
+                                "blockingTime": 0,
+                                "transferSize": 1467,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/base-translator-a3dfd23f.js",
+                                "mainThreadTime": 1.4600000000000002,
+                                "blockingTime": 0,
+                                "transferSize": 1448,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/translatable-text-25aae85f.js",
+                                "mainThreadTime": 1.2440000000000002,
+                                "blockingTime": 0,
+                                "transferSize": 1423,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/shreddit-tweet-embed-89728a04.js",
+                                "mainThreadTime": 0.428,
+                                "blockingTime": 0,
+                                "transferSize": 1420,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/faceplate-search-input-f3ceb944.js",
+                                "mainThreadTime": 1.516,
+                                "blockingTime": 0,
+                                "transferSize": 1388,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/shreddit-overflow-report-3d6a2d35.js",
+                                "mainThreadTime": 0.924,
+                                "blockingTime": 0,
+                                "transferSize": 1368,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/faceplate-switch-input-beacb3fe.js",
+                                "mainThreadTime": 0.28800000000000003,
+                                "blockingTime": 0,
+                                "transferSize": 1365,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/checked-input-element-5c7eb5fe.js",
+                                "mainThreadTime": 0.268,
+                                "blockingTime": 0,
+                                "transferSize": 1335,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/feed-post-client-js-401be183.js",
+                                "mainThreadTime": 1.028,
+                                "blockingTime": 0,
+                                "transferSize": 1285,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/faceplate-text-input-8e51d1d8.js",
+                                "mainThreadTime": 0.46399999999999997,
+                                "blockingTime": 0,
+                                "transferSize": 1250,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/promote-post-button-3519f46e.js",
+                                "mainThreadTime": 0.804,
+                                "blockingTime": 0,
+                                "transferSize": 1250,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/user-drawer-client-js-b5868c2c.js",
+                                "mainThreadTime": 0.284,
+                                "blockingTime": 0,
+                                "transferSize": 1242,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/w3-report-from-v2-event-17cfcab7.js",
+                                "mainThreadTime": 0.6479999999999999,
+                                "blockingTime": 0,
+                                "transferSize": 1200,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/alerts-controller-d219f19a.js",
+                                "mainThreadTime": 1.4000000000000001,
+                                "blockingTime": 0,
+                                "transferSize": 1195,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/recommendation-context-overflow-menu-8dbde1aa.js",
+                                "mainThreadTime": 0.46799999999999997,
+                                "blockingTime": 0,
+                                "transferSize": 1188,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/auth-text-input-55574c0d.js",
+                                "mainThreadTime": 0.296,
+                                "blockingTime": 0,
+                                "transferSize": 1144,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/scroll-blocker-30d96a74.js",
+                                "mainThreadTime": 0.392,
+                                "blockingTime": 0,
+                                "transferSize": 1135,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/reputation-recaptcha-48036cf8.js",
+                                "mainThreadTime": 0.496,
+                                "blockingTime": 0,
+                                "transferSize": 1134,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/app-link-04ce8837.js",
+                                "mainThreadTime": 3.608,
+                                "blockingTime": 0,
+                                "transferSize": 1126,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/onboarding-dd096d2b.js",
+                                "mainThreadTime": 0.40399999999999997,
+                                "blockingTime": 0,
+                                "transferSize": 1125,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/shreddit-post-overflow-menu-f2d1d416.js",
+                                "mainThreadTime": 0.556,
+                                "blockingTime": 0,
+                                "transferSize": 1122,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/feed-ad-client-js-c11e7759.js",
+                                "mainThreadTime": 0.7240000000000001,
+                                "blockingTime": 0,
+                                "transferSize": 1113,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/postUpdate-3bc58469.js",
+                                "mainThreadTime": 0.512,
+                                "blockingTime": 0,
+                                "transferSize": 1090,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/remove-highlighted-post-9bfd12f9.js",
+                                "mainThreadTime": 0.244,
+                                "blockingTime": 0,
+                                "transferSize": 1086,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/left-nav-top-section-9389fd85.js",
+                                "mainThreadTime": 0.7959999999999999,
+                                "blockingTime": 0,
+                                "transferSize": 1071,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/contextualSignupPrompt-cad3300a.js",
+                                "mainThreadTime": 0.424,
+                                "blockingTime": 0,
+                                "transferSize": 1060,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/utils-75a02ea9.js",
+                                "mainThreadTime": 0.252,
+                                "blockingTime": 0,
+                                "transferSize": 1055,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/overflow-menu-actions-e250e240.js",
+                                "mainThreadTime": 0.74,
+                                "blockingTime": 0,
+                                "transferSize": 1041,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/content-action-button-a38cb212.js",
+                                "mainThreadTime": 0.468,
+                                "blockingTime": 0,
+                                "transferSize": 1035,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/faceplate-render-9fd5c53b.js",
+                                "mainThreadTime": 0.5960000000000001,
+                                "blockingTime": 0,
+                                "transferSize": 1035,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/zoomable-img-615d31a2.js",
+                                "mainThreadTime": 0.424,
+                                "blockingTime": 0,
+                                "transferSize": 1032,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/start-end-ama-actions-controller-b78ba914.js",
+                                "mainThreadTime": 0.496,
+                                "blockingTime": 0,
+                                "transferSize": 1032,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/faceplate-progress-10207d28.js",
+                                "mainThreadTime": 0.476,
+                                "blockingTime": 0,
+                                "transferSize": 1014,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/feedback-tooltip-overflow-menu-4036c352.js",
+                                "mainThreadTime": 0.3,
+                                "blockingTime": 0,
+                                "transferSize": 1013,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/left-nav-client-js-8c57d1bd.js",
+                                "mainThreadTime": 0.26,
+                                "blockingTime": 0,
+                                "transferSize": 992,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/element-inside-db261ab4.js",
+                                "mainThreadTime": 0.256,
+                                "blockingTime": 0,
+                                "transferSize": 983,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/chat-channel-feed-element-client-js-09974211.js",
+                                "mainThreadTime": 0.324,
+                                "blockingTime": 0,
+                                "transferSize": 952,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/dsa-transparency-modal-provider-client-js-3d299235.js",
+                                "mainThreadTime": 0.272,
+                                "blockingTime": 0,
+                                "transferSize": 951,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/mod-note-overflow-menu-ead84585.js",
+                                "mainThreadTime": 0.9279999999999999,
+                                "blockingTime": 0,
+                                "transferSize": 931,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/faceplate-shimmer-5595d66e.js",
+                                "mainThreadTime": 0.24,
+                                "blockingTime": 0,
+                                "transferSize": 926,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/header-client-css-28ebcb96.css",
+                                "mainThreadTime": 3.22,
+                                "blockingTime": 0,
+                                "transferSize": 910,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/pdp-back-button-2a6e6b06.js",
+                                "mainThreadTime": 0.392,
+                                "blockingTime": 0,
+                                "transferSize": 905,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/auth-flow-link-049ea9c3.js",
+                                "mainThreadTime": 0.736,
+                                "blockingTime": 0,
+                                "transferSize": 901,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/mod-notes-opener-945e6b0c.js",
+                                "mainThreadTime": 0.8800000000000001,
+                                "blockingTime": 0,
+                                "transferSize": 890,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/follow-button-0181105b.js",
+                                "mainThreadTime": 2.04,
+                                "blockingTime": 0,
+                                "transferSize": 872,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/author-flair-event-handler-1beff126.js",
+                                "mainThreadTime": 2.136,
+                                "blockingTime": 0,
+                                "transferSize": 844,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/faceplate-auto-height-animator-619cad49.js",
+                                "mainThreadTime": 0.252,
+                                "blockingTime": 0,
+                                "transferSize": 844,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/reddit-skip-to-sidebar-0cda3e19.js",
+                                "mainThreadTime": 0.336,
+                                "blockingTime": 0,
+                                "transferSize": 834,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/shreddit-overlay-31ec9d2f.js",
+                                "mainThreadTime": 0.332,
+                                "blockingTime": 0,
+                                "transferSize": 817,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/distinguished-tags-02527156.js",
+                                "mainThreadTime": 1.1960000000000002,
+                                "blockingTime": 0,
+                                "transferSize": 808,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/shreddit-distinguished-post-tags-9252feb3.js",
+                                "mainThreadTime": 0.272,
+                                "blockingTime": 0,
+                                "transferSize": 807,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/a-fcff881d.js",
+                                "mainThreadTime": 1.032,
+                                "blockingTime": 0,
+                                "transferSize": 795,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/hui-left-nav-see-more-72d42ddc.js",
+                                "mainThreadTime": 0.34800000000000003,
+                                "blockingTime": 0,
+                                "transferSize": 793,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/post-0d55079d.js",
+                                "mainThreadTime": 0.24,
+                                "blockingTime": 0,
+                                "transferSize": 778,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/ama-859a7489.js",
+                                "mainThreadTime": 0.38,
+                                "blockingTime": 0,
+                                "transferSize": 778,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/search-params-73024b5c.js",
+                                "mainThreadTime": 0.528,
+                                "blockingTime": 0,
+                                "transferSize": 777,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/relative-date-77173042.js",
+                                "mainThreadTime": 0.456,
+                                "blockingTime": 0,
+                                "transferSize": 771,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/translations-9635bad6.js",
+                                "mainThreadTime": 0.248,
+                                "blockingTime": 0,
+                                "transferSize": 769,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/shreddit-spoiler-f13917c0.js",
+                                "mainThreadTime": 0.24,
+                                "blockingTime": 0,
+                                "transferSize": 758,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/faceplate-expandable-section-helper-999c47a4.js",
+                                "mainThreadTime": 0.26799999999999996,
+                                "blockingTime": 0,
+                                "transferSize": 755,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/reddit-chat-anchor-35173299.js",
+                                "mainThreadTime": 3.848,
+                                "blockingTime": 0,
+                                "transferSize": 754,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/ad-event-tracker-bb673f0c.js",
+                                "mainThreadTime": 0.5479999999999999,
+                                "blockingTime": 0,
+                                "transferSize": 753,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/index-e12903ca.js",
+                                "mainThreadTime": 0.28,
+                                "blockingTime": 0,
+                                "transferSize": 753,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/shreddit-post-flair-ef5407e3.js",
+                                "mainThreadTime": 9.48,
+                                "blockingTime": 0,
+                                "transferSize": 751,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/reload-to-logged-in-8c51dcc1.js",
+                                "mainThreadTime": 0.568,
+                                "blockingTime": 0,
+                                "transferSize": 747,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/form-common-utils-ee0af53c.js",
+                                "mainThreadTime": 0.28,
+                                "blockingTime": 0,
+                                "transferSize": 742,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/chip-3bad094d.js",
+                                "mainThreadTime": 0.544,
+                                "blockingTime": 0,
+                                "transferSize": 723,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/faceplate-tabpanel-56f3a880.js",
+                                "mainThreadTime": 0.264,
+                                "blockingTime": 0,
+                                "transferSize": 721,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/outbound-link-tracking-controller-be0ab062.js",
+                                "mainThreadTime": 0.412,
+                                "blockingTime": 0,
+                                "transferSize": 714,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/xpromo-e30d8320.js",
+                                "mainThreadTime": 0.9239999999999999,
+                                "blockingTime": 0,
+                                "transferSize": 711,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/search-dynamic-id-cache-controller-9e058f60.js",
+                                "mainThreadTime": 0.7360000000000001,
+                                "blockingTime": 0,
+                                "transferSize": 709,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/modActions-574ad53c.js",
+                                "mainThreadTime": 0.24,
+                                "blockingTime": 0,
+                                "transferSize": 708,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/reddit-header-action-items-91b8bc8a.js",
+                                "mainThreadTime": 0.444,
+                                "blockingTime": 0,
+                                "transferSize": 706,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/index-07596dea.js",
+                                "mainThreadTime": 0.44,
+                                "blockingTime": 0,
+                                "transferSize": 700,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/faceplate-date-679961f8.js",
+                                "mainThreadTime": 0.7520000000000001,
+                                "blockingTime": 0,
+                                "transferSize": 688,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/reddit-sidebar-nav-64b35ae8.js",
+                                "mainThreadTime": 0.38399999999999995,
+                                "blockingTime": 0,
+                                "transferSize": 671,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/faceplate-timeago-d51b33c7.js",
+                                "mainThreadTime": 1.076,
+                                "blockingTime": 0,
+                                "transferSize": 651,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/search-dynamic-id-8b275934.js",
+                                "mainThreadTime": 0.376,
+                                "blockingTime": 0,
+                                "transferSize": 636,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/faceplate-bottom-sheet-header-81349d81.js",
+                                "mainThreadTime": 0.9120000000000001,
+                                "blockingTime": 0,
+                                "transferSize": 633,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/ad-listeners-a1efce6b.js",
+                                "mainThreadTime": 0.228,
+                                "blockingTime": 0,
+                                "transferSize": 614,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/mod-verdict-96cc68b1.js",
+                                "mainThreadTime": 0.9359999999999999,
+                                "blockingTime": 0,
+                                "transferSize": 614,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/pluralize-fa321964.js",
+                                "mainThreadTime": 0.908,
+                                "blockingTime": 0,
+                                "transferSize": 573,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/auth-overlay-client-js-65990b70.js",
+                                "mainThreadTime": 0.412,
+                                "blockingTime": 0,
+                                "transferSize": 563,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/constants-3edec983.js",
+                                "mainThreadTime": 0.46799999999999997,
+                                "blockingTime": 0,
+                                "transferSize": 554,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/comment-166720b3.js",
+                                "mainThreadTime": 0.24,
+                                "blockingTime": 0,
+                                "transferSize": 541,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/index-e6684cf7.js",
+                                "mainThreadTime": 2.7840000000000003,
+                                "blockingTime": 0,
+                                "transferSize": 531,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/helpers-0144f681.js",
+                                "mainThreadTime": 0.30800000000000005,
+                                "blockingTime": 0,
+                                "transferSize": 523,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/utils-f0bf6454.js",
+                                "mainThreadTime": 1.1920000000000002,
+                                "blockingTime": 0,
+                                "transferSize": 522,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/live-678d244a.js",
+                                "mainThreadTime": 0.256,
+                                "blockingTime": 0,
+                                "transferSize": 518,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/number-ea0536b9.js",
+                                "mainThreadTime": 0.23199999999999998,
+                                "blockingTime": 0,
+                                "transferSize": 517,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/popular-feed-client-js-34ed1d9e.js",
+                                "mainThreadTime": 0.42400000000000004,
+                                "blockingTime": 0,
+                                "transferSize": 514,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/post-69fe4f77.js",
+                                "mainThreadTime": 0.24000000000000002,
+                                "blockingTime": 0,
+                                "transferSize": 514,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/award-controller-875704d2.js",
+                                "mainThreadTime": 0.36,
+                                "blockingTime": 0,
+                                "transferSize": 509,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/screen-reader-alert-outlet-e304eac2.js",
+                                "mainThreadTime": 0.44799999999999995,
+                                "blockingTime": 0,
+                                "transferSize": 506,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/search-helpers-c5b5bdbe.js",
+                                "mainThreadTime": 0.29600000000000004,
+                                "blockingTime": 0,
+                                "transferSize": 492,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/left-nav-topic-tracker-3ce49623.js",
+                                "mainThreadTime": 0.28,
+                                "blockingTime": 0,
+                                "transferSize": 479,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/faceplate-readymark-5e46b937.js",
+                                "mainThreadTime": 0.36400000000000005,
+                                "blockingTime": 0,
+                                "transferSize": 476,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/dropdownButton-8cbd3d6c.js",
+                                "mainThreadTime": 1.3920000000000001,
+                                "blockingTime": 0,
+                                "transferSize": 473,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/index-73f1d330.js",
+                                "mainThreadTime": 1.876,
+                                "blockingTime": 0,
+                                "transferSize": 461,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/index-c08eb187.js",
+                                "mainThreadTime": 0.7200000000000001,
+                                "blockingTime": 0,
+                                "transferSize": 460,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/shreddit-pubsub-publisher-4537707d.js",
+                                "mainThreadTime": 1.6640000000000001,
+                                "blockingTime": 0,
+                                "transferSize": 458,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/icon-checkmark-a7fbf33b.js",
+                                "mainThreadTime": 0.504,
+                                "blockingTime": 0,
+                                "transferSize": 452,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/index-523317a8.js",
+                                "mainThreadTime": 6.3319999999999945,
+                                "blockingTime": 0,
+                                "transferSize": 452,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/index-7b0f11c9.js",
+                                "mainThreadTime": 0.376,
+                                "blockingTime": 0,
+                                "transferSize": 432,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/modActions-5394d222.js",
+                                "mainThreadTime": 0.54,
+                                "blockingTime": 0,
+                                "transferSize": 420,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/award-a958f449.js",
+                                "mainThreadTime": 0.30000000000000004,
+                                "blockingTime": 0,
+                                "transferSize": 412,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/trending-carousel-client-js-50c518e8.js",
+                                "mainThreadTime": 0.34400000000000003,
+                                "blockingTime": 0,
+                                "transferSize": 410,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/community-status-telemetry-8bffca32.js",
+                                "mainThreadTime": 0.94,
+                                "blockingTime": 0,
+                                "transferSize": 403,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/index-6b6f75e3.js",
+                                "mainThreadTime": 0.436,
+                                "blockingTime": 0,
+                                "transferSize": 398,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/awardsTelemetryState-36c3d73d.js",
+                                "mainThreadTime": 0.536,
+                                "blockingTime": 0,
+                                "transferSize": 374,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/activate-lead-gen-dialog-752c5bad.js",
+                                "mainThreadTime": 0.232,
+                                "blockingTime": 0,
+                                "transferSize": 359,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/events-82e64833.js",
+                                "mainThreadTime": 1.1600000000000001,
+                                "blockingTime": 0,
+                                "transferSize": 356,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/dom-47572497.js",
+                                "mainThreadTime": 0.372,
+                                "blockingTime": 0,
+                                "transferSize": 341,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/cached-intl-e5b35306.js",
+                                "mainThreadTime": 1.204,
+                                "blockingTime": 0,
+                                "transferSize": 341,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/faceplate-input-d2b8eec5.js",
+                                "mainThreadTime": 0.30000000000000004,
+                                "blockingTime": 0,
+                                "transferSize": 336,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/popular-communities-client-js-54d8153a.js",
+                                "mainThreadTime": 0.676,
+                                "blockingTime": 0,
+                                "transferSize": 318,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/utils-bd95ecea.js",
+                                "mainThreadTime": 0.396,
+                                "blockingTime": 0,
+                                "transferSize": 316,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://error-tracking.reddit.com/o418887/api/5810803/envelope/?sentry_key=9f057df6115a4bb488c08ea12a835e6e&sentry_version=7",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 316,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/keyed-4f5a030f.js",
+                                "mainThreadTime": 11.992,
+                                "blockingTime": 0,
+                                "transferSize": 314,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/media-lightbox-client-js-4990fff6.js",
+                                "mainThreadTime": 0.3400000000000001,
+                                "blockingTime": 0,
+                                "transferSize": 295,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/sso-d953464a.js",
+                                "mainThreadTime": 0.38800000000000007,
+                                "blockingTime": 0,
+                                "transferSize": 291,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/throttle-cde4a556.js",
+                                "mainThreadTime": 0.23600000000000002,
+                                "blockingTime": 0,
+                                "transferSize": 289,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/feeds-147f777f.js",
+                                "mainThreadTime": 0.368,
+                                "blockingTime": 0,
+                                "transferSize": 275,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/constants-9005b662.js",
+                                "mainThreadTime": 0.216,
+                                "blockingTime": 0,
+                                "transferSize": 274,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/header-action-item-user-drawer-client-js-2989517f.js",
+                                "mainThreadTime": 0.272,
+                                "blockingTime": 0,
+                                "transferSize": 265,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/left-nav-topics-section-client-js-c4943967.js",
+                                "mainThreadTime": 0.292,
+                                "blockingTime": 0,
+                                "transferSize": 265,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/assets/pix/ads/1.png",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 262,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/utils-147dae00.js",
+                                "mainThreadTime": 3.4079999999999995,
+                                "blockingTime": 0,
+                                "transferSize": 261,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/locale-e49f0b05.js",
+                                "mainThreadTime": 0.308,
+                                "blockingTime": 0,
+                                "transferSize": 248,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/display-theme-7e251d41.js",
+                                "mainThreadTime": 0.372,
+                                "blockingTime": 0,
+                                "transferSize": 240,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/pageable-832f4cce.js",
+                                "mainThreadTime": 0.216,
+                                "blockingTime": 0,
+                                "transferSize": 237,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/ama-1d632972.js",
+                                "mainThreadTime": 0.8880000000000001,
+                                "blockingTime": 0,
+                                "transferSize": 230,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/left-nav-resources-section-client-js-312fc34c.js",
+                                "mainThreadTime": 0.22399999999999998,
+                                "blockingTime": 0,
+                                "transferSize": 223,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/custom-event-8a5c1c61.js",
+                                "mainThreadTime": 2.172,
+                                "blockingTime": 0,
+                                "transferSize": 219,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/classnameUtils-e77f7123.js",
+                                "mainThreadTime": 0.484,
+                                "blockingTime": 0,
+                                "transferSize": 218,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/constants-81e11639.js",
+                                "mainThreadTime": 0.22399999999999998,
+                                "blockingTime": 0,
+                                "transferSize": 214,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/en-US/reputation-recaptcha-412654c1.js",
+                                "mainThreadTime": 0.608,
+                                "blockingTime": 0,
+                                "transferSize": 204,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.redditstatic.com/shreddit/header-large-client-css-64f76952.css",
+                                "mainThreadTime": 0.544,
+                                "blockingTime": 0,
+                                "transferSize": 159,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://w3-reporting.reddit.com/reports",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://w3-reporting.reddit.com/policy",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            }
+                        ]
+                    }
+                },
+                {
+                    "mainThreadTime": 447.1480000000003,
+                    "blockingTime": 163.65750141893312,
+                    "transferSize": 243338,
+                    "tbtImpact": 163.65750141893312,
+                    "entity": "Google CDN",
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "url": "https://www.gstatic.com/recaptcha/releases/_ZpyzC9NQw3gYt1GHTrnprhx/recaptcha__en.js",
+                                "mainThreadTime": 444.2160000000003,
+                                "blockingTime": 163.65750141893312,
+                                "transferSize": 215817,
+                                "tbtImpact": 163.65750141893312
+                            },
+                            {
+                                "url": "https://www.gstatic.com/recaptcha/releases/_ZpyzC9NQw3gYt1GHTrnprhx/styles__ltr.css",
+                                "mainThreadTime": 2.9320000000000004,
+                                "blockingTime": 0,
+                                "transferSize": 25153,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://www.gstatic.com/recaptcha/api2/logo_48.png",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 2368,
+                                "tbtImpact": 0
+                            }
+                        ]
+                    }
+                },
+                {
+                    "mainThreadTime": 322.57200000000023,
+                    "blockingTime": 81.30300496132304,
+                    "transferSize": 92453,
+                    "tbtImpact": 81.30300496132304,
+                    "entity": "Other Google APIs/SDKs",
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "url": "https://accounts.google.com/gsi/client",
+                                "mainThreadTime": 172.4280000000002,
+                                "blockingTime": 68.96050638025618,
+                                "transferSize": 88333,
+                                "tbtImpact": 68.96050638025618
+                            },
+                            {
+                                "url": "https://www.google.com/recaptcha/enterprise/anchor?ar=1&k=6LfirrMoAAAAAHZOipvza4kpp_VtTwLNuXVwURNQ&co=aHR0cDovL2xvY2FsaG9zdDo4MDAw&hl=en&v=_ZpyzC9NQw3gYt1GHTrnprhx&size=invisible&cb=hx4clx7j6x27",
+                                "mainThreadTime": 116.27200000000005,
+                                "blockingTime": 12.34249858106687,
+                                "transferSize": 1681,
+                                "tbtImpact": 12.34249858106687
+                            },
+                            {
+                                "url": "https://www.google.com/recaptcha/enterprise.js?render=6LfirrMoAAAAAHZOipvza4kpp_VtTwLNuXVwURNQ",
+                                "mainThreadTime": 31.535999999999994,
+                                "blockingTime": 0,
+                                "transferSize": 1330,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://accounts.google.com/gsi/style",
+                                "mainThreadTime": 2.3360000000000003,
+                                "blockingTime": 0,
+                                "transferSize": 585,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://accounts.google.com/gsi/status?client_id=705819728788-b2c1kcs7tst3b7ghv7at0hkqmtc68ckl.apps.googleusercontent.com&as=HhHXdPIFQ96rDDOuZzU%2BJA&has_opted_out_fedcm=false",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 524,
+                                "tbtImpact": 0
+                            }
+                        ]
+                    }
+                },
+                {
+                    "mainThreadTime": 0,
+                    "blockingTime": 0,
+                    "transferSize": 157509,
+                    "tbtImpact": 0,
+                    "entity": "redd.it",
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "url": "https://external-preview.redd.it/greece-orders-evacuations-near-athens-as-wildfires-rage-v0-0xj1CkmXhS36w5_otVGg850mcgHndJP21JXod60g8e0.jpg?width=640&crop=smart&auto=webp&s=88a82b181e4d54d121e07037d9f7f13eeffea1e8",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 50024,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://external-preview.redd.it/kit-harington-agrees-game-of-thrones-ending-made-mistakes-v0-FSskGu7zgpRhWTtAFOmdAbn9uNf_d455IRDWfXQNztc.jpg?width=640&crop=smart&auto=webp&s=09d182435f45411f4682f7997b246c59ac7116f4",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 31875,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://preview.redd.it/a-second-photo-of-jd-vance-in-drag-while-at-yale-law-school-v0-dizfkpd0e9id1.jpeg?width=640&crop=smart&auto=webp&s=095e901e01f1d85115683c5076e8e8bc652b9986",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 26641,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://external-preview.redd.it/rachael-lillis-the-voice-of-pokemons-misty-and-jessie-dies-v0-gP7ltQ3icj1vXNdc1cUO77rVRvhm5QNYU-PY1F48tMo.jpg?width=640&crop=smart&auto=webp&s=923cab5ac0680ff908318a1257ba394e7ca52a13",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 17606,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://external-preview.redd.it/tom-cruise-hands-off-paris-olympics-to-los-angeles-in-v0-eGtmamd6azBnNmlkMcNJKTPdRW6G0lbNlPeAzFy7bsaL9wO2g1B-9ww2LZM5.png?width=640&crop=smart&format=pjpg&auto=webp&s=e776a2c07637129ae16359738e6a5bdc0491eaa0",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 14453,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://external-preview.redd.it/halloween-is-getting-its-own-unreal-engine-5-game-with-john-v0-aYOIzZz3GG1Ir2WdhZPeQBulcuD6R7QJLrlO7g19FGU.jpg?width=640&crop=smart&auto=webp&s=08c7942ccd59cf58d53297b14128506a32c45a8b",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 10973,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://external-preview.redd.it/case-dropped-against-joost-klein-over-eurovision-incident-v0-ZeJ7pHN8XMyHBTz5sbm6JdHD2nTN-7cyxE-rsG2Q1vE.jpg?width=640&crop=smart&auto=webp&s=e58f285bc1814cd791a3fdab4f56e13dd89c9c89",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 5937,
+                                "tbtImpact": 0
+                            }
+                        ]
+                    }
+                },
+                {
+                    "mainThreadTime": 0,
+                    "blockingTime": 0,
+                    "transferSize": 41895,
+                    "tbtImpact": 0,
+                    "entity": "redditmedia.com",
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "url": "https://b.thumbs.redditmedia.com/VZX_KQLnI1DPhlEZ07bIcLzwR1Win808RIt7zm49VIQ.png",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 28544,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://b.thumbs.redditmedia.com/yUqCJM6WcVBEHl5DGKec109e3wdCH9A5OW-eRr79GfM.jpg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 4487,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://a.thumbs.redditmedia.com/_WaynpnYlA_0wi5nOKjZEsCr2yeMPDvS3lIGkgOTPN8.jpg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 4448,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://styles.redditmedia.com/t5_2qh68/styles/communityIcon_fl2udvka4pw81.jpg?width=48&height=48&frame=1&auto=webp&crop=48:48,smart&s=f8a55b45d24ddf63fded99046cf1199028a140a7",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 1475,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://styles.redditmedia.com/t5_2qh6e/styles/communityIcon_8qmcs8g0gp871.png?width=48&height=48&frame=1&auto=webp&crop=48:48,smart&s=321f319fe3c292dcb47f4e3e9d6c4f45bf1e346d",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 1332,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://styles.redditmedia.com/t5_2qh3s/styles/communityIcon_ctrxr9h6lmbb1.jpg?width=48&height=48&frame=1&auto=webp&crop=48:48,smart&s=09f92a46bed21ac2413e6df355c21fca398507c9",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 1134,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://styles.redditmedia.com/t5_m0bnr/styles/communityIcon_qanlm185crr71.png?width=48&height=48&frame=1&auto=webp&crop=48:48,smart&s=c99daaeafbf2a2889d3fd34a00e4078e947f4e28",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 475,
+                                "tbtImpact": 0
+                            }
+                        ]
+                    }
+                },
+                {
+                    "mainThreadTime": 0,
+                    "blockingTime": 0,
+                    "transferSize": 11281,
+                    "tbtImpact": 0,
+                    "entity": "Google Fonts",
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "url": "https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 11281,
+                                "tbtImpact": 0
+                            }
+                        ]
+                    }
+                },
+                {
+                    "mainThreadTime": 0,
+                    "blockingTime": 0,
+                    "transferSize": 907,
+                    "tbtImpact": 0,
+                    "entity": "ad-delivery.net",
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "url": "https://ad-delivery.net/px.gif?ch=2",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 907,
+                                "tbtImpact": 0
+                            }
+                        ]
+                    }
+                }
+            ],
+            "summary": {
+                "wastedBytes": 1063722,
+                "wastedMs": 3050.8811300937705
+            },
+            "isEntityGrouped": true
+        },
+        "guidanceLevel": 1
+    },
+    "largest-contentful-paint-element": {
+        "id": "largest-contentful-paint-element",
+        "title": "Largest Contentful Paint element",
+        "description": "This is the largest contentful element painted within the viewport. [Learn more about the Largest Contentful Paint element](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "displayValue": "8,040\u00a0ms",
+        "metricSavings": {
+            "LCP": 5550
+        },
+        "details": {
+            "type": "list",
+            "items": [
+                {
+                    "type": "table",
+                    "headings": [
+                        {
+                            "key": "node",
+                            "valueType": "node",
+                            "label": "Element"
+                        }
+                    ],
+                    "items": [
+                        {
+                            "node": {
+                                "type": "node",
+                                "lhId": "page-0-IMG",
+                                "path": "1,HTML,1,BODY,2,SHREDDIT-APP,17,DIV,0,DIV,0,DIV,0,DIV,0,SEARCH-DYNAMIC-ID-CACHE-CONTROLLER,0,SHREDDIT-GALLERY-CAROUSEL,0,FACEPLATE-TRACKER,0,FACEPLATE-TRACKER,0,LI,0,A,0,IMG",
+                                "selector": "faceplate-tracker > li.m-0 > a.block > img.absolute",
+                                "boundingRect": {
+                                    "top": 72,
+                                    "bottom": 282,
+                                    "left": 0,
+                                    "right": 280,
+                                    "width": 280,
+                                    "height": 210
+                                },
+                                "snippet": "<img alt=\"r/movies - Rachael Lillis, the Voice of Pokemon's Misty and Jessie, Dies a\u2026\" class=\"absolute h-100 w-100 pointer-events-none object-cover m-0\" loading=\"lazy\" sizes=\"280px\" src=\"https://external-preview.redd.it/rachael-lillis-the-voice-of-pokemons-mist\u2026\" srcset=\"https://external-preview.redd.it/rachael-lillis-the-voice-of-pokemons-mist\u2026\">",
+                                "nodeLabel": "r/movies - Rachael Lillis, the Voice of Pokemon's Misty and Jessie, Dies at 46"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "table",
+                    "headings": [
+                        {
+                            "key": "phase",
+                            "valueType": "text",
+                            "label": "Phase"
+                        },
+                        {
+                            "key": "percent",
+                            "valueType": "text",
+                            "label": "% of LCP"
+                        },
+                        {
+                            "key": "timing",
+                            "valueType": "ms",
+                            "label": "Timing"
+                        }
+                    ],
+                    "items": [
+                        {
+                            "phase": "TTFB",
+                            "timing": 451.7255,
+                            "percent": "6%"
+                        },
+                        {
+                            "phase": "Load Delay",
+                            "timing": 3541.156734032605,
+                            "percent": "44%"
+                        },
+                        {
+                            "phase": "Load Time",
+                            "timing": 2407.867609364861,
+                            "percent": "30%"
+                        },
+                        {
+                            "phase": "Render Delay",
+                            "timing": 1636.1339666025333,
+                            "percent": "20%"
+                        }
+                    ]
+                }
+            ]
+        },
+        "guidanceLevel": 1
+    },
+    "lcp-lazy-loaded": {
+        "id": "lcp-lazy-loaded",
+        "title": "Largest Contentful Paint image was lazily loaded",
+        "description": "Above-the-fold images that are lazily loaded render later in the page lifecycle, which can delay the largest contentful paint. [Learn more about optimal lazy loading](https://web.dev/articles/lcp-lazy-loading).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "metricSavings": {
+            "LCP": 1200
+        },
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "node",
+                    "valueType": "node",
+                    "label": "Element"
+                }
+            ],
+            "items": [
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-190-IMG",
+                        "path": "1,HTML,1,BODY,2,SHREDDIT-APP,17,DIV,0,DIV,0,DIV,0,DIV,0,SEARCH-DYNAMIC-ID-CACHE-CONTROLLER,0,SHREDDIT-GALLERY-CAROUSEL,0,FACEPLATE-TRACKER,0,FACEPLATE-TRACKER,0,LI,0,A,0,IMG",
+                        "selector": "faceplate-tracker > li.m-0 > a.block > img.absolute",
+                        "boundingRect": {
+                            "top": 72,
+                            "bottom": 282,
+                            "left": 0,
+                            "right": 280,
+                            "width": 280,
+                            "height": 210
+                        },
+                        "snippet": "<img alt=\"r/movies - Rachael Lillis, the Voice of Pokemon's Misty and Jessie, Dies a\u2026\" class=\"absolute h-100 w-100 pointer-events-none object-cover m-0\" loading=\"lazy\" sizes=\"280px\" src=\"https://external-preview.redd.it/rachael-lillis-the-voice-of-pokemons-mist\u2026\" srcset=\"https://external-preview.redd.it/rachael-lillis-the-voice-of-pokemons-mist\u2026\">",
+                        "nodeLabel": "r/movies - Rachael Lillis, the Voice of Pokemon's Misty and Jessie, Dies at 46"
+                    }
+                }
+            ]
+        },
+        "guidanceLevel": 3
+    },
+    "aria-hidden-focus": {
+        "id": "aria-hidden-focus",
+        "title": "`[aria-hidden=\"true\"]` elements contain focusable descendents",
+        "description": "Focusable descendents within an `[aria-hidden=\"true\"]` element prevent those interactive elements from being available to users of assistive technologies like screen readers. [Learn how `aria-hidden` affects focusable elements](https://dequeuniversity.com/rules/axe/4.9/aria-hidden-focus).",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "node",
+                    "valueType": "node",
+                    "subItemsHeading": {
+                        "key": "relatedNode",
+                        "valueType": "node"
+                    },
+                    "label": "Failing Elements"
+                }
+            ],
+            "items": [
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-0-FORM",
+                        "path": "1,HTML,1,BODY,2,SHREDDIT-APP,20,FORM",
+                        "selector": "body > shreddit-app.overflow-visible > form#login-overlay",
+                        "boundingRect": {
+                            "top": 1629,
+                            "bottom": 1630,
+                            "left": -412,
+                            "right": -411,
+                            "width": 1,
+                            "height": 1
+                        },
+                        "snippet": "<form action=\"/svc/shreddit/account/login\" aria-hidden=\"true\" class=\"h-px w-px overflow-hidden fixed -left-100 -bottom-100 whitespace-nowrap op\u2026\" id=\"login-overlay\" method=\"post\" tabindex=\"-1\">",
+                        "nodeLabel": " ",
+                        "explanation": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM"
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-1-INPUT",
+                                    "path": "1,HTML,1,BODY,2,SHREDDIT-APP,20,FORM,0,INPUT",
+                                    "selector": "body > shreddit-app.overflow-visible > form#login-overlay > input#light-username-field",
+                                    "boundingRect": {
+                                        "top": 1629,
+                                        "bottom": 1672,
+                                        "left": -412,
+                                        "right": -380,
+                                        "width": 32,
+                                        "height": 43
+                                    },
+                                    "snippet": "<input autocomplete=\"username\" id=\"light-username-field\" name=\"username-field\" type=\"text\">",
+                                    "nodeLabel": "body > shreddit-app.overflow-visible > form#login-overlay > input#light-username-field"
+                                }
+                            },
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-2-INPUT",
+                                    "path": "1,HTML,1,BODY,2,SHREDDIT-APP,20,FORM,1,INPUT",
+                                    "selector": "body > shreddit-app.overflow-visible > form#login-overlay > input#light-password-field",
+                                    "boundingRect": {
+                                        "top": 1629,
+                                        "bottom": 1672,
+                                        "left": -376,
+                                        "right": -344,
+                                        "width": 32,
+                                        "height": 43
+                                    },
+                                    "snippet": "<input autocomplete=\"current-password\" id=\"light-password-field\" name=\"password-field\" type=\"password\">",
+                                    "nodeLabel": "body > shreddit-app.overflow-visible > form#login-overlay > input#light-password-field"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "impact": "serious",
+                "tags": [
+                    "cat.name-role-value",
+                    "wcag2a",
+                    "wcag412",
+                    "TTv5",
+                    "TT6.a",
+                    "EN-301-549",
+                    "EN-9.4.1.2"
+                ]
+            }
+        }
+    },
+    "list": {
+        "id": "list",
+        "title": "Lists do not contain only `<li>` elements and script supporting elements (`<script>` and `<template>`).",
+        "description": "Screen readers have a specific way of announcing lists. Ensuring proper list structure aids screen reader output. [Learn more about proper list structure](https://dequeuniversity.com/rules/axe/4.9/list).",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "node",
+                    "valueType": "node",
+                    "subItemsHeading": {
+                        "key": "relatedNode",
+                        "valueType": "node"
+                    },
+                    "label": "Failing Elements"
+                }
+            ],
+            "items": [
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-3-UL",
+                        "path": "1,HTML,1,BODY,2,SHREDDIT-APP,17,DIV,0,DIV,0,DIV,0,DIV,0,SEARCH-DYNAMIC-ID-CACHE-CONTROLLER,0,SHREDDIT-GALLERY-CAROUSEL,a,#document-fragment,1,DIV,0,UL",
+                        "selector": "div.relative > ul#list",
+                        "boundingRect": {
+                            "top": 72,
+                            "bottom": 282,
+                            "left": 0,
+                            "right": 412,
+                            "width": 412,
+                            "height": 210
+                        },
+                        "snippet": "<ul id=\"list\" class=\"flex flex-row w-full overflow-x-scroll list-none m-0 p-0 scrollbar-hide sn\u2026\">",
+                        "nodeLabel": "div.relative > ul#list",
+                        "explanation": "Fix all of the following:\n  List element has direct children that are not allowed: faceplate-tracker"
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-4-FACEPLATE-TRACKER",
+                                    "path": "1,HTML,1,BODY,2,SHREDDIT-APP,17,DIV,0,DIV,0,DIV,0,DIV,0,SEARCH-DYNAMIC-ID-CACHE-CONTROLLER,0,SHREDDIT-GALLERY-CAROUSEL,0,FACEPLATE-TRACKER",
+                                    "selector": "div.mt-md > search-dynamic-id-cache-controller > shreddit-gallery-carousel.block > faceplate-tracker.mr-md",
+                                    "boundingRect": {
+                                        "top": 72,
+                                        "bottom": 282,
+                                        "left": 0,
+                                        "right": 280,
+                                        "width": 280,
+                                        "height": 210
+                                    },
+                                    "snippet": "<faceplate-tracker action=\"click\" class=\"mr-md rounded-[16px] overflow-hidden inline-flex list-none shrink-0\" data-faceplate-tracking-context=\"{&quot;action_info&quot;:{&quot;position&quot;:0},&quot;search&quot;:{&quot;query&quot;:&quot;\\&quot;Rachael Lillis\\&quot;&quot;,&quot;quer\u2026\" noun=\"trending\" source=\"search\">",
+                                    "nodeLabel": "Pok\u00c3\u00a9mon voice actress dead\n\nRachael Lillis, the Voice of Pokemon's Misty and J\u2026"
+                                }
+                            },
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-5-FACEPLATE-TRACKER",
+                                    "path": "1,HTML,1,BODY,2,SHREDDIT-APP,17,DIV,0,DIV,0,DIV,0,DIV,0,SEARCH-DYNAMIC-ID-CACHE-CONTROLLER,0,SHREDDIT-GALLERY-CAROUSEL,1,FACEPLATE-TRACKER",
+                                    "selector": "div.mt-md > search-dynamic-id-cache-controller > shreddit-gallery-carousel.block > faceplate-tracker.mr-md",
+                                    "boundingRect": {
+                                        "top": 72,
+                                        "bottom": 282,
+                                        "left": 296,
+                                        "right": 576,
+                                        "width": 280,
+                                        "height": 210
+                                    },
+                                    "snippet": "<faceplate-tracker action=\"click\" class=\"mr-md rounded-[16px] overflow-hidden inline-flex list-none shrink-0\" data-faceplate-tracking-context=\"{&quot;action_info&quot;:{&quot;position&quot;:1},&quot;search&quot;:{&quot;query&quot;:&quot;\\&quot;Tom Cruise\\&quot;&quot;,&quot;query_id\u2026\" noun=\"trending\" source=\"search\">",
+                                    "nodeLabel": "Tom Cruise at Olympics\n\nTom cruise hands off Paris Olympics to Los Angeles in m\u2026"
+                                }
+                            },
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-6-FACEPLATE-TRACKER",
+                                    "path": "1,HTML,1,BODY,2,SHREDDIT-APP,17,DIV,0,DIV,0,DIV,0,DIV,0,SEARCH-DYNAMIC-ID-CACHE-CONTROLLER,0,SHREDDIT-GALLERY-CAROUSEL,2,FACEPLATE-TRACKER",
+                                    "selector": "div.mt-md > search-dynamic-id-cache-controller > shreddit-gallery-carousel.block > faceplate-tracker.mr-md",
+                                    "boundingRect": {
+                                        "top": 72,
+                                        "bottom": 282,
+                                        "left": 592,
+                                        "right": 872,
+                                        "width": 280,
+                                        "height": 210
+                                    },
+                                    "snippet": "<faceplate-tracker action=\"click\" class=\"mr-md rounded-[16px] overflow-hidden inline-flex list-none shrink-0\" data-faceplate-tracking-context=\"{&quot;action_info&quot;:{&quot;position&quot;:2},&quot;search&quot;:{&quot;query&quot;:&quot;Halloween AND (\\&quot;John Car\u2026\" noun=\"trending\" source=\"search\">",
+                                    "nodeLabel": "Halloween games\n\nHalloween Is Getting Its Own Unreal Engine 5 Game With John Ca\u2026"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "impact": "serious",
+                "tags": [
+                    "cat.structure",
+                    "wcag2a",
+                    "wcag131",
+                    "EN-301-549",
+                    "EN-9.1.3.1"
+                ]
+            }
+        }
+    },
+    "listitem": {
+        "id": "listitem",
+        "title": "List items (`<li>`) are not contained within `<ul>`, `<ol>` or `<menu>` parent elements.",
+        "description": "Screen readers require list items (`<li>`) to be contained within a parent `<ul>`, `<ol>` or `<menu>` to be announced properly. [Learn more about proper list structure](https://dequeuniversity.com/rules/axe/4.9/listitem).",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "node",
+                    "valueType": "node",
+                    "subItemsHeading": {
+                        "key": "relatedNode",
+                        "valueType": "node"
+                    },
+                    "label": "Failing Elements"
+                }
+            ],
+            "items": [
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-7-LI",
+                        "path": "1,HTML,1,BODY,2,SHREDDIT-APP,17,DIV,0,DIV,0,DIV,0,DIV,0,SEARCH-DYNAMIC-ID-CACHE-CONTROLLER,0,SHREDDIT-GALLERY-CAROUSEL,0,FACEPLATE-TRACKER,0,FACEPLATE-TRACKER,0,LI",
+                        "selector": "shreddit-gallery-carousel.block > faceplate-tracker.mr-md > faceplate-tracker > li.m-0",
+                        "boundingRect": {
+                            "top": 72,
+                            "bottom": 282,
+                            "left": 0,
+                            "right": 280,
+                            "width": 280,
+                            "height": 210
+                        },
+                        "snippet": "<li class=\"m-0\">",
+                        "nodeLabel": "Pok\u00c3\u00a9mon voice actress dead\n\nRachael Lillis, the Voice of Pokemon's Misty and J\u2026",
+                        "explanation": "Fix any of the following:\n  List item does not have a <ul>, <ol> parent element"
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-8-LI",
+                        "path": "1,HTML,1,BODY,2,SHREDDIT-APP,17,DIV,0,DIV,0,DIV,0,DIV,0,SEARCH-DYNAMIC-ID-CACHE-CONTROLLER,0,SHREDDIT-GALLERY-CAROUSEL,1,FACEPLATE-TRACKER,0,FACEPLATE-TRACKER,0,LI",
+                        "selector": "shreddit-gallery-carousel.block > faceplate-tracker.mr-md > faceplate-tracker > li.m-0",
+                        "boundingRect": {
+                            "top": 72,
+                            "bottom": 282,
+                            "left": 296,
+                            "right": 576,
+                            "width": 280,
+                            "height": 210
+                        },
+                        "snippet": "<li class=\"m-0\">",
+                        "nodeLabel": "Tom Cruise at Olympics\n\nTom cruise hands off Paris Olympics to Los Angeles in m\u2026",
+                        "explanation": "Fix any of the following:\n  List item does not have a <ul>, <ol> parent element"
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-9-LI",
+                        "path": "1,HTML,1,BODY,2,SHREDDIT-APP,17,DIV,0,DIV,0,DIV,0,DIV,0,SEARCH-DYNAMIC-ID-CACHE-CONTROLLER,0,SHREDDIT-GALLERY-CAROUSEL,2,FACEPLATE-TRACKER,0,FACEPLATE-TRACKER,0,LI",
+                        "selector": "shreddit-gallery-carousel.block > faceplate-tracker.mr-md > faceplate-tracker > li.m-0",
+                        "boundingRect": {
+                            "top": 72,
+                            "bottom": 282,
+                            "left": 592,
+                            "right": 872,
+                            "width": 280,
+                            "height": 210
+                        },
+                        "snippet": "<li class=\"m-0\">",
+                        "nodeLabel": "Halloween games\n\nHalloween Is Getting Its Own Unreal Engine 5 Game With John Ca\u2026",
+                        "explanation": "Fix any of the following:\n  List item does not have a <ul>, <ol> parent element"
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-10-LI",
+                        "path": "1,HTML,1,BODY,2,SHREDDIT-APP,17,DIV,0,DIV,0,DIV,0,DIV,0,SEARCH-DYNAMIC-ID-CACHE-CONTROLLER,0,SHREDDIT-GALLERY-CAROUSEL,3,FACEPLATE-TRACKER,0,FACEPLATE-TRACKER,0,LI",
+                        "selector": "shreddit-gallery-carousel.block > faceplate-tracker.mr-md > faceplate-tracker > li.m-0",
+                        "boundingRect": {
+                            "top": 72,
+                            "bottom": 282,
+                            "left": 888,
+                            "right": 1168,
+                            "width": 280,
+                            "height": 210
+                        },
+                        "snippet": "<li class=\"m-0\">",
+                        "nodeLabel": "Harington on GOT ending\n\nKit Harington Agrees \u00e2\u20ac\u02dcGame of Thrones\u00e2\u20ac\u2122 Ending Made\u2026",
+                        "explanation": "Fix any of the following:\n  List item does not have a <ul>, <ol> parent element"
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-11-LI",
+                        "path": "1,HTML,1,BODY,2,SHREDDIT-APP,17,DIV,0,DIV,0,DIV,0,DIV,0,SEARCH-DYNAMIC-ID-CACHE-CONTROLLER,0,SHREDDIT-GALLERY-CAROUSEL,4,FACEPLATE-TRACKER,0,FACEPLATE-TRACKER,0,LI",
+                        "selector": "shreddit-gallery-carousel.block > faceplate-tracker.mr-md > faceplate-tracker > li.m-0",
+                        "boundingRect": {
+                            "top": 72,
+                            "bottom": 282,
+                            "left": 1184,
+                            "right": 1464,
+                            "width": 280,
+                            "height": 210
+                        },
+                        "snippet": "<li class=\"m-0\">",
+                        "nodeLabel": "Joost Klein charges dropped\n\nCase dropped against Joost Klein over Eurovision i\u2026",
+                        "explanation": "Fix any of the following:\n  List item does not have a <ul>, <ol> parent element"
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-12-LI",
+                        "path": "1,HTML,1,BODY,2,SHREDDIT-APP,17,DIV,0,DIV,0,DIV,0,DIV,0,SEARCH-DYNAMIC-ID-CACHE-CONTROLLER,0,SHREDDIT-GALLERY-CAROUSEL,5,FACEPLATE-TRACKER,0,FACEPLATE-TRACKER,0,LI",
+                        "selector": "shreddit-gallery-carousel.block > faceplate-tracker.mr-md > faceplate-tracker > li.m-0",
+                        "boundingRect": {
+                            "top": 72,
+                            "bottom": 282,
+                            "left": 1480,
+                            "right": 1760,
+                            "width": 280,
+                            "height": 210
+                        },
+                        "snippet": "<li class=\"m-0\">",
+                        "nodeLabel": "Greece wildfires\n\nGreece orders evacuations near Athens as wildfires rage\n\nr/eu\u2026",
+                        "explanation": "Fix any of the following:\n  List item does not have a <ul>, <ol> parent element"
+                    }
+                }
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "impact": "serious",
+                "tags": [
+                    "cat.structure",
+                    "wcag2a",
+                    "wcag131",
+                    "EN-301-549",
+                    "EN-9.1.3.1"
+                ]
+            }
+        }
+    },
+    "target-size": {
+        "id": "target-size",
+        "title": "Touch targets do not have sufficient size or spacing.",
+        "description": "Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. [Learn more about touch targets](https://dequeuniversity.com/rules/axe/4.9/target-size).",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "node",
+                    "valueType": "node",
+                    "subItemsHeading": {
+                        "key": "relatedNode",
+                        "valueType": "node"
+                    },
+                    "label": "Failing Elements"
+                }
+            ],
+            "items": [
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-13-A",
+                        "path": "1,HTML,1,BODY,2,SHREDDIT-APP,17,DIV,0,DIV,2,DIV,0,MAIN,4,SHREDDIT-FEED,0,ARTICLE,1,SHREDDIT-POST,2,DIV,1,DIV,3,DIV,0,DIV,0,A",
+                        "selector": "div.col-start-1 > div > div.relative > a.post-link",
+                        "boundingRect": {
+                            "top": 436,
+                            "bottom": 450,
+                            "left": 16,
+                            "right": 762,
+                            "width": 746,
+                            "height": 14
+                        },
+                        "snippet": "<a class=\"post-link max-w-full truncate a hover:underline\" href=\"https://www.bnnbloomberg.ca/business/2024/08/12/cheap-foreign-labor-soars-\u2026\" rel=\"noopener nofollow ugc\" rpl=\"\" target=\"_blank\">",
+                        "nodeLabel": "https://www.bnnbloomberg.ca/business/2024/08/12/cheap-foreign-labor-soars-in-ca\u2026",
+                        "explanation": "Fix any of the following:\n  Target has insufficient size (746.3px by 14px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 0px instead of at least 24px."
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-14-A",
+                                    "path": "1,HTML,1,BODY,2,SHREDDIT-APP,17,DIV,0,DIV,2,DIV,0,MAIN,4,SHREDDIT-FEED,0,ARTICLE,1,SHREDDIT-POST,1,A",
+                                    "selector": "shreddit-feed.nd:visible > article.w-full > shreddit-post#t3_1eqflul > a.absolute",
+                                    "boundingRect": {
+                                        "top": 335,
+                                        "bottom": 503,
+                                        "left": 0,
+                                        "right": 412,
+                                        "width": 412,
+                                        "height": 168
+                                    },
+                                    "snippet": "<a class=\"absolute inset-0\" data-ks-id=\"t3_1eqflul\" href=\"/r/canada/comments/1eqflul/cheap_foreign_labor_soars_in_canada_as_young/\" slot=\"full-post-link\" target=\"_self\">",
+                                    "nodeLabel": "Cheap Foreign Labor Soars in Canada as Young Workers Are Left Jobless"
+                                }
+                            },
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-15-A",
+                                    "path": "1,HTML,1,BODY,2,SHREDDIT-APP,17,DIV,0,DIV,2,DIV,0,MAIN,4,SHREDDIT-FEED,0,ARTICLE,1,SHREDDIT-POST,2,DIV,2,DIV,0,DIV,0,A",
+                                    "selector": "div.grid > div.col-start-2 > div.relative > a.block",
+                                    "boundingRect": {
+                                        "top": 372,
+                                        "bottom": 458,
+                                        "left": 283,
+                                        "right": 395,
+                                        "width": 112,
+                                        "height": 86
+                                    },
+                                    "snippet": "<a aria-label=\"r/canada - Cheap Foreign Labor Soars in Canada as Young Workers Are Left J\u2026\" class=\"block w-100 h-100\" href=\"https://www.bnnbloomberg.ca/business/2024/08/12/cheap-foreign-labor-soars-\u2026\" rel=\"noopener nofollow ugc\" target=\"_blank\">",
+                                    "nodeLabel": "r/canada - Cheap Foreign Labor Soars in Canada as Young Workers Are Left Jobless"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-16-A",
+                        "path": "1,HTML,1,BODY,2,SHREDDIT-APP,17,DIV,0,DIV,2,DIV,0,MAIN,4,SHREDDIT-FEED,2,ARTICLE,1,SHREDDIT-POST,2,DIV,1,DIV,3,DIV,0,DIV,0,A",
+                        "selector": "div.col-start-1 > div > div.relative > a.post-link",
+                        "boundingRect": {
+                            "top": 673,
+                            "bottom": 687,
+                            "left": 16,
+                            "right": 637,
+                            "width": 621,
+                            "height": 14
+                        },
+                        "snippet": "<a class=\"post-link max-w-full truncate a hover:underline\" href=\"https://variety.com/2024/tv/news/kit-harington-game-of-thrones-ending-mist\u2026\" rel=\"noopener nofollow ugc\" rpl=\"\" target=\"_blank\">",
+                        "nodeLabel": "https://variety.com/2024/tv/news/kit-harington-game-of-thrones-ending-mistakes-\u2026",
+                        "explanation": "Fix any of the following:\n  Target has insufficient size (620.8px by 14px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 14px instead of at least 24px."
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-17-A",
+                                    "path": "1,HTML,1,BODY,2,SHREDDIT-APP,17,DIV,0,DIV,2,DIV,0,MAIN,4,SHREDDIT-FEED,2,ARTICLE,1,SHREDDIT-POST,1,A",
+                                    "selector": "shreddit-feed.nd:visible > article.w-full > shreddit-post#t3_1eqfg0t > a.absolute",
+                                    "boundingRect": {
+                                        "top": 512,
+                                        "bottom": 740,
+                                        "left": 0,
+                                        "right": 412,
+                                        "width": 412,
+                                        "height": 228
+                                    },
+                                    "snippet": "<a class=\"absolute inset-0\" data-ks-id=\"t3_1eqfg0t\" href=\"/r/television/comments/1eqfg0t/kit_harington_agrees_game_of_thrones_ending\u2026\" slot=\"full-post-link\" target=\"_self\">",
+                                    "nodeLabel": "Kit Harington Agrees \u00e2\u20ac\u02dcGame of Thrones\u00e2\u20ac\u2122 Ending Made \u00e2\u20ac\u02dcMistakes\u00e2\u20ac\u2122 and Felt \u2026"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "impact": "serious",
+                "tags": [
+                    "cat.sensory-and-visual-cues",
+                    "wcag22aa",
+                    "wcag258"
+                ]
+            }
+        }
+    },
+    "uses-long-cache-ttl": {
+        "id": "uses-long-cache-ttl",
+        "title": "Serve static assets with an efficient cache policy",
+        "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more about efficient cache policies](https://developer.chrome.com/docs/lighthouse/performance/uses-long-cache-ttl/).",
+        "score": 0.5,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 16992.299999999992,
+        "numericUnit": "byte",
+        "displayValue": "14 resources found",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "cacheLifetimeMs",
+                    "valueType": "ms",
+                    "label": "Cache TTL",
+                    "displayUnit": "duration"
+                },
+                {
+                    "key": "totalBytes",
+                    "valueType": "bytes",
+                    "label": "Transfer Size",
+                    "displayUnit": "kb",
+                    "granularity": 1
+                }
+            ],
+            "items": [
+                {
+                    "url": "https://ad-delivery.net/px.gif?ch=2",
+                    "debugData": {
+                        "type": "debugdata",
+                        "public": true,
+                        "max-age": 86400
+                    },
+                    "cacheLifetimeMs": 86400000,
+                    "cacheHitProbability": 0.6,
+                    "totalBytes": 907,
+                    "wastedBytes": 362.8
+                },
+                {
+                    "url": "https://external-preview.redd.it/greece-orders-evacuations-near-athens-as-wildfires-rage-v0-0xj1CkmXhS36w5_otVGg850mcgHndJP21JXod60g8e0.jpg?width=640&crop=smart&auto=webp&s=88a82b181e4d54d121e07037d9f7f13eeffea1e8",
+                    "debugData": {
+                        "type": "debugdata",
+                        "public": true,
+                        "max-age": 604800
+                    },
+                    "cacheLifetimeMs": 604800000,
+                    "cacheHitProbability": 0.9,
+                    "totalBytes": 50024,
+                    "wastedBytes": 5002.399999999999
+                },
+                {
+                    "url": "https://external-preview.redd.it/kit-harington-agrees-game-of-thrones-ending-made-mistakes-v0-FSskGu7zgpRhWTtAFOmdAbn9uNf_d455IRDWfXQNztc.jpg?width=640&crop=smart&auto=webp&s=09d182435f45411f4682f7997b246c59ac7116f4",
+                    "debugData": {
+                        "type": "debugdata",
+                        "public": true,
+                        "max-age": 604800
+                    },
+                    "cacheLifetimeMs": 604800000,
+                    "cacheHitProbability": 0.9,
+                    "totalBytes": 31875,
+                    "wastedBytes": 3187.499999999999
+                },
+                {
+                    "url": "https://preview.redd.it/a-second-photo-of-jd-vance-in-drag-while-at-yale-law-school-v0-dizfkpd0e9id1.jpeg?width=640&crop=smart&auto=webp&s=095e901e01f1d85115683c5076e8e8bc652b9986",
+                    "debugData": {
+                        "type": "debugdata",
+                        "public": true,
+                        "max-age": 604800
+                    },
+                    "cacheLifetimeMs": 604800000,
+                    "cacheHitProbability": 0.9,
+                    "totalBytes": 26641,
+                    "wastedBytes": 2664.0999999999995
+                },
+                {
+                    "url": "https://external-preview.redd.it/rachael-lillis-the-voice-of-pokemons-misty-and-jessie-dies-v0-gP7ltQ3icj1vXNdc1cUO77rVRvhm5QNYU-PY1F48tMo.jpg?width=640&crop=smart&auto=webp&s=923cab5ac0680ff908318a1257ba394e7ca52a13",
+                    "debugData": {
+                        "type": "debugdata",
+                        "public": true,
+                        "max-age": 604800
+                    },
+                    "cacheLifetimeMs": 604800000,
+                    "cacheHitProbability": 0.9,
+                    "totalBytes": 17606,
+                    "wastedBytes": 1760.5999999999997
+                },
+                {
+                    "url": "https://external-preview.redd.it/tom-cruise-hands-off-paris-olympics-to-los-angeles-in-v0-eGtmamd6azBnNmlkMcNJKTPdRW6G0lbNlPeAzFy7bsaL9wO2g1B-9ww2LZM5.png?width=640&crop=smart&format=pjpg&auto=webp&s=e776a2c07637129ae16359738e6a5bdc0491eaa0",
+                    "debugData": {
+                        "type": "debugdata",
+                        "public": true,
+                        "max-age": 604800
+                    },
+                    "cacheLifetimeMs": 604800000,
+                    "cacheHitProbability": 0.9,
+                    "totalBytes": 14453,
+                    "wastedBytes": 1445.2999999999997
+                },
+                {
+                    "url": "https://external-preview.redd.it/halloween-is-getting-its-own-unreal-engine-5-game-with-john-v0-aYOIzZz3GG1Ir2WdhZPeQBulcuD6R7QJLrlO7g19FGU.jpg?width=640&crop=smart&auto=webp&s=08c7942ccd59cf58d53297b14128506a32c45a8b",
+                    "debugData": {
+                        "type": "debugdata",
+                        "public": true,
+                        "max-age": 604800
+                    },
+                    "cacheLifetimeMs": 604800000,
+                    "cacheHitProbability": 0.9,
+                    "totalBytes": 10973,
+                    "wastedBytes": 1097.2999999999997
+                },
+                {
+                    "url": "https://external-preview.redd.it/case-dropped-against-joost-klein-over-eurovision-incident-v0-ZeJ7pHN8XMyHBTz5sbm6JdHD2nTN-7cyxE-rsG2Q1vE.jpg?width=640&crop=smart&auto=webp&s=e58f285bc1814cd791a3fdab4f56e13dd89c9c89",
+                    "debugData": {
+                        "type": "debugdata",
+                        "public": true,
+                        "max-age": 604800
+                    },
+                    "cacheLifetimeMs": 604800000,
+                    "cacheHitProbability": 0.9,
+                    "totalBytes": 5937,
+                    "wastedBytes": 593.6999999999998
+                },
+                {
+                    "url": "https://www.gstatic.com/recaptcha/api2/logo_48.png",
+                    "debugData": {
+                        "type": "debugdata",
+                        "public": true,
+                        "max-age": 604800
+                    },
+                    "cacheLifetimeMs": 604800000,
+                    "cacheHitProbability": 0.9,
+                    "totalBytes": 2368,
+                    "wastedBytes": 236.79999999999995
+                },
+                {
+                    "url": "https://www.redditstatic.com/marketplace-assets/v1/core/awards/popcorn_v1_40.png",
+                    "debugData": {
+                        "type": "debugdata",
+                        "max-age": 604800
+                    },
+                    "cacheLifetimeMs": 604800000,
+                    "cacheHitProbability": 0.9,
+                    "totalBytes": 2002,
+                    "wastedBytes": 200.19999999999996
+                },
+                {
+                    "url": "https://styles.redditmedia.com/t5_2qh68/styles/communityIcon_fl2udvka4pw81.jpg?width=48&height=48&frame=1&auto=webp&crop=48:48,smart&s=f8a55b45d24ddf63fded99046cf1199028a140a7",
+                    "debugData": {
+                        "type": "debugdata",
+                        "public": true,
+                        "max-age": 604800
+                    },
+                    "cacheLifetimeMs": 604800000,
+                    "cacheHitProbability": 0.9,
+                    "totalBytes": 1475,
+                    "wastedBytes": 147.49999999999997
+                },
+                {
+                    "url": "https://styles.redditmedia.com/t5_2qh6e/styles/communityIcon_8qmcs8g0gp871.png?width=48&height=48&frame=1&auto=webp&crop=48:48,smart&s=321f319fe3c292dcb47f4e3e9d6c4f45bf1e346d",
+                    "debugData": {
+                        "type": "debugdata",
+                        "public": true,
+                        "max-age": 604800
+                    },
+                    "cacheLifetimeMs": 604800000,
+                    "cacheHitProbability": 0.9,
+                    "totalBytes": 1332,
+                    "wastedBytes": 133.19999999999996
+                },
+                {
+                    "url": "https://styles.redditmedia.com/t5_2qh3s/styles/communityIcon_ctrxr9h6lmbb1.jpg?width=48&height=48&frame=1&auto=webp&crop=48:48,smart&s=09f92a46bed21ac2413e6df355c21fca398507c9",
+                    "debugData": {
+                        "type": "debugdata",
+                        "public": true,
+                        "max-age": 604800
+                    },
+                    "cacheLifetimeMs": 604800000,
+                    "cacheHitProbability": 0.9,
+                    "totalBytes": 1134,
+                    "wastedBytes": 113.39999999999998
+                },
+                {
+                    "url": "https://styles.redditmedia.com/t5_m0bnr/styles/communityIcon_qanlm185crr71.png?width=48&height=48&frame=1&auto=webp&crop=48:48,smart&s=c99daaeafbf2a2889d3fd34a00e4078e947f4e28",
+                    "debugData": {
+                        "type": "debugdata",
+                        "public": true,
+                        "max-age": 604800
+                    },
+                    "cacheLifetimeMs": 604800000,
+                    "cacheHitProbability": 0.9,
+                    "totalBytes": 475,
+                    "wastedBytes": 47.49999999999999
+                }
+            ],
+            "summary": {
+                "wastedBytes": 16992.299999999992
+            },
+            "sortedBy": [
+                "totalBytes"
+            ],
+            "skipSumming": [
+                "cacheLifetimeMs"
+            ]
+        },
+        "guidanceLevel": 3
+    },
+    "render-blocking-resources": {
+        "id": "render-blocking-resources",
+        "title": "Eliminate render-blocking resources",
+        "description": "Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn how to eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 41,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 40\u00a0ms",
+        "metricSavings": {
+            "FCP": 50,
+            "LCP": 0
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "totalBytes",
+                    "valueType": "bytes",
+                    "label": "Transfer Size"
+                },
+                {
+                    "key": "wastedMs",
+                    "valueType": "timespanMs",
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "url": "https://www.redditstatic.com/shreddit/header-large-client-css-64f76952.css",
+                    "totalBytes": 159,
+                    "wastedMs": 782
+                },
+                {
+                    "url": "https://www.redditstatic.com/shreddit/header-client-css-28ebcb96.css",
+                    "totalBytes": 910,
+                    "wastedMs": 152
+                }
+            ],
+            "overallSavingsMs": 41
+        },
+        "guidanceLevel": 2
+    },
+    "unused-css-rules": {
+        "id": "unused-css-rules",
+        "title": "Reduce unused CSS",
+        "description": "Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/).",
+        "score": 0.5,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 0,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 279\u00a0KiB",
+        "metricSavings": {
+            "FCP": 0,
+            "LCP": 0
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "totalBytes",
+                    "valueType": "bytes",
+                    "label": "Transfer Size"
+                },
+                {
+                    "key": "wastedBytes",
+                    "valueType": "bytes",
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "url": ":root,button,html,input,select{font-family:var(--font-sans)} \u2026",
+                    "wastedBytes": 222770,
+                    "wastedPercent": 78.30173425845864,
+                    "totalBytes": 284502
+                },
+                {
+                    "url": "faceplate-expandable-section-helper { display: contents; } \u2026",
+                    "wastedBytes": 39386,
+                    "wastedPercent": 95.69833949684373,
+                    "totalBytes": 41156
+                },
+                {
+                    "url": "https://www.gstatic.com/recaptcha/releases/_ZpyzC9NQw3gYt1GHTrnprhx/styles__ltr.css",
+                    "wastedBytes": 23198,
+                    "wastedPercent": 94.1801664330453,
+                    "totalBytes": 24631
+                }
+            ],
+            "overallSavingsMs": 0,
+            "overallSavingsBytes": 285354,
+            "sortedBy": [
+                "wastedBytes"
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "metricSavings": {
+                    "FCP": 0,
+                    "LCP": 0
+                }
+            }
+        },
+        "guidanceLevel": 1
+    },
+    "unused-javascript": {
+        "id": "unused-javascript",
+        "title": "Reduce unused JavaScript",
+        "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 20,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 358\u00a0KiB",
+        "metricSavings": {
+            "FCP": 150,
+            "LCP": 0
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "subItemsHeading": {
+                        "key": "source",
+                        "valueType": "code"
+                    },
+                    "label": "URL"
+                },
+                {
+                    "key": "totalBytes",
+                    "valueType": "bytes",
+                    "subItemsHeading": {
+                        "key": "sourceBytes"
+                    },
+                    "label": "Transfer Size"
+                },
+                {
+                    "key": "wastedBytes",
+                    "valueType": "bytes",
+                    "subItemsHeading": {
+                        "key": "sourceWastedBytes"
+                    },
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "url": "https://www.gstatic.com/recaptcha/releases/_ZpyzC9NQw3gYt1GHTrnprhx/recaptcha__en.js",
+                    "totalBytes": 215271,
+                    "wastedBytes": 147806,
+                    "wastedPercent": 68.6600690566958
+                },
+                {
+                    "url": "https://www.gstatic.com/recaptcha/releases/_ZpyzC9NQw3gYt1GHTrnprhx/recaptcha__en.js",
+                    "totalBytes": 215271,
+                    "wastedBytes": 131584,
+                    "wastedPercent": 61.12452759608984
+                },
+                {
+                    "url": "https://accounts.google.com/gsi/client",
+                    "totalBytes": 87594,
+                    "wastedBytes": 60829,
+                    "wastedPercent": 69.44413357323026
+                },
+                {
+                    "url": "https://www.redditstatic.com/shreddit/en-US/shell-521789b6.js",
+                    "totalBytes": 136392,
+                    "wastedBytes": 26609,
+                    "wastedPercent": 19.50933325827556
+                }
+            ],
+            "overallSavingsMs": 20,
+            "overallSavingsBytes": 366828,
+            "sortedBy": [
+                "wastedBytes"
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "metricSavings": {
+                    "FCP": 150,
+                    "LCP": 20
+                }
+            }
+        },
+        "guidanceLevel": 1
+    },
+    "modern-image-formats": {
+        "id": "modern-image-formats",
+        "title": "Serve images in next-gen formats",
+        "description": "Image formats like WebP and AVIF often provide better compression than PNG or JPEG, which means faster downloads and less data consumption. [Learn more about modern image formats](https://developer.chrome.com/docs/lighthouse/performance/uses-webp-images/).",
+        "score": 0.5,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 0,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 20\u00a0KiB",
+        "warnings": [],
+        "metricSavings": {
+            "FCP": 0,
+            "LCP": 0
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "node",
+                    "valueType": "node",
+                    "label": ""
+                },
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "totalBytes",
+                    "valueType": "bytes",
+                    "label": "Resource Size"
+                },
+                {
+                    "key": "wastedBytes",
+                    "valueType": "bytes",
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-203-IMG",
+                        "path": "1,HTML,1,BODY,2,SHREDDIT-APP,17,DIV,0,DIV,2,DIV,0,MAIN,4,SHREDDIT-FEED,4,ARTICLE,1,SHREDDIT-POST,2,SPAN,0,SPAN,0,SPAN,0,SHREDDIT-ASYNC-LOADER,0,FACEPLATE-HOVERCARD,0,A,0,DIV,0,FACEPLATE-IMG,a,#document-fragment,1,DIV,1,IMG",
+                        "selector": "div.loaded > img",
+                        "boundingRect": {
+                            "top": 753,
+                            "bottom": 777,
+                            "left": 16,
+                            "right": 40,
+                            "width": 24,
+                            "height": 24
+                        },
+                        "snippet": "<img src=\"https://b.thumbs.redditmedia.com/VZX_KQLnI1DPhlEZ07bIcLzwR1Win808RIt7zm49V\u2026\" srcset=\"\" sizes=\"\" alt=\"r/pics icon\">",
+                        "nodeLabel": "r/pics icon"
+                    },
+                    "url": "https://b.thumbs.redditmedia.com/VZX_KQLnI1DPhlEZ07bIcLzwR1Win808RIt7zm49VIQ.png",
+                    "fromProtocol": true,
+                    "isCrossOrigin": true,
+                    "totalBytes": 28438,
+                    "wastedBytes": 20636.15,
+                    "wastedWebpBytes": 19684
+                }
+            ],
+            "overallSavingsMs": 0,
+            "overallSavingsBytes": 20636.15,
+            "sortedBy": [
+                "wastedBytes"
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "metricSavings": {
+                    "FCP": 0,
+                    "LCP": 0
+                }
+            }
+        },
+        "guidanceLevel": 3
+    },
+    "uses-text-compression": {
+        "id": "uses-text-compression",
+        "title": "Enable text compression",
+        "description": "Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more about text compression](https://developer.chrome.com/docs/lighthouse/performance/uses-text-compression/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 2850,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 556\u00a0KiB",
+        "metricSavings": {
+            "FCP": 2850,
+            "LCP": 2850
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "totalBytes",
+                    "valueType": "bytes",
+                    "label": "Transfer Size"
+                },
+                {
+                    "key": "wastedBytes",
+                    "valueType": "bytes",
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "url": "http://localhost:8000/reddit.html",
+                    "totalBytes": 657428,
+                    "wastedBytes": 568858
+                }
+            ],
+            "overallSavingsMs": 2850,
+            "overallSavingsBytes": 568858,
+            "sortedBy": [
+                "wastedBytes"
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "metricSavings": {
+                    "FCP": 2850,
+                    "LCP": 2850
+                }
+            }
+        },
+        "guidanceLevel": 3
+    },
+    "uses-responsive-images": {
+        "id": "uses-responsive-images",
+        "title": "Properly size images",
+        "description": "Serve images that are appropriately-sized to save cellular data and improve load time. [Learn how to size images](https://developer.chrome.com/docs/lighthouse/performance/uses-responsive-images/).",
+        "score": 0.5,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 0,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 27\u00a0KiB",
+        "metricSavings": {
+            "FCP": 0,
+            "LCP": 0
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "node",
+                    "valueType": "node",
+                    "label": ""
+                },
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "totalBytes",
+                    "valueType": "bytes",
+                    "label": "Resource Size"
+                },
+                {
+                    "key": "wastedBytes",
+                    "valueType": "bytes",
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-203-IMG",
+                        "path": "1,HTML,1,BODY,2,SHREDDIT-APP,17,DIV,0,DIV,2,DIV,0,MAIN,4,SHREDDIT-FEED,4,ARTICLE,1,SHREDDIT-POST,2,SPAN,0,SPAN,0,SPAN,0,SHREDDIT-ASYNC-LOADER,0,FACEPLATE-HOVERCARD,0,A,0,DIV,0,FACEPLATE-IMG,a,#document-fragment,1,DIV,1,IMG",
+                        "selector": "div.loaded > img",
+                        "boundingRect": {
+                            "top": 753,
+                            "bottom": 777,
+                            "left": 16,
+                            "right": 40,
+                            "width": 24,
+                            "height": 24
+                        },
+                        "snippet": "<img src=\"https://b.thumbs.redditmedia.com/VZX_KQLnI1DPhlEZ07bIcLzwR1Win808RIt7zm49V\u2026\" srcset=\"\" sizes=\"\" alt=\"r/pics icon\">",
+                        "nodeLabel": "r/pics icon"
+                    },
+                    "url": "https://b.thumbs.redditmedia.com/VZX_KQLnI1DPhlEZ07bIcLzwR1Win808RIt7zm49VIQ.png",
+                    "totalBytes": 28438,
+                    "wastedBytes": 27673,
+                    "wastedPercent": 97.308349609375
+                }
+            ],
+            "overallSavingsMs": 0,
+            "overallSavingsBytes": 27673,
+            "sortedBy": [
+                "wastedBytes"
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "metricSavings": {
+                    "FCP": 0,
+                    "LCP": 0
+                }
+            }
+        },
+        "guidanceLevel": 2
+    },
+    "charset": {
+        "id": "charset",
+        "title": "Charset declaration is missing or occurs too late in the HTML",
+        "description": "A character encoding declaration is required. It can be done with a `<meta>` tag in the first 1024 bytes of the HTML or in the Content-Type HTTP response header. [Learn more about declaring the character encoding](https://developer.chrome.com/docs/lighthouse/best-practices/charset/).",
+        "score": 0,
+        "scoreDisplayMode": "binary"
+    },
+    "dom-size": {
+        "id": "dom-size",
+        "title": "Avoid an excessive DOM size",
+        "description": "A large DOM will increase memory usage, cause longer [style calculations](https://developers.google.com/web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations), and produce costly [layout reflows](https://developers.google.com/speed/articles/reflow). [Learn how to avoid an excessive DOM size](https://developer.chrome.com/docs/lighthouse/performance/dom-size/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 2837,
+        "numericUnit": "element",
+        "displayValue": "2,837 elements",
+        "metricSavings": {
+            "TBT": 200
+        },
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "statistic",
+                    "valueType": "text",
+                    "label": "Statistic"
+                },
+                {
+                    "key": "node",
+                    "valueType": "node",
+                    "label": "Element"
+                },
+                {
+                    "key": "value",
+                    "valueType": "numeric",
+                    "label": "Value"
+                }
+            ],
+            "items": [
+                {
+                    "statistic": "Total DOM Elements",
+                    "value": {
+                        "type": "numeric",
+                        "granularity": 1,
+                        "value": 2837
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-181-path",
+                        "path": "1,HTML,1,BODY,2,SHREDDIT-APP,17,DIV,0,DIV,2,DIV,0,MAIN,4,SHREDDIT-FEED,0,ARTICLE,1,SHREDDIT-POST,2,DIV,0,DIV,0,SPAN,1,SPAN,1,SHREDDIT-ASYNC-LOADER,0,SHREDDIT-POST-OVERFLOW-MENU,a,#document-fragment,1,DIV,1,FACEPLATE-DROPDOWN-MENU,2,FACEPLATE-MENU,3,LI,2,DIV,1,SPAN,1,SPAN,1,svg,2,path",
+                        "selector": "span.flex > span.flex > svg > path",
+                        "boundingRect": {
+                            "top": 0,
+                            "bottom": 0,
+                            "left": 0,
+                            "right": 0,
+                            "width": 0,
+                            "height": 0
+                        },
+                        "snippet": "<path d=\"M2.25 19.775H1V2.193l.353-.171a10.293 10.293 0 0 1 8.919 0 9.054 9.054 0 0\u2026\">",
+                        "nodeLabel": "span.flex > span.flex > svg > path"
+                    },
+                    "statistic": "Maximum DOM Depth",
+                    "value": {
+                        "type": "numeric",
+                        "granularity": 1,
+                        "value": 24
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-182-DIV",
+                        "path": "1,HTML,1,BODY,2,SHREDDIT-APP,17,DIV,0,DIV,2,DIV,0,MAIN,0,DIV,0,SHREDDIT-ASYNC-LOADER,0,DIV,0,DIV,1,SHREDDIT-SORT-DROPDOWN,2,DIV",
+                        "selector": "div.flex > div.flex > shreddit-sort-dropdown > div",
+                        "boundingRect": {
+                            "top": 0,
+                            "bottom": 0,
+                            "left": 0,
+                            "right": 0,
+                            "width": 0,
+                            "height": 0
+                        },
+                        "snippet": "<div slot=\"dropdown-items\">",
+                        "nodeLabel": "\n             \n              \n               \n                \n                \u2026"
+                    },
+                    "statistic": "Maximum Child Elements",
+                    "value": {
+                        "type": "numeric",
+                        "granularity": 1,
+                        "value": 36
+                    }
+                }
+            ]
+        },
+        "guidanceLevel": 1
+    },
+    "uses-passive-event-listeners": {
+        "id": "uses-passive-event-listeners",
+        "title": "Does not use passive listeners to improve scrolling performance",
+        "description": "Consider marking your touch and wheel event listeners as `passive` to improve your page's scroll performance. [Learn more about adopting passive event listeners](https://developer.chrome.com/docs/lighthouse/best-practices/uses-passive-event-listeners/).",
+        "score": 0.5,
+        "scoreDisplayMode": "metricSavings",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "source",
+                    "valueType": "source-location",
+                    "label": "Source"
+                }
+            ],
+            "items": [
+                {
+                    "source": {
+                        "type": "source-location",
+                        "url": "https://www.redditstatic.com/shreddit/en-US/shell-521789b6.js",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 1116
+                    }
+                },
+                {
+                    "source": {
+                        "type": "source-location",
+                        "url": "https://www.redditstatic.com/shreddit/en-US/shell-521789b6.js",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 648
+                    }
+                },
+                {
+                    "source": {
+                        "type": "source-location",
+                        "url": "https://www.redditstatic.com/shreddit/en-US/icon-1d6dbb2d.js",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 17698
+                    }
+                }
+            ]
+        },
+        "guidanceLevel": 3
+    }
+}

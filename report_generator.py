@@ -32,8 +32,8 @@ def run_lighthouse(url, result_path):
             url,
             "--output=json",
             "--output-path=" + result_path,
-            "--chrome-flags=--headless",
-            "--only-categories=performance,accessibility,best-practices,seo"
+            "--chrome-flags=--headless  --no-sandbox --disable-gpu",
+            "--only-categories=performance"
         ]
         subprocess.run(command, check=True)
         
@@ -43,10 +43,7 @@ def run_lighthouse(url, result_path):
         
         # Extract scores
         scores = {
-            'performance': report['categories']['performance']['score'] * 100,
-            'accessibility': report['categories']['accessibility']['score'] * 100,
-            'best-practices': report['categories']['best-practices']['score'] * 100,
-            'seo': report['categories']['seo']['score'] * 100
+            'performance': report['categories']['performance']['score'] * 100
         }
         
         return scores
@@ -137,8 +134,8 @@ def generate_lh_production_reports():
     return results
 
 def main():
-    # generate_lighthouse_reports(lh_report_original_dir)
-    generate_lighthouse_reports(lh_report_llm_dir)
+    generate_lighthouse_reports(lh_report_original_dir)
+    # generate_lighthouse_reports(lh_report_llm_dir)
     # generate_lh_production_reports()
     
 if __name__ == "__main__":

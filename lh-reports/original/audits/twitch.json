@@ -1,0 +1,2922 @@
+{
+    "viewport": {
+        "id": "viewport",
+        "title": "Does not have a `<meta name=\"viewport\">` tag with `width` or `initial-scale`",
+        "description": "A `<meta name=\"viewport\">` not only optimizes your app for mobile screen sizes, but also prevents [a 300 millisecond delay to user input](https://developer.chrome.com/blog/300ms-tap-delay-gone-away/). [Learn more about using the viewport meta tag](https://developer.chrome.com/docs/lighthouse/pwa/viewport/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "explanation": "No `<meta name=\"viewport\">` tag found",
+        "metricSavings": {
+            "INP": 300
+        },
+        "guidanceLevel": 3
+    },
+    "first-contentful-paint": {
+        "id": "first-contentful-paint",
+        "title": "First Contentful Paint",
+        "description": "First Contentful Paint marks the time at which the first text or image is painted. [Learn more about the First Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/).",
+        "score": 0.99,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 1249.77,
+        "numericUnit": "millisecond",
+        "displayValue": "1.2\u00a0s",
+        "scoringOptions": {
+            "p10": 1800,
+            "median": 3000
+        }
+    },
+    "largest-contentful-paint": {
+        "id": "largest-contentful-paint",
+        "title": "Largest Contentful Paint",
+        "description": "Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+        "score": 0,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 9858.171,
+        "numericUnit": "millisecond",
+        "displayValue": "9.9\u00a0s",
+        "scoringOptions": {
+            "p10": 2500,
+            "median": 4000
+        }
+    },
+    "speed-index": {
+        "id": "speed-index",
+        "title": "Speed Index",
+        "description": "Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/).",
+        "score": 0.38,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 6576.664811405379,
+        "numericUnit": "millisecond",
+        "displayValue": "6.6\u00a0s",
+        "scoringOptions": {
+            "p10": 3387,
+            "median": 5800
+        }
+    },
+    "total-blocking-time": {
+        "id": "total-blocking-time",
+        "title": "Total Blocking Time",
+        "description": "Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds. [Learn more about the Total Blocking Time metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/).",
+        "score": 0.04,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 2470.499999999998,
+        "numericUnit": "millisecond",
+        "displayValue": "2,470\u00a0ms",
+        "scoringOptions": {
+            "p10": 200,
+            "median": 600
+        }
+    },
+    "max-potential-fid": {
+        "id": "max-potential-fid",
+        "title": "Max Potential First Input Delay",
+        "description": "The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).",
+        "score": 0,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 1325.9999999999982,
+        "numericUnit": "millisecond",
+        "displayValue": "1,330\u00a0ms"
+    },
+    "cumulative-layout-shift": {
+        "id": "cumulative-layout-shift",
+        "title": "Cumulative Layout Shift",
+        "description": "Cumulative Layout Shift measures the movement of visible elements within the viewport. [Learn more about the Cumulative Layout Shift metric](https://web.dev/articles/cls).",
+        "score": 0.9,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 0.09823200843423484,
+        "numericUnit": "unitless",
+        "displayValue": "0.098",
+        "scoringOptions": {
+            "p10": 0.1,
+            "median": 0.25
+        },
+        "details": {
+            "type": "debugdata",
+            "items": [
+                {
+                    "cumulativeLayoutShiftMainFrame": 0.09823200843423484,
+                    "newEngineResult": {
+                        "cumulativeLayoutShift": 0.09823200843423484,
+                        "cumulativeLayoutShiftMainFrame": 0.09823200843423484
+                    },
+                    "newEngineResultDiffered": false
+                }
+            ]
+        }
+    },
+    "errors-in-console": {
+        "id": "errors-in-console",
+        "title": "Browser errors were logged to the console",
+        "description": "Errors logged to the console indicate unresolved problems. They can come from network request failures and other browser concerns. [Learn more about this errors in console diagnostic audit](https://developer.chrome.com/docs/lighthouse/best-practices/errors-in-console/)",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "sourceLocation",
+                    "valueType": "source-location",
+                    "label": "Source"
+                },
+                {
+                    "key": "description",
+                    "valueType": "code",
+                    "label": "Description"
+                }
+            ],
+            "items": [
+                {
+                    "source": "console.error",
+                    "description": "3:45:22 PM [ERROR] Error loading module. Error: Loading CSS chunk 90374 failed.\n(https://assets.twitch.tv/assets/pages.channel.components.channel-shell.components.chat-shell.components.chat-live-9f893d32d2aaa2d6dad8.css)\n    at n.onerror.n.onload (http://localhost:8000/twitch.html:153:103653) [object Object]",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/assets/core-6770001ba32ecc8e7c53.js",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 1686936
+                    }
+                },
+                {
+                    "source": "console.error",
+                    "description": "3:45:23 PM [ERROR] [update-manager] Unable to preload current release TypeError: Failed to fetch\n    at e.<anonymous> (https://assets.twitch.tv/assets/core-6770001ba32ecc8e7c53.js:1:2262116)\n    at https://assets.twitch.tv/assets/vendor-5a3405cf3be13d3fb193.js:1:1599405\n    at Object.next (https://assets.twitch.tv/assets/vendor-5a3405cf3be13d3fb193.js:1:1599510)\n    at https://assets.twitch.tv/assets/vendor-5a3405cf3be13d3fb193.js:1:1598426\n    at new Promise (<anonymous>)\n    at h (https://assets.twitch.tv/assets/vendor-5a3405cf3be13d3fb193.js:1:1598171)\n    at e.getManifest (https://assets.twitch.tv/assets/core-6770001ba32ecc8e7c53.js:1:2261895)\n    at e.<anonymous> (https://assets.twitch.tv/assets/core-6770001ba32ecc8e7c53.js:1:2267435)\n    at https://assets.twitch.tv/assets/vendor-5a3405cf3be13d3fb193.js:1:1599405\n    at Object.next (https://assets.twitch.tv/assets/vendor-5a3405cf3be13d3fb193.js:1:1599510)",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/assets/core-6770001ba32ecc8e7c53.js",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 1686936
+                    }
+                },
+                {
+                    "source": "console.error",
+                    "description": "3:45:23 PM [ERROR] [video-player.egLwFE496mEWzam6] Failed to load player core via npm module. ChunkLoadError\n    at d.f.j (http://localhost:8000/twitch.html:153:107920)\n    at http://localhost:8000/twitch.html:153:1837\n    at Array.reduce (<anonymous>)\n    at d.e (http://localhost:8000/twitch.html:153:1802)\n    at Object.mediaPlayerLoader (https://assets.twitch.tv/assets/core-6770001ba32ecc8e7c53.js:1:2993779)\n    at https://assets.twitch.tv/assets/core-6770001ba32ecc8e7c53.js:1:2994905\n    at https://assets.twitch.tv/assets/vendor-5a3405cf3be13d3fb193.js:1:1599405\n    at Object.next (https://assets.twitch.tv/assets/vendor-5a3405cf3be13d3fb193.js:1:1599510)\n    at https://assets.twitch.tv/assets/vendor-5a3405cf3be13d3fb193.js:1:1598426\n    at new Promise (<anonymous>)",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/assets/core-6770001ba32ecc8e7c53.js",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 1686936
+                    }
+                },
+                {
+                    "source": "console.error",
+                    "description": "3:45:23 PM [ERROR] Error loading module. ChunkLoadError\n    at d.f.j (http://localhost:8000/twitch.html:153:107920)\n    at http://localhost:8000/twitch.html:153:1837\n    at Array.reduce (<anonymous>)\n    at d.e (http://localhost:8000/twitch.html:153:1802)\n    at https://assets.twitch.tv/assets/core-6770001ba32ecc8e7c53.js:1:1279257\n    at https://assets.twitch.tv/assets/core-6770001ba32ecc8e7c53.js:1:998468\n    at j (https://assets.twitch.tv/assets/vendor-5a3405cf3be13d3fb193.js:1:1219274)\n    at bc (https://assets.twitch.tv/assets/vendor-5a3405cf3be13d3fb193.js:1:1124342)\n    at vu (https://assets.twitch.tv/assets/vendor-5a3405cf3be13d3fb193.js:1:1113022)\n    at pu (https://assets.twitch.tv/assets/vendor-5a3405cf3be13d3fb193.js:1:1112950) [object Object]",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/assets/core-6770001ba32ecc8e7c53.js",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 1686936
+                    }
+                },
+                {
+                    "source": "console.error",
+                    "description": "3:45:23 PM [ERROR] Error loading module. ChunkLoadError\n    at d.f.j (http://localhost:8000/twitch.html:153:107920)\n    at http://localhost:8000/twitch.html:153:1837\n    at Array.reduce (<anonymous>)\n    at d.e (http://localhost:8000/twitch.html:153:1802)\n    at https://assets.twitch.tv/assets/core-6770001ba32ecc8e7c53.js:1:1319217\n    at https://assets.twitch.tv/assets/core-6770001ba32ecc8e7c53.js:1:998468\n    at j (https://assets.twitch.tv/assets/vendor-5a3405cf3be13d3fb193.js:1:1219274)\n    at bc (https://assets.twitch.tv/assets/vendor-5a3405cf3be13d3fb193.js:1:1124342)\n    at vu (https://assets.twitch.tv/assets/vendor-5a3405cf3be13d3fb193.js:1:1113022)\n    at pu (https://assets.twitch.tv/assets/vendor-5a3405cf3be13d3fb193.js:1:1112950) [object Object]",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/assets/core-6770001ba32ecc8e7c53.js",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 1686936
+                    }
+                },
+                {
+                    "source": "console.error",
+                    "description": "3:45:23 PM [ERROR] Error loading module. ChunkLoadError\n    at d.f.j (http://localhost:8000/twitch.html:153:107920)\n    at http://localhost:8000/twitch.html:153:1837\n    at Array.reduce (<anonymous>)\n    at d.e (http://localhost:8000/twitch.html:153:1802)\n    at https://assets.twitch.tv/assets/core-6770001ba32ecc8e7c53.js:1:1700529\n    at https://assets.twitch.tv/assets/core-6770001ba32ecc8e7c53.js:1:998468\n    at j (https://assets.twitch.tv/assets/vendor-5a3405cf3be13d3fb193.js:1:1219274)\n    at bc (https://assets.twitch.tv/assets/vendor-5a3405cf3be13d3fb193.js:1:1124342)\n    at vu (https://assets.twitch.tv/assets/vendor-5a3405cf3be13d3fb193.js:1:1113022)\n    at pu (https://assets.twitch.tv/assets/vendor-5a3405cf3be13d3fb193.js:1:1112950) [object Object]",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/assets/core-6770001ba32ecc8e7c53.js",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 1686936
+                    }
+                },
+                {
+                    "source": "console.error",
+                    "description": "3:45:23 PM [ERROR] Error loading module. ChunkLoadError\n    at d.f.j (http://localhost:8000/twitch.html:153:107920)\n    at http://localhost:8000/twitch.html:153:1837\n    at Array.reduce (<anonymous>)\n    at d.e (http://localhost:8000/twitch.html:153:1802)\n    at https://assets.twitch.tv/assets/core-6770001ba32ecc8e7c53.js:1:2098365\n    at https://assets.twitch.tv/assets/core-6770001ba32ecc8e7c53.js:1:998468\n    at j (https://assets.twitch.tv/assets/vendor-5a3405cf3be13d3fb193.js:1:1219274)\n    at bc (https://assets.twitch.tv/assets/vendor-5a3405cf3be13d3fb193.js:1:1124342)\n    at vu (https://assets.twitch.tv/assets/vendor-5a3405cf3be13d3fb193.js:1:1113022)\n    at pu (https://assets.twitch.tv/assets/vendor-5a3405cf3be13d3fb193.js:1:1112950) [object Object]",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/assets/core-6770001ba32ecc8e7c53.js",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 1686936
+                    }
+                },
+                {
+                    "source": "console.error",
+                    "description": "3:45:23 PM [ERROR] Error loading module. Error: Loading CSS chunk 14084 failed.\n(https://assets.twitch.tv/assets/features.verify-email-2505975f2755019b06a9.css)\n    at n.onerror.n.onload (http://localhost:8000/twitch.html:153:103653) [object Object]",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/assets/core-6770001ba32ecc8e7c53.js",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 1686936
+                    }
+                },
+                {
+                    "source": "console.error",
+                    "description": "3:45:23 PM [ERROR] Error loading module. Error: Loading CSS chunk 40895 failed.\n(https://assets.twitch.tv/assets/features.dmca-strike-banner-86f518fca63df0689a07.css)\n    at n.onerror.n.onload (http://localhost:8000/twitch.html:153:103653) [object Object]",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/assets/core-6770001ba32ecc8e7c53.js",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 1686936
+                    }
+                },
+                {
+                    "source": "console.error",
+                    "description": "3:45:23 PM [ERROR] Error loading module. Error: Loading CSS chunk 56213 failed.\n(https://assets.twitch.tv/assets/features.auth.components.account-checkup-manager-0f9d720f9f71af756fc9.css)\n    at n.onerror.n.onload (http://localhost:8000/twitch.html:153:103653) [object Object]",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/assets/core-6770001ba32ecc8e7c53.js",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 1686936
+                    }
+                },
+                {
+                    "source": "console.error",
+                    "description": "3:45:23 PM [ERROR] Unhandled promise rejection. ChunkLoadError\n    at d.f.j (http://localhost:8000/twitch.html:153:107920)\n    at http://localhost:8000/twitch.html:153:1837\n    at Array.reduce (<anonymous>)\n    at d.e (http://localhost:8000/twitch.html:153:1802)\n    at Object.mediaPlayerLoader (https://assets.twitch.tv/assets/core-6770001ba32ecc8e7c53.js:1:2993779)\n    at https://assets.twitch.tv/assets/core-6770001ba32ecc8e7c53.js:1:2994905\n    at https://assets.twitch.tv/assets/vendor-5a3405cf3be13d3fb193.js:1:1599405\n    at Object.next (https://assets.twitch.tv/assets/vendor-5a3405cf3be13d3fb193.js:1:1599510)\n    at https://assets.twitch.tv/assets/vendor-5a3405cf3be13d3fb193.js:1:1598426\n    at new Promise (<anonymous>)",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/assets/core-6770001ba32ecc8e7c53.js",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 1686936
+                    }
+                },
+                {
+                    "source": "console.error",
+                    "description": "3:45:23 PM [ERROR] Unhandled promise rejection. Error: Loading CSS chunk 31813 failed.\n(https://assets.twitch.tv/assets/features.whispers-584ed36c057ab2db12a3.css)\n    at n.onerror.n.onload (http://localhost:8000/twitch.html:153:103653)",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/assets/core-6770001ba32ecc8e7c53.js",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 1686936
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to CSS stylesheet at 'https://assets.twitch.tv/assets/features.auth.components.account-checkup-manager-0f9d720f9f71af756fc9.css' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/twitch.html",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to CSS stylesheet at 'https://assets.twitch.tv/assets/features.dmca-strike-banner-86f518fca63df0689a07.css' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/twitch.html",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to CSS stylesheet at 'https://assets.twitch.tv/assets/features.verify-email-2505975f2755019b06a9.css' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/twitch.html",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to CSS stylesheet at 'https://assets.twitch.tv/assets/features.whispers-584ed36c057ab2db12a3.css' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/twitch.html",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to CSS stylesheet at 'https://assets.twitch.tv/assets/pages.channel.components.channel-shell.components.chat-shell.components.chat-live-9f893d32d2aaa2d6dad8.css' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/twitch.html",
+                        "urlProvider": "network",
+                        "line": 161,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to fetch at 'https://assets.twitch.tv/config/manifest.json?v=1' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/twitch.html",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to font at 'https://assets.twitch.tv/assets/inter-latin-400-normal-10194357ec5e44ae1777.woff' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/twitch.html",
+                        "urlProvider": "network",
+                        "line": 164,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to font at 'https://assets.twitch.tv/assets/inter-latin-400-normal-a05a0d687a088c4efed3.woff2' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/twitch.html",
+                        "urlProvider": "network",
+                        "line": 164,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to font at 'https://assets.twitch.tv/assets/inter-latin-600-normal-5a87f7c487cd10f7fccc.woff' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/twitch.html",
+                        "urlProvider": "network",
+                        "line": 164,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to font at 'https://assets.twitch.tv/assets/inter-latin-600-normal-a05a0d687a088c4efed3.woff2' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/twitch.html",
+                        "urlProvider": "network",
+                        "line": 164,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to font at 'https://assets.twitch.tv/assets/inter-latin-variable-wghtOnly-normal-a05a0d687a088c4efed3.woff2' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/twitch.html",
+                        "urlProvider": "network",
+                        "line": 164,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to font at 'https://assets.twitch.tv/assets/Roobert-Regular-2b0345b049d46f67090f.woff2' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/twitch.html",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to font at 'https://assets.twitch.tv/assets/Roobert-Regular-d8c9f381df585bfa97ad.woff' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/twitch.html",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to font at 'https://assets.twitch.tv/assets/Roobert-SemiBold-217d94292de83f831903.woff' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/twitch.html",
+                        "urlProvider": "network",
+                        "line": 164,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to font at 'https://assets.twitch.tv/assets/Roobert-SemiBold-2c9de19c87721c9bcb39.woff2' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/twitch.html",
+                        "urlProvider": "network",
+                        "line": 164,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to script at 'https://assets.twitch.tv/assets/features.ads.components.dsa-wizard.components.dsa-modal.dsa-modal-manager-82509f22e64092605b2e.js' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/twitch.html",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to script at 'https://assets.twitch.tv/assets/features.auth.components.account-checkup-manager-e28b969c8d9c0b367ba9.js' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/twitch.html",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to script at 'https://assets.twitch.tv/assets/features.dmca-strike-banner-b5f4b9ef5debfb052193.js' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/twitch.html",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to script at 'https://assets.twitch.tv/assets/features.sprig-manager.component-111e682b559adfc67b15.js' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/twitch.html",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to script at 'https://assets.twitch.tv/assets/features.verify-email-19346419026ea6103391.js' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/twitch.html",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to script at 'https://assets.twitch.tv/assets/features.whispers-f13f7281b5c0e9940bf2.js' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/twitch.html",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to script at 'https://assets.twitch.tv/assets/features.whispers.components.whisper-threads-bar-4a8dd5a64d3aa31db497.js' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/twitch.html",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to script at 'https://assets.twitch.tv/assets/pages.channel.components.channel-shell.components.chat-shell.components.chat-live-56020f5910fd5a5e1a47.js' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/twitch.html",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to script at 'https://assets.twitch.tv/assets/pages.channel.components.channel-shell.components.watch-page-track-72afac75dcf3b41f9602.js' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/twitch.html",
+                        "urlProvider": "network",
+                        "line": 164,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to script at 'https://assets.twitch.tv/assets/player-core-base-b8e36b3ad779c782678c.js' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/twitch.html",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to script at 'https://assets.twitch.tv/assets/sentry-65c14f7bd0c32838b9aa.js' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/twitch.html",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to script at 'https://assets.twitch.tv/assets/sentry-65c14f7bd0c32838b9aa.js' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/twitch.html",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to script at 'https://assets.twitch.tv/assets/sentry-65c14f7bd0c32838b9aa.js' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/twitch.html",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to script at 'https://assets.twitch.tv/assets/sentry-65c14f7bd0c32838b9aa.js' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/twitch.html",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to script at 'https://assets.twitch.tv/assets/vendor-libphonenumberjs-c90140522064ad434161.js' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/twitch.html",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "javascript",
+                    "description": "Access to script at 'https://assets.twitch.tv/config/settings.ffe973d9a7cbf13a845a23a2598caf27.js' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/twitch.html",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/config/settings.ffe973d9a7cbf13a845a23a2598caf27.js",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/assets/pages.channel.components.channel-shell.components.chat-shell.components.chat-live-9f893d32d2aaa2d6dad8.css",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/assets/pages.channel.components.channel-shell.components.watch-page-track-72afac75dcf3b41f9602.js",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/assets/inter-latin-variable-wghtOnly-normal-a05a0d687a088c4efed3.woff2",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/assets/Roobert-SemiBold-2c9de19c87721c9bcb39.woff2",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/assets/inter-latin-600-normal-a05a0d687a088c4efed3.woff2",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/assets/inter-latin-400-normal-a05a0d687a088c4efed3.woff2",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/assets/Roobert-SemiBold-217d94292de83f831903.woff",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/assets/inter-latin-600-normal-5a87f7c487cd10f7fccc.woff",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/assets/inter-latin-400-normal-10194357ec5e44ae1777.woff",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/assets/player-core-base-b8e36b3ad779c782678c.js",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/assets/pages.channel.components.channel-shell.components.chat-shell.components.chat-live-56020f5910fd5a5e1a47.js",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/assets/Roobert-Regular-2b0345b049d46f67090f.woff2",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/assets/Roobert-Regular-d8c9f381df585bfa97ad.woff",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/assets/sentry-65c14f7bd0c32838b9aa.js",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/assets/features.dmca-strike-banner-86f518fca63df0689a07.css",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/assets/features.verify-email-2505975f2755019b06a9.css",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/assets/features.auth.components.account-checkup-manager-0f9d720f9f71af756fc9.css",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/assets/features.ads.components.dsa-wizard.components.dsa-modal.dsa-modal-manager-82509f22e64092605b2e.js",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/assets/features.dmca-strike-banner-b5f4b9ef5debfb052193.js",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/assets/features.verify-email-19346419026ea6103391.js",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/assets/vendor-libphonenumberjs-c90140522064ad434161.js",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/assets/features.auth.components.account-checkup-manager-e28b969c8d9c0b367ba9.js",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/assets/features.sprig-manager.component-111e682b559adfc67b15.js",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/assets/features.whispers.components.whisper-threads-bar-4a8dd5a64d3aa31db497.js",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/assets/sentry-65c14f7bd0c32838b9aa.js",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/assets/features.whispers-584ed36c057ab2db12a3.css",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/assets/features.whispers-f13f7281b5c0e9940bf2.js",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/assets/sentry-65c14f7bd0c32838b9aa.js",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/config/manifest.json?v=1",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: net::ERR_FAILED",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/assets/sentry-65c14f7bd0c32838b9aa.js",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                }
+            ]
+        }
+    },
+    "interactive": {
+        "id": "interactive",
+        "title": "Time to Interactive",
+        "description": "Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).",
+        "score": 0.15,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 12176.202500000001,
+        "numericUnit": "millisecond",
+        "displayValue": "12.2\u00a0s"
+    },
+    "deprecations": {
+        "id": "deprecations",
+        "title": "Uses deprecated APIs",
+        "description": "Deprecated APIs will eventually be removed from the browser. [Learn more about deprecated APIs](https://developer.chrome.com/docs/lighthouse/best-practices/deprecations/).",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "displayValue": "1 warning found",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "value",
+                    "valueType": "text",
+                    "label": "Deprecation / Warning"
+                },
+                {
+                    "key": "source",
+                    "valueType": "source-location",
+                    "label": "Source"
+                }
+            ],
+            "items": [
+                {
+                    "value": "UnloadHandler",
+                    "source": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/assets/core-6770001ba32ecc8e7c53.js",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 560931
+                    }
+                }
+            ]
+        }
+    },
+    "third-party-cookies": {
+        "id": "third-party-cookies",
+        "title": "Uses third-party cookies",
+        "description": "Support for third-party cookies will be removed in a future version of Chrome. [Learn more about phasing out third-party cookies](https://developer.chrome.com/en/docs/privacy-sandbox/third-party-cookie-phase-out/).",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "displayValue": "3 cookies found",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "name",
+                    "valueType": "text",
+                    "label": "Name"
+                },
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                }
+            ],
+            "items": [
+                {
+                    "name": "UID",
+                    "url": "https://sb.scorecardresearch.com/b?c1=2&c2=6745306&cs_it=b9&cv=4.0.0%2B2301240627&ns__t=1723578323781&ns_c=UTF-8&c3=1&c5=01&cs_ucfr=*null&c7=http%3A%2F%2Flocalhost%3A8000%2Ftwitch.html&c8=twitch.html%20-%20Twitch&c9="
+                },
+                {
+                    "name": "ad-id",
+                    "url": "https://s.amazon-adsystem.com/iu3?cs=2798eda80bdc696b&cu=&d=twitch.tv&pid=49226e71-48b6-4ccb-bf4c-f82acb404220&s=AUGjNJhRV8P0eE0Uu49ReOGw548VlT8H5DgpZJoiYsJp&ts=1723578323895"
+                },
+                {
+                    "name": "ad-privacy",
+                    "url": "https://s.amazon-adsystem.com/iu3?cs=2798eda80bdc696b&cu=&d=twitch.tv&pid=49226e71-48b6-4ccb-bf4c-f82acb404220&s=AUGjNJhRV8P0eE0Uu49ReOGw548VlT8H5DgpZJoiYsJp&ts=1723578323895&dcc=t"
+                }
+            ]
+        }
+    },
+    "mainthread-work-breakdown": {
+        "id": "mainthread-work-breakdown",
+        "title": "Minimize main-thread work",
+        "description": "Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to minimize main-thread work](https://developer.chrome.com/docs/lighthouse/performance/mainthread-work-breakdown/)",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 6540.103999999791,
+        "numericUnit": "millisecond",
+        "displayValue": "6.5\u00a0s",
+        "metricSavings": {
+            "TBT": 2450
+        },
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "groupLabel",
+                    "valueType": "text",
+                    "label": "Category"
+                },
+                {
+                    "key": "duration",
+                    "valueType": "ms",
+                    "granularity": 1,
+                    "label": "Time Spent"
+                }
+            ],
+            "items": [
+                {
+                    "group": "scriptEvaluation",
+                    "groupLabel": "Script Evaluation",
+                    "duration": 4839.079999999793
+                },
+                {
+                    "group": "other",
+                    "groupLabel": "Other",
+                    "duration": 596.2039999999979
+                },
+                {
+                    "group": "styleLayout",
+                    "groupLabel": "Style & Layout",
+                    "duration": 562.1600000000004
+                },
+                {
+                    "group": "scriptParseCompile",
+                    "groupLabel": "Script Parsing & Compilation",
+                    "duration": 279.95599999999996
+                },
+                {
+                    "group": "garbageCollection",
+                    "groupLabel": "Garbage Collection",
+                    "duration": 180.31600000000017
+                },
+                {
+                    "group": "paintCompositeRender",
+                    "groupLabel": "Rendering",
+                    "duration": 54.751999999999775
+                },
+                {
+                    "group": "parseHTML",
+                    "groupLabel": "Parse HTML & CSS",
+                    "duration": 27.635999999999996
+                }
+            ],
+            "sortedBy": [
+                "duration"
+            ]
+        },
+        "guidanceLevel": 1
+    },
+    "bootup-time": {
+        "id": "bootup-time",
+        "title": "Reduce JavaScript execution time",
+        "description": "Consider reducing the time spent parsing, compiling, and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to reduce Javascript execution time](https://developer.chrome.com/docs/lighthouse/performance/bootup-time/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 5085.635999999893,
+        "numericUnit": "millisecond",
+        "displayValue": "5.1\u00a0s",
+        "metricSavings": {
+            "TBT": 2600
+        },
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "total",
+                    "granularity": 1,
+                    "valueType": "ms",
+                    "label": "Total CPU Time"
+                },
+                {
+                    "key": "scripting",
+                    "granularity": 1,
+                    "valueType": "ms",
+                    "label": "Script Evaluation"
+                },
+                {
+                    "key": "scriptParseCompile",
+                    "granularity": 1,
+                    "valueType": "ms",
+                    "label": "Script Parse"
+                }
+            ],
+            "items": [
+                {
+                    "url": "https://assets.twitch.tv/assets/vendor-5a3405cf3be13d3fb193.js",
+                    "total": 4109.703999999905,
+                    "scripting": 3469.979999999905,
+                    "scriptParseCompile": 87.4
+                },
+                {
+                    "url": "https://assets.twitch.tv/assets/core-6770001ba32ecc8e7c53.js",
+                    "total": 1574.2879999999873,
+                    "scripting": 1232.8319999999876,
+                    "scriptParseCompile": 163.312
+                },
+                {
+                    "url": "Unattributable",
+                    "total": 464.93600000000134,
+                    "scripting": 24.267999999999994,
+                    "scriptParseCompile": 0
+                },
+                {
+                    "url": "http://localhost:8000/twitch.html",
+                    "total": 274.4160000000001,
+                    "scripting": 27.07999999999998,
+                    "scriptParseCompile": 11.547999999999998
+                },
+                {
+                    "url": "https://d2v02itv0y9u9t.cloudfront.net/dist/1.1.7/v6s.js",
+                    "total": 69.516,
+                    "scripting": 54.944,
+                    "scriptParseCompile": 14.272
+                }
+            ],
+            "summary": {
+                "wastedMs": 5085.635999999893
+            },
+            "sortedBy": [
+                "total"
+            ]
+        },
+        "guidanceLevel": 1
+    },
+    "font-display": {
+        "id": "font-display",
+        "title": "Ensure text remains visible during webfont load",
+        "description": "Leverage the `font-display` CSS feature to ensure text is user-visible while webfonts are loading. [Learn more about `font-display`](https://developer.chrome.com/docs/lighthouse/performance/font-display/).",
+        "score": 0.5,
+        "scoreDisplayMode": "metricSavings",
+        "warnings": [],
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "wastedMs",
+                    "valueType": "ms",
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "url": "https://assets.twitch.tv/assets/inter-latin-variable-wghtOnly-normal-a05a0d687a088c4efed3.woff2",
+                    "wastedMs": 230.86800003051758
+                },
+                {
+                    "url": "https://assets.twitch.tv/assets/Roobert-SemiBold-2c9de19c87721c9bcb39.woff2",
+                    "wastedMs": 234.5649999976158
+                },
+                {
+                    "url": "https://assets.twitch.tv/assets/inter-latin-600-normal-a05a0d687a088c4efed3.woff2",
+                    "wastedMs": 49.412999987602234
+                },
+                {
+                    "url": "https://assets.twitch.tv/assets/inter-latin-400-normal-a05a0d687a088c4efed3.woff2",
+                    "wastedMs": 50.56199997663498
+                },
+                {
+                    "url": "https://assets.twitch.tv/assets/Roobert-SemiBold-217d94292de83f831903.woff",
+                    "wastedMs": 47.08799999952316
+                },
+                {
+                    "url": "https://assets.twitch.tv/assets/inter-latin-600-normal-5a87f7c487cd10f7fccc.woff",
+                    "wastedMs": 34.60300004482269
+                },
+                {
+                    "url": "https://assets.twitch.tv/assets/inter-latin-400-normal-10194357ec5e44ae1777.woff",
+                    "wastedMs": 35.82399994134903
+                },
+                {
+                    "url": "https://assets.twitch.tv/assets/Roobert-Regular-2b0345b049d46f67090f.woff2",
+                    "wastedMs": 34.34399998188019
+                },
+                {
+                    "url": "https://assets.twitch.tv/assets/Roobert-Regular-d8c9f381df585bfa97ad.woff",
+                    "wastedMs": 27.66600000858307
+                }
+            ]
+        },
+        "guidanceLevel": 3
+    },
+    "third-party-summary": {
+        "id": "third-party-summary",
+        "title": "Reduce the impact of third-party code",
+        "description": "Third-party code can significantly impact load performance. Limit the number of redundant third-party providers and try to load third-party code after your page has primarily finished loading. [Learn how to minimize third-party impact](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "displayValue": "Third-party code blocked the main thread for 2,790\u00a0ms",
+        "metricSavings": {
+            "TBT": 2800
+        },
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "entity",
+                    "valueType": "text",
+                    "label": "Third-Party",
+                    "subItemsHeading": {
+                        "key": "url",
+                        "valueType": "url"
+                    }
+                },
+                {
+                    "key": "transferSize",
+                    "granularity": 1,
+                    "valueType": "bytes",
+                    "label": "Transfer Size",
+                    "subItemsHeading": {
+                        "key": "transferSize"
+                    }
+                },
+                {
+                    "key": "blockingTime",
+                    "granularity": 1,
+                    "valueType": "ms",
+                    "label": "Main-Thread Blocking Time",
+                    "subItemsHeading": {
+                        "key": "blockingTime"
+                    }
+                }
+            ],
+            "items": [
+                {
+                    "mainThreadTime": 5718.351999999883,
+                    "blockingTime": 2770.928720570233,
+                    "transferSize": 1057573,
+                    "tbtImpact": 2770.928720570233,
+                    "entity": "Twitch",
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "url": "https://assets.twitch.tv/assets/vendor-5a3405cf3be13d3fb193.js",
+                                "mainThreadTime": 4109.703999999896,
+                                "blockingTime": 1494.9287205702333,
+                                "transferSize": 376747,
+                                "tbtImpact": 1494.9287205702333
+                            },
+                            {
+                                "url": "https://assets.twitch.tv/assets/core-6770001ba32ecc8e7c53.js",
+                                "mainThreadTime": 1574.287999999987,
+                                "blockingTime": 1275.9999999999998,
+                                "transferSize": 641100,
+                                "tbtImpact": 1275.9999999999998
+                            },
+                            {
+                                "url": "https://assets.twitch.tv/assets/polyfills-cc5b9bf3b3f7bc813c6c.js",
+                                "mainThreadTime": 22.824000000000005,
+                                "blockingTime": 0,
+                                "transferSize": 17985,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://assets.twitch.tv/assets/core-0afbcdeaff154d87e89d.css",
+                                "mainThreadTime": 4.964,
+                                "blockingTime": 0,
+                                "transferSize": 10868,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://gql.twitch.tv/gql",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 9190,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://vod-secure.twitch.tv/_404/404_processing_320x180.png",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 1358,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://spade.twitch.tv/track",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 325,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://assets.twitch.tv/config/settings.ffe973d9a7cbf13a845a23a2598caf27.js",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://assets.twitch.tv/assets/pages.channel.components.channel-shell.components.watch-page-track-72afac75dcf3b41f9602.js",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://assets.twitch.tv/assets/inter-latin-variable-wghtOnly-normal-a05a0d687a088c4efed3.woff2",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://assets.twitch.tv/assets/Roobert-SemiBold-2c9de19c87721c9bcb39.woff2",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://assets.twitch.tv/assets/player-core-base-b8e36b3ad779c782678c.js",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://assets.twitch.tv/assets/pages.channel.components.channel-shell.components.chat-shell.components.chat-live-9f893d32d2aaa2d6dad8.css",
+                                "mainThreadTime": 3.4440000000000004,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://assets.twitch.tv/assets/pages.channel.components.channel-shell.components.chat-shell.components.chat-live-56020f5910fd5a5e1a47.js",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://assets.twitch.tv/assets/inter-latin-600-normal-a05a0d687a088c4efed3.woff2",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://assets.twitch.tv/assets/inter-latin-400-normal-a05a0d687a088c4efed3.woff2",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://assets.twitch.tv/assets/Roobert-SemiBold-217d94292de83f831903.woff",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://assets.twitch.tv/assets/inter-latin-600-normal-5a87f7c487cd10f7fccc.woff",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://assets.twitch.tv/assets/inter-latin-400-normal-10194357ec5e44ae1777.woff",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://assets.twitch.tv/assets/sentry-65c14f7bd0c32838b9aa.js",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://assets.twitch.tv/assets/Roobert-Regular-2b0345b049d46f67090f.woff2",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://assets.twitch.tv/assets/Roobert-Regular-d8c9f381df585bfa97ad.woff",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://assets.twitch.tv/assets/features.ads.components.dsa-wizard.components.dsa-modal.dsa-modal-manager-82509f22e64092605b2e.js",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://assets.twitch.tv/assets/features.dmca-strike-banner-86f518fca63df0689a07.css",
+                                "mainThreadTime": 0.8720000000000001,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://assets.twitch.tv/assets/features.dmca-strike-banner-b5f4b9ef5debfb052193.js",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://assets.twitch.tv/assets/features.verify-email-2505975f2755019b06a9.css",
+                                "mainThreadTime": 0.536,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://assets.twitch.tv/assets/features.verify-email-19346419026ea6103391.js",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://assets.twitch.tv/assets/vendor-libphonenumberjs-c90140522064ad434161.js",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://assets.twitch.tv/assets/features.auth.components.account-checkup-manager-0f9d720f9f71af756fc9.css",
+                                "mainThreadTime": 0.528,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://assets.twitch.tv/assets/features.auth.components.account-checkup-manager-e28b969c8d9c0b367ba9.js",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://assets.twitch.tv/assets/features.sprig-manager.component-111e682b559adfc67b15.js",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://assets.twitch.tv/assets/features.whispers.components.whisper-threads-bar-4a8dd5a64d3aa31db497.js",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://assets.twitch.tv/config/manifest.json?v=1",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://assets.twitch.tv/assets/features.whispers-584ed36c057ab2db12a3.css",
+                                "mainThreadTime": 1.1920000000000002,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://assets.twitch.tv/assets/features.whispers-f13f7281b5c0e9940bf2.js",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 0,
+                                "tbtImpact": 0
+                            }
+                        ]
+                    }
+                },
+                {
+                    "mainThreadTime": 69.51600000000002,
+                    "blockingTime": 19.999999999999982,
+                    "transferSize": 77536,
+                    "tbtImpact": 19.999999999999982,
+                    "entity": "cloudfront.net",
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "url": "https://d2v02itv0y9u9t.cloudfront.net/dist/1.1.7/v6s.js",
+                                "mainThreadTime": 69.51600000000002,
+                                "blockingTime": 19.999999999999982,
+                                "transferSize": 77536,
+                                "tbtImpact": 19.999999999999982
+                            }
+                        ]
+                    }
+                },
+                {
+                    "mainThreadTime": 0,
+                    "blockingTime": 0,
+                    "transferSize": 112169,
+                    "tbtImpact": 0,
+                    "entity": "jtvnw.net",
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/20ec4871-1ae2-4b7c-b41c-502ae949dfa4-profile_image-70x70.png",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 13021,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/862c5bcf-199a-4fe1-bcd5-8cb69f436091-profile_image-70x70.png",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 12459,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/7ed5e0c6-0191-4eef-8328-4af6e4ea5318-profile_image-70x70.png",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 11678,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/512dc676-4690-4ead-a856-6046f37d0a3c-profile_image-70x70.png",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 10727,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/65cfe27c-2319-4261-86fe-4a9ff1c596dd-profile_image-70x70.png",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 10445,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/4230d38d-f736-4d56-8d36-7c57647fd2f1-profile_image-70x70.png",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 10237,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/a79331d8-c55a-4130-8d57-efdc72b7fbee-profile_image-70x70.png",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 9772,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/63dfaf7d-369a-431e-bc13-15d9cc969795-profile_image-70x70.png",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 9394,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/d4621c69-b60b-4f5d-baf0-4d9a542b7f76-profile_image-70x70.png",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 5871,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/ee443c95-ea61-48df-9424-3f4653a34c4b-profile_image-70x70.png",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 5489,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/5c7f1534-4bca-41b8-ac5c-f482aad4528b-profile_image-70x70.png",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 5475,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/99b68685-3eb9-4ee2-81a9-410745bcde3e-profile_image-70x70.png",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 4161,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/0347a9aa-e396-49a5-b0f1-31261704bab8-profile_image-70x70.jpeg",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 3440,
+                                "tbtImpact": 0
+                            }
+                        ]
+                    }
+                },
+                {
+                    "mainThreadTime": 3.3680000000000003,
+                    "blockingTime": 0,
+                    "transferSize": 3335,
+                    "tbtImpact": 0,
+                    "entity": "Scorecard Research",
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "url": "https://sb.scorecardresearch.com/beacon.js",
+                                "mainThreadTime": 3.3680000000000003,
+                                "blockingTime": 0,
+                                "transferSize": 2534,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://sb.scorecardresearch.com/b?c1=2&c2=6745306&cs_it=b9&cv=4.0.0%2B2301240627&ns__t=1723578323781&ns_c=UTF-8&c3=1&c5=01&cs_ucfr=*null&c7=http%3A%2F%2Flocalhost%3A8000%2Ftwitch.html&c8=twitch.html%20-%20Twitch&c9=",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 576,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://sb.scorecardresearch.com/b2?c1=2&c2=6745306&cs_it=b9&cv=4.0.0%2B2301240627&ns__t=1723578323781&ns_c=UTF-8&c3=1&c5=01&cs_ucfr=*null&c7=http%3A%2F%2Flocalhost%3A8000%2Ftwitch.html&c8=twitch.html%20-%20Twitch&c9=",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 225,
+                                "tbtImpact": 0
+                            }
+                        ]
+                    }
+                },
+                {
+                    "mainThreadTime": 1.012,
+                    "blockingTime": 0,
+                    "transferSize": 1744,
+                    "tbtImpact": 0,
+                    "entity": "Amazon Ads",
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "url": "https://s.amazon-adsystem.com/iu3?cs=2798eda80bdc696b&cu=&d=twitch.tv&pid=49226e71-48b6-4ccb-bf4c-f82acb404220&s=AUGjNJhRV8P0eE0Uu49ReOGw548VlT8H5DgpZJoiYsJp&ts=1723578323895&dcc=t",
+                                "mainThreadTime": 1.012,
+                                "blockingTime": 0,
+                                "transferSize": 896,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://s.amazon-adsystem.com/iu3?cs=2798eda80bdc696b&cu=&d=twitch.tv&pid=49226e71-48b6-4ccb-bf4c-f82acb404220&s=AUGjNJhRV8P0eE0Uu49ReOGw548VlT8H5DgpZJoiYsJp&ts=1723578323895",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 848,
+                                "tbtImpact": 0
+                            }
+                        ]
+                    }
+                }
+            ],
+            "summary": {
+                "wastedBytes": 1252357,
+                "wastedMs": 2790.928720570233
+            },
+            "isEntityGrouped": true
+        },
+        "guidanceLevel": 1
+    },
+    "largest-contentful-paint-element": {
+        "id": "largest-contentful-paint-element",
+        "title": "Largest Contentful Paint element",
+        "description": "This is the largest contentful element painted within the viewport. [Learn more about the Largest Contentful Paint element](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "displayValue": "9,860\u00a0ms",
+        "metricSavings": {
+            "LCP": 7350
+        },
+        "details": {
+            "type": "list",
+            "items": [
+                {
+                    "type": "table",
+                    "headings": [
+                        {
+                            "key": "node",
+                            "valueType": "node",
+                            "label": "Element"
+                        }
+                    ],
+                    "items": [
+                        {
+                            "node": {
+                                "type": "node",
+                                "lhId": "page-0-DIV",
+                                "path": "0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,DIV",
+                                "selector": "div.Layout-sc-1xcs6mc-0 > div > div.undefined-child > div.channel-root__player-background",
+                                "boundingRect": {
+                                    "top": 0,
+                                    "bottom": 0,
+                                    "left": 0,
+                                    "right": 0,
+                                    "width": 0,
+                                    "height": 0
+                                },
+                                "snippet": "<div class=\"channel-root__player-background\" style=\"background-image: url(&quot;https://vod-secure.twitch.tv/_404/404_processing_32\u2026&quot;);\">",
+                                "nodeLabel": "div.Layout-sc-1xcs6mc-0 > div > div.undefined-child > div.channel-root__player-background"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "table",
+                    "headings": [
+                        {
+                            "key": "phase",
+                            "valueType": "text",
+                            "label": "Phase"
+                        },
+                        {
+                            "key": "percent",
+                            "valueType": "text",
+                            "label": "% of LCP"
+                        },
+                        {
+                            "key": "timing",
+                            "valueType": "ms",
+                            "label": "Timing"
+                        }
+                    ],
+                    "items": [
+                        {
+                            "phase": "TTFB",
+                            "timing": 450.838,
+                            "percent": "5%"
+                        },
+                        {
+                            "phase": "Load Delay",
+                            "timing": 7674.807927808478,
+                            "percent": "78%"
+                        },
+                        {
+                            "phase": "Load Time",
+                            "timing": 296.2459235830347,
+                            "percent": "3%"
+                        },
+                        {
+                            "phase": "Render Delay",
+                            "timing": 1436.279148608488,
+                            "percent": "15%"
+                        }
+                    ]
+                }
+            ]
+        },
+        "guidanceLevel": 1
+    },
+    "unsized-images": {
+        "id": "unsized-images",
+        "title": "Image elements do not have explicit `width` and `height`",
+        "description": "Set an explicit width and height on image elements to reduce layout shifts and improve CLS. [Learn how to set image dimensions](https://web.dev/articles/optimize-cls#images_without_dimensions)",
+        "score": 0.5,
+        "scoreDisplayMode": "metricSavings",
+        "metricSavings": {
+            "CLS": 0
+        },
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "node",
+                    "valueType": "node",
+                    "label": ""
+                },
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                }
+            ],
+            "items": [
+                {
+                    "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/512dc676-4690-4ead-a856-6046f37d0a3c-profile_image-70x70.png",
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-14-IMG",
+                        "path": "1,HTML,1,BODY,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,DIV,0,DIV,2,DIV,0,DIV,0,DIV,0,DIV,0,NAV,0,DIV,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,DIV,0,A,0,DIV,0,DIV,0,IMG",
+                        "selector": "a.ScCoreLink-sc-16kq0mq-0 > div.Layout-sc-1xcs6mc-0 > div.ScAvatar-sc-144b42z-0 > img.InjectLayout-sc-1i43xsx-0",
+                        "boundingRect": {
+                            "top": 95,
+                            "bottom": 125,
+                            "left": 13,
+                            "right": 43,
+                            "width": 30,
+                            "height": 30
+                        },
+                        "snippet": "<img class=\"InjectLayout-sc-1i43xsx-0 cXFDOs tw-image tw-image-avatar\" alt=\"BASETRADETV\" src=\"https://static-cdn.jtvnw.net/jtv_user_pictures/512dc676-4690-4ead-a856-604\u2026\">",
+                        "nodeLabel": "BASETRADETV"
+                    }
+                },
+                {
+                    "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/ee443c95-ea61-48df-9424-3f4653a34c4b-profile_image-70x70.png",
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-18-IMG",
+                        "path": "1,HTML,1,BODY,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,DIV,0,DIV,2,DIV,0,DIV,0,DIV,0,DIV,0,NAV,0,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,0,DIV,0,A,0,DIV,0,DIV,0,IMG",
+                        "selector": "a.ScCoreLink-sc-16kq0mq-0 > div.Layout-sc-1xcs6mc-0 > div.ScAvatar-sc-144b42z-0 > img.InjectLayout-sc-1i43xsx-0",
+                        "boundingRect": {
+                            "top": 135,
+                            "bottom": 165,
+                            "left": 13,
+                            "right": 43,
+                            "width": 30,
+                            "height": 30
+                        },
+                        "snippet": "<img class=\"InjectLayout-sc-1i43xsx-0 cXFDOs tw-image tw-image-avatar\" alt=\"Oilrats\" src=\"https://static-cdn.jtvnw.net/jtv_user_pictures/ee443c95-ea61-48df-9424-3f4\u2026\">",
+                        "nodeLabel": "Oilrats"
+                    }
+                },
+                {
+                    "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/a79331d8-c55a-4130-8d57-efdc72b7fbee-profile_image-70x70.png",
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-19-IMG",
+                        "path": "1,HTML,1,BODY,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,DIV,0,DIV,2,DIV,0,DIV,0,DIV,0,DIV,0,NAV,0,DIV,0,DIV,0,DIV,0,DIV,1,DIV,2,DIV,0,DIV,0,DIV,0,A,0,DIV,0,DIV,0,IMG",
+                        "selector": "a.ScCoreLink-sc-16kq0mq-0 > div.Layout-sc-1xcs6mc-0 > div.ScAvatar-sc-144b42z-0 > img.InjectLayout-sc-1i43xsx-0",
+                        "boundingRect": {
+                            "top": 175,
+                            "bottom": 205,
+                            "left": 13,
+                            "right": 43,
+                            "width": 30,
+                            "height": 30
+                        },
+                        "snippet": "<img class=\"InjectLayout-sc-1i43xsx-0 cXFDOs tw-image tw-image-avatar\" alt=\"TORE1005\" src=\"https://static-cdn.jtvnw.net/jtv_user_pictures/a79331d8-c55a-4130-8d57-efd\u2026\">",
+                        "nodeLabel": "TORE1005"
+                    }
+                },
+                {
+                    "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/5c7f1534-4bca-41b8-ac5c-f482aad4528b-profile_image-70x70.png",
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-20-IMG",
+                        "path": "1,HTML,1,BODY,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,DIV,0,DIV,2,DIV,0,DIV,0,DIV,0,DIV,0,NAV,0,DIV,0,DIV,0,DIV,0,DIV,1,DIV,3,DIV,0,DIV,0,DIV,0,A,0,DIV,0,DIV,0,IMG",
+                        "selector": "a.ScCoreLink-sc-16kq0mq-0 > div.Layout-sc-1xcs6mc-0 > div.ScAvatar-sc-144b42z-0 > img.InjectLayout-sc-1i43xsx-0",
+                        "boundingRect": {
+                            "top": 215,
+                            "bottom": 245,
+                            "left": 13,
+                            "right": 43,
+                            "width": 30,
+                            "height": 30
+                        },
+                        "snippet": "<img class=\"InjectLayout-sc-1i43xsx-0 cXFDOs tw-image tw-image-avatar\" alt=\"SnuffyFluffy\" src=\"https://static-cdn.jtvnw.net/jtv_user_pictures/5c7f1534-4bca-41b8-ac5c-f48\u2026\">",
+                        "nodeLabel": "SnuffyFluffy"
+                    }
+                },
+                {
+                    "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/d4621c69-b60b-4f5d-baf0-4d9a542b7f76-profile_image-70x70.png",
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-21-IMG",
+                        "path": "1,HTML,1,BODY,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,DIV,0,DIV,2,DIV,0,DIV,0,DIV,0,DIV,0,NAV,0,DIV,0,DIV,0,DIV,0,DIV,1,DIV,4,DIV,0,DIV,0,DIV,0,A,0,DIV,0,DIV,0,IMG",
+                        "selector": "a.ScCoreLink-sc-16kq0mq-0 > div.Layout-sc-1xcs6mc-0 > div.ScAvatar-sc-144b42z-0 > img.InjectLayout-sc-1i43xsx-0",
+                        "boundingRect": {
+                            "top": 255,
+                            "bottom": 285,
+                            "left": 13,
+                            "right": 43,
+                            "width": 30,
+                            "height": 30
+                        },
+                        "snippet": "<img class=\"InjectLayout-sc-1i43xsx-0 cXFDOs tw-image tw-image-avatar\" alt=\"YAKOV\" src=\"https://static-cdn.jtvnw.net/jtv_user_pictures/d4621c69-b60b-4f5d-baf0-4d9\u2026\">",
+                        "nodeLabel": "YAKOV"
+                    }
+                },
+                {
+                    "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/0347a9aa-e396-49a5-b0f1-31261704bab8-profile_image-70x70.jpeg",
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-22-IMG",
+                        "path": "1,HTML,1,BODY,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,DIV,0,DIV,2,DIV,0,DIV,0,DIV,0,DIV,0,NAV,0,DIV,0,DIV,0,DIV,0,DIV,1,DIV,5,DIV,0,DIV,0,DIV,0,A,0,DIV,0,DIV,0,IMG",
+                        "selector": "a.ScCoreLink-sc-16kq0mq-0 > div.Layout-sc-1xcs6mc-0 > div.ScAvatar-sc-144b42z-0 > img.InjectLayout-sc-1i43xsx-0",
+                        "boundingRect": {
+                            "top": 295,
+                            "bottom": 325,
+                            "left": 13,
+                            "right": 43,
+                            "width": 30,
+                            "height": 30
+                        },
+                        "snippet": "<img class=\"InjectLayout-sc-1i43xsx-0 cXFDOs tw-image tw-image-avatar\" alt=\"HasanAbi\" src=\"https://static-cdn.jtvnw.net/jtv_user_pictures/0347a9aa-e396-49a5-b0f1-312\u2026\">",
+                        "nodeLabel": "HasanAbi"
+                    }
+                },
+                {
+                    "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/20ec4871-1ae2-4b7c-b41c-502ae949dfa4-profile_image-70x70.png",
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-23-IMG",
+                        "path": "1,HTML,1,BODY,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,DIV,0,DIV,2,DIV,0,DIV,0,DIV,0,DIV,0,NAV,0,DIV,0,DIV,0,DIV,0,DIV,1,DIV,6,DIV,0,DIV,0,DIV,0,A,0,DIV,0,DIV,0,IMG",
+                        "selector": "a.ScCoreLink-sc-16kq0mq-0 > div.Layout-sc-1xcs6mc-0 > div.ScAvatar-sc-144b42z-0 > img.InjectLayout-sc-1i43xsx-0",
+                        "boundingRect": {
+                            "top": 335,
+                            "bottom": 365,
+                            "left": 13,
+                            "right": 43,
+                            "width": 30,
+                            "height": 30
+                        },
+                        "snippet": "<img class=\"InjectLayout-sc-1i43xsx-0 cXFDOs tw-image tw-image-avatar\" alt=\"Valair\" src=\"https://static-cdn.jtvnw.net/jtv_user_pictures/20ec4871-1ae2-4b7c-b41c-502\u2026\">",
+                        "nodeLabel": "Valair"
+                    }
+                },
+                {
+                    "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/65cfe27c-2319-4261-86fe-4a9ff1c596dd-profile_image-70x70.png",
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-24-IMG",
+                        "path": "1,HTML,1,BODY,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,DIV,0,DIV,2,DIV,0,DIV,0,DIV,0,DIV,0,NAV,0,DIV,0,DIV,0,DIV,0,DIV,1,DIV,7,DIV,0,DIV,0,DIV,0,A,0,DIV,0,DIV,0,IMG",
+                        "selector": "a.ScCoreLink-sc-16kq0mq-0 > div.Layout-sc-1xcs6mc-0 > div.ScAvatar-sc-144b42z-0 > img.InjectLayout-sc-1i43xsx-0",
+                        "boundingRect": {
+                            "top": 375,
+                            "bottom": 405,
+                            "left": 13,
+                            "right": 43,
+                            "width": 30,
+                            "height": 30
+                        },
+                        "snippet": "<img class=\"InjectLayout-sc-1i43xsx-0 cXFDOs tw-image tw-image-avatar\" alt=\"ZChum\" src=\"https://static-cdn.jtvnw.net/jtv_user_pictures/65cfe27c-2319-4261-86fe-4a9\u2026\">",
+                        "nodeLabel": "ZChum"
+                    }
+                },
+                {
+                    "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/7ed5e0c6-0191-4eef-8328-4af6e4ea5318-profile_image-70x70.png",
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-25-IMG",
+                        "path": "1,HTML,1,BODY,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,DIV,0,DIV,2,DIV,0,DIV,0,DIV,0,DIV,0,NAV,0,DIV,0,DIV,0,DIV,0,DIV,1,DIV,8,DIV,0,DIV,0,DIV,0,A,0,DIV,0,DIV,0,IMG",
+                        "selector": "a.ScCoreLink-sc-16kq0mq-0 > div.Layout-sc-1xcs6mc-0 > div.ScAvatar-sc-144b42z-0 > img.InjectLayout-sc-1i43xsx-0",
+                        "boundingRect": {
+                            "top": 415,
+                            "bottom": 445,
+                            "left": 13,
+                            "right": 43,
+                            "width": 30,
+                            "height": 30
+                        },
+                        "snippet": "<img class=\"InjectLayout-sc-1i43xsx-0 cXFDOs tw-image tw-image-avatar\" alt=\"shroud\" src=\"https://static-cdn.jtvnw.net/jtv_user_pictures/7ed5e0c6-0191-4eef-8328-4af\u2026\">",
+                        "nodeLabel": "shroud"
+                    }
+                },
+                {
+                    "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/99b68685-3eb9-4ee2-81a9-410745bcde3e-profile_image-70x70.png",
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-26-IMG",
+                        "path": "1,HTML,1,BODY,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,DIV,0,DIV,2,DIV,0,DIV,0,DIV,0,DIV,0,NAV,0,DIV,0,DIV,0,DIV,0,DIV,1,DIV,9,DIV,0,DIV,0,DIV,0,A,0,DIV,0,DIV,0,IMG",
+                        "selector": "a.ScCoreLink-sc-16kq0mq-0 > div.Layout-sc-1xcs6mc-0 > div.ScAvatar-sc-144b42z-0 > img.InjectLayout-sc-1i43xsx-0",
+                        "boundingRect": {
+                            "top": 455,
+                            "bottom": 485,
+                            "left": 13,
+                            "right": 43,
+                            "width": 30,
+                            "height": 30
+                        },
+                        "snippet": "<img class=\"InjectLayout-sc-1i43xsx-0 cXFDOs tw-image tw-image-avatar\" alt=\"ThroatTwitch\" src=\"https://static-cdn.jtvnw.net/jtv_user_pictures/99b68685-3eb9-4ee2-81a9-410\u2026\">",
+                        "nodeLabel": "ThroatTwitch"
+                    }
+                }
+            ]
+        },
+        "guidanceLevel": 4
+    },
+    "uses-long-cache-ttl": {
+        "id": "uses-long-cache-ttl",
+        "title": "Serve static assets with an efficient cache policy",
+        "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more about efficient cache policies](https://developer.chrome.com/docs/lighthouse/performance/uses-long-cache-ttl/).",
+        "score": 0.5,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 156182.52000000002,
+        "numericUnit": "byte",
+        "displayValue": "16 resources found",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "cacheLifetimeMs",
+                    "valueType": "ms",
+                    "label": "Cache TTL",
+                    "displayUnit": "duration"
+                },
+                {
+                    "key": "totalBytes",
+                    "valueType": "bytes",
+                    "label": "Transfer Size",
+                    "displayUnit": "kb",
+                    "granularity": 1
+                }
+            ],
+            "items": [
+                {
+                    "url": "https://d2v02itv0y9u9t.cloudfront.net/dist/1.1.7/v6s.js",
+                    "cacheLifetimeMs": 0,
+                    "cacheHitProbability": 0,
+                    "totalBytes": 77536,
+                    "wastedBytes": 77536
+                },
+                {
+                    "url": "https://vod-secure.twitch.tv/_404/404_processing_320x180.png",
+                    "cacheLifetimeMs": 0,
+                    "cacheHitProbability": 0,
+                    "totalBytes": 1358,
+                    "wastedBytes": 1358
+                },
+                {
+                    "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/20ec4871-1ae2-4b7c-b41c-502ae949dfa4-profile_image-70x70.png",
+                    "debugData": {
+                        "type": "debugdata",
+                        "max-age": 14400
+                    },
+                    "cacheLifetimeMs": 14400000,
+                    "cacheHitProbability": 0.32,
+                    "totalBytes": 13021,
+                    "wastedBytes": 8854.279999999999
+                },
+                {
+                    "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/862c5bcf-199a-4fe1-bcd5-8cb69f436091-profile_image-70x70.png",
+                    "debugData": {
+                        "type": "debugdata",
+                        "max-age": 14400
+                    },
+                    "cacheLifetimeMs": 14400000,
+                    "cacheHitProbability": 0.32,
+                    "totalBytes": 12459,
+                    "wastedBytes": 8472.119999999999
+                },
+                {
+                    "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/7ed5e0c6-0191-4eef-8328-4af6e4ea5318-profile_image-70x70.png",
+                    "debugData": {
+                        "type": "debugdata",
+                        "max-age": 14400
+                    },
+                    "cacheLifetimeMs": 14400000,
+                    "cacheHitProbability": 0.32,
+                    "totalBytes": 11678,
+                    "wastedBytes": 7941.039999999999
+                },
+                {
+                    "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/512dc676-4690-4ead-a856-6046f37d0a3c-profile_image-70x70.png",
+                    "debugData": {
+                        "type": "debugdata",
+                        "max-age": 14400
+                    },
+                    "cacheLifetimeMs": 14400000,
+                    "cacheHitProbability": 0.32,
+                    "totalBytes": 10727,
+                    "wastedBytes": 7294.36
+                },
+                {
+                    "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/65cfe27c-2319-4261-86fe-4a9ff1c596dd-profile_image-70x70.png",
+                    "debugData": {
+                        "type": "debugdata",
+                        "max-age": 14400
+                    },
+                    "cacheLifetimeMs": 14400000,
+                    "cacheHitProbability": 0.32,
+                    "totalBytes": 10445,
+                    "wastedBytes": 7102.599999999999
+                },
+                {
+                    "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/4230d38d-f736-4d56-8d36-7c57647fd2f1-profile_image-70x70.png",
+                    "debugData": {
+                        "type": "debugdata",
+                        "max-age": 14400
+                    },
+                    "cacheLifetimeMs": 14400000,
+                    "cacheHitProbability": 0.32,
+                    "totalBytes": 10237,
+                    "wastedBytes": 6961.159999999999
+                },
+                {
+                    "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/a79331d8-c55a-4130-8d57-efdc72b7fbee-profile_image-70x70.png",
+                    "debugData": {
+                        "type": "debugdata",
+                        "max-age": 14400
+                    },
+                    "cacheLifetimeMs": 14400000,
+                    "cacheHitProbability": 0.32,
+                    "totalBytes": 9772,
+                    "wastedBytes": 6644.959999999999
+                },
+                {
+                    "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/63dfaf7d-369a-431e-bc13-15d9cc969795-profile_image-70x70.png",
+                    "debugData": {
+                        "type": "debugdata",
+                        "max-age": 14400
+                    },
+                    "cacheLifetimeMs": 14400000,
+                    "cacheHitProbability": 0.32,
+                    "totalBytes": 9394,
+                    "wastedBytes": 6387.919999999999
+                },
+                {
+                    "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/d4621c69-b60b-4f5d-baf0-4d9a542b7f76-profile_image-70x70.png",
+                    "debugData": {
+                        "type": "debugdata",
+                        "max-age": 14400
+                    },
+                    "cacheLifetimeMs": 14400000,
+                    "cacheHitProbability": 0.32,
+                    "totalBytes": 5871,
+                    "wastedBytes": 3992.2799999999997
+                },
+                {
+                    "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/ee443c95-ea61-48df-9424-3f4653a34c4b-profile_image-70x70.png",
+                    "debugData": {
+                        "type": "debugdata",
+                        "max-age": 14400
+                    },
+                    "cacheLifetimeMs": 14400000,
+                    "cacheHitProbability": 0.32,
+                    "totalBytes": 5489,
+                    "wastedBytes": 3732.5199999999995
+                },
+                {
+                    "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/5c7f1534-4bca-41b8-ac5c-f482aad4528b-profile_image-70x70.png",
+                    "debugData": {
+                        "type": "debugdata",
+                        "max-age": 14400
+                    },
+                    "cacheLifetimeMs": 14400000,
+                    "cacheHitProbability": 0.32,
+                    "totalBytes": 5475,
+                    "wastedBytes": 3722.9999999999995
+                },
+                {
+                    "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/99b68685-3eb9-4ee2-81a9-410745bcde3e-profile_image-70x70.png",
+                    "debugData": {
+                        "type": "debugdata",
+                        "max-age": 14400
+                    },
+                    "cacheLifetimeMs": 14400000,
+                    "cacheHitProbability": 0.32,
+                    "totalBytes": 4161,
+                    "wastedBytes": 2829.4799999999996
+                },
+                {
+                    "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/0347a9aa-e396-49a5-b0f1-31261704bab8-profile_image-70x70.jpeg",
+                    "debugData": {
+                        "type": "debugdata",
+                        "max-age": 14400
+                    },
+                    "cacheLifetimeMs": 14400000,
+                    "cacheHitProbability": 0.32,
+                    "totalBytes": 3440,
+                    "wastedBytes": 2339.2
+                },
+                {
+                    "url": "https://sb.scorecardresearch.com/beacon.js",
+                    "debugData": {
+                        "type": "debugdata",
+                        "max-age": 86400
+                    },
+                    "cacheLifetimeMs": 86400000,
+                    "cacheHitProbability": 0.6,
+                    "totalBytes": 2534,
+                    "wastedBytes": 1013.6
+                }
+            ],
+            "summary": {
+                "wastedBytes": 156182.52000000002
+            },
+            "sortedBy": [
+                "totalBytes"
+            ],
+            "skipSumming": [
+                "cacheLifetimeMs"
+            ]
+        },
+        "guidanceLevel": 3
+    },
+    "unused-javascript": {
+        "id": "unused-javascript",
+        "title": "Reduce unused JavaScript",
+        "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 2310,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 505\u00a0KiB",
+        "metricSavings": {
+            "FCP": 0,
+            "LCP": 2300
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "subItemsHeading": {
+                        "key": "source",
+                        "valueType": "code"
+                    },
+                    "label": "URL"
+                },
+                {
+                    "key": "totalBytes",
+                    "valueType": "bytes",
+                    "subItemsHeading": {
+                        "key": "sourceBytes"
+                    },
+                    "label": "Transfer Size"
+                },
+                {
+                    "key": "wastedBytes",
+                    "valueType": "bytes",
+                    "subItemsHeading": {
+                        "key": "sourceWastedBytes"
+                    },
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "url": "https://assets.twitch.tv/assets/core-6770001ba32ecc8e7c53.js",
+                    "totalBytes": 640525,
+                    "wastedBytes": 257975,
+                    "wastedPercent": 40.275510230651854
+                },
+                {
+                    "url": "https://assets.twitch.tv/assets/vendor-5a3405cf3be13d3fb193.js",
+                    "totalBytes": 376199,
+                    "wastedBytes": 204938,
+                    "wastedPercent": 54.475906368032334
+                },
+                {
+                    "url": "https://d2v02itv0y9u9t.cloudfront.net/dist/1.1.7/v6s.js",
+                    "totalBytes": 77176,
+                    "wastedBytes": 53717,
+                    "wastedPercent": 69.60367701282865,
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "source": "\u2026./node_modules/react-dom/cjs/react-dom.production.min.js",
+                                "sourceBytes": 26382,
+                                "sourceWastedBytes": 21048
+                            },
+                            {
+                                "source": "\u2026./src/controllers/PlayerController.ts",
+                                "sourceBytes": 2654,
+                                "sourceWastedBytes": 2462
+                            },
+                            {
+                                "source": "\u2026./src/controllers/VASTTracker.ts",
+                                "sourceBytes": 2606,
+                                "sourceWastedBytes": 2457
+                            },
+                            {
+                                "source": "\u2026./src/RequestBuilder.ts",
+                                "sourceBytes": 2278,
+                                "sourceWastedBytes": 1904
+                            },
+                            {
+                                "source": "\u2026./src/controllers/parser/AdParser.ts",
+                                "sourceBytes": 1779,
+                                "sourceWastedBytes": 1692
+                            }
+                        ]
+                    }
+                }
+            ],
+            "overallSavingsMs": 2310,
+            "overallSavingsBytes": 516630,
+            "sortedBy": [
+                "wastedBytes"
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "metricSavings": {
+                    "FCP": 0,
+                    "LCP": 2310
+                }
+            }
+        },
+        "guidanceLevel": 1
+    },
+    "modern-image-formats": {
+        "id": "modern-image-formats",
+        "title": "Serve images in next-gen formats",
+        "description": "Image formats like WebP and AVIF often provide better compression than PNG or JPEG, which means faster downloads and less data consumption. [Learn more about modern image formats](https://developer.chrome.com/docs/lighthouse/performance/uses-webp-images/).",
+        "score": 0.5,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 0,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 55\u00a0KiB",
+        "warnings": [],
+        "metricSavings": {
+            "FCP": 0,
+            "LCP": 0
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "node",
+                    "valueType": "node",
+                    "label": ""
+                },
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "totalBytes",
+                    "valueType": "bytes",
+                    "label": "Resource Size"
+                },
+                {
+                    "key": "wastedBytes",
+                    "valueType": "bytes",
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-23-IMG",
+                        "path": "1,HTML,1,BODY,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,DIV,0,DIV,2,DIV,0,DIV,0,DIV,0,DIV,0,NAV,0,DIV,0,DIV,0,DIV,0,DIV,1,DIV,6,DIV,0,DIV,0,DIV,0,A,0,DIV,0,DIV,0,IMG",
+                        "selector": "a.ScCoreLink-sc-16kq0mq-0 > div.Layout-sc-1xcs6mc-0 > div.ScAvatar-sc-144b42z-0 > img.InjectLayout-sc-1i43xsx-0",
+                        "boundingRect": {
+                            "top": 335,
+                            "bottom": 365,
+                            "left": 13,
+                            "right": 43,
+                            "width": 30,
+                            "height": 30
+                        },
+                        "snippet": "<img class=\"InjectLayout-sc-1i43xsx-0 cXFDOs tw-image tw-image-avatar\" alt=\"Valair\" src=\"https://static-cdn.jtvnw.net/jtv_user_pictures/20ec4871-1ae2-4b7c-b41c-502\u2026\">",
+                        "nodeLabel": "Valair"
+                    },
+                    "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/20ec4871-1ae2-4b7c-b41c-502ae949dfa4-profile_image-70x70.png",
+                    "fromProtocol": true,
+                    "isCrossOrigin": true,
+                    "totalBytes": 12508,
+                    "wastedBytes": 10872.7,
+                    "wastedWebpBytes": 10346
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-25-IMG",
+                        "path": "1,HTML,1,BODY,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,DIV,0,DIV,2,DIV,0,DIV,0,DIV,0,DIV,0,NAV,0,DIV,0,DIV,0,DIV,0,DIV,1,DIV,8,DIV,0,DIV,0,DIV,0,A,0,DIV,0,DIV,0,IMG",
+                        "selector": "a.ScCoreLink-sc-16kq0mq-0 > div.Layout-sc-1xcs6mc-0 > div.ScAvatar-sc-144b42z-0 > img.InjectLayout-sc-1i43xsx-0",
+                        "boundingRect": {
+                            "top": 415,
+                            "bottom": 445,
+                            "left": 13,
+                            "right": 43,
+                            "width": 30,
+                            "height": 30
+                        },
+                        "snippet": "<img class=\"InjectLayout-sc-1i43xsx-0 cXFDOs tw-image tw-image-avatar\" alt=\"shroud\" src=\"https://static-cdn.jtvnw.net/jtv_user_pictures/7ed5e0c6-0191-4eef-8328-4af\u2026\">",
+                        "nodeLabel": "shroud"
+                    },
+                    "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/7ed5e0c6-0191-4eef-8328-4af6e4ea5318-profile_image-70x70.png",
+                    "fromProtocol": true,
+                    "isCrossOrigin": true,
+                    "totalBytes": 11194,
+                    "wastedBytes": 10005.55,
+                    "wastedWebpBytes": 9716
+                },
+                {
+                    "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/862c5bcf-199a-4fe1-bcd5-8cb69f436091-profile_image-70x70.png",
+                    "fromProtocol": true,
+                    "isCrossOrigin": true,
+                    "totalBytes": 11947,
+                    "wastedBytes": 9921.7,
+                    "wastedWebpBytes": 9205
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-24-IMG",
+                        "path": "1,HTML,1,BODY,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,DIV,0,DIV,2,DIV,0,DIV,0,DIV,0,DIV,0,NAV,0,DIV,0,DIV,0,DIV,0,DIV,1,DIV,7,DIV,0,DIV,0,DIV,0,A,0,DIV,0,DIV,0,IMG",
+                        "selector": "a.ScCoreLink-sc-16kq0mq-0 > div.Layout-sc-1xcs6mc-0 > div.ScAvatar-sc-144b42z-0 > img.InjectLayout-sc-1i43xsx-0",
+                        "boundingRect": {
+                            "top": 375,
+                            "bottom": 405,
+                            "left": 13,
+                            "right": 43,
+                            "width": 30,
+                            "height": 30
+                        },
+                        "snippet": "<img class=\"InjectLayout-sc-1i43xsx-0 cXFDOs tw-image tw-image-avatar\" alt=\"ZChum\" src=\"https://static-cdn.jtvnw.net/jtv_user_pictures/65cfe27c-2319-4261-86fe-4a9\u2026\">",
+                        "nodeLabel": "ZChum"
+                    },
+                    "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/65cfe27c-2319-4261-86fe-4a9ff1c596dd-profile_image-70x70.png",
+                    "fromProtocol": true,
+                    "isCrossOrigin": true,
+                    "totalBytes": 9932,
+                    "wastedBytes": 8445.65,
+                    "wastedWebpBytes": 8038
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-14-IMG",
+                        "path": "1,HTML,1,BODY,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,DIV,0,DIV,2,DIV,0,DIV,0,DIV,0,DIV,0,NAV,0,DIV,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,DIV,0,A,0,DIV,0,DIV,0,IMG",
+                        "selector": "a.ScCoreLink-sc-16kq0mq-0 > div.Layout-sc-1xcs6mc-0 > div.ScAvatar-sc-144b42z-0 > img.InjectLayout-sc-1i43xsx-0",
+                        "boundingRect": {
+                            "top": 95,
+                            "bottom": 125,
+                            "left": 13,
+                            "right": 43,
+                            "width": 30,
+                            "height": 30
+                        },
+                        "snippet": "<img class=\"InjectLayout-sc-1i43xsx-0 cXFDOs tw-image tw-image-avatar\" alt=\"BASETRADETV\" src=\"https://static-cdn.jtvnw.net/jtv_user_pictures/512dc676-4690-4ead-a856-604\u2026\">",
+                        "nodeLabel": "BASETRADETV"
+                    },
+                    "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/512dc676-4690-4ead-a856-6046f37d0a3c-profile_image-70x70.png",
+                    "fromProtocol": true,
+                    "isCrossOrigin": true,
+                    "totalBytes": 10214,
+                    "wastedBytes": 8397.55,
+                    "wastedWebpBytes": 7266
+                },
+                {
+                    "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/4230d38d-f736-4d56-8d36-7c57647fd2f1-profile_image-70x70.png",
+                    "fromProtocol": true,
+                    "isCrossOrigin": true,
+                    "totalBytes": 9717,
+                    "wastedBytes": 8330.7,
+                    "wastedWebpBytes": 8005
+                }
+            ],
+            "overallSavingsMs": 0,
+            "overallSavingsBytes": 55973.84999999999,
+            "sortedBy": [
+                "wastedBytes"
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "metricSavings": {
+                    "FCP": 0,
+                    "LCP": 0
+                }
+            }
+        },
+        "guidanceLevel": 3
+    },
+    "uses-text-compression": {
+        "id": "uses-text-compression",
+        "title": "Enable text compression",
+        "description": "Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more about text compression](https://developer.chrome.com/docs/lighthouse/performance/uses-text-compression/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 450,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 85\u00a0KiB",
+        "metricSavings": {
+            "FCP": 450,
+            "LCP": 450
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "totalBytes",
+                    "valueType": "bytes",
+                    "label": "Transfer Size"
+                },
+                {
+                    "key": "wastedBytes",
+                    "valueType": "bytes",
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "url": "http://localhost:8000/twitch.html",
+                    "totalBytes": 127654,
+                    "wastedBytes": 86746
+                }
+            ],
+            "overallSavingsMs": 450,
+            "overallSavingsBytes": 86746,
+            "sortedBy": [
+                "wastedBytes"
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "metricSavings": {
+                    "FCP": 450,
+                    "LCP": 450
+                }
+            }
+        },
+        "guidanceLevel": 3
+    },
+    "uses-responsive-images": {
+        "id": "uses-responsive-images",
+        "title": "Properly size images",
+        "description": "Serve images that are appropriately-sized to save cellular data and improve load time. [Learn how to size images](https://developer.chrome.com/docs/lighthouse/performance/uses-responsive-images/).",
+        "score": 0.5,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 0,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 19\u00a0KiB",
+        "metricSavings": {
+            "FCP": 0,
+            "LCP": 0
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "node",
+                    "valueType": "node",
+                    "label": ""
+                },
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "totalBytes",
+                    "valueType": "bytes",
+                    "label": "Resource Size"
+                },
+                {
+                    "key": "wastedBytes",
+                    "valueType": "bytes",
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-23-IMG",
+                        "path": "1,HTML,1,BODY,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,DIV,0,DIV,2,DIV,0,DIV,0,DIV,0,DIV,0,NAV,0,DIV,0,DIV,0,DIV,0,DIV,1,DIV,6,DIV,0,DIV,0,DIV,0,A,0,DIV,0,DIV,0,IMG",
+                        "selector": "a.ScCoreLink-sc-16kq0mq-0 > div.Layout-sc-1xcs6mc-0 > div.ScAvatar-sc-144b42z-0 > img.InjectLayout-sc-1i43xsx-0",
+                        "boundingRect": {
+                            "top": 335,
+                            "bottom": 365,
+                            "left": 13,
+                            "right": 43,
+                            "width": 30,
+                            "height": 30
+                        },
+                        "snippet": "<img class=\"InjectLayout-sc-1i43xsx-0 cXFDOs tw-image tw-image-avatar\" alt=\"Valair\" src=\"https://static-cdn.jtvnw.net/jtv_user_pictures/20ec4871-1ae2-4b7c-b41c-502\u2026\">",
+                        "nodeLabel": "Valair"
+                    },
+                    "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/20ec4871-1ae2-4b7c-b41c-502ae949dfa4-profile_image-70x70.png",
+                    "totalBytes": 12508,
+                    "wastedBytes": 5472,
+                    "wastedPercent": 43.75
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-25-IMG",
+                        "path": "1,HTML,1,BODY,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,DIV,0,DIV,2,DIV,0,DIV,0,DIV,0,DIV,0,NAV,0,DIV,0,DIV,0,DIV,0,DIV,1,DIV,8,DIV,0,DIV,0,DIV,0,A,0,DIV,0,DIV,0,IMG",
+                        "selector": "a.ScCoreLink-sc-16kq0mq-0 > div.Layout-sc-1xcs6mc-0 > div.ScAvatar-sc-144b42z-0 > img.InjectLayout-sc-1i43xsx-0",
+                        "boundingRect": {
+                            "top": 415,
+                            "bottom": 445,
+                            "left": 13,
+                            "right": 43,
+                            "width": 30,
+                            "height": 30
+                        },
+                        "snippet": "<img class=\"InjectLayout-sc-1i43xsx-0 cXFDOs tw-image tw-image-avatar\" alt=\"shroud\" src=\"https://static-cdn.jtvnw.net/jtv_user_pictures/7ed5e0c6-0191-4eef-8328-4af\u2026\">",
+                        "nodeLabel": "shroud"
+                    },
+                    "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/7ed5e0c6-0191-4eef-8328-4af6e4ea5318-profile_image-70x70.png",
+                    "totalBytes": 11194,
+                    "wastedBytes": 4897,
+                    "wastedPercent": 43.75
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-14-IMG",
+                        "path": "1,HTML,1,BODY,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,DIV,0,DIV,2,DIV,0,DIV,0,DIV,0,DIV,0,NAV,0,DIV,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,DIV,0,A,0,DIV,0,DIV,0,IMG",
+                        "selector": "a.ScCoreLink-sc-16kq0mq-0 > div.Layout-sc-1xcs6mc-0 > div.ScAvatar-sc-144b42z-0 > img.InjectLayout-sc-1i43xsx-0",
+                        "boundingRect": {
+                            "top": 95,
+                            "bottom": 125,
+                            "left": 13,
+                            "right": 43,
+                            "width": 30,
+                            "height": 30
+                        },
+                        "snippet": "<img class=\"InjectLayout-sc-1i43xsx-0 cXFDOs tw-image tw-image-avatar\" alt=\"BASETRADETV\" src=\"https://static-cdn.jtvnw.net/jtv_user_pictures/512dc676-4690-4ead-a856-604\u2026\">",
+                        "nodeLabel": "BASETRADETV"
+                    },
+                    "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/512dc676-4690-4ead-a856-6046f37d0a3c-profile_image-70x70.png",
+                    "totalBytes": 10214,
+                    "wastedBytes": 4469,
+                    "wastedPercent": 43.75
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-24-IMG",
+                        "path": "1,HTML,1,BODY,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,DIV,0,DIV,2,DIV,0,DIV,0,DIV,0,DIV,0,NAV,0,DIV,0,DIV,0,DIV,0,DIV,1,DIV,7,DIV,0,DIV,0,DIV,0,A,0,DIV,0,DIV,0,IMG",
+                        "selector": "a.ScCoreLink-sc-16kq0mq-0 > div.Layout-sc-1xcs6mc-0 > div.ScAvatar-sc-144b42z-0 > img.InjectLayout-sc-1i43xsx-0",
+                        "boundingRect": {
+                            "top": 375,
+                            "bottom": 405,
+                            "left": 13,
+                            "right": 43,
+                            "width": 30,
+                            "height": 30
+                        },
+                        "snippet": "<img class=\"InjectLayout-sc-1i43xsx-0 cXFDOs tw-image tw-image-avatar\" alt=\"ZChum\" src=\"https://static-cdn.jtvnw.net/jtv_user_pictures/65cfe27c-2319-4261-86fe-4a9\u2026\">",
+                        "nodeLabel": "ZChum"
+                    },
+                    "url": "https://static-cdn.jtvnw.net/jtv_user_pictures/65cfe27c-2319-4261-86fe-4a9ff1c596dd-profile_image-70x70.png",
+                    "totalBytes": 9932,
+                    "wastedBytes": 4345,
+                    "wastedPercent": 43.75
+                }
+            ],
+            "overallSavingsMs": 0,
+            "overallSavingsBytes": 19183,
+            "sortedBy": [
+                "wastedBytes"
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "metricSavings": {
+                    "FCP": 0,
+                    "LCP": 0
+                }
+            }
+        },
+        "guidanceLevel": 2
+    },
+    "legacy-javascript": {
+        "id": "legacy-javascript",
+        "title": "Avoid serving legacy JavaScript to modern browsers",
+        "description": "Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. For your bundled JavaScript, adopt a modern script deployment strategy using module/nomodule feature detection to reduce the amount of code shipped to modern browsers, while retaining support for legacy browsers. [Learn how to use modern JavaScript](https://web.dev/articles/publish-modern-javascript)",
+        "score": 0.5,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 0,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 0\u00a0KiB",
+        "metricSavings": {
+            "FCP": 0,
+            "LCP": 0
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "subItemsHeading": {
+                        "key": "location",
+                        "valueType": "source-location"
+                    },
+                    "label": "URL"
+                },
+                {
+                    "key": null,
+                    "valueType": "code",
+                    "subItemsHeading": {
+                        "key": "signal"
+                    },
+                    "label": ""
+                },
+                {
+                    "key": "wastedBytes",
+                    "valueType": "bytes",
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "url": "https://assets.twitch.tv/assets/vendor-5a3405cf3be13d3fb193.js",
+                    "wastedBytes": 94,
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "signal": "@babel/plugin-transform-classes",
+                                "location": {
+                                    "type": "source-location",
+                                    "url": "https://assets.twitch.tv/assets/vendor-5a3405cf3be13d3fb193.js",
+                                    "urlProvider": "network",
+                                    "line": 0,
+                                    "column": 27585
+                                }
+                            }
+                        ]
+                    },
+                    "totalBytes": 0
+                },
+                {
+                    "url": "https://d2v02itv0y9u9t.cloudfront.net/dist/1.1.7/v6s.js",
+                    "wastedBytes": 57,
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "signal": "@babel/plugin-transform-classes",
+                                "location": {
+                                    "type": "source-location",
+                                    "url": "https://d2v02itv0y9u9t.cloudfront.net/dist/1.1.7/v6s.js",
+                                    "urlProvider": "network",
+                                    "line": 4,
+                                    "column": 38780,
+                                    "original": {
+                                        "file": "webpack:///./node_modules/react-redux/es/components/Provider.js",
+                                        "line": 0,
+                                        "column": 91
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    "totalBytes": 0
+                },
+                {
+                    "url": "https://assets.twitch.tv/assets/polyfills-cc5b9bf3b3f7bc813c6c.js",
+                    "wastedBytes": 55,
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "signal": "@babel/plugin-transform-classes",
+                                "location": {
+                                    "type": "source-location",
+                                    "url": "https://assets.twitch.tv/assets/polyfills-cc5b9bf3b3f7bc813c6c.js",
+                                    "urlProvider": "network",
+                                    "line": 0,
+                                    "column": 49168
+                                }
+                            }
+                        ]
+                    },
+                    "totalBytes": 0
+                }
+            ],
+            "overallSavingsMs": 0,
+            "overallSavingsBytes": 206,
+            "sortedBy": [
+                "wastedBytes"
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "metricSavings": {
+                    "FCP": 0,
+                    "LCP": 0
+                }
+            }
+        },
+        "guidanceLevel": 2
+    },
+    "inspector-issues": {
+        "id": "inspector-issues",
+        "title": "Issues were logged in the `Issues` panel in Chrome Devtools",
+        "description": "Issues logged to the `Issues` panel in Chrome Devtools indicate unresolved problems. They can come from network request failures, insufficient security controls, and other browser concerns. Open up the Issues panel in Chrome DevTools for more details on each issue.",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "issueType",
+                    "valueType": "text",
+                    "subItemsHeading": {
+                        "key": "url",
+                        "valueType": "url"
+                    },
+                    "label": "Issue type"
+                }
+            ],
+            "items": [
+                {
+                    "issueType": "Cookie",
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "url": "http://localhost:8000/twitch.html"
+                            },
+                            {
+                                "url": "https://sb.scorecardresearch.com/b?c1=2&c2=6745306&cs_it=b9&cv=4.0.0%2B2301240627&ns__t=1723578323781&ns_c=UTF-8&c3=1&c5=01&cs_ucfr=*null&c7=http%3A%2F%2Flocalhost%3A8000%2Ftwitch.html&c8=twitch.html%20-%20Twitch&c9="
+                            },
+                            {
+                                "url": "https://sb.scorecardresearch.com/b2?c1=2&c2=6745306&cs_it=b9&cv=4.0.0%2B2301240627&ns__t=1723578323781&ns_c=UTF-8&c3=1&c5=01&cs_ucfr=*null&c7=http%3A%2F%2Flocalhost%3A8000%2Ftwitch.html&c8=twitch.html%20-%20Twitch&c9="
+                            },
+                            {
+                                "url": "https://s.amazon-adsystem.com/iu3?cs=2798eda80bdc696b&cu=&d=twitch.tv&pid=49226e71-48b6-4ccb-bf4c-f82acb404220&s=AUGjNJhRV8P0eE0Uu49ReOGw548VlT8H5DgpZJoiYsJp&ts=1723578323895"
+                            },
+                            {
+                                "url": "https://s.amazon-adsystem.com/iu3?cs=2798eda80bdc696b&cu=&d=twitch.tv&pid=49226e71-48b6-4ccb-bf4c-f82acb404220&s=AUGjNJhRV8P0eE0Uu49ReOGw548VlT8H5DgpZJoiYsJp&ts=1723578323895&dcc=t"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    "uses-passive-event-listeners": {
+        "id": "uses-passive-event-listeners",
+        "title": "Does not use passive listeners to improve scrolling performance",
+        "description": "Consider marking your touch and wheel event listeners as `passive` to improve your page's scroll performance. [Learn more about adopting passive event listeners](https://developer.chrome.com/docs/lighthouse/best-practices/uses-passive-event-listeners/).",
+        "score": 0.5,
+        "scoreDisplayMode": "metricSavings",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "source",
+                    "valueType": "source-location",
+                    "label": "Source"
+                }
+            ],
+            "items": [
+                {
+                    "source": {
+                        "type": "source-location",
+                        "url": "https://assets.twitch.tv/assets/core-6770001ba32ecc8e7c53.js",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 1012712
+                    }
+                }
+            ]
+        },
+        "guidanceLevel": 3
+    },
+    "font-size": {
+        "id": "font-size",
+        "title": "Document doesn't use legible font sizes",
+        "description": "Font sizes less than 12px are too small to be legible and require mobile visitors to \u201cpinch to zoom\u201d in order to read. Strive to have >60% of page text \u226512px. [Learn more about legible font sizes](https://developer.chrome.com/docs/lighthouse/seo/font-size/).",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "explanation": "Text is illegible because there's no viewport meta tag optimized for mobile screens."
+    }
+}

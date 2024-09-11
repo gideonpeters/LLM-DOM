@@ -1,0 +1,1088 @@
+{
+    "is-on-https": {
+        "id": "is-on-https",
+        "title": "Does not use HTTPS",
+        "description": "All sites should be protected with HTTPS, even ones that don't handle sensitive data. This includes avoiding [mixed content](https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content), where some resources are loaded over HTTP despite the initial request being served over HTTPS. HTTPS prevents intruders from tampering with or passively listening in on the communications between your app and your users, and is a prerequisite for HTTP/2 and many new web platform APIs. [Learn more about HTTPS](https://developer.chrome.com/docs/lighthouse/pwa/is-on-https/).",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "displayValue": "3 insecure requests found",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "Insecure URL"
+                },
+                {
+                    "key": "resolution",
+                    "valueType": "text",
+                    "label": "Request Resolution"
+                }
+            ],
+            "items": [
+                {
+                    "url": "http://qsf.fs.quoracdn.net/-4-ans_frontend_assets.images.logged_out_home_mobile_top.png-26-79932f69f508b470.png",
+                    "resolution": "Allowed"
+                },
+                {
+                    "url": "http://qsf.fs.quoracdn.net/-4-ans_frontend_assets.images.logged_out_mobile_bottom.png-26-2c5c167962e4951d.png",
+                    "resolution": "Allowed"
+                },
+                {
+                    "url": "http://qsf.fs.quoracdn.net/-4-ans_frontend_assets.images.noise2.png-26-232b425ba48b8dd3.png",
+                    "resolution": "Allowed"
+                }
+            ]
+        }
+    },
+    "viewport": {
+        "id": "viewport",
+        "title": "Does not have a `<meta name=\"viewport\">` tag with `width` or `initial-scale`",
+        "description": "A `<meta name=\"viewport\">` not only optimizes your app for mobile screen sizes, but also prevents [a 300 millisecond delay to user input](https://developer.chrome.com/blog/300ms-tap-delay-gone-away/). [Learn more about using the viewport meta tag](https://developer.chrome.com/docs/lighthouse/pwa/viewport/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "explanation": "No `<meta name=\"viewport\">` tag found",
+        "metricSavings": {
+            "INP": 300
+        },
+        "guidanceLevel": 3
+    },
+    "first-contentful-paint": {
+        "id": "first-contentful-paint",
+        "title": "First Contentful Paint",
+        "description": "First Contentful Paint marks the time at which the first text or image is painted. [Learn more about the First Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/).",
+        "score": 0.85,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 1981.8745,
+        "numericUnit": "millisecond",
+        "displayValue": "2.0\u00a0s",
+        "scoringOptions": {
+            "p10": 1800,
+            "median": 3000
+        }
+    },
+    "largest-contentful-paint": {
+        "id": "largest-contentful-paint",
+        "title": "Largest Contentful Paint",
+        "description": "Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+        "score": 0.06,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 6897.330500000001,
+        "numericUnit": "millisecond",
+        "displayValue": "6.9\u00a0s",
+        "scoringOptions": {
+            "p10": 2500,
+            "median": 4000
+        }
+    },
+    "speed-index": {
+        "id": "speed-index",
+        "title": "Speed Index",
+        "description": "Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/).",
+        "score": 0.69,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 4698.546029669769,
+        "numericUnit": "millisecond",
+        "displayValue": "4.7\u00a0s",
+        "scoringOptions": {
+            "p10": 3387,
+            "median": 5800
+        }
+    },
+    "total-blocking-time": {
+        "id": "total-blocking-time",
+        "title": "Total Blocking Time",
+        "description": "Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds. [Learn more about the Total Blocking Time metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/).",
+        "score": 0.4,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 739,
+        "numericUnit": "millisecond",
+        "displayValue": "740\u00a0ms",
+        "scoringOptions": {
+            "p10": 200,
+            "median": 600
+        }
+    },
+    "max-potential-fid": {
+        "id": "max-potential-fid",
+        "title": "Max Potential First Input Delay",
+        "description": "The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).",
+        "score": 0.08,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 503,
+        "numericUnit": "millisecond",
+        "displayValue": "500\u00a0ms"
+    },
+    "errors-in-console": {
+        "id": "errors-in-console",
+        "title": "Browser errors were logged to the console",
+        "description": "Errors logged to the console indicate unresolved problems. They can come from network request failures and other browser concerns. [Learn more about this errors in console diagnostic audit](https://developer.chrome.com/docs/lighthouse/best-practices/errors-in-console/)",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "sourceLocation",
+                    "valueType": "source-location",
+                    "label": "Source"
+                },
+                {
+                    "key": "description",
+                    "valueType": "code",
+                    "label": "Description"
+                }
+            ],
+            "items": [
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/ajax/receive_POST",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/ajax/receive_POST",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/ajax/receive_POST",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                }
+            ]
+        }
+    },
+    "interactive": {
+        "id": "interactive",
+        "title": "Time to Interactive",
+        "description": "Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).",
+        "score": 0.54,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 6897.330500000002,
+        "numericUnit": "millisecond",
+        "displayValue": "6.9\u00a0s"
+    },
+    "image-size-responsive": {
+        "id": "image-size-responsive",
+        "title": "Serves images with low resolution",
+        "description": "Image natural dimensions should be proportional to the display size and the pixel ratio to maximize image clarity. [Learn how to provide responsive images](https://web.dev/articles/serve-responsive-images).",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "node",
+                    "valueType": "node",
+                    "label": ""
+                },
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "displayedSize",
+                    "valueType": "text",
+                    "label": "Displayed size"
+                },
+                {
+                    "key": "actualSize",
+                    "valueType": "text",
+                    "label": "Actual size"
+                },
+                {
+                    "key": "expectedSize",
+                    "valueType": "text",
+                    "label": "Expected size"
+                }
+            ],
+            "items": [
+                {
+                    "url": "http://qsf.fs.quoracdn.net/-4-ans_frontend_assets.images.logged_out_mobile_bottom.png-26-2c5c167962e4951d.png",
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-1-IMG",
+                        "path": "1,HTML,1,BODY,3,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,IMG",
+                        "selector": "div.q-box > div.q-box > div.q-absolute > img.q-image",
+                        "boundingRect": {
+                            "top": 1753,
+                            "bottom": 2317,
+                            "left": 0,
+                            "right": 900,
+                            "width": 900,
+                            "height": 564
+                        },
+                        "snippet": "<img class=\"q-image\" src=\"//qsf.fs.quoracdn.net/-4-ans_frontend_assets.images.logged_out_mobile_bott\u2026\" style=\"box-sizing: border-box; max-width: 100%;\">",
+                        "nodeLabel": "div.q-box > div.q-box > div.q-absolute > img.q-image"
+                    },
+                    "displayedSize": "900 x 564",
+                    "actualSize": "900 x 564",
+                    "actualPixels": 507600,
+                    "expectedSize": "1350 x 846",
+                    "expectedPixels": 1142100
+                },
+                {
+                    "url": "http://qsf.fs.quoracdn.net/-4-ans_frontend_assets.images.logged_out_home_mobile_top.png-26-79932f69f508b470.png",
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-0-IMG",
+                        "path": "1,HTML,1,BODY,3,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,DIV,0,IMG",
+                        "selector": "div.q-box > div.q-box > div.q-absolute > img.q-image",
+                        "boundingRect": {
+                            "top": 0,
+                            "bottom": 454,
+                            "left": 0,
+                            "right": 900,
+                            "width": 900,
+                            "height": 454
+                        },
+                        "snippet": "<img class=\"q-image\" src=\"//qsf.fs.quoracdn.net/-4-ans_frontend_assets.images.logged_out_home_mobile\u2026\" style=\"box-sizing: border-box; max-width: 100%;\">",
+                        "nodeLabel": "div.q-box > div.q-box > div.q-absolute > img.q-image"
+                    },
+                    "displayedSize": "900 x 454",
+                    "actualSize": "900 x 454",
+                    "actualPixels": 408600,
+                    "expectedSize": "1350 x 681",
+                    "expectedPixels": 919350
+                }
+            ]
+        }
+    },
+    "uses-rel-preconnect": {
+        "id": "uses-rel-preconnect",
+        "title": "Preconnect to required origins",
+        "description": "Consider adding `preconnect` or `dns-prefetch` resource hints to establish early connections to important third-party origins. [Learn how to preconnect to required origins](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 152.2689999999999,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 150\u00a0ms",
+        "warnings": [],
+        "metricSavings": {
+            "LCP": 150,
+            "FCP": 0
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "wastedMs",
+                    "valueType": "timespanMs",
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "url": "http://qsf.fs.quoracdn.net",
+                    "wastedMs": 152.2689999999999
+                }
+            ],
+            "overallSavingsMs": 152.2689999999999,
+            "sortedBy": [
+                "wastedMs"
+            ]
+        },
+        "guidanceLevel": 3
+    },
+    "third-party-summary": {
+        "id": "third-party-summary",
+        "title": "Reduce the impact of third-party code",
+        "description": "Third-party code can significantly impact load performance. Limit the number of redundant third-party providers and try to load third-party code after your page has primarily finished loading. [Learn how to minimize third-party impact](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "displayValue": "Third-party code blocked the main thread for 740\u00a0ms",
+        "metricSavings": {
+            "TBT": 750
+        },
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "entity",
+                    "valueType": "text",
+                    "label": "Third-Party",
+                    "subItemsHeading": {
+                        "key": "url",
+                        "valueType": "url"
+                    }
+                },
+                {
+                    "key": "transferSize",
+                    "granularity": 1,
+                    "valueType": "bytes",
+                    "label": "Transfer Size",
+                    "subItemsHeading": {
+                        "key": "transferSize"
+                    }
+                },
+                {
+                    "key": "blockingTime",
+                    "granularity": 1,
+                    "valueType": "ms",
+                    "label": "Main-Thread Blocking Time",
+                    "subItemsHeading": {
+                        "key": "blockingTime"
+                    }
+                }
+            ],
+            "items": [
+                {
+                    "mainThreadTime": 1255.020000000001,
+                    "blockingTime": 739.000000000003,
+                    "transferSize": 971549,
+                    "tbtImpact": 739.000000000003,
+                    "entity": "quoracdn.net",
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "url": "https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-common-27-f7d782a84d76b3a5.webpack",
+                                "mainThreadTime": 801.1800000000001,
+                                "blockingTime": 667.9837699101718,
+                                "transferSize": 357074,
+                                "tbtImpact": 667.9837699101718
+                            },
+                            {
+                                "url": "https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-vendor-27-c663ad026f3abd51.webpack",
+                                "mainThreadTime": 351.2960000000006,
+                                "blockingTime": 71.01623008983117,
+                                "transferSize": 181476,
+                                "tbtImpact": 71.01623008983117
+                            },
+                            {
+                                "url": "https://qsbr.cf2.quoracdn.net/-4-l10n_main-30-fr-8ff1e114b66a9c16.translation.json",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 155514,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://qsf.fs.quoracdn.net/-4-ans_frontend_assets.images.logged_out_mobile_bottom.png-26-2c5c167962e4951d.png",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 64867,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://qsf.fs.quoracdn.net/-4-ans_frontend_assets.images.logged_out_home_mobile_top.png-26-79932f69f508b470.png",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 54042,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-component-icons-lowpri-27-54bdb9680f109b20.webpack",
+                                "mainThreadTime": 16.043999999999997,
+                                "blockingTime": 0,
+                                "transferSize": 35123,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-page-LoginPages-27-5093d9c02053cab6.webpack",
+                                "mainThreadTime": 7.599999999999999,
+                                "blockingTime": 0,
+                                "transferSize": 28509,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-component-Modals-signup-27-c082f2b0e38dec9e.webpack",
+                                "mainThreadTime": 10.904,
+                                "blockingTime": 0,
+                                "transferSize": 23083,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-component-Modals-common-27-c9ddedd7aedc2294.webpack",
+                                "mainThreadTime": 11.327999999999998,
+                                "blockingTime": 0,
+                                "transferSize": 16487,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-main.css-28-f4ef3e8b8aa95a7d.webpack",
+                                "mainThreadTime": 14.812,
+                                "blockingTime": 0,
+                                "transferSize": 15076,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-common-LoggedOut-27-e52ae2e2f6390f40.webpack",
+                                "mainThreadTime": 3.0839999999999996,
+                                "blockingTime": 0,
+                                "transferSize": 13053,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-common-Mweb-27-fe3608d1c8ab488e.webpack",
+                                "mainThreadTime": 17.323999999999998,
+                                "blockingTime": 0,
+                                "transferSize": 9378,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-27-691154c7c2510bef.webpack",
+                                "mainThreadTime": 11.163999999999998,
+                                "blockingTime": 0,
+                                "transferSize": 8038,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-lib-broadcast-27-efc1ee6bc19b5481.webpack",
+                                "mainThreadTime": 10.283999999999992,
+                                "blockingTime": 0,
+                                "transferSize": 5623,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "https://qsf.fs.quoracdn.net/-4-ans_frontend_assets.images.noise2.png-26-232b425ba48b8dd3.png",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 2749,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "http://qsf.fs.quoracdn.net/-4-ans_frontend_assets.images.logged_out_home_mobile_top.png-26-79932f69f508b470.png",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 493,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "http://qsf.fs.quoracdn.net/-4-ans_frontend_assets.images.logged_out_mobile_bottom.png-26-2c5c167962e4951d.png",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 491,
+                                "tbtImpact": 0
+                            },
+                            {
+                                "url": "http://qsf.fs.quoracdn.net/-4-ans_frontend_assets.images.noise2.png-26-232b425ba48b8dd3.png",
+                                "mainThreadTime": 0,
+                                "blockingTime": 0,
+                                "transferSize": 473,
+                                "tbtImpact": 0
+                            }
+                        ]
+                    }
+                }
+            ],
+            "summary": {
+                "wastedBytes": 971549,
+                "wastedMs": 739.000000000003
+            },
+            "isEntityGrouped": true
+        },
+        "guidanceLevel": 1
+    },
+    "largest-contentful-paint-element": {
+        "id": "largest-contentful-paint-element",
+        "title": "Largest Contentful Paint element",
+        "description": "This is the largest contentful element painted within the viewport. [Learn more about the Largest Contentful Paint element](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "displayValue": "6,900\u00a0ms",
+        "metricSavings": {
+            "LCP": 4400
+        },
+        "details": {
+            "type": "list",
+            "items": [
+                {
+                    "type": "table",
+                    "headings": [
+                        {
+                            "key": "node",
+                            "valueType": "node",
+                            "label": "Element"
+                        }
+                    ],
+                    "items": [
+                        {
+                            "node": {
+                                "type": "node",
+                                "lhId": "page-0-IMG",
+                                "path": "1,HTML,1,BODY,3,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,DIV,0,IMG",
+                                "selector": "div.q-box > div.q-box > div.q-absolute > img.q-image",
+                                "boundingRect": {
+                                    "top": 0,
+                                    "bottom": 454,
+                                    "left": 0,
+                                    "right": 900,
+                                    "width": 900,
+                                    "height": 454
+                                },
+                                "snippet": "<img class=\"q-image\" src=\"//qsf.fs.quoracdn.net/-4-ans_frontend_assets.images.logged_out_home_mobile\u2026\" style=\"box-sizing: border-box; max-width: 100%;\">",
+                                "nodeLabel": "div.q-box > div.q-box > div.q-absolute > img.q-image"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "table",
+                    "headings": [
+                        {
+                            "key": "phase",
+                            "valueType": "text",
+                            "label": "Phase"
+                        },
+                        {
+                            "key": "percent",
+                            "valueType": "text",
+                            "label": "% of LCP"
+                        },
+                        {
+                            "key": "timing",
+                            "valueType": "ms",
+                            "label": "Timing"
+                        }
+                    ],
+                    "items": [
+                        {
+                            "phase": "TTFB",
+                            "timing": 450.5935,
+                            "percent": "7%"
+                        },
+                        {
+                            "phase": "Load Delay",
+                            "timing": 6165.948436081409,
+                            "percent": "89%"
+                        },
+                        {
+                            "phase": "Load Time",
+                            "timing": 115.08353702172371,
+                            "percent": "2%"
+                        },
+                        {
+                            "phase": "Render Delay",
+                            "timing": 165.70502689686782,
+                            "percent": "2%"
+                        }
+                    ]
+                }
+            ]
+        },
+        "guidanceLevel": 1
+    },
+    "unsized-images": {
+        "id": "unsized-images",
+        "title": "Image elements do not have explicit `width` and `height`",
+        "description": "Set an explicit width and height on image elements to reduce layout shifts and improve CLS. [Learn how to set image dimensions](https://web.dev/articles/optimize-cls#images_without_dimensions)",
+        "score": 0.5,
+        "scoreDisplayMode": "metricSavings",
+        "metricSavings": {
+            "CLS": 0
+        },
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "node",
+                    "valueType": "node",
+                    "label": ""
+                },
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                }
+            ],
+            "items": [
+                {
+                    "url": "http://qsf.fs.quoracdn.net/-4-ans_frontend_assets.images.logged_out_mobile_bottom.png-26-2c5c167962e4951d.png",
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-1-IMG",
+                        "path": "1,HTML,1,BODY,3,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,IMG",
+                        "selector": "div.q-box > div.q-box > div.q-absolute > img.q-image",
+                        "boundingRect": {
+                            "top": 1753,
+                            "bottom": 2317,
+                            "left": 0,
+                            "right": 900,
+                            "width": 900,
+                            "height": 564
+                        },
+                        "snippet": "<img class=\"q-image\" src=\"//qsf.fs.quoracdn.net/-4-ans_frontend_assets.images.logged_out_mobile_bott\u2026\" style=\"box-sizing: border-box; max-width: 100%;\">",
+                        "nodeLabel": "div.q-box > div.q-box > div.q-absolute > img.q-image"
+                    }
+                },
+                {
+                    "url": "http://qsf.fs.quoracdn.net/-4-ans_frontend_assets.images.logged_out_home_mobile_top.png-26-79932f69f508b470.png",
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-0-IMG",
+                        "path": "1,HTML,1,BODY,3,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,DIV,0,IMG",
+                        "selector": "div.q-box > div.q-box > div.q-absolute > img.q-image",
+                        "boundingRect": {
+                            "top": 0,
+                            "bottom": 454,
+                            "left": 0,
+                            "right": 900,
+                            "width": 900,
+                            "height": 454
+                        },
+                        "snippet": "<img class=\"q-image\" src=\"//qsf.fs.quoracdn.net/-4-ans_frontend_assets.images.logged_out_home_mobile\u2026\" style=\"box-sizing: border-box; max-width: 100%;\">",
+                        "nodeLabel": "div.q-box > div.q-box > div.q-absolute > img.q-image"
+                    }
+                }
+            ]
+        },
+        "guidanceLevel": 4
+    },
+    "prioritize-lcp-image": {
+        "id": "prioritize-lcp-image",
+        "title": "Preload Largest Contentful Paint image",
+        "description": "If the LCP element is dynamically added to the page, you should preload the image in order to improve LCP. [Learn more about preloading LCP elements](https://web.dev/articles/optimize-lcp#optimize_when_the_resource_is_discovered).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 179.04824000000008,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 180\u00a0ms",
+        "metricSavings": {
+            "LCP": 200
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "node",
+                    "valueType": "node",
+                    "label": ""
+                },
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "wastedMs",
+                    "valueType": "timespanMs",
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "page-0-IMG",
+                        "path": "1,HTML,1,BODY,3,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,DIV,0,IMG",
+                        "selector": "div.q-box > div.q-box > div.q-absolute > img.q-image",
+                        "boundingRect": {
+                            "top": 0,
+                            "bottom": 454,
+                            "left": 0,
+                            "right": 900,
+                            "width": 900,
+                            "height": 454
+                        },
+                        "snippet": "<img class=\"q-image\" src=\"//qsf.fs.quoracdn.net/-4-ans_frontend_assets.images.logged_out_home_mobile\u2026\" style=\"box-sizing: border-box; max-width: 100%;\">",
+                        "nodeLabel": "div.q-box > div.q-box > div.q-absolute > img.q-image"
+                    },
+                    "url": "https://qsf.fs.quoracdn.net/-4-ans_frontend_assets.images.logged_out_home_mobile_top.png-26-79932f69f508b470.png",
+                    "wastedMs": 179.04824000000008
+                }
+            ],
+            "overallSavingsMs": 179.04824000000008,
+            "sortedBy": [
+                "wastedMs"
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "initiatorPath": [
+                    {
+                        "url": "https://qsf.fs.quoracdn.net/-4-ans_frontend_assets.images.logged_out_home_mobile_top.png-26-79932f69f508b470.png",
+                        "initiatorType": "redirect"
+                    },
+                    {
+                        "url": "http://qsf.fs.quoracdn.net/-4-ans_frontend_assets.images.logged_out_home_mobile_top.png-26-79932f69f508b470.png",
+                        "initiatorType": "fallbackToMain"
+                    },
+                    {
+                        "url": "http://localhost:8000/quora.html",
+                        "initiatorType": "other"
+                    }
+                ],
+                "pathLength": 3
+            }
+        },
+        "guidanceLevel": 4
+    },
+    "image-alt": {
+        "id": "image-alt",
+        "title": "Image elements do not have `[alt]` attributes",
+        "description": "Informative elements should aim for short, descriptive alternate text. Decorative elements can be ignored with an empty alt attribute. [Learn more about the `alt` attribute](https://dequeuniversity.com/rules/axe/4.9/image-alt).",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "node",
+                    "valueType": "node",
+                    "subItemsHeading": {
+                        "key": "relatedNode",
+                        "valueType": "node"
+                    },
+                    "label": "Failing Elements"
+                }
+            ],
+            "items": [
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-0-IMG",
+                        "path": "1,HTML,1,BODY,3,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,DIV,0,IMG",
+                        "selector": "div.q-box > div.q-box > div.q-absolute > img.q-image",
+                        "boundingRect": {
+                            "top": 0,
+                            "bottom": 454,
+                            "left": 0,
+                            "right": 900,
+                            "width": 900,
+                            "height": 454
+                        },
+                        "snippet": "<img class=\"q-image\" src=\"//qsf.fs.quoracdn.net/-4-ans_frontend_assets.images.logged_out_home_mobile\u2026\" style=\"box-sizing: border-box; max-width: 100%;\">",
+                        "nodeLabel": "div.q-box > div.q-box > div.q-absolute > img.q-image",
+                        "explanation": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-1-IMG",
+                        "path": "1,HTML,1,BODY,3,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,IMG",
+                        "selector": "div.q-box > div.q-box > div.q-absolute > img.q-image",
+                        "boundingRect": {
+                            "top": 1753,
+                            "bottom": 2317,
+                            "left": 0,
+                            "right": 900,
+                            "width": 900,
+                            "height": 564
+                        },
+                        "snippet": "<img class=\"q-image\" src=\"//qsf.fs.quoracdn.net/-4-ans_frontend_assets.images.logged_out_mobile_bott\u2026\" style=\"box-sizing: border-box; max-width: 100%;\">",
+                        "nodeLabel": "div.q-box > div.q-box > div.q-absolute > img.q-image",
+                        "explanation": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+                    }
+                }
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "impact": "critical",
+                "tags": [
+                    "cat.text-alternatives",
+                    "wcag2a",
+                    "wcag111",
+                    "section508",
+                    "section508.22.a",
+                    "TTv5",
+                    "TT7.a",
+                    "TT7.b",
+                    "EN-301-549",
+                    "EN-9.1.1.1",
+                    "ACT"
+                ]
+            }
+        }
+    },
+    "unused-css-rules": {
+        "id": "unused-css-rules",
+        "title": "Reduce unused CSS",
+        "description": "Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/).",
+        "score": 0.5,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 0,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 14\u00a0KiB",
+        "metricSavings": {
+            "FCP": 0,
+            "LCP": 0
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "totalBytes",
+                    "valueType": "bytes",
+                    "label": "Transfer Size"
+                },
+                {
+                    "key": "wastedBytes",
+                    "valueType": "bytes",
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "url": "https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-main.css-28-f4ef3e8b8aa95a7d.webpack",
+                    "wastedBytes": 14280,
+                    "wastedPercent": 98.02909878270972,
+                    "totalBytes": 14567
+                }
+            ],
+            "overallSavingsMs": 0,
+            "overallSavingsBytes": 14280,
+            "sortedBy": [
+                "wastedBytes"
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "metricSavings": {
+                    "FCP": 0,
+                    "LCP": 0
+                }
+            }
+        },
+        "guidanceLevel": 1
+    },
+    "unused-javascript": {
+        "id": "unused-javascript",
+        "title": "Reduce unused JavaScript",
+        "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 1540,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 322\u00a0KiB",
+        "metricSavings": {
+            "FCP": 0,
+            "LCP": 1550
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "subItemsHeading": {
+                        "key": "source",
+                        "valueType": "code"
+                    },
+                    "label": "URL"
+                },
+                {
+                    "key": "totalBytes",
+                    "valueType": "bytes",
+                    "subItemsHeading": {
+                        "key": "sourceBytes"
+                    },
+                    "label": "Transfer Size"
+                },
+                {
+                    "key": "wastedBytes",
+                    "valueType": "bytes",
+                    "subItemsHeading": {
+                        "key": "sourceWastedBytes"
+                    },
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "url": "https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-common-27-f7d782a84d76b3a5.webpack",
+                    "totalBytes": 356889,
+                    "wastedBytes": 193966,
+                    "wastedPercent": 54.34905820090242
+                },
+                {
+                    "url": "https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-vendor-27-c663ad026f3abd51.webpack",
+                    "totalBytes": 181291,
+                    "wastedBytes": 81193,
+                    "wastedPercent": 44.78617679299754
+                },
+                {
+                    "url": "https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-component-icons-lowpri-27-54bdb9680f109b20.webpack",
+                    "totalBytes": 34937,
+                    "wastedBytes": 32555,
+                    "wastedPercent": 93.18085843144542
+                },
+                {
+                    "url": "https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-component-Modals-signup-27-c082f2b0e38dec9e.webpack",
+                    "totalBytes": 22899,
+                    "wastedBytes": 22371,
+                    "wastedPercent": 97.69541206457095
+                }
+            ],
+            "overallSavingsMs": 1540,
+            "overallSavingsBytes": 330085,
+            "sortedBy": [
+                "wastedBytes"
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "metricSavings": {
+                    "FCP": 0,
+                    "LCP": 1540
+                }
+            }
+        },
+        "guidanceLevel": 1
+    },
+    "uses-text-compression": {
+        "id": "uses-text-compression",
+        "title": "Enable text compression",
+        "description": "Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more about text compression](https://developer.chrome.com/docs/lighthouse/performance/uses-text-compression/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 150,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 53\u00a0KiB",
+        "metricSavings": {
+            "FCP": 150,
+            "LCP": 150
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "totalBytes",
+                    "valueType": "bytes",
+                    "label": "Transfer Size"
+                },
+                {
+                    "key": "wastedBytes",
+                    "valueType": "bytes",
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "url": "http://localhost:8000/quora.html",
+                    "totalBytes": 71822,
+                    "wastedBytes": 54345
+                }
+            ],
+            "overallSavingsMs": 150,
+            "overallSavingsBytes": 54345,
+            "sortedBy": [
+                "wastedBytes"
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "metricSavings": {
+                    "FCP": 150,
+                    "LCP": 150
+                }
+            }
+        },
+        "guidanceLevel": 3
+    },
+    "legacy-javascript": {
+        "id": "legacy-javascript",
+        "title": "Avoid serving legacy JavaScript to modern browsers",
+        "description": "Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. For your bundled JavaScript, adopt a modern script deployment strategy using module/nomodule feature detection to reduce the amount of code shipped to modern browsers, while retaining support for legacy browsers. [Learn how to use modern JavaScript](https://web.dev/articles/publish-modern-javascript)",
+        "score": 0.5,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 0,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 0\u00a0KiB",
+        "metricSavings": {
+            "FCP": 0,
+            "LCP": 0
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "subItemsHeading": {
+                        "key": "location",
+                        "valueType": "source-location"
+                    },
+                    "label": "URL"
+                },
+                {
+                    "key": null,
+                    "valueType": "code",
+                    "subItemsHeading": {
+                        "key": "signal"
+                    },
+                    "label": ""
+                },
+                {
+                    "key": "wastedBytes",
+                    "valueType": "bytes",
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "url": "https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-vendor-27-c663ad026f3abd51.webpack",
+                    "wastedBytes": 70,
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "signal": "@babel/plugin-transform-classes",
+                                "location": {
+                                    "type": "source-location",
+                                    "url": "https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-vendor-27-c663ad026f3abd51.webpack",
+                                    "urlProvider": "network",
+                                    "line": 0,
+                                    "column": 78074
+                                }
+                            }
+                        ]
+                    },
+                    "totalBytes": 0
+                }
+            ],
+            "overallSavingsMs": 0,
+            "overallSavingsBytes": 70,
+            "sortedBy": [
+                "wastedBytes"
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "metricSavings": {
+                    "FCP": 0,
+                    "LCP": 0
+                }
+            }
+        },
+        "guidanceLevel": 2
+    },
+    "font-size": {
+        "id": "font-size",
+        "title": "Document doesn't use legible font sizes",
+        "description": "Font sizes less than 12px are too small to be legible and require mobile visitors to \u201cpinch to zoom\u201d in order to read. Strive to have >60% of page text \u226512px. [Learn more about legible font sizes](https://developer.chrome.com/docs/lighthouse/seo/font-size/).",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "explanation": "Text is illegible because there's no viewport meta tag optimized for mobile screens."
+    }
+}

@@ -1,0 +1,3325 @@
+{
+    "viewport": {
+        "id": "viewport",
+        "title": "Does not have a `<meta name=\"viewport\">` tag with `width` or `initial-scale`",
+        "description": "A `<meta name=\"viewport\">` not only optimizes your app for mobile screen sizes, but also prevents [a 300 millisecond delay to user input](https://developer.chrome.com/blog/300ms-tap-delay-gone-away/). [Learn more about using the viewport meta tag](https://developer.chrome.com/docs/lighthouse/pwa/viewport/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "explanation": "No `<meta name=\"viewport\">` tag found",
+        "metricSavings": {
+            "INP": 300
+        },
+        "guidanceLevel": 3
+    },
+    "first-contentful-paint": {
+        "id": "first-contentful-paint",
+        "title": "First Contentful Paint",
+        "description": "First Contentful Paint marks the time at which the first text or image is painted. [Learn more about the First Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/).",
+        "score": 0.64,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 2588.573,
+        "numericUnit": "millisecond",
+        "displayValue": "2.6\u00a0s",
+        "scoringOptions": {
+            "p10": 1800,
+            "median": 3000
+        }
+    },
+    "largest-contentful-paint": {
+        "id": "largest-contentful-paint",
+        "title": "Largest Contentful Paint",
+        "description": "Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+        "score": 0.81,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 2879.573,
+        "numericUnit": "millisecond",
+        "displayValue": "2.9\u00a0s",
+        "scoringOptions": {
+            "p10": 2500,
+            "median": 4000
+        }
+    },
+    "speed-index": {
+        "id": "speed-index",
+        "title": "Speed Index",
+        "description": "Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/).",
+        "score": 0.97,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 2588.573,
+        "numericUnit": "millisecond",
+        "displayValue": "2.6\u00a0s",
+        "scoringOptions": {
+            "p10": 3387,
+            "median": 5800
+        }
+    },
+    "total-blocking-time": {
+        "id": "total-blocking-time",
+        "title": "Total Blocking Time",
+        "description": "Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds. [Learn more about the Total Blocking Time metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/).",
+        "score": 0.97,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 118.5,
+        "numericUnit": "millisecond",
+        "displayValue": "120\u00a0ms",
+        "scoringOptions": {
+            "p10": 200,
+            "median": 600
+        }
+    },
+    "max-potential-fid": {
+        "id": "max-potential-fid",
+        "title": "Max Potential First Input Delay",
+        "description": "The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).",
+        "score": 0.89,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 133,
+        "numericUnit": "millisecond",
+        "displayValue": "130\u00a0ms"
+    },
+    "errors-in-console": {
+        "id": "errors-in-console",
+        "title": "Browser errors were logged to the console",
+        "description": "Errors logged to the console indicate unresolved problems. They can come from network request failures and other browser concerns. [Learn more about this errors in console diagnostic audit](https://developer.chrome.com/docs/lighthouse/best-practices/errors-in-console/)",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "sourceLocation",
+                    "valueType": "source-location",
+                    "label": "Source"
+                },
+                {
+                    "key": "description",
+                    "valueType": "code",
+                    "label": "Description"
+                }
+            ],
+            "items": [
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/ajax/bz?__a=1&__ccg=EXCELLENT&__dyn=7xe6E5aQ1PyUbFp41twpUnwgU29zE6u7E3rw5ux60Vo1upE4W0OE2WxO0FE2awt81s8hwnU1oU6C0lW0ny0RE2Jw8Xwn83fw5rwSyE1582ZwrU1Xo1UU3jw&__hs=19947.BP%3ADEFAULT.2.0..0.0&__hsi=7402323213822243245&__req=1&__rev=1015593742&__s=3o26v6%3A4adrbp%3A05ia51&__spin_b=trunk&__spin_r=1015593742&__spin_t=1723487678&__user=0&dpr=1&jazoest=2832&lsd=AVoX7G9-NAo",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                },
+                {
+                    "source": "network",
+                    "description": "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+                    "sourceLocation": {
+                        "type": "source-location",
+                        "url": "http://localhost:8000/ajax/bz?__a=1&__ccg=EXCELLENT&__dyn=7xe6E5aQ1PyUbFp41twpUnwgU29zE6u7E3rw5ux60Vo1upE4W0OE2WxO0FE2awt81s8hwnU1oU6C0lW0ny0RE2Jw8Xwn83fw5rwSyE1582ZwrU1Xo1UU3jw&__hs=19947.BP%3ADEFAULT.2.0..0.0&__hsi=7402323213822243245&__req=2&__rev=1015593742&__s=3o26v6%3A4adrbp%3A05ia51&__spin_b=trunk&__spin_r=1015593742&__spin_t=1723487678&__user=0&dpr=1&jazoest=2832&lsd=AVoX7G9-NAo",
+                        "urlProvider": "network",
+                        "line": 0,
+                        "column": 0
+                    }
+                }
+            ]
+        }
+    },
+    "interactive": {
+        "id": "interactive",
+        "title": "Time to Interactive",
+        "description": "Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).",
+        "score": 0.87,
+        "scoreDisplayMode": "numeric",
+        "numericValue": 4065.5230000000006,
+        "numericUnit": "millisecond",
+        "displayValue": "4.1\u00a0s"
+    },
+    "deprecations": {
+        "id": "deprecations",
+        "title": "Uses deprecated APIs",
+        "description": "Deprecated APIs will eventually be removed from the browser. [Learn more about deprecated APIs](https://developer.chrome.com/docs/lighthouse/best-practices/deprecations/).",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "displayValue": "1 warning found",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "value",
+                    "valueType": "text",
+                    "label": "Deprecation / Warning"
+                },
+                {
+                    "key": "source",
+                    "valueType": "source-location",
+                    "label": "Source"
+                }
+            ],
+            "items": [
+                {
+                    "value": "UnloadHandler",
+                    "source": {
+                        "type": "source-location",
+                        "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yW/r/9nUz5AS-QWA.js?_nc_x=Ij3Wp8lg5Kz",
+                        "urlProvider": "network",
+                        "line": 317,
+                        "column": 820
+                    }
+                }
+            ]
+        }
+    },
+    "largest-contentful-paint-element": {
+        "id": "largest-contentful-paint-element",
+        "title": "Largest Contentful Paint element",
+        "description": "This is the largest contentful element painted within the viewport. [Learn more about the Largest Contentful Paint element](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "displayValue": "2,880\u00a0ms",
+        "metricSavings": {
+            "LCP": 400
+        },
+        "details": {
+            "type": "list",
+            "items": [
+                {
+                    "type": "table",
+                    "headings": [
+                        {
+                            "key": "node",
+                            "valueType": "node",
+                            "label": "Element"
+                        }
+                    ],
+                    "items": [
+                        {
+                            "node": {
+                                "type": "node",
+                                "lhId": "page-0-UL",
+                                "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL",
+                                "selector": "div._95ke > div#pageFooter > div#pageFooterChildren > ul.uiList",
+                                "boundingRect": {
+                                    "top": 785,
+                                    "bottom": 843,
+                                    "left": -20,
+                                    "right": 980,
+                                    "width": 1000,
+                                    "height": 58
+                                },
+                                "snippet": "<ul class=\"uiList pageFooterLinkList _509- _4ki _703 _6-i\">",
+                                "nodeLabel": "Sign Up Log In Messenger Facebook Lite Video Places Games Marketplace Meta Pay \u2026"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "table",
+                    "headings": [
+                        {
+                            "key": "phase",
+                            "valueType": "text",
+                            "label": "Phase"
+                        },
+                        {
+                            "key": "percent",
+                            "valueType": "text",
+                            "label": "% of LCP"
+                        },
+                        {
+                            "key": "timing",
+                            "valueType": "ms",
+                            "label": "Timing"
+                        }
+                    ],
+                    "items": [
+                        {
+                            "phase": "TTFB",
+                            "timing": 451.058,
+                            "percent": "16%"
+                        },
+                        {
+                            "phase": "Load Delay",
+                            "timing": 0,
+                            "percent": "0%"
+                        },
+                        {
+                            "phase": "Load Time",
+                            "timing": 0,
+                            "percent": "0%"
+                        },
+                        {
+                            "phase": "Render Delay",
+                            "timing": 2428.515,
+                            "percent": "84%"
+                        }
+                    ]
+                }
+            ]
+        },
+        "guidanceLevel": 1
+    },
+    "unsized-images": {
+        "id": "unsized-images",
+        "title": "Image elements do not have explicit `width` and `height`",
+        "description": "Set an explicit width and height on image elements to reduce layout shifts and improve CLS. [Learn how to set image dimensions](https://web.dev/articles/optimize-cls#images_without_dimensions)",
+        "score": 0.5,
+        "scoreDisplayMode": "metricSavings",
+        "metricSavings": {
+            "CLS": 0
+        },
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "node",
+                    "valueType": "node",
+                    "label": ""
+                },
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                }
+            ],
+            "items": [
+                {
+                    "url": "https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg",
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-58-IMG",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,IMG",
+                        "selector": "div._8esk > div._8esl > div._8ice > img.fb_logo",
+                        "boundingRect": {
+                            "top": 176,
+                            "bottom": 282,
+                            "left": -28,
+                            "right": 293,
+                            "width": 321,
+                            "height": 106
+                        },
+                        "snippet": "<img alt=\"Facebook\" class=\"fb_logo _8ilh img\" src=\"https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg\">",
+                        "nodeLabel": "Facebook"
+                    }
+                }
+            ]
+        },
+        "guidanceLevel": 4
+    },
+    "color-contrast": {
+        "id": "color-contrast",
+        "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+        "description": "Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.9/color-contrast).",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "node",
+                    "valueType": "node",
+                    "subItemsHeading": {
+                        "key": "relatedNode",
+                        "valueType": "node"
+                    },
+                    "label": "Failing Elements"
+                }
+            ],
+            "items": [
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-0-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,FORM,8,DIV,0,A",
+                        "selector": "div._6luv > form#u_0_2_s7 > div._6ltg > a#u_0_0_sM",
+                        "boundingRect": {
+                            "top": 410,
+                            "bottom": 458,
+                            "left": 683,
+                            "right": 880,
+                            "width": 197,
+                            "height": 48
+                        },
+                        "snippet": "<a ajaxify=\"/reg/spotlight/\" class=\"_42ft _4jy0 _6lti _4jy6 _4jy2 selected _51sy\" data-testid=\"open-registration-form-button\" href=\"#\" id=\"u_0_0_sM\" rel=\"async\" role=\"button\">",
+                        "nodeLabel": " Create new account",
+                        "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.61 (foreground color: #ffffff, background color: #42b72a, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-1-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,UL,1,LI,0,A",
+                        "selector": "div#pageFooter > ul.uiList > li > a._sv4",
+                        "boundingRect": {
+                            "top": 751,
+                            "bottom": 765,
+                            "left": 77,
+                            "right": 177,
+                            "width": 99,
+                            "height": 14
+                        },
+                        "snippet": "<a class=\"_sv4\" dir=\"ltr\" href=\"https://fr-ca.facebook.com/\" onclick=\"require(&quot;IntlUtils&quot;).setCookieLocale(&quot;fr_CA&quot;, &quot;en_US&quot;, &quot;https:\\/\\/fr-ca.fa\u2026\">",
+                        "nodeLabel": "Fran\u00e7ais (Canada)",
+                        "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.33 (foreground color: #8a8d91, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-2-BODY",
+                                    "path": "1,HTML,1,BODY",
+                                    "selector": "body.fbIndex",
+                                    "boundingRect": {
+                                        "top": 0,
+                                        "bottom": 877,
+                                        "left": 0,
+                                        "right": 980,
+                                        "width": 980,
+                                        "height": 877
+                                    },
+                                    "snippet": "<body class=\"fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh x1 Locale_en_US cores-gte4\u2026\" dir=\"ltr\">",
+                                    "nodeLabel": "body.fbIndex"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-3-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,UL,2,LI,0,A",
+                        "selector": "div#pageFooter > ul.uiList > li > a._sv4",
+                        "boundingRect": {
+                            "top": 751,
+                            "bottom": 765,
+                            "left": 187,
+                            "right": 230,
+                            "width": 43,
+                            "height": 14
+                        },
+                        "snippet": "<a class=\"_sv4\" dir=\"ltr\" href=\"https://es-la.facebook.com/\" onclick=\"require(&quot;IntlUtils&quot;).setCookieLocale(&quot;es_LA&quot;, &quot;en_US&quot;, &quot;https:\\/\\/es-la.fa\u2026\">",
+                        "nodeLabel": "Espa\u00f1ol",
+                        "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.33 (foreground color: #8a8d91, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-2-BODY",
+                                    "path": "1,HTML,1,BODY",
+                                    "selector": "body.fbIndex",
+                                    "boundingRect": {
+                                        "top": 0,
+                                        "bottom": 877,
+                                        "left": 0,
+                                        "right": 980,
+                                        "width": 980,
+                                        "height": 877
+                                    },
+                                    "snippet": "<body class=\"fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh x1 Locale_en_US cores-gte4\u2026\" dir=\"ltr\">",
+                                    "nodeLabel": "body.fbIndex"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-4-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,UL,3,LI,0,A",
+                        "selector": "div#pageFooter > ul.uiList > li > a._sv4",
+                        "boundingRect": {
+                            "top": 751,
+                            "bottom": 765,
+                            "left": 240,
+                            "right": 296,
+                            "width": 56,
+                            "height": 14
+                        },
+                        "snippet": "<a class=\"_sv4\" dir=\"ltr\" href=\"https://zh-cn.facebook.com/\" onclick=\"require(&quot;IntlUtils&quot;).setCookieLocale(&quot;zh_CN&quot;, &quot;en_US&quot;, &quot;https:\\/\\/zh-cn.fa\u2026\">",
+                        "nodeLabel": "\u4e2d\u6587(\u7b80\u4f53)",
+                        "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.33 (foreground color: #8a8d91, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-2-BODY",
+                                    "path": "1,HTML,1,BODY",
+                                    "selector": "body.fbIndex",
+                                    "boundingRect": {
+                                        "top": 0,
+                                        "bottom": 877,
+                                        "left": 0,
+                                        "right": 980,
+                                        "width": 980,
+                                        "height": 877
+                                    },
+                                    "snippet": "<body class=\"fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh x1 Locale_en_US cores-gte4\u2026\" dir=\"ltr\">",
+                                    "nodeLabel": "body.fbIndex"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-5-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,UL,4,LI,0,A",
+                        "selector": "div#pageFooter > ul.uiList > li > a._sv4",
+                        "boundingRect": {
+                            "top": 751,
+                            "bottom": 765,
+                            "left": 306,
+                            "right": 337,
+                            "width": 31,
+                            "height": 14
+                        },
+                        "snippet": "<a class=\"_sv4\" dir=\"ltr\" href=\"https://ko-kr.facebook.com/\" onclick=\"require(&quot;IntlUtils&quot;).setCookieLocale(&quot;ko_KR&quot;, &quot;en_US&quot;, &quot;https:\\/\\/ko-kr.fa\u2026\">",
+                        "nodeLabel": "\ud55c\uad6d\uc5b4",
+                        "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.33 (foreground color: #8a8d91, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-2-BODY",
+                                    "path": "1,HTML,1,BODY",
+                                    "selector": "body.fbIndex",
+                                    "boundingRect": {
+                                        "top": 0,
+                                        "bottom": 877,
+                                        "left": 0,
+                                        "right": 980,
+                                        "width": 980,
+                                        "height": 877
+                                    },
+                                    "snippet": "<body class=\"fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh x1 Locale_en_US cores-gte4\u2026\" dir=\"ltr\">",
+                                    "nodeLabel": "body.fbIndex"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-6-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,UL,5,LI,0,A",
+                        "selector": "div#pageFooter > ul.uiList > li > a._sv4",
+                        "boundingRect": {
+                            "top": 751,
+                            "bottom": 765,
+                            "left": 347,
+                            "right": 383,
+                            "width": 36,
+                            "height": 14
+                        },
+                        "snippet": "<a class=\"_sv4\" dir=\"ltr\" href=\"https://ja-jp.facebook.com/\" onclick=\"require(&quot;IntlUtils&quot;).setCookieLocale(&quot;ja_JP&quot;, &quot;en_US&quot;, &quot;https:\\/\\/ja-jp.fa\u2026\">",
+                        "nodeLabel": "\u65e5\u672c\u8a9e",
+                        "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.33 (foreground color: #8a8d91, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-2-BODY",
+                                    "path": "1,HTML,1,BODY",
+                                    "selector": "body.fbIndex",
+                                    "boundingRect": {
+                                        "top": 0,
+                                        "bottom": 877,
+                                        "left": 0,
+                                        "right": 980,
+                                        "width": 980,
+                                        "height": 877
+                                    },
+                                    "snippet": "<body class=\"fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh x1 Locale_en_US cores-gte4\u2026\" dir=\"ltr\">",
+                                    "nodeLabel": "body.fbIndex"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-7-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,UL,6,LI,0,A",
+                        "selector": "div#pageFooter > ul.uiList > li > a._sv4",
+                        "boundingRect": {
+                            "top": 751,
+                            "bottom": 765,
+                            "left": 393,
+                            "right": 489,
+                            "width": 96,
+                            "height": 14
+                        },
+                        "snippet": "<a class=\"_sv4\" dir=\"ltr\" href=\"https://pt-br.facebook.com/\" onclick=\"require(&quot;IntlUtils&quot;).setCookieLocale(&quot;pt_BR&quot;, &quot;en_US&quot;, &quot;https:\\/\\/pt-br.fa\u2026\">",
+                        "nodeLabel": "Portugu\u00eas (Brasil)",
+                        "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.33 (foreground color: #8a8d91, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-2-BODY",
+                                    "path": "1,HTML,1,BODY",
+                                    "selector": "body.fbIndex",
+                                    "boundingRect": {
+                                        "top": 0,
+                                        "bottom": 877,
+                                        "left": 0,
+                                        "right": 980,
+                                        "width": 980,
+                                        "height": 877
+                                    },
+                                    "snippet": "<body class=\"fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh x1 Locale_en_US cores-gte4\u2026\" dir=\"ltr\">",
+                                    "nodeLabel": "body.fbIndex"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-8-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,UL,7,LI,0,A",
+                        "selector": "div#pageFooter > ul.uiList > li > a._sv4",
+                        "boundingRect": {
+                            "top": 751,
+                            "bottom": 765,
+                            "left": 499,
+                            "right": 543,
+                            "width": 44,
+                            "height": 14
+                        },
+                        "snippet": "<a class=\"_sv4\" dir=\"ltr\" href=\"https://de-de.facebook.com/\" onclick=\"require(&quot;IntlUtils&quot;).setCookieLocale(&quot;de_DE&quot;, &quot;en_US&quot;, &quot;https:\\/\\/de-de.fa\u2026\">",
+                        "nodeLabel": "Deutsch",
+                        "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.33 (foreground color: #8a8d91, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-2-BODY",
+                                    "path": "1,HTML,1,BODY",
+                                    "selector": "body.fbIndex",
+                                    "boundingRect": {
+                                        "top": 0,
+                                        "bottom": 877,
+                                        "left": 0,
+                                        "right": 980,
+                                        "width": 980,
+                                        "height": 877
+                                    },
+                                    "snippet": "<body class=\"fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh x1 Locale_en_US cores-gte4\u2026\" dir=\"ltr\">",
+                                    "nodeLabel": "body.fbIndex"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-9-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,UL,8,LI,0,A",
+                        "selector": "div#pageFooter > ul.uiList > li > a._sv4",
+                        "boundingRect": {
+                            "top": 751,
+                            "bottom": 765,
+                            "left": 553,
+                            "right": 592,
+                            "width": 39,
+                            "height": 14
+                        },
+                        "snippet": "<a class=\"_sv4\" dir=\"ltr\" href=\"https://it-it.facebook.com/\" onclick=\"require(&quot;IntlUtils&quot;).setCookieLocale(&quot;it_IT&quot;, &quot;en_US&quot;, &quot;https:\\/\\/it-it.fa\u2026\">",
+                        "nodeLabel": "Italiano",
+                        "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.33 (foreground color: #8a8d91, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-2-BODY",
+                                    "path": "1,HTML,1,BODY",
+                                    "selector": "body.fbIndex",
+                                    "boundingRect": {
+                                        "top": 0,
+                                        "bottom": 877,
+                                        "left": 0,
+                                        "right": 980,
+                                        "width": 980,
+                                        "height": 877
+                                    },
+                                    "snippet": "<body class=\"fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh x1 Locale_en_US cores-gte4\u2026\" dir=\"ltr\">",
+                                    "nodeLabel": "body.fbIndex"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-10-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,UL,9,LI,0,A",
+                        "selector": "div#pageFooter > ul.uiList > li > a._sv4",
+                        "boundingRect": {
+                            "top": 751,
+                            "bottom": 765,
+                            "left": 602,
+                            "right": 628,
+                            "width": 26,
+                            "height": 14
+                        },
+                        "snippet": "<a class=\"_sv4\" dir=\"rtl\" href=\"https://ar-ar.facebook.com/\" onclick=\"require(&quot;IntlUtils&quot;).setCookieLocale(&quot;ar_AR&quot;, &quot;en_US&quot;, &quot;https:\\/\\/ar-ar.fa\u2026\">",
+                        "nodeLabel": "\u0627\u0644\u0639\u0631\u0628\u064a\u0629",
+                        "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.33 (foreground color: #8a8d91, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-2-BODY",
+                                    "path": "1,HTML,1,BODY",
+                                    "selector": "body.fbIndex",
+                                    "boundingRect": {
+                                        "top": 0,
+                                        "bottom": 877,
+                                        "left": 0,
+                                        "right": 980,
+                                        "width": 980,
+                                        "height": 877
+                                    },
+                                    "snippet": "<body class=\"fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh x1 Locale_en_US cores-gte4\u2026\" dir=\"ltr\">",
+                                    "nodeLabel": "body.fbIndex"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-11-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,UL,10,LI,0,A",
+                        "selector": "div#pageFooter > ul.uiList > li > a._sv4",
+                        "boundingRect": {
+                            "top": 751,
+                            "bottom": 765,
+                            "left": 638,
+                            "right": 660,
+                            "width": 22,
+                            "height": 14
+                        },
+                        "snippet": "<a class=\"_sv4\" dir=\"ltr\" href=\"https://hi-in.facebook.com/\" onclick=\"require(&quot;IntlUtils&quot;).setCookieLocale(&quot;hi_IN&quot;, &quot;en_US&quot;, &quot;https:\\/\\/hi-in.fa\u2026\">",
+                        "nodeLabel": "\u0939\u093f\u0928\u094d\u0926\u0940",
+                        "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.33 (foreground color: #8a8d91, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-2-BODY",
+                                    "path": "1,HTML,1,BODY",
+                                    "selector": "body.fbIndex",
+                                    "boundingRect": {
+                                        "top": 0,
+                                        "bottom": 877,
+                                        "left": 0,
+                                        "right": 980,
+                                        "width": 980,
+                                        "height": 877
+                                    },
+                                    "snippet": "<body class=\"fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh x1 Locale_en_US cores-gte4\u2026\" dir=\"ltr\">",
+                                    "nodeLabel": "body.fbIndex"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-12-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,0,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 788,
+                            "bottom": 802,
+                            "left": 0,
+                            "right": 43,
+                            "width": 43,
+                            "height": 14
+                        },
+                        "snippet": "<a href=\"/reg/\">",
+                        "nodeLabel": "Sign Up",
+                        "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.33 (foreground color: #8a8d91, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-2-BODY",
+                                    "path": "1,HTML,1,BODY",
+                                    "selector": "body.fbIndex",
+                                    "boundingRect": {
+                                        "top": 0,
+                                        "bottom": 877,
+                                        "left": 0,
+                                        "right": 980,
+                                        "width": 980,
+                                        "height": 877
+                                    },
+                                    "snippet": "<body class=\"fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh x1 Locale_en_US cores-gte4\u2026\" dir=\"ltr\">",
+                                    "nodeLabel": "body.fbIndex"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-13-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,1,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 788,
+                            "bottom": 802,
+                            "left": 66,
+                            "right": 99,
+                            "width": 33,
+                            "height": 14
+                        },
+                        "snippet": "<a href=\"/login/\">",
+                        "nodeLabel": "Log In",
+                        "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.33 (foreground color: #8a8d91, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-2-BODY",
+                                    "path": "1,HTML,1,BODY",
+                                    "selector": "body.fbIndex",
+                                    "boundingRect": {
+                                        "top": 0,
+                                        "bottom": 877,
+                                        "left": 0,
+                                        "right": 980,
+                                        "width": 980,
+                                        "height": 877
+                                    },
+                                    "snippet": "<body class=\"fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh x1 Locale_en_US cores-gte4\u2026\" dir=\"ltr\">",
+                                    "nodeLabel": "body.fbIndex"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-14-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,2,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 788,
+                            "bottom": 802,
+                            "left": 123,
+                            "right": 182,
+                            "width": 59,
+                            "height": 14
+                        },
+                        "snippet": "<a href=\"https://messenger.com/\">",
+                        "nodeLabel": "Messenger",
+                        "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.33 (foreground color: #8a8d91, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-2-BODY",
+                                    "path": "1,HTML,1,BODY",
+                                    "selector": "body.fbIndex",
+                                    "boundingRect": {
+                                        "top": 0,
+                                        "bottom": 877,
+                                        "left": 0,
+                                        "right": 980,
+                                        "width": 980,
+                                        "height": 877
+                                    },
+                                    "snippet": "<body class=\"fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh x1 Locale_en_US cores-gte4\u2026\" dir=\"ltr\">",
+                                    "nodeLabel": "body.fbIndex"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-15-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,3,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 788,
+                            "bottom": 802,
+                            "left": 205,
+                            "right": 281,
+                            "width": 75,
+                            "height": 14
+                        },
+                        "snippet": "<a href=\"/lite/\">",
+                        "nodeLabel": "Facebook Lite",
+                        "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.33 (foreground color: #8a8d91, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-2-BODY",
+                                    "path": "1,HTML,1,BODY",
+                                    "selector": "body.fbIndex",
+                                    "boundingRect": {
+                                        "top": 0,
+                                        "bottom": 877,
+                                        "left": 0,
+                                        "right": 980,
+                                        "width": 980,
+                                        "height": 877
+                                    },
+                                    "snippet": "<body class=\"fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh x1 Locale_en_US cores-gte4\u2026\" dir=\"ltr\">",
+                                    "nodeLabel": "body.fbIndex"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-16-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,4,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 788,
+                            "bottom": 802,
+                            "left": 304,
+                            "right": 335,
+                            "width": 30,
+                            "height": 14
+                        },
+                        "snippet": "<a href=\"https://www.facebook.com/watch/\">",
+                        "nodeLabel": "Video",
+                        "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.33 (foreground color: #8a8d91, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-2-BODY",
+                                    "path": "1,HTML,1,BODY",
+                                    "selector": "body.fbIndex",
+                                    "boundingRect": {
+                                        "top": 0,
+                                        "bottom": 877,
+                                        "left": 0,
+                                        "right": 980,
+                                        "width": 980,
+                                        "height": 877
+                                    },
+                                    "snippet": "<body class=\"fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh x1 Locale_en_US cores-gte4\u2026\" dir=\"ltr\">",
+                                    "nodeLabel": "body.fbIndex"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-17-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,5,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 788,
+                            "bottom": 802,
+                            "left": 358,
+                            "right": 394,
+                            "width": 36,
+                            "height": 14
+                        },
+                        "snippet": "<a href=\"/places/\">",
+                        "nodeLabel": "Places",
+                        "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.33 (foreground color: #8a8d91, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-2-BODY",
+                                    "path": "1,HTML,1,BODY",
+                                    "selector": "body.fbIndex",
+                                    "boundingRect": {
+                                        "top": 0,
+                                        "bottom": 877,
+                                        "left": 0,
+                                        "right": 980,
+                                        "width": 980,
+                                        "height": 877
+                                    },
+                                    "snippet": "<body class=\"fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh x1 Locale_en_US cores-gte4\u2026\" dir=\"ltr\">",
+                                    "nodeLabel": "body.fbIndex"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-18-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,6,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 788,
+                            "bottom": 802,
+                            "left": 417,
+                            "right": 456,
+                            "width": 39,
+                            "height": 14
+                        },
+                        "snippet": "<a href=\"/games/\">",
+                        "nodeLabel": "Games",
+                        "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.33 (foreground color: #8a8d91, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-2-BODY",
+                                    "path": "1,HTML,1,BODY",
+                                    "selector": "body.fbIndex",
+                                    "boundingRect": {
+                                        "top": 0,
+                                        "bottom": 877,
+                                        "left": 0,
+                                        "right": 980,
+                                        "width": 980,
+                                        "height": 877
+                                    },
+                                    "snippet": "<body class=\"fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh x1 Locale_en_US cores-gte4\u2026\" dir=\"ltr\">",
+                                    "nodeLabel": "body.fbIndex"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-19-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,7,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 788,
+                            "bottom": 802,
+                            "left": 479,
+                            "right": 545,
+                            "width": 65,
+                            "height": 14
+                        },
+                        "snippet": "<a href=\"/marketplace/\">",
+                        "nodeLabel": "Marketplace",
+                        "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.33 (foreground color: #8a8d91, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-2-BODY",
+                                    "path": "1,HTML,1,BODY",
+                                    "selector": "body.fbIndex",
+                                    "boundingRect": {
+                                        "top": 0,
+                                        "bottom": 877,
+                                        "left": 0,
+                                        "right": 980,
+                                        "width": 980,
+                                        "height": 877
+                                    },
+                                    "snippet": "<body class=\"fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh x1 Locale_en_US cores-gte4\u2026\" dir=\"ltr\">",
+                                    "nodeLabel": "body.fbIndex"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-20-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,8,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 788,
+                            "bottom": 802,
+                            "left": 568,
+                            "right": 619,
+                            "width": 51,
+                            "height": 14
+                        },
+                        "snippet": "<a href=\"https://pay.facebook.com/\" target=\"_blank\">",
+                        "nodeLabel": "Meta Pay",
+                        "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.33 (foreground color: #8a8d91, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-2-BODY",
+                                    "path": "1,HTML,1,BODY",
+                                    "selector": "body.fbIndex",
+                                    "boundingRect": {
+                                        "top": 0,
+                                        "bottom": 877,
+                                        "left": 0,
+                                        "right": 980,
+                                        "width": 980,
+                                        "height": 877
+                                    },
+                                    "snippet": "<body class=\"fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh x1 Locale_en_US cores-gte4\u2026\" dir=\"ltr\">",
+                                    "nodeLabel": "body.fbIndex"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-21-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,9,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 788,
+                            "bottom": 802,
+                            "left": 642,
+                            "right": 701,
+                            "width": 59,
+                            "height": 14
+                        },
+                        "snippet": "<a href=\"https://www.meta.com/\" target=\"_blank\">",
+                        "nodeLabel": "Meta Store",
+                        "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.33 (foreground color: #8a8d91, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-2-BODY",
+                                    "path": "1,HTML,1,BODY",
+                                    "selector": "body.fbIndex",
+                                    "boundingRect": {
+                                        "top": 0,
+                                        "bottom": 877,
+                                        "left": 0,
+                                        "right": 980,
+                                        "width": 980,
+                                        "height": 877
+                                    },
+                                    "snippet": "<body class=\"fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh x1 Locale_en_US cores-gte4\u2026\" dir=\"ltr\">",
+                                    "nodeLabel": "body.fbIndex"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-22-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,10,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 788,
+                            "bottom": 802,
+                            "left": 724,
+                            "right": 786,
+                            "width": 62,
+                            "height": 14
+                        },
+                        "snippet": "<a href=\"https://www.meta.com/quest/\" target=\"_blank\">",
+                        "nodeLabel": "Meta Quest",
+                        "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.33 (foreground color: #8a8d91, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-2-BODY",
+                                    "path": "1,HTML,1,BODY",
+                                    "selector": "body.fbIndex",
+                                    "boundingRect": {
+                                        "top": 0,
+                                        "bottom": 877,
+                                        "left": 0,
+                                        "right": 980,
+                                        "width": 980,
+                                        "height": 877
+                                    },
+                                    "snippet": "<body class=\"fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh x1 Locale_en_US cores-gte4\u2026\" dir=\"ltr\">",
+                                    "nodeLabel": "body.fbIndex"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-23-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,11,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 788,
+                            "bottom": 802,
+                            "left": 809,
+                            "right": 850,
+                            "width": 41,
+                            "height": 14
+                        },
+                        "snippet": "<a href=\"https://www.meta.ai/\">",
+                        "nodeLabel": "Meta AI",
+                        "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.33 (foreground color: #8a8d91, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-2-BODY",
+                                    "path": "1,HTML,1,BODY",
+                                    "selector": "body.fbIndex",
+                                    "boundingRect": {
+                                        "top": 0,
+                                        "bottom": 877,
+                                        "left": 0,
+                                        "right": 980,
+                                        "width": 980,
+                                        "height": 877
+                                    },
+                                    "snippet": "<body class=\"fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh x1 Locale_en_US cores-gte4\u2026\" dir=\"ltr\">",
+                                    "nodeLabel": "body.fbIndex"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-24-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,12,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 788,
+                            "bottom": 802,
+                            "left": 874,
+                            "right": 927,
+                            "width": 53,
+                            "height": 14
+                        },
+                        "snippet": "<a data-lynx-mode=\"hover\" href=\"https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2F&amp;h=AT0tRz\u2026\" rel=\"nofollow\" target=\"_blank\">",
+                        "nodeLabel": "Instagram",
+                        "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.33 (foreground color: #8a8d91, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-2-BODY",
+                                    "path": "1,HTML,1,BODY",
+                                    "selector": "body.fbIndex",
+                                    "boundingRect": {
+                                        "top": 0,
+                                        "bottom": 877,
+                                        "left": 0,
+                                        "right": 980,
+                                        "width": 980,
+                                        "height": 877
+                                    },
+                                    "snippet": "<body class=\"fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh x1 Locale_en_US cores-gte4\u2026\" dir=\"ltr\">",
+                                    "nodeLabel": "body.fbIndex"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-25-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,13,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 807,
+                            "bottom": 821,
+                            "left": 0,
+                            "right": 44,
+                            "width": 44,
+                            "height": 14
+                        },
+                        "snippet": "<a href=\"https://www.threads.net/\">",
+                        "nodeLabel": "Threads",
+                        "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.33 (foreground color: #8a8d91, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-2-BODY",
+                                    "path": "1,HTML,1,BODY",
+                                    "selector": "body.fbIndex",
+                                    "boundingRect": {
+                                        "top": 0,
+                                        "bottom": 877,
+                                        "left": 0,
+                                        "right": 980,
+                                        "width": 980,
+                                        "height": 877
+                                    },
+                                    "snippet": "<body class=\"fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh x1 Locale_en_US cores-gte4\u2026\" dir=\"ltr\">",
+                                    "nodeLabel": "body.fbIndex"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-26-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,14,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 807,
+                            "bottom": 821,
+                            "left": 67,
+                            "right": 131,
+                            "width": 63,
+                            "height": 14
+                        },
+                        "snippet": "<a href=\"/fundraisers/\">",
+                        "nodeLabel": "Fundraisers",
+                        "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.33 (foreground color: #8a8d91, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-2-BODY",
+                                    "path": "1,HTML,1,BODY",
+                                    "selector": "body.fbIndex",
+                                    "boundingRect": {
+                                        "top": 0,
+                                        "bottom": 877,
+                                        "left": 0,
+                                        "right": 980,
+                                        "width": 980,
+                                        "height": 877
+                                    },
+                                    "snippet": "<body class=\"fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh x1 Locale_en_US cores-gte4\u2026\" dir=\"ltr\">",
+                                    "nodeLabel": "body.fbIndex"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-27-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,15,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 807,
+                            "bottom": 821,
+                            "left": 154,
+                            "right": 200,
+                            "width": 46,
+                            "height": 14
+                        },
+                        "snippet": "<a href=\"/biz/directory/\">",
+                        "nodeLabel": "Services",
+                        "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.33 (foreground color: #8a8d91, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-2-BODY",
+                                    "path": "1,HTML,1,BODY",
+                                    "selector": "body.fbIndex",
+                                    "boundingRect": {
+                                        "top": 0,
+                                        "bottom": 877,
+                                        "left": 0,
+                                        "right": 980,
+                                        "width": 980,
+                                        "height": 877
+                                    },
+                                    "snippet": "<body class=\"fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh x1 Locale_en_US cores-gte4\u2026\" dir=\"ltr\">",
+                                    "nodeLabel": "body.fbIndex"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-28-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,16,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 807,
+                            "bottom": 821,
+                            "left": 223,
+                            "right": 359,
+                            "width": 136,
+                            "height": 14
+                        },
+                        "snippet": "<a href=\"/votinginformationcenter/?entry_point=c2l0ZQ%3D%3D\">",
+                        "nodeLabel": "Voting Information Center",
+                        "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.33 (foreground color: #8a8d91, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-2-BODY",
+                                    "path": "1,HTML,1,BODY",
+                                    "selector": "body.fbIndex",
+                                    "boundingRect": {
+                                        "top": 0,
+                                        "bottom": 877,
+                                        "left": 0,
+                                        "right": 980,
+                                        "width": 980,
+                                        "height": 877
+                                    },
+                                    "snippet": "<body class=\"fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh x1 Locale_en_US cores-gte4\u2026\" dir=\"ltr\">",
+                                    "nodeLabel": "body.fbIndex"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-29-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,17,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 807,
+                            "bottom": 821,
+                            "left": 383,
+                            "right": 458,
+                            "width": 75,
+                            "height": 14
+                        },
+                        "snippet": "<a href=\"/privacy/policy/?entry_point=facebook_page_footer\">",
+                        "nodeLabel": "Privacy Policy",
+                        "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.33 (foreground color: #8a8d91, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-2-BODY",
+                                    "path": "1,HTML,1,BODY",
+                                    "selector": "body.fbIndex",
+                                    "boundingRect": {
+                                        "top": 0,
+                                        "bottom": 877,
+                                        "left": 0,
+                                        "right": 980,
+                                        "width": 980,
+                                        "height": 877
+                                    },
+                                    "snippet": "<body class=\"fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh x1 Locale_en_US cores-gte4\u2026\" dir=\"ltr\">",
+                                    "nodeLabel": "body.fbIndex"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-30-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,18,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 807,
+                            "bottom": 821,
+                            "left": 481,
+                            "right": 560,
+                            "width": 79,
+                            "height": 14
+                        },
+                        "snippet": "<a href=\"/privacy/center/?entry_point=facebook_page_footer\">",
+                        "nodeLabel": "Privacy Center",
+                        "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.33 (foreground color: #8a8d91, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-2-BODY",
+                                    "path": "1,HTML,1,BODY",
+                                    "selector": "body.fbIndex",
+                                    "boundingRect": {
+                                        "top": 0,
+                                        "bottom": 877,
+                                        "left": 0,
+                                        "right": 980,
+                                        "width": 980,
+                                        "height": 877
+                                    },
+                                    "snippet": "<body class=\"fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh x1 Locale_en_US cores-gte4\u2026\" dir=\"ltr\">",
+                                    "nodeLabel": "body.fbIndex"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-31-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,19,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 807,
+                            "bottom": 821,
+                            "left": 583,
+                            "right": 622,
+                            "width": 39,
+                            "height": 14
+                        },
+                        "snippet": "<a href=\"/groups/discover/\">",
+                        "nodeLabel": "Groups",
+                        "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.33 (foreground color: #8a8d91, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-2-BODY",
+                                    "path": "1,HTML,1,BODY",
+                                    "selector": "body.fbIndex",
+                                    "boundingRect": {
+                                        "top": 0,
+                                        "bottom": 877,
+                                        "left": 0,
+                                        "right": 980,
+                                        "width": 980,
+                                        "height": 877
+                                    },
+                                    "snippet": "<body class=\"fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh x1 Locale_en_US cores-gte4\u2026\" dir=\"ltr\">",
+                                    "nodeLabel": "body.fbIndex"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-32-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,20,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 807,
+                            "bottom": 821,
+                            "left": 646,
+                            "right": 677,
+                            "width": 31,
+                            "height": 14
+                        },
+                        "snippet": "<a accesskey=\"8\" href=\"https://about.meta.com/\">",
+                        "nodeLabel": "About",
+                        "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.33 (foreground color: #8a8d91, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-2-BODY",
+                                    "path": "1,HTML,1,BODY",
+                                    "selector": "body.fbIndex",
+                                    "boundingRect": {
+                                        "top": 0,
+                                        "bottom": 877,
+                                        "left": 0,
+                                        "right": 980,
+                                        "width": 980,
+                                        "height": 877
+                                    },
+                                    "snippet": "<body class=\"fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh x1 Locale_en_US cores-gte4\u2026\" dir=\"ltr\">",
+                                    "nodeLabel": "body.fbIndex"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-33-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,21,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 807,
+                            "bottom": 821,
+                            "left": 700,
+                            "right": 753,
+                            "width": 53,
+                            "height": 14
+                        },
+                        "snippet": "<a href=\"/ad_campaign/landing.php?placement=pflo&amp;campaign_id=402047449186&amp;nav_sourc\u2026\">",
+                        "nodeLabel": "Create ad",
+                        "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.33 (foreground color: #8a8d91, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-2-BODY",
+                                    "path": "1,HTML,1,BODY",
+                                    "selector": "body.fbIndex",
+                                    "boundingRect": {
+                                        "top": 0,
+                                        "bottom": 877,
+                                        "left": 0,
+                                        "right": 980,
+                                        "width": 980,
+                                        "height": 877
+                                    },
+                                    "snippet": "<body class=\"fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh x1 Locale_en_US cores-gte4\u2026\" dir=\"ltr\">",
+                                    "nodeLabel": "body.fbIndex"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-34-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,22,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 807,
+                            "bottom": 821,
+                            "left": 776,
+                            "right": 844,
+                            "width": 67,
+                            "height": 14
+                        },
+                        "snippet": "<a href=\"/pages/create/?ref_type=site_footer\">",
+                        "nodeLabel": "Create Page",
+                        "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.33 (foreground color: #8a8d91, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-2-BODY",
+                                    "path": "1,HTML,1,BODY",
+                                    "selector": "body.fbIndex",
+                                    "boundingRect": {
+                                        "top": 0,
+                                        "bottom": 877,
+                                        "left": 0,
+                                        "right": 980,
+                                        "width": 980,
+                                        "height": 877
+                                    },
+                                    "snippet": "<body class=\"fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh x1 Locale_en_US cores-gte4\u2026\" dir=\"ltr\">",
+                                    "nodeLabel": "body.fbIndex"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-35-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,23,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 807,
+                            "bottom": 821,
+                            "left": 867,
+                            "right": 928,
+                            "width": 61,
+                            "height": 14
+                        },
+                        "snippet": "<a href=\"https://developers.facebook.com/?ref=pf\">",
+                        "nodeLabel": "Developers",
+                        "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.33 (foreground color: #8a8d91, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-2-BODY",
+                                    "path": "1,HTML,1,BODY",
+                                    "selector": "body.fbIndex",
+                                    "boundingRect": {
+                                        "top": 0,
+                                        "bottom": 877,
+                                        "left": 0,
+                                        "right": 980,
+                                        "width": 980,
+                                        "height": 877
+                                    },
+                                    "snippet": "<body class=\"fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh x1 Locale_en_US cores-gte4\u2026\" dir=\"ltr\">",
+                                    "nodeLabel": "body.fbIndex"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-36-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,24,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 826,
+                            "bottom": 840,
+                            "left": 0,
+                            "right": 43,
+                            "width": 43,
+                            "height": 14
+                        },
+                        "snippet": "<a href=\"/careers/?ref=pf\">",
+                        "nodeLabel": "Careers",
+                        "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.33 (foreground color: #8a8d91, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-2-BODY",
+                                    "path": "1,HTML,1,BODY",
+                                    "selector": "body.fbIndex",
+                                    "boundingRect": {
+                                        "top": 0,
+                                        "bottom": 877,
+                                        "left": 0,
+                                        "right": 980,
+                                        "width": 980,
+                                        "height": 877
+                                    },
+                                    "snippet": "<body class=\"fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh x1 Locale_en_US cores-gte4\u2026\" dir=\"ltr\">",
+                                    "nodeLabel": "body.fbIndex"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-37-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,25,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 826,
+                            "bottom": 840,
+                            "left": 66,
+                            "right": 109,
+                            "width": 43,
+                            "height": 14
+                        },
+                        "snippet": "<a data-nocookies=\"1\" href=\"/policies/cookies/\">",
+                        "nodeLabel": "Cookies",
+                        "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.33 (foreground color: #8a8d91, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-2-BODY",
+                                    "path": "1,HTML,1,BODY",
+                                    "selector": "body.fbIndex",
+                                    "boundingRect": {
+                                        "top": 0,
+                                        "bottom": 877,
+                                        "left": 0,
+                                        "right": 980,
+                                        "width": 980,
+                                        "height": 877
+                                    },
+                                    "snippet": "<body class=\"fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh x1 Locale_en_US cores-gte4\u2026\" dir=\"ltr\">",
+                                    "nodeLabel": "body.fbIndex"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-38-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,26,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a._41ug",
+                        "boundingRect": {
+                            "top": 823,
+                            "bottom": 843,
+                            "left": 133,
+                            "right": 205,
+                            "width": 73,
+                            "height": 19
+                        },
+                        "snippet": "<a class=\"_41ug\" data-nocookies=\"1\" href=\"https://www.facebook.com/help/568137493302217\">",
+                        "nodeLabel": "Ad choices",
+                        "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.33 (foreground color: #8a8d91, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-2-BODY",
+                                    "path": "1,HTML,1,BODY",
+                                    "selector": "body.fbIndex",
+                                    "boundingRect": {
+                                        "top": 0,
+                                        "bottom": 877,
+                                        "left": 0,
+                                        "right": 980,
+                                        "width": 980,
+                                        "height": 877
+                                    },
+                                    "snippet": "<body class=\"fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh x1 Locale_en_US cores-gte4\u2026\" dir=\"ltr\">",
+                                    "nodeLabel": "body.fbIndex"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-39-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,27,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 826,
+                            "bottom": 840,
+                            "left": 229,
+                            "right": 261,
+                            "width": 33,
+                            "height": 14
+                        },
+                        "snippet": "<a accesskey=\"9\" data-nocookies=\"1\" href=\"/policies?ref=pf\">",
+                        "nodeLabel": "Terms",
+                        "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.33 (foreground color: #8a8d91, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-2-BODY",
+                                    "path": "1,HTML,1,BODY",
+                                    "selector": "body.fbIndex",
+                                    "boundingRect": {
+                                        "top": 0,
+                                        "bottom": 877,
+                                        "left": 0,
+                                        "right": 980,
+                                        "width": 980,
+                                        "height": 877
+                                    },
+                                    "snippet": "<body class=\"fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh x1 Locale_en_US cores-gte4\u2026\" dir=\"ltr\">",
+                                    "nodeLabel": "body.fbIndex"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-40-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,28,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 826,
+                            "bottom": 840,
+                            "left": 285,
+                            "right": 309,
+                            "width": 25,
+                            "height": 14
+                        },
+                        "snippet": "<a accesskey=\"0\" href=\"/help/?ref=pf\">",
+                        "nodeLabel": "Help",
+                        "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.33 (foreground color: #8a8d91, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-2-BODY",
+                                    "path": "1,HTML,1,BODY",
+                                    "selector": "body.fbIndex",
+                                    "boundingRect": {
+                                        "top": 0,
+                                        "bottom": 877,
+                                        "left": 0,
+                                        "right": 980,
+                                        "width": 980,
+                                        "height": 877
+                                    },
+                                    "snippet": "<body class=\"fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh x1 Locale_en_US cores-gte4\u2026\" dir=\"ltr\">",
+                                    "nodeLabel": "body.fbIndex"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-41-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,29,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 826,
+                            "bottom": 840,
+                            "left": 333,
+                            "right": 504,
+                            "width": 171,
+                            "height": 14
+                        },
+                        "snippet": "<a href=\"help/637205020878504\">",
+                        "nodeLabel": "Contact Uploading & Non-Users",
+                        "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.33 (foreground color: #8a8d91, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-2-BODY",
+                                    "path": "1,HTML,1,BODY",
+                                    "selector": "body.fbIndex",
+                                    "boundingRect": {
+                                        "top": 0,
+                                        "bottom": 877,
+                                        "left": 0,
+                                        "right": 980,
+                                        "width": 980,
+                                        "height": 877
+                                    },
+                                    "snippet": "<body class=\"fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh x1 Locale_en_US cores-gte4\u2026\" dir=\"ltr\">",
+                                    "nodeLabel": "body.fbIndex"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "impact": "serious",
+                "tags": [
+                    "cat.color",
+                    "wcag2aa",
+                    "wcag143",
+                    "TTv5",
+                    "TT13.c",
+                    "EN-301-549",
+                    "EN-9.1.4.3",
+                    "ACT"
+                ]
+            }
+        }
+    },
+    "target-size": {
+        "id": "target-size",
+        "title": "Touch targets do not have sufficient size or spacing.",
+        "description": "Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. [Learn more about touch targets](https://dequeuniversity.com/rules/axe/4.9/target-size).",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "details": {
+            "type": "table",
+            "headings": [
+                {
+                    "key": "node",
+                    "valueType": "node",
+                    "subItemsHeading": {
+                        "key": "relatedNode",
+                        "valueType": "node"
+                    },
+                    "label": "Failing Elements"
+                }
+            ],
+            "items": [
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-12-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,0,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 788,
+                            "bottom": 802,
+                            "left": 0,
+                            "right": 43,
+                            "width": 43,
+                            "height": 14
+                        },
+                        "snippet": "<a href=\"/reg/\">",
+                        "nodeLabel": "Sign Up",
+                        "explanation": "Fix any of the following:\n  Target has insufficient size (42.7px by 14px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 14.4px instead of at least 24px."
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-25-A",
+                                    "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,13,LI,0,A",
+                                    "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                                    "boundingRect": {
+                                        "top": 807,
+                                        "bottom": 821,
+                                        "left": 0,
+                                        "right": 44,
+                                        "width": 44,
+                                        "height": 14
+                                    },
+                                    "snippet": "<a href=\"https://www.threads.net/\">",
+                                    "nodeLabel": "Threads"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-19-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,7,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 788,
+                            "bottom": 802,
+                            "left": 479,
+                            "right": 545,
+                            "width": 65,
+                            "height": 14
+                        },
+                        "snippet": "<a href=\"/marketplace/\">",
+                        "nodeLabel": "Marketplace",
+                        "explanation": "Fix any of the following:\n  Target has insufficient size (65.4px by 14px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.8px instead of at least 24px."
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-30-A",
+                                    "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,18,LI,0,A",
+                                    "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                                    "boundingRect": {
+                                        "top": 807,
+                                        "bottom": 821,
+                                        "left": 481,
+                                        "right": 560,
+                                        "width": 79,
+                                        "height": 14
+                                    },
+                                    "snippet": "<a href=\"/privacy/center/?entry_point=facebook_page_footer\">",
+                                    "nodeLabel": "Privacy Center"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-20-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,8,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 788,
+                            "bottom": 802,
+                            "left": 568,
+                            "right": 619,
+                            "width": 51,
+                            "height": 14
+                        },
+                        "snippet": "<a href=\"https://pay.facebook.com/\" target=\"_blank\">",
+                        "nodeLabel": "Meta Pay",
+                        "explanation": "Fix any of the following:\n  Target has insufficient size (50.7px by 14px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18.6px instead of at least 24px."
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-31-A",
+                                    "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,19,LI,0,A",
+                                    "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                                    "boundingRect": {
+                                        "top": 807,
+                                        "bottom": 821,
+                                        "left": 583,
+                                        "right": 622,
+                                        "width": 39,
+                                        "height": 14
+                                    },
+                                    "snippet": "<a href=\"/groups/discover/\">",
+                                    "nodeLabel": "Groups"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-21-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,9,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 788,
+                            "bottom": 802,
+                            "left": 642,
+                            "right": 701,
+                            "width": 59,
+                            "height": 14
+                        },
+                        "snippet": "<a href=\"https://www.meta.com/\" target=\"_blank\">",
+                        "nodeLabel": "Meta Store",
+                        "explanation": "Fix any of the following:\n  Target has insufficient size (58.7px by 14px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 19.4px instead of at least 24px."
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-32-A",
+                                    "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,20,LI,0,A",
+                                    "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                                    "boundingRect": {
+                                        "top": 807,
+                                        "bottom": 821,
+                                        "left": 646,
+                                        "right": 677,
+                                        "width": 31,
+                                        "height": 14
+                                    },
+                                    "snippet": "<a accesskey=\"8\" href=\"https://about.meta.com/\">",
+                                    "nodeLabel": "About"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-24-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,12,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 788,
+                            "bottom": 802,
+                            "left": 874,
+                            "right": 927,
+                            "width": 53,
+                            "height": 14
+                        },
+                        "snippet": "<a data-lynx-mode=\"hover\" href=\"https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2F&amp;h=AT0tRz\u2026\" rel=\"nofollow\" target=\"_blank\">",
+                        "nodeLabel": "Instagram",
+                        "explanation": "Fix any of the following:\n  Target has insufficient size (53.4px by 14px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 14.8px instead of at least 24px."
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-35-A",
+                                    "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,23,LI,0,A",
+                                    "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                                    "boundingRect": {
+                                        "top": 807,
+                                        "bottom": 821,
+                                        "left": 867,
+                                        "right": 928,
+                                        "width": 61,
+                                        "height": 14
+                                    },
+                                    "snippet": "<a href=\"https://developers.facebook.com/?ref=pf\">",
+                                    "nodeLabel": "Developers"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-25-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,13,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 807,
+                            "bottom": 821,
+                            "left": 0,
+                            "right": 44,
+                            "width": 44,
+                            "height": 14
+                        },
+                        "snippet": "<a href=\"https://www.threads.net/\">",
+                        "nodeLabel": "Threads",
+                        "explanation": "Fix any of the following:\n  Target has insufficient size (44px by 14px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 14.4px instead of at least 24px."
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-12-A",
+                                    "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,0,LI,0,A",
+                                    "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                                    "boundingRect": {
+                                        "top": 788,
+                                        "bottom": 802,
+                                        "left": 0,
+                                        "right": 43,
+                                        "width": 43,
+                                        "height": 14
+                                    },
+                                    "snippet": "<a href=\"/reg/\">",
+                                    "nodeLabel": "Sign Up"
+                                }
+                            },
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-36-A",
+                                    "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,24,LI,0,A",
+                                    "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                                    "boundingRect": {
+                                        "top": 826,
+                                        "bottom": 840,
+                                        "left": 0,
+                                        "right": 43,
+                                        "width": 43,
+                                        "height": 14
+                                    },
+                                    "snippet": "<a href=\"/careers/?ref=pf\">",
+                                    "nodeLabel": "Careers"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-26-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,14,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 807,
+                            "bottom": 821,
+                            "left": 67,
+                            "right": 131,
+                            "width": 63,
+                            "height": 14
+                        },
+                        "snippet": "<a href=\"/fundraisers/\">",
+                        "nodeLabel": "Fundraisers",
+                        "explanation": "Fix any of the following:\n  Target has insufficient size (63.4px by 14px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 20.6px instead of at least 24px."
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-37-A",
+                                    "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,25,LI,0,A",
+                                    "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                                    "boundingRect": {
+                                        "top": 826,
+                                        "bottom": 840,
+                                        "left": 66,
+                                        "right": 109,
+                                        "width": 43,
+                                        "height": 14
+                                    },
+                                    "snippet": "<a data-nocookies=\"1\" href=\"/policies/cookies/\">",
+                                    "nodeLabel": "Cookies"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-27-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,15,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 807,
+                            "bottom": 821,
+                            "left": 154,
+                            "right": 200,
+                            "width": 46,
+                            "height": 14
+                        },
+                        "snippet": "<a href=\"/biz/directory/\">",
+                        "nodeLabel": "Services",
+                        "explanation": "Fix any of the following:\n  Target has insufficient size (46px by 14px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.8px instead of at least 24px."
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-38-A",
+                                    "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,26,LI,0,A",
+                                    "selector": "div#pageFooterChildren > ul.uiList > li > a._41ug",
+                                    "boundingRect": {
+                                        "top": 823,
+                                        "bottom": 843,
+                                        "left": 133,
+                                        "right": 205,
+                                        "width": 73,
+                                        "height": 19
+                                    },
+                                    "snippet": "<a class=\"_41ug\" data-nocookies=\"1\" href=\"https://www.facebook.com/help/568137493302217\">",
+                                    "nodeLabel": "Ad choices"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-28-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,16,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 807,
+                            "bottom": 821,
+                            "left": 223,
+                            "right": 359,
+                            "width": 136,
+                            "height": 14
+                        },
+                        "snippet": "<a href=\"/votinginformationcenter/?entry_point=c2l0ZQ%3D%3D\">",
+                        "nodeLabel": "Voting Information Center",
+                        "explanation": "Fix any of the following:\n  Target has insufficient size (136.1px by 14px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 16px instead of at least 24px."
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-40-A",
+                                    "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,28,LI,0,A",
+                                    "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                                    "boundingRect": {
+                                        "top": 826,
+                                        "bottom": 840,
+                                        "left": 285,
+                                        "right": 309,
+                                        "width": 25,
+                                        "height": 14
+                                    },
+                                    "snippet": "<a accesskey=\"0\" href=\"/help/?ref=pf\">",
+                                    "nodeLabel": "Help"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-29-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,17,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 807,
+                            "bottom": 821,
+                            "left": 383,
+                            "right": 458,
+                            "width": 75,
+                            "height": 14
+                        },
+                        "snippet": "<a href=\"/privacy/policy/?entry_point=facebook_page_footer\">",
+                        "nodeLabel": "Privacy Policy",
+                        "explanation": "Fix any of the following:\n  Target has insufficient size (74.7px by 14px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 14.6px instead of at least 24px."
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-41-A",
+                                    "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,29,LI,0,A",
+                                    "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                                    "boundingRect": {
+                                        "top": 826,
+                                        "bottom": 840,
+                                        "left": 333,
+                                        "right": 504,
+                                        "width": 171,
+                                        "height": 14
+                                    },
+                                    "snippet": "<a href=\"help/637205020878504\">",
+                                    "nodeLabel": "Contact Uploading & Non-Users"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-30-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,18,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 807,
+                            "bottom": 821,
+                            "left": 481,
+                            "right": 560,
+                            "width": 79,
+                            "height": 14
+                        },
+                        "snippet": "<a href=\"/privacy/center/?entry_point=facebook_page_footer\">",
+                        "nodeLabel": "Privacy Center",
+                        "explanation": "Fix any of the following:\n  Target has insufficient size (78.7px by 14px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.8px instead of at least 24px."
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-19-A",
+                                    "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,7,LI,0,A",
+                                    "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                                    "boundingRect": {
+                                        "top": 788,
+                                        "bottom": 802,
+                                        "left": 479,
+                                        "right": 545,
+                                        "width": 65,
+                                        "height": 14
+                                    },
+                                    "snippet": "<a href=\"/marketplace/\">",
+                                    "nodeLabel": "Marketplace"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-31-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,19,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 807,
+                            "bottom": 821,
+                            "left": 583,
+                            "right": 622,
+                            "width": 39,
+                            "height": 14
+                        },
+                        "snippet": "<a href=\"/groups/discover/\">",
+                        "nodeLabel": "Groups",
+                        "explanation": "Fix any of the following:\n  Target has insufficient size (39.4px by 14px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18.6px instead of at least 24px."
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-20-A",
+                                    "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,8,LI,0,A",
+                                    "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                                    "boundingRect": {
+                                        "top": 788,
+                                        "bottom": 802,
+                                        "left": 568,
+                                        "right": 619,
+                                        "width": 51,
+                                        "height": 14
+                                    },
+                                    "snippet": "<a href=\"https://pay.facebook.com/\" target=\"_blank\">",
+                                    "nodeLabel": "Meta Pay"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-32-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,20,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 807,
+                            "bottom": 821,
+                            "left": 646,
+                            "right": 677,
+                            "width": 31,
+                            "height": 14
+                        },
+                        "snippet": "<a accesskey=\"8\" href=\"https://about.meta.com/\">",
+                        "nodeLabel": "About",
+                        "explanation": "Fix any of the following:\n  Target has insufficient size (31.4px by 14px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 19.4px instead of at least 24px."
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-21-A",
+                                    "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,9,LI,0,A",
+                                    "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                                    "boundingRect": {
+                                        "top": 788,
+                                        "bottom": 802,
+                                        "left": 642,
+                                        "right": 701,
+                                        "width": 59,
+                                        "height": 14
+                                    },
+                                    "snippet": "<a href=\"https://www.meta.com/\" target=\"_blank\">",
+                                    "nodeLabel": "Meta Store"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-35-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,23,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 807,
+                            "bottom": 821,
+                            "left": 867,
+                            "right": 928,
+                            "width": 61,
+                            "height": 14
+                        },
+                        "snippet": "<a href=\"https://developers.facebook.com/?ref=pf\">",
+                        "nodeLabel": "Developers",
+                        "explanation": "Fix any of the following:\n  Target has insufficient size (60.7px by 14px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 14.8px instead of at least 24px."
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-24-A",
+                                    "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,12,LI,0,A",
+                                    "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                                    "boundingRect": {
+                                        "top": 788,
+                                        "bottom": 802,
+                                        "left": 874,
+                                        "right": 927,
+                                        "width": 53,
+                                        "height": 14
+                                    },
+                                    "snippet": "<a data-lynx-mode=\"hover\" href=\"https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2F&amp;h=AT0tRz\u2026\" rel=\"nofollow\" target=\"_blank\">",
+                                    "nodeLabel": "Instagram"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-36-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,24,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 826,
+                            "bottom": 840,
+                            "left": 0,
+                            "right": 43,
+                            "width": 43,
+                            "height": 14
+                        },
+                        "snippet": "<a href=\"/careers/?ref=pf\">",
+                        "nodeLabel": "Careers",
+                        "explanation": "Fix any of the following:\n  Target has insufficient size (42.7px by 14px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 14.4px instead of at least 24px."
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-25-A",
+                                    "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,13,LI,0,A",
+                                    "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                                    "boundingRect": {
+                                        "top": 807,
+                                        "bottom": 821,
+                                        "left": 0,
+                                        "right": 44,
+                                        "width": 44,
+                                        "height": 14
+                                    },
+                                    "snippet": "<a href=\"https://www.threads.net/\">",
+                                    "nodeLabel": "Threads"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-37-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,25,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 826,
+                            "bottom": 840,
+                            "left": 66,
+                            "right": 109,
+                            "width": 43,
+                            "height": 14
+                        },
+                        "snippet": "<a data-nocookies=\"1\" href=\"/policies/cookies/\">",
+                        "nodeLabel": "Cookies",
+                        "explanation": "Fix any of the following:\n  Target has insufficient size (43.4px by 14px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 20.6px instead of at least 24px."
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-26-A",
+                                    "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,14,LI,0,A",
+                                    "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                                    "boundingRect": {
+                                        "top": 807,
+                                        "bottom": 821,
+                                        "left": 67,
+                                        "right": 131,
+                                        "width": 63,
+                                        "height": 14
+                                    },
+                                    "snippet": "<a href=\"/fundraisers/\">",
+                                    "nodeLabel": "Fundraisers"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-40-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,28,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 826,
+                            "bottom": 840,
+                            "left": 285,
+                            "right": 309,
+                            "width": 25,
+                            "height": 14
+                        },
+                        "snippet": "<a accesskey=\"0\" href=\"/help/?ref=pf\">",
+                        "nodeLabel": "Help",
+                        "explanation": "Fix any of the following:\n  Target has insufficient size (24.7px by 14px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 16px instead of at least 24px."
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-28-A",
+                                    "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,16,LI,0,A",
+                                    "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                                    "boundingRect": {
+                                        "top": 807,
+                                        "bottom": 821,
+                                        "left": 223,
+                                        "right": 359,
+                                        "width": 136,
+                                        "height": 14
+                                    },
+                                    "snippet": "<a href=\"/votinginformationcenter/?entry_point=c2l0ZQ%3D%3D\">",
+                                    "nodeLabel": "Voting Information Center"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "type": "node",
+                        "lhId": "1-41-A",
+                        "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,29,LI,0,A",
+                        "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                        "boundingRect": {
+                            "top": 826,
+                            "bottom": 840,
+                            "left": 333,
+                            "right": 504,
+                            "width": 171,
+                            "height": 14
+                        },
+                        "snippet": "<a href=\"help/637205020878504\">",
+                        "nodeLabel": "Contact Uploading & Non-Users",
+                        "explanation": "Fix any of the following:\n  Target has insufficient size (170.8px by 14px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 14.6px instead of at least 24px."
+                    },
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "relatedNode": {
+                                    "type": "node",
+                                    "lhId": "1-29-A",
+                                    "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,UL,17,LI,0,A",
+                                    "selector": "div#pageFooterChildren > ul.uiList > li > a",
+                                    "boundingRect": {
+                                        "top": 807,
+                                        "bottom": 821,
+                                        "left": 383,
+                                        "right": 458,
+                                        "width": 75,
+                                        "height": 14
+                                    },
+                                    "snippet": "<a href=\"/privacy/policy/?entry_point=facebook_page_footer\">",
+                                    "nodeLabel": "Privacy Policy"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "impact": "serious",
+                "tags": [
+                    "cat.sensory-and-visual-cues",
+                    "wcag22aa",
+                    "wcag258"
+                ]
+            }
+        }
+    },
+    "render-blocking-resources": {
+        "id": "render-blocking-resources",
+        "title": "Eliminate render-blocking resources",
+        "description": "Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn how to eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 1677,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 1,680\u00a0ms",
+        "metricSavings": {
+            "FCP": 1700,
+            "LCP": 1700
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "totalBytes",
+                    "valueType": "bytes",
+                    "label": "Transfer Size"
+                },
+                {
+                    "key": "wastedMs",
+                    "valueType": "timespanMs",
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/y5/l/0,cross/9uJ85fBP1ql.css?_nc_x=Ij3Wp8lg5Kz",
+                    "totalBytes": 3190,
+                    "wastedMs": 778
+                },
+                {
+                    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yi/l/0,cross/5C7LQe6FV-U.css?_nc_x=Ij3Wp8lg5Kz",
+                    "totalBytes": 3590,
+                    "wastedMs": 150
+                },
+                {
+                    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yW/r/9nUz5AS-QWA.js?_nc_x=Ij3Wp8lg5Kz",
+                    "totalBytes": 109032,
+                    "wastedMs": 600
+                }
+            ],
+            "overallSavingsMs": 1677
+        },
+        "guidanceLevel": 2
+    },
+    "unused-javascript": {
+        "id": "unused-javascript",
+        "title": "Reduce unused JavaScript",
+        "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 300,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 59\u00a0KiB",
+        "metricSavings": {
+            "FCP": 300,
+            "LCP": 300
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "subItemsHeading": {
+                        "key": "source",
+                        "valueType": "code"
+                    },
+                    "label": "URL"
+                },
+                {
+                    "key": "totalBytes",
+                    "valueType": "bytes",
+                    "subItemsHeading": {
+                        "key": "sourceBytes"
+                    },
+                    "label": "Transfer Size"
+                },
+                {
+                    "key": "wastedBytes",
+                    "valueType": "bytes",
+                    "subItemsHeading": {
+                        "key": "sourceWastedBytes"
+                    },
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yW/r/9nUz5AS-QWA.js?_nc_x=Ij3Wp8lg5Kz",
+                    "totalBytes": 108767,
+                    "wastedBytes": 60530,
+                    "wastedPercent": 55.65135938927007
+                }
+            ],
+            "overallSavingsMs": 300,
+            "overallSavingsBytes": 60530,
+            "sortedBy": [
+                "wastedBytes"
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "metricSavings": {
+                    "FCP": 300,
+                    "LCP": 300
+                }
+            }
+        },
+        "guidanceLevel": 1
+    },
+    "uses-text-compression": {
+        "id": "uses-text-compression",
+        "title": "Enable text compression",
+        "description": "Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more about text compression](https://developer.chrome.com/docs/lighthouse/performance/uses-text-compression/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 150,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 46\u00a0KiB",
+        "metricSavings": {
+            "FCP": 150,
+            "LCP": 150
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "label": "URL"
+                },
+                {
+                    "key": "totalBytes",
+                    "valueType": "bytes",
+                    "label": "Transfer Size"
+                },
+                {
+                    "key": "wastedBytes",
+                    "valueType": "bytes",
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "url": "http://localhost:8000/facebook.html",
+                    "totalBytes": 69795,
+                    "wastedBytes": 47604
+                }
+            ],
+            "overallSavingsMs": 150,
+            "overallSavingsBytes": 47604,
+            "sortedBy": [
+                "wastedBytes"
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "metricSavings": {
+                    "FCP": 150,
+                    "LCP": 150
+                }
+            }
+        },
+        "guidanceLevel": 3
+    },
+    "legacy-javascript": {
+        "id": "legacy-javascript",
+        "title": "Avoid serving legacy JavaScript to modern browsers",
+        "description": "Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. For your bundled JavaScript, adopt a modern script deployment strategy using module/nomodule feature detection to reduce the amount of code shipped to modern browsers, while retaining support for legacy browsers. [Learn how to use modern JavaScript](https://web.dev/articles/publish-modern-javascript)",
+        "score": 0.5,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 0,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 14\u00a0KiB",
+        "metricSavings": {
+            "FCP": 0,
+            "LCP": 0
+        },
+        "details": {
+            "type": "opportunity",
+            "headings": [
+                {
+                    "key": "url",
+                    "valueType": "url",
+                    "subItemsHeading": {
+                        "key": "location",
+                        "valueType": "source-location"
+                    },
+                    "label": "URL"
+                },
+                {
+                    "key": null,
+                    "valueType": "code",
+                    "subItemsHeading": {
+                        "key": "signal"
+                    },
+                    "label": ""
+                },
+                {
+                    "key": "wastedBytes",
+                    "valueType": "bytes",
+                    "label": "Potential Savings"
+                }
+            ],
+            "items": [
+                {
+                    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yW/r/9nUz5AS-QWA.js?_nc_x=Ij3Wp8lg5Kz",
+                    "wastedBytes": 14364,
+                    "subItems": {
+                        "type": "subitems",
+                        "items": [
+                            {
+                                "signal": "Array.from",
+                                "location": {
+                                    "type": "source-location",
+                                    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yW/r/9nUz5AS-QWA.js?_nc_x=Ij3Wp8lg5Kz",
+                                    "urlProvider": "network",
+                                    "line": 3,
+                                    "column": 13
+                                }
+                            },
+                            {
+                                "signal": "Array.isArray",
+                                "location": {
+                                    "type": "source-location",
+                                    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yW/r/9nUz5AS-QWA.js?_nc_x=Ij3Wp8lg5Kz",
+                                    "urlProvider": "network",
+                                    "line": 4,
+                                    "column": 16
+                                }
+                            },
+                            {
+                                "signal": "Array.prototype.map",
+                                "location": {
+                                    "type": "source-location",
+                                    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yW/r/9nUz5AS-QWA.js?_nc_x=Ij3Wp8lg5Kz",
+                                    "urlProvider": "network",
+                                    "line": 5,
+                                    "column": 196
+                                }
+                            },
+                            {
+                                "signal": "Array.prototype.forEach",
+                                "location": {
+                                    "type": "source-location",
+                                    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yW/r/9nUz5AS-QWA.js?_nc_x=Ij3Wp8lg5Kz",
+                                    "urlProvider": "network",
+                                    "line": 5,
+                                    "column": 408
+                                }
+                            },
+                            {
+                                "signal": "Array.prototype.filter",
+                                "location": {
+                                    "type": "source-location",
+                                    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yW/r/9nUz5AS-QWA.js?_nc_x=Ij3Wp8lg5Kz",
+                                    "urlProvider": "network",
+                                    "line": 5,
+                                    "column": 487
+                                }
+                            },
+                            {
+                                "signal": "Array.prototype.some",
+                                "location": {
+                                    "type": "source-location",
+                                    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yW/r/9nUz5AS-QWA.js?_nc_x=Ij3Wp8lg5Kz",
+                                    "urlProvider": "network",
+                                    "line": 5,
+                                    "column": 913
+                                }
+                            },
+                            {
+                                "signal": "Array.prototype.findIndex",
+                                "location": {
+                                    "type": "source-location",
+                                    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yW/r/9nUz5AS-QWA.js?_nc_x=Ij3Wp8lg5Kz",
+                                    "urlProvider": "network",
+                                    "line": 8,
+                                    "column": 332
+                                }
+                            },
+                            {
+                                "signal": "Array.prototype.find",
+                                "location": {
+                                    "type": "source-location",
+                                    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yW/r/9nUz5AS-QWA.js?_nc_x=Ij3Wp8lg5Kz",
+                                    "urlProvider": "network",
+                                    "line": 8,
+                                    "column": 384
+                                }
+                            },
+                            {
+                                "signal": "Array.prototype.fill",
+                                "location": {
+                                    "type": "source-location",
+                                    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yW/r/9nUz5AS-QWA.js?_nc_x=Ij3Wp8lg5Kz",
+                                    "urlProvider": "network",
+                                    "line": 8,
+                                    "column": 578
+                                }
+                            },
+                            {
+                                "signal": "Number.isInteger",
+                                "location": {
+                                    "type": "source-location",
+                                    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yW/r/9nUz5AS-QWA.js?_nc_x=Ij3Wp8lg5Kz",
+                                    "urlProvider": "network",
+                                    "line": 9,
+                                    "column": 495
+                                }
+                            },
+                            {
+                                "signal": "Number.isSafeInteger",
+                                "location": {
+                                    "type": "source-location",
+                                    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yW/r/9nUz5AS-QWA.js?_nc_x=Ij3Wp8lg5Kz",
+                                    "urlProvider": "network",
+                                    "line": 9,
+                                    "column": 614
+                                }
+                            },
+                            {
+                                "signal": "Object.keys",
+                                "location": {
+                                    "type": "source-location",
+                                    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yW/r/9nUz5AS-QWA.js?_nc_x=Ij3Wp8lg5Kz",
+                                    "urlProvider": "network",
+                                    "line": 21,
+                                    "column": 266
+                                }
+                            },
+                            {
+                                "signal": "Object.freeze",
+                                "location": {
+                                    "type": "source-location",
+                                    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yW/r/9nUz5AS-QWA.js?_nc_x=Ij3Wp8lg5Kz",
+                                    "urlProvider": "network",
+                                    "line": 21,
+                                    "column": 509
+                                }
+                            },
+                            {
+                                "signal": "Object.isFrozen",
+                                "location": {
+                                    "type": "source-location",
+                                    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yW/r/9nUz5AS-QWA.js?_nc_x=Ij3Wp8lg5Kz",
+                                    "urlProvider": "network",
+                                    "line": 21,
+                                    "column": 564
+                                }
+                            },
+                            {
+                                "signal": "Object.seal",
+                                "location": {
+                                    "type": "source-location",
+                                    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yW/r/9nUz5AS-QWA.js?_nc_x=Ij3Wp8lg5Kz",
+                                    "urlProvider": "network",
+                                    "line": 21,
+                                    "column": 616
+                                }
+                            },
+                            {
+                                "signal": "Date.now",
+                                "location": {
+                                    "type": "source-location",
+                                    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yW/r/9nUz5AS-QWA.js?_nc_x=Ij3Wp8lg5Kz",
+                                    "urlProvider": "network",
+                                    "line": 26,
+                                    "column": 11
+                                }
+                            },
+                            {
+                                "signal": "Date.prototype.toISOString",
+                                "location": {
+                                    "type": "source-location",
+                                    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yW/r/9nUz5AS-QWA.js?_nc_x=Ij3Wp8lg5Kz",
+                                    "urlProvider": "network",
+                                    "line": 27,
+                                    "column": 83
+                                }
+                            },
+                            {
+                                "signal": "Object.entries",
+                                "location": {
+                                    "type": "source-location",
+                                    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yW/r/9nUz5AS-QWA.js?_nc_x=Ij3Wp8lg5Kz",
+                                    "urlProvider": "network",
+                                    "line": 36,
+                                    "column": 50
+                                }
+                            },
+                            {
+                                "signal": "Object.values",
+                                "location": {
+                                    "type": "source-location",
+                                    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yW/r/9nUz5AS-QWA.js?_nc_x=Ij3Wp8lg5Kz",
+                                    "urlProvider": "network",
+                                    "line": 36,
+                                    "column": 521
+                                }
+                            },
+                            {
+                                "signal": "@babel/plugin-transform-classes",
+                                "location": {
+                                    "type": "source-location",
+                                    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yW/r/9nUz5AS-QWA.js?_nc_x=Ij3Wp8lg5Kz",
+                                    "urlProvider": "network",
+                                    "line": 39,
+                                    "column": 7594
+                                }
+                            },
+                            {
+                                "signal": "String.fromCodePoint",
+                                "location": {
+                                    "type": "source-location",
+                                    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yW/r/9nUz5AS-QWA.js?_nc_x=Ij3Wp8lg5Kz",
+                                    "urlProvider": "network",
+                                    "line": 41,
+                                    "column": 43
+                                }
+                            },
+                            {
+                                "signal": "String.prototype.repeat",
+                                "location": {
+                                    "type": "source-location",
+                                    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yW/r/9nUz5AS-QWA.js?_nc_x=Ij3Wp8lg5Kz",
+                                    "urlProvider": "network",
+                                    "line": 42,
+                                    "column": 769
+                                }
+                            },
+                            {
+                                "signal": "String.prototype.codePointAt",
+                                "location": {
+                                    "type": "source-location",
+                                    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yW/r/9nUz5AS-QWA.js?_nc_x=Ij3Wp8lg5Kz",
+                                    "urlProvider": "network",
+                                    "line": 42,
+                                    "column": 1029
+                                }
+                            }
+                        ]
+                    },
+                    "totalBytes": 0
+                }
+            ],
+            "overallSavingsMs": 0,
+            "overallSavingsBytes": 14364,
+            "sortedBy": [
+                "wastedBytes"
+            ],
+            "debugData": {
+                "type": "debugdata",
+                "metricSavings": {
+                    "FCP": 0,
+                    "LCP": 0
+                }
+            }
+        },
+        "guidanceLevel": 2
+    },
+    "font-size": {
+        "id": "font-size",
+        "title": "Document doesn't use legible font sizes",
+        "description": "Font sizes less than 12px are too small to be legible and require mobile visitors to \u201cpinch to zoom\u201d in order to read. Strive to have >60% of page text \u226512px. [Learn more about legible font sizes](https://developer.chrome.com/docs/lighthouse/seo/font-size/).",
+        "score": 0,
+        "scoreDisplayMode": "binary",
+        "explanation": "Text is illegible because there's no viewport meta tag optimized for mobile screens."
+    }
+}
