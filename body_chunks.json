@@ -1,0 +1,12 @@
+[
+    [
+        "html > body",
+        "<h1>Welcome to the Example Page</h1><p>This is a simple paragraph.</p>",
+        10
+    ],
+    [
+        "html > body > div:nth-child(3)",
+        "<div class=\"container\">\n<ul>\n<li>Item 1</li>\n<li>Item 2</li>\n<li>Item 3</li>\n</ul>\n</div>",
+        11
+    ]
+]

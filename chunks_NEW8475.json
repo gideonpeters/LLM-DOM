@@ -1,0 +1,22 @@
+[
+  {
+    "id": "fe16d55f-eeae-4e40-927e-e142051e5c52",
+    "section": "head",
+    "content": "\n<title>Sample Page</title>\n<meta charset=\"UTF-8\"></meta>\n<style>\n        body { font-family: Arial, sans-serif; }\n    </style>\n"
+  },
+  {
+    "id": "eaed2182-cfe5-4e03-acb3-be2b88363b13",
+    "section": "body",
+    "content": "\n<h1>Welcome to our website</h1>\n<p>This is a sample paragraph with some text.</p>\n<div>\n<p>Another paragraph inside a div.</p>\n<ul>\n<li>List item 1</li>\n<li>List item 2</li>\n</ul>\n</div>\n<div>\n<p>Another paragraph inside a div.</p>\n<ul>\n<li>List item 1</li>"
+  },
+  {
+    "id": "cccf8565-b156-468f-ab2f-c4be44995974",
+    "section": "body",
+    "content": "\n<li>List item 2</li>\n</ul>\n</div>\n<div>\n<p>Another paragraph inside a div.</p>\n<ul>\n<li>List item 1</li>\n<li>List item 2</li>\n</ul>\n</div>\n<div>\n<p>Another paragraph inside a div.</p>\n<ul>\n<li>List item 1</li>\n<li>List item 2</li>"
+  },
+  {
+    "id": "f7656393-c223-4730-80fb-54dd266e40ec",
+    "section": "body",
+    "content": "\n</ul>\n</div>\n<p>A final paragraph with more text to demonstrate splitting between elements.</p>\n"
+  }
+]

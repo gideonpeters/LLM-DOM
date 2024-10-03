@@ -1,0 +1,252 @@
+[
+    {
+        "index": 0,
+        "total_tokens": 116,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > title:nth-child(1) --> \n                    <title data-rh=\"true\">\n   Medium: Read and write stories.\n  </title>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 1,
+        "total_tokens": 110,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > meta:nth-child(2) --> \n                    <meta charset=\"utf-8\" data-rh=\"true\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 2,
+        "total_tokens": 129,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > meta:nth-child(3) --> \n                    <meta content=\"width=device-width,minimum-scale=1,initial-scale=1,maximum-scale=1\" data-rh=\"true\" name=\"viewport\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 3,
+        "total_tokens": 114,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > meta:nth-child(4) --> \n                    <meta content=\"#000000\" data-rh=\"true\" name=\"theme-color\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 4,
+        "total_tokens": 117,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > meta:nth-child(5) --> \n                    <meta content=\"Medium\" data-rh=\"true\" name=\"twitter:app:name:iphone\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 5,
+        "total_tokens": 119,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > meta:nth-child(6) --> \n                    <meta content=\"828256236\" data-rh=\"true\" name=\"twitter:app:id:iphone\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 6,
+        "total_tokens": 117,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > meta:nth-child(7) --> \n                    <meta content=\"Medium\" data-rh=\"true\" property=\"al:ios:app_name\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 7,
+        "total_tokens": 120,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > meta:nth-child(8) --> \n                    <meta content=\"828256236\" data-rh=\"true\" property=\"al:ios:app_store_id\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 8,
+        "total_tokens": 118,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > meta:nth-child(9) --> \n                    <meta content=\"com.medium.reader\" data-rh=\"true\" property=\"al:android:package\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 9,
+        "total_tokens": 117,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > meta:nth-child(10) --> \n                    <meta content=\"Medium\" data-rh=\"true\" property=\"al:android:app_name\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 10,
+        "total_tokens": 119,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > meta:nth-child(11) --> \n                    <meta content=\"542599432471018\" data-rh=\"true\" property=\"fb:app_id\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 11,
+        "total_tokens": 114,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > meta:nth-child(12) --> \n                    <meta content=\"index,follow\" data-rh=\"true\" name=\"robots\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 12,
+        "total_tokens": 117,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > meta:nth-child(13) --> \n                    <meta content=\"Medium: Read and write stories.\" data-rh=\"true\" name=\"title\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 13,
+        "total_tokens": 129,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > meta:nth-child(14) --> \n                    <meta content=\"On Medium, anyone can share insightful perspectives, useful knowledge, and life wisdom with the world.\" data-rh=\"true\" name=\"description\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 14,
+        "total_tokens": 116,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > meta:nth-child(15) --> \n                    <meta content=\"summary_large_image\" data-rh=\"true\" name=\"twitter:card\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 15,
+        "total_tokens": 114,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > meta:nth-child(16) --> \n                    <meta content=\"@Medium\" data-rh=\"true\" name=\"twitter:creator\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 16,
+        "total_tokens": 130,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > meta:nth-child(17) --> \n                    <meta content=\"On Medium, anyone can share insightful perspectives, useful knowledge, and life wisdom with the world.\" data-rh=\"true\" name=\"twitter:description\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 17,
+        "total_tokens": 145,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > meta:nth-child(18) --> \n                    <meta content=\"https://miro.medium.com/v2/4*EBuOxSGT7JZTGq0n4W8A5w.png\" data-rh=\"true\" name=\"twitter:image:src\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 18,
+        "total_tokens": 114,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > meta:nth-child(19) --> \n                    <meta content=\"@Medium\" data-rh=\"true\" name=\"twitter:site\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 19,
+        "total_tokens": 118,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > meta:nth-child(20) --> \n                    <meta content=\"Medium: Read and write stories.\" data-rh=\"true\" name=\"twitter:title\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 20,
+        "total_tokens": 130,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > meta:nth-child(21) --> \n                    <meta content=\"On Medium, anyone can share insightful perspectives, useful knowledge, and life wisdom with the world.\" data-rh=\"true\" property=\"og:description\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 21,
+        "total_tokens": 143,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > meta:nth-child(22) --> \n                    <meta content=\"https://miro.medium.com/v2/4*EBuOxSGT7JZTGq0n4W8A5w.png\" data-rh=\"true\" property=\"og:image\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 22,
+        "total_tokens": 115,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > meta:nth-child(23) --> \n                    <meta content=\"Medium\" data-rh=\"true\" property=\"og:site_name\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 23,
+        "total_tokens": 118,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > meta:nth-child(24) --> \n                    <meta content=\"Medium: Read and write stories.\" data-rh=\"true\" property=\"og:title\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 24,
+        "total_tokens": 113,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > meta:nth-child(25) --> \n                    <meta content=\"website\" data-rh=\"true\" property=\"og:type\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 25,
+        "total_tokens": 116,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > meta:nth-child(26) --> \n                    <meta content=\"https://medium.com\" data-rh=\"true\" property=\"og:url\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 26,
+        "total_tokens": 139,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > link:nth-child(27) --> \n                    <link data-rh=\"true\" href=\"https://miro.medium.com/v2/1*m-R_BkNf1Qjr1YbyOIJY2w.png\" rel=\"icon\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 27,
+        "total_tokens": 127,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > link:nth-child(28) --> \n                    <link data-rh=\"true\" href=\"/osd.xml\" rel=\"search\" title=\"Medium\" type=\"application/opensearchdescription+xml\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 28,
+        "total_tokens": 155,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > link:nth-child(29) --> \n                    <link data-rh=\"true\" href=\"https://miro.medium.com/v2/resize:fill:304:304/1*sHhtYhaCe2Uc3IU0IgKwIQ.png\" rel=\"apple-touch-icon\" sizes=\"152x152\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 29,
+        "total_tokens": 155,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > link:nth-child(30) --> \n                    <link data-rh=\"true\" href=\"https://miro.medium.com/v2/resize:fill:240:240/1*sHhtYhaCe2Uc3IU0IgKwIQ.png\" rel=\"apple-touch-icon\" sizes=\"120x120\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 30,
+        "total_tokens": 155,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > link:nth-child(31) --> \n                    <link data-rh=\"true\" href=\"https://miro.medium.com/v2/resize:fill:152:152/1*sHhtYhaCe2Uc3IU0IgKwIQ.png\" rel=\"apple-touch-icon\" sizes=\"76x76\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 31,
+        "total_tokens": 155,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > link:nth-child(32) --> \n                    <link data-rh=\"true\" href=\"https://miro.medium.com/v2/resize:fill:120:120/1*sHhtYhaCe2Uc3IU0IgKwIQ.png\" rel=\"apple-touch-icon\" sizes=\"60x60\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 32,
+        "total_tokens": 139,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > link:nth-child(33) --> \n                    <link color=\"#171717\" data-rh=\"true\" href=\"https://cdn-static-1.medium.com/_/fp/icons/Medium-Avatar-500x500.svg\" rel=\"mask-icon\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 33,
+        "total_tokens": 119,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > link:nth-child(34) --> \n                    <link crossorigin=\"\" data-rh=\"true\" href=\"https://glyph.medium.com\" rel=\"preconnect\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 34,
+        "total_tokens": 136,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > link:nth-child(35) --> \n                    <link as=\"style\" data-rh=\"true\" href=\"https://glyph.medium.com/css/unbound.css\" id=\"glyph_preload_link\" rel=\"preload\" type=\"text/css\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 35,
+        "total_tokens": 130,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > link:nth-child(36) --> \n                    <link data-rh=\"true\" href=\"https://glyph.medium.com/css/unbound.css\" id=\"glyph_link\" rel=\"stylesheet\" type=\"text/css\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 36,
+        "total_tokens": 115,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > link:nth-child(37) --> \n                    <link data-rh=\"true\" href=\"https://medium.com\" rel=\"canonical\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 37,
+        "total_tokens": 279,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(38) --> \n                    <script data-rh=\"true\" type=\"application/ld+json\">\n   {{\"@context\":\"http:\\u002F\\u002Fschema.org\",\"@type\":\"Organization\",\"url\":\"https:\\u002F\\u002Fmedium.com\",\"name\":\"Medium\",\"description\":\"On Medium, anyone can share insightful perspectives, useful knowledge, and life wisdom with the world.\",\"publishingPrinciples\":\"https:\\u002F\\u002Fpolicy.medium.com\\u002Fmedium-terms-of-service-9db0094a1e0f\",\"logo\":{{\"@type\":\"ImageObject\",\"url\":\"https:\\u002F\\u002Fmiro.medium.com\\u002Fv2\\u002Fresize:fit:968\\u002F1*F6SrJR7_s95r6oCF3ugMZw.png\",\"width\":484,\"height\":168}}}}\n  </script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 38,
+        "total_tokens": 757,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > style:nth-child(39) --> \n                    <style data-fela-rehydration=\"141\" data-fela-type=\"STATIC\" type=\"text/css\">\n   html{{box-sizing:border-box;-webkit-text-size-adjust:100%}}*, *:before, *:after{{box-sizing:inherit}}body{{margin:0;padding:0;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;color:rgba(0,0,0,0.8);position:relative;min-height:100vh}}h1, h2, h3, h4, h5, h6, dl, dd, ol, ul, menu, figure, blockquote, p, pre, form{{margin:0}}menu, ol, ul{{padding:0;list-style:none;list-style-image:none}}main{{display:block}}a{{color:inherit;text-decoration:none}}a, button, input{{-webkit-tap-highlight-color:transparent}}img, svg{{vertical-align:middle}}button{{background:transparent;overflow:visible}}button, input, optgroup, select, textarea{{margin:0}}:root{{--reach-tabs:1;--reach-menu-button:1}}#speechify-root{{font-family:Sohne, sans-serif}}div[data-popper-reference-hidden=\"true\"]{{visibility:hidden;pointer-events:none}}.grecaptcha-badge{{visibility:hidden}}\n/*XCode style (c) Angel Garcia <angelgarcia.mail@gmail.com>*/.hljs {{background: #fff;color: black;\n}}/* Gray DOCTYPE selectors like WebKit */\n.xml .hljs-meta {{color: #c0c0c0;\n}}.hljs-comment,\n.hljs-quote {{color: #007400;\n}}.hljs-tag,\n.hljs-attribute,\n.hljs-keyword,\n.hljs-selector-tag,\n.hljs-literal,\n.hljs-name {{color: #aa0d91;\n}}.hljs-variable,\n.hljs-template-variable {{color: #3F6E74;\n}}.hljs-code,\n.hljs-string,\n.hljs-meta .hljs-string {{color: #c41a16;\n}}.hljs-regexp,\n.hljs-link {{color: #0E0EFF;\n}}.hljs-title,\n.hljs-symbol,\n.hljs-bullet,\n.hljs-number {{color: #1c00cf;\n}}.hljs-section,\n.hljs-meta {{color: #643820;\n}}.hljs-title.class_,\n.hljs-class .hljs-title,\n.hljs-type,\n.hljs-built_in,\n.hljs-params {{color: #5c2699;\n}}.hljs-attr {{color: #836C28;\n}}.hljs-subst {{color: #000;\n}}.hljs-formula {{background-color: #eee;font-style: italic;\n}}.hljs-addition {{background-color: #baeeba;\n}}.hljs-deletion {{background-color: #ffc8bd;\n}}.hljs-selector-id,\n.hljs-selector-class {{color: #9b703f;\n}}.hljs-doctag,\n.hljs-strong {{font-weight: bold;\n}}.hljs-emphasis {{font-style: italic;\n}}\n  </style>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 39,
+        "total_tokens": 678,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > style:nth-child(40) --> \n                    <style data-fela-rehydration=\"141\" data-fela-type=\"KEYFRAME\" type=\"text/css\">\n   @-webkit-keyframes k1{{0% {{background-position:50% 0%}}50%{{background-position:50% 60%}}100%{{background-position:50% 0%}}}}@-moz-keyframes k1{{0% {{background-position:50% 0%}}50%{{background-position:50% 60%}}100%{{background-position:50% 0%}}}}@keyframes k1{{0% {{background-position:50% 0%}}50%{{background-position:50% 60%}}100%{{background-position:50% 0%}}}}@-webkit-keyframes k2{{0%{{transform:translate(0, 0)}}10%{{transform:translate(5%,10%)}}20%{{transform:translate(15%,20%)}}30%{{transform:translate(5%,10%)}}40%{{transform:translate(15%,20%)}}50%{{transform:translate(5%,10%)}}60%{{transform:translate(15%,20%)}}70%{{transform:translate(5%,10%)}}80%{{transform:translate(15%,20%)}}90%{{transform:translate(5%,10%)}}100%{{transform:translate(15%,20%)}}}}@-moz-keyframes k2{{0%{{transform:translate(0, 0)}}10%{{transform:translate(5%,10%)}}20%{{transform:translate(15%,20%)}}30%{{transform:translate(5%,10%)}}40%{{transform:translate(15%,20%)}}50%{{transform:translate(5%,10%)}}60%{{transform:translate(15%,20%)}}70%{{transform:translate(5%,10%)}}80%{{transform:translate(15%,20%)}}90%{{transform:translate(5%,10%)}}100%{{transform:translate(15%,20%)}}}}@keyframes k2{{0%{{transform:translate(0, 0)}}10%{{transform:translate(5%,10%)}}20%{{transform:translate(15%,20%)}}30%{{transform:translate(5%,10%)}}40%{{transform:translate(15%,20%)}}50%{{transform:translate(5%,10%)}}60%{{transform:translate(15%,20%)}}70%{{transform:translate(5%,10%)}}80%{{transform:translate(15%,20%)}}90%{{transform:translate(5%,10%)}}100%{{transform:translate(15%,20%)}}}}\n  </style>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 40,
+        "total_tokens": 1291,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > style:nth-child(41) --> \n                    <style data-fela-rehydration=\"141\" data-fela-type=\"RULE\" type=\"text/css\">\n   .a{{font-family:medium-content-sans-serif-font, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif}}.b{{font-weight:400}}.c{{background-color:rgba(255, 255, 255, 1)}}.l{{height:100vh}}.m{{width:100%}}.n{{display:flex}}.o{{align-items:center}}.p{{justify-content:center}}.q{{height:25px}}.r{{fill:rgba(41, 41, 41, 1)}}.s{{flex-direction:column}}.t{{background:radial-gradient(ellipse at 50% 90%, #F7F4ED 20%, #FFE330 40%, #FFC017 55%)}}.u{{background-size:400% 200%}}.v{{overflow:hidden}}.w{{position:relative}}.x{{min-height:560px}}.y{{animation:k1 15s ease infinite}}.z{{margin-bottom:48px}}.ab h2{{color:#242424}}.ac h2{{font-weight:400}}.ae h2{{line-height:90%}}.af h2{{letter-spacing:-0.1%}}.al h2 strong{{font-weight:500}}.ao{{z-index:10}}.ap{{background-color:transparent}}.aq{{border-bottom:solid 1px #242424}}.ar{{position:fixed}}.as{{top:0}}.at{{left:0}}.au{{right:0}}.bc{{max-width:1192px}}.bd{{min-width:0}}.be{{padding:25px 0}}.bf{{height:75px}}.bg{{flex-direction:row}}.bh{{display:block}}.bi{{color:inherit}}.bj{{fill:inherit}}.bk{{font-size:inherit}}.bl{{border:inherit}}.bm{{font-family:inherit}}.bn{{letter-spacing:inherit}}.bo{{font-weight:inherit}}.bp{{padding:0}}.bq{{margin:0}}.br{{cursor:pointer}}.bs:disabled{{cursor:not-allowed}}.bt:disabled{{color:#6B6B6B}}.bu:disabled{{fill:#6B6B6B}}.bx path{{fill:#242424}}.by{{height:27px}}.bz{{flex:1 0 auto}}.cd{{margin-right:25px}}.ce{{font-family:sohne, \"Helvetica Neue\", Helvetica, Arial, sans-serif}}.cf{{font-size:14px}}.cg{{line-height:20px}}.ch{{color:#242424}}.cj{{color:rgba(255, 255, 255, 1)}}.ck{{padding:8px 16px}}.cl{{fill:rgba(255, 255, 255, 1)}}.cm{{background:rgba(25, 25, 25, 1)}}.cn{{border-color:rgba(25, 25, 25, 1)}}.cr:disabled{{cursor:inherit !important}}.cs:disabled{{opacity:0.1}}.ct:disabled:hover{{background:rgba(25, 25, 25, 1)}}.cu:disabled:hover{{border-color:rgba(25, 25, 25, 1)}}.cv{{border-radius:99em}}.cw{{border-width:1px}}.cx{{border-style:solid}}.cy{{box-sizing:border-box}}.cz{{display:inline-block}}.da{{text-decoration:none}}.db{{text-align:center}}.dc{{height:100%}}.di{{font-weight:500}}.dj{{font-size:42px}}.dk{{line-height:52px}}.dl{{letter-spacing:-0.011em}}.dm{{font-size:22px}}.dn{{line-height:28px}}.do{{font-size:16px}}.dp{{line-height:24px}}.dq{{padding:8px 20px}}.dr{{width:231px}}.ds{{height:72px}}.dt{{min-width:100vw}}.du{{position:static}}.dv{{bottom:0}}.dw{{background-color:rgba(0, 0, 0, 1)}}.dx{{font-size:13px}}.dy{{color:rgba(255, 255, 255, 0.95)}}.dz:disabled{{color:rgba(255, 255, 255, 0.6)}}.ea:disabled{{fill:rgba(255, 255, 255, 0.6)}}.ec{{margin-right:20px}}.ed{{height:0px}}.ee{{margin:0 24px}}.ei{{padding:24px 0}}.ej{{flex-wrap:wrap}}.ek{{margin-bottom:0px}}.el{{margin-right:16px}}.bv:hover:not(:disabled){{color:rgba(25, 25, 25, 1)}}.bw:hover:not(:disabled){{fill:rgba(25, 25, 25, 1)}}.co:hover{{background:#000000}}.cp:hover{{border-color:#242424}}.cq:hover{{cursor:pointer}}.eb:hover{{text-decoration:underline}}\n  </style>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 41,
+        "total_tokens": 192,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > style:nth-child(42) --> \n                    <style data-fela-rehydration=\"141\" data-fela-type=\"RULE\" media=\"all and (min-width: 1080px)\" type=\"text/css\">\n   .d{{display:none}}.ak h2{{font-size:120px}}.bb{{margin:0 64px}}.cc{{display:inline-block}}.dh{{margin:75px 64px 0}}.eh{{max-width:680px}}\n  </style>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 42,
+        "total_tokens": 144,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > style:nth-child(43) --> \n                    <style data-fela-rehydration=\"141\" data-fela-type=\"RULE\" media=\"all and (max-width: 1079.98px)\" type=\"text/css\">\n   .e{{display:none}}\n  </style>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 43,
+        "total_tokens": 143,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > style:nth-child(44) --> \n                    <style data-fela-rehydration=\"141\" data-fela-type=\"RULE\" media=\"all and (max-width: 903.98px)\" type=\"text/css\">\n   .f{{display:none}}\n  </style>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 44,
+        "total_tokens": 143,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > style:nth-child(45) --> \n                    <style data-fela-rehydration=\"141\" data-fela-type=\"RULE\" media=\"all and (max-width: 727.98px)\" type=\"text/css\">\n   .g{{display:none}}\n  </style>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 45,
+        "total_tokens": 188,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > style:nth-child(46) --> \n                    <style data-fela-rehydration=\"141\" data-fela-type=\"RULE\" media=\"all and (max-width: 551.98px)\" type=\"text/css\">\n   .h{{display:none}}.ag h2{{font-size:48px}}.am h3{{font-size:20px}}.ax{{margin:0 24px}}.dd{{margin:75px 24px 0}}\n  </style>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 46,
+        "total_tokens": 203,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > style:nth-child(47) --> \n                    <style data-fela-rehydration=\"141\" data-fela-type=\"RULE\" media=\"all and (min-width: 904px) and (max-width: 1079.98px)\" type=\"text/css\">\n   .i{{display:none}}.aj h2{{font-size:80px}}.ba{{margin:0 64px}}.cb{{display:inline-block}}.dg{{margin:75px 64px 0}}.eg{{max-width:680px}}\n  </style>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 47,
+        "total_tokens": 202,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > style:nth-child(48) --> \n                    <style data-fela-rehydration=\"141\" data-fela-type=\"RULE\" media=\"all and (min-width: 728px) and (max-width: 903.98px)\" type=\"text/css\">\n   .j{{display:none}}.ai h2{{font-size:80px}}.az{{margin:0 48px}}.ca{{display:inline-block}}.df{{margin:75px 48px 0}}.ef{{max-width:680px}}\n  </style>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 48,
+        "total_tokens": 204,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > style:nth-child(49) --> \n                    <style data-fela-rehydration=\"141\" data-fela-type=\"RULE\" media=\"all and (min-width: 552px) and (max-width: 727.98px)\" type=\"text/css\">\n   .k{{display:none}}.ah h2{{font-size:64px}}.an h3{{font-size:20px}}.ay{{margin:0 24px}}.ci{{display:inline-block}}.de{{margin:75px 24px 0}}\n  </style>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 49,
+        "total_tokens": 166,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > style:nth-child(50) --> \n                    <style data-fela-rehydration=\"141\" data-fela-type=\"RULE\" media=\"(prefers-reduced-motion: no-preference)\" type=\"text/css\">\n   .av{{transition:background-color 300ms linear}}.aw button{{transition:background-color 300ms linear, color 300ms linear}}\n  </style>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    }
+]

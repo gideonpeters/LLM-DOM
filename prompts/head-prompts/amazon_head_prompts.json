@@ -1,0 +1,27 @@
+[
+    {
+        "index": 0,
+        "total_tokens": 104,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > meta:nth-child(1) --> \n                    <meta charset=\"utf-8\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 1,
+        "total_tokens": 111,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > meta:nth-child(2) --> \n                    <meta content=\"ie=edge\" http-equiv=\"x-ua-compatible\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 2,
+        "total_tokens": 118,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > meta:nth-child(3) --> \n                    <meta content=\"width=device-width, initial-scale=1, shrink-to-fit=no\" name=\"viewport\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 3,
+        "total_tokens": 110,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > title:nth-child(4) --> \n                    <title>\n   Sorry! Something went wrong!\n  </title>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 4,
+        "total_tokens": 472,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > style:nth-child(5) --> \n                    <style>\n   html, body {{\n    padding: 0;\n    margin: 0\n  }}\n\n  img {{\n    border: 0\n  }}\n\n  #a {{\n    background: #232f3e;\n    padding: 11px 11px 11px 192px\n  }}\n\n  #b {{\n    position: absolute;\n    left: 22px;\n    top: 12px\n  }}\n\n  #c {{\n    position: relative;\n    max-width: 800px;\n    padding: 0 40px 0 0\n  }}\n\n  #e, #f {{\n    height: 35px;\n    border: 0;\n    font-size: 1em\n  }}\n\n  #e {{\n    width: 100%;\n    margin: 0;\n    padding: 0 10px;\n    border-radius: 4px 0 0 4px\n  }}\n\n  #f {{\n    cursor: pointer;\n    background: #febd69;\n    font-weight: bold;\n    border-radius: 0 4px 4px 0;\n    -webkit-appearance: none;\n    position: absolute;\n    top: 0;\n    right: 0;\n    padding: 0 12px\n  }}\n\n  @media (max-width: 500px) {{\n    #a {{\n      padding: 55px 10px 10px\n    }}\n\n    #b {{\n      left: 6px\n    }}\n  }}\n\n  #g {{\n    text-align: center;\n    margin: 30px 0\n  }}\n\n  #g img {{\n    max-width: 90%\n  }}\n\n  #d {{\n    display: none\n  }}\n\n  #d[src] {{\n    display: inline\n  }}\n  </style>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    }
+]

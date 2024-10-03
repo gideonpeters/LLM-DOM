@@ -1,9 +1,13 @@
 import requests
 import json
 import base64
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Set up GitHub API credentials (replace with your token)
-GITHUB_TOKEN = ""
+GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 headers = {"Authorization": f"token {GITHUB_TOKEN}"}
 
 def get_file_content(repo_url, path):

@@ -1,0 +1,38 @@
+
+        Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:
+
+        _____ 
+        <!DOCTYPE html>
+        <html> 
+            <head> // Rest of <head> element </head> 
+            <body> 
+                <!-- Original position of the element to be modified: html > body --> 
+                <h1>Welcome to the Example Page</h1><p>This is a simple paragraph.</p>
+                <!-- End of element to be modified --> 
+            </body> 
+        </html> 
+        _____
+        
+
+
+        Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:
+
+        _____ 
+        <!DOCTYPE html>
+        <html> 
+            <head> // Rest of <head> element </head> 
+            <body> 
+                <!-- Original position of the element to be modified: html > body > div:nth-of-type(3) --> 
+                <div class="container">
+<ul>
+<li>Item 1</li>
+<li>Item 2</li>
+<li>Item 3</li>
+</ul>
+</div>
+                <!-- End of element to be modified --> 
+            </body> 
+        </html> 
+        _____
+        
+
