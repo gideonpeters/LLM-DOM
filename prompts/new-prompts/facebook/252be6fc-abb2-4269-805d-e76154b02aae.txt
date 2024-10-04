@@ -1,0 +1,134 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issues: 
+       
+        __________________
+        "
+            1. Does not have a `<meta name="viewport">` tag with `width` or `initial-scale`: A `<meta name="viewport">` not only optimizes your app for mobile screen sizes, but also prevents [a 300 millisecond delay to user input](https://developer.chrome.com/blog/300ms-tap-delay-gone-away/). [Learn more about using the viewport meta tag](https://developer.chrome.com/docs/lighthouse/pwa/viewport/).
+ 
+
+            
+            2. First Contentful Paint: First Contentful Paint marks the time at which the first text or image is painted. [Learn more about the First Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/).
+ 
+
+            
+            3. Largest Contentful Paint: Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)
+ 
+
+            
+            4. Speed Index: Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/).
+ 
+
+            
+            5. Total Blocking Time: Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds. [Learn more about the Total Blocking Time metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/).
+ 
+
+            
+            6. Max Potential First Input Delay: The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).
+ 
+
+            
+            7. Browser errors were logged to the console: Errors logged to the console indicate unresolved problems. They can come from network request failures and other browser concerns. [Learn more about this errors in console diagnostic audit](https://developer.chrome.com/docs/lighthouse/best-practices/errors-in-console/)
+ 
+
+            
+            8. Time to Interactive: Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).
+ 
+
+            
+            9. Uses deprecated APIs: Deprecated APIs will eventually be removed from the browser. [Learn more about deprecated APIs](https://developer.chrome.com/docs/lighthouse/best-practices/deprecations/).
+ 
+
+            
+            10. Largest Contentful Paint element: This is the largest contentful element painted within the viewport. [Learn more about the Largest Contentful Paint element](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)
+ 
+
+            
+            11. Image elements do not have explicit `width` and `height`: Set an explicit width and height on image elements to reduce layout shifts and improve CLS. [Learn how to set image dimensions](https://web.dev/articles/optimize-cls#images_without_dimensions)
+ 
+
+            
+            12. Background and foreground colors do not have a sufficient contrast ratio.: Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.9/color-contrast).
+ 
+
+            
+            13. Touch targets do not have sufficient size or spacing.: Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. [Learn more about touch targets](https://dequeuniversity.com/rules/axe/4.9/target-size).
+ 
+
+            
+            14. Eliminate render-blocking resources: Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn how to eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/).
+ 
+
+            
+            15. Reduce unused JavaScript: Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).
+ 
+
+            
+            16. Enable text compression: Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more about text compression](https://developer.chrome.com/docs/lighthouse/performance/uses-text-compression/).
+ 
+
+            
+            17. Avoid serving legacy JavaScript to modern browsers: Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. For your bundled JavaScript, adopt a modern script deployment strategy using module/nomodule feature detection to reduce the amount of code shipped to modern browsers, while retaining support for legacy browsers. [Learn how to use modern JavaScript](https://web.dev/articles/publish-modern-javascript)
+ 
+
+            
+            18. Document doesn't use legible font sizes: Font sizes less than 12px are too small to be legible and require mobile visitors to “pinch to zoom” in order to read. Strive to have >60% of page text ≥12px. [Learn more about legible font sizes](https://developer.chrome.com/docs/lighthouse/seo/font-size/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks. 
+        Please modify this HTML code chunk to resolve the performance issues given above.:
+
+        1. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        2. If no optimizations are possible, return the original code.
+        3. Do not modify class names
+        4. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization -->` at the end of the changed portion.
+        5. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+        6. Because the code is split into chunks, there might be some unclosed or cut elements, do not worry about that.
+        7. Do not change any styles or functionalities of the code.
+        8. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        9. Consider that HTML as a whole is from production and might be minified, uglified or compressed.
+
+        The original HTML code is as follows:
+
+        ```html
+        
+   requireLazy(["InitialJSLoader"], function(InitialJSLoader) {InitialJSLoader.loadOnDOMContentReady(["RK0K6Yg","T6rjpcF","NPrlkkQ","YM4VSEC","bCp9mIF","jRx1JSI","cWNI7si","IjugNeq","V7jOKSU","cbtu0gd","I+GHswV","dAWNZ\/s","zPYlTyl","Tll2J5j","cogH8tB","U7UnZcV","P\/mr5VE"]);});
+  </script>
+<script>
+   requireLazy(["TimeSliceImpl","ServerJS"],function(TimeSlice,ServerJS){var s=(new ServerJS());s.handle({"define":[["cr:7736",["FBLynxLogging"],{"__rc":["FBLynxLogging",null]},-1],["LinkshimHandlerConfig",[],{"supports_meta_referrer":false,"default_meta_referrer_policy":"default","switched_meta_referrer_policy":"origin","non_linkshim_lnfb_mode":"ie","link_react_default_hash":"AT1QfJfTmxAVac2P1whu4WlkTu8O01mkwpY618Y_CN1JEWnHn5EaSH5JyaetVsC-U1Zb4auKdM83U56JAMtwRke9rfRAxij6fJuw21hTJElbp0zexXYUcSzpfoUEmOBuecaSu8fJfd8FYO8q","untrusted_link_default_hash":"AT0g378mPvvUs7XMRqGYtxCb1pTh6ik2Nj9Acgfc5nP4R9HYfod-L8FQ1CBhNfi7qZORYa1hJ9rHyBJ1OWTdlgHCB9bXUL8C-3a4NKn9HP3I_HDjoeiELZQe2cNClNoXBTTjATFJad9jv6s-","linkshim_host":"l.facebook.com","linkshim_path":"\/l.php","linkshim_enc_param":"h","linkshim_url_param":"u","use_rel_no_opener":false,"use_rel_no_referrer":false,"always_use_https":false,"onion_always_shim":true,"middle_click_requires_event":false,"www_safe_js_mode":"hover","m_safe_js_mode":null,"ghl_param_link_shim":false,"click_ids":[],"is_linkshim_supported":true,"current_domain":"facebook.com","blocklisted_domains":["ad.doubleclick.net","ads-encryption-url-example.com","bs.serving-sys.com","ad.atdmt.com","adform.net","ad13.adfarm1.adition.com","ilovemyfreedoms.com","secure.adnxs.com"],"is_mobile_device":false},27]],"elements":[["__elem_a588f507_0_1_vK","u_0_1_ho",1],["__elem_a588f507_0_0_DV","globalContainer",1],["__elem_a588f507_0_2_Eo","content",1],["__elem_835c633a_0_0_wq","u_0_2_s7",1],["__elem_9f5fac15_0_0_Lz","passContainer",1],["__elem_558608f3_0_0_yd","pass",1],["__elem_a588f507_0_3_pD","u_0_3_qc",1],["__elem_a588f507_0_4_5n","u_0_4_7F",1],["__elem_45d73b5d_0_0_j4","u_0_5_pr",1]],"require":[["ServiceWorkerLoginAndLogout","login",[],[]],["WebPixelRatioDetector","startDetecting",[],[false]],["ScriptPath","set",[],["XIndexReduxController","a1f3c513",{"imp_id":"1Aij9RgC9OY062xtF","ef_page":null,"uri":"https:\/\/www.facebook.com\/"}]],["UITinyViewportAction","init",[],[]],["ResetScrollOnUnload","init",["__elem_a588f507_0_0_DV"],[{"__m":"__elem_a588f507_0_0_DV"}]],["KeyboardActivityLogger","init",[],[]],["FocusRing","init",[],[]],["ErrorMessageConsole","listenForUncaughtErrors",[],[]],["HardwareCSS","init",[],[]],["LoginInitialLoadLogger","onLoad",[],["homepage"]],["LoginFormController","init",["__elem_835c633a_0_0_wq","__elem_45d73b5d_0_0_j4"],[{"__m":"__elem_835c633a_0_0_wq"},{"__m":"__elem_45d73b5d_0_0_j4"},null,true,{"pubKey":{"publicKey":"4be25cde7005b9b3006792a5ac6b072408e28025c38818667e9c52449db63c2a","keyId":209}},false]],["BrowserPrefillLogging","initContactpointFieldLogging",[],[{"contactpointFieldID":"email","serverPrefill":""}]],["BrowserPrefillLogging","initPasswordFieldLogging",[],[{"passwordFieldID":"pass"}]],["FocusListener"],["FlipDirectionOnKeypress"],["LoginFormToggle","initToggle",["__elem_a588f507_0_3_pD","__elem_a588f507_0_4_5n","__elem_558608f3_0_0_yd","__elem_9f5fac15_0_0_Lz"],[{"__m":"__elem_a588f507_0_3_pD"},{"__m":"__elem_a588f507_0_4_5n"},{"__m":"__elem_558608f3_0_0_yd"},{"__m":"__elem_9f5fac15_0_0_Lz"}]],["IntlUtils"],["FBLynx","setupDelegation",[],[]],["RequireDeferredReference","unblock",[],[["FbtLogging","IntlQtEventFalcoEvent"],"sd"]],["RequireDeferredReference","unblock",[],[["FbtLogging","IntlQtEventFalcoEvent"],"css"]],["TimeSliceImpl"],["HasteSupportData"],["ServerJS"],["Run"],["InitialJSLoader"]],"contexts":[[{"__m":"__elem_a588f507_0_1_vK"},true],[{"__m":"__elem_a588f507_0_2_Eo"},true]]});requireLazy(["Run"],function(Run){Run.onAfterLoad(function(){s.cleanup(TimeSlice)})});});
+  </script>
+<script>
+   now_inl=(function(){var p=window.performance;return p&&p.now&&p.timing&&p.timing.navigationStart?function(){return p.now()+p.timing.navigationStart}:function(){return new Date().getTime()};})();window.__bigPipeFR=now_inl();
+  </script>
+<link as="style" href="https://static.xx.fbcdn.net/rsrc.php/v3/y5/l/0,cross/9uJ85fBP1ql.css?_nc_x=Ij3Wp8lg5Kz" rel="['preload']"></link>
+<link as="style" href="https://static.xx.fbcdn.net/rsrc.php/v3/yi/l/0,cross/5C7LQe6FV-U.css?_nc_x=Ij3Wp8lg5Kz" rel="['preload']"></link>
+<link as="style" href="https://static.xx.fbcdn.net/rsrc.php/v3/y0/l/0,cross/z38r275Iuu2.css?_nc_x=Ij3Wp8lg5Kz" rel="['preload']"></link>
+<link as="script" href="https://static.xx.fbcdn.net/rsrc.php/v3/yS/r/IQesjrfZ6d8.js?_nc_x=Ij3Wp8lg5Kz" nonce="sC4SLfjB" rel="['preload']"></link>
+<link as="script" href="https://static.xx.fbcdn.net/rsrc.php/v3i7M54/yn/l/en_US/4Pp4F7gpCJ9.js?_nc_x=Ij3Wp8lg5Kz" nonce="sC4SLfjB" rel="['preload']"></link>
+<link as="script" href="https://static.xx.fbcdn.net/rsrc.php/v3/yu/r/oMdLeeyxQqZ.js?_nc_x=Ij3Wp8lg5Kz" nonce="sC4SLfjB" rel="['preload']"></link>
+<script>
+   window.__bigPipeCtor=now_inl();requireLazy(["BigPipe"],function(BigPipe){define("__bigPipe",[],window.bigPipe=new BigPipe({"forceFinish":true,"config":{"flush_pagelets_asap":true,"dispatch_pagelet_replayable_actions":false}}));});
+  </script>
+<script nonce="sC4SLfjB">
+   (function(){var n=now_inl();requireLazy(["__bigPipe"],function(bigPipe){bigPipe.beforePageletArrive("first_response",n);})})();
+  </script>
+<script nonce="sC4SLfjB">
+   requireLazy(["__bigPipe"],(function(bigPipe){bigPipe.onPageletArrive({displayResources:["I1Cw2oh","12sKuLa","Czen+rq","bCp9mIF","T6rjpcF","P/mr5VE","NPrlkkQ"],id:"first_response",phase:0,last_in_phase:true,tti_phase:0,all_phases:[63],hsrp:{hblp:{consistency:{rev:1015593742}}},allResources:["RK0K6Yg","T6rjpcF","NPrlkkQ","YM4VSEC","bCp9mIF","jRx1JSI","cWNI7si","IjugNeq","I1Cw2oh","12sKuLa","Czen+rq","V7jOKSU","cbtu0gd","I+GHswV","dAWNZ/s","zPYlTyl","Tll2J5j","cogH8tB","P/mr5VE","U7UnZcV"]});}));
+  </script>
+<script>
+   requireLazy(["__bigPipe"],function(bigPipe){bigPipe.setPageID("7402323213822243245")});
+  </script>
+<script nonce="sC4SLfjB">
+   (function(){var n=now_inl();requireLazy(["__bigPipe"],function(bigPipe){bigPipe.beforePageletArrive("last_response",n);})})();
+  </script>
+<script nonce="sC4SLfjB">
+   requireLazy(["__bigPipe"],(function(bigPipe){bigPipe.onPageletArrive({displayResources:["NPrlkkQ"],id:"last_response",phase:63,last_in_phase:true,the_end:true,jsmods:{define:[["cr:6016",["NavigationMetricsWWW"],{__rc:["NavigationMetricsWWW",null]},-1],["cr:7383",["BanzaiWWW"],{__rc:["BanzaiWWW",null]},-1],["cr:5662",["Event"],{__rc:["Event",null]},-1],["cr:1458113",[],{__rc:[null,null]},-1],["cr:686",[],{__rc:[null,null]},-1],["cr:1984081",[],{__rc:[null,null]},-1],["cr:3376",[],{__rc:[null,null]},-1],["cr:1083116",["XAsyncRequest"],{__rc:["XAsyncRequest",null]},-1],["cr:1083117",[],{__rc:[null,null]},-1],["TimeSliceInteractionSV",[],{on_demand_reference_counting:true,on_demand_profiling_counters:true,default_rate:1000,lite_default_rate:100,interaction_to_lite_coinflip:{ADS_INTERFACES_INTERACTION:0,ads_perf_scenario:0,ads_wait_time:0,Event:1},interaction_to_coinflip:{ADS_INTERFACES_INTERACTION:1,ads_perf_scenario:1,ads_wait_time:1,Event:100},enable_heartbeat:false,maxBlockMergeDuration:0,maxBlockMergeDistance:0,enable_banzai_stream:true,user_timing_coinflip:50,banzai_stream_coinflip:0,compression_enabled:true,ref_counting_fix:false,ref_counting_cont_fix:false,also_record_new_timeslice_format:false,force_async_request_tracing_on:false},2609],["IntlCurrentLocale",[],{code:"en_US"},5954],["USIDMetadata",[],{browser_id:"?",tab_id:"",page_id:"Psi4blqfoh0rl",transition_id:0,version:6},5888],["BDSignalCollectionData",[],{sc:"{\"t\":1659080345,\"c\":[[30000,838801],[30001,838801],[30002,838801],[30003,838801],[30004,838801],[30005,838801],[30006,573585],[30007,838801],[30008,838801],[30012,838801],[30013,838801],[30015,806033],[30018,806033],[30021,540823],[30022,540817],[30040,806033],[30093,806033],[30094,806033],[30095,806033],[30101,541591],[30102,541591],[30103,541591],[30104,541591],[30106,806039],[30107,806039],[38000,541427],[38001,806643]]}",fds:60,fda:60,i:60,sbs:1,dbs:100,bbs:100,hbi:60,rt:262144,hbcbc:2,hbvbc:0,hbbi:30,sid:-1,hbv:"8587428251086802558"},5239],["cr:1642797",["BanzaiBase"],{__rc:["BanzaiBase",null]},-1],["cr:1042",["XAsyncRequestWWW"],{__rc:["XAsyncRequestWWW",null]},-1],["cr:1172",["WebSession"],{__rc:["WebSession",null]},-1],["cr:2037",["BanzaiAdapter"],{__rc:["BanzaiAdapter",null]},-1],["cr:3724",["SetIdleTimeoutAcrossTransitions"],{__rc:["SetIdleTimeoutAcrossTransitions",null]},-1],["cr:9985",["performanceAbsoluteNow"],{__rc:["performanceAbsoluteNow",null]},-1],["cr:9986",["CurrentUser"],{__rc:["CurrentUser",null]},-1],["cr:9987",["NavigationMetrics"],{__rc:["NavigationMetrics",null]},-1],["cr:9988",["Visibility"],{__rc:["Visibility",null]},-1],["cr:5866",["BanzaiAdapterWWW"],{__rc:["BanzaiAdapterWWW",null]},-1],["cr:7384",["cancelIdleCallbackWWW"],{__rc:["cancelIdleCallbackWWW",null]},-1],["cr:692209",["cancelIdleCallbackBlue"],{__rc:["cancelIdleCallbackBlue",null]},-1],["BanzaiConfig",[],{MAX_SIZE:10000,MAX_WAIT:150000,MIN_WAIT:null,RESTORE_WAIT:150000,blacklist:["time_spent"],disabled:false,gks:{boosted_pagelikes:true,mercury_send_error_logging:true,platform_oauth_client_events:true,sticker_search_ranking:true},known_routes:["artillery_javascript_actions","artillery_javascript_trace","artillery_logger_data","logger","falco","gk2_exposure","js_error_logging","loom_trace","marauder","perfx_custom_logger_endpoint","qex","require_cond_exposure_logging","metaconfig_exposure"],should_drop_unknown_routes:true,should_log_unknown_routes:false},7],["cr:6943",["EventListenerImplForCacheStorage"],{__rc:["EventListenerImplForCacheStorage",null]},-1],["cr:1634616",["UserActivityBlue"],{__rc:["UserActivityBlue",null]},-1],["cr:5695",["EventListenerWWW"],{__rc:["EventListenerWWW",null]},-1],["cr:844180",["TimeSpentImmediateActiveSecondsLoggerBlue"],{__rc:["TimeSpentImmediateActiveSecondsLoggerBlue",null]},-1],["cr:1187159",["BlueCompatBroker"],{__rc:["BlueCompatBroker",null]},-1],["WebDevicePerfInfoData",[],{needsFullUpdate:true,needsPartialUpdate:false,shouldLogResourcePerf:false},3977],["WebStorageMonsterLoggingURI",[],{uri:"/ajax/webstorage/process_keys/?state=1"},3032],["TimeSpentConfig",[],{delay:1000,timeout:64,"0_delay":0,"0_timeout":8},142],["cr:5800",[],{__rc:[null,null]},-1],["cr:1353359",["EventListenerImplForBlue"],{__rc:["EventListenerImplForBlue",null]},-1],["ImmediateActiveSecondsConfig",[],{sampling_rate:0},423],["CometAltpayJsSdkIframeAllowedDomains",[],{allowed_domains:["https://live.adyen.com","https://integration-facebook.payu.in","https://facebook.payulatam.com","https://secure.payu.com","https://facebook.dlocal.com","https://buy2.boku.com"]},4920]],require:[["BDClientSignalCollectionTrigger","startSignalCollection",[],[{sc:"{\"t\":1659080345,\"c\":[[30000,838801],[30001,838801],[30002,838801],[30003,838801],[30004,838801],[30005,838801],[30006,573585],[30007,838801],[30008,838801],[30012,838801],[30013,838801],[30015,806033],[30018,806033],[30021,540823],[30022,540817],[30040,806033],[30093,806033],[30094,806033],[30095,806033],[30101,541591],[30102,541591],[30103,541591],[30104,541591],[30106,806039],[30107,806039],[38000,541427],[38001,806643]]}",fds:60,fda:60,i:60,sbs:1,dbs:100,bbs:100,hbi:60,rt:262144,hbcbc:2,hbvbc:0,hbbi:30,sid:-1,hbv:"8587428251086802558"}]],["NavigationMetrics","setPage",[],[{page:"XIndexReduxController",page_type:"normal",page_uri:"https://www.facebook.com/",serverLID:"7402323213822243245"}]],["FalcoLoggerTransports","attach",[],[]],["Chromedome","start",[],[{}]],["DimensionTracking"],["ClickRefLogger"],["NavigationClickPointHandler"],["WebDevicePerfInfoLogging","doLog",[],[]],["WebStorageMonster","schedule",[],[]],["ServiceWorkerCacheManagement","manageCache",[],[]],["Artillery","disable",[],[]],["ScriptPathLogger","startLogging",[],[]],["TimeSpentBitArrayLogger","init",[],[]],["CookieCore","setWithoutChecksIfFirstPartyContext",[],["_js_datr","vlW6ZhutVXD240xF9sM0z5V8",34560000000,"/",true,".facebook.com"]],["TransportSelectingClientSingletonConditional"],["RequireDeferredReference","unblock",[],[["TransportSelectingClientSingletonConditional"],"sd"]],["RequireDeferredReference","unblock",[],[["TransportSelectingClientSingletonConditional"],"css"]]]},hsrp:{hsdp:{clpData:{"1871697":{r:1,s:1},"1829319":{r:1},"1829320":{r:1},"1843988":{r:1}},qexData:{"526":{r:null},"538":{r:null},"543":{r:null}}},hblp:{consistency:{rev:1015593742}}},allResources:["NPrlkkQ","IjugNeq","zPYlTyl","Tll2J5j","bCp9mIF","M+tLTdT","47bd7pk","T6rjpcF"]});}));
+  </script>
+
+        ```
+        

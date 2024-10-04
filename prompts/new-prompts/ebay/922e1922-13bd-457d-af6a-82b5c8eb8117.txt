@@ -1,0 +1,405 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issues: 
+       
+        __________________
+        "
+            1. Does not use HTTPS: All sites should be protected with HTTPS, even ones that don't handle sensitive data. This includes avoiding [mixed content](https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content), where some resources are loaded over HTTP despite the initial request being served over HTTPS. HTTPS prevents intruders from tampering with or passively listening in on the communications between your app and your users, and is a prerequisite for HTTP/2 and many new web platform APIs. [Learn more about HTTPS](https://developer.chrome.com/docs/lighthouse/pwa/is-on-https/).
+ 
+
+            
+            2. First Contentful Paint: First Contentful Paint marks the time at which the first text or image is painted. [Learn more about the First Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/).
+ 
+
+            
+            3. Largest Contentful Paint: Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)
+ 
+
+            
+            4. Speed Index: Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/).
+ 
+
+            
+            5. Total Blocking Time: Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds. [Learn more about the Total Blocking Time metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/).
+ 
+
+            
+            6. Max Potential First Input Delay: The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).
+ 
+
+            
+            7. Cumulative Layout Shift: Cumulative Layout Shift measures the movement of visible elements within the viewport. [Learn more about the Cumulative Layout Shift metric](https://web.dev/articles/cls).
+ 
+
+            
+            8. Browser errors were logged to the console: Errors logged to the console indicate unresolved problems. They can come from network request failures and other browser concerns. [Learn more about this errors in console diagnostic audit](https://developer.chrome.com/docs/lighthouse/best-practices/errors-in-console/)
+ 
+
+            
+            9. Time to Interactive: Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).
+ 
+
+            
+            10. Uses deprecated APIs: Deprecated APIs will eventually be removed from the browser. [Learn more about deprecated APIs](https://developer.chrome.com/docs/lighthouse/best-practices/deprecations/).
+ 
+
+            
+            11. Uses third-party cookies: Support for third-party cookies will be removed in a future version of Chrome. [Learn more about phasing out third-party cookies](https://developer.chrome.com/en/docs/privacy-sandbox/third-party-cookie-phase-out/).
+ 
+
+            
+            12. Minimize main-thread work: Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to minimize main-thread work](https://developer.chrome.com/docs/lighthouse/performance/mainthread-work-breakdown/)
+ 
+
+            
+            13. Reduce JavaScript execution time: Consider reducing the time spent parsing, compiling, and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to reduce Javascript execution time](https://developer.chrome.com/docs/lighthouse/performance/bootup-time/).
+ 
+
+            
+            14. Reduce the impact of third-party code: Third-party code can significantly impact load performance. Limit the number of redundant third-party providers and try to load third-party code after your page has primarily finished loading. [Learn how to minimize third-party impact](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript/).
+ 
+
+            
+            15. Largest Contentful Paint element: This is the largest contentful element painted within the viewport. [Learn more about the Largest Contentful Paint element](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)
+ 
+
+            
+            16. Avoid large layout shifts: These are the largest layout shifts observed on the page. Each table item represents a single layout shift, and shows the element that shifted the most. Below each item are possible root causes that led to the layout shift. Some of these layout shifts may not be included in the CLS metric value due to [windowing](https://web.dev/articles/cls#what_is_cls). [Learn how to improve CLS](https://web.dev/articles/optimize-cls)
+ 
+
+            
+            17. Image elements do not have explicit `width` and `height`: Set an explicit width and height on image elements to reduce layout shifts and improve CLS. [Learn how to set image dimensions](https://web.dev/articles/optimize-cls#images_without_dimensions)
+ 
+
+            
+            18. `[aria-*]` attributes do not match their roles: Each ARIA `role` supports a specific subset of `aria-*` attributes. Mismatching these invalidates the `aria-*` attributes. [Learn how to match ARIA attributes to their roles](https://dequeuniversity.com/rules/axe/4.9/aria-allowed-attr).
+ 
+
+            
+            19. Background and foreground colors do not have a sufficient contrast ratio.: Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.9/color-contrast).
+ 
+
+            
+            20. Touch targets do not have sufficient size or spacing.: Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. [Learn more about touch targets](https://dequeuniversity.com/rules/axe/4.9/target-size).
+ 
+
+            
+            21. Serve static assets with an efficient cache policy: A long cache lifetime can speed up repeat visits to your page. [Learn more about efficient cache policies](https://developer.chrome.com/docs/lighthouse/performance/uses-long-cache-ttl/).
+ 
+
+            
+            22. Avoid enormous network payloads: Large network payloads cost users real money and are highly correlated with long load times. [Learn how to reduce payload sizes](https://developer.chrome.com/docs/lighthouse/performance/total-byte-weight/).
+ 
+
+            
+            23. Defer offscreen images: Consider lazy-loading offscreen and hidden images after all critical resources have finished loading to lower time to interactive. [Learn how to defer offscreen images](https://developer.chrome.com/docs/lighthouse/performance/offscreen-images/).
+ 
+
+            
+            24. Eliminate render-blocking resources: Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn how to eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/).
+ 
+
+            
+            25. Minify CSS: Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/).
+ 
+
+            
+            26. Reduce unused CSS: Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/).
+ 
+
+            
+            27. Reduce unused JavaScript: Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).
+ 
+
+            
+            28. Serve images in next-gen formats: Image formats like WebP and AVIF often provide better compression than PNG or JPEG, which means faster downloads and less data consumption. [Learn more about modern image formats](https://developer.chrome.com/docs/lighthouse/performance/uses-webp-images/).
+ 
+
+            
+            29. Efficiently encode images: Optimized images load faster and consume less cellular data. [Learn how to efficiently encode images](https://developer.chrome.com/docs/lighthouse/performance/uses-optimized-images/).
+ 
+
+            
+            30. Enable text compression: Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more about text compression](https://developer.chrome.com/docs/lighthouse/performance/uses-text-compression/).
+ 
+
+            
+            31. Properly size images: Serve images that are appropriately-sized to save cellular data and improve load time. [Learn how to size images](https://developer.chrome.com/docs/lighthouse/performance/uses-responsive-images/).
+ 
+
+            
+            32. Avoid serving legacy JavaScript to modern browsers: Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. For your bundled JavaScript, adopt a modern script deployment strategy using module/nomodule feature detection to reduce the amount of code shipped to modern browsers, while retaining support for legacy browsers. [Learn how to use modern JavaScript](https://web.dev/articles/publish-modern-javascript)
+ 
+
+            
+            33. Avoid an excessive DOM size: A large DOM will increase memory usage, cause longer [style calculations](https://developers.google.com/web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations), and produce costly [layout reflows](https://developers.google.com/speed/articles/reflow). [Learn how to avoid an excessive DOM size](https://developer.chrome.com/docs/lighthouse/performance/dom-size/).
+ 
+
+            
+            34. Issues were logged in the `Issues` panel in Chrome Devtools: Issues logged to the `Issues` panel in Chrome Devtools indicate unresolved problems. They can come from network request failures, insufficient security controls, and other browser concerns. Open up the Issues panel in Chrome DevTools for more details on each issue.
+ 
+
+            
+            35. Avoid `document.write()`: For users on slow connections, external scripts dynamically injected via `document.write()` can delay page load by tens of seconds. [Learn how to avoid document.write()](https://developer.chrome.com/docs/lighthouse/best-practices/no-document-write/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks. 
+        Please modify this HTML code chunk to resolve the performance issues given above.:
+
+        1. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        2. If no optimizations are possible, return the original code.
+        3. Do not modify class names
+        4. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization -->` at the end of the changed portion.
+        5. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+        6. Because the code is split into chunks, there might be some unclosed or cut elements, do not worry about that.
+        7. Do not change any styles or functionalities of the code.
+        8. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        9. Consider that HTML as a whole is from production and might be minified, uglified or compressed.
+
+        The original HTML code is as follows:
+
+        ```html
+        <a _sp="p4375194.m150506.l9803" data-click="{"eventFamily":"VERTLAND","eventAction":"ACTN","actionKind":"CLICK","operationId":"4375194","flushImmediately":false,"eventProperty":{"parentrq":"47ded1841910ab8d0e971f48fffff5b0","pageci":"8367f410-58d9-11ef-8be2-2a95c25823a1","moduledtl":"mi:150506|iid:1|li:9803","vlpname":"vlp_homepage","audience":"general"}}" href="https://www.ebay.com/deals?_trkparms=parentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Cpageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Ciid%3A1%7Cvlpname%3Avlp_homepage" style="color:var(--color-background-primary)">
+F#f_15
+F#f_@button
+<div class="['vl-ellipsis-2']" style="color:var(--color-background-primary)">
+<span style="color:var(--color-background-primary)">
+              Today's Deals
+             </span>
+</div>
+F/
+F/
+</a>
+vertlandweb/
+</h2>
+<div class="['vl-text-banner__subheadline']">
+vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[9]-5-1-8
+<div aria-label="All With Free Shipping" style="color:var(--color-background-primary)">
+F#f_@button
+<div class="['vl-ellipsis-2']" style="color:var(--color-background-primary)">
+<span style="color:var(--color-background-primary)">
+              All With Free Shipping
+             </span>
+</div>
+F/
+</div>
+vertlandweb/
+</div>
+<div class="['vl-cta', 'vl-text-banner__cta']" onfocusin="this.querySelector('.vl-cta__default').onmouseover()" onfocusout="this.querySelector('.vl-cta__default').onmouseout()" style="font-color:var(--color-background-primary);background-color:var(--color-foreground-primary)">
+<a _sp="p4375194.m150506.l8342" data-click="{"eventFamily":"VERTLAND","eventAction":"ACTN","actionKind":"CLICK","operationId":"4375194","flushImmediately":false,"eventProperty":{"parentrq":"47ded1841910ab8d0e971f48fffff5b0","pageci":"8367f410-58d9-11ef-8be2-2a95c25823a1","moduledtl":"mi:150506|iid:1|li:8342","vlpname":"vlp_homepage","audience":"general"}}" href="https://www.ebay.com/deals?_trkparms=parentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Cpageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Ciid%3A1%7Cvlpname%3Avlp_homepage">
+<div class="['vl-cta__text-only']" style="color:var(--color-background-primary)">
+             Shop now
+             vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[9]-5-1-9-1-1-3-1-0-0
+<svg aria-hidden="true" class="['vl-cta-arrow', 'vl-text-banner__cta-arrow', 'icon', 'icon--24']" data-marko-key="@svg s0-1-0-52-1-2-4-17[0[0]]-0[9]-5-1-9-1-1-3-1-0-0" focusable="false" style="fill:currentColor">
+<use href="#icon-arrow-right-24">
+</use>
+</svg>
+vertlandweb/
+</div>
+<div class="['vl-cta__default', 'evo']" onmouseout="this.style.background='var(--color-background-primary)'; this.style.color='var(--color-foreground-primary)'; this.style['border-color']='var(--color-background-primary)';" onmouseover="this.style.background='null'; this.style.color='null';" style="background-color: var(--color-background-primary); color: var(--color-foreground-primary); border-color: var(--color-background-primary)">
+             Shop now
+             vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[9]-5-1-9-1-1-5-1-0-0
+<svg aria-hidden="true" class="['vl-cta-arrow', 'vl-text-banner__cta-arrow', 'icon', 'icon--24']" data-marko-key="@svg s0-1-0-52-1-2-4-17[0[0]]-0[9]-5-1-9-1-1-5-1-0-0" focusable="false" style="fill:currentColor">
+<use href="#icon-arrow-right-24">
+</use>
+</svg>
+vertlandweb/
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="['vlp-merch-item-card-container']" data-interactions="[{"actionKind":"CLICK","interaction":"wwEHJYB2WXwZRgQ0MDFKNTNYWE1HODJYOEg1NVozWjFOSlJXQVM0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA"}]" data-viewport="{"trackableId":"01J53XXMG82X8H55Z3Z1NJRWAS"}">
+<a _sp="p4375194.m150506.l3949.c1" class="['vlp-merch-item-tile']" data-click="{"eventFamily":"VERTLAND","eventAction":"ACTN","actionKind":"CLICK","operationId":"4375194","flushImmediately":false,"eventProperty":{"parentrq":"47ded1841910ab8d0e971f48fffff5b0","itm":"354393355064","pageci":"8367f410-58d9-11ef-8be2-2a95c25823a1","amdata":"amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D1%26rkt%3D15%26b%3D1%26itm%3D354393355064%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2%26tu%3D01J53XXMG82X8H55Z3Z1NJRWAS","ampid":"MERCH_CLK","rank":"1","ammiid":"9b67e495ee03423a850814347ea1b046","moduledtl":"mi:150506|iid:1|li:3949|luid:1|c:1","vlpname":"vlp_homepage","trackableId":"01J53XXMG82X8H55Z3Z1NJRWAS","interaction":"wwEHJYB2WXwZRgQ0MDFKNTNYWE1HODJYOEg1NVozWjFOSlJXQVM0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA","audience":"general"}}" data-track="[{"actionKind":"NAV","operationId":"4375194","flushImmediately":false,"eventProperty":{"trkp":"parentrq:47ded1841910ab8d0e971f48fffff5b0|pageci:8367f410-58d9-11ef-8be2-2a95c25823a1|iid:1|vlpname:vlp_homepage","sid":"p4375194.m150506.l3949.c1","audience":"general"}},{"eventFamily":"VERTLAND","eventAction":"ACTN","actionKind":"CLICK","operationId":"4375194","flushImmediately":false,"eventProperty":{"parentrq":"47ded1841910ab8d0e971f48fffff5b0","itm":"354393355064","pageci":"8367f410-58d9-11ef-8be2-2a95c25823a1","amdata":"amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D1%26rkt%3D15%26b%3D1%26itm%3D354393355064%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2%26tu%3D01J53XXMG82X8H55Z3Z1NJRWAS","ampid":"MERCH_CLK","rank":"1","ammiid":"9b67e495ee03423a850814347ea1b046","moduledtl":"mi:150506|iid:1|li:3949|luid:1|c:1","vlpname":"vlp_homepage","trackableId":"01J53XXMG82X8H55Z3Z1NJRWAS","interaction":"wwEHJYB2WXwZRgQ0MDFKNTNYWE1HODJYOEg1NVozWjFOSlJXQVM0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA","audience":"general"}}]" href="https://www.ebay.com/itm/354393355064?_trkparms=amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D1%26rkt%3D1%26b%3D1%26itm%3D354393355064%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2&_trksid=p4375194.c101910.m150506&_trkparms=parentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Cpageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Ciid%3A1%7Cvlpname%3Avlp_homepage" target="_blank">
+<div class="['vlp-merch-content-wrap']">
+<div class="['vlp-merch-image-wrap-dweb']">
+<div class="['vlp-merch-image-frame']" style=" ">
+<div class="['vl-image-js', 'js-only']">
+<img alt="Apple iPhone 13 A2482 128GB Network Unlocked Very Good Condition" class="['vlp-merch-item-image']" crossorigin="anonymous" data-high-res-size="500" data-item-card="true" data-size="300" data-src="https://i.ebayimg.com/thumbs/images/g/DDcAAOSwEjhjcrCI/s-l500.jpg" onerror="window.addtoLazyLoad({el: this, fit: false})" onload="window.addtoLazyLoad({el: this, fit: false})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden="false">
+<div class="['vl-image', 'vl-image__no-fill']">
+<img alt="Apple iPhone 13 A2482 128GB Network Unlocked Very Good Condition" src="https://i.ebayimg.com/thumbs/images/g/DDcAAOSwEjhjcrCI/s-l500.jpg"></img>
+</div>
+</noscript>
+</div>
+</div>
+<div class="['vlp-merch-item-info']">
+<h3 class="['vlp-merch-item-title', 'vlp-merch-item-title-dweb', 'vlp-merch-item-title-margin']">
+             Apple iPhone 13 A2482 128GB Network Unlocked Very Good Condition
+            </h3>
+<div class="['vlp-merch-sub-group']">
+<div class="['vlp-merch-price']">
+<span role="text">
+               $374.99
+              </span>
+<span class="['vlp-merch-additional-price']">
+<span aria-label="previous price $599.00" class="['sh-strikethrough']" role="text">
+                $599.00
+               </span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="['vlp-merch-item-card-container']" data-interactions="[{"actionKind":"CLICK","interaction":"wwEHJYB2WXwZRgQ0MDFKNTNYWE1HOUtQNTMwSFRKRVI0MUdZRFc0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA"}]" data-viewport="{"trackableId":"01J53XXMG9KP530HTJER41GYDW"}">
+<a _sp="p4375194.m150506.l3949.c2" class="['vlp-merch-item-tile']" data-click="{"eventFamily":"VERTLAND","eventAction":"ACTN","actionKind":"CLICK","operationId":"4375194","flushImmediately":false,"eventProperty":{"parentrq":"47ded1841910ab8d0e971f48fffff5b0","itm":"186474086505","pageci":"8367f410-58d9-11ef-8be2-2a95c25823a1","amdata":"amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D2%26rkt%3D15%26b%3D1%26itm%3D186474086505%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2%26tu%3D01J53XXMG9KP530HTJER41GYDW","ampid":"MERCH_CLK","rank":"2","ammiid":"9b67e495ee03423a850814347ea1b046","moduledtl":"mi:150506|iid:1|li:3949|luid:2|c:2","vlpname":"vlp_homepage","trackableId":"01J53XXMG9KP530HTJER41GYDW","interaction":"wwEHJYB2WXwZRgQ0MDFKNTNYWE1HOUtQNTMwSFRKRVI0MUdZRFc0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA","audience":"general"}}" data-track="[{"actionKind":"NAV","operationId":"4375194","flushImmediately":false,"eventProperty":{"trkp":"parentrq:47ded1841910ab8d0e971f48fffff5b0|pageci:8367f410-58d9-11ef-8be2-2a95c25823a1|iid:1|vlpname:vlp_homepage","sid":"p4375194.m150506.l3949.c2","audience":"general"}},{"eventFamily":"VERTLAND","eventAction":"ACTN","actionKind":"CLICK","operationId":"4375194","flushImmediately":false,"eventProperty":{"parentrq":"47ded1841910ab8d0e971f48fffff5b0","itm":"186474086505","pageci":"8367f410-58d9-11ef-8be2-2a95c25823a1","amdata":"amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D2%26rkt%3D15%26b%3D1%26itm%3D186474086505%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2%26tu%3D01J53XXMG9KP530HTJER41GYDW","ampid":"MERCH_CLK","rank":"2","ammiid":"9b67e495ee03423a850814347ea1b046","moduledtl":"mi:150506|iid:1|li:3949|luid:2|c:2","vlpname":"vlp_homepage","trackableId":"01J53XXMG9KP530HTJER41GYDW","interaction":"wwEHJYB2WXwZRgQ0MDFKNTNYWE1HOUtQNTMwSFRKRVI0MUdZRFc0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA","audience":"general"}}]" href="https://www.ebay.com/itm/186474086505?_trkparms=amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D1%26rkt%3D1%26b%3D1%26itm%3D186474086505%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2&_trksid=p4375194.c101910.m150506&_trkparms=parentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Cpageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Ciid%3A1%7Cvlpname%3Avlp_homepage" target="_blank">
+<div class="['vlp-merch-content-wrap']">
+<div class="['vlp-merch-image-wrap-dweb']">
+<div class="['vlp-merch-image-frame']" style=" ">
+<div class="['vl-image-js', 'js-only']">
+<img alt="Speedo Men's Surf Strider Surf Knit Aqua Water Shoes Breathable" class="['vlp-merch-item-image']" crossorigin="anonymous" data-high-res-size="500" data-item-card="true" data-size="300" data-src="https://i.ebayimg.com/thumbs/images/g/lnEAAOSw-EFmXde~/s-l500.jpg" onerror="window.addtoLazyLoad({el: this, fit: false})" onload="window.addtoLazyLoad({el: this, fit: false})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden="false">
+<div class="['vl-image', 'vl-image__no-fill']">
+<img alt="Speedo Men's Surf Strider Surf Knit Aqua Water Shoes Breathable" src="https://i.ebayimg.com/thumbs/images/g/lnEAAOSw-EFmXde~/s-l500.jpg"></img>
+</div>
+</noscript>
+</div>
+</div>
+<div class="['vlp-merch-item-info']">
+<h3 class="['vlp-merch-item-title', 'vlp-merch-item-title-dweb', 'vlp-merch-item-title-margin']">
+             Speedo Men's Surf Strider Surf Knit Aqua Water Shoes Breathable
+            </h3>
+<div class="['vlp-merch-sub-group']">
+<div class="['vlp-merch-price']">
+<span role="text">
+               $8.83
+              </span>
+<span class="['vlp-merch-additional-price']">
+<span aria-label="previous price $34.99" class="['sh-strikethrough']" role="text">
+                $34.99
+               </span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="['vlp-merch-item-card-container']" data-interactions="[{"actionKind":"CLICK","interaction":"wwEHJYB2WXwZRgQ0MDFKNTNYWE1HOUpITkhYMVJKRjQyRzNHNjE0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA"}]" data-viewport="{"trackableId":"01J53XXMG9JHNHX1RJF42G3G61"}">
+<a _sp="p4375194.m150506.l3949.c3" class="['vlp-merch-item-tile']" data-click="{"eventFamily":"VERTLAND","eventAction":"ACTN","actionKind":"CLICK","operationId":"4375194","flushImmediately":false,"eventProperty":{"parentrq":"47ded1841910ab8d0e971f48fffff5b0","itm":"276117937329","pageci":"8367f410-58d9-11ef-8be2-2a95c25823a1","amdata":"amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D3%26rkt%3D15%26b%3D1%26itm%3D276117937329%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2%26tu%3D01J53XXMG9JHNHX1RJF42G3G61","ampid":"MERCH_CLK","rank":"3","ammiid":"9b67e495ee03423a850814347ea1b046","moduledtl":"mi:150506|iid:1|li:3949|luid:3|c:3","vlpname":"vlp_homepage","trackableId":"01J53XXMG9JHNHX1RJF42G3G61","interaction":"wwEHJYB2WXwZRgQ0MDFKNTNYWE1HOUpITkhYMVJKRjQyRzNHNjE0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA","audience":"general"}}" data-track="[{"actionKind":"NAV","operationId":"4375194","flushImmediately":false,"eventProperty":{"trkp":"parentrq:47ded1841910ab8d0e971f48fffff5b0|pageci:8367f410-58d9-11ef-8be2-2a95c25823a1|iid:1|vlpname:vlp_homepage","sid":"p4375194.m150506.l3949.c3","audience":"general"}},{"eventFamily":"VERTLAND","eventAction":"ACTN","actionKind":"CLICK","operationId":"4375194","flushImmediately":false,"eventProperty":{"parentrq":"47ded1841910ab8d0e971f48fffff5b0","itm":"276117937329","pageci":"8367f410-58d9-11ef-8be2-2a95c25823a1","amdata":"amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D3%26rkt%3D15%26b%3D1%26itm%3D276117937329%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2%26tu%3D01J53XXMG9JHNHX1RJF42G3G61","ampid":"MERCH_CLK","rank":"3","ammiid":"9b67e495ee03423a850814347ea1b046","moduledtl":"mi:150506|iid:1|li:3949|luid:3|c:3","vlpname":"vlp_homepage","trackableId":"01J53XXMG9JHNHX1RJF42G3G61","interaction":"wwEHJYB2WXwZRgQ0MDFKNTNYWE1HOUpITkhYMVJKRjQyRzNHNjE0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA","audience":"general"}}]" href="https://www.ebay.com/itm/276117937329?_trkparms=amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D1%26rkt%3D1%26b%3D1%26itm%3D276117937329%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2&_trksid=p4375194.c101910.m150506&_trkparms=parentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Cpageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Ciid%3A1%7Cvlpname%3Avlp_homepage" target="_blank">
+<div class="['vlp-merch-content-wrap']">
+<div class="['vlp-merch-image-wrap-dweb']">
+<div class="['vlp-merch-image-frame']" style=" ">
+<div class="['vl-image-js', 'js-only']">
+<img alt="Dyson Airwrap™ Multi-styler Complete Long" class="['vlp-merch-item-image']" crossorigin="anonymous" data-high-res-size="500" data-item-card="true" data-size="300" data-src="https://i.ebayimg.com/thumbs/images/g/7EUAAOSwYdRmfX9i/s-l500.jpg" onerror="window.addtoLazyLoad({el: this, fit: false})" onload="window.addtoLazyLoad({el: this, fit: false})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden="false">
+<div class="['vl-image', 'vl-image__no-fill']">
+<img alt="Dyson Airwrap™ Multi-styler Complete Long" src="https://i.ebayimg.com/thumbs/images/g/7EUAAOSwYdRmfX9i/s-l500.jpg"></img>
+</div>
+</noscript>
+</div>
+</div>
+<div class="['vlp-merch-item-info']">
+<h3 class="['vlp-merch-item-title', 'vlp-merch-item-title-dweb', 'vlp-merch-item-title-margin']">
+             Dyson Airwrap™ Multi-styler Complete Long
+            </h3>
+<div class="['vlp-merch-sub-group']">
+<div class="['vlp-merch-price']">
+<span role="text">
+               $349.99
+              </span>
+<span class="['vlp-merch-additional-price']">
+<span aria-label="previous price $599.99" class="['sh-strikethrough']" role="text">
+                $599.99
+               </span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="['vlp-merch-item-card-container']" data-interactions="[{"actionKind":"CLICK","interaction":"wwEHJYB2WXwZRgQ0MDFKNTNYWE1HOTdWUlExR0tZQ1ZIN0pDUFY0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA"}]" data-viewport="{"trackableId":"01J53XXMG97VRQ1GKYCVH7JCPV"}">
+<a _sp="p4375194.m150506.l3949.c4" class="['vlp-merch-item-tile']" data-click="{"eventFamily":"VERTLAND","eventAction":"ACTN","actionKind":"CLICK","operationId":"4375194","flushImmediately":false,"eventProperty":{"parentrq":"47ded1841910ab8d0e971f48fffff5b0","itm":"204911189760","pageci":"8367f410-58d9-11ef-8be2-2a95c25823a1","amdata":"amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D4%26rkt%3D15%26b%3D1%26itm%3D204911189760%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2%26tu%3D01J53XXMG97VRQ1GKYCVH7JCPV","ampid":"MERCH_CLK","rank":"4","ammiid":"9b67e495ee03423a850814347ea1b046","moduledtl":"mi:150506|iid:1|li:3949|luid:4|c:4","vlpname":"vlp_homepage","trackableId":"01J53XXMG97VRQ1GKYCVH7JCPV","interaction":"wwEHJYB2WXwZRgQ0MDFKNTNYWE1HOTdWUlExR0tZQ1ZIN0pDUFY0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA","audience":"general"}}" data-track="[{"actionKind":"NAV","operationId":"4375194","flushImmediately":false,"eventProperty":{"trkp":"parentrq:47ded1841910ab8d0e971f48fffff5b0|pageci:8367f410-58d9-11ef-8be2-2a95c25823a1|iid:1|vlpname:vlp_homepage","sid":"p4375194.m150506.l3949.c4","audience":"general"}},{"eventFamily":"VERTLAND","eventAction":"ACTN","actionKind":"CLICK","operationId":"4375194","flushImmediately":false,"eventProperty":{"parentrq":"47ded1841910ab8d0e971f48fffff5b0","itm":"204911189760","pageci":"8367f410-58d9-11ef-8be2-2a95c25823a1","amdata":"amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D4%26rkt%3D15%26b%3D1%26itm%3D204911189760%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2%26tu%3D01J53XXMG97VRQ1GKYCVH7JCPV","ampid":"MERCH_CLK","rank":"4","ammiid":"9b67e495ee03423a850814347ea1b046","moduledtl":"mi:150506|iid:1|li:3949|luid:4|c:4","vlpname":"vlp_homepage","trackableId":"01J53XXMG97VRQ1GKYCVH7JCPV","interaction":"wwEHJYB2WXwZRgQ0MDFKNTNYWE1HOTdWUlExR0tZQ1ZIN0pDUFY0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA","audience":"general"}}]" href="https://www.ebay.com/itm/204911189760?_trkparms=amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D1%26rkt%3D1%26b%3D1%26itm%3D204911189760%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2&_trksid=p4375194.c101910.m150506&_trkparms=parentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Cpageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Ciid%3A1%7Cvlpname%3Avlp_homepage" target="_blank">
+<div class="['vlp-merch-content-wrap']">
+<div class="['vlp-merch-image-wrap-dweb']">
+<div class="['vlp-merch-image-frame']" style=" ">
+<div class="['vl-image-js', 'js-only']">
+<img alt="JBL PartyBox Encore, Portable party speaker with 100W powerful sound" class="['vlp-merch-item-image']" crossorigin="anonymous" data-high-res-size="500" data-item-card="true" data-size="300" data-src="https://i.ebayimg.com/thumbs/images/g/MW0AAOSwOz9mp3PU/s-l500.jpg" onerror="window.addtoLazyLoad({el: this, fit: false})" onload="window.addtoLazyLoad({el: this, fit: false})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden="false">
+<div class="['vl-image', 'vl-image__no-fill']">
+<img alt="JBL PartyBox Encore, Portable party speaker with 100W powerful sound" src="https://i.ebayimg.com/thumbs/images/g/MW0AAOSwOz9mp3PU/s-l500.jpg"></img>
+</div>
+</noscript>
+</div>
+</div>
+<div class="['vlp-merch-item-info']">
+<h3 class="['vlp-merch-item-title', 'vlp-merch-item-title-dweb', 'vlp-merch-item-title-margin']">
+             JBL PartyBox Encore, Portable party speaker with 100W powerful sound
+            </h3>
+<div class="['vlp-merch-sub-group']">
+<div class="['vlp-merch-price']">
+<span role="text">
+               $169.99
+              </span>
+<span class="['vlp-merch-additional-price']">
+<span aria-label="previous price $299.96" class="['sh-strikethrough']" role="text">
+                $299.96
+               </span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</a>
+vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[9]-6[3]-43
+<div class="['vlp-merch-add-to-watchlist-btn']">
+<button aria-label="Add JBL PartyBox Encore, Portable party speaker with 100W powerful sound to your watch list" class="['btn', 'btn--tertiary']" type="button">
+<svg aria-hidden="true" class="['vlp-merch-watch-unselected', 'icon', 'icon--16']" focusable="false">
+<use xlink:href="#hp-icon-save-16">
+</use>
+</svg>
+</button>
+</div>
+vertlandweb/
+</div>
+<div class="['vlp-merch-item-card-container']" data-interactions="[{"actionKind":"CLICK","interaction":"wwEHJYB2WXwZRgQ0MDFKNTNYWE1HQTNLQ05TNjlONDdCNTVaRlE0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA"}]" data-viewport="{"trackableId":"01J53XXMGA3KCNS69N47B55ZFQ"}">
+<a _sp="p4375194.m150506.l3949.c5" class="['vlp-merch-item-tile']" data-click="{"eventFamily":"VERTLAND","eventAction":"ACTN","actionKind":"CLICK","operationId":"4375194","flushImmediately":false,"eventProperty":{"parentrq":"47ded1841910ab8d0e971f48fffff5b0","itm":"155713325416","pageci":"8367f410-58d9-11ef-8be2-2a95c25823a1","amdata":"amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D5%26rkt%3D15%26b%3D1%26itm%3D155713325416%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2%26tu%3D01J53XXMGA3KCNS69N47B55ZFQ","ampid":"MERCH_CLK","rank":"5","ammiid":"9b67e495ee03423a850814347ea1b046","moduledtl":"mi:150506|iid:1|li:3949|luid:5|c:5","vlpname":"vlp_homepage","trackableId":"01J53XXMGA3KCNS69N47B55ZFQ","interaction":"wwEHJYB2WXwZRgQ0MDFKNTNYWE1HQTNLQ05TNjlONDdCNTVaRlE0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA","audience":"general"}}" data-track="[{"actionKind":"NAV","operationId":"4375194","flushImmediately":false,"eventProperty":{"trkp":"parentrq:47ded1841910ab8d0e971f48fffff5b0|pageci:8367f410-58d9-11ef-8be2-2a95c25823a1|iid:1|vlpname:vlp_homepage","sid":"p4375194.m150506.l3949.c5","audience":"general"}},{"eventFamily":"VERTLAND","eventAction":"ACTN","actionKind":"CLICK","operationId":"4375194","flushImmediately":false,"eventProperty":{"parentrq":"47ded1841910ab8d0e971f48fffff5b0","itm":"155713325416","pageci":"8367f410-58d9-11ef-8be2-2a95c25823a1","amdata":"amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D5%26rkt%3D15%26b%3D1%26itm%3D155713325416%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2%26tu%3D01J53XXMGA3KCNS69N47B55ZFQ","ampid":"MERCH_CLK","rank":"5","ammiid":"9b67e495ee03423a850814347ea1b046","moduledtl":"mi:150506|iid:1|li:3949|luid:5|c:5","vlpname":"vlp_homepage","trackableId":"01J53XXMGA3KCNS69N47B55ZFQ","interaction":"wwEHJYB2WXwZRgQ0MDFKNTNYWE1HQTNLQ05TNjlONDdCNTVaRlE0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA","audience":"general"}}]" href="https://www.ebay.com/itm/155713325416?_trkparms=amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D1%26rkt%3D1%26b%3D1%26itm%3D155713325416%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2&_trksid=p4375194.c101910.m150506&_trkparms=parentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Cpageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Ciid%3A1%7Cvlpname%3Avlp_homepage" target="_blank">
+<div class="['vlp-merch-content-wrap']">
+<div class="['vlp-merch-image-wrap-dweb']">
+<div class="['vlp-merch-image-frame']" style=" ">
+<div class="['vl-image-js', 'js-only']">
+<img alt="adidas men OZWEEGO Shoes" class="['vlp-merch-item-image']" crossorigin="anonymous" data-high-res-size="500" data-item-card="true" data-size="300" data-src="https://i.ebayimg.com/thumbs/images/g/JKkAAOSwH4xmqrX2/s-l500.jpg" onerror="window.addtoLazyLoad({el: this, fit: false})" onload="window.addtoLazyLoad({el: this, fit: false})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden="false">
+<div class="['vl-image', 'vl-image__no-fill']">
+<img alt="adidas men OZWEEGO Shoes" src="https://i.ebayimg.com/thumbs/images/g/JKkAAOSwH4xmqrX2/s-l500.jpg"></img>
+</div>
+</noscript>
+</div>
+</div>
+<div class="['vlp-merch-item-info']">
+<h3 class="['vlp-merch-item-title', 'vlp-merch-item-title-dweb', 'vlp-merch-item-title-margin']">
+             adidas men OZWEEGO Shoes
+            </h3>
+<div class="['vlp-merch-sub-group']">
+<div class="['vlp-merch-price']">
+<span role="text">
+               $36.00
+              </span>
+<span class="['vlp-merch-additional-price']">
+<span aria-label="previous price $120.00" class="['sh-strikethrough']" role="text">
+                $120.00
+               </span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="['vlp-merch-item-card-container']" data-interactions="[{"actionKind":"CLICK","interaction":"wwEHJYB2WXwZRgQ0MDFKNTNYWE1HQTI5MFNEUEZRMTYzUlNaOVI0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA"}]" data-viewport="{"trackableId":"01J53XXMGA290SDPFQ163RSZ9R"}">
+
+        ```
+        
