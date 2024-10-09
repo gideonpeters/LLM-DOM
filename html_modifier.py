@@ -23,19 +23,40 @@ OPENAI_KEY = os.getenv("OPENAI_API_KEY")
 TOKEN_LIMIT = 12000
 MAX_LIMIT = 16100
 
+# Class to split HTML into chunks and send each chunk to the LLM for modification
+# Directories
+# - chunked-doms/original/ - Original HTML chunks
+# - chunked-doms/modified/ - Modified HTML chunks
+# - modified-doms/ - Modified HTML files
+# - prompts/{experiment_name}/{dom_name}/{prompt_uuid} - LLM prompts for each chunk for all audit mode
+# - prompts/{experiment_name}/single/{dom_name}/{prompt_uuid}_{audit_key} - LLM prompts for each chunk for single audit mode
+# - response_times/{experiment_name}/{dom_name}.json - Response times for each chunk for all audit mode
+# - response_times/{experiment_name}/single/{dom_name}.json - Response times for each chunk for single audit mode
+# - modifications.json - Modified HTML files for all audit mode
+# - modifications_single.json - Modified HTML files for single audit mode
+# - lh-reports/original/audits/{dom_name}.json - Lighthouse audits for each HTML file
+# - lh-reports/original/audits/{dom_name}.json - Lighthouse audits for each HTML file
+# - extracted-doms/original/{dom_name}.html - Original HTML files
+# - modified-doms/{dom_name}.html - Modified HTML files
+# - error_{dom_name}.log - Error log file
+
+
 class HTMLSplitter:
     def __init__(self, html, dom_name):
         self.html = html
         self.max_tokens = TOKEN_LIMIT
         self.model = "gpt-4o-mini"
+        self.experiment_name = "html_modifier_batch_0001"
         self.dom_name = dom_name
         self.no_of_modifications = 0
         self.temperature = 0.2
         self.mode = "all"
         self.audits = {}
-        self.formatted_audits = ""
+        self.formatted_audit_text = ""
+        self.style_store = {}
+        self.script_store = {}
 
-    def measure_speed():
+    def measure_speed(self):
         st = speedtest.Speedtest()
         
         st.get_best_server()
@@ -48,15 +69,60 @@ class HTMLSplitter:
         download_speed_mbps = download_speed / 1_000_000
         upload_speed_mbps = upload_speed / 1_000_000
 
-        print(f"Download Speed: {download_speed_mbps:.2f} Mbps")
-        print(f"Upload Speed: {upload_speed_mbps:.2f} Mbps")
-        print(f"Ping: {ping:.2f} ms")
+        # print(f"Download Speed: {download_speed_mbps:.2f} Mbps")
+        # print(f"Upload Speed: {upload_speed_mbps:.2f} Mbps")
+        # print(f"Ping: {ping:.2f} ms")
 
         return {
             "download_speed": download_speed_mbps,
             "upload_speed": upload_speed_mbps,
             "ping": ping
         }
+
+    def store_prompt(self, prompt, audit_key=None):
+        prompt_uuid = uuid4()
+        prompt_path = f"prompts/{self.experiment_name}/{self.dom_name}" if self.mode == "all" else f"prompts/{self.experiment_name}/single/{self.dom_name}"
+        prompt_filename = f"{prompt_path}/{prompt_uuid}.txt" if self.mode == "all" else f"{prompt_path}/{prompt_uuid}_{audit_key}.txt"
+
+        os.makedirs(prompt_path, exist_ok=True)
+
+        with open(prompt_filename, 'w') as file:
+            file.write(prompt)
+        
+        return prompt_uuid
+
+    def store_response_time(self, start_time, end_time, prompt_uuid, prompt_token_size, audit_key=None):
+        duration = end_time - start_time
+
+        response_times = []
+        response_time_path = f"response_times/{self.experiment_name}" if self.mode == "all" else f"response_times/{self.experiment_name}/single/{self.dom_name}"
+        response_time_filename = f"{response_time_path}/{self.dom_name}.json" if self.mode == "all" else f"{response_time_path}/{audit_key}.json"
+
+        os.makedirs(response_time_path, exist_ok=True)
+
+        try:
+            with open(response_time_filename, 'r') as file:
+                existing_response_times = json.load(file)
+                if existing_response_times:
+                    response_times.extend(existing_response_times)
+        except (json.JSONDecodeError, FileNotFoundError):
+            response_times = []
+
+        # Append new data
+        response_times.append({
+            "prompt_uuid": str(prompt_uuid),
+            "dom_name": self.dom_name,
+            "prompt_token_size": prompt_token_size,
+            "duration": duration,
+            'mode': self.mode,
+            "audit_key": audit_key,
+            "experiment_name": self.experiment_name,
+            "speed": self.measure_speed()
+        })
+
+        # Write updated data back to the file
+        with open(response_time_filename, 'w') as file:
+            json.dump(response_times, file, indent=4)
 
     def send_to_llm(self, html_part, audit_issues, audit_key=None):
         issue_text = "issues" if self.mode == "all" else "issue"
@@ -78,12 +144,14 @@ class HTMLSplitter:
         2. If no optimizations are possible, return the original code.
         3. Do not modify class names
         4. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
-           and `<!-- End of Optimization: {{one line short description of elements/things fixed}} -->` at the end of the changed portion.
-        5. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
-        6. Because the code is split into chunks, there might be some unclosed or cut elements, do not worry about that.
-        7. Do not change any styles or functionalities of the code.
-        8. Consider that a chunk might be a part of a larger element, so the code might not be complete.
-        9. Consider that HTML as a whole is from production and might be minified, uglified or compressed.
+           and `<!-- End of Optimization: {{one line short description of elements/things fixed}} -->` at the end of the changed portion. Do not indicate any fix outside of the End of Optimization comment.
+        5. Do not remove any predefined comments from the code.
+        6. Never add any additional comments to the code besides that of the instruction in #4.
+        7. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+        8. Because the code is split into chunks, there might be some unclosed or cut elements, do not worry about that.
+        9. Do not change any styles or functionalities of the code.
+        10. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        11. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
 
         The original HTML code is as follows:
 
@@ -92,14 +160,7 @@ class HTMLSplitter:
         ```
         """
 
-        prompt_uuid = uuid4()
-        prompt_path = f"prompts/new-prompts/{self.dom_name}" if self.mode == "all" else f"prompts/new-prompts/single/{self.dom_name}"
-        prompt_filename = f"{prompt_path}/{prompt_uuid}.txt" if self.mode == "all" else f"{prompt_path}/{prompt_uuid}_{audit_key}.txt"
-
-        os.makedirs(prompt_path, exist_ok=True)
-
-        with open(prompt_filename, 'w') as file:
-            file.write(prompt)
+        prompt_uuid = self.store_prompt(prompt, audit_key)
 
         try:
             start_time = time.time()
@@ -112,33 +173,8 @@ class HTMLSplitter:
             )
 
             end_time = time.time()
-            duration = end_time - start_time
-
-            response_times = []
-            response_time_path = f"prompts/response_times" if self.mode == "all" else f"prompts/response_times/single/{self.dom_name}"
-            response_time_filename = f"{response_time_path}/{self.dom_name}.json" if self.mode == "all" else f"{response_time_path}/{self.dom_name}_{audit_key}.json"
-
-            os.makedirs(response_time_path, exist_ok=True)
-
-            try:
-                with open(response_time_filename, 'r') as file:
-                    existing_response_times = json.load(file)
-                    if existing_response_times:
-                        response_times.extend(existing_response_times)
-            except (json.JSONDecodeError, FileNotFoundError):
-                response_times = []
-
-            # Append new data
-            response_times.append({
-                "prompt_uuid": str(prompt_uuid),
-                "dom_name": self.dom_name,
-                "chunk_size": self.estimate_tokens(prompt),
-                "duration": duration
-            })
-
-            # Write updated data back to the file
-            with open(response_time_filename, 'w') as file:
-                json.dump(response_times, file, indent=4)
+            
+            self.store_response_time(start_time, end_time, prompt_uuid, self.estimate_tokens(prompt), audit_key)
 
         except Exception as e:
             print(e)
@@ -163,7 +199,7 @@ class HTMLSplitter:
                 self.no_of_modifications += no_of_modifications
         except Exception as e:
             print(f"Error: {e}")
-            self.log_error(self.dom_name, "No finish reason",e, response)
+            self.log_error(self.dom_name, self.experiment_name, "No finish reason",e, response)
         
         return response_content
             
@@ -186,53 +222,63 @@ class HTMLSplitter:
         return parsed_response
     
     def log_error(self, dom_name: int, finish_reason: str, trace=None):
-        error_file_path = os.path.join(os.getcwd(), "new_error.log")
+        error_file_path = os.path.join(os.getcwd(), f"error_{self.dom_name}.log")
 
         with open(error_file_path, 'a') as file:
             file.write(f"{dom_name}, {finish_reason}, {trace}\n")
 
+
     def modify_html_with_llm(self, audit_issue, audit_key=None):
         chunker = HTMLChunker(self.html, TOKEN_LIMIT)
+        chunker.filename = self.dom_name
         
         # Split the entire document into chunks
         chunks = chunker.split_html()
 
-        original_chunk_path = f"prompts/original-chunks/{self.dom_name}"
-        original_chunk_filename = f"{original_chunk_path}/{self.dom_name}.json"
+        # Store original chunks
+        chunker.store_chunks(chunks, f"chunked-doms/original/{self.experiment_name}", False)
 
-        os.makedirs(original_chunk_path, exist_ok=True)
-
-        with open(original_chunk_filename, 'w') as file:
-            json.dump(chunks, file, indent=4)
-        
         # Iterate through each chunk, send it to the LLM, and replace it in the soup
-        modified_chunks = []
         chunk_json = {}
+        current_chunks = chunks
+
+        style_store = next((item for item in chunks if item["id"] == "style_store"), None)
+        script_store = next((item for item in chunks if item["id"] == "script_store"), None)
         for i, chunk in enumerate(chunks):
-            print(f"Processing chunk {i+1}/{len(chunks)} with {chunker.estimate_tokens(str(chunk))} tokens...")
+            print(f"Processing chunk {i+1}/{len(chunks)} with {chunker.estimate_tokens(str(chunk['content']))} tokens...")
 
-            modified_chunk = self.send_to_llm(chunk['content'], audit_issue, audit_key)
+            if chunk['id'] != 'style_store' and chunk['id'] != 'script_store':
+                modified_chunk = self.send_to_llm(chunk['content'], audit_issue, audit_key)
 
-            chunker.modify_chunk(chunk['id'], modified_chunk)
-            modified_chunks.append(modified_chunk)
-            
-            chunk_json[i] = {
-                "name": self.dom_name,
-                "original": chunk,
-                "original_chunk_size": chunker.estimate_tokens(str(chunk)),
-                "modified": modified_chunk,
-                "modified_chunk_size": chunker.estimate_tokens(str(modified_chunk))
-            }
+                current_chunks = chunker.modify_chunk(current_chunks, chunk['id'], modified_chunk)
+                
+                chunk_json[i] = {
+                    "name": self.dom_name,
+                    "experiment_name": self.experiment_name,
+                    "audit_key": audit_key,
+                    "dom_name": self.dom_name,
+                    "original_chunk_id": chunk['id'],
+                    "mode": self.mode,
+                    "original": chunk,
+                    "original_chunk_size": chunker.estimate_tokens(str(chunk['content'])),
+                    "modified": modified_chunk,
+                    "modified_chunk_size": chunker.estimate_tokens(str(modified_chunk))
+                }
+            else:
+                print(f"Skipping {chunk['id']} chunk...")
 
-            modified_chunk_path = f"prompts/modified-chunks/{self.dom_name}"
-            modified_chunk_filename = f"{modified_chunk_path}/{self.dom_name}.json"
+        # Store modified chunks
+        modified_chunk_path = f"chunked-doms/modified/{self.experiment_name}"
+        os.makedirs(modified_chunk_path, exist_ok=True)
 
-            os.makedirs(modified_chunk_path, exist_ok=True)
+        chunker.store_chunks(chunk_json, modified_chunk_path, True)
 
-            with open(modified_chunk_filename, 'w') as file:
-                json.dump(chunk_json, file, indent=4)
+        # Add style and script stores for remapping later
+        current_chunks.append(style_store)
+        current_chunks.append(script_store)
 
-        modified_html = chunker.reassemble_html()
+        # Reassemble the modified HTML
+        modified_html = chunker.reassemble_html(current_chunks)
         
         return modified_html
     
@@ -297,6 +343,8 @@ def run_changes(html_splitter: HTMLSplitter, lighthouse_audits, audit_key=None):
     modification_tracker = {}
     modification_tracker['name'] = html_splitter.dom_name
     modification_tracker['modifications'] = html_splitter.no_of_modifications
+    modification_tracker['no_of_issues'] = len(lighthouse_audits)
+    modification_tracker['experiment_name'] = html_splitter.experiment_name
     if(html_splitter.mode == "single"):
         modification_tracker['audit_key'] = audit_key
 
@@ -308,7 +356,13 @@ def run_changes(html_splitter: HTMLSplitter, lighthouse_audits, audit_key=None):
 
 # Example of usage:
 if __name__ == '__main__':
-    html_file = "extracted-doms/original/netflix.html"
+    html_file = "extracted-doms/original/airbnb.html"
+
+    files_to_exclude = ['amazon', 'ubereats', 'glassdoor', 'ziprecruiter', 'behance']
+
+    if any(exclude in html_file for exclude in files_to_exclude):
+        print(f"Skipping {html_file}...")
+        exit()
 
     with open(html_file, 'r') as file:
         original_html = file.read()
@@ -321,10 +375,14 @@ if __name__ == '__main__':
     lighthouse_audits = html_splitter.get_audit_issues()
 
     if lighthouse_audits and html_splitter.mode == "all":
-        run_changes(html_splitter, lighthouse_audits)
-        print("HTML modifications completed and saved.")
+        print("Starting HTML all modifications...")
 
+        run_changes(html_splitter, lighthouse_audits)
+
+        print("HTML modifications completed and saved.")
     elif lighthouse_audits and html_splitter.mode == "single":
+        print("Starting HTML single audit modifications...")
+
         for audit in lighthouse_audits:
             run_changes(html_splitter, {audit: lighthouse_audits[audit]}, audit)
         

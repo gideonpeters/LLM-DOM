@@ -1,0 +1,262 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issues: 
+       
+        __________________
+        "
+            1. First Contentful Paint: First Contentful Paint marks the time at which the first text or image is painted. [Learn more about the First Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/).
+ 
+
+            
+            2. Largest Contentful Paint: Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)
+ 
+
+            
+            3. Speed Index: Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/).
+ 
+
+            
+            4. Total Blocking Time: Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds. [Learn more about the Total Blocking Time metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/).
+ 
+
+            
+            5. Max Potential First Input Delay: The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).
+ 
+
+            
+            6. Browser errors were logged to the console: Errors logged to the console indicate unresolved problems. They can come from network request failures and other browser concerns. [Learn more about this errors in console diagnostic audit](https://developer.chrome.com/docs/lighthouse/best-practices/errors-in-console/)
+ 
+
+            
+            7. Time to Interactive: Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).
+ 
+
+            
+            8. Minimize main-thread work: Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to minimize main-thread work](https://developer.chrome.com/docs/lighthouse/performance/mainthread-work-breakdown/)
+ 
+
+            
+            9. Reduce the impact of third-party code: Third-party code can significantly impact load performance. Limit the number of redundant third-party providers and try to load third-party code after your page has primarily finished loading. [Learn how to minimize third-party impact](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript/).
+ 
+
+            
+            10. Largest Contentful Paint element: This is the largest contentful element painted within the viewport. [Learn more about the Largest Contentful Paint element](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)
+ 
+
+            
+            11. `[aria-hidden="true"]` elements contain focusable descendents: Focusable descendents within an `[aria-hidden="true"]` element prevent those interactive elements from being available to users of assistive technologies like screen readers. [Learn how `aria-hidden` affects focusable elements](https://dequeuniversity.com/rules/axe/4.9/aria-hidden-focus).
+ 
+
+            
+            12. Elements use prohibited ARIA attributes: Using ARIA attributes in roles where they are prohibited can mean that important information is not communicated to users of assistive technologies. [Learn more about prohibited ARIA roles](https://dequeuniversity.com/rules/axe/4.9/aria-prohibited-attr).
+ 
+
+            
+            13. Eliminate render-blocking resources: Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn how to eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/).
+ 
+
+            
+            14. Minify CSS: Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/).
+ 
+
+            
+            15. Reduce unused CSS: Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/).
+ 
+
+            
+            16. Reduce unused JavaScript: Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).
+ 
+
+            
+            17. Enable text compression: Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more about text compression](https://developer.chrome.com/docs/lighthouse/performance/uses-text-compression/).
+ 
+
+            
+            18. Avoid serving legacy JavaScript to modern browsers: Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. For your bundled JavaScript, adopt a modern script deployment strategy using module/nomodule feature detection to reduce the amount of code shipped to modern browsers, while retaining support for legacy browsers. [Learn how to use modern JavaScript](https://web.dev/articles/publish-modern-javascript)
+ 
+
+            
+            19. Avoid an excessive DOM size: A large DOM will increase memory usage, cause longer [style calculations](https://developers.google.com/web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations), and produce costly [layout reflows](https://developers.google.com/speed/articles/reflow). [Learn how to avoid an excessive DOM size](https://developer.chrome.com/docs/lighthouse/performance/dom-size/).
+ 
+
+            
+            20. Issues were logged in the `Issues` panel in Chrome Devtools: Issues logged to the `Issues` panel in Chrome Devtools indicate unresolved problems. They can come from network request failures, insufficient security controls, and other browser concerns. Open up the Issues panel in Chrome DevTools for more details on each issue.
+ 
+
+            
+            21. Page is blocked from indexing: Search engines are unable to include your pages in search results if they don't have permission to crawl them. [Learn more about crawler directives](https://developer.chrome.com/docs/lighthouse/seo/is-crawlable/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issues given above.
+
+        Make sure you:
+        1. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        2. If no optimizations are possible, return the original code.
+        3. Do not modify class names
+        4. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {one line short description of elements/things fixed} -->` at the end of the changed portion.
+        5. Do not remove any comments from the code.
+        6. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+        7. Because the code is split into chunks, there might be some unclosed or cut elements, do not worry about that.
+        8. Do not change any styles or functionalities of the code.
+        9. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        10. Consider that HTML as a whole is from production and might be minified, uglified or compressed.
+
+        The original HTML code is as follows:
+
+        ```html
+        
+<meta charset="utf-8"></meta>
+<meta content="en-CA" name="locale"></meta>
+<meta content="notranslate" name="google"></meta>
+<meta content="authenticity_token" id="csrf-param-meta-tag" name="csrf-param"></meta>
+<meta content="" id="csrf-token-meta-tag" name="csrf-token"></meta>
+<meta content="" id="english-canonical-url"></meta>
+<meta content="on" name="twitter:widgets:csp"></meta>
+<meta content="yes" name="mobile-web-app-capable"></meta>
+<meta content="yes" name="apple-mobile-web-app-capable"></meta>
+<meta content="Airbnb" name="application-name"></meta>
+<meta content="Airbnb" name="apple-mobile-web-app-title"></meta>
+<meta content="#ffffff" name="theme-color"></meta>
+<meta content="#ffffff" name="msapplication-navbutton-color"></meta>
+<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"></meta>
+<meta content="/?utm_source=homescreen" name="msapplication-starturl"></meta>
+<link crossorigin="anonymous" href="https://a0.muscache.com/airbnb/static/packages/web/common/frontend/core-guest-loop/apps/core-guest-spa/client.014acaf867.css" media="all" rel="['stylesheet']" type="text/css"></link>
+<script data-chunk-uuid="c5911c68-c61d-4998-8e71-79a6b23fd778" crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/frontend/hyperloop-browser/metroRequire.f041c10b23.js"><!-- chunk_script_c5911c68-c61d-4998-8e71-79a6b23fd778 -->
+</script>
+<script data-chunk-uuid="00c04001-5660-49a8-827b-61950cb0f3fb" crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/frontend/hyperloop-browser/shims_post_modules.3a508a05ae.js"><!-- chunk_script_00c04001-5660-49a8-827b-61950cb0f3fb -->
+</script>
+<script data-chunk-uuid="e7939b7f-2d65-4d99-8f14-7fe897eefd3d" crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/en-CA/frontend/airmetro/browser/asyncRequire.931f2ce3c6.js"><!-- chunk_script_e7939b7f-2d65-4d99-8f14-7fe897eefd3d -->
+</script>
+<script data-chunk-uuid="baf103f8-9a68-4862-bdb9-d24e43e6e2b8" crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/frontend/hyperloop-browser/coreV2.2517bd5b12.js"><!-- chunk_script_baf103f8-9a68-4862-bdb9-d24e43e6e2b8 -->
+</script>
+<script data-chunk-uuid="952e465e-8f26-413d-8120-2b03755eeade" crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/f29e.66fc6bd74f.js"><!-- chunk_script_952e465e-8f26-413d-8120-2b03755eeade -->
+</script>
+<script data-chunk-uuid="b4760024-16de-4174-bd7b-c52e307532f1" crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/frontend/core-guest-loop/routeHandler.3fb3d8a56e.js"><!-- chunk_script_b4760024-16de-4174-bd7b-c52e307532f1 -->
+</script>
+<script data-chunk-uuid="ad8e3844-d638-4da1-a0ea-0f283a2fd26f" crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/en-CA/3af3.8f718fc83c.js"><!-- chunk_script_ad8e3844-d638-4da1-a0ea-0f283a2fd26f -->
+</script>
+<script data-chunk-uuid="562da67a-a813-4260-94e1-8bac79cfb24b" crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/31c5.cd5006b406.js"><!-- chunk_script_562da67a-a813-4260-94e1-8bac79cfb24b -->
+</script>
+<script data-chunk-uuid="4e23cf60-dcf1-4f20-abb7-feffc147b5e3" crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/5807.fcdb56d3cc.js"><!-- chunk_script_4e23cf60-dcf1-4f20-abb7-feffc147b5e3 -->
+</script>
+<script data-chunk-uuid="9d13d0f3-89f3-4a40-a39d-988955797710" crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/a8e1.67d243b5f8.js"><!-- chunk_script_9d13d0f3-89f3-4a40-a39d-988955797710 -->
+</script>
+<script data-chunk-uuid="47ad3afc-6894-4d21-bee5-4a51341b318a" crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/frontend/moment-more-formats/src/locale/en-ca.cbdc6c7fc4.js"><!-- chunk_script_47ad3afc-6894-4d21-bee5-4a51341b318a -->
+</script>
+<script data-chunk-uuid="71e88318-3be2-4433-937e-5f5433626aa8" crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/frontend/core-guest-loop/apps/core-guest-spa/initializer.189b558447.js"><!-- chunk_script_71e88318-3be2-4433-937e-5f5433626aa8 -->
+</script>
+<script data-chunk-uuid="30184d40-bdbe-4e6a-8fc1-c9acc4e30110" crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/frontend/guest-header/query/HeaderQuery.prepare.ed6fcb10c6.js"><!-- chunk_script_30184d40-bdbe-4e6a-8fc1-c9acc4e30110 -->
+</script>
+<script data-chunk-uuid="3c150330-c159-4e6a-9a64-fedc2d5c3442" crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/9024.eee6159c60.js"><!-- chunk_script_3c150330-c159-4e6a-9a64-fedc2d5c3442 -->
+</script>
+<script data-chunk-uuid="785e920b-6a14-48d5-88fc-2b018ca1ca1f" crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/75d4.0ca0aa9a05.js"><!-- chunk_script_785e920b-6a14-48d5-88fc-2b018ca1ca1f -->
+</script>
+<script data-chunk-uuid="6ddf4793-2779-494d-b80e-8a1353d73e4e" crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/frontend/niobe/minimalist/index.8735093809.js"><!-- chunk_script_6ddf4793-2779-494d-b80e-8a1353d73e4e -->
+</script>
+<script data-chunk-uuid="d1cd2306-0566-497a-aae9-8af9b9ad56a1" crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/en-CA/7feb.74fbcbd7ad.js"><!-- chunk_script_d1cd2306-0566-497a-aae9-8af9b9ad56a1 -->
+</script>
+<script data-chunk-uuid="d8517431-1865-4e05-a805-9d39c833886a" crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/en-CA/9ff5.22a5f9f54b.js"><!-- chunk_script_d8517431-1865-4e05-a805-9d39c833886a -->
+</script>
+<script data-chunk-uuid="b6753acf-60fa-4153-a177-79b4d64b3bf1" crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/en-CA/ca89.cb3f3f0eb3.js"><!-- chunk_script_b6753acf-60fa-4153-a177-79b4d64b3bf1 -->
+</script>
+<script data-chunk-uuid="caaaab38-62f4-4787-a6b9-736c8c1cf04d" crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/ccf1.64d4608ad1.js"><!-- chunk_script_caaaab38-62f4-4787-a6b9-736c8c1cf04d -->
+</script>
+<script data-chunk-uuid="e6a9b761-0c62-4b52-8dbd-b7970d0b1e4c" crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/ab12.92369a5132.js"><!-- chunk_script_e6a9b761-0c62-4b52-8dbd-b7970d0b1e4c -->
+</script>
+<script data-chunk-uuid="2904ed9f-aa11-478e-bae0-cf44f91f8d9d" crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/frontend/stays-search/routes/StaysSearchRoute/StaysSearchRoute.73ec66b7b3.js"><!-- chunk_script_2904ed9f-aa11-478e-bae0-cf44f91f8d9d -->
+</script>
+<script data-chunk-uuid="faf134fd-29a4-4eda-9128-34d974ad0d44" crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/frontend/stays-search/routes/StaysSearchRoute/StaysSearchRoute.prepare.52f11a7018.js"><!-- chunk_script_faf134fd-29a4-4eda-9128-34d974ad0d44 -->
+</script>
+<script data-chunk-uuid="d84b05d2-996f-4d61-9f46-331e3ba2d614" crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/f4c9.fac2c7f552.js"><!-- chunk_script_d84b05d2-996f-4d61-9f46-331e3ba2d614 -->
+</script>
+<script data-chunk-uuid="1320874d-248b-480a-9822-bd566285297a" crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/1742.dec90c42cb.js"><!-- chunk_script_1320874d-248b-480a-9822-bd566285297a -->
+</script>
+<script data-chunk-uuid="d88e0289-964a-4003-aa01-ff2544ce9ca3" crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/2111.73041a4254.js"><!-- chunk_script_d88e0289-964a-4003-aa01-ff2544ce9ca3 -->
+</script>
+<script data-chunk-uuid="63306d67-d042-415f-aeb6-f3719c17fbcd" crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/92d4.f248e80107.js"><!-- chunk_script_63306d67-d042-415f-aeb6-f3719c17fbcd -->
+</script>
+<script data-chunk-uuid="c95a3cf6-836f-47fe-a6c4-b9adddca610d" crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/85ed.0673d5cab7.js"><!-- chunk_script_c95a3cf6-836f-47fe-a6c4-b9adddca610d -->
+</script>
+<script data-chunk-uuid="008e503f-c7c8-42a0-90a7-2ccd14fafb43" crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/en-CA/2953.6f915e37cf.js"><!-- chunk_script_008e503f-c7c8-42a0-90a7-2ccd14fafb43 -->
+</script>
+<script data-chunk-uuid="71365eeb-8a33-4dc5-807e-f5e6f086d5ce" crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/676e.59c15edae4.js"><!-- chunk_script_71365eeb-8a33-4dc5-807e-f5e6f086d5ce -->
+</script>
+<script data-chunk-uuid="7b00cc72-28cc-492a-a0aa-9d3ea3407935" crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/22f4.4d35ad6da8.js"><!-- chunk_script_7b00cc72-28cc-492a-a0aa-9d3ea3407935 -->
+</script>
+<script data-chunk-uuid="8153f050-227c-4c7b-b984-ac703dd4b0e1" crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/322b.cb5041703b.js"><!-- chunk_script_8153f050-227c-4c7b-b984-ac703dd4b0e1 -->
+</script>
+<script data-chunk-uuid="03838612-00be-48be-821e-d053e046952e" crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/08da.0499dd44bb.js"><!-- chunk_script_03838612-00be-48be-821e-d053e046952e -->
+</script>
+<script data-chunk-uuid="8d314ab7-a83d-45f9-bd7b-d60f3b85dc79" crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/en-CA/frontend/core-guest-loop/apps/core-guest-spa/client.470a5d2665.js"><!-- chunk_script_8d314ab7-a83d-45f9-bd7b-d60f3b85dc79 -->
+</script>
+<script data-chunk-uuid="8915923d-491c-4f9d-9b0c-e4484d2499c9"><!-- chunk_script_8915923d-491c-4f9d-9b0c-e4484d2499c9 -->
+</script>
+<script data-chunk-uuid="faa92412-21b7-422c-a614-5828b9cb5afe"><!-- chunk_script_faa92412-21b7-422c-a614-5828b9cb5afe -->
+</script>
+<script data-chunk-uuid="e9562354-2e8c-4ecb-8a6f-6b2ecacbcd72"><!-- chunk_script_e9562354-2e8c-4ecb-8a6f-6b2ecacbcd72 -->
+</script>
+<script data-chunk-uuid="35c28912-baf4-4f44-be2b-4f07b5de0fdf"><!-- chunk_script_35c28912-baf4-4f44-be2b-4f07b5de0fdf -->
+</script>
+<script data-chunk-uuid="d1220de2-2349-4e21-a3c6-6555c395402c"><!-- chunk_script_d1220de2-2349-4e21-a3c6-6555c395402c -->
+</script>
+<link href="/opensearch.xml" rel="['search']" title="Airbnb" type="application/opensearchdescription+xml"></link>
+<link href="https://a0.muscache.com/airbnb/static/icons/apple-touch-icon-76x76-3b313d93b1b5823293524b9764352ac9.png" rel="['apple-touch-icon']"></link>
+<link href="https://a0.muscache.com/airbnb/static/icons/apple-touch-icon-76x76-3b313d93b1b5823293524b9764352ac9.png" rel="['apple-touch-icon']" sizes="76x76"></link>
+<link href="https://a0.muscache.com/airbnb/static/icons/apple-touch-icon-120x120-52b1adb4fe3a8f825fc4b143de12ea4b.png" rel="['apple-touch-icon']" sizes="120x120"></link>
+<link href="https://a0.muscache.com/airbnb/static/icons/apple-touch-icon-152x152-7b7c6444b63d8b6ebad9dae7169e5ed6.png" rel="['apple-touch-icon']" sizes="152x152"></link>
+<link href="https://a0.muscache.com/airbnb/static/icons/apple-touch-icon-180x180-bcbe0e3960cd084eb8eaf1353cf3c730.png" rel="['apple-touch-icon']" sizes="180x180"></link>
+<link href="https://a0.muscache.com/airbnb/static/icons/android-icon-192x192-c0465f9f0380893768972a31a614b670.png" rel="['icon']" sizes="192x192"></link>
+<link href="https://a0.muscache.com/airbnb/static/logotype_favicon-21cc8e6c6a2cca43f061d2dcabdf6e58.ico" rel="['shortcut', 'icon']" sizes="76x76" type="image/x-icon"></link>
+<link color="#FF5A5F" href="https://a0.muscache.com/airbnb/static/icons/airbnb-0611901eac33ccfa5e93d793a2e21f09.svg" rel="['mask-icon']"></link>
+<style data-chunk-uuid="4e4cddb9-dc25-4174-853b-eb85fe106880" data-css-var-overrides="true" id="cssVarOverrides" type="text/css">/* chunk_style_4e4cddb9-dc25-4174-853b-eb85fe106880 */
+</style>
+<link crossorigin="anonymous" href="https://a0.muscache.com/airbnb/static/packages/dls/dls-lite_cereal-47d27fa833e062fe3413637eb751001f.css" media="all" rel="['stylesheet']" type="text/css"></link>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"></meta>
+<style data-chunk-uuid="4fb07f9a-f5f3-4cae-979d-ec320e8894cb" data-aphrodite="true" id="aphrodite" type="text/css">/* chunk_style_4fb07f9a-f5f3-4cae-979d-ec320e8894cb */
+</style>
+<style data-chunk-uuid="2fac4215-ba7d-4523-b34e-f12c9b802fc3" data-linaria-css-reset="true" id="linariaCssReset" type="text/css">/* chunk_style_2fac4215-ba7d-4523-b34e-f12c9b802fc3 */
+</style>
+<meta content="138566025676" property="fb:app_id"></meta>
+<meta content="Airbnb" property="og:site_name"></meta>
+<meta content="en_US" property="og:locale"></meta>
+<meta content="https://www.airbnb.ca/s/Italy/homes" property="og:url"></meta>
+<meta content="Italy Sublets, Short Term Rentals & Rooms for Rent - Airbnb Italy" property="og:title"></meta>
+<meta content="Monthly sublets in Italy from $687 CAD/month. Find unique places to stay with local hosts in 191 countries. Belong anywhere with Airbnb." property="og:description"></meta>
+<meta content="website" property="og:type"></meta>
+<meta content="https://a0.muscache.com/im/pictures/fe7217ff-0b24-438d-880d-b94722c75bf5.jpg" property="og:image"></meta>
+<link href="airbnb://d/search" rel="['alternate']"></link>
+<meta content="noindex, nofollow" name="robots"></meta>
+<meta content="Aug. 12, 2024 - Monthly sublets in Italy from $687 CAD/month. Find unique places to stay with local hosts in 191 countries. Belong anywhere with Airbnb." name="description"></meta>
+<title>
+   Italy Sublets, Short Term Rentals & Rooms for Rent - Airbnb Italy
+  </title>
+<link href="/manifest.json" rel="['manifest']"></link>
+<meta content="summary_large_image" name="twitter:card"></meta>
+<meta content="Italy Sublets, Short Term Rentals & Rooms for Rent - Airbnb Italy" name="twitter:title"></meta>
+<meta content="@airbnb" name="twitter:site"></meta>
+<meta content="Airbnb" name="twitter:app:name:iphone"></meta>
+<meta content="Airbnb" name="twitter:app:name:ipad"></meta>
+<meta content="Airbnb" name="twitter:app:name:googleplay"></meta>
+<meta content="401626263" name="twitter:app:id:iphone"></meta>
+<meta content="401626263" name="twitter:app:id:ipad"></meta>
+<meta content="com.airbnb.android" name="twitter:app:id:googleplay"></meta>
+<meta content="https://www.airbnb.ca/s/Italy/homes" name="twitter:url"></meta>
+<meta content="airbnb://d/search" name="twitter:app:url:iphone"></meta>
+<meta content="airbnb://d/search" name="twitter:app:url:ipad"></meta>
+<meta content="airbnb://d/search" name="twitter:app:url:googleplay"></meta>
+<meta content="Monthly sublets in Italy from $687 CAD/month. Find unique places to stay with local hosts in 191 countries. Belong anywhere with Airbnb." name="twitter:description"></meta>
+<script data-chunk-uuid="ff72f57f-d072-424c-8ad6-c0737bf3d220" data-apollo-state="true" id="data-apollo-state" type="application/json"><!-- chunk_script_ff72f57f-d072-424c-8ad6-c0737bf3d220 -->
+</script>
+<script data-chunk-uuid="80cdaa3b-b3d1-42cd-9988-034b1f00c8d8" data-flagger_cdn_experiments="true" id="data-flagger_cdn_experiments" type="application/json"><!-- chunk_script_80cdaa3b-b3d1-42cd-9988-034b1f00c8d8 -->
+</script>
+<script data-chunk-uuid="7093e830-7c73-427b-b743-49c2db665655" id="aphrodite-classes" type="application/json"><!-- chunk_script_7093e830-7c73-427b-b743-49c2db665655 -->
+</script>
+
+        ```
+        

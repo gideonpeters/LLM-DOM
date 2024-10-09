@@ -1,0 +1,680 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issues: 
+       
+        __________________
+        "
+            1. Does not use HTTPS: All sites should be protected with HTTPS, even ones that don't handle sensitive data. This includes avoiding [mixed content](https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content), where some resources are loaded over HTTP despite the initial request being served over HTTPS. HTTPS prevents intruders from tampering with or passively listening in on the communications between your app and your users, and is a prerequisite for HTTP/2 and many new web platform APIs. [Learn more about HTTPS](https://developer.chrome.com/docs/lighthouse/pwa/is-on-https/).
+ 
+
+            
+            2. First Contentful Paint: First Contentful Paint marks the time at which the first text or image is painted. [Learn more about the First Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/).
+ 
+
+            
+            3. Largest Contentful Paint: Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)
+ 
+
+            
+            4. Speed Index: Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/).
+ 
+
+            
+            5. Total Blocking Time: Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds. [Learn more about the Total Blocking Time metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/).
+ 
+
+            
+            6. Max Potential First Input Delay: The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).
+ 
+
+            
+            7. Cumulative Layout Shift: Cumulative Layout Shift measures the movement of visible elements within the viewport. [Learn more about the Cumulative Layout Shift metric](https://web.dev/articles/cls).
+ 
+
+            
+            8. Browser errors were logged to the console: Errors logged to the console indicate unresolved problems. They can come from network request failures and other browser concerns. [Learn more about this errors in console diagnostic audit](https://developer.chrome.com/docs/lighthouse/best-practices/errors-in-console/)
+ 
+
+            
+            9. Time to Interactive: Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).
+ 
+
+            
+            10. Uses deprecated APIs: Deprecated APIs will eventually be removed from the browser. [Learn more about deprecated APIs](https://developer.chrome.com/docs/lighthouse/best-practices/deprecations/).
+ 
+
+            
+            11. Uses third-party cookies: Support for third-party cookies will be removed in a future version of Chrome. [Learn more about phasing out third-party cookies](https://developer.chrome.com/en/docs/privacy-sandbox/third-party-cookie-phase-out/).
+ 
+
+            
+            12. Minimize main-thread work: Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to minimize main-thread work](https://developer.chrome.com/docs/lighthouse/performance/mainthread-work-breakdown/)
+ 
+
+            
+            13. Reduce JavaScript execution time: Consider reducing the time spent parsing, compiling, and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to reduce Javascript execution time](https://developer.chrome.com/docs/lighthouse/performance/bootup-time/).
+ 
+
+            
+            14. Reduce the impact of third-party code: Third-party code can significantly impact load performance. Limit the number of redundant third-party providers and try to load third-party code after your page has primarily finished loading. [Learn how to minimize third-party impact](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript/).
+ 
+
+            
+            15. Largest Contentful Paint element: This is the largest contentful element painted within the viewport. [Learn more about the Largest Contentful Paint element](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)
+ 
+
+            
+            16. Avoid large layout shifts: These are the largest layout shifts observed on the page. Each table item represents a single layout shift, and shows the element that shifted the most. Below each item are possible root causes that led to the layout shift. Some of these layout shifts may not be included in the CLS metric value due to [windowing](https://web.dev/articles/cls#what_is_cls). [Learn how to improve CLS](https://web.dev/articles/optimize-cls)
+ 
+
+            
+            17. Image elements do not have explicit `width` and `height`: Set an explicit width and height on image elements to reduce layout shifts and improve CLS. [Learn how to set image dimensions](https://web.dev/articles/optimize-cls#images_without_dimensions)
+ 
+
+            
+            18. `[aria-*]` attributes do not match their roles: Each ARIA `role` supports a specific subset of `aria-*` attributes. Mismatching these invalidates the `aria-*` attributes. [Learn how to match ARIA attributes to their roles](https://dequeuniversity.com/rules/axe/4.9/aria-allowed-attr).
+ 
+
+            
+            19. Background and foreground colors do not have a sufficient contrast ratio.: Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.9/color-contrast).
+ 
+
+            
+            20. Touch targets do not have sufficient size or spacing.: Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. [Learn more about touch targets](https://dequeuniversity.com/rules/axe/4.9/target-size).
+ 
+
+            
+            21. Serve static assets with an efficient cache policy: A long cache lifetime can speed up repeat visits to your page. [Learn more about efficient cache policies](https://developer.chrome.com/docs/lighthouse/performance/uses-long-cache-ttl/).
+ 
+
+            
+            22. Avoid enormous network payloads: Large network payloads cost users real money and are highly correlated with long load times. [Learn how to reduce payload sizes](https://developer.chrome.com/docs/lighthouse/performance/total-byte-weight/).
+ 
+
+            
+            23. Defer offscreen images: Consider lazy-loading offscreen and hidden images after all critical resources have finished loading to lower time to interactive. [Learn how to defer offscreen images](https://developer.chrome.com/docs/lighthouse/performance/offscreen-images/).
+ 
+
+            
+            24. Eliminate render-blocking resources: Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn how to eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/).
+ 
+
+            
+            25. Minify CSS: Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/).
+ 
+
+            
+            26. Reduce unused CSS: Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/).
+ 
+
+            
+            27. Reduce unused JavaScript: Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).
+ 
+
+            
+            28. Serve images in next-gen formats: Image formats like WebP and AVIF often provide better compression than PNG or JPEG, which means faster downloads and less data consumption. [Learn more about modern image formats](https://developer.chrome.com/docs/lighthouse/performance/uses-webp-images/).
+ 
+
+            
+            29. Efficiently encode images: Optimized images load faster and consume less cellular data. [Learn how to efficiently encode images](https://developer.chrome.com/docs/lighthouse/performance/uses-optimized-images/).
+ 
+
+            
+            30. Enable text compression: Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more about text compression](https://developer.chrome.com/docs/lighthouse/performance/uses-text-compression/).
+ 
+
+            
+            31. Properly size images: Serve images that are appropriately-sized to save cellular data and improve load time. [Learn how to size images](https://developer.chrome.com/docs/lighthouse/performance/uses-responsive-images/).
+ 
+
+            
+            32. Avoid serving legacy JavaScript to modern browsers: Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. For your bundled JavaScript, adopt a modern script deployment strategy using module/nomodule feature detection to reduce the amount of code shipped to modern browsers, while retaining support for legacy browsers. [Learn how to use modern JavaScript](https://web.dev/articles/publish-modern-javascript)
+ 
+
+            
+            33. Avoid an excessive DOM size: A large DOM will increase memory usage, cause longer [style calculations](https://developers.google.com/web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations), and produce costly [layout reflows](https://developers.google.com/speed/articles/reflow). [Learn how to avoid an excessive DOM size](https://developer.chrome.com/docs/lighthouse/performance/dom-size/).
+ 
+
+            
+            34. Issues were logged in the `Issues` panel in Chrome Devtools: Issues logged to the `Issues` panel in Chrome Devtools indicate unresolved problems. They can come from network request failures, insufficient security controls, and other browser concerns. Open up the Issues panel in Chrome DevTools for more details on each issue.
+ 
+
+            
+            35. Avoid `document.write()`: For users on slow connections, external scripts dynamically injected via `document.write()` can delay page load by tens of seconds. [Learn how to avoid document.write()](https://developer.chrome.com/docs/lighthouse/best-practices/no-document-write/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks. 
+        Please modify this HTML code chunk to resolve the performance issues given above.:
+
+        1. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        2. If no optimizations are possible, return the original code.
+        3. Do not modify class names
+        4. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization -->` at the end of the changed portion.
+        5. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+        6. Because the code is split into chunks, there might be some unclosed or cut elements, do not worry about that.
+        7. Do not change any styles or functionalities of the code.
+        8. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        9. Consider that HTML as a whole is from production and might be minified, uglified or compressed.
+
+        The original HTML code is as follows:
+
+        ```html
+        
+<div class="['vl-flyout-nav__flyout']">
+<div class="['vl-flyout-nav__sub-cats']">
+<nav aria-label="Top Categories" class="['vl-flyout-nav__sub-cat-col']">
+<h4>
+            Top Categories
+           </h4>
+<ul>
+<li>
+<a _sp="p4375194.m1386.l3251" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/Heavy-Equipment/177641/bn_1511518">
+              Heavy Equipment
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1386.l3252" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/Heavy-Equipment-Attachments/177647/bn_1309146">
+              Heavy Equipment Attachments
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1386.l3253" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/Heavy-Equipment-Parts-Accessories/41489/bn_7208228">
+              Heavy Equipment Parts & Accessories
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1386.l3254" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/Healthcare-Lab-Dental/11815/bn_1851782">
+              Healthcare
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1386.l3255" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/Restaurant-Food-Service/11874/bn_1865467">
+              Restaurant & Food Service
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1386.l3256" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/Test-Measurement-Inspection-Equipment/181939/bn_16566063">
+              Test, Measurement & Inspection Equipment
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1386.l3257" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/CNC-Metalworking-Manufacturing/11804/bn_1861284">
+              CNC, Metalworking & Manufacturing
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1386.l3258" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/Office-Equipment-Supplies/25298/bn_1856567">
+              Office
+             </a>
+</li>
+</ul>
+</nav>
+<nav aria-label="Additional Categories" class="['vl-flyout-nav__sub-cat-col']">
+<h4>
+            Additional Categories
+           </h4>
+<ul>
+<li>
+<a _sp="p4375194.m1386.l3259" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/Industrial-Automation-Motion-Controls/42892/bn_2309506">
+              Industrial Automation & Motion Control
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1386.l3260" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/Packing-Shipping/19273/bn_1865376">
+              Shipping & Packaging
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1386.l3261" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/Electrical-Equipment-Supplies/92074/bn_1852224">
+              Electrical Equipment & Supplies
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1386.l3262" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/Food-Trucks-Concession-Trailers/184249/bn_7717994">
+              Food Trucks & Concession Trailers
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1386.l3263" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/Dental/bn_7115058704">
+              Dental
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1386.l3264" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/Personal-Protective-Equipment-PPE/183970/bn_78213405">
+              Personal Protective Equipment
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1386.l3265" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/Light-Industrial-Equipment-Tools/61573/bn_1521576">
+              Light Industrial Equipment & Tools
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1386.l3266" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/HVAC-Refrigeration/42909/bn_2312341">
+              HVAC & Refrigeration
+             </a>
+</li>
+</ul>
+</nav>
+</div>
+<div class="['vl-flyout-nav__rtm']" data-marko-key="@rtmImages[]_7 s0-1-0-52-1-2-2">
+</div>
+</div>
+</li>
+<li class="['vl-flyout-nav__js-tab']" data-currenttabindex="8" data-hover-track="p4375194.m1387.l6435">
+<a _sp="p4375194.m1387.l3250" href="https://www.ebay.com/b/Jewelry-Watches/281/bn_1865273">
+         Jewelry & Watches
+        </a>
+<div class="['vl-flyout-nav__expander']">
+<button aria-haspopup="true">
+          Expand: Jewelry & Watches
+         </button>
+</div>
+<div class="['vl-flyout-nav__flyout']">
+<div class="['vl-flyout-nav__sub-cats']">
+<nav aria-label="Top Categories" class="['vl-flyout-nav__sub-cat-col']">
+<h4>
+            Top Categories
+           </h4>
+<ul>
+<li>
+<a _sp="p4375194.m1387.l3251" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/Luxury-Watches/31387/bn_36841947">
+              Luxury Watches
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1387.l3252" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/Watches-Parts-Accessories/260324/bn_2408535">
+              All Watches, Parts, Accessories
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1387.l3253" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/Fine-Jewelry/4196/bn_2408477">
+              Fine Jewelry
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1387.l3254" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/Fashion-Jewelry/10968/bn_2408529">
+              Fashion Jewelry
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1387.l3255" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/Loose-Diamonds-Gemstones/491/bn_1519324">
+              Loose Diamonds & Gemstones
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1387.l3256" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/Jewelry/bn_7000259126">
+              All Jewelry
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1387.l3257" class="['vl-flyout-nav__js-link']" href="https://pages.ebay.com/authenticity-guarantee/ ">
+              Authenticity Guarantee
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1387.l3258" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/Certified-by-Brand/bn_7121183554">
+              Certified by Brand
+             </a>
+</li>
+</ul>
+</nav>
+<nav aria-label="Top Brands" class="['vl-flyout-nav__sub-cat-col']">
+<h4>
+            Top Brands
+           </h4>
+<ul>
+<li>
+<a _sp="p4375194.m1387.l3259" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/Rolex-Watches/31387/bn_2989578">
+              Rolex
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1387.l3260" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/OMEGA-Watches/31387/bn_3000908">
+              OMEGA
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1387.l3261" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/Breitling-Watches/31387/bn_3003445">
+              Breitling
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1387.l3262" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/TAG-Heuer-Watches/31387/bn_2999599">
+              TAG Heuer
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1387.l3263" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/Cartier/bn_21821851">
+              Cartier
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1387.l3264" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/Van-Cleef-Arpels-Fine-Jewelry/4196/bn_2194685">
+              Van Cleef & Arpels
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1387.l3265" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/Tiffany-Co/bn_21836959">
+              Tiffany & Co
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1387.l3266" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/David-Yurman/bn_21823139">
+              David Yurman
+             </a>
+</li>
+</ul>
+</nav>
+</div>
+<div class="['vl-flyout-nav__rtm']" data-marko-key="@rtmImages[]_8 s0-1-0-52-1-2-2">
+</div>
+</div>
+</li>
+<li class="['vl-flyout-nav__js-tab', 'vl-flyout-nav__no-sub']" data-currenttabindex="9" data-hover-track="p4375194.m1388.l6435">
+<a _sp="p4375194.m1388.l3250" href="https://www.ebay.com/ebaylive">
+         eBay Live
+        </a>
+</li>
+<li class="['vl-flyout-nav__js-tab']" data-currenttabindex="10" data-hover-track="p4375194.m1389.l6435">
+<a _sp="p4375194.m1389.l3250" href="https://www.ebay.com/b/eBay-Refurbished/bn_7040708936">
+         Refurbished
+        </a>
+<div class="['vl-flyout-nav__expander']">
+<button aria-haspopup="true">
+          Expand: Refurbished
+         </button>
+</div>
+<div class="['vl-flyout-nav__flyout']">
+<div class="['vl-flyout-nav__sub-cats']">
+<nav aria-label="Shop eBay Refurbished Electronics" class="['vl-flyout-nav__sub-cat-col']">
+<h4>
+            Shop eBay Refurbished Electronics
+           </h4>
+<ul>
+<li>
+<a _sp="p4375194.m1389.l3251" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/Cell-Phones-Smartphones/9355/bn_320094?rt=nc&LH_ItemCondition=2000%7C2010%7C2020%7C2030">
+              Cell Phones & Smartphones
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1389.l3252" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/Laptops-Netbooks/175672/bn_1648276?rt=nc&LH_ItemCondition=2000%7C2010%7C2020%7C2030">
+              Laptops
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1389.l3253" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/Desktops-All-In-One-Computers/171957/bn_1643067?LH_ItemCondition=2000%7C2010%7C2020%7C2030">
+              Desktop computers
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1389.l3254" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/Tablets/171485/bn_348394?LH_ItemCondition=2000|2010|2020|2030">
+              Tablets
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1389.l3255" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/Smart-Watches/178893/bn_152365?LH_ItemCondition=2000%7C2010%7C2020%7C2030">
+              Smart Watches
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1389.l3256" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/Headphones/112529/bn_879608?LH_ItemCondition=2000|2010|2020|2030&mag=1&rt=nc">
+              Portable Audio & Headphones
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1389.l3257" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/Home-Audio-Equipment/184973/bn_115021122?LH_ItemCondition=2000">
+              Home Audio
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1389.l3258" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/Computer-Monitors/80053/bn_317528?rt=nc&LH_ItemCondition=2000%7C2010%7C2020%7C2030">
+              Monitors
+             </a>
+</li>
+</ul>
+</nav>
+<nav aria-label="Shop eBay Refurbished Home" class="['vl-flyout-nav__sub-cat-col']">
+<h4>
+            Shop eBay Refurbished Home
+           </h4>
+<ul>
+<li>
+<a _sp="p4375194.m1389.l3259" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/Vacuum-Cleaners/20614/bn_2310596?LH_ItemCondition=2000">
+              Vacuums
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1389.l3260" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/Outdoor-Power-Equipment/29518/bn_2309717?LH_ItemCondition=2000">
+              Outdoor power equipment
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1389.l3261" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/Power-Tools/3247/bn_2310272?LH_ItemCondition=2000">
+              Power Tools
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1389.l3262" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/Small-Kitchen-Appliances/20667/bn_2311275_dmd=2&LH_ItemCondition=2000?rt=nc&LH_ItemCondition=2000">
+              Small Kitchen Appliances
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1389.l3263" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/Surveillance-Smart-Home-Electronics/185067/bn_115028425?LH_ItemCondition=2000">
+              Surveillance & Smart Home
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1389.l3264" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/e/lifestyle/ebay-refurbished-music">
+              Musical Instruments
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1389.l3265" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/Indoor-Air-Quality-Fans/185114/bn_115078326?LH_ItemCondition=2000">
+              Indoor air quality & fans
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1389.l3266" class="['vl-flyout-nav__js-link']" href="https://www.ebay.com/b/Ceiling-Fans/176937/bn_818516?LH_ItemCondition=2000">
+              Ceiling Fans
+             </a>
+</li>
+</ul>
+</nav>
+</div>
+<div class="['vl-flyout-nav__rtm']" data-marko-key="@rtmImages[]_9 s0-1-0-52-1-2-2">
+</div>
+</div>
+</li>
+<li class="['vl-flyout-nav__more', 'vl-flyout-nav__js-tab']">
+<span>
+         More
+         vertlandweb#s0-1-0-52-1-2-2-17-0
+<svg aria-hidden="true" class="['svg-icon', 'vl-flyout-nav__more-arrow', 'icon', 'icon--16']" data-marko-key="@svg s0-1-0-52-1-2-2-17-0" focusable="false">
+<defs data-marko-key="@defs s0-1-0-52-1-2-2-17-0">
+<symbol id="icon-chevron-down-16" viewbox="0 0 16 16">
+<path d="M8.707 12.707a1 1 0 0 1-1.414 0l-6-6a1 1 0 0 1 1.414-1.414L8 10.586l5.293-5.293a1 1 0 1 1 1.414 1.414l-6 6Z">
+</path>
+</symbol>
+</defs>
+<use href="#icon-chevron-down-16">
+</use>
+</svg>
+vertlandweb/
+</span>
+<div class="['vl-flyout-nav__expander']">
+<button aria-haspopup="true">
+          Expand: More
+         </button>
+</div>
+<div class="['vl-flyout-nav__flyout']">
+<a _sp="p4375194.m1379.l3250" href="https://www.ebay.com/b/Auto-Parts-and-Vehicles/6000/bn_1865334">
+          Motors
+         </a>
+<a _sp="p4375194.m1380.l3250" href="https://www.ebay.com/b/Electronics/bn_7000259124">
+          Electronics
+         </a>
+<a _sp="p4375194.m1381.l3250" href="https://www.ebay.com/b/Collectibles-Art/bn_7000259855">
+          Collectibles
+         </a>
+<a _sp="p4375194.m1382.l3250" href="https://www.ebay.com/b/Home-Garden/11700/bn_1853126">
+          Home & Garden
+         </a>
+<a _sp="p4375194.m1383.l3250" href="https://www.ebay.com/b/Clothing-Shoes-Accessories/11450/bn_1852545">
+          Fashion
+         </a>
+<a _sp="p4375194.m1384.l3250" href="https://www.ebay.com/b/Toys-Hobbies/220/bn_1865497">
+          Toys
+         </a>
+<a _sp="p4375194.m1385.l3250" href="https://www.ebay.com/b/Sporting-Goods/888/bn_1865031">
+          Sporting Goods
+         </a>
+<a _sp="p4375194.m1386.l3250" href="https://www.ebay.com/b/Business-Industrial/12576/bn_1853744">
+          Business & Industrial
+         </a>
+<a _sp="p4375194.m1387.l3250" href="https://www.ebay.com/b/Jewelry-Watches/281/bn_1865273">
+          Jewelry & Watches
+         </a>
+<a _sp="p4375194.m1388.l3250" href="https://www.ebay.com/ebaylive">
+          eBay Live
+         </a>
+<a _sp="p4375194.m1389.l3250" href="https://www.ebay.com/b/eBay-Refurbished/bn_7040708936">
+          Refurbished
+         </a>
+</div>
+</li>
+</ul>
+</div>
+vertlandweb/
+<div class="['vlp-region', 'vlp-region__list-1-column', 'hp-grid', 'page-grid']">
+vertlandweb#s0-1-0-52-1-2-4-17[0[0]]
+<div class="['vl-module-full', 'vl-module-full-wide', 'vl-banner-carousel', 'vl-atf-module-js', 'evo', 'evo-banners', 'evo-carousel']" data-m-id="4518" data-viewdtls="{"moduleInstance":"mi:4518|iid:3","parentrq":"47ded1841910ab8d0e971f48fffff5b0","trackViews":"true","trackPerf":"false"}">
+vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[1]-2
+F#0
+<div>
+F#p_@ebay-carousel
+vertlandweb^s0-1-0-52-1-2-4-17[0[0]]-0[1]-2-@match-media-0-@ebay-carousel s0-1-0-52-1-2-4-17[0[0]]-0[1]-2 @ebay-carousel
+<div aria-roledescription="Carousel" class="['carousel', 'vl-carousel', 'evo', 'vl-module-full', 'vl-module-full-wide', 'evo-banners', 'carousel--slides', 'carousel__autoplay']" role="group">
+<div class="['carousel__container']" id="s0-1-0-52-1-2-4-17[0[0]]-0[1]-2-@match-media-0-@ebay-carousel-container">
+<button aria-label="Go to previous banner" class="['carousel__control', 'carousel__control--prev']" type="button">
+<svg aria-hidden="true" class="['icon', 'icon--16']" focusable="false">
+<defs>
+<symbol id="icon-chevron-left-16" viewbox="0 0 16 16">
+<path d="M3.293 8.708a1 1 0 0 1 0-1.415l6-6a1 1 0 0 1 1.414 1.414L5.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414l-6-6Z">
+</path>
+</symbol>
+</defs>
+<use href="#icon-chevron-left-16">
+</use>
+</svg>
+</button>
+<div class="['carousel__viewport']">
+<ul class="['carousel__list']" id="s0-1-0-52-1-2-4-17[0[0]]-0[1]-2-@match-media-0-@ebay-carousel-list">
+<li class="['carousel__snap-point', 'vl-carousel__item']" style="width:calc(100% - 0px);margin-right:0px">
+F#4[@0]
+<div class="['tracking-wrapper']" data-view="{"eventFamily":"VERTLAND","eventAction":"VIEW","operationId":"4375194","flushImmediately":false,"eventProperty":{"moduledtl":"mi:4518|iid:3","ammiid":"1476596978871806027","amdata":"t=0|tdt=iid:1476596978871806027,clkid:1476596978871806026|plmt=(channel:ONSITE_DWEB cnv.cfg.id:6e554464-feef-4d68-9ea0-df8a19c5eabd cnv.id:100001 iid:1476596978871806027 isUEP:1 mesg.id:5985879631059092352 message.mob.trk.id:0b99112e-9a8e-494a-a530-23792fe526c5~Y3YzTRAXq8sijKDtpKrR9pLkLduhDQC6PSPRQkvmi8y~teYmtoizaMAO9Ly54olk1W62TKB9lYT5qAfqV7bTcJg pageci:8367f410-58d9-11ef-8be2-2a95c25823a1 parentrq:47ded1841910ab8d0e971f48fffff5b0 plmt.id:100000 site.id:0)|ul=en-US|guid=47ded19a1910ab8d0e9832cfffffbdac|send.trk.id=d1b829f9-25d6-449a-83dd-356159014b8d|uc=2|cnv.trk.id=819b78b8-ffcf-41f3-8a91-ea2af6702cae|cr.id=4315520090186558681|cr.vt.id=1721942132378|mobtrkId=dd90ae9a-c381-48da-860e-557e10c812bc~sAi6hM8JmYUNHwT8OvQGeLj9jO4SeWmPj3RyScigTjh~GEmWzRtQRUPOs77AQqkA62XRBm4Xjg4MwPqdEuxnapZ","parentrq":"47ded1841910ab8d0e971f48fffff5b0","pageci":"8367f410-58d9-11ef-8be2-2a95c25823a1","audience":"general","vlpname":"vlp_homepage","ampid":"MADRONA"}}">
+<div class="['vl-banner', 'vl-banner-color-block', 'evo']" data-view="{"eventFamily":"VERTLAND","eventAction":"VIEW","operationId":"4375194","flushImmediately":false,"eventProperty":{"moduledtl":"mi:4518|iid:3|li:8658|luid:1|c:1","ammiid":"1476596978871806027","amdata":"t=0|tdt=iid:1476596978871806027,clkid:1476596978871806026|plmt=(channel:ONSITE_DWEB cnv.cfg.id:6e554464-feef-4d68-9ea0-df8a19c5eabd cnv.id:100001 iid:1476596978871806027 isUEP:1 mesg.id:5985879631059092352 message.mob.trk.id:0b99112e-9a8e-494a-a530-23792fe526c5~Y3YzTRAXq8sijKDtpKrR9pLkLduhDQC6PSPRQkvmi8y~teYmtoizaMAO9Ly54olk1W62TKB9lYT5qAfqV7bTcJg pageci:8367f410-58d9-11ef-8be2-2a95c25823a1 parentrq:47ded1841910ab8d0e971f48fffff5b0 plmt.id:100000 site.id:0)|ul=en-US|guid=47ded19a1910ab8d0e9832cfffffbdac|send.trk.id=d1b829f9-25d6-449a-83dd-356159014b8d|uc=2|cnv.trk.id=819b78b8-ffcf-41f3-8a91-ea2af6702cae|cr.id=4315520090186558681|cr.vt.id=1721942132378|mobtrkId=dd90ae9a-c381-48da-860e-557e10c812bc~sAi6hM8JmYUNHwT8OvQGeLj9jO4SeWmPj3RyScigTjh~GEmWzRtQRUPOs77AQqkA62XRBm4Xjg4MwPqdEuxnapZ","audience":"general","pageci":"8367f410-58d9-11ef-8be2-2a95c25823a1","ampid":"MADRONA","vlpname":"vlp_homepage"}}" style="background-color:#FFBD14">
+<div class="['vl-banner-color-block__container']">
+<div class="['page-grid']">
+<div class="['vl-banner-color-block__content']">
+<div class="['vl-banner__text', 'vl-banner-color-block__text']">
+<div class="['vl-banner-color-block__text__container']">
+<div class="['vl-banner__text-heading']">
+vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[1]-2-@match-media-0-@ebay-carousel-4[@0]-3[0]-1-13
+<div aria-label="Real heat. Under $200." style="color:#553B06">
+F#f_@button
+<div class="['vl-ellipsis-3']" style="color:#553B06">
+<span style="color:#553B06">
+                        Real heat. Under $200.
+                       </span>
+</div>
+F/
+</div>
+vertlandweb/
+</div>
+<div class="['vl-banner__text-subheading']">
+vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[1]-2-@match-media-0-@ebay-carousel-4[@0]-3[0]-1-15
+F#f_15
+F#f_@button
+<div class="['vl-ellipsis-2']" style="color:#553B06">
+<span style="color:#553B06">
+                       Shop ASICS, Fear of God, Aimé Leon Dore, and more.
+                      </span>
+</div>
+F/
+F/
+vertlandweb/
+</div>
+</div>
+<div class="['vl-cta', 'vl-banner__cta']" onfocusin="this.querySelector('.vl-cta__default').onmouseover()" onfocusout="this.querySelector('.vl-cta__default').onmouseout()" style="font-color:#553B06;background-color:#FFBD14">
+<a _sp="p4375194.m4518.l5352.c1" aria-label="Dive in" data-click="{"eventFamily":"VERTLAND","eventAction":"ACTN","operationId":"4375194","flushImmediately":false,"actionKind":"CLICK","eventProperty":{"moduledtl":"mi:4518|iid:3|li:5352|luid:1|c:1","ammiid":"1476596978871806027","amdata":"t=0|tdt=iid:1476596978871806027,clkid:1476596978871806026|plmt=(channel:ONSITE_DWEB cnv.cfg.id:6e554464-feef-4d68-9ea0-df8a19c5eabd cnv.id:100001 iid:1476596978871806027 isUEP:1 mesg.id:5985879631059092352 message.mob.trk.id:0b99112e-9a8e-494a-a530-23792fe526c5~Y3YzTRAXq8sijKDtpKrR9pLkLduhDQC6PSPRQkvmi8y~teYmtoizaMAO9Ly54olk1W62TKB9lYT5qAfqV7bTcJg pageci:8367f410-58d9-11ef-8be2-2a95c25823a1 parentrq:47ded1841910ab8d0e971f48fffff5b0 plmt.id:100000 site.id:0)|ul=en-US|guid=47ded19a1910ab8d0e9832cfffffbdac|send.trk.id=d1b829f9-25d6-449a-83dd-356159014b8d|uc=2|cnv.trk.id=819b78b8-ffcf-41f3-8a91-ea2af6702cae|cr.id=4315520090186558681|cr.vt.id=1721942132378|mobtrkId=dd90ae9a-c381-48da-860e-557e10c812bc~sAi6hM8JmYUNHwT8OvQGeLj9jO4SeWmPj3RyScigTjh~GEmWzRtQRUPOs77AQqkA62XRBm4Xjg4MwPqdEuxnapZ","audience":"general","pageci":"8367f410-58d9-11ef-8be2-2a95c25823a1","vlpname":"vlp_homepage","ampid":"MADRONA"}}" href="https://www.ebay.com/e/fashion/bts-sneakers-streetwear-under-200?_trkparms=pageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Cparentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Ciid%3A3%7Cvlpname%3Avlp_homepage">
+<div class="['vl-cta__text-only']" style="color:#553B06">
+                      Dive in
+                      vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[1]-2-@match-media-0-@ebay-carousel-4[@0]-3[0]-1-16-1-1-3-1-0-0
+<svg aria-hidden="true" class="['vl-cta-arrow', 'icon', 'icon--24']" data-marko-key="@svg s0-1-0-52-1-2-4-17[0[0]]-0[1]-2-@match-media-0-@ebay-carousel-4[@0]-3[0]-1-16-1-1-3-1-0-0" focusable="false" style="fill:currentColor">
+<defs data-marko-key="@defs s0-1-0-52-1-2-4-17[0[0]]-0[1]-2-@match-media-0-@ebay-carousel-4[@0]-3[0]-1-16-1-1-3-1-0-0">
+<symbol id="icon-arrow-right-24" viewbox="0 0 24 24">
+<path d="m21.71 11.29-8-8a1.004 1.004 0 0 0-1.42 1.42l6.3 6.29H3a1 1 0 0 0 0 2h15.59l-6.3 6.29a1.001 1.001 0 0 0 0 1.42 1.001 1.001 0 0 0 1.42 0l8-8a1.001 1.001 0 0 0 0-1.42Z">
+</path>
+</symbol>
+</defs>
+<use href="#icon-arrow-right-24">
+</use>
+</svg>
+vertlandweb/
+</div>
+<div class="['vl-cta__default', 'evo']" onmouseout="this.style.background='#553B06'; this.style.color='#FFBD14'; this.style['border-color']='#553B06';" onmouseover="this.style.background='#523906'; this.style.color='#f5b513';" style="background-color: #553B06; color: #FFBD14; border-color: #553B06">
+                      Dive in
+                      vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[1]-2-@match-media-0-@ebay-carousel-4[@0]-3[0]-1-16-1-1-5-1-0-0
+<svg aria-hidden="true" class="['vl-cta-arrow', 'icon', 'icon--24']" data-marko-key="@svg s0-1-0-52-1-2-4-17[0[0]]-0[1]-2-@match-media-0-@ebay-carousel-4[@0]-3[0]-1-16-1-1-5-1-0-0" focusable="false" style="fill:currentColor">
+<use href="#icon-arrow-right-24">
+</use>
+</svg>
+vertlandweb/
+</div>
+</a>
+</div>
+</div>
+</div>
+<a _sp="p4375194.m4518.l5350.c1" class="['vl-banner-color-block__image-link']" data-click="{"eventFamily":"VERTLAND","eventAction":"ACTN","operationId":"4375194","flushImmediately":false,"actionKind":"CLICK","eventProperty":{"moduledtl":"mi:4518|iid:3|li:5350|luid:1|c:1","ammiid":"1476596978871806027","amdata":"t=0|tdt=iid:1476596978871806027,clkid:1476596978871806026|plmt=(channel:ONSITE_DWEB cnv.cfg.id:6e554464-feef-4d68-9ea0-df8a19c5eabd cnv.id:100001 iid:1476596978871806027 isUEP:1 mesg.id:5985879631059092352 message.mob.trk.id:0b99112e-9a8e-494a-a530-23792fe526c5~Y3YzTRAXq8sijKDtpKrR9pLkLduhDQC6PSPRQkvmi8y~teYmtoizaMAO9Ly54olk1W62TKB9lYT5qAfqV7bTcJg pageci:8367f410-58d9-11ef-8be2-2a95c25823a1 parentrq:47ded1841910ab8d0e971f48fffff5b0 plmt.id:100000 site.id:0)|ul=en-US|guid=47ded19a1910ab8d0e9832cfffffbdac|send.trk.id=d1b829f9-25d6-449a-83dd-356159014b8d|uc=2|cnv.trk.id=819b78b8-ffcf-41f3-8a91-ea2af6702cae|cr.id=4315520090186558681|cr.vt.id=1721942132378|mobtrkId=dd90ae9a-c381-48da-860e-557e10c812bc~sAi6hM8JmYUNHwT8OvQGeLj9jO4SeWmPj3RyScigTjh~GEmWzRtQRUPOs77AQqkA62XRBm4Xjg4MwPqdEuxnapZ","pageci":"8367f410-58d9-11ef-8be2-2a95c25823a1","audience":"general","ampid":"MADRONA","vlpname":"vlp_homepage"}}" href="https://www.ebay.com/e/fashion/bts-sneakers-streetwear-under-200?_trkparms=pageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Cparentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Ciid%3A3%7Cvlpname%3Avlp_homepage">
+<div class="['vl-image', 'vl-image-js', 'js-only', 'vl-banner-color-block__image', 'vl-image__fill']" data-size="920" data-src="https://i.ebayimg.com/images/g/pMAAAOSwdmFmosH8/s-l960.png">
+<div class="['vl-image__background']" style="background-color:#FFBD14">
+</div>
+<img alt="An 'Olive Oil Dark Brown' Asics x Andersson Bell Gel-Sonoma 15-50 sneaker and a 'Desert Taupe' Fear of God Essentials Hoodie against a yellow-orange background." onerror="window.addtoLazyLoad({el: this, fit: true})" onload="window.addtoLazyLoad({el: this, fit: true})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden="false">
+<div class="['vl-image', 'vl-banner-color-block__image']" style="background-image: url('${src}')">
+<img alt="An 'Olive Oil Dark Brown' Asics x Andersson Bell Gel-Sonoma 15-50 sneaker and a 'Desert Taupe' Fear of God Essentials Hoodie against a yellow-orange background." src="https://i.ebayimg.com/images/g/pMAAAOSwdmFmosH8/s-l960.png"></img>
+</div>
+</noscript>
+</a>
+</div>
+</div>
+</div>
+</div>
+F/
+</li>
+<li class="['carousel__snap-point', 'vl-carousel__item']" style="width:calc(100% - 0px);margin-right:0px">
+F#4[@1]
+<div class="['tracking-wrapper']" data-view="{"eventFamily":"VERTLAND","eventAction":"VIEW","operationId":"4375194","flushImmediately":false,"eventProperty":{"moduledtl":"mi:4518|iid:4","ammiid":"1476596978871806025","amdata":"t=0|tdt=iid:1476596978871806025,clkid:1476596978871806024|plmt=(channel:ONSITE_DWEB cnv.cfg.id:6e554464-feef-4d68-9ea0-df8a19c5eabd cnv.id:100001 iid:1476596978871806025 isUEP:1 mesg.id:3906880583759035246 message.mob.trk.id:0b99112e-9a8e-494a-a530-23792fe526c5~Y3YzTRAXq8sijKDtpKrR9pLkLduhDQC6PSPRQkvmi8y~ZbvCdp8uzzndX8DVzfQaI6GUwEOcAmSKIus6rzsyT0v pageci:8367f410-58d9-11ef-8be2-2a95c25823a1 parentrq:47ded1841910ab8d0e971f48fffff5b0 plmt.id:100001 site.id:0)|ul=en-US|guid=47ded19a1910ab8d0e9832cfffffbdac|send.trk.id=cc07cf54-e673-4dcd-9592-1baeaa1a4262|uc=2|cnv.trk.id=819b78b8-ffcf-41f3-8a91-ea2af6702cae|cr.id=1913463651535182718|cr.vt.id=1721838547724|mobtrkId=cd3d95ff-a17b-4f11-a938-afa363f30886~XsfizIO1oWymE4D2t9losEaMcDHyj3PqDHL6OJ9JCEH~67AhibczvObPqqPjXryhZhRLYQncy0J96hqjyuk8Qpu","parentrq":"47ded1841910ab8d0e971f48fffff5b0","audience":"general","pageci":"8367f410-58d9-11ef-8be2-2a95c25823a1","vlpname":"vlp_homepage","ampid":"MADRONA"}}">
+<div class="['vl-banner', 'vl-banner-full-bleed', 'evo']" data-view="{"eventFamily":"VERTLAND","eventAction":"VIEW","operationId":"4375194","flushImmediately":false,"eventProperty":{"moduledtl":"mi:4518|iid:4|li:8658|luid:1|c:1","ammiid":"1476596978871806025","amdata":"t=0|tdt=iid:1476596978871806025,clkid:1476596978871806024|plmt=(channel:ONSITE_DWEB cnv.cfg.id:6e554464-feef-4d68-9ea0-df8a19c5eabd cnv.id:100001 iid:1476596978871806025 isUEP:1 mesg.id:3906880583759035246 message.mob.trk.id:0b99112e-9a8e-494a-a530-23792fe526c5~Y3YzTRAXq8sijKDtpKrR9pLkLduhDQC6PSPRQkvmi8y~ZbvCdp8uzzndX8DVzfQaI6GUwEOcAmSKIus6rzsyT0v pageci:8367f410-58d9-11ef-8be2-2a95c25823a1 parentrq:47ded1841910ab8d0e971f48fffff5b0 plmt.id:100001 site.id:0)|ul=en-US|guid=47ded19a1910ab8d0e9832cfffffbdac|send.trk.id=cc07cf54-e673-4dcd-9592-1baeaa1a4262|uc=2|cnv.trk.id=819b78b8-ffcf-41f3-8a91-ea2af6702cae|cr.id=1913463651535182718|cr.vt.id=1721838547724|mobtrkId=cd3d95ff-a17b-4f11-a938-afa363f30886~XsfizIO1oWymE4D2t9losEaMcDHyj3PqDHL6OJ9JCEH~67AhibczvObPqqPjXryhZhRLYQncy0J96hqjyuk8Qpu","audience":"general","pageci":"8367f410-58d9-11ef-8be2-2a95c25823a1","ampid":"MADRONA","vlpname":"vlp_homepage"}}">
+<div class="['vl-banner-full-bleed__container', 'focus-inset', 'page-grid']" style="background-color:#191919">
+<div class="['vl-banner-full-bleed__image-container']">
+<div class="['vl-image', 'vl-image-js', 'js-only', 'vl-banner-full-bleed__image', 'vl-image__fill']" data-size="1600" data-src="https://i.ebayimg.com/images/g/VqAAAOSwutRmoTTq/s-l1600.jpg">
+<div class="['vl-image__background']" style="background-color:#191919">
+</div>
+<img alt="" onerror="window.addtoLazyLoad({el: this, fit: true})" onload="window.addtoLazyLoad({el: this, fit: true})" role="presentation" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden="false">
+<div class="['vl-image', 'vl-banner-full-bleed__image']" style="background-image: url('${src}')">
+<img alt="" role="presentation" src="https://i.ebayimg.com/images/g/VqAAAOSwutRmoTTq/s-l1600.jpg"></img>
+</div>
+</noscript>
+
+        ```
+        

@@ -1,0 +1,228 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issues: 
+       
+        __________________
+        "
+            1. Does not use HTTPS: All sites should be protected with HTTPS, even ones that don't handle sensitive data. This includes avoiding [mixed content](https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content), where some resources are loaded over HTTP despite the initial request being served over HTTPS. HTTPS prevents intruders from tampering with or passively listening in on the communications between your app and your users, and is a prerequisite for HTTP/2 and many new web platform APIs. [Learn more about HTTPS](https://developer.chrome.com/docs/lighthouse/pwa/is-on-https/).
+ 
+
+            
+            2. First Contentful Paint: First Contentful Paint marks the time at which the first text or image is painted. [Learn more about the First Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/).
+ 
+
+            
+            3. Speed Index: Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/).
+ 
+
+            
+            4. Total Blocking Time: Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds. [Learn more about the Total Blocking Time metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/).
+ 
+
+            
+            5. Max Potential First Input Delay: The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).
+ 
+
+            
+            6. Browser errors were logged to the console: Errors logged to the console indicate unresolved problems. They can come from network request failures and other browser concerns. [Learn more about this errors in console diagnostic audit](https://developer.chrome.com/docs/lighthouse/best-practices/errors-in-console/)
+ 
+
+            
+            7. Time to Interactive: Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).
+ 
+
+            
+            8. Uses third-party cookies: Support for third-party cookies will be removed in a future version of Chrome. [Learn more about phasing out third-party cookies](https://developer.chrome.com/en/docs/privacy-sandbox/third-party-cookie-phase-out/).
+ 
+
+            
+            9. Minimize main-thread work: Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to minimize main-thread work](https://developer.chrome.com/docs/lighthouse/performance/mainthread-work-breakdown/)
+ 
+
+            
+            10. Reduce JavaScript execution time: Consider reducing the time spent parsing, compiling, and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to reduce Javascript execution time](https://developer.chrome.com/docs/lighthouse/performance/bootup-time/).
+ 
+
+            
+            11. Reduce the impact of third-party code: Third-party code can significantly impact load performance. Limit the number of redundant third-party providers and try to load third-party code after your page has primarily finished loading. [Learn how to minimize third-party impact](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript/).
+ 
+
+            
+            12. Background and foreground colors do not have a sufficient contrast ratio.: Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.9/color-contrast).
+ 
+
+            
+            13. `[user-scalable="no"]` is used in the `<meta name="viewport">` element or the `[maximum-scale]` attribute is less than 5.: Disabling zooming is problematic for users with low vision who rely on screen magnification to properly see the contents of a web page. [Learn more about the viewport meta tag](https://dequeuniversity.com/rules/axe/4.9/meta-viewport).
+ 
+
+            
+            14. Serve static assets with an efficient cache policy: A long cache lifetime can speed up repeat visits to your page. [Learn more about efficient cache policies](https://developer.chrome.com/docs/lighthouse/performance/uses-long-cache-ttl/).
+ 
+
+            
+            15. Eliminate render-blocking resources: Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn how to eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/).
+ 
+
+            
+            16. Reduce unused JavaScript: Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).
+ 
+
+            
+            17. Enable text compression: Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more about text compression](https://developer.chrome.com/docs/lighthouse/performance/uses-text-compression/).
+ 
+
+            
+            18. Avoid serving legacy JavaScript to modern browsers: Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. For your bundled JavaScript, adopt a modern script deployment strategy using module/nomodule feature detection to reduce the amount of code shipped to modern browsers, while retaining support for legacy browsers. [Learn how to use modern JavaScript](https://web.dev/articles/publish-modern-javascript)
+ 
+
+            
+            19. Issues were logged in the `Issues` panel in Chrome Devtools: Issues logged to the `Issues` panel in Chrome Devtools indicate unresolved problems. They can come from network request failures, insufficient security controls, and other browser concerns. Open up the Issues panel in Chrome DevTools for more details on each issue.
+ 
+
+            
+            20. Document does not have a meta description: Meta descriptions may be included in search results to concisely summarize page content. [Learn more about the meta description](https://developer.chrome.com/docs/lighthouse/seo/meta-description/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks. 
+        Please modify this HTML code chunk to resolve the performance issues given above.:
+
+        1. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        2. If no optimizations are possible, return the original code.
+        3. Do not modify class names
+        4. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization -->` at the end of the changed portion.
+        5. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+        6. Because the code is split into chunks, there might be some unclosed or cut elements, do not worry about that.
+        7. Do not change any styles or functionalities of the code.
+        8. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        9. Consider that HTML as a whole is from production and might be minified, uglified or compressed.
+
+        The original HTML code is as follows:
+
+        ```html
+        
+<title data-rh="true">
+   Medium: Read and write stories.
+  </title>
+<meta charset="utf-8" data-rh="true"></meta>
+<meta content="width=device-width,minimum-scale=1,initial-scale=1,maximum-scale=1" data-rh="true" name="viewport"></meta>
+<meta content="#000000" data-rh="true" name="theme-color"></meta>
+<meta content="Medium" data-rh="true" name="twitter:app:name:iphone"></meta>
+<meta content="828256236" data-rh="true" name="twitter:app:id:iphone"></meta>
+<meta content="Medium" data-rh="true" property="al:ios:app_name"></meta>
+<meta content="828256236" data-rh="true" property="al:ios:app_store_id"></meta>
+<meta content="com.medium.reader" data-rh="true" property="al:android:package"></meta>
+<meta content="Medium" data-rh="true" property="al:android:app_name"></meta>
+<meta content="542599432471018" data-rh="true" property="fb:app_id"></meta>
+<meta content="index,follow" data-rh="true" name="robots"></meta>
+<meta content="Medium: Read and write stories." data-rh="true" name="title"></meta>
+<meta content="On Medium, anyone can share insightful perspectives, useful knowledge, and life wisdom with the world." data-rh="true" name="description"></meta>
+<meta content="summary_large_image" data-rh="true" name="twitter:card"></meta>
+<meta content="@Medium" data-rh="true" name="twitter:creator"></meta>
+<meta content="On Medium, anyone can share insightful perspectives, useful knowledge, and life wisdom with the world." data-rh="true" name="twitter:description"></meta>
+<meta content="https://miro.medium.com/v2/4*EBuOxSGT7JZTGq0n4W8A5w.png" data-rh="true" name="twitter:image:src"></meta>
+<meta content="@Medium" data-rh="true" name="twitter:site"></meta>
+<meta content="Medium: Read and write stories." data-rh="true" name="twitter:title"></meta>
+<meta content="On Medium, anyone can share insightful perspectives, useful knowledge, and life wisdom with the world." data-rh="true" property="og:description"></meta>
+<meta content="https://miro.medium.com/v2/4*EBuOxSGT7JZTGq0n4W8A5w.png" data-rh="true" property="og:image"></meta>
+<meta content="Medium" data-rh="true" property="og:site_name"></meta>
+<meta content="Medium: Read and write stories." data-rh="true" property="og:title"></meta>
+<meta content="website" data-rh="true" property="og:type"></meta>
+<meta content="https://medium.com" data-rh="true" property="og:url"></meta>
+<link data-rh="true" href="https://miro.medium.com/v2/1*m-R_BkNf1Qjr1YbyOIJY2w.png" rel="['icon']"></link>
+<link data-rh="true" href="/osd.xml" rel="['search']" title="Medium" type="application/opensearchdescription+xml"></link>
+<link data-rh="true" href="https://miro.medium.com/v2/resize:fill:304:304/1*sHhtYhaCe2Uc3IU0IgKwIQ.png" rel="['apple-touch-icon']" sizes="152x152"></link>
+<link data-rh="true" href="https://miro.medium.com/v2/resize:fill:240:240/1*sHhtYhaCe2Uc3IU0IgKwIQ.png" rel="['apple-touch-icon']" sizes="120x120"></link>
+<link data-rh="true" href="https://miro.medium.com/v2/resize:fill:152:152/1*sHhtYhaCe2Uc3IU0IgKwIQ.png" rel="['apple-touch-icon']" sizes="76x76"></link>
+<link data-rh="true" href="https://miro.medium.com/v2/resize:fill:120:120/1*sHhtYhaCe2Uc3IU0IgKwIQ.png" rel="['apple-touch-icon']" sizes="60x60"></link>
+<link color="#171717" data-rh="true" href="https://cdn-static-1.medium.com/_/fp/icons/Medium-Avatar-500x500.svg" rel="['mask-icon']"></link>
+<link crossorigin="" data-rh="true" href="https://glyph.medium.com" rel="['preconnect']"></link>
+<link as="style" data-rh="true" href="https://glyph.medium.com/css/unbound.css" id="glyph_preload_link" rel="['preload']" type="text/css"></link>
+<link data-rh="true" href="https://glyph.medium.com/css/unbound.css" id="glyph_link" rel="['stylesheet']" type="text/css"></link>
+<link data-rh="true" href="https://medium.com" rel="['canonical']"></link>
+<script data-rh="true" type="application/ld+json">
+   {"@context":"http:\u002F\u002Fschema.org","@type":"Organization","url":"https:\u002F\u002Fmedium.com","name":"Medium","description":"On Medium, anyone can share insightful perspectives, useful knowledge, and life wisdom with the world.","publishingPrinciples":"https:\u002F\u002Fpolicy.medium.com\u002Fmedium-terms-of-service-9db0094a1e0f","logo":{"@type":"ImageObject","url":"https:\u002F\u002Fmiro.medium.com\u002Fv2\u002Fresize:fit:968\u002F1*F6SrJR7_s95r6oCF3ugMZw.png","width":484,"height":168}}
+  </script>
+<style data-fela-rehydration="141" data-fela-type="STATIC" type="text/css">
+   html{box-sizing:border-box;-webkit-text-size-adjust:100%}*, *:before, *:after{box-sizing:inherit}body{margin:0;padding:0;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;color:rgba(0,0,0,0.8);position:relative;min-height:100vh}h1, h2, h3, h4, h5, h6, dl, dd, ol, ul, menu, figure, blockquote, p, pre, form{margin:0}menu, ol, ul{padding:0;list-style:none;list-style-image:none}main{display:block}a{color:inherit;text-decoration:none}a, button, input{-webkit-tap-highlight-color:transparent}img, svg{vertical-align:middle}button{background:transparent;overflow:visible}button, input, optgroup, select, textarea{margin:0}:root{--reach-tabs:1;--reach-menu-button:1}#speechify-root{font-family:Sohne, sans-serif}div[data-popper-reference-hidden="true"]{visibility:hidden;pointer-events:none}.grecaptcha-badge{visibility:hidden}
+/*XCode style (c) Angel Garcia <angelgarcia.mail@gmail.com>*/.hljs {background: #fff;color: black;
+}/* Gray DOCTYPE selectors like WebKit */
+.xml .hljs-meta {color: #c0c0c0;
+}.hljs-comment,
+.hljs-quote {color: #007400;
+}.hljs-tag,
+.hljs-attribute,
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-name {color: #aa0d91;
+}.hljs-variable,
+.hljs-template-variable {color: #3F6E74;
+}.hljs-code,
+.hljs-string,
+.hljs-meta .hljs-string {color: #c41a16;
+}.hljs-regexp,
+.hljs-link {color: #0E0EFF;
+}.hljs-title,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-number {color: #1c00cf;
+}.hljs-section,
+.hljs-meta {color: #643820;
+}.hljs-title.class_,
+.hljs-class .hljs-title,
+.hljs-type,
+.hljs-built_in,
+.hljs-params {color: #5c2699;
+}.hljs-attr {color: #836C28;
+}.hljs-subst {color: #000;
+}.hljs-formula {background-color: #eee;font-style: italic;
+}.hljs-addition {background-color: #baeeba;
+}.hljs-deletion {background-color: #ffc8bd;
+}.hljs-selector-id,
+.hljs-selector-class {color: #9b703f;
+}.hljs-doctag,
+.hljs-strong {font-weight: bold;
+}.hljs-emphasis {font-style: italic;
+}
+  </style>
+<style data-fela-rehydration="141" data-fela-type="KEYFRAME" type="text/css">
+   @-webkit-keyframes k1{0% {background-position:50% 0%}50%{background-position:50% 60%}100%{background-position:50% 0%}}@-moz-keyframes k1{0% {background-position:50% 0%}50%{background-position:50% 60%}100%{background-position:50% 0%}}@keyframes k1{0% {background-position:50% 0%}50%{background-position:50% 60%}100%{background-position:50% 0%}}@-webkit-keyframes k2{0%{transform:translate(0, 0)}10%{transform:translate(5%,10%)}20%{transform:translate(15%,20%)}30%{transform:translate(5%,10%)}40%{transform:translate(15%,20%)}50%{transform:translate(5%,10%)}60%{transform:translate(15%,20%)}70%{transform:translate(5%,10%)}80%{transform:translate(15%,20%)}90%{transform:translate(5%,10%)}100%{transform:translate(15%,20%)}}@-moz-keyframes k2{0%{transform:translate(0, 0)}10%{transform:translate(5%,10%)}20%{transform:translate(15%,20%)}30%{transform:translate(5%,10%)}40%{transform:translate(15%,20%)}50%{transform:translate(5%,10%)}60%{transform:translate(15%,20%)}70%{transform:translate(5%,10%)}80%{transform:translate(15%,20%)}90%{transform:translate(5%,10%)}100%{transform:translate(15%,20%)}}@keyframes k2{0%{transform:translate(0, 0)}10%{transform:translate(5%,10%)}20%{transform:translate(15%,20%)}30%{transform:translate(5%,10%)}40%{transform:translate(15%,20%)}50%{transform:translate(5%,10%)}60%{transform:translate(15%,20%)}70%{transform:translate(5%,10%)}80%{transform:translate(15%,20%)}90%{transform:translate(5%,10%)}100%{transform:translate(15%,20%)}}
+  </style>
+<style data-fela-rehydration="141" data-fela-type="RULE" type="text/css">
+   .a{font-family:medium-content-sans-serif-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif}.b{font-weight:400}.c{background-color:rgba(255, 255, 255, 1)}.l{height:100vh}.m{width:100%}.n{display:flex}.o{align-items:center}.p{justify-content:center}.q{height:25px}.r{fill:rgba(41, 41, 41, 1)}.s{flex-direction:column}.t{background:radial-gradient(ellipse at 50% 90%, #F7F4ED 20%, #FFE330 40%, #FFC017 55%)}.u{background-size:400% 200%}.v{overflow:hidden}.w{position:relative}.x{min-height:560px}.y{animation:k1 15s ease infinite}.z{margin-bottom:48px}.ab h2{color:#242424}.ac h2{font-weight:400}.ae h2{line-height:90%}.af h2{letter-spacing:-0.1%}.al h2 strong{font-weight:500}.ao{z-index:10}.ap{background-color:transparent}.aq{border-bottom:solid 1px #242424}.ar{position:fixed}.as{top:0}.at{left:0}.au{right:0}.bc{max-width:1192px}.bd{min-width:0}.be{padding:25px 0}.bf{height:75px}.bg{flex-direction:row}.bh{display:block}.bi{color:inherit}.bj{fill:inherit}.bk{font-size:inherit}.bl{border:inherit}.bm{font-family:inherit}.bn{letter-spacing:inherit}.bo{font-weight:inherit}.bp{padding:0}.bq{margin:0}.br{cursor:pointer}.bs:disabled{cursor:not-allowed}.bt:disabled{color:#6B6B6B}.bu:disabled{fill:#6B6B6B}.bx path{fill:#242424}.by{height:27px}.bz{flex:1 0 auto}.cd{margin-right:25px}.ce{font-family:sohne, "Helvetica Neue", Helvetica, Arial, sans-serif}.cf{font-size:14px}.cg{line-height:20px}.ch{color:#242424}.cj{color:rgba(255, 255, 255, 1)}.ck{padding:8px 16px}.cl{fill:rgba(255, 255, 255, 1)}.cm{background:rgba(25, 25, 25, 1)}.cn{border-color:rgba(25, 25, 25, 1)}.cr:disabled{cursor:inherit !important}.cs:disabled{opacity:0.1}.ct:disabled:hover{background:rgba(25, 25, 25, 1)}.cu:disabled:hover{border-color:rgba(25, 25, 25, 1)}.cv{border-radius:99em}.cw{border-width:1px}.cx{border-style:solid}.cy{box-sizing:border-box}.cz{display:inline-block}.da{text-decoration:none}.db{text-align:center}.dc{height:100%}.di{font-weight:500}.dj{font-size:42px}.dk{line-height:52px}.dl{letter-spacing:-0.011em}.dm{font-size:22px}.dn{line-height:28px}.do{font-size:16px}.dp{line-height:24px}.dq{padding:8px 20px}.dr{width:231px}.ds{height:72px}.dt{min-width:100vw}.du{position:static}.dv{bottom:0}.dw{background-color:rgba(0, 0, 0, 1)}.dx{font-size:13px}.dy{color:rgba(255, 255, 255, 0.95)}.dz:disabled{color:rgba(255, 255, 255, 0.6)}.ea:disabled{fill:rgba(255, 255, 255, 0.6)}.ec{margin-right:20px}.ed{height:0px}.ee{margin:0 24px}.ei{padding:24px 0}.ej{flex-wrap:wrap}.ek{margin-bottom:0px}.el{margin-right:16px}.bv:hover:not(:disabled){color:rgba(25, 25, 25, 1)}.bw:hover:not(:disabled){fill:rgba(25, 25, 25, 1)}.co:hover{background:#000000}.cp:hover{border-color:#242424}.cq:hover{cursor:pointer}.eb:hover{text-decoration:underline}
+  </style>
+<style data-fela-rehydration="141" data-fela-type="RULE" media="all and (min-width: 1080px)" type="text/css">
+   .d{display:none}.ak h2{font-size:120px}.bb{margin:0 64px}.cc{display:inline-block}.dh{margin:75px 64px 0}.eh{max-width:680px}
+  </style>
+<style data-fela-rehydration="141" data-fela-type="RULE" media="all and (max-width: 1079.98px)" type="text/css">
+   .e{display:none}
+  </style>
+<style data-fela-rehydration="141" data-fela-type="RULE" media="all and (max-width: 903.98px)" type="text/css">
+   .f{display:none}
+  </style>
+<style data-fela-rehydration="141" data-fela-type="RULE" media="all and (max-width: 727.98px)" type="text/css">
+   .g{display:none}
+  </style>
+<style data-fela-rehydration="141" data-fela-type="RULE" media="all and (max-width: 551.98px)" type="text/css">
+   .h{display:none}.ag h2{font-size:48px}.am h3{font-size:20px}.ax{margin:0 24px}.dd{margin:75px 24px 0}
+  </style>
+<style data-fela-rehydration="141" data-fela-type="RULE" media="all and (min-width: 904px) and (max-width: 1079.98px)" type="text/css">
+   .i{display:none}.aj h2{font-size:80px}.ba{margin:0 64px}.cb{display:inline-block}.dg{margin:75px 64px 0}.eg{max-width:680px}
+  </style>
+<style data-fela-rehydration="141" data-fela-type="RULE" media="all and (min-width: 728px) and (max-width: 903.98px)" type="text/css">
+   .j{display:none}.ai h2{font-size:80px}.az{margin:0 48px}.ca{display:inline-block}.df{margin:75px 48px 0}.ef{max-width:680px}
+  </style>
+<style data-fela-rehydration="141" data-fela-type="RULE" media="all and (min-width: 552px) and (max-width: 727.98px)" type="text/css">
+   .k{display:none}.ah h2{font-size:64px}.an h3{font-size:20px}.ay{margin:0 24px}.ci{display:inline-block}.de{margin:75px 24px 0}
+  </style>
+<style data-fela-rehydration="141" data-fela-type="RULE" media="(prefers-reduced-motion: no-preference)" type="text/css">
+   .av{transition:background-color 300ms linear}.aw button{transition:background-color 300ms linear, color 300ms linear}
+  </style>
+
+        ```
+        

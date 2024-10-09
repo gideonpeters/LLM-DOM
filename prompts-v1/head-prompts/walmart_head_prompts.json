@@ -1,0 +1,442 @@
+[
+    {
+        "index": 0,
+        "total_tokens": 104,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > meta:nth-child(1) --> \n                    <meta charset=\"utf-8\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 1,
+        "total_tokens": 138,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(2) --> \n                    <script blocking=\"render\" id=\"ttp-marker\" nonce=\"oZuHSM-FhZEnom4k\">\n   (()=>{{window.performance.mark(\"ttp\")}})();\n  </script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 2,
+        "total_tokens": 113,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > meta:nth-child(3) --> \n                    <meta content=\"105223049547814\" property=\"fb:app_id\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 3,
+        "total_tokens": 126,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > meta:nth-child(4) --> \n                    <meta content=\"width=device-width, initial-scale=1.0, minimum-scale=1, interactive-widget=resizes-content\" name=\"viewport\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 4,
+        "total_tokens": 114,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > link:nth-child(5) --> \n                    <link href=\"https://tap.walmart.com \" rel=\"dns-prefetch\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 5,
+        "total_tokens": 179,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > link:nth-child(6) --> \n                    <link as=\"font\" crossorigin=\"anonymous\" fetchpriority=\"high\" href=\"https://i5.walmartimages.com/dfw/63fd9f59-a78c/fcfae9b6-2f69-4f89-beed-f0eeb4237946/v1/BogleWeb_subset-Bold.woff2\" rel=\"preload\" type=\"font/woff2\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 6,
+        "total_tokens": 179,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > link:nth-child(7) --> \n                    <link as=\"font\" crossorigin=\"anonymous\" fetchpriority=\"high\" href=\"https://i5.walmartimages.com/dfw/63fd9f59-a78c/fcfae9b6-2f69-4f89-beed-f0eeb4237946/v1/BogleWeb_subset-Regular.woff2\" rel=\"preload\" type=\"font/woff2\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 7,
+        "total_tokens": 113,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > link:nth-child(8) --> \n                    <link href=\"https://beacon.walmart.com\" rel=\"preconnect\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 8,
+        "total_tokens": 112,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > link:nth-child(9) --> \n                    <link href=\"https://b.wal.co\" rel=\"preconnect\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 9,
+        "total_tokens": 735,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(10) --> \n                    <script nonce=\"oZuHSM-FhZEnom4k\">\n   var _bcq=_bcq || [];var _sessionAIBcq=_sessionAIBcq || [];_bcq.push(['_setOptions',{{start_time:(new Date()).getTime(),bd:'beacon.walmart.com',bh:'beacon.lightest.walmart.com',sv:'1.2.236',tid:'elh9ie'}}]);(function initObserver(){{function getSessionId(){{var nextEl=document.getElementById(\"__NEXT_DATA__\");var text=nextEl&&nextEl.textContent;var dd;try{{dd=JSON.parse(text||\"{{}}\")}}catch(exc){{dd={{}}}}var sid=dd&&dd.props&&dd.props.pageProps&&dd.props.pageProps.isomorphicSessionId;return sid||\"unknown\"}}function getContextInfo(propName){{var nextEl=document.getElementById(\"__NEXT_DATA__\");var text=nextEl&&nextEl.textContent;var dd;try{{dd=JSON.parse(text||\"{{}}\")}}catch(exc){{dd={{}}}}return dd&&dd.runtimeConfig&&dd.runtimeConfig[propName]||\"unknown\"}}function onerror(evt){{var el=evt.target;var url=el.getAttribute(\"src\")||el.getAttribute(\"href\");_bcq.push([\"_tagAction\",\"walmartWeb\",\"log\",\"wcnp_walmart-web\",{{msg:{{isomorphicSessionId:getSessionId(),appVersion:getContextInfo(\"appVersion\"),datacenter:getContextInfo(\"dataCenter\"),message:{{logContent:{{message:\"Required script failed to load. \"+url}},type:\"CONSOLE_ERROR\"}},tags:[\"error\",\"platform\",\"client-error-logger\"]}},pg:{{nm:\"walmartWeb\"}},ta:{{}}}}])}}function onchange(changes){{if(!(changes&&changes.length)){{return}}for(var chg of changes){{var added=chg.addedNodes;if(!(added&&added.length&&chg.type===\"childList\")){{continue}}var node=added[0];var tag=node.nodeName;var rel=node.rel;var isLink=tag===\"LINK\";var isCss=isLink&&rel===\"stylesheet\";var isPreload=isLink&&rel===\"preload\"&&[\"font\",\"style\"].indexOf(node.as)>=0;if(tag===\"SCRIPT\"||isCss||isPreload){{node.onerror=onerror}}}}}}var observer=new MutationObserver(onchange);observer.observe(document,{{attributes:true,childList:true,subtree:true}});return{{getSessionId:getSessionId,getContextInfo:getContextInfo,observer:observer,onchange:onchange,onerror:onerror}}}})();if ( typeof window !==\"undefined\" && \"PerformanceObserver\" in window && \"supportedEntryTypes\" in PerformanceObserver && PerformanceObserver.supportedEntryTypes.includes(\"navigation\") && performance.getEntriesByType ){{window.cacheHit=performance.getEntriesByType(\"navigation\")[0]?.serverTiming?.find((item)=>item.name ===\"cdn-cache\")?.description;window.renderScope=\"SSR\";}}\n  </script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 10,
+        "total_tokens": 157,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(11) --> \n                    <script async=\"\" data-testid=\"pulse-script\" nonce=\"oZuHSM-FhZEnom4k\" src=\"//i5.walmartimages.com/beacon/beacon.js?bd=beacon.walmart.com&amp;bh=beacon.lightest.walmart.com\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 11,
+        "total_tokens": 112,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > title:nth-child(12) --> \n                    <title>\n   Walmart | Save Money. Live better.\n  </title>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 12,
+        "total_tokens": 142,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > meta:nth-child(13) --> \n                    <meta content=\"Shop Walmart today for Every Day Low Prices. Join Walmart+ for unlimited free delivery from your store &amp; free shipping with no order minimum. Start your free 30-day trial now!\" name=\"description\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 13,
+        "total_tokens": 223,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > meta:nth-child(14) --> \n                    <meta content=\"Walmart,Walmart.com,Online Shopping,Gifts,Toys,Home,Jewelry,TVs,HD TVs,Smart TVs,Electronics,Baby Products,Video Games,Computers,Laptops,Cell Phones,Games,Apparel,Clothing,Fashion,Accessories,Shoes,Watches,Sports &amp; Outdoors, Sporting Goods,Office Products,Health,Vitamins,Personal Care,Beauty Products,Garden,Bed,Bath,Furniture,Tools,Hardware, Vacuums,Outdoor Living,Automotive Parts,Pet Food,Pet Supplies,iphone\" name=\"keywords\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 14,
+        "total_tokens": 111,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > link:nth-child(15) --> \n                    <link href=\"https://www.walmart.com/\" rel=\"canonical\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 15,
+        "total_tokens": 3422,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > style:nth-child(16) --> \n                    <style>\n   html body .card-wrapper .fwl{{font-weight:300}}.card-wrapper .fill-focus{{top:3px;right:3px;bottom:3px;left:3px}}@media screen and (min-width:0){{.card-wrapper .mw-calc{{max-width:calc(100% - 16px)}}html body .card-wrapper .mw-calc-s{{max-width:calc(100% - 8px)}}html body .card-wrapper .f1{{font-size:28px}}html body .card-wrapper .f2{{font-size:24px}}html body .card-wrapper .f3{{font-size:20px}}html body .card-wrapper .f4{{font-size:18px}}html body .card-wrapper .f5{{font-size:16px}}html body .card-wrapper .f6{{font-size:14px}}html body .card-wrapper .f7{{font-size:12px}}html body .card-wrapper .f8{{font-size:10px}}html body .card-wrapper .f9{{font-size:32px}}html body .card-wrapper .f10{{font-size:36px}}html body .card-wrapper .f11{{font-size:40px}}html body .card-wrapper .f12{{font-size:42px}}html body .card-wrapper .f13{{font-size:48px}}html body .card-wrapper .f14{{font-size:64px}}html body .card-wrapper .f15{{font-size:80px}}html body .card-wrapper .pa8{{padding:1.25rem}}html body .card-wrapper .h6{{height:2.5rem}}html body .card-wrapper .no-underline-hover:hover{{text-decoration:none}}html body .card-wrapper .br-pill-cta{{box-shadow:inset 0 0 0 .0625rem #2e2f32}}html body .card-wrapper .br-pill-cta:hover{{box-shadow:inset 0 0 0 .125rem #2e2f32}}html .aspect-ratio--gpov-hero{{padding-bottom:56.05%}}html .aspect-ratio--gpov-s{{padding-bottom:56.1%}}html .aspect-ratio--gpov-m{{padding-bottom:66.49%}}html .aspect-ratio--gpov-l{{padding-bottom:101.04%}}html .aspect-ratio--gpov-t{{padding-bottom:150.13%}}html .aspect-ratio--a-banner-s{{padding-bottom:55.98%}}html .aspect-ratio--a-banner-l{{padding-bottom:149.85%}}html .aspect-ratio--t-pack-m{{padding-bottom:107.93%}}html .aspect-ratio--t-pack-l{{padding-bottom:184.15%}}html .aspect-ratio--wplus-s{{padding-bottom:43.15%}}html .aspect-ratio--wplus{{padding-bottom:27.2%}}html .aspect-ratio--c-banner-horizontal{{padding-bottom:56.05%}}html .aspect-ratio--c-banner-vertical-s{{padding-bottom:137.35%}}html .aspect-ratio--c-banner-vertical-l{{padding-bottom:170.9%}}html body .card-wrapper .lh-85{{line-height:.85}}html body .card-wrapper .lh-8{{line-height:.8}}html body .card-wrapper .lh-12{{line-height:1.2}}html body .card-wrapper .lh-solid{{line-height:1}}html body .card-wrapper .lh-35{{line-height:.35}}html body .card-wrapper .lh-4{{line-height:.4}}html body .card-wrapper .lh-75{{line-height:.75}}html body .card-wrapper .lh-9{{line-height:.9}}}}@media screen and (min-width:600px){{html body .card-wrapper .f1-m{{font-size:28px}}html body .card-wrapper .f2-m{{font-size:24px}}html body .card-wrapper .f3-m{{font-size:20px}}html body .card-wrapper .f4-m{{font-size:18px}}html body .card-wrapper .f5-m{{font-size:16px}}html body .card-wrapper .f6-m{{font-size:14px}}html body .card-wrapper .f7-m{{font-size:12px}}html body .card-wrapper .f8-m{{font-size:10px}}html body .card-wrapper .f9-m{{font-size:32px}}html body .card-wrapper .f10-m{{font-size:36px}}html body .card-wrapper .f11-m{{font-size:40px}}html body .card-wrapper .f12-m{{font-size:42px}}html body .card-wrapper .f13-m{{font-size:48px}}html body .card-wrapper .f14-m{{font-size:64px}}html body .card-wrapper .f15-m{{font-size:80px}}html body .card-wrapper .pa8-m{{padding:1.25rem}}}}@media screen and (min-width:900px){{html body .card-wrapper .f1-l{{font-size:28px}}html body .card-wrapper .f2-l{{font-size:24px}}html body .card-wrapper .f3-l{{font-size:20px}}html body .card-wrapper .f4-l{{font-size:18px}}html body .card-wrapper .f5-l{{font-size:16px}}html body .card-wrapper .f6-l{{font-size:14px}}html body .card-wrapper .f7-l{{font-size:12px}}html body .card-wrapper .f8-l{{font-size:10px}}html body .card-wrapper .f9-l{{font-size:32px}}html body .card-wrapper .f10-l{{font-size:36px}}html body .card-wrapper .f11-l{{font-size:40px}}html body .card-wrapper .f12-l{{font-size:42px}}html body .card-wrapper .f13-l{{font-size:48px}}html body .card-wrapper .f14-l{{font-size:64px}}html body .card-wrapper .f15-l{{font-size:80px}}html body .card-wrapper .f16-l{{font-size:30px}}html body .card-wrapper .pa8-l{{padding:1.25rem}}html body .card-wrapper .lh-9-l{{line-height:.9}}.wplus-grid-container .wplus-wrapper{{position:absolute;bottom:0}}}}@media screen and (min-width:1024px){{html body .card-wrapper .f6-hdkp{{font-size:14px}}html body .card-wrapper .f5-hdkp{{font-size:16px}}html body .card-wrapper .f4-hdkp{{font-size:18px}}html body .card-wrapper .f3-hdkp{{font-size:20px}}html body .card-wrapper .f2-hdkp{{font-size:24px}}html body .card-wrapper .f1-hdkp{{font-size:28px}}html body .card-wrapper .f7-hdkp{{font-size:64px}}html body .card-wrapper .f8-hdkp{{font-size:36px}}html body .card-wrapper .f11-hdkp{{font-size:40px}}html body .card-wrapper .f9-hdkp{{font-size:48px}}html body .card-wrapper .f10-hdkp{{font-size:32px}}html body .card-wrapper .f12-hdkp{{font-size:22px}}html body .card-wrapper .f14-hdkp{{font-size:34px}}html body .card-wrapper .f15-hdkp{{font-size:80px}}html body .card-wrapper .f16-hdkp{{font-size:30px}}html body .card-wrapper .f17-hdkp{{font-size:12px}}html body .card-wrapper .lh-solid-hdkp{{line-height:1}}html body .card-wrapper .lh-8-hdkp{{line-height:.8}}html body .card-wrapper .lh-12-hdkp{{line-height:1.2}}html body .card-wrapper .lh-125-hdkp{{line-height:1.25}}}}@media screen and (min-width:1200px){{.mw-calc{{max-width:calc(100% - 24px)}}html body .card-wrapper .f1-xl{{font-size:28px}}html body .card-wrapper .f2-xl{{font-size:24px}}html body .card-wrapper .f3-xl{{font-size:20px}}html body .card-wrapper .f4-xl{{font-size:18px}}html body .card-wrapper .f5-xl{{font-size:16px}}html body .card-wrapper .f6-xl{{font-size:14px}}html body .card-wrapper .f7-xl{{font-size:12px}}html body .card-wrapper .f8-xl{{font-size:10px}}html body .card-wrapper .f9-xl{{font-size:32px}}html body .card-wrapper .f10-xl{{font-size:36px}}html body .card-wrapper .f11-xl{{font-size:40px}}html body .card-wrapper .f12-xl{{font-size:42px}}html body .card-wrapper .f18-xl{{font-size:44px}}html body .card-wrapper .f13-xl{{font-size:48px}}html body .card-wrapper .f19-xl{{font-size:52px}}html body .card-wrapper .f14-xl{{font-size:64px}}html body .card-wrapper .f15-xl{{font-size:80px}}html body .card-wrapper .f16-xl{{font-size:56px}}html body .card-wrapper .f17-xl{{font-size:34px}}html body .card-wrapper .f21-xl{{font-size:30px}}html body .card-wrapper .f22-xl{{font-size:22px}}html body .card-wrapper .pa8-xl{{padding:1.25rem}}html body .card-wrapper .lh-6-xl{{line-height:.6}}}}@media screen and (min-width:1280px){{html body .card-wrapper .f1-xxl{{font-size:28px}}html body .card-wrapper .f2-xxl{{font-size:24px}}html body .card-wrapper .f3-xxl{{font-size:20px}}html body .card-wrapper .f4-xxl{{font-size:18px}}html body .card-wrapper .f5-xxl{{font-size:16px}}html body .card-wrapper .f12-xxl{{font-size:14px}}html body .card-wrapper .f8-xxl{{font-size:32px}}html body .card-wrapper .f9-xxl{{font-size:36px}}html body .card-wrapper .f10-xxl{{font-size:48px}}html body .card-wrapper .f11-xxl{{font-size:56px}}html body .card-wrapper .f17-xxl{{font-size:64px}}html body .card-wrapper .f13-xxl{{font-size:34px}}html body .card-wrapper .f14-xxl{{font-size:80px}}html body .card-wrapper .f15-xxl{{font-size:30px}}html body .card-wrapper .f18-xxl{{font-size:12px}}html body .card-wrapper .lh-35-xxl{{line-height:.35}}html body .card-wrapper .lh-12-xxl{{line-height:1.2}}html body .card-wrapper .lh-85-xxl{{line-height:.85}}}}@media screen and (min-width:1440px){{html body .card-wrapper .f1-rdxl{{font-size:28px}}html body .card-wrapper .f2-rdxl{{font-size:24px}}html body .card-wrapper .f3-rdxl{{font-size:20px}}html body .card-wrapper .f4-rdxl{{font-size:18px}}html body .card-wrapper .f5-rdxl{{font-size:16px}}html body .card-wrapper .f6-rdxl{{font-size:14px}}html body .card-wrapper .f7-rdxl{{font-size:12px}}html body .card-wrapper .f8-rdxl{{font-size:10px}}html body .card-wrapper .f9-rdxl{{font-size:32px}}html body .card-wrapper .f10-rdxl{{font-size:36px}}html body .card-wrapper .f11-rdxl{{font-size:40px}}html body .card-wrapper .f12-rdxl{{font-size:42px}}html body .card-wrapper .f13-rdxl{{font-size:48px}}html body .card-wrapper .f16-rdxl{{font-size:56px}}html body .card-wrapper .f14-rdxl{{font-size:64px}}html body .card-wrapper .f15-rdxl{{font-size:80px}}html body .card-wrapper .pa8-rdxl{{padding:1.25rem}}html body .card-wrapper .pa4-rdxl{{padding:1.5rem}}html body .card-wrapper .lh-70-rdxl{{line-height:.7}}html body .card-wrapper .lh-40-rdxl{{line-height:.4}}html body .card-wrapper .lh-solid-rdxl{{line-height:1}}html body .card-wrapper .lh-85-rdxl{{line-height:.85}}html body .card-wrapper .lh-8-rdxl{{line-height:.8}}html body .card-wrapper .lh-15-rdxl{{line-height:1.5}}html body .card-wrapper .lh-13-rdxl{{line-height:1.3}}html body .card-wrapper .lh-unset-rdxl{{line-height:unset}}}}@media screen and (min-width:1660px){{html body .card-wrapper .f1-rdxxl{{font-size:28px}}html body .card-wrapper .f2-rdxxl{{font-size:24px}}html body .card-wrapper .f3-rdxxl{{font-size:20px}}html body .card-wrapper .f4-rdxxl{{font-size:18px}}html body .card-wrapper .f5-rdxxl{{font-size:16px}}html body .card-wrapper .f6-rdxxl{{font-size:14px}}html body .card-wrapper .f8-rdxxl{{font-size:32px}}html body .card-wrapper .f9-rdxxl{{font-size:36px}}html body .card-wrapper .f10-rdxxl{{font-size:42px}}html body .card-wrapper .f11-rdxxl{{font-size:48px}}html body .card-wrapper .f12-rdxxl{{font-size:64px}}html body .card-wrapper .f13-rdxxl{{font-size:80px}}html body .card-wrapper .f20-rdxxl{{font-size:56px}}html body .card-wrapper .lh-75-rdxxl{{line-height:.75}}html body .card-wrapper .lh-6-rdxxl{{line-height:.6}}html body .card-wrapper .lh-solid-rdxxl{{line-height:1}}}}\n  </style>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 16,
+        "total_tokens": 108,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > meta:nth-child(17) --> \n                    <meta content=\"INDEX,FOLLOW\" name=\"robots\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 17,
+        "total_tokens": 112,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > meta:nth-child(18) --> \n                    <meta content=\"https://www.walmart.com/\" property=\"og:url\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 18,
+        "total_tokens": 143,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > meta:nth-child(19) --> \n                    <meta content=\"Shop Walmart today for Every Day Low Prices. Join Walmart+ for unlimited free delivery from your store &amp; free shipping with no order minimum. Start your free 30-day trial now!\" property=\"og:description\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 19,
+        "total_tokens": 114,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > meta:nth-child(20) --> \n                    <meta content=\"Walmart | Save Money. Live better.\" property=\"og:title\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 20,
+        "total_tokens": 107,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > meta:nth-child(21) --> \n                    <meta content=\"Website\" property=\"og:type\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 21,
+        "total_tokens": 156,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > meta:nth-child(22) --> \n                    <meta content=\"https://i5.walmartimages.com/dfw/63fd9f59-49ff/k2-_52fee322-2e60-452a-bccc-1e847f452a13.v1.png\" name=\"image\" property=\"og:image\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 22,
+        "total_tokens": 111,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > meta:nth-child(23) --> \n                    <meta content=\"Walmart.com\" property=\"og:site_name\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 23,
+        "total_tokens": 210,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(24) --> \n                    <script nonce=\"oZuHSM-FhZEnom4k\" type=\"application/ld+json\">\n   {{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"name\":\"Walmart\",\"url\":\"https://www.walmart.com/\",\"logo\":\"https://i5.walmartimages.com/dfw/63fd9f59-b3e1/7a569e53-f29a-4c3d-bfaf-6f7a158bfadd/v1/walmartLogo.svg\"}}\n  </script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 24,
+        "total_tokens": 258,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(25) --> \n                    <script nonce=\"oZuHSM-FhZEnom4k\" type=\"application/ld+json\">\n   {{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"name\":\"Walmart\",\"url\":\"https://www.walmart.com/\",\"logo\":\"https://i5.walmartimages.com/dfw/63fd9f59-b3e1/7a569e53-f29a-4c3d-bfaf-6f7a158bfadd/v1/walmartLogo.svg\",\"potentialAction\":[{{\"@type\":\"SearchAction\",\"target\":{{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://www.walmart.com/search?q={{search_term_string}}\"}},\"query-input\":\"required name=search_term_string\"}}]}}\n  </script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 25,
+        "total_tokens": 193,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > link:nth-child(26) --> \n                    <link as=\"image\" fetchpriority=\"high\" href=\"https://i5.walmartimages.com/dfw/4ff9c6c9-2d05/k2-_55e4a7cc-ea44-40ad-ac0b-7cd56785815a.v1.jpg?odnHeight=447&amp;odnWidth=794&amp;odnBg=&amp;odnDynImageQuality=70\" rel=\"preload\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 26,
+        "total_tokens": 108,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > meta:nth-child(27) --> \n                    <meta content=\"26\" name=\"next-head-count\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 27,
+        "total_tokens": 161,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(28) --> \n                    <script nonce=\"oZuHSM-FhZEnom4k\">\n   (()=>{{\n    const lang = document.documentElement.lang;\n    Object.defineProperty(document.documentElement, \"lang\", {{\n        get () {{\n            return lang;\n        }},\n        set () {{}}\n    }});\n}})()\n  </script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 28,
+        "total_tokens": 114,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > link:nth-child(29) --> \n                    <link href=\"https://i5.walmartimages.com\" rel=\"preconnect\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 29,
+        "total_tokens": 114,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > link:nth-child(30) --> \n                    <link href=\"https://i5.walmartimages.ca\" rel=\"preconnect\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 30,
+        "total_tokens": 133,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(31) --> \n                    <script nonce=\"oZuHSM-FhZEnom4k\">\n   window._pxAppId='PXu6b0qd2S'\n  </script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 31,
+        "total_tokens": 133,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(32) --> \n                    <script async=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"/px/PXu6b0qd2S/init.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 32,
+        "total_tokens": 190,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > link:nth-child(33) --> \n                    <link as=\"style\" href=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/css/75eaed84c11d02c2.css\" nonce=\"oZuHSM-FhZEnom4k\" rel=\"preload\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 33,
+        "total_tokens": 190,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > link:nth-child(34) --> \n                    <link data-n-g=\"\" href=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/css/75eaed84c11d02c2.css\" nonce=\"oZuHSM-FhZEnom4k\" rel=\"stylesheet\"/>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 34,
+        "total_tokens": 121,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > noscript:nth-child(35) --> \n                    <noscript data-n-css=\"oZuHSM-FhZEnom4k\">\n</noscript>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 35,
+        "total_tokens": 195,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(36) --> \n                    <script defer=\"\" nomodule=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 36,
+        "total_tokens": 193,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(37) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/ui_event-timer_queue-timer-54688fc346458a7f.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 37,
+        "total_tokens": 195,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(38) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/ui_item-queue_banner_queue-banner-9c482a92a102b71c.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 38,
+        "total_tokens": 194,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(39) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/ui_image_utils.5d34933f2a1a4b1f.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 39,
+        "total_tokens": 228,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(40) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/node_modules_.pnpm_@walmart+use-safeframe@0.4.0_react@17.0_node_modules_@walmart_use-safeframe_lib_index-29b5da6dfb811bc2.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 40,
+        "total_tokens": 228,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(41) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/node_modules_.pnpm_react-device-detect@2.2.3_react-dom@17.0.2_react@17.0_node_modules_react-device-detect_dist_lib-2e1c001aa432c31d.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 41,
+        "total_tokens": 195,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(42) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/ads_core_hooks_use-is-tracking-enabled-27f30893e7bbb0fa.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 42,
+        "total_tokens": 192,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(43) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/ads_core_utils_get-viewport-db1d3083360ff380.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 43,
+        "total_tokens": 198,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(44) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/intl-ads_video_vast-video-player-39e9b980c0e8800a.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 44,
+        "total_tokens": 194,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(45) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/intl-ads_ui_btf-23eb2766826c51b1.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 45,
+        "total_tokens": 196,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(46) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/ads_third-party-tracking_hooks_use-3p-tracking.afcd82922bfc885c.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 46,
+        "total_tokens": 195,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(47) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/ads_data-access_hooks_use-get-ad-query.fbe4cbd4b29cbc43.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 47,
+        "total_tokens": 197,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(48) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/intl-ads_ad-routing_intl-ad-routing-d7bfa676426b58e8.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 48,
+        "total_tokens": 193,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(49) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/intl-ads_ad-wrapper.d09eb26ac0ff4c71.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 49,
+        "total_tokens": 198,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(50) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/tempo-shared-modules_adaptive-card_adaptive-card-wrapper.64ef5b94355e915c.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 50,
+        "total_tokens": 197,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(51) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/intl-ads_ad-routing_hooks_useAdOptions.f874456d4a0d0424.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 51,
+        "total_tokens": 196,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(52) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/tempo-shared-modules_w-plus-banner.1eab5b4ef555a6fd.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 52,
+        "total_tokens": 186,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(53) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/webpack-ce943fd392ba20ab.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 53,
+        "total_tokens": 188,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(54) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/framework-c32375f01f4331c0.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 54,
+        "total_tokens": 191,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(55) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/main-ba02a9c4c401c7f5.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 55,
+        "total_tokens": 191,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(56) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/pages/_app-34422b23c57f61c8.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 56,
+        "total_tokens": 208,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(57) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/node_modules_.pnpm_isomorphic-dompurify@0.13_node_modules_isomorphic-dompurify_browser-40a80efbab37a530.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 57,
+        "total_tokens": 196,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(58) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/ui_horizontal-scroller_horizontal-scroller-05a20e3c4991d78d.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 58,
+        "total_tokens": 194,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(59) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/ui_product-tile_constants-c3d1a4df2370b13d.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 59,
+        "total_tokens": 196,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(60) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/payments_context_hooks_use-purchase-contract-409d94556d7b9440.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 60,
+        "total_tokens": 194,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(61) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/subscription_data-access_subscription-cloud-variables-bded44a08da914b2.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 61,
+        "total_tokens": 195,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(62) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/ui_quantity-stepper_quantity-stepper-16eb5214fa4f7d28.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 62,
+        "total_tokens": 198,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(63) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/checkout_cloud-variables_cloud-variables-0e5f6c16cb482f3c.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 63,
+        "total_tokens": 190,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(64) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/item_data-access_utils_analytics-994abd94cdc27018.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 64,
+        "total_tokens": 195,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(65) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/cart_data-access_hooks_use-get-cart-query-info-a6afd2985ef09bfa.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 65,
+        "total_tokens": 198,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(66) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/cart_page-view-checkout-beacon_page-view-beacon-f8dce95d2481ad50.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 66,
+        "total_tokens": 199,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(67) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/ui_intl-fees-dialog_intl-fees-dialog-18a0596ce85db7a3.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 67,
+        "total_tokens": 192,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(68) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/cart_common-components_locale_messages-d47c13aa2f27cef4.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 68,
+        "total_tokens": 189,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(69) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/cart_pos_fees-b845438c82ca820d.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 69,
+        "total_tokens": 194,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(70) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/item_data-hooks_item-data-hooks-dbc4da36502d2e6c.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 70,
+        "total_tokens": 194,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(71) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/payments_context-shared_payments-cloud-variables-5622877a8724e220.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 71,
+        "total_tokens": 194,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(72) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/cart_add-to-cart_add-to-cart-3edd6cf58c36cb74.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 72,
+        "total_tokens": 199,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(73) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/ads_provider_utils_get-ads-ccm-10af9d0beb6a7fb8.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 73,
+        "total_tokens": 196,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(74) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/ui_product-tile_vertical_product-reward-69ff6e1b448563c1.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 74,
+        "total_tokens": 192,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(75) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/ui_product-tile_vertical-4f32604487e08cb5.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 75,
+        "total_tokens": 192,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(76) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/platform_tempo_components_tempo-layout-e2906825303c8008.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 76,
+        "total_tokens": 192,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(77) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/ui_product-carousel_product-carousel-c6717bafaf5a46ab.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 77,
+        "total_tokens": 195,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(78) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/ui_product-tile_vertical_group-product-badge-ff84a9ef4375277c.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 78,
+        "total_tokens": 192,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(79) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/ads_provider_ads-context-provider-1fa23113416fa75e.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 79,
+        "total_tokens": 191,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(80) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/ads_ui_video_video-player-241189e936b728dd.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 80,
+        "total_tokens": 198,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(81) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/cart_add-to-cart_use-hot-pac-bottom-sheet-eafff982e42b8e0f.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 81,
+        "total_tokens": 198,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(82) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/repurchase_data-access_repurchase-cloud-variables-64fcbbc0e163a3e2.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 82,
+        "total_tokens": 192,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(83) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/home_data-access_utils-d5b4d28163c20b25.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 83,
+        "total_tokens": 194,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(84) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/ads_core_hooks_use-intersection-observable-f29db919e983c640.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 84,
+        "total_tokens": 196,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(85) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/ads_core_components_ads-error-boundary-1af07b0dd5ec4205.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 85,
+        "total_tokens": 188,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(86) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/pages/index-525cad66688ef1f3.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 86,
+        "total_tokens": 191,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(87) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/production_20240806T042541340Z-en-US/_buildManifest.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    },
+    {
+        "index": 87,
+        "total_tokens": 192,
+        "prompt": "\n            Given the following skeleton of a DOM tree, fix any performance issues present, return the modified element within the skeleton as well as the original position selector:\n\n            _____ \n            <!DOCTYPE html>\n            <html> \n                <head>\n                    <!-- Original position of the element to be modified: html > head > script:nth-child(88) --> \n                    <script defer=\"\" nonce=\"oZuHSM-FhZEnom4k\" src=\"https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/production_20240806T042541340Z-en-US/_ssgManifest.js\">\n</script>\n                    <!-- End of element to be modified --> \n                </head>\n            </html> \n            _____\n            "
+    }
+]

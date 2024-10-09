@@ -1,0 +1,466 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issues: 
+       
+        __________________
+        "
+            1. First Contentful Paint: First Contentful Paint marks the time at which the first text or image is painted. [Learn more about the First Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/).
+ 
+
+            
+            2. Largest Contentful Paint: Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)
+ 
+
+            
+            3. Speed Index: Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/).
+ 
+
+            
+            4. Total Blocking Time: Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds. [Learn more about the Total Blocking Time metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/).
+ 
+
+            
+            5. Max Potential First Input Delay: The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).
+ 
+
+            
+            6. Browser errors were logged to the console: Errors logged to the console indicate unresolved problems. They can come from network request failures and other browser concerns. [Learn more about this errors in console diagnostic audit](https://developer.chrome.com/docs/lighthouse/best-practices/errors-in-console/)
+ 
+
+            
+            7. Time to Interactive: Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).
+ 
+
+            
+            8. Minimize main-thread work: Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to minimize main-thread work](https://developer.chrome.com/docs/lighthouse/performance/mainthread-work-breakdown/)
+ 
+
+            
+            9. Reduce the impact of third-party code: Third-party code can significantly impact load performance. Limit the number of redundant third-party providers and try to load third-party code after your page has primarily finished loading. [Learn how to minimize third-party impact](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript/).
+ 
+
+            
+            10. Largest Contentful Paint element: This is the largest contentful element painted within the viewport. [Learn more about the Largest Contentful Paint element](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)
+ 
+
+            
+            11. `[aria-hidden="true"]` elements contain focusable descendents: Focusable descendents within an `[aria-hidden="true"]` element prevent those interactive elements from being available to users of assistive technologies like screen readers. [Learn how `aria-hidden` affects focusable elements](https://dequeuniversity.com/rules/axe/4.9/aria-hidden-focus).
+ 
+
+            
+            12. Elements use prohibited ARIA attributes: Using ARIA attributes in roles where they are prohibited can mean that important information is not communicated to users of assistive technologies. [Learn more about prohibited ARIA roles](https://dequeuniversity.com/rules/axe/4.9/aria-prohibited-attr).
+ 
+
+            
+            13. Eliminate render-blocking resources: Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn how to eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/).
+ 
+
+            
+            14. Minify CSS: Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/).
+ 
+
+            
+            15. Reduce unused CSS: Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/).
+ 
+
+            
+            16. Reduce unused JavaScript: Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).
+ 
+
+            
+            17. Enable text compression: Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more about text compression](https://developer.chrome.com/docs/lighthouse/performance/uses-text-compression/).
+ 
+
+            
+            18. Avoid serving legacy JavaScript to modern browsers: Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. For your bundled JavaScript, adopt a modern script deployment strategy using module/nomodule feature detection to reduce the amount of code shipped to modern browsers, while retaining support for legacy browsers. [Learn how to use modern JavaScript](https://web.dev/articles/publish-modern-javascript)
+ 
+
+            
+            19. Avoid an excessive DOM size: A large DOM will increase memory usage, cause longer [style calculations](https://developers.google.com/web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations), and produce costly [layout reflows](https://developers.google.com/speed/articles/reflow). [Learn how to avoid an excessive DOM size](https://developer.chrome.com/docs/lighthouse/performance/dom-size/).
+ 
+
+            
+            20. Issues were logged in the `Issues` panel in Chrome Devtools: Issues logged to the `Issues` panel in Chrome Devtools indicate unresolved problems. They can come from network request failures, insufficient security controls, and other browser concerns. Open up the Issues panel in Chrome DevTools for more details on each issue.
+ 
+
+            
+            21. Page is blocked from indexing: Search engines are unable to include your pages in search results if they don't have permission to crawl them. [Learn more about crawler directives](https://developer.chrome.com/docs/lighthouse/seo/is-crawlable/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issues given above.
+
+        Make sure you:
+        1. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        2. If no optimizations are possible, return the original code.
+        3. Do not modify class names
+        4. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {one line short description of elements/things fixed} -->` at the end of the changed portion.
+        5. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+        6. Because the code is split into chunks, there might be some unclosed or cut elements, do not worry about that.
+        7. Do not change any styles or functionalities of the code.
+        8. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        9. Consider that HTML as a whole is from production and might be minified, uglified or compressed.
+
+        The original HTML code is as follows:
+
+        ```html
+        <div class="c4mnd7m atm_9s_11p5wf0 atm_dz_1osqo2v dir dir-ltr">
+<div class="c1pbo4kt atm_ar_1bp4okc atm_d2_1kqhmmj atm_e2_1osqo2v atm_gi_idpfg4 atm_lo_idpfg4 atm_wq_cs5v99 l179zchc atm_vl_ewfl5b atm_93_ewfl5b atm_k4_kb7nvz dir dir-ltr" style="--transition-element_transition-delay:600ms;--transition-element_transition-duration:200ms">
+<div>
+<div class="m1cp3yuo atm_gq_1gibeiw atm_72g4pb_llf7ib atm_1mz0ff6_1lk22r2 atm_1p5rjfj_h2mmj6 dir dir-ltr">
+<div class="dir dir-ltr">
+<div class="awuxh4x atm_1w_12kg1i__4c1lm5 atm_lo_1auwtbz__320uii atm_mk_hqdblt__320uii dir dir-ltr">
+<div class="cw9aemg atm_e2_1osqo2v atm_jb_idpfg4 atm_mk_n7od8j atm_mk_stnw88__320uii atm_e2_1osqo2v__320uii atm_vy_1osqo2v__320uii atm_tk_idpfg4__320uii atm_fq_idpfg4__320uii atm_n3_idpfg4__320uii atm_6i_idpfg4__320uii dir dir-ltr">
+<span aria-busy="true" style="display:block;height:100%;width:100%;background-color:white;border-radius:var(--linaria-theme_corner-radius-medium12px-border-radius)">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="height:100%;width:100%;border-radius:var(--linaria-theme_corner-radius-medium12px-border-radius)">
+</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="g1wiliwt atm_u80d3j_1li1fea atm_1jl3gu2_tak4gr c1v0rf5q atm_9s_11p5wf0 atm_cx_4wguik atm_dz_7esijk atm_e0_1lo05zz dir dir-ltr">
+<span aria-busy="true" style="display:block;height:19px;width:65%;background-color:white;border-radius:4px">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="height:100%;width:100%;border-radius:4px">
+</span>
+</span>
+<div class="a3g92ry atm_da_1ko3t4y atm_dm_kb7nvz atm_fg_h9n0ih atm_vy_1osqo2v dir dir-ltr">
+<span aria-busy="true" style="display:block;height:19px;width:100%;background-color:white;border-radius:4px">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="height:100%;width:100%;border-radius:4px">
+</span>
+</span>
+</div>
+<div class="fb4nyux atm_da_cbdd7d dir dir-ltr">
+<span aria-busy="true" style="display:block;height:19px;width:39%;background-color:white;border-radius:4px">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="height:100%;width:100%;border-radius:4px">
+</span>
+</span>
+</div>
+<div class="fb4nyux atm_da_cbdd7d dir dir-ltr">
+<span aria-busy="true" style="display:block;height:19px;width:28%;background-color:white;border-radius:4px">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="height:100%;width:100%;border-radius:4px">
+</span>
+</span>
+</div>
+<div class="pc0djro atm_da_cbdd7d atm_h3_lh1qj6 dir dir-ltr">
+<span aria-busy="true" style="display:block;height:19px;width:26%;background-color:white;border-radius:4px">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="height:100%;width:100%;border-radius:4px">
+</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="c1l1h97y atm_d2_1kqhmmj l1aqx8qh atm_vl_15vqwwr atm_k4_idpfg4 cikyho8 atm_9s_glywfm atm_93_15vqwwr__hp14bx atm_9s_1txwivl__hp14bx dir dir-ltr" style="--transition-element_transition-delay:600ms;--transition-element_transition-duration:200ms">
+</div>
+</div>
+</div>
+<div class="dir dir-ltr">
+<div class="c4mnd7m atm_9s_11p5wf0 atm_dz_1osqo2v dir dir-ltr">
+<div class="c1pbo4kt atm_ar_1bp4okc atm_d2_1kqhmmj atm_e2_1osqo2v atm_gi_idpfg4 atm_lo_idpfg4 atm_wq_cs5v99 l179zchc atm_vl_ewfl5b atm_93_ewfl5b atm_k4_kb7nvz dir dir-ltr" style="--transition-element_transition-delay:650ms;--transition-element_transition-duration:200ms">
+<div>
+<div class="m1cp3yuo atm_gq_1gibeiw atm_72g4pb_llf7ib atm_1mz0ff6_1lk22r2 atm_1p5rjfj_h2mmj6 dir dir-ltr">
+<div class="dir dir-ltr">
+<div class="awuxh4x atm_1w_12kg1i__4c1lm5 atm_lo_1auwtbz__320uii atm_mk_hqdblt__320uii dir dir-ltr">
+<div class="cw9aemg atm_e2_1osqo2v atm_jb_idpfg4 atm_mk_n7od8j atm_mk_stnw88__320uii atm_e2_1osqo2v__320uii atm_vy_1osqo2v__320uii atm_tk_idpfg4__320uii atm_fq_idpfg4__320uii atm_n3_idpfg4__320uii atm_6i_idpfg4__320uii dir dir-ltr">
+<span aria-busy="true" style="display:block;height:100%;width:100%;background-color:white;border-radius:var(--linaria-theme_corner-radius-medium12px-border-radius)">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="height:100%;width:100%;border-radius:var(--linaria-theme_corner-radius-medium12px-border-radius)">
+</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="g1wiliwt atm_u80d3j_1li1fea atm_1jl3gu2_tak4gr c1v0rf5q atm_9s_11p5wf0 atm_cx_4wguik atm_dz_7esijk atm_e0_1lo05zz dir dir-ltr">
+<span aria-busy="true" style="display:block;height:19px;width:65%;background-color:white;border-radius:4px">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="height:100%;width:100%;border-radius:4px">
+</span>
+</span>
+<div class="a3g92ry atm_da_1ko3t4y atm_dm_kb7nvz atm_fg_h9n0ih atm_vy_1osqo2v dir dir-ltr">
+<span aria-busy="true" style="display:block;height:19px;width:100%;background-color:white;border-radius:4px">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="height:100%;width:100%;border-radius:4px">
+</span>
+</span>
+</div>
+<div class="fb4nyux atm_da_cbdd7d dir dir-ltr">
+<span aria-busy="true" style="display:block;height:19px;width:39%;background-color:white;border-radius:4px">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="height:100%;width:100%;border-radius:4px">
+</span>
+</span>
+</div>
+<div class="fb4nyux atm_da_cbdd7d dir dir-ltr">
+<span aria-busy="true" style="display:block;height:19px;width:28%;background-color:white;border-radius:4px">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="height:100%;width:100%;border-radius:4px">
+</span>
+</span>
+</div>
+<div class="pc0djro atm_da_cbdd7d atm_h3_lh1qj6 dir dir-ltr">
+<span aria-busy="true" style="display:block;height:19px;width:26%;background-color:white;border-radius:4px">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="height:100%;width:100%;border-radius:4px">
+</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="c1l1h97y atm_d2_1kqhmmj l1aqx8qh atm_vl_15vqwwr atm_k4_idpfg4 cikyho8 atm_9s_glywfm atm_93_15vqwwr__hp14bx atm_9s_1txwivl__hp14bx dir dir-ltr" style="--transition-element_transition-delay:650ms;--transition-element_transition-duration:200ms">
+</div>
+</div>
+</div>
+<div class="dir dir-ltr">
+<div class="c4mnd7m atm_9s_11p5wf0 atm_dz_1osqo2v dir dir-ltr">
+<div class="c1pbo4kt atm_ar_1bp4okc atm_d2_1kqhmmj atm_e2_1osqo2v atm_gi_idpfg4 atm_lo_idpfg4 atm_wq_cs5v99 l179zchc atm_vl_ewfl5b atm_93_ewfl5b atm_k4_kb7nvz dir dir-ltr" style="--transition-element_transition-delay:700ms;--transition-element_transition-duration:200ms">
+<div>
+<div class="m1cp3yuo atm_gq_1gibeiw atm_72g4pb_llf7ib atm_1mz0ff6_1lk22r2 atm_1p5rjfj_h2mmj6 dir dir-ltr">
+<div class="dir dir-ltr">
+<div class="awuxh4x atm_1w_12kg1i__4c1lm5 atm_lo_1auwtbz__320uii atm_mk_hqdblt__320uii dir dir-ltr">
+<div class="cw9aemg atm_e2_1osqo2v atm_jb_idpfg4 atm_mk_n7od8j atm_mk_stnw88__320uii atm_e2_1osqo2v__320uii atm_vy_1osqo2v__320uii atm_tk_idpfg4__320uii atm_fq_idpfg4__320uii atm_n3_idpfg4__320uii atm_6i_idpfg4__320uii dir dir-ltr">
+<span aria-busy="true" style="display:block;height:100%;width:100%;background-color:white;border-radius:var(--linaria-theme_corner-radius-medium12px-border-radius)">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="height:100%;width:100%;border-radius:var(--linaria-theme_corner-radius-medium12px-border-radius)">
+</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="g1wiliwt atm_u80d3j_1li1fea atm_1jl3gu2_tak4gr c1v0rf5q atm_9s_11p5wf0 atm_cx_4wguik atm_dz_7esijk atm_e0_1lo05zz dir dir-ltr">
+<span aria-busy="true" style="display:block;height:19px;width:65%;background-color:white;border-radius:4px">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="height:100%;width:100%;border-radius:4px">
+</span>
+</span>
+<div class="a3g92ry atm_da_1ko3t4y atm_dm_kb7nvz atm_fg_h9n0ih atm_vy_1osqo2v dir dir-ltr">
+<span aria-busy="true" style="display:block;height:19px;width:100%;background-color:white;border-radius:4px">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="height:100%;width:100%;border-radius:4px">
+</span>
+</span>
+</div>
+<div class="fb4nyux atm_da_cbdd7d dir dir-ltr">
+<span aria-busy="true" style="display:block;height:19px;width:39%;background-color:white;border-radius:4px">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="height:100%;width:100%;border-radius:4px">
+</span>
+</span>
+</div>
+<div class="fb4nyux atm_da_cbdd7d dir dir-ltr">
+<span aria-busy="true" style="display:block;height:19px;width:28%;background-color:white;border-radius:4px">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="height:100%;width:100%;border-radius:4px">
+</span>
+</span>
+</div>
+<div class="pc0djro atm_da_cbdd7d atm_h3_lh1qj6 dir dir-ltr">
+<span aria-busy="true" style="display:block;height:19px;width:26%;background-color:white;border-radius:4px">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="height:100%;width:100%;border-radius:4px">
+</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="c1l1h97y atm_d2_1kqhmmj l1aqx8qh atm_vl_15vqwwr atm_k4_idpfg4 cikyho8 atm_9s_glywfm atm_93_15vqwwr__hp14bx atm_9s_1txwivl__hp14bx dir dir-ltr" style="--transition-element_transition-delay:700ms;--transition-element_transition-duration:200ms">
+</div>
+</div>
+</div>
+<div class="dir dir-ltr">
+<div class="c4mnd7m atm_9s_11p5wf0 atm_dz_1osqo2v dir dir-ltr">
+<div class="c1pbo4kt atm_ar_1bp4okc atm_d2_1kqhmmj atm_e2_1osqo2v atm_gi_idpfg4 atm_lo_idpfg4 atm_wq_cs5v99 l179zchc atm_vl_ewfl5b atm_93_ewfl5b atm_k4_kb7nvz dir dir-ltr" style="--transition-element_transition-delay:750ms;--transition-element_transition-duration:200ms">
+<div>
+<div class="m1cp3yuo atm_gq_1gibeiw atm_72g4pb_llf7ib atm_1mz0ff6_1lk22r2 atm_1p5rjfj_h2mmj6 dir dir-ltr">
+<div class="dir dir-ltr">
+<div class="awuxh4x atm_1w_12kg1i__4c1lm5 atm_lo_1auwtbz__320uii atm_mk_hqdblt__320uii dir dir-ltr">
+<div class="cw9aemg atm_e2_1osqo2v atm_jb_idpfg4 atm_mk_n7od8j atm_mk_stnw88__320uii atm_e2_1osqo2v__320uii atm_vy_1osqo2v__320uii atm_tk_idpfg4__320uii atm_fq_idpfg4__320uii atm_n3_idpfg4__320uii atm_6i_idpfg4__320uii dir dir-ltr">
+<span aria-busy="true" style="display:block;height:100%;width:100%;background-color:white;border-radius:var(--linaria-theme_corner-radius-medium12px-border-radius)">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="height:100%;width:100%;border-radius:var(--linaria-theme_corner-radius-medium12px-border-radius)">
+</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="g1wiliwt atm_u80d3j_1li1fea atm_1jl3gu2_tak4gr c1v0rf5q atm_9s_11p5wf0 atm_cx_4wguik atm_dz_7esijk atm_e0_1lo05zz dir dir-ltr">
+<span aria-busy="true" style="display:block;height:19px;width:65%;background-color:white;border-radius:4px">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="height:100%;width:100%;border-radius:4px">
+</span>
+</span>
+<div class="a3g92ry atm_da_1ko3t4y atm_dm_kb7nvz atm_fg_h9n0ih atm_vy_1osqo2v dir dir-ltr">
+<span aria-busy="true" style="display:block;height:19px;width:100%;background-color:white;border-radius:4px">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="height:100%;width:100%;border-radius:4px">
+</span>
+</span>
+</div>
+<div class="fb4nyux atm_da_cbdd7d dir dir-ltr">
+<span aria-busy="true" style="display:block;height:19px;width:39%;background-color:white;border-radius:4px">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="height:100%;width:100%;border-radius:4px">
+</span>
+</span>
+</div>
+<div class="fb4nyux atm_da_cbdd7d dir dir-ltr">
+<span aria-busy="true" style="display:block;height:19px;width:28%;background-color:white;border-radius:4px">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="height:100%;width:100%;border-radius:4px">
+</span>
+</span>
+</div>
+<div class="pc0djro atm_da_cbdd7d atm_h3_lh1qj6 dir dir-ltr">
+<span aria-busy="true" style="display:block;height:19px;width:26%;background-color:white;border-radius:4px">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="height:100%;width:100%;border-radius:4px">
+</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="c1l1h97y atm_d2_1kqhmmj l1aqx8qh atm_vl_15vqwwr atm_k4_idpfg4 cikyho8 atm_9s_glywfm atm_93_15vqwwr__hp14bx atm_9s_1txwivl__hp14bx dir dir-ltr" style="--transition-element_transition-delay:750ms;--transition-element_transition-duration:200ms">
+</div>
+</div>
+</div>
+<div class="dir dir-ltr">
+<div class="c4mnd7m atm_9s_11p5wf0 atm_dz_1osqo2v dir dir-ltr">
+<div class="c1pbo4kt atm_ar_1bp4okc atm_d2_1kqhmmj atm_e2_1osqo2v atm_gi_idpfg4 atm_lo_idpfg4 atm_wq_cs5v99 l179zchc atm_vl_ewfl5b atm_93_ewfl5b atm_k4_kb7nvz dir dir-ltr" style="--transition-element_transition-delay:800ms;--transition-element_transition-duration:200ms">
+<div>
+<div class="m1cp3yuo atm_gq_1gibeiw atm_72g4pb_llf7ib atm_1mz0ff6_1lk22r2 atm_1p5rjfj_h2mmj6 dir dir-ltr">
+<div class="dir dir-ltr">
+<div class="awuxh4x atm_1w_12kg1i__4c1lm5 atm_lo_1auwtbz__320uii atm_mk_hqdblt__320uii dir dir-ltr">
+<div class="cw9aemg atm_e2_1osqo2v atm_jb_idpfg4 atm_mk_n7od8j atm_mk_stnw88__320uii atm_e2_1osqo2v__320uii atm_vy_1osqo2v__320uii atm_tk_idpfg4__320uii atm_fq_idpfg4__320uii atm_n3_idpfg4__320uii atm_6i_idpfg4__320uii dir dir-ltr">
+<span aria-busy="true" style="display:block;height:100%;width:100%;background-color:white;border-radius:var(--linaria-theme_corner-radius-medium12px-border-radius)">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="height:100%;width:100%;border-radius:var(--linaria-theme_corner-radius-medium12px-border-radius)">
+</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="g1wiliwt atm_u80d3j_1li1fea atm_1jl3gu2_tak4gr c1v0rf5q atm_9s_11p5wf0 atm_cx_4wguik atm_dz_7esijk atm_e0_1lo05zz dir dir-ltr">
+<span aria-busy="true" style="display:block;height:19px;width:65%;background-color:white;border-radius:4px">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="height:100%;width:100%;border-radius:4px">
+</span>
+</span>
+<div class="a3g92ry atm_da_1ko3t4y atm_dm_kb7nvz atm_fg_h9n0ih atm_vy_1osqo2v dir dir-ltr">
+<span aria-busy="true" style="display:block;height:19px;width:100%;background-color:white;border-radius:4px">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="height:100%;width:100%;border-radius:4px">
+</span>
+</span>
+</div>
+<div class="fb4nyux atm_da_cbdd7d dir dir-ltr">
+<span aria-busy="true" style="display:block;height:19px;width:39%;background-color:white;border-radius:4px">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="height:100%;width:100%;border-radius:4px">
+</span>
+</span>
+</div>
+<div class="fb4nyux atm_da_cbdd7d dir dir-ltr">
+<span aria-busy="true" style="display:block;height:19px;width:28%;background-color:white;border-radius:4px">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="height:100%;width:100%;border-radius:4px">
+</span>
+</span>
+</div>
+<div class="pc0djro atm_da_cbdd7d atm_h3_lh1qj6 dir dir-ltr">
+<span aria-busy="true" style="display:block;height:19px;width:26%;background-color:white;border-radius:4px">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="height:100%;width:100%;border-radius:4px">
+</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="c1l1h97y atm_d2_1kqhmmj l1aqx8qh atm_vl_15vqwwr atm_k4_idpfg4 cikyho8 atm_9s_glywfm atm_93_15vqwwr__hp14bx atm_9s_1txwivl__hp14bx dir dir-ltr" style="--transition-element_transition-delay:800ms;--transition-element_transition-duration:200ms">
+</div>
+</div>
+</div>
+<div class="dir dir-ltr">
+<div class="c4mnd7m atm_9s_11p5wf0 atm_dz_1osqo2v dir dir-ltr">
+<div class="c1pbo4kt atm_ar_1bp4okc atm_d2_1kqhmmj atm_e2_1osqo2v atm_gi_idpfg4 atm_lo_idpfg4 atm_wq_cs5v99 l179zchc atm_vl_ewfl5b atm_93_ewfl5b atm_k4_kb7nvz dir dir-ltr" style="--transition-element_transition-delay:850ms;--transition-element_transition-duration:200ms">
+<div>
+<div class="m1cp3yuo atm_gq_1gibeiw atm_72g4pb_llf7ib atm_1mz0ff6_1lk22r2 atm_1p5rjfj_h2mmj6 dir dir-ltr">
+<div class="dir dir-ltr">
+<div class="awuxh4x atm_1w_12kg1i__4c1lm5 atm_lo_1auwtbz__320uii atm_mk_hqdblt__320uii dir dir-ltr">
+<div class="cw9aemg atm_e2_1osqo2v atm_jb_idpfg4 atm_mk_n7od8j atm_mk_stnw88__320uii atm_e2_1osqo2v__320uii atm_vy_1osqo2v__320uii atm_tk_idpfg4__320uii atm_fq_idpfg4__320uii atm_n3_idpfg4__320uii atm_6i_idpfg4__320uii dir dir-ltr">
+<span aria-busy="true" style="display:block;height:100%;width:100%;background-color:white;border-radius:var(--linaria-theme_corner-radius-medium12px-border-radius)">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="height:100%;width:100%;border-radius:var(--linaria-theme_corner-radius-medium12px-border-radius)">
+</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="g1wiliwt atm_u80d3j_1li1fea atm_1jl3gu2_tak4gr c1v0rf5q atm_9s_11p5wf0 atm_cx_4wguik atm_dz_7esijk atm_e0_1lo05zz dir dir-ltr">
+<span aria-busy="true" style="display:block;height:19px;width:65%;background-color:white;border-radius:4px">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="height:100%;width:100%;border-radius:4px">
+</span>
+</span>
+<div class="a3g92ry atm_da_1ko3t4y atm_dm_kb7nvz atm_fg_h9n0ih atm_vy_1osqo2v dir dir-ltr">
+<span aria-busy="true" style="display:block;height:19px;width:100%;background-color:white;border-radius:4px">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="height:100%;width:100%;border-radius:4px">
+</span>
+</span>
+</div>
+<div class="fb4nyux atm_da_cbdd7d dir dir-ltr">
+<span aria-busy="true" style="display:block;height:19px;width:39%;background-color:white;border-radius:4px">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="height:100%;width:100%;border-radius:4px">
+</span>
+</span>
+</div>
+<div class="fb4nyux atm_da_cbdd7d dir dir-ltr">
+<span aria-busy="true" style="display:block;height:19px;width:28%;background-color:white;border-radius:4px">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="height:100%;width:100%;border-radius:4px">
+</span>
+</span>
+</div>
+<div class="pc0djro atm_da_cbdd7d atm_h3_lh1qj6 dir dir-ltr">
+<span aria-busy="true" style="display:block;height:19px;width:26%;background-color:white;border-radius:4px">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="height:100%;width:100%;border-radius:4px">
+</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="c1l1h97y atm_d2_1kqhmmj l1aqx8qh atm_vl_15vqwwr atm_k4_idpfg4 cikyho8 atm_9s_glywfm atm_93_15vqwwr__hp14bx atm_9s_1txwivl__hp14bx dir dir-ltr" style="--transition-element_transition-delay:850ms;--transition-element_transition-duration:200ms">
+</div>
+</div>
+</div>
+<div class="dir dir-ltr">
+<div class="c4mnd7m atm_9s_11p5wf0 atm_dz_1osqo2v dir dir-ltr">
+<div class="c1pbo4kt atm_ar_1bp4okc atm_d2_1kqhmmj atm_e2_1osqo2v atm_gi_idpfg4 atm_lo_idpfg4 atm_wq_cs5v99 l179zchc atm_vl_ewfl5b atm_93_ewfl5b atm_k4_kb7nvz dir dir-ltr" style="--transition-element_transition-delay:900ms;--transition-element_transition-duration:200ms">
+<div>
+<div class="m1cp3yuo atm_gq_1gibeiw atm_72g4pb_llf7ib atm_1mz0ff6_1lk22r2 atm_1p5rjfj_h2mmj6 dir dir-ltr">
+<div class="dir dir-ltr">
+<div class="awuxh4x atm_1w_12kg1i__4c1lm5 atm_lo_1auwtbz__320uii atm_mk_hqdblt__320uii dir dir-ltr">
+<div class="cw9aemg atm_e2_1osqo2v atm_jb_idpfg4 atm_mk_n7od8j atm_mk_stnw88__320uii atm_e2_1osqo2v__320uii atm_vy_1osqo2v__320uii atm_tk_idpfg4__320uii atm_fq_idpfg4__320uii atm_n3_idpfg4__320uii atm_6i_idpfg4__320uii dir dir-ltr">
+<span aria-busy="true" style="display:block;height:100%;width:100%;background-color:white;border-radius:var(--linaria-theme_corner-radius-medium12px-border-radius)">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="height:100%;width:100%;border-radius:var(--linaria-theme_corner-radius-medium12px-border-radius)">
+</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="g1wiliwt atm_u80d3j_1li1fea atm_1jl3gu2_tak4gr c1v0rf5q atm_9s_11p5wf0 atm_cx_4wguik atm_dz_7esijk atm_e0_1lo05zz dir dir-ltr">
+<span aria-busy="true" style="display:block;height:19px;width:65%;background-color:white;border-radius:4px">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="height:100%;width:100%;border-radius:4px">
+</span>
+</span>
+<div class="a3g92ry atm_da_1ko3t4y atm_dm_kb7nvz atm_fg_h9n0ih atm_vy_1osqo2v dir dir-ltr">
+<span aria-busy="true" style="display:block;height:19px;width:100%;background-color:white;border-radius:4px">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="height:100%;width:100%;border-radius:4px">
+</span>
+</span>
+</div>
+<div class="fb4nyux atm_da_cbdd7d dir dir-ltr">
+<span aria-busy="true" style="display:block;height:19px;width:39%;background-color:white;border-radius:4px">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="height:100%;width:100%;border-radius:4px">
+</span>
+</span>
+</div>
+<div class="fb4nyux atm_da_cbdd7d dir dir-ltr">
+<span aria-busy="true" style="display:block;height:19px;width:28%;background-color:white;border-radius:4px">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="height:100%;width:100%;border-radius:4px">
+</span>
+</span>
+</div>
+<div class="pc0djro atm_da_cbdd7d atm_h3_lh1qj6 dir dir-ltr">
+<span aria-busy="true" style="display:block;height:19px;width:26%;background-color:white;border-radius:4px">
+
+        ```
+        

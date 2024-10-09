@@ -1,0 +1,537 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issues: 
+       
+        __________________
+        "
+            1. Does not use HTTPS: All sites should be protected with HTTPS, even ones that don't handle sensitive data. This includes avoiding [mixed content](https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content), where some resources are loaded over HTTP despite the initial request being served over HTTPS. HTTPS prevents intruders from tampering with or passively listening in on the communications between your app and your users, and is a prerequisite for HTTP/2 and many new web platform APIs. [Learn more about HTTPS](https://developer.chrome.com/docs/lighthouse/pwa/is-on-https/).
+ 
+
+            
+            2. First Contentful Paint: First Contentful Paint marks the time at which the first text or image is painted. [Learn more about the First Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/).
+ 
+
+            
+            3. Largest Contentful Paint: Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)
+ 
+
+            
+            4. Speed Index: Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/).
+ 
+
+            
+            5. Total Blocking Time: Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds. [Learn more about the Total Blocking Time metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/).
+ 
+
+            
+            6. Max Potential First Input Delay: The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).
+ 
+
+            
+            7. Browser errors were logged to the console: Errors logged to the console indicate unresolved problems. They can come from network request failures and other browser concerns. [Learn more about this errors in console diagnostic audit](https://developer.chrome.com/docs/lighthouse/best-practices/errors-in-console/)
+ 
+
+            
+            8. Time to Interactive: Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).
+ 
+
+            
+            9. Displays images with incorrect aspect ratio: Image display dimensions should match natural aspect ratio. [Learn more about image aspect ratio](https://developer.chrome.com/docs/lighthouse/best-practices/image-aspect-ratio/).
+ 
+
+            
+            10. Uses third-party cookies: Support for third-party cookies will be removed in a future version of Chrome. [Learn more about phasing out third-party cookies](https://developer.chrome.com/en/docs/privacy-sandbox/third-party-cookie-phase-out/).
+ 
+
+            
+            11. Minimize main-thread work: Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to minimize main-thread work](https://developer.chrome.com/docs/lighthouse/performance/mainthread-work-breakdown/)
+ 
+
+            
+            12. Reduce JavaScript execution time: Consider reducing the time spent parsing, compiling, and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to reduce Javascript execution time](https://developer.chrome.com/docs/lighthouse/performance/bootup-time/).
+ 
+
+            
+            13. Reduce the impact of third-party code: Third-party code can significantly impact load performance. Limit the number of redundant third-party providers and try to load third-party code after your page has primarily finished loading. [Learn how to minimize third-party impact](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript/).
+ 
+
+            
+            14. Largest Contentful Paint element: This is the largest contentful element painted within the viewport. [Learn more about the Largest Contentful Paint element](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)
+ 
+
+            
+            15. Elements with visible text labels do not have matching accessible names.: Visible text labels that do not match the accessible name can result in a confusing experience for screen reader users. [Learn more about accessible names](https://dequeuniversity.com/rules/axe/4.9/label-content-name-mismatch).
+ 
+
+            
+            16. Serve static assets with an efficient cache policy: A long cache lifetime can speed up repeat visits to your page. [Learn more about efficient cache policies](https://developer.chrome.com/docs/lighthouse/performance/uses-long-cache-ttl/).
+ 
+
+            
+            17. Defer offscreen images: Consider lazy-loading offscreen and hidden images after all critical resources have finished loading to lower time to interactive. [Learn how to defer offscreen images](https://developer.chrome.com/docs/lighthouse/performance/offscreen-images/).
+ 
+
+            
+            18. Eliminate render-blocking resources: Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn how to eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/).
+ 
+
+            
+            19. Reduce unused CSS: Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/).
+ 
+
+            
+            20. Reduce unused JavaScript: Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).
+ 
+
+            
+            21. Serve images in next-gen formats: Image formats like WebP and AVIF often provide better compression than PNG or JPEG, which means faster downloads and less data consumption. [Learn more about modern image formats](https://developer.chrome.com/docs/lighthouse/performance/uses-webp-images/).
+ 
+
+            
+            22. Enable text compression: Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more about text compression](https://developer.chrome.com/docs/lighthouse/performance/uses-text-compression/).
+ 
+
+            
+            23. Avoid serving legacy JavaScript to modern browsers: Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. For your bundled JavaScript, adopt a modern script deployment strategy using module/nomodule feature detection to reduce the amount of code shipped to modern browsers, while retaining support for legacy browsers. [Learn how to use modern JavaScript](https://web.dev/articles/publish-modern-javascript)
+ 
+
+            
+            24. Charset declaration is missing or occurs too late in the HTML: A character encoding declaration is required. It can be done with a `<meta>` tag in the first 1024 bytes of the HTML or in the Content-Type HTTP response header. [Learn more about declaring the character encoding](https://developer.chrome.com/docs/lighthouse/best-practices/charset/).
+ 
+
+            
+            25. Issues were logged in the `Issues` panel in Chrome Devtools: Issues logged to the `Issues` panel in Chrome Devtools indicate unresolved problems. They can come from network request failures, insufficient security controls, and other browser concerns. Open up the Issues panel in Chrome DevTools for more details on each issue.
+ 
+
+            
+            26. Does not use passive listeners to improve scrolling performance: Consider marking your touch and wheel event listeners as `passive` to improve your page's scroll performance. [Learn more about adopting passive event listeners](https://developer.chrome.com/docs/lighthouse/best-practices/uses-passive-event-listeners/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks. 
+        Please modify this HTML code chunk to resolve the performance issues given above.:
+
+        1. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        2. If no optimizations are possible, return the original code.
+        3. Do not modify class names
+        4. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization -->` at the end of the changed portion.
+        5. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+        6. Because the code is split into chunks, there might be some unclosed or cut elements, do not worry about that.
+        7. Do not change any styles or functionalities of the code.
+        8. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        9. Consider that HTML as a whole is from production and might be minified, uglified or compressed.
+
+        The original HTML code is as follows:
+
+        ```html
+        
+<div class="['w-full', 'max-w-[192px]', 'mr-3']">
+<h3 class="['font-sans', 'text-[16px]', 'font-bold', 'text-black-a90', 'leading-[1.25]', 'mb-1', 'babybear:max-w-full', 'babybear:my-[10px]']">
+       Browse LinkedIn
+      </h3>
+<ul>
+<li class="['babybear:my-[10px]', 'babybear:max-w-full']">
+<a class="['font-sans', 'text-[14px]', 'text-black-a60', 'font-bold', 'leading-[1.25]', 'visited:text-black-a60', 'hover:visited:text-blue-70']" data-tracking-control-name="homepage-basic_directory_learningHomeUrl" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/?trk=homepage-basic_directory_learningHomeUrl">
+         Learning
+        </a>
+</li>
+<li class="['babybear:my-[10px]', 'babybear:max-w-full']">
+<a class="['font-sans', 'text-[14px]', 'text-black-a60', 'font-bold', 'leading-[1.25]', 'visited:text-black-a60', 'hover:visited:text-blue-70']" data-tracking-control-name="homepage-basic_directory_jobsHomeUrl" data-tracking-will-navigate="" href="https://www.linkedin.com/jobs?trk=homepage-basic_directory_jobsHomeUrl">
+         Jobs
+        </a>
+</li>
+<li class="['babybear:my-[10px]', 'babybear:max-w-full']">
+<a class="['font-sans', 'text-[14px]', 'text-black-a60', 'font-bold', 'leading-[1.25]', 'visited:text-black-a60', 'hover:visited:text-blue-70']" data-tracking-control-name="homepage-basic_directory_gameHubUrl" data-tracking-will-navigate="" href="https://www.linkedin.com/games?trk=homepage-basic_directory_gameHubUrl">
+         Games
+        </a>
+</li>
+<li class="['babybear:my-[10px]', 'babybear:max-w-full']">
+<a class="['font-sans', 'text-[14px]', 'text-black-a60', 'font-bold', 'leading-[1.25]', 'visited:text-black-a60', 'hover:visited:text-blue-70']" data-tracking-control-name="homepage-basic_directory_salaryHomeUrl" data-tracking-will-navigate="" href="https://www.linkedin.com/salary/?trk=homepage-basic_directory_salaryHomeUrl">
+         Salary
+        </a>
+</li>
+<li class="['babybear:my-[10px]', 'babybear:max-w-full']">
+<a class="['font-sans', 'text-[14px]', 'text-black-a60', 'font-bold', 'leading-[1.25]', 'visited:text-black-a60', 'hover:visited:text-blue-70']" data-tracking-control-name="homepage-basic_directory_mobileMicrositeUrl" data-tracking-will-navigate="" href="https://mobile.linkedin.com/?trk=homepage-basic_directory_mobileMicrositeUrl">
+         Mobile
+        </a>
+</li>
+<li class="['babybear:my-[10px]', 'babybear:max-w-full']">
+<a class="['font-sans', 'text-[14px]', 'text-black-a60', 'font-bold', 'leading-[1.25]', 'visited:text-black-a60', 'hover:visited:text-blue-70']" data-tracking-control-name="homepage-basic_directory_servicesHomeUrl" data-tracking-will-navigate="" href="https://www.linkedin.com/services?trk=homepage-basic_directory_servicesHomeUrl">
+         Services
+        </a>
+</li>
+<li class="['babybear:my-[10px]', 'babybear:max-w-full']">
+<a class="['font-sans', 'text-[14px]', 'text-black-a60', 'font-bold', 'leading-[1.25]', 'visited:text-black-a60', 'hover:visited:text-blue-70']" data-tracking-control-name="homepage-basic_directory_productsHomeUrl" data-tracking-will-navigate="" href="https://www.linkedin.com/products?trk=homepage-basic_directory_productsHomeUrl">
+         Products
+        </a>
+</li>
+<li class="['babybear:my-[10px]', 'babybear:max-w-full']">
+<a class="['font-sans', 'text-[14px]', 'text-black-a60', 'font-bold', 'leading-[1.25]', 'visited:text-black-a60', 'hover:visited:text-blue-70']" data-tracking-control-name="homepage-basic_directory_topCompaniesHubHomeUrl" data-tracking-will-navigate="" href="https://www.linkedin.com/hubs/top-companies/?trk=homepage-basic_directory_topCompaniesHubHomeUrl">
+         Top Companies Hub
+        </a>
+</li>
+</ul>
+</div>
+<div class="['w-full', 'max-w-[192px]', 'mr-3']">
+<h3 class="['font-sans', 'text-[16px]', 'font-bold', 'text-black-a90', 'leading-[1.25]', 'mb-1', 'babybear:max-w-full', 'babybear:my-[10px]']">
+       Business Solutions
+      </h3>
+<ul>
+<li class="['babybear:my-[10px]', 'babybear:max-w-full']">
+<a class="['font-sans', 'text-[14px]', 'text-black-a60', 'font-bold', 'leading-[1.25]', 'visited:text-black-a60', 'hover:visited:text-blue-70']" data-tracking-control-name="homepage-basic_directory_talentSolutionsMicrositeUrl" data-tracking-will-navigate="" href="https://business.linkedin.com/talent-solutions?src=li-footer&utm_source=linkedin&utm_medium=footer&trk=homepage-basic_directory_talentSolutionsMicrositeUrl">
+         Talent
+        </a>
+</li>
+<li class="['babybear:my-[10px]', 'babybear:max-w-full']">
+<a class="['font-sans', 'text-[14px]', 'text-black-a60', 'font-bold', 'leading-[1.25]', 'visited:text-black-a60', 'hover:visited:text-blue-70']" data-tracking-control-name="homepage-basic_directory_marketingSolutionsMicrositeUrl" data-tracking-will-navigate="" href="https://business.linkedin.com/marketing-solutions?src=li-footer&utm_source=linkedin&utm_medium=footer&trk=homepage-basic_directory_marketingSolutionsMicrositeUrl">
+         Marketing
+        </a>
+</li>
+<li class="['babybear:my-[10px]', 'babybear:max-w-full']">
+<a class="['font-sans', 'text-[14px]', 'text-black-a60', 'font-bold', 'leading-[1.25]', 'visited:text-black-a60', 'hover:visited:text-blue-70']" data-tracking-control-name="homepage-basic_directory_salesSolutionsMicrositeUrl" data-tracking-will-navigate="" href="https://business.linkedin.com/sales-solutions?src=li-footer&utm_source=linkedin&utm_medium=footer&trk=homepage-basic_directory_salesSolutionsMicrositeUrl">
+         Sales
+        </a>
+</li>
+<li class="['babybear:my-[10px]', 'babybear:max-w-full']">
+<a class="['font-sans', 'text-[14px]', 'text-black-a60', 'font-bold', 'leading-[1.25]', 'visited:text-black-a60', 'hover:visited:text-blue-70']" data-tracking-control-name="homepage-basic_directory_learningMicrositeUrl" data-tracking-will-navigate="" href="https://learning.linkedin.com/?src=li-footer&trk=homepage-basic_directory_learningMicrositeUrl">
+         Learning
+        </a>
+</li>
+</ul>
+</div>
+<div class="['w-full', 'max-w-[192px]', 'mr-3']">
+<h3 class="['font-sans', 'text-[16px]', 'font-bold', 'text-black-a90', 'leading-[1.25]', 'mb-1', 'babybear:max-w-full', 'babybear:my-[10px]']">
+       Directories
+      </h3>
+<ul>
+<li class="['babybear:my-[10px]', 'babybear:max-w-full']">
+<a class="['font-sans', 'text-[14px]', 'text-black-a60', 'font-bold', 'leading-[1.25]', 'visited:text-black-a60', 'hover:visited:text-blue-70']" data-tracking-control-name="homepage-basic_directory_peopleDirectoryUrl" data-tracking-will-navigate="" href="https://www.linkedin.com/directory/people?trk=homepage-basic_directory_peopleDirectoryUrl">
+         Members
+        </a>
+</li>
+<li class="['babybear:my-[10px]', 'babybear:max-w-full']">
+<a class="['font-sans', 'text-[14px]', 'text-black-a60', 'font-bold', 'leading-[1.25]', 'visited:text-black-a60', 'hover:visited:text-blue-70']" data-tracking-control-name="homepage-basic_directory_jobSearchDirectoryUrl" data-tracking-will-navigate="" href="https://www.linkedin.com/directory/jobs?trk=homepage-basic_directory_jobSearchDirectoryUrl">
+         Jobs
+        </a>
+</li>
+<li class="['babybear:my-[10px]', 'babybear:max-w-full']">
+<a class="['font-sans', 'text-[14px]', 'text-black-a60', 'font-bold', 'leading-[1.25]', 'visited:text-black-a60', 'hover:visited:text-blue-70']" data-tracking-control-name="homepage-basic_directory_companyDirectoryUrl" data-tracking-will-navigate="" href="https://www.linkedin.com/directory/companies?trk=homepage-basic_directory_companyDirectoryUrl">
+         Companies
+        </a>
+</li>
+<li class="['babybear:my-[10px]', 'babybear:max-w-full']">
+<a class="['font-sans', 'text-[14px]', 'text-black-a60', 'font-bold', 'leading-[1.25]', 'visited:text-black-a60', 'hover:visited:text-blue-70']" data-tracking-control-name="homepage-basic_directory_featuredDirectoryUrl" data-tracking-will-navigate="" href="https://www.linkedin.com/directory/featured?trk=homepage-basic_directory_featuredDirectoryUrl">
+         Featured
+        </a>
+</li>
+<li class="['babybear:my-[10px]', 'babybear:max-w-full']">
+<a class="['font-sans', 'text-[14px]', 'text-black-a60', 'font-bold', 'leading-[1.25]', 'visited:text-black-a60', 'hover:visited:text-blue-70']" data-tracking-control-name="homepage-basic_directory_learningDirectoryUrl" data-tracking-will-navigate="" href="https://www.linkedin.com/directory/learning?trk=homepage-basic_directory_learningDirectoryUrl">
+         Learning
+        </a>
+</li>
+<li class="['babybear:my-[10px]', 'babybear:max-w-full']">
+<a class="['font-sans', 'text-[14px]', 'text-black-a60', 'font-bold', 'leading-[1.25]', 'visited:text-black-a60', 'hover:visited:text-blue-70']" data-tracking-control-name="homepage-basic_directory_postsDirectoryUrl" data-tracking-will-navigate="" href="https://www.linkedin.com/directory/posts?trk=homepage-basic_directory_postsDirectoryUrl">
+         Posts
+        </a>
+</li>
+<li class="['babybear:my-[10px]', 'babybear:max-w-full']">
+<a class="['font-sans', 'text-[14px]', 'text-black-a60', 'font-bold', 'leading-[1.25]', 'visited:text-black-a60', 'hover:visited:text-blue-70']" data-tracking-control-name="homepage-basic_directory_articlesDirectoryUrl" data-tracking-will-navigate="" href="https://www.linkedin.com/directory/articles?trk=homepage-basic_directory_articlesDirectoryUrl">
+         Articles
+        </a>
+</li>
+<li class="['babybear:my-[10px]', 'babybear:max-w-full']">
+<a class="['font-sans', 'text-[14px]', 'text-black-a60', 'font-bold', 'leading-[1.25]', 'visited:text-black-a60', 'hover:visited:text-blue-70']" data-tracking-control-name="homepage-basic_directory_schoolsDirectoryUrl" data-tracking-will-navigate="" href="https://www.linkedin.com/directory/schools?trk=homepage-basic_directory_schoolsDirectoryUrl">
+         Schools
+        </a>
+</li>
+<li class="['babybear:my-[10px]', 'babybear:max-w-full']">
+<a class="['font-sans', 'text-[14px]', 'text-black-a60', 'font-bold', 'leading-[1.25]', 'visited:text-black-a60', 'hover:visited:text-blue-70']" data-tracking-control-name="homepage-basic_directory_newsDirectoryUrl" data-tracking-will-navigate="" href="https://www.linkedin.com/directory/news?trk=homepage-basic_directory_newsDirectoryUrl">
+         News
+        </a>
+</li>
+<li class="['babybear:my-[10px]', 'babybear:max-w-full']">
+<a class="['font-sans', 'text-[14px]', 'text-black-a60', 'font-bold', 'leading-[1.25]', 'visited:text-black-a60', 'hover:visited:text-blue-70']" data-tracking-control-name="homepage-basic_directory_newslettersDirectoryUrl" data-tracking-will-navigate="" href="https://www.linkedin.com/directory/newsletters?trk=homepage-basic_directory_newslettersDirectoryUrl">
+         News Letters
+        </a>
+</li>
+<li class="['babybear:my-[10px]', 'babybear:max-w-full']">
+<a class="['font-sans', 'text-[14px]', 'text-black-a60', 'font-bold', 'leading-[1.25]', 'visited:text-black-a60', 'hover:visited:text-blue-70']" data-tracking-control-name="homepage-basic_directory_servicesDirectoryUrl" data-tracking-will-navigate="" href="https://www.linkedin.com/directory/services?trk=homepage-basic_directory_servicesDirectoryUrl">
+         Services
+        </a>
+</li>
+<li class="['babybear:my-[10px]', 'babybear:max-w-full']">
+<a class="['font-sans', 'text-[14px]', 'text-black-a60', 'font-bold', 'leading-[1.25]', 'visited:text-black-a60', 'hover:visited:text-blue-70']" data-tracking-control-name="homepage-basic_directory_productsDirectoryUrl" data-tracking-will-navigate="" href="https://www.linkedin.com/directory/products?trk=homepage-basic_directory_productsDirectoryUrl">
+         Products
+        </a>
+</li>
+<li class="['babybear:my-[10px]', 'babybear:max-w-full']">
+<a class="['font-sans', 'text-[14px]', 'text-black-a60', 'font-bold', 'leading-[1.25]', 'visited:text-black-a60', 'hover:visited:text-blue-70']" data-tracking-control-name="homepage-basic_directory_adviceDirectoryUrl" data-tracking-will-navigate="" href="https://www.linkedin.com/directory/advice?trk=homepage-basic_directory_adviceDirectoryUrl">
+         Advice
+        </a>
+</li>
+<li class="['babybear:my-[10px]', 'babybear:max-w-full']">
+<a class="['font-sans', 'text-[14px]', 'text-black-a60', 'font-bold', 'leading-[1.25]', 'visited:text-black-a60', 'hover:visited:text-blue-70']" data-tracking-control-name="homepage-basic_directory_peopleSearchDirectoryUrl" data-tracking-will-navigate="" href="https://www.linkedin.com/directory/people-search?trk=homepage-basic_directory_peopleSearchDirectoryUrl">
+         People Search
+        </a>
+</li>
+</ul>
+</div>
+</div>
+</section>
+</main>
+ 
+<footer class="['li-footer', 'bg-transparent', 'w-full']">
+<ul class="['li-footer__list', 'flex', 'flex-wrap', 'flex-row', 'items-start', 'justify-start', 'w-full', 'h-auto', 'min-h-[50px]', 'my-[0px]', 'mx-auto', 'py-3', 'px-2', 'papabear:w-[1128px]', 'papabear:p-0']">
+<li class="['li-footer__item', 'font-sans', 'text-xs', 'text-color-text-low-emphasis', 'flex', 'flex-shrink-0', 'justify-start', 'p-1', 'relative', 'w-50%', 'papabear:justify-center', 'papabear:w-auto']">
+<span class="['sr-only']">
+      LinkedIn
+     </span>
+<icon class="['li-footer__copy-logo', 'text-color-logo-brand-alt', 'inline-block', 'self-center', 'h-[14px]', 'w-[56px]', 'mr-1']" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/e12h2cd8ac580qen9qdd0qks8">
+</icon>
+<span class="['li-footer__copy-text', 'flex', 'items-center']">
+      © 2024
+     </span>
+</li>
+<li class="['li-footer__item', 'font-sans', 'text-xs', 'text-color-text-low-emphasis', 'flex', 'flex-shrink-0', 'justify-start', 'p-1', 'relative', 'w-50%', 'papabear:justify-center', 'papabear:w-auto']">
+<a class="['li-footer__item-link', 'flex', 'items-center', 'font-sans', 'text-xs', 'font-bold', 'text-color-text-low-emphasis', 'hover:text-color-link-hover', 'focus:text-color-link-focus']" data-tracking-control-name="homepage-basic_footer-about" data-tracking-will-navigate="" href="https://about.linkedin.com?trk=homepage-basic_footer-about">
+      About
+     </a>
+</li>
+<li class="['li-footer__item', 'font-sans', 'text-xs', 'text-color-text-low-emphasis', 'flex', 'flex-shrink-0', 'justify-start', 'p-1', 'relative', 'w-50%', 'papabear:justify-center', 'papabear:w-auto']">
+<a class="['li-footer__item-link', 'flex', 'items-center', 'font-sans', 'text-xs', 'font-bold', 'text-color-text-low-emphasis', 'hover:text-color-link-hover', 'focus:text-color-link-focus']" data-tracking-control-name="homepage-basic_footer-accessibility" data-tracking-will-navigate="" href="https://www.linkedin.com/accessibility?trk=homepage-basic_footer-accessibility">
+      Accessibility
+     </a>
+</li>
+<li class="['li-footer__item', 'font-sans', 'text-xs', 'text-color-text-low-emphasis', 'flex', 'flex-shrink-0', 'justify-start', 'p-1', 'relative', 'w-50%', 'papabear:justify-center', 'papabear:w-auto']">
+<a class="['li-footer__item-link', 'flex', 'items-center', 'font-sans', 'text-xs', 'font-bold', 'text-color-text-low-emphasis', 'hover:text-color-link-hover', 'focus:text-color-link-focus']" data-tracking-control-name="homepage-basic_footer-user-agreement" data-tracking-will-navigate="" href="https://www.linkedin.com/legal/user-agreement?trk=homepage-basic_footer-user-agreement">
+      User Agreement
+     </a>
+</li>
+<li class="['li-footer__item', 'font-sans', 'text-xs', 'text-color-text-low-emphasis', 'flex', 'flex-shrink-0', 'justify-start', 'p-1', 'relative', 'w-50%', 'papabear:justify-center', 'papabear:w-auto']">
+<a class="['li-footer__item-link', 'flex', 'items-center', 'font-sans', 'text-xs', 'font-bold', 'text-color-text-low-emphasis', 'hover:text-color-link-hover', 'focus:text-color-link-focus']" data-tracking-control-name="homepage-basic_footer-privacy-policy" data-tracking-will-navigate="" href="https://www.linkedin.com/legal/privacy-policy?trk=homepage-basic_footer-privacy-policy">
+      Privacy Policy
+     </a>
+</li>
+ 
+<li class="['li-footer__item', 'font-sans', 'text-xs', 'text-color-text-low-emphasis', 'flex', 'flex-shrink-0', 'justify-start', 'p-1', 'relative', 'w-50%', 'papabear:justify-center', 'papabear:w-auto']">
+<a class="['li-footer__item-link', 'flex', 'items-center', 'font-sans', 'text-xs', 'font-bold', 'text-color-text-low-emphasis', 'hover:text-color-link-hover', 'focus:text-color-link-focus']" data-tracking-control-name="homepage-basic_footer-cookie-policy" data-tracking-will-navigate="" href="https://www.linkedin.com/legal/cookie-policy?trk=homepage-basic_footer-cookie-policy">
+      Cookie Policy
+     </a>
+</li>
+<li class="['li-footer__item', 'font-sans', 'text-xs', 'text-color-text-low-emphasis', 'flex', 'flex-shrink-0', 'justify-start', 'p-1', 'relative', 'w-50%', 'papabear:justify-center', 'papabear:w-auto']">
+<a class="['li-footer__item-link', 'flex', 'items-center', 'font-sans', 'text-xs', 'font-bold', 'text-color-text-low-emphasis', 'hover:text-color-link-hover', 'focus:text-color-link-focus']" data-tracking-control-name="homepage-basic_footer-copyright-policy" data-tracking-will-navigate="" href="https://www.linkedin.com/legal/copyright-policy?trk=homepage-basic_footer-copyright-policy">
+      Copyright Policy
+     </a>
+</li>
+<li class="['li-footer__item', 'font-sans', 'text-xs', 'text-color-text-low-emphasis', 'flex', 'flex-shrink-0', 'justify-start', 'p-1', 'relative', 'w-50%', 'papabear:justify-center', 'papabear:w-auto']">
+<a class="['li-footer__item-link', 'flex', 'items-center', 'font-sans', 'text-xs', 'font-bold', 'text-color-text-low-emphasis', 'hover:text-color-link-hover', 'focus:text-color-link-focus']" data-tracking-control-name="homepage-basic_footer-brand-policy" data-tracking-will-navigate="" href="https://brand.linkedin.com/policies?trk=homepage-basic_footer-brand-policy">
+      Brand Policy
+     </a>
+</li>
+<li class="['li-footer__item', 'font-sans', 'text-xs', 'text-color-text-low-emphasis', 'flex', 'flex-shrink-0', 'justify-start', 'p-1', 'relative', 'w-50%', 'papabear:justify-center', 'papabear:w-auto']">
+<a class="['li-footer__item-link', 'flex', 'items-center', 'font-sans', 'text-xs', 'font-bold', 'text-color-text-low-emphasis', 'hover:text-color-link-hover', 'focus:text-color-link-focus']" data-tracking-control-name="homepage-basic_footer-guest-controls" data-tracking-will-navigate="" href="https://www.linkedin.com/psettings/guest-controls?trk=homepage-basic_footer-guest-controls">
+      Guest Controls
+     </a>
+</li>
+<li class="['li-footer__item', 'font-sans', 'text-xs', 'text-color-text-low-emphasis', 'flex', 'flex-shrink-0', 'justify-start', 'p-1', 'relative', 'w-50%', 'papabear:justify-center', 'papabear:w-auto']">
+<a class="['li-footer__item-link', 'flex', 'items-center', 'font-sans', 'text-xs', 'font-bold', 'text-color-text-low-emphasis', 'hover:text-color-link-hover', 'focus:text-color-link-focus']" data-tracking-control-name="homepage-basic_footer-community-guide" data-tracking-will-navigate="" href="https://www.linkedin.com/legal/professional-community-policies?trk=homepage-basic_footer-community-guide">
+      Community Guidelines
+     </a>
+</li>
+ 
+<li class="['li-footer__item', 'font-sans', 'text-xs', 'text-color-text-low-emphasis', 'flex', 'flex-shrink-0', 'justify-start', 'p-1', 'relative', 'w-50%', 'papabear:justify-center', 'papabear:w-auto']">
+<div class="['collapsible-dropdown', 'collapsible-dropdown--footer', 'collapsible-dropdown--up', 'flex', 'items-center', 'relative', 'hyphens-auto', 'language-selector', 'z-2']">
+ 
+<ul class="['collapsible-dropdown__list', 'hidden', 'container-raised', 'absolute', 'w-auto', 'overflow-y-auto', 'flex-col', 'items-stretch', 'z-1', 'bottom-[100%]', 'top-auto']" role="menu" tabindex="-1">
+<li class="['language-selector__item']" role="presentation">
+ Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile
+<button aria-label="العربية (Arabic)" class="['font-sans', 'text-xs', 'link', 'block', 'py-[5px]', 'px-2', 'w-full', 'hover:cursor-pointer', 'hover:bg-color-action', 'hover:text-color-text-on-dark', 'focus:bg-color-action', 'focus:text-color-text-on-dark', 'language-selector__link', '!font-regular']" data-locale="ar_AE" data-tracking-control-name="language-selector-ar_AE" lang="ar_AE" role="menuitem">
+         العربية (Arabic)
+        </button>
+</li>
+<li class="['language-selector__item']" role="presentation">
+ Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile
+<button aria-label="Čeština (Czech)" class="['font-sans', 'text-xs', 'link', 'block', 'py-[5px]', 'px-2', 'w-full', 'hover:cursor-pointer', 'hover:bg-color-action', 'hover:text-color-text-on-dark', 'focus:bg-color-action', 'focus:text-color-text-on-dark', 'language-selector__link', '!font-regular']" data-locale="cs_CZ" data-tracking-control-name="language-selector-cs_CZ" lang="cs_CZ" role="menuitem">
+         Čeština (Czech)
+        </button>
+</li>
+<li class="['language-selector__item']" role="presentation">
+ Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile
+<button aria-label="Dansk (Danish)" class="['font-sans', 'text-xs', 'link', 'block', 'py-[5px]', 'px-2', 'w-full', 'hover:cursor-pointer', 'hover:bg-color-action', 'hover:text-color-text-on-dark', 'focus:bg-color-action', 'focus:text-color-text-on-dark', 'language-selector__link', '!font-regular']" data-locale="da_DK" data-tracking-control-name="language-selector-da_DK" lang="da_DK" role="menuitem">
+         Dansk (Danish)
+        </button>
+</li>
+<li class="['language-selector__item']" role="presentation">
+ Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile
+<button aria-label="Deutsch (German)" class="['font-sans', 'text-xs', 'link', 'block', 'py-[5px]', 'px-2', 'w-full', 'hover:cursor-pointer', 'hover:bg-color-action', 'hover:text-color-text-on-dark', 'focus:bg-color-action', 'focus:text-color-text-on-dark', 'language-selector__link', '!font-regular']" data-locale="de_DE" data-tracking-control-name="language-selector-de_DE" lang="de_DE" role="menuitem">
+         Deutsch (German)
+        </button>
+</li>
+<li class="['language-selector__item']" role="presentation">
+ Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile
+<button aria-label="English (English) selected" class="['font-sans', 'text-xs', 'link', 'block', 'py-[5px]', 'px-2', 'w-full', 'hover:cursor-pointer', 'hover:bg-color-action', 'hover:text-color-text-on-dark', 'focus:bg-color-action', 'focus:text-color-text-on-dark', 'language-selector__link--selected']" data-locale="en_US" data-tracking-control-name="language-selector-en_US" lang="en_US" role="menuitem">
+<strong>
+          English (English)
+         </strong>
+</button>
+</li>
+<li class="['language-selector__item']" role="presentation">
+ Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile
+<button aria-label="Español (Spanish)" class="['font-sans', 'text-xs', 'link', 'block', 'py-[5px]', 'px-2', 'w-full', 'hover:cursor-pointer', 'hover:bg-color-action', 'hover:text-color-text-on-dark', 'focus:bg-color-action', 'focus:text-color-text-on-dark', 'language-selector__link', '!font-regular']" data-locale="es_ES" data-tracking-control-name="language-selector-es_ES" lang="es_ES" role="menuitem">
+         Español (Spanish)
+        </button>
+</li>
+<li class="['language-selector__item']" role="presentation">
+ Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile
+<button aria-label="Français (French)" class="['font-sans', 'text-xs', 'link', 'block', 'py-[5px]', 'px-2', 'w-full', 'hover:cursor-pointer', 'hover:bg-color-action', 'hover:text-color-text-on-dark', 'focus:bg-color-action', 'focus:text-color-text-on-dark', 'language-selector__link', '!font-regular']" data-locale="fr_FR" data-tracking-control-name="language-selector-fr_FR" lang="fr_FR" role="menuitem">
+         Français (French)
+        </button>
+</li>
+<li class="['language-selector__item']" role="presentation">
+ Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile
+<button aria-label="हिंदी (Hindi)" class="['font-sans', 'text-xs', 'link', 'block', 'py-[5px]', 'px-2', 'w-full', 'hover:cursor-pointer', 'hover:bg-color-action', 'hover:text-color-text-on-dark', 'focus:bg-color-action', 'focus:text-color-text-on-dark', 'language-selector__link', '!font-regular']" data-locale="hi_IN" data-tracking-control-name="language-selector-hi_IN" lang="hi_IN" role="menuitem">
+         हिंदी (Hindi)
+        </button>
+</li>
+<li class="['language-selector__item']" role="presentation">
+ Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile
+<button aria-label="Bahasa Indonesia (Indonesian)" class="['font-sans', 'text-xs', 'link', 'block', 'py-[5px]', 'px-2', 'w-full', 'hover:cursor-pointer', 'hover:bg-color-action', 'hover:text-color-text-on-dark', 'focus:bg-color-action', 'focus:text-color-text-on-dark', 'language-selector__link', '!font-regular']" data-locale="in_ID" data-tracking-control-name="language-selector-in_ID" lang="in_ID" role="menuitem">
+         Bahasa Indonesia (Indonesian)
+        </button>
+</li>
+<li class="['language-selector__item']" role="presentation">
+ Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile
+<button aria-label="Italiano (Italian)" class="['font-sans', 'text-xs', 'link', 'block', 'py-[5px]', 'px-2', 'w-full', 'hover:cursor-pointer', 'hover:bg-color-action', 'hover:text-color-text-on-dark', 'focus:bg-color-action', 'focus:text-color-text-on-dark', 'language-selector__link', '!font-regular']" data-locale="it_IT" data-tracking-control-name="language-selector-it_IT" lang="it_IT" role="menuitem">
+         Italiano (Italian)
+        </button>
+</li>
+<li class="['language-selector__item']" role="presentation">
+ Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile
+<button aria-label="日本語 (Japanese)" class="['font-sans', 'text-xs', 'link', 'block', 'py-[5px]', 'px-2', 'w-full', 'hover:cursor-pointer', 'hover:bg-color-action', 'hover:text-color-text-on-dark', 'focus:bg-color-action', 'focus:text-color-text-on-dark', 'language-selector__link', '!font-regular']" data-locale="ja_JP" data-tracking-control-name="language-selector-ja_JP" lang="ja_JP" role="menuitem">
+         日本語 (Japanese)
+        </button>
+</li>
+<li class="['language-selector__item']" role="presentation">
+ Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile
+<button aria-label="한국어 (Korean)" class="['font-sans', 'text-xs', 'link', 'block', 'py-[5px]', 'px-2', 'w-full', 'hover:cursor-pointer', 'hover:bg-color-action', 'hover:text-color-text-on-dark', 'focus:bg-color-action', 'focus:text-color-text-on-dark', 'language-selector__link', '!font-regular']" data-locale="ko_KR" data-tracking-control-name="language-selector-ko_KR" lang="ko_KR" role="menuitem">
+         한국어 (Korean)
+        </button>
+</li>
+<li class="['language-selector__item']" role="presentation">
+ Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile
+<button aria-label="Bahasa Malaysia (Malay)" class="['font-sans', 'text-xs', 'link', 'block', 'py-[5px]', 'px-2', 'w-full', 'hover:cursor-pointer', 'hover:bg-color-action', 'hover:text-color-text-on-dark', 'focus:bg-color-action', 'focus:text-color-text-on-dark', 'language-selector__link', '!font-regular']" data-locale="ms_MY" data-tracking-control-name="language-selector-ms_MY" lang="ms_MY" role="menuitem">
+         Bahasa Malaysia (Malay)
+        </button>
+</li>
+<li class="['language-selector__item']" role="presentation">
+ Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile
+<button aria-label="Nederlands (Dutch)" class="['font-sans', 'text-xs', 'link', 'block', 'py-[5px]', 'px-2', 'w-full', 'hover:cursor-pointer', 'hover:bg-color-action', 'hover:text-color-text-on-dark', 'focus:bg-color-action', 'focus:text-color-text-on-dark', 'language-selector__link', '!font-regular']" data-locale="nl_NL" data-tracking-control-name="language-selector-nl_NL" lang="nl_NL" role="menuitem">
+         Nederlands (Dutch)
+        </button>
+</li>
+<li class="['language-selector__item']" role="presentation">
+ Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile
+<button aria-label="Norsk (Norwegian)" class="['font-sans', 'text-xs', 'link', 'block', 'py-[5px]', 'px-2', 'w-full', 'hover:cursor-pointer', 'hover:bg-color-action', 'hover:text-color-text-on-dark', 'focus:bg-color-action', 'focus:text-color-text-on-dark', 'language-selector__link', '!font-regular']" data-locale="no_NO" data-tracking-control-name="language-selector-no_NO" lang="no_NO" role="menuitem">
+         Norsk (Norwegian)
+        </button>
+</li>
+<li class="['language-selector__item']" role="presentation">
+ Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile
+<button aria-label="Polski (Polish)" class="['font-sans', 'text-xs', 'link', 'block', 'py-[5px]', 'px-2', 'w-full', 'hover:cursor-pointer', 'hover:bg-color-action', 'hover:text-color-text-on-dark', 'focus:bg-color-action', 'focus:text-color-text-on-dark', 'language-selector__link', '!font-regular']" data-locale="pl_PL" data-tracking-control-name="language-selector-pl_PL" lang="pl_PL" role="menuitem">
+         Polski (Polish)
+        </button>
+</li>
+<li class="['language-selector__item']" role="presentation">
+ Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile
+<button aria-label="Português (Portuguese)" class="['font-sans', 'text-xs', 'link', 'block', 'py-[5px]', 'px-2', 'w-full', 'hover:cursor-pointer', 'hover:bg-color-action', 'hover:text-color-text-on-dark', 'focus:bg-color-action', 'focus:text-color-text-on-dark', 'language-selector__link', '!font-regular']" data-locale="pt_BR" data-tracking-control-name="language-selector-pt_BR" lang="pt_BR" role="menuitem">
+         Português (Portuguese)
+        </button>
+</li>
+<li class="['language-selector__item']" role="presentation">
+ Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile
+<button aria-label="Română (Romanian)" class="['font-sans', 'text-xs', 'link', 'block', 'py-[5px]', 'px-2', 'w-full', 'hover:cursor-pointer', 'hover:bg-color-action', 'hover:text-color-text-on-dark', 'focus:bg-color-action', 'focus:text-color-text-on-dark', 'language-selector__link', '!font-regular']" data-locale="ro_RO" data-tracking-control-name="language-selector-ro_RO" lang="ro_RO" role="menuitem">
+         Română (Romanian)
+        </button>
+</li>
+<li class="['language-selector__item']" role="presentation">
+ Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile
+<button aria-label="Русский (Russian)" class="['font-sans', 'text-xs', 'link', 'block', 'py-[5px]', 'px-2', 'w-full', 'hover:cursor-pointer', 'hover:bg-color-action', 'hover:text-color-text-on-dark', 'focus:bg-color-action', 'focus:text-color-text-on-dark', 'language-selector__link', '!font-regular']" data-locale="ru_RU" data-tracking-control-name="language-selector-ru_RU" lang="ru_RU" role="menuitem">
+         Русский (Russian)
+        </button>
+</li>
+<li class="['language-selector__item']" role="presentation">
+ Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile
+<button aria-label="Svenska (Swedish)" class="['font-sans', 'text-xs', 'link', 'block', 'py-[5px]', 'px-2', 'w-full', 'hover:cursor-pointer', 'hover:bg-color-action', 'hover:text-color-text-on-dark', 'focus:bg-color-action', 'focus:text-color-text-on-dark', 'language-selector__link', '!font-regular']" data-locale="sv_SE" data-tracking-control-name="language-selector-sv_SE" lang="sv_SE" role="menuitem">
+         Svenska (Swedish)
+        </button>
+</li>
+<li class="['language-selector__item']" role="presentation">
+ Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile
+<button aria-label="ภาษาไทย (Thai)" class="['font-sans', 'text-xs', 'link', 'block', 'py-[5px]', 'px-2', 'w-full', 'hover:cursor-pointer', 'hover:bg-color-action', 'hover:text-color-text-on-dark', 'focus:bg-color-action', 'focus:text-color-text-on-dark', 'language-selector__link', '!font-regular']" data-locale="th_TH" data-tracking-control-name="language-selector-th_TH" lang="th_TH" role="menuitem">
+         ภาษาไทย (Thai)
+        </button>
+</li>
+<li class="['language-selector__item']" role="presentation">
+ Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile
+<button aria-label="Tagalog (Tagalog)" class="['font-sans', 'text-xs', 'link', 'block', 'py-[5px]', 'px-2', 'w-full', 'hover:cursor-pointer', 'hover:bg-color-action', 'hover:text-color-text-on-dark', 'focus:bg-color-action', 'focus:text-color-text-on-dark', 'language-selector__link', '!font-regular']" data-locale="tl_PH" data-tracking-control-name="language-selector-tl_PH" lang="tl_PH" role="menuitem">
+         Tagalog (Tagalog)
+        </button>
+</li>
+<li class="['language-selector__item']" role="presentation">
+ Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile
+<button aria-label="Türkçe (Turkish)" class="['font-sans', 'text-xs', 'link', 'block', 'py-[5px]', 'px-2', 'w-full', 'hover:cursor-pointer', 'hover:bg-color-action', 'hover:text-color-text-on-dark', 'focus:bg-color-action', 'focus:text-color-text-on-dark', 'language-selector__link', '!font-regular']" data-locale="tr_TR" data-tracking-control-name="language-selector-tr_TR" lang="tr_TR" role="menuitem">
+         Türkçe (Turkish)
+        </button>
+</li>
+<li class="['language-selector__item']" role="presentation">
+ Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile
+<button aria-label="Українська (Ukrainian)" class="['font-sans', 'text-xs', 'link', 'block', 'py-[5px]', 'px-2', 'w-full', 'hover:cursor-pointer', 'hover:bg-color-action', 'hover:text-color-text-on-dark', 'focus:bg-color-action', 'focus:text-color-text-on-dark', 'language-selector__link', '!font-regular']" data-locale="uk_UA" data-tracking-control-name="language-selector-uk_UA" lang="uk_UA" role="menuitem">
+         Українська (Ukrainian)
+        </button>
+</li>
+<li class="['language-selector__item']" role="presentation">
+ Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile
+<button aria-label="简体中文 (Chinese (Simplified))" class="['font-sans', 'text-xs', 'link', 'block', 'py-[5px]', 'px-2', 'w-full', 'hover:cursor-pointer', 'hover:bg-color-action', 'hover:text-color-text-on-dark', 'focus:bg-color-action', 'focus:text-color-text-on-dark', 'language-selector__link', '!font-regular']" data-locale="zh_CN" data-tracking-control-name="language-selector-zh_CN" lang="zh_CN" role="menuitem">
+         简体中文 (Chinese (Simplified))
+        </button>
+</li>
+<li class="['language-selector__item']" role="presentation">
+ Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile
+<button aria-label="正體中文 (Chinese (Traditional))" class="['font-sans', 'text-xs', 'link', 'block', 'py-[5px]', 'px-2', 'w-full', 'hover:cursor-pointer', 'hover:bg-color-action', 'hover:text-color-text-on-dark', 'focus:bg-color-action', 'focus:text-color-text-on-dark', 'language-selector__link', '!font-regular']" data-locale="zh_TW" data-tracking-control-name="language-selector-zh_TW" lang="zh_TW" role="menuitem">
+         正體中文 (Chinese (Traditional))
+        </button>
+</li>
+ 
+</ul>
+<button aria-expanded="false" class="['language-selector__button', 'select-none', 'relative', 'pr-2', 'font-sans', 'text-xs', 'font-bold', 'text-color-text-low-emphasis', 'hover:text-color-link-hover', 'hover:cursor-pointer', 'focus:text-color-link-focus', 'focus:outline-dotted', 'focus:outline-1']" data-tracking-control-name="footer-lang-dropdown_trigger">
+<span class="['language-selector__label-text', 'mr-0.5', 'break-words']">
+        Language
+       </span>
+<icon class="['language-selector__label-chevron', 'w-2', 'h-2', 'absolute', 'top-0', 'right-0']" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/cyolgscd0imw2ldqppkrb84vo">
+</icon>
+</button>
+</div>
+</li>
+</ul>
+ 
+</footer>
+<script async="" defer="" src="https://static.licdn.com/aero-v1/sc/h/6tftfjbs07i6r9lmcfgxa4uxy">
+</script>
+<script data-delayed-url="https://static.licdn.com/aero-v1/sc/h/51t74mlo1ty7vakn3a80a9jcp" data-module-id="apfc-lib">
+</script>
+<code id="apfcLix" style="display: none">
+true
+</code>
+<script data-delayed-url="https://static.licdn.com/aero-v1/sc/h/8m736dfzskmdn6bwwqz67iiki" data-module-id="google-gsi-lib">
+</script>
+ 
+<script async="" src="https://static.licdn.com/aero-v1/sc/h/eh08muqvrde4h3hc6koyij5ti">
+</script>
+ 
+
+        ```
+        
