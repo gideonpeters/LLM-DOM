@@ -1,0 +1,239 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issues: 
+       
+        __________________
+        "
+            1. is-on-https => Does not use HTTPS: All sites should be protected with HTTPS, even ones that don't handle sensitive data. This includes avoiding [mixed content](https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content), where some resources are loaded over HTTP despite the initial request being served over HTTPS. HTTPS prevents intruders from tampering with or passively listening in on the communications between your app and your users, and is a prerequisite for HTTP/2 and many new web platform APIs. [Learn more about HTTPS](https://developer.chrome.com/docs/lighthouse/pwa/is-on-https/).
+ 
+
+            
+            2. viewport => Does not have a `<meta name="viewport">` tag with `width` or `initial-scale`: A `<meta name="viewport">` not only optimizes your app for mobile screen sizes, but also prevents [a 300 millisecond delay to user input](https://developer.chrome.com/blog/300ms-tap-delay-gone-away/). [Learn more about using the viewport meta tag](https://developer.chrome.com/docs/lighthouse/pwa/viewport/).
+ 
+
+            
+            3. first-contentful-paint => First Contentful Paint: First Contentful Paint marks the time at which the first text or image is painted. [Learn more about the First Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/).
+ 
+
+            
+            4. largest-contentful-paint => Largest Contentful Paint: Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)
+ 
+
+            
+            5. speed-index => Speed Index: Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/).
+ 
+
+            
+            6. total-blocking-time => Total Blocking Time: Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds. [Learn more about the Total Blocking Time metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/).
+ 
+
+            
+            7. max-potential-fid => Max Potential First Input Delay: The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).
+ 
+
+            
+            8. errors-in-console => Browser errors were logged to the console: Errors logged to the console indicate unresolved problems. They can come from network request failures and other browser concerns. [Learn more about this errors in console diagnostic audit](https://developer.chrome.com/docs/lighthouse/best-practices/errors-in-console/)
+ 
+
+            
+            9. interactive => Time to Interactive: Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).
+ 
+
+            
+            10. deprecations => Uses deprecated APIs: Deprecated APIs will eventually be removed from the browser. [Learn more about deprecated APIs](https://developer.chrome.com/docs/lighthouse/best-practices/deprecations/).
+ 
+
+            
+            11. mainthread-work-breakdown => Minimize main-thread work: Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to minimize main-thread work](https://developer.chrome.com/docs/lighthouse/performance/mainthread-work-breakdown/)
+ 
+
+            
+            12. bootup-time => Reduce JavaScript execution time: Consider reducing the time spent parsing, compiling, and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to reduce Javascript execution time](https://developer.chrome.com/docs/lighthouse/performance/bootup-time/).
+ 
+
+            
+            13. uses-rel-preconnect => Preconnect to required origins: Consider adding `preconnect` or `dns-prefetch` resource hints to establish early connections to important third-party origins. [Learn how to preconnect to required origins](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/).
+ 
+
+            
+            14. third-party-summary => Reduce the impact of third-party code: Third-party code can significantly impact load performance. Limit the number of redundant third-party providers and try to load third-party code after your page has primarily finished loading. [Learn how to minimize third-party impact](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript/).
+ 
+
+            
+            15. largest-contentful-paint-element => Largest Contentful Paint element: This is the largest contentful element painted within the viewport. [Learn more about the Largest Contentful Paint element](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)
+ 
+
+            
+            16. aria-dialog-name => Elements with `role="dialog"` or `role="alertdialog"` do not have accessible names.: ARIA dialog elements without accessible names may prevent screen readers users from discerning the purpose of these elements. [Learn how to make ARIA dialog elements more accessible](https://dequeuniversity.com/rules/axe/4.9/aria-dialog-name).
+ 
+
+            
+            17. aria-tooltip-name => ARIA `tooltip` elements do not have accessible names.: When a tooltip element doesn't have an accessible name, screen readers announce it with a generic name, making it unusable for users who rely on screen readers. [Learn how to name `tooltip` elements](https://dequeuniversity.com/rules/axe/4.9/aria-tooltip-name).
+ 
+
+            
+            18. total-byte-weight => Avoid enormous network payloads: Large network payloads cost users real money and are highly correlated with long load times. [Learn how to reduce payload sizes](https://developer.chrome.com/docs/lighthouse/performance/total-byte-weight/).
+ 
+
+            
+            19. render-blocking-resources => Eliminate render-blocking resources: Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn how to eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/).
+ 
+
+            
+            20. unused-css-rules => Reduce unused CSS: Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/).
+ 
+
+            
+            21. unused-javascript => Reduce unused JavaScript: Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).
+ 
+
+            
+            22. uses-text-compression => Enable text compression: Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more about text compression](https://developer.chrome.com/docs/lighthouse/performance/uses-text-compression/).
+ 
+
+            
+            23. legacy-javascript => Avoid serving legacy JavaScript to modern browsers: Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. For your bundled JavaScript, adopt a modern script deployment strategy using module/nomodule feature detection to reduce the amount of code shipped to modern browsers, while retaining support for legacy browsers. [Learn how to use modern JavaScript](https://web.dev/articles/publish-modern-javascript)
+ 
+
+            
+            24. charset => Charset declaration is missing or occurs too late in the HTML: A character encoding declaration is required. It can be done with a `<meta>` tag in the first 1024 bytes of the HTML or in the Content-Type HTTP response header. [Learn more about declaring the character encoding](https://developer.chrome.com/docs/lighthouse/best-practices/charset/).
+ 
+
+            
+            25. dom-size => Avoid an excessive DOM size: A large DOM will increase memory usage, cause longer [style calculations](https://developers.google.com/web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations), and produce costly [layout reflows](https://developers.google.com/speed/articles/reflow). [Learn how to avoid an excessive DOM size](https://developer.chrome.com/docs/lighthouse/performance/dom-size/).
+ 
+
+            
+            26. inspector-issues => Issues were logged in the `Issues` panel in Chrome Devtools: Issues logged to the `Issues` panel in Chrome Devtools indicate unresolved problems. They can come from network request failures, insufficient security controls, and other browser concerns. Open up the Issues panel in Chrome DevTools for more details on each issue.
+ 
+
+            
+            27. uses-passive-event-listeners => Does not use passive listeners to improve scrolling performance: Consider marking your touch and wheel event listeners as `passive` to improve your page's scroll performance. [Learn more about adopting passive event listeners](https://developer.chrome.com/docs/lighthouse/best-practices/uses-passive-event-listeners/).
+ 
+
+            
+            28. font-size => Document doesn't use legible font sizes: Font sizes less than 12px are too small to be legible and require mobile visitors to “pinch to zoom” in order to read. Strive to have >60% of page text ≥12px. [Learn more about legible font sizes](https://developer.chrome.com/docs/lighthouse/seo/font-size/).
+ 
+
+            
+            29. crawlable-anchors => Links are not crawlable: Search engines may use `href` attributes on links to crawl websites. Ensure that the `href` attribute of anchor elements links to an appropriate destination, so more pages of the site can be discovered. [Learn how to make links crawlable](https://support.google.com/webmasters/answer/9112205)
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issues given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        
+<script data-chunk-uuid="fbb22e04-e219-4c5d-a8ad-f1d7e7c93429" data-id="_gd" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_fbb22e04-e219-4c5d-a8ad-f1d7e7c93429
+</script>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"></meta>
+<meta content="ApvK67ociHgr2egd6c2ZjrfPuRs8BHcvSggogIOPQNH7GJ3cVlyJ1NOq/COCdj0+zxskqHt9HgLLETc8qqD+vwsAAABteyJvcmlnaW4iOiJodHRwczovL3lvdXR1YmUuY29tOjQ0MyIsImZlYXR1cmUiOiJQcml2YWN5U2FuZGJveEFkc0FQSXMiLCJleHBpcnkiOjE2OTUxNjc5OTksImlzU3ViZG9tYWluIjp0cnVlfQ==" http-equiv="origin-trial"></meta>
+<script data-chunk-uuid="3b31deee-1c7a-4eec-8615-beba364c1a87" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_3b31deee-1c7a-4eec-8615-beba364c1a87
+</script>
+<script data-chunk-uuid="5f5d80f9-469b-4c1d-855d-e01a2d1ab2e7" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_5f5d80f9-469b-4c1d-855d-e01a2d1ab2e7
+</script>
+<script data-chunk-uuid="1c22c045-ac20-4024-8274-89bec0eb21c8" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_1c22c045-ac20-4024-8274-89bec0eb21c8
+</script>
+<link href="https://www.youtube.com/s/desktop/ed565dc3/img/favicon.ico" rel="shortcut icon" type="image/x-icon"></link>
+<link href="https://www.youtube.com/s/desktop/ed565dc3/img/favicon_32x32.png" rel="icon" sizes="32x32"></link>
+<link href="https://www.youtube.com/s/desktop/ed565dc3/img/favicon_48x48.png" rel="icon" sizes="48x48"></link>
+<link href="https://www.youtube.com/s/desktop/ed565dc3/img/favicon_96x96.png" rel="icon" sizes="96x96"></link>
+<link href="https://www.youtube.com/s/desktop/ed565dc3/img/favicon_144x144.png" rel="icon" sizes="144x144"></link>
+<title>
+   YouTube
+  </title>
+<link href="https://www.youtube.com/" rel="canonical"></link>
+<link href="https://m.youtube.com/" media="handheld" rel="alternate"></link>
+<link href="https://m.youtube.com/" media="only screen and (max-width: 640px)" rel="alternate"></link>
+<meta content="https://www.youtube.com/img/desktop/yt_1200.png" property="og:image"></meta>
+<meta content='87741124305' property="fb:app_id"></meta>
+<link href="android-app://com.google.android.youtube/http/www.youtube.com/" rel="alternate"></link>
+<link href="ios-app://544007664/vnd.youtube/www.youtube.com/" rel="alternate"></link>
+<meta content="Enjoy the videos and music that you love, upload original content and share it all with friends, family and the world on YouTube." name="description"></meta>
+<meta content="video, sharing, camera phone, video phone, free, upload" name="keywords"></meta>
+<script data-chunk-uuid="337ecc48-fd50-48b1-9391-8eaf075c5b7b" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_337ecc48-fd50-48b1-9391-8eaf075c5b7b
+</script>
+<script data-chunk-uuid="8f277d8b-e156-4296-9220-f423ccae2284" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_8f277d8b-e156-4296-9220-f423ccae2284
+</script>
+<script data-chunk-uuid="13af30ca-7bf8-4cc4-acb6-8a4dbd3157b5" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_13af30ca-7bf8-4cc4-acb6-8a4dbd3157b5
+</script>
+<script data-chunk-uuid="7a2f262f-090d-4504-9c9e-319ed28bc5f0" nonce="D1-qG8YtC9mZN-wGGrOp6g" src="https://www.youtube.com/s/desktop/ed565dc3/jsbin/web-animations-next-lite.min.vflset/web-animations-next-lite.min.js">// chunk_script_7a2f262f-090d-4504-9c9e-319ed28bc5f0
+</script>
+<script data-chunk-uuid="5609e88e-a229-4dcc-8451-204f20811835" nonce="D1-qG8YtC9mZN-wGGrOp6g" src="https://www.youtube.com/s/desktop/ed565dc3/jsbin/webcomponents-all-noPatch.vflset/webcomponents-all-noPatch.js">// chunk_script_5609e88e-a229-4dcc-8451-204f20811835
+</script>
+<script data-chunk-uuid="a30b8a86-f65a-4452-a842-71728745382f" nonce="D1-qG8YtC9mZN-wGGrOp6g" src="https://www.youtube.com/s/desktop/ed565dc3/jsbin/fetch-polyfill.vflset/fetch-polyfill.js">// chunk_script_a30b8a86-f65a-4452-a842-71728745382f
+</script>
+<script data-chunk-uuid="3a4f0b37-9314-4e2a-b37b-9718bbd2fffe" nonce="D1-qG8YtC9mZN-wGGrOp6g" src="https://www.youtube.com/s/desktop/ed565dc3/jsbin/intersection-observer.min.vflset/intersection-observer.min.js">// chunk_script_3a4f0b37-9314-4e2a-b37b-9718bbd2fffe
+</script>
+<script data-chunk-uuid="abcade9a-4dea-4e0d-8553-3af430538165" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_abcade9a-4dea-4e0d-8553-3af430538165
+</script>
+<script data-chunk-uuid="2e3df18d-d213-46e3-8706-a63fd7296abc" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_2e3df18d-d213-46e3-8706-a63fd7296abc
+</script>
+<script data-chunk-uuid="7bc518e2-dca5-43cd-9896-1026d6323c2a" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_7bc518e2-dca5-43cd-9896-1026d6323c2a
+</script>
+<script data-chunk-uuid="11ac2c17-11d0-4890-aaf7-775e5015c83f" nonce="D1-qG8YtC9mZN-wGGrOp6g" src="https://www.youtube.com/s/desktop/ed565dc3/jsbin/scheduler.vflset/scheduler.js">// chunk_script_11ac2c17-11d0-4890-aaf7-775e5015c83f
+</script>
+<script data-chunk-uuid="cb92cfd7-185c-4a4b-9ff6-4e440677f649" nonce="D1-qG8YtC9mZN-wGGrOp6g" src="https://www.youtube.com/s/desktop/ed565dc3/jsbin/www-i18n-constants-en_GB.vflset/www-i18n-constants.js">// chunk_script_cb92cfd7-185c-4a4b-9ff6-4e440677f649
+</script>
+<script data-chunk-uuid="712660a6-30f4-40c9-9790-8b7085ca53cb" nonce="D1-qG8YtC9mZN-wGGrOp6g" src="https://www.youtube.com/s/desktop/ed565dc3/jsbin/www-tampering.vflset/www-tampering.js">// chunk_script_712660a6-30f4-40c9-9790-8b7085ca53cb
+</script>
+<script data-chunk-uuid="d6049547-3d88-44b9-935e-0a5331adee05" nonce="D1-qG8YtC9mZN-wGGrOp6g" src="https://www.youtube.com/s/desktop/ed565dc3/jsbin/spf.vflset/spf.js">// chunk_script_d6049547-3d88-44b9-935e-0a5331adee05
+</script>
+<script data-chunk-uuid="6affedd0-c523-4541-9b35-c13dfaf4c2a3" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_6affedd0-c523-4541-9b35-c13dfaf4c2a3
+</script>
+<script data-chunk-uuid="5469677b-95a2-4f83-98b1-6f271dde5061" nonce="D1-qG8YtC9mZN-wGGrOp6g" src="https://www.youtube.com/s/desktop/ed565dc3/jsbin/network.vflset/network.js">// chunk_script_5469677b-95a2-4f83-98b1-6f271dde5061
+</script>
+<script data-chunk-uuid="82a7bade-6c43-42f7-a4ed-1e86d9cff8b8" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_82a7bade-6c43-42f7-a4ed-1e86d9cff8b8
+</script>
+<link href="//fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=YouTube+Sans:wght@300..900&display=swap" nonce="mdQLp_bGobZdlcRog1-T7g" rel="stylesheet"></link>
+<script data-chunk-uuid="012e1df9-c3ff-452d-bdf4-138da844eb22" name="www-roboto" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_012e1df9-c3ff-452d-bdf4-138da844eb22
+</script>
+<link href="https://www.youtube.com/s/desktop/ed565dc3/cssbin/www-main-desktop-home-page-skeleton.css" nonce="mdQLp_bGobZdlcRog1-T7g" rel="stylesheet"></link>
+<link href="https://www.youtube.com/s/desktop/ed565dc3/cssbin/www-onepick.css" nonce="mdQLp_bGobZdlcRog1-T7g" rel="stylesheet"></link>
+<link href="https://www.youtube.com/s/_/ytmainappweb/_/ss/k=ytmainappweb.kevlar_base.cqHBwRr8PRU.L.X.O/am=AAAQKA/d=0/br=1/rs=AGKMywHY_fwuIl4Aksb_ywn5gQRTanasnw" nonce="mdQLp_bGobZdlcRog1-T7g" rel="stylesheet"></link>
+<style data-chunk-uuid="7bf574ed-9032-43e7-8000-9036bba5f950" class="global_styles" nonce="mdQLp_bGobZdlcRog1-T7g">/* chunk_style_7bf574ed-9032-43e7-8000-9036bba5f950 */
+</style>
+<style data-chunk-uuid="952879a4-ffff-4db8-a6e2-1e06f671f37a" class="masthead_shell" nonce="mdQLp_bGobZdlcRog1-T7g">/* chunk_style_952879a4-ffff-4db8-a6e2-1e06f671f37a */
+</style>
+<style data-chunk-uuid="5c5589d0-e229-48ad-8e54-f44debe702b4" class="masthead_custom_styles" id="ext-styles" is="custom-style" nonce="mdQLp_bGobZdlcRog1-T7g">/* chunk_style_5c5589d0-e229-48ad-8e54-f44debe702b4 */
+</style>
+<style data-chunk-uuid="f704c93b-360a-4a35-a6ae-868cf76e22dc" class="searchbox" nonce="mdQLp_bGobZdlcRog1-T7g">/* chunk_style_f704c93b-360a-4a35-a6ae-868cf76e22dc */
+</style>
+<style data-chunk-uuid="6eb230fb-b387-4f6d-a338-022f02ad1aea" class="kevlar_global_styles" nonce="mdQLp_bGobZdlcRog1-T7g">/* chunk_style_6eb230fb-b387-4f6d-a338-022f02ad1aea */
+</style>
+<meta content="rgba(255, 255, 255, 0.98)" name="theme-color"></meta>
+<link href="https://www.youtube.com/opensearch?locale=en_GB" rel="search" title="YouTube" type="application/opensearchdescription+xml"></link>
+<link crossorigin="use-credentials" href="/manifest.webmanifest" rel="manifest"></link>
+<script data-chunk-uuid="bcc9b7d8-6856-4e1c-aa8f-63626a3a234c" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_bcc9b7d8-6856-4e1c-aa8f-63626a3a234c
+</script>
+<script data-chunk-uuid="1faa9b3b-452c-4dbd-a601-d8407cf49669" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_1faa9b3b-452c-4dbd-a601-d8407cf49669
+</script>
+<script data-chunk-uuid="22870ca8-69a3-43f0-9bae-c5853b5fcd7a" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_22870ca8-69a3-43f0-9bae-c5853b5fcd7a
+</script>
+
+        ```
+        

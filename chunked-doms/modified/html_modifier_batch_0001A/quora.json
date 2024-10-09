@@ -1,0 +1,28 @@
+{
+  "0": {
+    "name": "quora",
+    "experiment_name": "html_modifier_batch_0001A",
+    "audit_key": null,
+    "dom_name": "quora",
+    "original_chunk_id": "c369ec59-82e7-47ab-bee6-4361313e8035",
+    "mode": "all",
+    "original": "\n<!-- Optimized by LLM -->\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<!-- End of Optimization: viewport => Added viewport meta tag for mobile optimization -->\n",
+    "original_section": "head",
+    "original_chunk_token_size": 41,
+    "modified": "\n<!-- Optimized by LLM -->\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<!-- End of Optimization: viewport => Added viewport meta tag for mobile optimization -->\n",
+    "modified_chunk_token_size": 41
+  },
+  "1": {
+    "name": "quora",
+    "experiment_name": "html_modifier_batch_0001A",
+    "audit_key": null,
+    "dom_name": "quora",
+    "original_chunk_id": "40dc89e6-3c4f-4622-bbe8-3e113c3d8bc2",
+    "mode": "all",
+    "original": "\n<!-- Optimized by LLM -->\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<!-- End of Optimization: viewport => Added viewport meta tag for mobile optimization -->\n",
+    "original_section": "body",
+    "original_chunk_token_size": 39,
+    "modified": "\n<!-- Optimized by LLM -->\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<!-- End of Optimization: viewport => Added viewport meta tag for mobile optimization -->\n",
+    "modified_chunk_token_size": 39
+  }
+}

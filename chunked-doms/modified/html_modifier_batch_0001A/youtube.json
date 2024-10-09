@@ -1,0 +1,41 @@
+{
+  "0": {
+    "name": "youtube",
+    "experiment_name": "html_modifier_batch_0001A",
+    "audit_key": null,
+    "dom_name": "youtube",
+    "original_chunk_id": "236d9ef0-d0f1-42ad-b927-eb2d0b0b0f37",
+    "mode": "all",
+    "original": "\n<!-- Optimized by LLM -->\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<!-- End of Optimization: viewport => Added viewport meta tag for mobile optimization -->\n",
+    "original_section": "head",
+    "original_chunk_token_size": 41,
+    "modified": "\n<!-- Optimized by LLM -->\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<!-- End of Optimization: viewport => Added viewport meta tag for mobile optimization -->\n",
+    "modified_chunk_token_size": 41
+  },
+  "1": {
+    "name": "youtube",
+    "experiment_name": "html_modifier_batch_0001A",
+    "audit_key": null,
+    "dom_name": "youtube",
+    "original_chunk_id": "082670f2-a89b-4569-85cf-f9471316665c",
+    "mode": "all",
+    "original": "\n<!-- Optimized by LLM -->\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<!-- End of Optimization: viewport => Added viewport meta tag for mobile optimization -->\n",
+    "original_section": "body",
+    "original_chunk_token_size": 39,
+    "modified": "\n<!-- Optimized by LLM -->\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<!-- End of Optimization: viewport => Added viewport meta tag for mobile optimization -->\n",
+    "modified_chunk_token_size": 39
+  },
+  "2": {
+    "name": "youtube",
+    "experiment_name": "html_modifier_batch_0001A",
+    "audit_key": null,
+    "dom_name": "youtube",
+    "original_chunk_id": "982b4ce1-599a-4010-898d-6aeb60cd12f1",
+    "mode": "all",
+    "original": "\n<!-- Optimized by LLM -->\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<!-- End of Optimization: viewport => Added viewport meta tag for mobile optimization -->\n",
+    "original_section": "body",
+    "original_chunk_token_size": 39,
+    "modified": "\n<!-- Optimized by LLM -->\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<!-- End of Optimization: viewport => Added viewport meta tag for mobile optimization -->\n",
+    "modified_chunk_token_size": 39
+  }
+}

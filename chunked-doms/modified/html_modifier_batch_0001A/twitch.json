@@ -1,0 +1,28 @@
+{
+  "0": {
+    "name": "twitch",
+    "experiment_name": "html_modifier_batch_0001A",
+    "audit_key": null,
+    "dom_name": "twitch",
+    "original_chunk_id": "a24497f9-99a6-4b5c-8ef2-59d4c9b4d1de",
+    "mode": "all",
+    "original": "\n<!-- Optimized by LLM -->\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<!-- End of Optimization: viewport => Added viewport meta tag for mobile optimization -->\n",
+    "original_section": "head",
+    "original_chunk_token_size": 41,
+    "modified": "\n<!-- Optimized by LLM -->\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<!-- End of Optimization: viewport => Added viewport meta tag for mobile optimization -->\n",
+    "modified_chunk_token_size": 41
+  },
+  "1": {
+    "name": "twitch",
+    "experiment_name": "html_modifier_batch_0001A",
+    "audit_key": null,
+    "dom_name": "twitch",
+    "original_chunk_id": "3bb6bdee-9e42-4120-8a0b-c3f77cbaaff5",
+    "mode": "all",
+    "original": "\n<!-- Optimized by LLM -->\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<!-- End of Optimization: viewport => Added viewport meta tag -->\n",
+    "original_section": "body",
+    "original_chunk_token_size": 36,
+    "modified": "\n<!-- Optimized by LLM -->\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<!-- End of Optimization: viewport => Added viewport meta tag -->\n",
+    "modified_chunk_token_size": 36
+  }
+}

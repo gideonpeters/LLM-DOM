@@ -6,11 +6,10 @@ import tiktoken
 import os
 
 class HTMLChunker:
-    def __init__(self, html_content, chunk_size=15000, filename=None):
+    def __init__(self, html_content, chunk_size=15000):
         self.soup = BeautifulSoup(html_content, 'html.parser')
         self.chunk_size = chunk_size
         self.chunks = []
-        self.filename = None
         self.current_chunk = None
         self.current_size = 0
         self.script_store = {}
@@ -101,11 +100,11 @@ class HTMLChunker:
         tag_uuid = str(uuid.uuid4())
         opening_tag = str(tag.name)
 
-        if tag.name == 'script':
+        if tag.name == 'script' and tag.string:
             self.script_store[tag_uuid] = tag.string
             opening_tag += f' data-chunk-uuid="{tag_uuid}"'
             tag.string = f"// chunk_script_{tag_uuid}\n"
-        elif tag.name == 'style':
+        elif tag.name == 'style' and tag.string:
             self.style_store[tag_uuid] = tag.string
             opening_tag += f' data-chunk-uuid="{tag_uuid}"'
             tag.string = f"/* chunk_style_{tag_uuid} */\n"
@@ -149,16 +148,13 @@ class HTMLChunker:
         style_store_chunk = next((chunk for chunk in chunks if chunk['id'] == 'style_store'), None)
         script_store_chunk = next((chunk for chunk in chunks if chunk['id'] == 'script_store'), None)
 
-        # head_content = self.correct_script_comments(head_content, True)
-        # head_content = self.correct_comment_styles(head_content)
+        if style_store_chunk is not None:
+            head_content = self.replace_styles(head_content, style_store_chunk['content'])
+            body_content = self.replace_styles(body_content, style_store_chunk['content'])
 
-        # body_content = self.correct_script_comments(body_content)
-        # body_content = self.correct_comment_styles(body_content)
-
-        head_content = self.replace_styles(head_content, style_store_chunk['content'])
-        head_content = self.replace_scripts(head_content, script_store_chunk['content'])
-        body_content = self.replace_styles(body_content, style_store_chunk['content'])
-        body_content = self.replace_scripts(body_content, script_store_chunk['content'])
+        if script_store_chunk is not None:
+            head_content = self.replace_scripts(head_content, script_store_chunk['content'])
+            body_content = self.replace_scripts(body_content, script_store_chunk['content'])
 
         self.soup.head.clear()
         self.soup.head.append(BeautifulSoup(head_content, 'html.parser'))
@@ -223,8 +219,6 @@ class HTMLChunker:
 
     def store_chunks(self, chunks, chunked_file_directory="chunked-doms/original/", direct=False):
 
-        os.makedirs(chunked_file_directory, exist_ok=True)
-
         all_chunks = []
         if not direct:
             for chunk in chunks:
@@ -252,8 +246,10 @@ class HTMLChunker:
         else:
             all_chunks = chunks
         
-        with open(chunked_file_directory + self.filename + '.json', 'w') as f:
+        with open(chunked_file_directory + '.json', 'w') as f:
             f.write(json.dumps(all_chunks, indent=2))
+
+        return all_chunks
 
 def rahhh():
     files_to_be_chunked_directory = "extracted-doms/original/"

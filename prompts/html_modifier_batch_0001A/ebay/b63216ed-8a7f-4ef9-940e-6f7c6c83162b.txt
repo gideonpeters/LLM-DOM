@@ -1,0 +1,810 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issues: 
+       
+        __________________
+        "
+            1. Does not use HTTPS: All sites should be protected with HTTPS, even ones that don't handle sensitive data. This includes avoiding [mixed content](https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content), where some resources are loaded over HTTP despite the initial request being served over HTTPS. HTTPS prevents intruders from tampering with or passively listening in on the communications between your app and your users, and is a prerequisite for HTTP/2 and many new web platform APIs. [Learn more about HTTPS](https://developer.chrome.com/docs/lighthouse/pwa/is-on-https/).
+ 
+
+            
+            2. First Contentful Paint: First Contentful Paint marks the time at which the first text or image is painted. [Learn more about the First Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/).
+ 
+
+            
+            3. Largest Contentful Paint: Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)
+ 
+
+            
+            4. Speed Index: Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/).
+ 
+
+            
+            5. Total Blocking Time: Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds. [Learn more about the Total Blocking Time metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/).
+ 
+
+            
+            6. Max Potential First Input Delay: The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).
+ 
+
+            
+            7. Cumulative Layout Shift: Cumulative Layout Shift measures the movement of visible elements within the viewport. [Learn more about the Cumulative Layout Shift metric](https://web.dev/articles/cls).
+ 
+
+            
+            8. Browser errors were logged to the console: Errors logged to the console indicate unresolved problems. They can come from network request failures and other browser concerns. [Learn more about this errors in console diagnostic audit](https://developer.chrome.com/docs/lighthouse/best-practices/errors-in-console/)
+ 
+
+            
+            9. Time to Interactive: Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).
+ 
+
+            
+            10. Uses deprecated APIs: Deprecated APIs will eventually be removed from the browser. [Learn more about deprecated APIs](https://developer.chrome.com/docs/lighthouse/best-practices/deprecations/).
+ 
+
+            
+            11. Uses third-party cookies: Support for third-party cookies will be removed in a future version of Chrome. [Learn more about phasing out third-party cookies](https://developer.chrome.com/en/docs/privacy-sandbox/third-party-cookie-phase-out/).
+ 
+
+            
+            12. Minimize main-thread work: Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to minimize main-thread work](https://developer.chrome.com/docs/lighthouse/performance/mainthread-work-breakdown/)
+ 
+
+            
+            13. Reduce JavaScript execution time: Consider reducing the time spent parsing, compiling, and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to reduce Javascript execution time](https://developer.chrome.com/docs/lighthouse/performance/bootup-time/).
+ 
+
+            
+            14. Reduce the impact of third-party code: Third-party code can significantly impact load performance. Limit the number of redundant third-party providers and try to load third-party code after your page has primarily finished loading. [Learn how to minimize third-party impact](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript/).
+ 
+
+            
+            15. Largest Contentful Paint element: This is the largest contentful element painted within the viewport. [Learn more about the Largest Contentful Paint element](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)
+ 
+
+            
+            16. Avoid large layout shifts: These are the largest layout shifts observed on the page. Each table item represents a single layout shift, and shows the element that shifted the most. Below each item are possible root causes that led to the layout shift. Some of these layout shifts may not be included in the CLS metric value due to [windowing](https://web.dev/articles/cls#what_is_cls). [Learn how to improve CLS](https://web.dev/articles/optimize-cls)
+ 
+
+            
+            17. Image elements do not have explicit `width` and `height`: Set an explicit width and height on image elements to reduce layout shifts and improve CLS. [Learn how to set image dimensions](https://web.dev/articles/optimize-cls#images_without_dimensions)
+ 
+
+            
+            18. `[aria-*]` attributes do not match their roles: Each ARIA `role` supports a specific subset of `aria-*` attributes. Mismatching these invalidates the `aria-*` attributes. [Learn how to match ARIA attributes to their roles](https://dequeuniversity.com/rules/axe/4.9/aria-allowed-attr).
+ 
+
+            
+            19. Background and foreground colors do not have a sufficient contrast ratio.: Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.9/color-contrast).
+ 
+
+            
+            20. Touch targets do not have sufficient size or spacing.: Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. [Learn more about touch targets](https://dequeuniversity.com/rules/axe/4.9/target-size).
+ 
+
+            
+            21. Serve static assets with an efficient cache policy: A long cache lifetime can speed up repeat visits to your page. [Learn more about efficient cache policies](https://developer.chrome.com/docs/lighthouse/performance/uses-long-cache-ttl/).
+ 
+
+            
+            22. Avoid enormous network payloads: Large network payloads cost users real money and are highly correlated with long load times. [Learn how to reduce payload sizes](https://developer.chrome.com/docs/lighthouse/performance/total-byte-weight/).
+ 
+
+            
+            23. Defer offscreen images: Consider lazy-loading offscreen and hidden images after all critical resources have finished loading to lower time to interactive. [Learn how to defer offscreen images](https://developer.chrome.com/docs/lighthouse/performance/offscreen-images/).
+ 
+
+            
+            24. Eliminate render-blocking resources: Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn how to eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/).
+ 
+
+            
+            25. Minify CSS: Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/).
+ 
+
+            
+            26. Reduce unused CSS: Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/).
+ 
+
+            
+            27. Reduce unused JavaScript: Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).
+ 
+
+            
+            28. Serve images in next-gen formats: Image formats like WebP and AVIF often provide better compression than PNG or JPEG, which means faster downloads and less data consumption. [Learn more about modern image formats](https://developer.chrome.com/docs/lighthouse/performance/uses-webp-images/).
+ 
+
+            
+            29. Efficiently encode images: Optimized images load faster and consume less cellular data. [Learn how to efficiently encode images](https://developer.chrome.com/docs/lighthouse/performance/uses-optimized-images/).
+ 
+
+            
+            30. Enable text compression: Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more about text compression](https://developer.chrome.com/docs/lighthouse/performance/uses-text-compression/).
+ 
+
+            
+            31. Properly size images: Serve images that are appropriately-sized to save cellular data and improve load time. [Learn how to size images](https://developer.chrome.com/docs/lighthouse/performance/uses-responsive-images/).
+ 
+
+            
+            32. Avoid serving legacy JavaScript to modern browsers: Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. For your bundled JavaScript, adopt a modern script deployment strategy using module/nomodule feature detection to reduce the amount of code shipped to modern browsers, while retaining support for legacy browsers. [Learn how to use modern JavaScript](https://web.dev/articles/publish-modern-javascript)
+ 
+
+            
+            33. Avoid an excessive DOM size: A large DOM will increase memory usage, cause longer [style calculations](https://developers.google.com/web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations), and produce costly [layout reflows](https://developers.google.com/speed/articles/reflow). [Learn how to avoid an excessive DOM size](https://developer.chrome.com/docs/lighthouse/performance/dom-size/).
+ 
+
+            
+            34. Issues were logged in the `Issues` panel in Chrome Devtools: Issues logged to the `Issues` panel in Chrome Devtools indicate unresolved problems. They can come from network request failures, insufficient security controls, and other browser concerns. Open up the Issues panel in Chrome DevTools for more details on each issue.
+ 
+
+            
+            35. Avoid `document.write()`: For users on slow connections, external scripts dynamically injected via `document.write()` can delay page load by tens of seconds. [Learn how to avoid document.write()](https://developer.chrome.com/docs/lighthouse/best-practices/no-document-write/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issues given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. Do not modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {one line short description of elements/things fixed} -->` at the end of the changed portion. Do not indicate any fix outside of the End of Optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        <a _sp="m571.l1545" class="gf-bttl thrd" data-sp="m571.l1545" href="https://www.ebay.com/help/home">
+              Help & Contact
+             </a>
+</h3>
+<ul>
+<li class="gf-li">
+<a _sp="m571.l1613" class="thrd" data-sp="m571.l1613" href="https://pages.ebay.com/seller-center/index.html?utm_source=gf&utm_medium=onsite">
+               Seller Center
+              </a>
+</li>
+<li class="gf-li">
+<a _sp="m571.l2911" class="thrd" data-sp="m571.l2911" href="https://www.ebay.com/help/home">
+               Contact Us
+              </a>
+</li>
+<li class="gf-li">
+<a _sp="m571.l9780" class="thrd" data-sp="m571.l9780" href="https://pages.ebay.com/returns/">
+               eBay Returns
+              </a>
+</li>
+<li class="gf-li">
+<a _sp="m571.l4539" class="thrd" data-sp="m571.l4539" href="https://pages.ebay.com/ebay-money-back-guarantee/">
+               eBay Money Back Guarantee
+              </a>
+</li>
+</ul>
+<h3 class="gf-bttl">
+<a _sp="m571.l2912" class="gf-bttl thrd" data-sp="m571.l2912" href="https://community.ebay.com/">
+              Community
+             </a>
+</h3>
+<ul>
+<li class="gf-li">
+<a _sp="m571.l2913" class="thrd" data-sp="m571.l2913" href="https://community.ebay.com/t5/Announcements/bg-p/Announcements">
+               Announcements
+              </a>
+</li>
+<li class="gf-li">
+<a _sp="m571.l2941" class="thrd" data-sp="m571.l2941" href="https://community.ebay.com/">
+               eBay Community
+              </a>
+</li>
+<li class="gf-li">
+<a _sp="m571.l2941" class="thrd" data-sp="m571.l2941" href="https://community.ebay.com/t5/Podcasts/ct-p/Podcasts">
+               eBay for Business Podcast
+              </a>
+</li>
+</ul>
+<h3 class="gf-bttl">
+             eBay Sites
+            </h3>
+<ul>
+<li class="gf-li">
+<div class="gf-flags-wpr gh-hvr">
+<a _sp="m571.l2586" aria-controls="gf-f" aria-expanded='false' aria-label="eBay sites,United States" class="thrd" href="https://www.ebay.com" id="gf-fbtn" role="button">
+                United States
+                <b class="gf-if gspr flus">
+</b>
+<b class="gh-sprRetina" id="gf-fbtn-arr">
+</b>
+</a>
+<div class="gf_sd" id="gf-f">
+<ul class="gf-ful">
+<li class="gf-f-li0">
+<a "="" class="gf-if-a" href="https://ar.ebay.com">
+<b class="flar gf-if gspr">
+</b>
+<p>
+                    Argentina
+                   </p>
+</a>
+</li>
+<li class="gf-f-li0">
+<a "="" class="gf-if-a" href="https://www.ebay.com.au">
+<b class="flau gf-if gspr">
+</b>
+<p>
+                    Australia
+                   </p>
+</a>
+</li>
+<li class="gf-f-li0">
+<a "="" class="gf-if-a" href="https://www.ebay.at">
+<b class="flat gf-if gspr">
+</b>
+<p>
+                    Austria
+                   </p>
+</a>
+</li>
+<li class="gf-f-li0">
+<a "="" class="gf-if-a" href="https://by.ebay.com">
+<b class="flby gf-if gspr">
+</b>
+<p>
+                    Belarus
+                   </p>
+</a>
+</li>
+<li class="gf-f-li0">
+<a "="" class="gf-if-a" href="https://www.ebay.be">
+<b class="flbe gf-if gspr">
+</b>
+<p>
+                    Belgium
+                   </p>
+</a>
+</li>
+<li class="gf-f-li0">
+<a "="" class="gf-if-a" href="https://bo.ebay.com">
+<b class="flbo gf-if gspr">
+</b>
+<p>
+                    Bolivia
+                   </p>
+</a>
+</li>
+<li class="gf-f-li0">
+<a "="" class="gf-if-a" href="https://br.ebay.com">
+<b class="flbr gf-if gspr">
+</b>
+<p>
+                    Brazil
+                   </p>
+</a>
+</li>
+<li class="gf-f-li0">
+<a "="" class="gf-if-a" href="https://www.ebay.ca">
+<b class="flca gf-if gspr">
+</b>
+<p>
+                    Canada
+                   </p>
+</a>
+</li>
+<li class="gf-f-li0">
+<a "="" class="gf-if-a" href="https://cl.ebay.com">
+<b class="flcl gf-if gspr">
+</b>
+<p>
+                    Chile
+                   </p>
+</a>
+</li>
+<li class="gf-f-li1 gf-f-li-top">
+<a "="" class="gf-if-a" href="https://www.ebay.cn">
+<b class="flcn gf-if gspr">
+</b>
+<p>
+                    China
+                   </p>
+</a>
+</li>
+<li class="gf-f-li1">
+<a "="" class="gf-if-a" href="https://co.ebay.com">
+<b class="flco gf-if gspr">
+</b>
+<p>
+                    Colombia
+                   </p>
+</a>
+</li>
+<li class="gf-f-li1">
+<a "="" class="gf-if-a" href="https://cr.ebay.com">
+<b class="flcr gf-if gspr">
+</b>
+<p>
+                    Costa Rica
+                   </p>
+</a>
+</li>
+<li class="gf-f-li1">
+<a "="" class="gf-if-a" href="https://do.ebay.com">
+<b class="fldo gf-if gspr">
+</b>
+<p>
+                    Dominican Republic
+                   </p>
+</a>
+</li>
+<li class="gf-f-li1">
+<a "="" class="gf-if-a" href="https://ec.ebay.com">
+<b class="flec gf-if gspr">
+</b>
+<p>
+                    Ecuador
+                   </p>
+</a>
+</li>
+<li class="gf-f-li1">
+<a "="" class="gf-if-a" href="https://sv.ebay.com">
+<b class="flsv gf-if gspr">
+</b>
+<p>
+                    El Salvador
+                   </p>
+</a>
+</li>
+<li class="gf-f-li1">
+<a "="" class="gf-if-a" href="https://www.ebay.fr">
+<b class="flfr gf-if gspr">
+</b>
+<p>
+                    France
+                   </p>
+</a>
+</li>
+<li class="gf-f-li1">
+<a "="" class="gf-if-a" href="https://www.ebay.de">
+<b class="flde gf-if gspr">
+</b>
+<p>
+                    Germany
+                   </p>
+</a>
+</li>
+<li class="gf-f-li1">
+<a "="" class="gf-if-a" href="https://gt.ebay.com">
+<b class="flgt gf-if gspr">
+</b>
+<p>
+                    Guatemala
+                   </p>
+</a>
+</li>
+<li class="gf-f-li2 gf-f-li-top">
+<a "="" class="gf-if-a" href="https://hn.ebay.com">
+<b class="flhn gf-if gspr">
+</b>
+<p>
+                    Honduras
+                   </p>
+</a>
+</li>
+<li class="gf-f-li2">
+<a "="" class="gf-if-a" href="https://www.ebay.com.hk">
+<b class="flhk gf-if gspr">
+</b>
+<p>
+                    Hong Kong
+                   </p>
+</a>
+</li>
+<li class="gf-f-li2">
+<a "="" class="gf-if-a" href="https://www.ebay.in">
+<b class="flin gf-if gspr">
+</b>
+<p>
+                    India
+                   </p>
+</a>
+</li>
+<li class="gf-f-li2">
+<a "="" class="gf-if-a" href="https://www.ebay.ie">
+<b class="flie gf-if gspr">
+</b>
+<p>
+                    Ireland
+                   </p>
+</a>
+</li>
+<li class="gf-f-li2">
+<a "="" class="gf-if-a" href="https://il.ebay.com">
+<b class="flil gf-if gspr">
+</b>
+<p>
+                    Israel
+                   </p>
+</a>
+</li>
+<li class="gf-f-li2">
+<a "="" class="gf-if-a" href="https://www.ebay.it">
+<b class="flit gf-if gspr">
+</b>
+<p>
+                    Italy
+                   </p>
+</a>
+</li>
+<li class="gf-f-li2">
+<a "="" class="gf-if-a" href="https://www.ebay.co.jp">
+<b class="fljp gf-if gspr">
+</b>
+<p>
+                    Japan
+                   </p>
+</a>
+</li>
+<li class="gf-f-li2">
+<a "="" class="gf-if-a" href="https://kz.ebay.com">
+<b class="flkz gf-if gspr">
+</b>
+<p>
+                    Kazakhstan
+                   </p>
+</a>
+</li>
+<li class="gf-f-li2">
+<a "="" class="gf-if-a" href="https://www.ebay.co.kr">
+<b class="flkr gf-if gspr">
+</b>
+<p>
+                    Korea
+                   </p>
+</a>
+</li>
+<li class="gf-f-li3 gf-f-li-top">
+<a "="" class="gf-if-a" href="https://www.ebay.com.my">
+<b class="flmy gf-if gspr">
+</b>
+<p>
+                    Malaysia
+                   </p>
+</a>
+</li>
+<li class="gf-f-li3">
+<a "="" class="gf-if-a" href="https://mx.ebay.com">
+<b class="flmx gf-if gspr">
+</b>
+<p>
+                    Mexico
+                   </p>
+</a>
+</li>
+<li class="gf-f-li3">
+<a "="" class="gf-if-a" href="https://www.ebay.nl">
+<b class="flnl gf-if gspr">
+</b>
+<p>
+                    Netherlands
+                   </p>
+</a>
+</li>
+<li class="gf-f-li3">
+<a "="" class="gf-if-a" href="https://www.ebay.co.nz/">
+<b class="flnz gf-if gspr">
+</b>
+<p>
+                    New Zealand
+                   </p>
+</a>
+</li>
+<li class="gf-f-li3">
+<a "="" class="gf-if-a" href="https://ni.ebay.com">
+<b class="flni gf-if gspr">
+</b>
+<p>
+                    Nicaragua
+                   </p>
+</a>
+</li>
+<li class="gf-f-li3">
+<a "="" class="gf-if-a" href="https://pa.ebay.com">
+<b class="flpa gf-if gspr">
+</b>
+<p>
+                    Panama
+                   </p>
+</a>
+</li>
+<li class="gf-f-li3">
+<a "="" class="gf-if-a" href="https://py.ebay.com">
+<b class="flpy gf-if gspr">
+</b>
+<p>
+                    Paraguay
+                   </p>
+</a>
+</li>
+<li class="gf-f-li3">
+<a "="" class="gf-if-a" href="https://pe.ebay.com">
+<b class="flpe gf-if gspr">
+</b>
+<p>
+                    Peru
+                   </p>
+</a>
+</li>
+<li class="gf-f-li3">
+<a "="" class="gf-if-a" href="https://www.ebay.ph">
+<b class="flph gf-if gspr">
+</b>
+<p>
+                    Philippines
+                   </p>
+</a>
+</li>
+<li class="gf-f-li4 gf-f-li-top">
+<a "="" class="gf-if-a" href="https://www.ebay.pl">
+<b class="flpl gf-if gspr">
+</b>
+<p>
+                    Poland
+                   </p>
+</a>
+</li>
+<li class="gf-f-li4">
+<a "="" class="gf-if-a" href="https://pt.ebay.com">
+<b class="flpt gf-if gspr">
+</b>
+<p>
+                    Portugal
+                   </p>
+</a>
+</li>
+<li class="gf-f-li4">
+<a "="" class="gf-if-a" href="https://pr.ebay.com">
+<b class="flpr gf-if gspr">
+</b>
+<p>
+                    Puerto Rico
+                   </p>
+</a>
+</li>
+<li class="gf-f-li4">
+<a "="" class="gf-if-a" href="https://www.ebay.com.sg">
+<b class="flsg gf-if gspr">
+</b>
+<p>
+                    Singapore
+                   </p>
+</a>
+</li>
+<li class="gf-f-li4">
+<a "="" class="gf-if-a" href="https://www.ebay.es">
+<b class="fles gf-if gspr">
+</b>
+<p>
+                    Spain
+                   </p>
+</a>
+</li>
+<li class="gf-f-li4">
+<a "="" class="gf-if-a" href="https://www.ebay.ch">
+<b class="flch gf-if gspr">
+</b>
+<p>
+                    Switzerland
+                   </p>
+</a>
+</li>
+<li class="gf-f-li4">
+<a "="" class="gf-if-a" href="https://www.ebay.com.tw">
+<b class="fltw gf-if gspr">
+</b>
+<p>
+                    Taiwan
+                   </p>
+</a>
+</li>
+<li class="gf-f-li4">
+<a "="" class="gf-if-a" href="https://www.ebay.com">
+<b class="fltr gf-if gspr">
+</b>
+<p>
+                    Turkey
+                   </p>
+</a>
+</li>
+<li class="gf-f-li4">
+<a "="" class="gf-if-a" href="https://www.ebay.co.uk">
+<b class="flgb gf-if gspr">
+</b>
+<p>
+                    United Kingdom
+                   </p>
+</a>
+</li>
+<li class="gf-f-li5 gf-f-li-top">
+<a "="" class="gf-if-a" href="https://uy.ebay.com">
+<b class="fluy gf-if gspr">
+</b>
+<p>
+                    Uruguay
+                   </p>
+</a>
+</li>
+<li class="gf-f-li5">
+<a "="" class="gf-if-a" href="https://ve.ebay.com">
+<b class="flve gf-if gspr">
+</b>
+<p>
+                    Venezuela
+                   </p>
+</a>
+</li>
+</ul>
+<div id="gf-f-trans">
+</div>
+</div>
+</div>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="gf-t-box">
+<table class="gf-t" role="presentation">
+<tr>
+<td colspan='2'>
+<ul class="gf-lb" id="gf-l">
+<li class="gf-li">
+<a _exsp="m571.l2602" class="thrd gf-bar-a" href="https://www.ebayinc.com">
+              About eBay
+             </a>
+</li>
+<li class="gf-li">
+<a _exsp="m571.l2935" class="thrd gf-bar-a" href="https://community.ebay.com/t5/Announcements/bg-p/Announcements">
+              Announcements
+             </a>
+</li>
+<li class="gf-li">
+<a _exsp="m571.l1540" class="thrd gf-bar-a" href="https://community.ebay.com">
+              Community
+             </a>
+</li>
+<li class="gf-li">
+<a _exsp="m571.l2616" class="thrd gf-bar-a" href="https://pages.ebay.com/securitycenter/index.html">
+              Security Center
+             </a>
+</li>
+<li class="gf-li">
+<a _exsp="m571.l1613" class="thrd gf-bar-a" href="https://pages.ebay.com/seller-center/index.html?utm_source=gf&utm_medium=onsite">
+              Seller Center
+             </a>
+</li>
+<li class="gf-li">
+<a _exsp="m571.l2604" class="thrd gf-bar-a" href="https://www.ebay.com/help/policies/default/ebays-rules-policies?id=4205">
+              Policies
+             </a>
+</li>
+<li class="gf-li">
+<a _exsp="m571.l3947" class="thrd gf-bar-a" href="https://partnernetwork.ebay.com/">
+              Affiliates
+             </a>
+</li>
+<li class="gf-li">
+<a _sp="m571.l1545" class="thrd gf-bar-a" data-sp="m571.l1545" href="https://www.ebay.com/help/home">
+              Help & Contact
+             </a>
+</li>
+<li class="gf-li">
+<a _exsp="m571.l2909" class="thrd gf-bar-a" href="https://pages.ebay.com/sitemap.html">
+              Site Map
+             </a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<td class="gf-legal">
+           Copyright © 1995-2024 eBay Inc. All Rights Reserved.
+           <a href="https://www.ebayinc.com/accessibility/">
+            Accessibility
+           </a>
+           ,
+           <a href="https://www.ebay.com/help/policies/member-behaviour-policies/user-agreement?id=4259">
+            User Agreement
+           </a>
+           ,
+           <a href="https://www.ebay.com/help/policies/member-behaviour-policies/user-privacy-notice-privacy-policy?id=4260">
+            Privacy
+           </a>
+           ,
+           <a _sp="m571.l182077" href="https://www.ebayinc.com/company/privacy-center/privacy-notice/consumer-health-data-privacy-policy/">
+            Consumer Health Data
+           </a>
+           ,
+           <a href="https://pages.ebay.com/payment/2.0/terms.html">
+            Payments Terms of Use
+           </a>
+           ,
+           <a href="https://www.ebay.com/help/policies/member-behaviour-policies/ebay-cookie-notice?id=4267">
+            Cookies
+           </a>
+           ,
+           <a href="https://www.ebayinc.com/company/privacy-center/privacy-notice/state-privacy-disclosures/#california">
+            CA Privacy Notice
+           </a>
+           ,
+           <a class="gf-legal__privacy" href="https://www.ebay.com/adchoice/ccpa">
+            Your Privacy Choices
+           </a>
+           and
+           <a href="https://www.ebay.com/adchoice" id="gf-AdChoice">
+            AdChoice
+           </a>
+</td>
+<td align="center" nowrap="">
+</td>
+</tr>
+</table>
+</div>
+<!--[if lt IE 9]></div><![endif]-->
+</footer>
+</div>
+</div>
+</div>
+</div>
+<script data-chunk-uuid="0ad768f4-8347-4aeb-9029-9d0b62e3bbd5" src="https://ir.ebaystatic.com/rs/v/dimst35tei5k5cjwlytmmoocgq2.js" type="text/javascript">// chunk_script_0ad768f4-8347-4aeb-9029-9d0b62e3bbd5
+</script>
+<script data-chunk-uuid="dfc41f4a-29da-4181-847e-365975433b2e" type="text/javascript">// chunk_script_dfc41f4a-29da-4181-847e-365975433b2e
+</script>
+<script data-chunk-uuid="242620c1-9422-49e2-89b9-ef9a066689de">// chunk_script_242620c1-9422-49e2-89b9-ef9a066689de
+</script>
+<!--vertlandweb^s0-1-0-72 s0-1-0 72-->
+<div class="vl-fsom-banner">
+</div>
+<!--vertlandweb/-->
+<div id="af0" style="display:none">
+<noscript id="afph1">
+</noscript>
+</div>
+<div id="aftracking" style="display:none">
+<script data-chunk-uuid="7112d909-dcac-4bdf-9a68-39cc05602c88" type="text/javascript">// chunk_script_7112d909-dcac-4bdf-9a68-39cc05602c88
+</script>
+<script data-chunk-uuid="7c41729e-85af-4b62-a8df-3de1c226d4dc" src="https://ir.ebaystatic.com/cr/v/c1/ebay-cookies/5.js">// chunk_script_7c41729e-85af-4b62-a8df-3de1c226d4dc
+</script>
+<script data-chunk-uuid="577c8691-924b-46b1-a883-6efd0a99533e" type="text/javascript">// chunk_script_577c8691-924b-46b1-a883-6efd0a99533e
+</script>
+<script data-chunk-uuid="af1386fd-60a8-4e23-af4a-5b4396f88ee8" type="text/javascript">// chunk_script_af1386fd-60a8-4e23-af4a-5b4396f88ee8
+</script>
+<script data-chunk-uuid="cd858be0-0c69-4f5b-8a1b-a13461834793" crossorigin="" id="taasHeaderRes" src="https://ir.ebaystatic.com/cr/v/c01/nh24070265b74ffae1964cce828.js" type="text/javascript">// chunk_script_cd858be0-0c69-4f5b-8a1b-a13461834793
+</script>
+<script data-chunk-uuid="2f2089b6-1e35-4d91-9383-6a2146ddab1c" id="taasContent" type="text/javascript">// chunk_script_2f2089b6-1e35-4d91-9383-6a2146ddab1c
+</script>
+<script data-chunk-uuid="05ed950a-b9d5-4789-bd19-2a0418159daf" crossorigin="" id="taasFooterRes" src="https://ir.ebaystatic.com/cr/v/c01/ubt24070236dd1e675d8f4e7497.js" type="text/javascript">// chunk_script_05ed950a-b9d5-4789-bd19-2a0418159daf
+</script>
+</div>
+<div id="af1" style="display:none">
+</div>
+<script data-chunk-uuid="ef7faf74-f462-4eb1-b207-2d812c0f61f4">// chunk_script_ef7faf74-f462-4eb1-b207-2d812c0f61f4
+</script>
+
+        ```
+        
