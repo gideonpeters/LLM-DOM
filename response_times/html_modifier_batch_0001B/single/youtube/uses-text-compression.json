@@ -1,0 +1,44 @@
+[
+    {
+        "prompt_uuid": "57c1dfe6-59bc-4618-8b6a-2482998ff064",
+        "dom_name": "youtube",
+        "prompt_token_size": 4127,
+        "duration": 9.657089710235596,
+        "mode": "single",
+        "audit_key": "uses-text-compression",
+        "experiment_name": "html_modifier_batch_0001B",
+        "speed": {
+            "download_speed": 382.82398263440257,
+            "upload_speed": 290.2333906750842,
+            "ping": 9.101
+        }
+    },
+    {
+        "prompt_uuid": "dcd4b613-0ff4-44b3-ab8f-4dd9b97b5d12",
+        "dom_name": "youtube",
+        "prompt_token_size": 11813,
+        "duration": 4.116847038269043,
+        "mode": "single",
+        "audit_key": "uses-text-compression",
+        "experiment_name": "html_modifier_batch_0001B",
+        "speed": {
+            "download_speed": 402.6594871551204,
+            "upload_speed": 383.9303322219456,
+            "ping": 7.258
+        }
+    },
+    {
+        "prompt_uuid": "9e2291e0-18b1-49be-818c-ec0e39a05f05",
+        "dom_name": "youtube",
+        "prompt_token_size": 913,
+        "duration": 7.612202405929565,
+        "mode": "single",
+        "audit_key": "uses-text-compression",
+        "experiment_name": "html_modifier_batch_0001B",
+        "speed": {
+            "download_speed": 271.82254102432836,
+            "upload_speed": 407.9706620676496,
+            "ping": 20.957
+        }
+    }
+]

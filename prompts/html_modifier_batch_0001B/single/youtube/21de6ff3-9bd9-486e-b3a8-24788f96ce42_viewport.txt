@@ -1,0 +1,70 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. viewport => Does not have a `<meta name="viewport">` tag with `width` or `initial-scale`: A `<meta name="viewport">` not only optimizes your app for mobile screen sizes, but also prevents [a 300 millisecond delay to user input](https://developer.chrome.com/blog/300ms-tap-delay-gone-away/). [Learn more about using the viewport meta tag](https://developer.chrome.com/docs/lighthouse/pwa/viewport/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        <div class="menu-button skeleton-bg-color">
+</div>
+</div>
+</div>
+</div>
+<div class="skeleton-light-border-bottom" id="secondary-info">
+<div id="top-row">
+<div class="flex-1" id="video-owner">
+<div class="skeleton-bg-color" id="channel-icon">
+</div>
+<div class="flex-1" id="upload-info">
+<div class="text-shell skeleton-bg-color" id="owner-name">
+</div>
+<div class="text-shell skeleton-bg-color" id="published-date">
+</div>
+</div>
+</div>
+<div class="skeleton-bg-color" id="subscribe-button">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script data-chunk-uuid="74332d83-dc46-4f22-bb54-c782d1e454db" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_74332d83-dc46-4f22-bb54-c782d1e454db
+</script>
+<script data-chunk-uuid="b59c95a2-5c6a-44f7-a917-b5276fab3841" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_b59c95a2-5c6a-44f7-a917-b5276fab3841
+</script>
+<script data-chunk-uuid="1b6818f3-032c-419b-927c-ee3a4026eed7" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_1b6818f3-032c-419b-927c-ee3a4026eed7
+</script>
+
+        ```
+        

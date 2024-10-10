@@ -1,0 +1,127 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. legacy-javascript => Avoid serving legacy JavaScript to modern browsers: Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. For your bundled JavaScript, adopt a modern script deployment strategy using module/nomodule feature detection to reduce the amount of code shipped to modern browsers, while retaining support for legacy browsers. [Learn how to use modern JavaScript](https://web.dev/articles/publish-modern-javascript)
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        
+<script data-chunk-uuid="69cb86bd-ab5e-46d0-9f64-4a7ee3174d93" data-id="_gd" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_69cb86bd-ab5e-46d0-9f64-4a7ee3174d93
+</script>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"></meta>
+<meta content="ApvK67ociHgr2egd6c2ZjrfPuRs8BHcvSggogIOPQNH7GJ3cVlyJ1NOq/COCdj0+zxskqHt9HgLLETc8qqD+vwsAAABteyJvcmlnaW4iOiJodHRwczovL3lvdXR1YmUuY29tOjQ0MyIsImZlYXR1cmUiOiJQcml2YWN5U2FuZGJveEFkc0FQSXMiLCJleHBpcnkiOjE2OTUxNjc5OTksImlzU3ViZG9tYWluIjp0cnVlfQ==" http-equiv="origin-trial"></meta>
+<script data-chunk-uuid="3c59afb8-c207-4921-aeba-fb2f7cc8e50e" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_3c59afb8-c207-4921-aeba-fb2f7cc8e50e
+</script>
+<script data-chunk-uuid="e2c2ceba-e901-4ff1-8d38-1c2a409854a7" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_e2c2ceba-e901-4ff1-8d38-1c2a409854a7
+</script>
+<script data-chunk-uuid="3bd5d854-c5d7-4ae2-b05a-5d4be61bd0ee" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_3bd5d854-c5d7-4ae2-b05a-5d4be61bd0ee
+</script>
+<link href="https://www.youtube.com/s/desktop/ed565dc3/img/favicon.ico" rel="shortcut icon" type="image/x-icon"></link>
+<link href="https://www.youtube.com/s/desktop/ed565dc3/img/favicon_32x32.png" rel="icon" sizes="32x32"></link>
+<link href="https://www.youtube.com/s/desktop/ed565dc3/img/favicon_48x48.png" rel="icon" sizes="48x48"></link>
+<link href="https://www.youtube.com/s/desktop/ed565dc3/img/favicon_96x96.png" rel="icon" sizes="96x96"></link>
+<link href="https://www.youtube.com/s/desktop/ed565dc3/img/favicon_144x144.png" rel="icon" sizes="144x144"></link>
+<title>
+   YouTube
+  </title>
+<link href="https://www.youtube.com/" rel="canonical"></link>
+<link href="https://m.youtube.com/" media="handheld" rel="alternate"></link>
+<link href="https://m.youtube.com/" media="only screen and (max-width: 640px)" rel="alternate"></link>
+<meta content="https://www.youtube.com/img/desktop/yt_1200.png" property="og:image"></meta>
+<meta content='87741124305' property="fb:app_id"></meta>
+<link href="android-app://com.google.android.youtube/http/www.youtube.com/" rel="alternate"></link>
+<link href="ios-app://544007664/vnd.youtube/www.youtube.com/" rel="alternate"></link>
+<meta content="Enjoy the videos and music that you love, upload original content and share it all with friends, family and the world on YouTube." name="description"></meta>
+<meta content="video, sharing, camera phone, video phone, free, upload" name="keywords"></meta>
+<script data-chunk-uuid="ac7b3777-a89e-419f-acac-b67a5f693d6e" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_ac7b3777-a89e-419f-acac-b67a5f693d6e
+</script>
+<script data-chunk-uuid="7e58933c-44fb-438a-a287-947d402363ee" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_7e58933c-44fb-438a-a287-947d402363ee
+</script>
+<script data-chunk-uuid="14b42eba-8852-4077-a1fe-be2459de1f45" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_14b42eba-8852-4077-a1fe-be2459de1f45
+</script>
+<script data-chunk-uuid="d4b4acf3-2704-4abb-827f-b141308efd33" nonce="D1-qG8YtC9mZN-wGGrOp6g" src="https://www.youtube.com/s/desktop/ed565dc3/jsbin/web-animations-next-lite.min.vflset/web-animations-next-lite.min.js">// chunk_script_d4b4acf3-2704-4abb-827f-b141308efd33
+</script>
+<script data-chunk-uuid="7c3ac3db-5678-4632-aa78-5c1294a53d61" nonce="D1-qG8YtC9mZN-wGGrOp6g" src="https://www.youtube.com/s/desktop/ed565dc3/jsbin/webcomponents-all-noPatch.vflset/webcomponents-all-noPatch.js">// chunk_script_7c3ac3db-5678-4632-aa78-5c1294a53d61
+</script>
+<script data-chunk-uuid="ae9c8ae3-bc0b-47c4-ac56-d2c38e0adbd2" nonce="D1-qG8YtC9mZN-wGGrOp6g" src="https://www.youtube.com/s/desktop/ed565dc3/jsbin/fetch-polyfill.vflset/fetch-polyfill.js">// chunk_script_ae9c8ae3-bc0b-47c4-ac56-d2c38e0adbd2
+</script>
+<script data-chunk-uuid="acefac96-d1e4-4765-afcf-ad0fc8ab77c5" nonce="D1-qG8YtC9mZN-wGGrOp6g" src="https://www.youtube.com/s/desktop/ed565dc3/jsbin/intersection-observer.min.vflset/intersection-observer.min.js">// chunk_script_acefac96-d1e4-4765-afcf-ad0fc8ab77c5
+</script>
+<script data-chunk-uuid="8f01b88d-7240-4696-b67d-462020a540c4" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_8f01b88d-7240-4696-b67d-462020a540c4
+</script>
+<script data-chunk-uuid="88edbbf8-d2fe-4855-a3d0-77cd26f0de6e" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_88edbbf8-d2fe-4855-a3d0-77cd26f0de6e
+</script>
+<script data-chunk-uuid="bce353f9-80d6-409d-8ccc-a926bf533a80" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_bce353f9-80d6-409d-8ccc-a926bf533a80
+</script>
+<script data-chunk-uuid="82d5caec-d5dd-469f-b300-150596763faa" nonce="D1-qG8YtC9mZN-wGGrOp6g" src="https://www.youtube.com/s/desktop/ed565dc3/jsbin/scheduler.vflset/scheduler.js">// chunk_script_82d5caec-d5dd-469f-b300-150596763faa
+</script>
+<script data-chunk-uuid="a7cc4db7-2533-434f-8ae5-72d1413ba5e1" nonce="D1-qG8YtC9mZN-wGGrOp6g" src="https://www.youtube.com/s/desktop/ed565dc3/jsbin/www-i18n-constants-en_GB.vflset/www-i18n-constants.js">// chunk_script_a7cc4db7-2533-434f-8ae5-72d1413ba5e1
+</script>
+<script data-chunk-uuid="cb68cd8e-4ca6-4dc5-82b6-cbbf6fbac44e" nonce="D1-qG8YtC9mZN-wGGrOp6g" src="https://www.youtube.com/s/desktop/ed565dc3/jsbin/www-tampering.vflset/www-tampering.js">// chunk_script_cb68cd8e-4ca6-4dc5-82b6-cbbf6fbac44e
+</script>
+<script data-chunk-uuid="fa1a867b-5467-4af1-9f20-757b72b86c8f" nonce="D1-qG8YtC9mZN-wGGrOp6g" src="https://www.youtube.com/s/desktop/ed565dc3/jsbin/spf.vflset/spf.js">// chunk_script_fa1a867b-5467-4af1-9f20-757b72b86c8f
+</script>
+<script data-chunk-uuid="8879b293-1956-4f3e-8d9b-6616a1f33acf" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_8879b293-1956-4f3e-8d9b-6616a1f33acf
+</script>
+<script data-chunk-uuid="69964f20-d3df-4c57-88e6-3fd38d2fc346" nonce="D1-qG8YtC9mZN-wGGrOp6g" src="https://www.youtube.com/s/desktop/ed565dc3/jsbin/network.vflset/network.js">// chunk_script_69964f20-d3df-4c57-88e6-3fd38d2fc346
+</script>
+<script data-chunk-uuid="ac00f79f-b19e-4203-a173-57e212db221f" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_ac00f79f-b19e-4203-a173-57e212db221f
+</script>
+<link href="//fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=YouTube+Sans:wght@300..900&display=swap" nonce="mdQLp_bGobZdlcRog1-T7g" rel="stylesheet"></link>
+<script data-chunk-uuid="91764bef-5480-404d-a731-c29acf8984f6" name="www-roboto" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_91764bef-5480-404d-a731-c29acf8984f6
+</script>
+<link href="https://www.youtube.com/s/desktop/ed565dc3/cssbin/www-main-desktop-home-page-skeleton.css" nonce="mdQLp_bGobZdlcRog1-T7g" rel="stylesheet"></link>
+<link href="https://www.youtube.com/s/desktop/ed565dc3/cssbin/www-onepick.css" nonce="mdQLp_bGobZdlcRog1-T7g" rel="stylesheet"></link>
+<link href="https://www.youtube.com/s/_/ytmainappweb/_/ss/k=ytmainappweb.kevlar_base.cqHBwRr8PRU.L.X.O/am=AAAQKA/d=0/br=1/rs=AGKMywHY_fwuIl4Aksb_ywn5gQRTanasnw" nonce="mdQLp_bGobZdlcRog1-T7g" rel="stylesheet"></link>
+<style data-chunk-uuid="2216398b-1fdf-4ba2-a082-890b9ab5e393" class="global_styles" nonce="mdQLp_bGobZdlcRog1-T7g">/* chunk_style_2216398b-1fdf-4ba2-a082-890b9ab5e393 */
+</style>
+<style data-chunk-uuid="2827e860-65ce-4d8c-8278-e103a358b25a" class="masthead_shell" nonce="mdQLp_bGobZdlcRog1-T7g">/* chunk_style_2827e860-65ce-4d8c-8278-e103a358b25a */
+</style>
+<style data-chunk-uuid="d12d4620-2da9-4db6-b353-1e91cbccdabb" class="masthead_custom_styles" id="ext-styles" is="custom-style" nonce="mdQLp_bGobZdlcRog1-T7g">/* chunk_style_d12d4620-2da9-4db6-b353-1e91cbccdabb */
+</style>
+<style data-chunk-uuid="96652015-d7b7-4607-9f71-2b7bd6b0605e" class="searchbox" nonce="mdQLp_bGobZdlcRog1-T7g">/* chunk_style_96652015-d7b7-4607-9f71-2b7bd6b0605e */
+</style>
+<style data-chunk-uuid="4f737ec6-fca9-4993-9986-016866c31d2a" class="kevlar_global_styles" nonce="mdQLp_bGobZdlcRog1-T7g">/* chunk_style_4f737ec6-fca9-4993-9986-016866c31d2a */
+</style>
+<meta content="rgba(255, 255, 255, 0.98)" name="theme-color"></meta>
+<link href="https://www.youtube.com/opensearch?locale=en_GB" rel="search" title="YouTube" type="application/opensearchdescription+xml"></link>
+<link crossorigin="use-credentials" href="/manifest.webmanifest" rel="manifest"></link>
+<script data-chunk-uuid="a67ca605-cfe4-4040-aa54-0a23f5e23a8c" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_a67ca605-cfe4-4040-aa54-0a23f5e23a8c
+</script>
+<script data-chunk-uuid="d4856c65-8426-4240-a1cf-51907c425e10" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_d4856c65-8426-4240-a1cf-51907c425e10
+</script>
+<script data-chunk-uuid="6a5780e3-58c0-44f4-b654-97160abae484" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_6a5780e3-58c0-44f4-b654-97160abae484
+</script>
+
+        ```
+        

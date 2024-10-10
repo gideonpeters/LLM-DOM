@@ -47,15 +47,16 @@ class HTMLSplitter:
         self.html = html
         self.max_tokens = TOKEN_LIMIT
         self.model = "gpt-4o-mini"
-        self.experiment_name = "html_modifier_batch_0001A"
+        self.experiment_name = "html_modifier_batch_0001B"
         self.dom_name = dom_name
         self.no_of_modifications = 0
         self.temperature = 0.2
-        self.mode = "all"
+        self.mode = "single"
         self.audits = {}
         self.formatted_audit_text = ""
         self.style_store = {}
         self.script_store = {}
+        self.only_estimate_tokens = False
 
     @retry(wait=wait_random_exponential(min=1, max=60), stop=stop_after_attempt(4))
     def measure_speed(self):
@@ -379,6 +380,7 @@ class HTMLSplitter:
         modification_tracker['modifications'] = self.no_of_modifications
         modification_tracker['no_of_issues'] = len(lighthouse_audits)
         modification_tracker['experiment_name'] = self.experiment_name
+        modification_tracker['mode'] = self.mode
         if(self.mode == "single"):
             modification_tracker['audit_key'] = audit_key
 
@@ -407,6 +409,7 @@ if __name__ == '__main__':
     html_file = "extracted-doms/original/youtube.html"
 
     files_to_exclude = ['amazon', 'ubereats', 'glassdoor', 'ziprecruiter', 'behance']
+    audits_to_exclude = []
 
     if any(exclude in html_file for exclude in files_to_exclude):
         print(f"Skipping {html_file}...")
@@ -430,9 +433,12 @@ if __name__ == '__main__':
 
         print("HTML modifications completed and saved.")
     elif lighthouse_audits and html_splitter.mode == "single":
-        print("Starting HTML single audit modifications...")
+        audit_count = len(lighthouse_audits)
+        print(f"Starting HTML single audit modifications for {audit_count} audits...")
 
         for audit in lighthouse_audits:
+            print(f"Starting HTML single audit modifications for {audit}...")
+
             run_changes(html_splitter, {audit: lighthouse_audits[audit]}, audit)
         
         print("HTML modifications completed and saved.")

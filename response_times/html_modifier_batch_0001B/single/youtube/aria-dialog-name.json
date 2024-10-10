@@ -1,0 +1,46 @@
+[
+    {
+        "prompt_uuid": "1e5c2abf-99c9-46fe-94d9-d1af47e8f725",
+        "dom_name": "youtube",
+        "prompt_token_size": 4172,
+        "duration": 60.56623291969299,
+        "mode": "single",
+        "audit_key": "aria-dialog-name",
+        "experiment_name": "html_modifier_batch_0001B",
+        "speed": {
+            "download_speed": 356.34426206836133,
+            "upload_speed": 429.75798537640395,
+            "ping": 5.063
+        }
+    },
+    {
+        "prompt_uuid": "8b0e0e66-31a7-426a-a69a-c213e5e1f81c",
+        "dom_name": "youtube",
+        "prompt_token_size": 11830,
+        "duration": 2.3323631286621094,
+        "mode": "single",
+        "audit_key": "aria-dialog-name",
+        "experiment_name": "html_modifier_batch_0001B",
+        "speed": {
+            "download_speed": 0,
+            "upload_speed": 0,
+            "ping": 0,
+            "error": "Unable to connect to servers to test latency."
+        }
+    },
+    {
+        "prompt_uuid": "988f545f-fa45-41cd-b8f8-8cf8f272f43a",
+        "dom_name": "youtube",
+        "prompt_token_size": 948,
+        "duration": 22.109111070632935,
+        "mode": "single",
+        "audit_key": "aria-dialog-name",
+        "experiment_name": "html_modifier_batch_0001B",
+        "speed": {
+            "download_speed": 0,
+            "upload_speed": 0,
+            "ping": 0,
+            "error": "HTTP Error 403: Forbidden"
+        }
+    }
+]

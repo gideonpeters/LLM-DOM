@@ -1,0 +1,41 @@
+{
+  "0": {
+    "name": "youtube",
+    "experiment_name": "html_modifier_batch_0001B",
+    "audit_key": "crawlable-anchors",
+    "dom_name": "youtube",
+    "original_chunk_id": "60a6e47f-ef7c-425d-aef8-80c3e39e7323",
+    "mode": "single",
+    "original": "\n<link href=\"https://www.youtube.com/\" rel=\"canonical\"></link>\n<!-- Optimized by LLM -->\n<a href=\"https://www.youtube.com/\" rel=\"canonical\"></a>\n<!-- End of Optimization: crawlable-anchors => Ensured canonical link is crawlable -->\n",
+    "original_section": "head",
+    "original_chunk_token_size": 56,
+    "modified": "\n<link href=\"https://www.youtube.com/\" rel=\"canonical\"></link>\n<!-- Optimized by LLM -->\n<a href=\"https://www.youtube.com/\" rel=\"canonical\"></a>\n<!-- End of Optimization: crawlable-anchors => Ensured canonical link is crawlable -->\n",
+    "modified_chunk_token_size": 56
+  },
+  "1": {
+    "name": "youtube",
+    "experiment_name": "html_modifier_batch_0001B",
+    "audit_key": "crawlable-anchors",
+    "dom_name": "youtube",
+    "original_chunk_id": "211f9ee0-41e3-479b-b6a0-c08639bfc3fe",
+    "mode": "single",
+    "original": "\n<a href=\"https://www.youtube.com/about/\" slot=\"guide-links-primary\" style=\"display: none;\">\n    About\n</a>\n<a href=\"https://www.youtube.com/about/press/\" slot=\"guide-links-primary\" style=\"display: none;\">\n    Press\n</a>\n<a href=\"https://www.youtube.com/about/copyright/\" slot=\"guide-links-primary\" style=\"display: none;\">\n    Copyright\n</a>\n<a href=\"/t/contact_us/\" slot=\"guide-links-primary\" style=\"display: none;\">\n    Contact us\n</a>\n<a href=\"https://www.youtube.com/creators/\" slot=\"guide-links-primary\" style=\"display: none;\">\n    Creator\n</a>\n<a href=\"https://www.youtube.com/ads/\" slot=\"guide-links-primary\" style=\"display: none;\">\n    Advertise\n</a>\n<a href=\"https://developers.google.com/youtube\" slot=\"guide-links-primary\" style=\"display: none;\">\n    Developers\n</a>\n<a href=\"/t/terms\" slot=\"guide-links-secondary\" style=\"display: none;\">\n    Terms\n</a>\n<a href=\"/t/privacy\" slot=\"guide-links-secondary\" style=\"display: none;\">\n    Privacy\n</a>\n<a href=\"https://www.youtube.com/about/policies/\" slot=\"guide-links-secondary\" style=\"display: none;\">\n    Policy & Safety\n</a>\n<a href=\"https://www.youtube.com/howyoutubeworks?utm_campaign=ytgen&utm_source=ythp&utm_medium=LeftNav&utm_content=txt&u=https%3A%2F%2Fwww.youtube.com%2Fhowyoutubeworks%3Futm_source%3Dythp%26utm_medium%3DLeftNav%26utm_campaign%3Dytgen\" slot=\"guide-links-secondary\" style=\"display: none;\">\n    How YouTube works\n</a>\n<a href=\"/new\" slot=\"guide-links-secondary\" style=\"display: none;\">\n    Test new features\n</a>\n",
+    "original_section": "body",
+    "original_chunk_token_size": 418,
+    "modified": "\n<a href=\"https://www.youtube.com/about/\" slot=\"guide-links-primary\" style=\"display: none;\">\n    About\n</a>\n<a href=\"https://www.youtube.com/about/press/\" slot=\"guide-links-primary\" style=\"display: none;\">\n    Press\n</a>\n<a href=\"https://www.youtube.com/about/copyright/\" slot=\"guide-links-primary\" style=\"display: none;\">\n    Copyright\n</a>\n<a href=\"/t/contact_us/\" slot=\"guide-links-primary\" style=\"display: none;\">\n    Contact us\n</a>\n<a href=\"https://www.youtube.com/creators/\" slot=\"guide-links-primary\" style=\"display: none;\">\n    Creator\n</a>\n<a href=\"https://www.youtube.com/ads/\" slot=\"guide-links-primary\" style=\"display: none;\">\n    Advertise\n</a>\n<a href=\"https://developers.google.com/youtube\" slot=\"guide-links-primary\" style=\"display: none;\">\n    Developers\n</a>\n<a href=\"/t/terms\" slot=\"guide-links-secondary\" style=\"display: none;\">\n    Terms\n</a>\n<a href=\"/t/privacy\" slot=\"guide-links-secondary\" style=\"display: none;\">\n    Privacy\n</a>\n<a href=\"https://www.youtube.com/about/policies/\" slot=\"guide-links-secondary\" style=\"display: none;\">\n    Policy & Safety\n</a>\n<a href=\"https://www.youtube.com/howyoutubeworks?utm_campaign=ytgen&utm_source=ythp&utm_medium=LeftNav&utm_content=txt&u=https%3A%2F%2Fwww.youtube.com%2Fhowyoutubeworks%3Futm_source%3Dythp%26utm_medium%3DLeftNav%26utm_campaign%3Dytgen\" slot=\"guide-links-secondary\" style=\"display: none;\">\n    How YouTube works\n</a>\n<a href=\"/new\" slot=\"guide-links-secondary\" style=\"display: none;\">\n    Test new features\n</a>\n",
+    "modified_chunk_token_size": 418
+  },
+  "2": {
+    "name": "youtube",
+    "experiment_name": "html_modifier_batch_0001B",
+    "audit_key": "crawlable-anchors",
+    "dom_name": "youtube",
+    "original_chunk_id": "f642dcf5-b70a-42fe-aeeb-bc62d4bd8545",
+    "mode": "single",
+    "original": "\n<div class=\"menu-button skeleton-bg-color\">\n</div>\n<div class=\"menu-button skeleton-bg-color\">\n</div>\n</div>\n</div>\n</div>\n<div class=\"skeleton-light-border-bottom\" id=\"secondary-info\">\n<div id=\"top-row\">\n<div class=\"flex-1\" id=\"video-owner\">\n<div class=\"skeleton-bg-color\" id=\"channel-icon\">\n</div>\n<div class=\"flex-1\" id=\"upload-info\">\n<div class=\"text-shell skeleton-bg-color\" id=\"owner-name\">\n</div>\n<div class=\"text-shell skeleton-bg-color\" id=\"published-date\">\n</div>\n</div>\n</div>\n<div class=\"skeleton-bg-color\" id=\"subscribe-button\">\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n<script data-chunk-uuid=\"111b3844-e4f1-4eea-9d3a-c2c12c28cae0\" nonce=\"D1-qG8YtC9mZN-wGGrOp6g\">// chunk_script_111b3844-e4f1-4eea-9d3a-c2c12c28cae0\n</script>\n<script data-chunk-uuid=\"adef3b1b-2da5-4137-8b70-330359e65cb5\" nonce=\"D1-qG8YtC9mZN-wGGrOp6g\">// chunk_script_adef3b1b-2da5-4137-8b70-330359e65cb5\n</script>\n<script data-chunk-uuid=\"fbfa5e2f-67ac-4d3e-8b2b-c1d8ed4f0874\" nonce=\"D1-qG8YtC9mZN-wGGrOp6g\">// chunk_script_fbfa5e2f-67ac-4d3e-8b2b-c1d8ed4f0874\n</script>\n",
+    "original_section": "body",
+    "original_chunk_token_size": 425,
+    "modified": "\n<div class=\"menu-button skeleton-bg-color\">\n</div>\n<div class=\"menu-button skeleton-bg-color\">\n</div>\n</div>\n</div>\n</div>\n<div class=\"skeleton-light-border-bottom\" id=\"secondary-info\">\n<div id=\"top-row\">\n<div class=\"flex-1\" id=\"video-owner\">\n<div class=\"skeleton-bg-color\" id=\"channel-icon\">\n</div>\n<div class=\"flex-1\" id=\"upload-info\">\n<div class=\"text-shell skeleton-bg-color\" id=\"owner-name\">\n</div>\n<div class=\"text-shell skeleton-bg-color\" id=\"published-date\">\n</div>\n</div>\n</div>\n<div class=\"skeleton-bg-color\" id=\"subscribe-button\">\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n<script data-chunk-uuid=\"111b3844-e4f1-4eea-9d3a-c2c12c28cae0\" nonce=\"D1-qG8YtC9mZN-wGGrOp6g\">// chunk_script_111b3844-e4f1-4eea-9d3a-c2c12c28cae0\n</script>\n<script data-chunk-uuid=\"adef3b1b-2da5-4137-8b70-330359e65cb5\" nonce=\"D1-qG8YtC9mZN-wGGrOp6g\">// chunk_script_adef3b1b-2da5-4137-8b70-330359e65cb5\n</script>\n<script data-chunk-uuid=\"fbfa5e2f-67ac-4d3e-8b2b-c1d8ed4f0874\" nonce=\"D1-qG8YtC9mZN-wGGrOp6g\">// chunk_script_fbfa5e2f-67ac-4d3e-8b2b-c1d8ed4f0874\n</script>\n",
+    "modified_chunk_token_size": 425
+  }
+}

@@ -1,0 +1,45 @@
+[
+    {
+        "prompt_uuid": "6afe751f-9e3b-44c8-a248-e741b7328d8f",
+        "dom_name": "youtube",
+        "prompt_token_size": 4120,
+        "duration": 4.858776807785034,
+        "mode": "single",
+        "audit_key": "font-size",
+        "experiment_name": "html_modifier_batch_0001B",
+        "speed": {
+            "download_speed": 389.4757862297947,
+            "upload_speed": 483.6314791257434,
+            "ping": 8.808
+        }
+    },
+    {
+        "prompt_uuid": "2814fb40-fe4b-45f1-855b-e45270d47908",
+        "dom_name": "youtube",
+        "prompt_token_size": 11833,
+        "duration": 1.8918862342834473,
+        "mode": "single",
+        "audit_key": "font-size",
+        "experiment_name": "html_modifier_batch_0001B",
+        "speed": {
+            "download_speed": 0,
+            "upload_speed": 0,
+            "ping": 0,
+            "error": "Unable to connect to servers to test latency."
+        }
+    },
+    {
+        "prompt_uuid": "da11e9f6-3399-4216-a0f3-5ae990f3f197",
+        "dom_name": "youtube",
+        "prompt_token_size": 929,
+        "duration": 6.026988983154297,
+        "mode": "single",
+        "audit_key": "font-size",
+        "experiment_name": "html_modifier_batch_0001B",
+        "speed": {
+            "download_speed": 280.1384820884457,
+            "upload_speed": 378.59713838557076,
+            "ping": 9.312
+        }
+    }
+]
