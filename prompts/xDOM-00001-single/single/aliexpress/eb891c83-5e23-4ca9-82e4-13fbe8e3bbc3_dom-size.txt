@@ -1,0 +1,572 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. dom-size => Avoid an excessive DOM size: A large DOM will increase memory usage, cause longer [style calculations](https://developers.google.com/web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations), and produce costly [layout reflows](https://developers.google.com/speed/articles/reflow). [Learn how to avoid an excessive DOM size](https://developer.chrome.com/docs/lighthouse/performance/dom-size/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        <div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+</div>
+<div>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--right-item--1t-lmQj" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=pet_supplies" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--left-item--2IvtqT3" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=security_%26_protection" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+</div>
+<div>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--right-item--1t-lmQj" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=beauty_%26_health" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--left-item--2IvtqT3" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=tools_%26_industrail" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+</div>
+<div>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--right-item--1t-lmQj" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=lingerie_%26_loungewear" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--left-item--2IvtqT3" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=jewelry_%26_watches" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+</div>
+</div>
+<div class="pc2023-category-new--loopBtn--2tn3pYs" style="
+                        right: 84px;
+                        background-position: center;
+                        transform: rotate(180deg);
+                      "></div>
+<div class="pc2023-category-new--lucency-right-main--1ElRlH3"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="common-floor" data-component-id='5547475' data-floor-name="pc2023-choice-slider" data-spm="choicetab">
+<div class="row-container--root--33oSY1n" style="
+                  margin-top: 24px;
+                  background-image: url(https://ae01.alicdn.com/kf/S3d5120b70506416aae4d4a8e0a9742a9X/2880x837.png);
+                  background-color: #fff8dc;
+                  background-position: center top;
+                  background-repeat: no-repeat;
+                  background-size: auto 100%;
+                ">
+<div class="pc2023-choice-slider--content--O17NJmX" id="pc2023ChoiceSliderContent" style="padding-top: 46px">
+<div class="pc2023-choice-slider--titleWrap--1vRx3P3">
+<div class="pc2023-choice-slider--choiceIcon--1zYa5nk img-wrap--wrap--1jlTYcq">
+<img alt="" src="https://ae01.alicdn.com/kf/S1887a285b60743859ac7bdbfca5e0896Z/154x64.png"></img>
+</div>
+<div class="pc2023-choice-slider--title-layout--1YqX4Tk">
+<a class="pc2023-choice-slider--title-left--2En4Zb4" href="https://www.aliexpress.com/gcp/300000556/8eAWDEY6Zi?disableNav=YES&pha_manifest=ssr&_immersiveMode=true" target="_blank">
+<p class="pc2023-choice-slider--title--2RJt_2J" style="
+                            color: #f9384f;
+                            font-size: 24px;
+                            line-height: 38px;
+                            font-weight: 700;
+                            font-style: italic;
+                          ">
+                          Better services and selected items on Choice
+                        </p>
+<p class="pc2023-choice-slider--subtitle--w8am1mk"></p>
+</a>
+<div class="pc2023-choice-slider--viewmore--DYpMZOC">
+<a href="https://www.aliexpress.com/gcp/300000556/8eAWDEY6Zi?disableNav=YES&pha_manifest=ssr&_immersiveMode=true">
+<span class="view-more--text--3S9_Bas">
+                            View more
+                          </span>
+<span class="view-more--img--e-F-0hl"> </span>
+</a>
+</div>
+</div>
+</div>
+<div>
+<div class="pc2023-choice-slider--loopBtn--nVMiGCN disabled" style="top: 50%; left: -16px; background-position: center"></div>
+<div class="es--root--3PUGUTI" style="
+                        display: flex;
+                        flex-direction: row;
+                        width: 100%;
+                        overflow-x: hidden;
+                        overflow-y: visible;
+                        padding-bottom: 46px;
+                        position: relative;
+                      ">
+<div class="choice-card--firstImgWrapper--1FlvXdL">
+<div class="choice-card--firstCard--1lV2oKf" style="
+                            background-color: #fff8dc;
+                            background-image: url(https://ae01.alicdn.com/kf/Sf00ffce382b941abad4ed1362ca15e1fe/384x597.png);
+                            background-size: cover;
+                            background-position: center top;
+                            background-repeat: no-repeat;
+                            height: 100%;
+                          ">
+<a class="choice-card--top--xqrFg5o" href="https://www.aliexpress.com/gcp/300000557/diDJG2c8t3?disableNav=YES&pha_manifest=ssr&_immersiveMode=true" target="_blank">
+<div class="choice-card--firstCardLine--1HHq2Jv">
+<div class="choice-card--firstCardIcon--2jIQ1a7 img-wrap--wrap--1jlTYcq">
+<img src="https://ae01.alicdn.com/kf/S51c90b927bd94271a6e909ab7f917828d/24x24.png"></img>
+</div>
+<span class="choice-card--firstCardText--7val8Gx">
+                                Free shipping over C$10
+                              </span>
+</div>
+</a>
+<a class="choice-card--learnMoreText--2Ezx8Li choice-card--mid--29RTIsl" href="https://www.aliexpress.com/gcp/300000557/diDJG2c8t3?disableNav=YES&pha_manifest=ssr&_immersiveMode=true" target="_blank">
+                            Learn more
+                          </a>
+<a class="choice-card--last--3rGyVWN" href="https://www.aliexpress.com/gcp/300000557/diDJG2c8t3?disableNav=YES&pha_manifest=ssr&_immersiveMode=true" target="_blank">
+</a>
+</div>
+</div>
+<a class="choice-card--cardWrapper--3jsUFpw" href="https://www.aliexpress.com/gcp/300000556/8eAWDEY6Zi?disableNav=YES&pha_manifest=ssr&_immersiveMode=true&productIds=1005007060436225" target="_blank">
+<div class="choice-card--card--WFgnb1n">
+<div class="choice-card--cardHeader--3zDrun4">
+<div class="lazy-load-placeholder" style="height: 100%"></div>
+<div class="choice-card--cartWrapper--35wjIf2" style="right: 12px; left: auto">
+<span class="comet-icon comet-icon-shoppingcartadd32 choice-card--cartIcon--aJpkW9s">
+<svg aria-hidden='false' fill="currentColor" focusable='false' height="1em" viewbox="0 0 1024 1024" width="1em">
+<path d="M256 960a64 64 0 1 0 0-128 64 64 0 0 0 0 128z m544 0a64 64 0 1 0 0-128 64 64 0 0 0 0 128zM31.424 92.736a48 48 0 0 1 67.84 2.688 186.208 186.208 0 0 1 46.976 96.32l1.28 9.024 50.496 444.64a48 48 0 0 0 43.168 42.368l4.512 0.224H812.16a48 48 0 0 0 46.72-37.152l0.832-4.384 44.256-326.24a48 48 0 0 1 95.52 8.32l-0.384 4.576-44.256 326.24a144 144 0 0 1-135.776 124.48l-6.912 0.16H245.696a144 144 0 0 1-142.144-120.96l-0.928-6.784L52.16 211.584a90.208 90.208 0 0 0-19.2-46.176l-4.16-4.832a48 48 0 0 1 2.656-67.84z"></path>
+<path d="M528 128c24.96 0 45.44 16.512 47.776 37.6L576 169.6V288h118.4c22.976 0 41.6 21.504 41.6 48 0 24.96-16.512 45.44-37.6 47.776L694.4 384H576v118.4c0 22.976-21.504 41.6-48 41.6-24.96 0-45.44-16.512-47.776-37.6L480 502.4V384h-118.4c-22.976 0-41.6-21.504-41.6-48 0-24.96 16.512-45.44 37.6-47.776L361.6 288H480V169.6c0-22.976 21.504-41.6 48-41.6z"></path>
+</svg>
+</span>
+</div>
+</div>
+<div class="choice-card--cardTitle--768udKd">
+                            G17 Pistol Shell Throwing Continuous Firing Blowback
+                            Soft Bullet Gun Empty Hanging Birthday Gift
+                          </div>
+<div class="choice-card--cardReview--1VvyjrG">
+<div class="rc-modules--stars--o9mzAea" title='4.5'>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='32' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='32' x='32' y='0'></rect>
+</g>
+</svg>
+</div>
+<span class="choice-card--text--2bU-SGq">
+                              2,000+
+                              <!-- -->
+<!-- -->
+                              sold
+                            </span>
+</div>
+<div class="choice-card--cardPrice--ARWuZ9-">
+<div class="es--wrap--2p8eS4Q notranslate" style="font-size: 14.4px">
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                C$
+                              </span>
+<span class="es--space2--2NEE6dI"> </span>
+<span class="es--char53--1jg_1HC choice-card--priceInteger--1LBSCA0">
+                                5
+                              </span>
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                .
+                              </span>
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                0
+                              </span>
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                7
+                              </span>
+</div>
+<span class="choice-card--originPrice--1_jVlp2">
+                              C$18.02
+                            </span>
+</div>
+<div class="choice-card--cardSuperDeals--1FSJIpw"></div>
+</div>
+<div class="choice-card--cardFooter--3ndDdlQ">
+<button class="choice-card--btnQuick--QBaf1OU">
+                            See preview
+                          </button>
+</div>
+</a>
+<a class="choice-card--cardWrapper--3jsUFpw" href="https://www.aliexpress.com/gcp/300000556/8eAWDEY6Zi?disableNav=YES&pha_manifest=ssr&_immersiveMode=true&productIds=1005006419416551" target="_blank">
+<div class="choice-card--card--WFgnb1n">
+<div class="choice-card--cardHeader--3zDrun4">
+<div class="lazy-load-placeholder" style="height: 100%"></div>
+<div class="choice-card--cartWrapper--35wjIf2" style="right: 12px; left: auto">
+<span class="comet-icon comet-icon-shoppingcartadd32 choice-card--cartIcon--aJpkW9s">
+<svg aria-hidden='false' fill="currentColor" focusable='false' height="1em" viewbox="0 0 1024 1024" width="1em">
+<path d="M256 960a64 64 0 1 0 0-128 64 64 0 0 0 0 128z m544 0a64 64 0 1 0 0-128 64 64 0 0 0 0 128zM31.424 92.736a48 48 0 0 1 67.84 2.688 186.208 186.208 0 0 1 46.976 96.32l1.28 9.024 50.496 444.64a48 48 0 0 0 43.168 42.368l4.512 0.224H812.16a48 48 0 0 0 46.72-37.152l0.832-4.384 44.256-326.24a48 48 0 0 1 95.52 8.32l-0.384 4.576-44.256 326.24a144 144 0 0 1-135.776 124.48l-6.912 0.16H245.696a144 144 0 0 1-142.144-120.96l-0.928-6.784L52.16 211.584a90.208 90.208 0 0 0-19.2-46.176l-4.16-4.832a48 48 0 0 1 2.656-67.84z"></path>
+<path d="M528 128c24.96 0 45.44 16.512 47.776 37.6L576 169.6V288h118.4c22.976 0 41.6 21.504 41.6 48 0 24.96-16.512 45.44-37.6 47.776L694.4 384H576v118.4c0 22.976-21.504 41.6-48 41.6-24.96 0-45.44-16.512-47.776-37.6L480 502.4V384h-118.4c-22.976 0-41.6-21.504-41.6-48 0-24.96 16.512-45.44 37.6-47.776L361.6 288H480V169.6c0-22.976 21.504-41.6 48-41.6z"></path>
+</svg>
+</span>
+</div>
+</div>
+<div class="choice-card--cardTitle--768udKd">
+                            7/8/9/10 Pcs Set Travel Organizer Storage Bags
+                            Suitcase Packing Cubes Set Cases Portable Luggage
+                            Clothes Shoe Tidy Pouch Folding
+                          </div>
+<div class="choice-card--cardReview--1VvyjrG">
+<div class="rc-modules--stars--o9mzAea" title='4.8'>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='51.19999999999999' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='12.800000000000011' x='51.19999999999999' y='0'></rect>
+</g>
+</svg>
+</div>
+<span class="choice-card--text--2bU-SGq">
+                              10,000+
+                              <!-- -->
+<!-- -->
+                              sold
+                            </span>
+</div>
+<div class="choice-card--cardPrice--ARWuZ9-">
+<div class="es--wrap--2p8eS4Q notranslate" style="font-size: 14.4px">
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                C$
+                              </span>
+<span class="es--space2--2NEE6dI"> </span>
+<span class="es--char53--1jg_1HC choice-card--priceInteger--1LBSCA0">
+                                3
+                              </span>
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                .
+                              </span>
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                9
+                              </span>
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                8
+                              </span>
+</div>
+<span class="choice-card--originPrice--1_jVlp2">
+                              C$26.18
+                            </span>
+</div>
+<div class="choice-card--cardSuperDeals--1FSJIpw"></div>
+</div>
+<div class="choice-card--cardFooter--3ndDdlQ">
+<button class="choice-card--btnQuick--QBaf1OU">
+                            See preview
+                          </button>
+</div>
+</a>
+<a class="choice-card--cardWrapper--3jsUFpw" href="https://www.aliexpress.com/gcp/300000556/8eAWDEY6Zi?disableNav=YES&pha_manifest=ssr&_immersiveMode=true&productIds=1005007296299385" target="_blank">
+<div class="choice-card--card--WFgnb1n">
+<div class="choice-card--cardHeader--3zDrun4">
+<div class="lazy-load-placeholder" style="height: 100%"></div>
+<div class="choice-card--cartWrapper--35wjIf2" style="right: 12px; left: auto">
+<span class="comet-icon comet-icon-shoppingcartadd32 choice-card--cartIcon--aJpkW9s">
+<svg aria-hidden='false' fill="currentColor" focusable='false' height="1em" viewbox="0 0 1024 1024" width="1em">
+<path d="M256 960a64 64 0 1 0 0-128 64 64 0 0 0 0 128z m544 0a64 64 0 1 0 0-128 64 64 0 0 0 0 128zM31.424 92.736a48 48 0 0 1 67.84 2.688 186.208 186.208 0 0 1 46.976 96.32l1.28 9.024 50.496 444.64a48 48 0 0 0 43.168 42.368l4.512 0.224H812.16a48 48 0 0 0 46.72-37.152l0.832-4.384 44.256-326.24a48 48 0 0 1 95.52 8.32l-0.384 4.576-44.256 326.24a144 144 0 0 1-135.776 124.48l-6.912 0.16H245.696a144 144 0 0 1-142.144-120.96l-0.928-6.784L52.16 211.584a90.208 90.208 0 0 0-19.2-46.176l-4.16-4.832a48 48 0 0 1 2.656-67.84z"></path>
+<path d="M528 128c24.96 0 45.44 16.512 47.776 37.6L576 169.6V288h118.4c22.976 0 41.6 21.504 41.6 48 0 24.96-16.512 45.44-37.6 47.776L694.4 384H576v118.4c0 22.976-21.504 41.6-48 41.6-24.96 0-45.44-16.512-47.776-37.6L480 502.4V384h-118.4c-22.976 0-41.6-21.504-41.6-48 0-24.96 16.512-45.44 37.6-47.776L361.6 288H480V169.6c0-22.976 21.504-41.6 48-41.6z"></path>
+</svg>
+</span>
+</div>
+</div>
+<div class="choice-card--cardTitle--768udKd">
+                            2024 Dish Drying Rack Kitchen Adjustable Stainless
+                            Steel 2 Tier Plates Organizer Dish Bowl Drainer
+                            Storage Rack Kitchen Utensils
+                          </div>
+<div class="choice-card--cardReview--1VvyjrG">
+<div class="rc-modules--stars--o9mzAea" title='4.4'>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='25.600000000000023' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='38.39999999999998' x='25.600000000000023' y='0'></rect>
+</g>
+</svg>
+</div>
+<span class="choice-card--text--2bU-SGq">
+                              5,000+
+                              <!-- -->
+<!-- -->
+                              sold
+                            </span>
+</div>
+<div class="choice-card--cardPrice--ARWuZ9-">
+<div class="es--wrap--2p8eS4Q notranslate" style="font-size: 14.4px">
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                C$
+                              </span>
+<span class="es--space2--2NEE6dI"> </span>
+<span class="es--char53--1jg_1HC choice-card--priceInteger--1LBSCA0">
+                                1
+                              </span>
+<span class="es--char53--1jg_1HC choice-card--priceInteger--1LBSCA0">
+                                0
+                              </span>
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                .
+                              </span>
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                4
+                              </span>
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                4
+                              </span>
+</div>
+<span class="choice-card--originPrice--1_jVlp2">
+                              C$46.54
+                            </span>
+</div>
+<div class="choice-card--cardSuperDeals--1FSJIpw"></div>
+</div>
+<div class="choice-card--cardFooter--3ndDdlQ">
+<button class="choice-card--btnQuick--QBaf1OU">
+                            See preview
+                          </button>
+</div>
+</a>
+<a class="choice-card--cardWrapper--3jsUFpw" href="https://www.aliexpress.com/gcp/300000556/8eAWDEY6Zi?disableNav=YES&pha_manifest=ssr&_immersiveMode=true&productIds=1005007355666263" target="_blank">
+<div class="choice-card--card--WFgnb1n">
+<div class="choice-card--cardHeader--3zDrun4">
+<div class="lazy-load-placeholder" style="height: 100%"></div>
+<div class="choice-card--cartWrapper--35wjIf2" style="right: 12px; left: auto">
+<span class="comet-icon comet-icon-shoppingcartadd32 choice-card--cartIcon--aJpkW9s">
+<svg aria-hidden='false' fill="currentColor" focusable='false' height="1em" viewbox="0 0 1024 1024" width="1em">
+<path d="M256 960a64 64 0 1 0 0-128 64 64 0 0 0 0 128z m544 0a64 64 0 1 0 0-128 64 64 0 0 0 0 128zM31.424 92.736a48 48 0 0 1 67.84 2.688 186.208 186.208 0 0 1 46.976 96.32l1.28 9.024 50.496 444.64a48 48 0 0 0 43.168 42.368l4.512 0.224H812.16a48 48 0 0 0 46.72-37.152l0.832-4.384 44.256-326.24a48 48 0 0 1 95.52 8.32l-0.384 4.576-44.256 326.24a144 144 0 0 1-135.776 124.48l-6.912 0.16H245.696a144 144 0 0 1-142.144-120.96l-0.928-6.784L52.16 211.584a90.208 90.208 0 0 0-19.2-46.176l-4.16-4.832a48 48 0 0 1 2.656-67.84z"></path>
+<path d="M528 128c24.96 0 45.44 16.512 47.776 37.6L576 169.6V288h118.4c22.976 0 41.6 21.504 41.6 48 0 24.96-16.512 45.44-37.6 47.776L694.4 384H576v118.4c0 22.976-21.504 41.6-48 41.6-24.96 0-45.44-16.512-47.776-37.6L480 502.4V384h-118.4c-22.976 0-41.6-21.504-41.6-48 0-24.96 16.512-45.44 37.6-47.776L361.6 288H480V169.6c0-22.976 21.504-41.6 48-41.6z"></path>
+</svg>
+</span>
+</div>
+</div>
+<div class="choice-card--cardTitle--768udKd">
+                            E99 Pro Drone Quadcopter Remote Control Handle Four
+                            Axis Aircraft HD 6K Photography UAV Altitude
+                            Fixation Helicopter Toys
+                          </div>
+<div class="choice-card--cardReview--1VvyjrG">
+<div class="rc-modules--stars--o9mzAea" title='3.9'>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='57.599999999999994' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='6.400000000000006' x='57.599999999999994' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='0' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='64' x='0' y='0'></rect>
+</g>
+</svg>
+</div>
+<span class="choice-card--text--2bU-SGq">
+                              2,000+
+                              <!-- -->
+<!-- -->
+                              sold
+                            </span>
+</div>
+<div class="choice-card--cardPrice--ARWuZ9-">
+<div class="es--wrap--2p8eS4Q notranslate" style="font-size: 14.4px">
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                C$
+                              </span>
+<span class="es--space2--2NEE6dI"> </span>
+<span class="es--char53--1jg_1HC choice-card--priceInteger--1LBSCA0">
+                                1
+                              </span>
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                .
+                              </span>
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                3
+                              </span>
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                9
+                              </span>
+</div>
+<span class="choice-card--originPrice--1_jVlp2">
+                              C$7.44
+                            </span>
+</div>
+<div class="choice-card--cardSuperDeals--1FSJIpw"></div>
+</div>
+<div class="choice-card--cardFooter--3ndDdlQ">
+<button class="choice-card--btnQuick--QBaf1OU">
+                            See preview
+                          </button>
+</div>
+</a>
+<a class="choice-card--cardWrapper--3jsUFpw" href="https://www.aliexpress.com/gcp/300000556/8eAWDEY6Zi?disableNav=YES&pha_manifest=ssr&_immersiveMode=true&productIds=1005007322404794" target="_blank">
+<div class="choice-card--card--WFgnb1n">
+<div class="choice-card--cardHeader--3zDrun4">
+<div class="lazy-load-placeholder" style="height: 100%"></div>
+<div class="choice-card--cartWrapper--35wjIf2" style="right: 12px; left: auto">
+<span class="comet-icon comet-icon-shoppingcartadd32 choice-card--cartIcon--aJpkW9s">
+<svg aria-hidden='false' fill="currentColor" focusable='false' height="1em" viewbox="0 0 1024 1024" width="1em">
+<path d="M256 960a64 64 0 1 0 0-128 64 64 0 0 0 0 128z m544 0a64 64 0 1 0 0-128 64 64 0 0 0 0 128zM31.424 92.736a48 48 0 0 1 67.84 2.688 186.208 186.208 0 0 1 46.976 96.32l1.28 9.024 50.496 444.64a48 48 0 0 0 43.168 42.368l4.512 0.224H812.16a48 48 0 0 0 46.72-37.152l0.832-4.384 44.256-326.24a48 48 0 0 1 95.52 8.32l-0.384 4.576-44.256 326.24a144 144 0 0 1-135.776 124.48l-6.912 0.16H245.696a144 144 0 0 1-142.144-120.96l-0.928-6.784L52.16 211.584a90.208 90.208 0 0 0-19.2-46.176l-4.16-4.832a48 48 0 0 1 2.656-67.84z"></path>
+<path d="M528 128c24.96 0 45.44 16.512 47.776 37.6L576 169.6V288h118.4c22.976 0 41.6 21.504 41.6 48 0 24.96-16.512 45.44-37.6 47.776L694.4 384H576v118.4c0 22.976-21.504 41.6-48 41.6-24.96 0-45.44-16.512-47.776-37.6L480 502.4V384h-118.4c-22.976 0-41.6-21.504-41.6-48 0-24.96 16.512-45.44 37.6-47.776L361.6 288H480V169.6c0-22.976 21.504-41.6 48-41.6z"></path>
+</svg>
+</span>
+</div>
+</div>
+<div class="choice-card--cardTitle--768udKd">
+                            Spring Lightweight Deodorant Men's Shoes Breathable
+                            Mesh Sneakers Comfortable Trendy Versatile Shoes Men
+                          </div>
+<div class="choice-card--cardReview--1VvyjrG">
+<div class="rc-modules--stars--o9mzAea" title='4.4'>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='25.600000000000023' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='38.39999999999998' x='25.600000000000023' y='0'></rect>
+</g>
+</svg>
+</div>
+<span class="choice-card--text--2bU-SGq">
+                              4,000+
+                              <!-- -->
+<!-- -->
+                              sold
+                            </span>
+</div>
+<div class="choice-card--cardPrice--ARWuZ9-">
+<div class="es--wrap--2p8eS4Q notranslate" style="font-size: 14.4px">
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                C$
+                              </span>
+
+        ```
+        

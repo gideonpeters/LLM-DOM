@@ -1,0 +1,228 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. cumulative-layout-shift => Cumulative Layout Shift: Cumulative Layout Shift measures the movement of visible elements within the viewport. [Learn more about the Cumulative Layout Shift metric](https://web.dev/articles/cls).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        
+                    Integrity Compliance
+                  </a>
+                  ,
+                  <a href="https://www.aliexpress.com/p/transparencycenter/index.html" ref="nofollow" style="white-space: nowrap">
+                    Transparency Center
+                  </a>
+                  ,
+                  <a href="https://m.aliexpress.com/p/complaint-center/index.html#/complaint/report" ref="nofollow" style="white-space: nowrap">
+                    Submit report (non-registered users)
+                  </a>
+</dd>
+</dl>
+</div>
+<div class="sf-MultiLanguageSite col-lg-30 col-md-30 col-sm-60">
+<dl>
+<dt>AliExpress Multi-Language Sites</dt>
+<dd>
+<a href="//ru.aliexpress.com"> Russian </a>
+                  ,
+                  <a href="//pt.aliexpress.com"> Portuguese </a>
+                  ,
+                  <a href="//es.aliexpress.com"> Spanish </a>
+                  ,
+                  <a href="//fr.aliexpress.com"> French </a>
+                  ,
+                  <a href="//de.aliexpress.com"> German </a>
+                  ,
+                  <a href="//it.aliexpress.com"> Italian </a>
+                  ,
+                  <a href="//nl.aliexpress.com"> Dutch </a>
+                  ,
+                  <a href="//tr.aliexpress.com"> Turkish </a>
+                  ,
+                  <a href="//ja.aliexpress.com"> Japanese </a>
+                  ,
+                  <a href="//ko.aliexpress.com"> Korean </a>
+                  ,
+                  <a href="//th.aliexpress.com"> Thai </a>
+                  ,
+                  <a href="//vi.aliexpress.com"> Vietnamese </a>
+                  ,
+                  <a href="//ar.aliexpress.com"> Arabic </a>
+                  ,
+                  <a href="//he.aliexpress.com"> Hebrew </a>
+                  ,
+                  <a href="//pl.aliexpress.com"> Polish </a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sf-seoKeyword col-lg-30 col-md-30 col-sm-60">
+<dl>
+<dt>Browse by Category</dt>
+<dd>
+<span>
+<a href="//www.aliexpress.com/popular.html"> All Popular </a>
+                  ,
+                  <a href="//www.aliexpress.com/wholesale.html"> Product </a>
+                  ,
+                  <a href="//www.aliexpress.com/promotion.html"> Promotion </a>
+                  ,
+                  <a href="//www.aliexpress.com/price.html"> Low Price </a>
+                  ,
+                  <a href="//www.aliexpress.com/cheap.html"> Great Value </a>
+                  ,
+                  <a href="//www.aliexpress.com/reviews.html"> Reviews </a>
+</span>
+</dd>
+</dl>
+</div>
+<div class="sf-alibabaGroup col-lg-30 col-md-30 col-sm-60">
+<dl>
+<dt>Alibaba Group</dt>
+<dd>
+<a href="http://www.alibabagroup.com/en/global/home" ref="nofollow">
+                  Alibaba Group Website
+                </a>
+                ,
+                <a href="//www.aliexpress.com/" ref="nofollow"> AliExpress </a>
+                ,
+                <a href="http://www.alimama.com/" ref="nofollow"> Alimama </a>
+                ,
+                <a href="https://intl.alipay.com/index.htm" ref="nofollow">
+                  Alipay
+                </a>
+                ,
+                <a href="http://www.fliggy.com/" ref="nofollow"> Fliggy </a>
+                ,
+                <a href="http://www.alibabacloud.com" ref="nofollow">
+                  Alibaba Cloud
+                </a>
+                ,
+                <a href="http://www.alibaba.com/" ref="nofollow">
+                  Alibaba International
+                </a>
+                ,
+                <a href="http://aliqin.tmall.com/" ref="nofollow">
+                  AliTelecom
+                </a>
+                ,
+                <a href="http://www.dingtalk.com/" ref="nofollow"> DingTalk </a>
+                ,
+                <a href="http://ju.taobao.com/" ref="nofollow"> Juhuasuan </a>
+                ,
+                <a href="http://www.taobao.com/" ref="nofollow">
+                  Taobao Marketplace
+                </a>
+                ,
+                <a href="http://www.tmall.com/" ref="nofollow"> Tmall </a>
+                ,
+                <a href="https://world.taobao.com/" ref="nofollow">
+                  Taobao Global
+                </a>
+                ,
+                <a href="http://www.alios.cn/" ref="nofollow"> AliOS </a>
+                ,
+                <a href="http://www.1688.com/" ref="nofollow"> 1688 </a>
+</dd>
+</dl>
+</div>
+<div class="sf-download-app">
+<a class="android-link" href="https://play.google.com/store/apps/details?id=com.alibaba.aliexpresshd" ref="nofollow" target="_blank">
+              Google Play
+            </a>
+<a class="iphone-link" href="https://itunes.apple.com/us/app/aliexpress/id436672029" ref="nofollow" target="_blank">
+              App Store
+            </a>
+<a class="huawei-link" href="https://appgallery.cloud.huawei.com/ag/n/app/C100376431?channelId=aliexpress_ES&id=62b880f4695f40c8bcaf091ea67ed2de&s=3AE7701D49982BD65666C6E195FFD71687795C1ECC5EBCED673BEE2264036DA5&detailType=0&v=&shareTo=qrcode" ref="nofollow" target="_blank">
+              AppGallery
+            </a>
+</div>
+</div>
+</div>
+<div class="footer-copywrite">
+<div class="container">
+<a href="https://ipp.aidcgroup.net/#/ippHome" ref="nofollow">
+            Intellectual Property Protection
+          </a>
+          -
+          <a href="https://campaign.aliexpress.com/wow/gcp/app-redirect-terms/index" ref="nofollow">
+            Privacy Policy
+          </a>
+          -
+          <a href="https://www.aliexpress.com/sitemap.html"> Sitemap </a>
+          -
+          <a data-role="terms-of-use" href="https://terms.alicdn.com/legal-agreement/terms/suit_bu1_aliexpress/suit_bu1_aliexpress202204182115_66077.html" ref="nofollow">
+            Terms of Use
+          </a>
+          -
+          <a href="https://sale.aliexpress.com/__pc/QnoLFBVfqY.htm" ref="nofollow">
+            Information for EU consumers
+          </a>
+          -
+          <a href="https://terms.alicdn.com/legal-agreement/terms/c_end_product_protocol/20230928165112460/20230928165112460.html" ref="nofollow">
+            Imprint
+          </a>
+          -
+          <a href="https://rulechannel.alibaba.com/icbu?type=detail&ruleId=2054&cId=1304#/rule/detail?cId=1304&ruleId=2054" ref="nofollow">
+            Transaction Services Agreement for non-EU/UK Consumers
+          </a>
+          -
+          <a href="https://campaign.aliexpress.com/wow/gcp-plus/ae/tupr?_immersiveMode=true&pha_manifest=upr&disableNav=YES&wh_pid=300000414/pt8AMcBikk" ref="nofollow">
+            Terms and Conditions for EU/EEA/UK Consumers
+          </a>
+          -
+          <a href="https://terms.alicdn.com/legal-agreement/terms/data_processing_agreement_others/20231101174825691/20231101174825691.html" ref="nofollow">
+            User Information Legal Enquiry Guide
+          </a>
+          ©️2010-2024 AliExpress.com. All rights reserved.
+          <a href="http://idinfo.zjamr.zj.gov.cn//bscx.do?spm=5261.11333555.006.4.6fd42fe0LrlYeu&method=lzxx&id=3301083301080000022169" ref="nofollow">
+<img alt="增值电信业务经营许可证" src="https://ae01.alicdn.com/kf/Hfff52cf71f784d99ad93c73a334e7e37a/65x70.gif" style="width: 22px"></img>
+</a>
+<a href="https://beian.miit.gov.cn/">
+            增值电信业务经营许可证 浙B2-20120091-8
+          </a>
+<a href="http://www.beian.gov.cn/portal/registerSystemInfo?spm=a260k.dacugeneral.home2019footer.32.6633436c8h108e&recordcode=33010802002248" ref="nofollow">
+<img alt="浙公网安备" src="//ae01.alicdn.com/kf/H107313c145a24eec94287c19fd2aa5c0e/20x20.png"></img>
+            浙公网安备 33010802002248号
+          </a>
+</div>
+</div>
+<script data-chunk-uuid="8794a4ee-af96-4049-a557-8160d329291d">// chunk_script_8794a4ee-af96-4049-a557-8160d329291d
+</script>
+<script data-chunk-uuid="830d413f-63b9-461f-bc65-0ee7e96c8995">// chunk_script_830d413f-63b9-461f-bc65-0ee7e96c8995
+</script>
+<!--gbf block end -->
+</div>
+
+        ```
+        

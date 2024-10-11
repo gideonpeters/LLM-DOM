@@ -355,7 +355,7 @@ class HTMLModifier:
             print(e)
             return html_part
 
-        #sleep for 1 or 2 seconds to avoid hitting the rate limit
+        # sleep for 1 or 2 seconds to avoid hitting the rate limit
         sleep(random.uniform(1, 2))
 
         response_content = ""
@@ -364,7 +364,9 @@ class HTMLModifier:
 
             finish_reason = response.choices[0].finish_reason
             if finish_reason != 'stop':
-                self.log_error(self.dom_name, finish_reason)
+                self.log_error(prompt_uuid, finish_reason, {
+                    "trace": response
+                })
 
             else:
                 response_content = response.choices[0].message.content
@@ -377,7 +379,9 @@ class HTMLModifier:
                 self.no_of_modifications += no_of_modifications
         except Exception as e:
             print(f"Error: {e}")
-            self.log_error(self.dom_name, self.experiment_name, "No finish reason", e, response)
+            self.log_error(prompt_uuid, "No finish reason", {
+                "trace": response
+            })
             response_content = html_part
         
         return response_content
@@ -401,11 +405,13 @@ class HTMLModifier:
         
         return parsed_response
     
-    def log_error(self, dom_name: int, finish_reason: str, trace=None):
-        error_file_path = os.path.join(os.getcwd(), f"error_{self.dom_name}.log")
+    def log_error(self, prompt_uuid: int, finish_reason: str, trace=None):
+        log_name = f"error_{self.dom_name}_{self.experiment_name}_{self.mode}.log"
+
+        error_file_path = os.path.join(os.getcwd(), f"{log_name}")
 
         with open(error_file_path, 'a') as file:
-            file.write(f"{dom_name}, {finish_reason}, {trace}\n")
+            file.write(f"{prompt_uuid}, {finish_reason}, {trace}\n")
 
 
     def modify_html_with_llm(self, audit_issue, audit_key=None):

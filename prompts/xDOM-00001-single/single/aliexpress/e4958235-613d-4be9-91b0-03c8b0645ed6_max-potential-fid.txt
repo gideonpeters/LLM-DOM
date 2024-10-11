@@ -1,0 +1,529 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. max-potential-fid => Max Potential First Input Delay: The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        <div class="es--wrap--2p8eS4Q notranslate" style="font-size: 14.4px">
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                C$
+                              </span>
+<span class="es--space2--2NEE6dI"> </span>
+<span class="es--char53--1jg_1HC choice-card--priceInteger--1LBSCA0">
+                                7
+                              </span>
+<span class="es--char53--1jg_1HC choice-card--priceInteger--1LBSCA0">
+                                8
+                              </span>
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                .
+                              </span>
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                0
+                              </span>
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                0
+                              </span>
+</div>
+<span class="choice-card--originPrice--1_jVlp2">
+                              C$114.70
+                            </span>
+</div>
+<div class="choice-card--cardSuperDeals--1FSJIpw"></div>
+</div>
+<div class="choice-card--cardFooter--3ndDdlQ choice-card--bottomBorder--3CNjSi1">
+<button class="choice-card--btnQuick--QBaf1OU">
+                            View more
+                          </button>
+</div>
+</a>
+<a class="choice-card--cardWrapper--3jsUFpw" href="https://www.aliexpress.com/ssr/300001505/rEkz8fMwjY?disableNav=YES&pha_manifest=ssr&_immersiveMode=true&productIds=1005004832499070" target="_blank">
+<div class="choice-card--card--WFgnb1n choice-card--topBorder--2G_YXfz">
+<div class="choice-card--cardHeader--3zDrun4">
+<div class="lazy-load-placeholder" style="height: 100%"></div>
+<div class="choice-card--cartWrapper--35wjIf2" style="right: 12px; left: auto">
+<span class="comet-icon comet-icon-shoppingcartadd32 choice-card--cartIcon--aJpkW9s">
+<svg aria-hidden='false' fill="currentColor" focusable='false' height="1em" viewbox="0 0 1024 1024" width="1em">
+<path d="M256 960a64 64 0 1 0 0-128 64 64 0 0 0 0 128z m544 0a64 64 0 1 0 0-128 64 64 0 0 0 0 128zM31.424 92.736a48 48 0 0 1 67.84 2.688 186.208 186.208 0 0 1 46.976 96.32l1.28 9.024 50.496 444.64a48 48 0 0 0 43.168 42.368l4.512 0.224H812.16a48 48 0 0 0 46.72-37.152l0.832-4.384 44.256-326.24a48 48 0 0 1 95.52 8.32l-0.384 4.576-44.256 326.24a144 144 0 0 1-135.776 124.48l-6.912 0.16H245.696a144 144 0 0 1-142.144-120.96l-0.928-6.784L52.16 211.584a90.208 90.208 0 0 0-19.2-46.176l-4.16-4.832a48 48 0 0 1 2.656-67.84z"></path>
+<path d="M528 128c24.96 0 45.44 16.512 47.776 37.6L576 169.6V288h118.4c22.976 0 41.6 21.504 41.6 48 0 24.96-16.512 45.44-37.6 47.776L694.4 384H576v118.4c0 22.976-21.504 41.6-48 41.6-24.96 0-45.44-16.512-47.776-37.6L480 502.4V384h-118.4c-22.976 0-41.6-21.504-41.6-48 0-24.96 16.512-45.44 37.6-47.776L361.6 288H480V169.6c0-22.976 21.504-41.6 48-41.6z"></path>
+</svg>
+</span>
+</div>
+</div>
+<div class="choice-card--cardTitle--768udKd">
+                            NVGTN Spandex Solid Seamless Shorts Women Soft
+                            Workout Tights Fitness Outfits Yoga Pants Gym Wear
+                          </div>
+<div class="choice-card--cardReview--1VvyjrG">
+<div class="rc-modules--stars--o9mzAea" title='4.6'>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='38.39999999999998' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='25.600000000000023' x='38.39999999999998' y='0'></rect>
+</g>
+</svg>
+</div>
+<span class="choice-card--text--2bU-SGq">
+                              10,000+
+                              <!-- -->
+<!-- -->
+                              sold
+                            </span>
+</div>
+<div class="choice-card--cardPrice--ARWuZ9-">
+<div class="es--wrap--2p8eS4Q notranslate" style="font-size: 14.4px">
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                C$
+                              </span>
+<span class="es--space2--2NEE6dI"> </span>
+<span class="es--char53--1jg_1HC choice-card--priceInteger--1LBSCA0">
+                                1
+                              </span>
+<span class="es--char53--1jg_1HC choice-card--priceInteger--1LBSCA0">
+                                8
+                              </span>
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                .
+                              </span>
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                2
+                              </span>
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                3
+                              </span>
+</div>
+<span class="choice-card--originPrice--1_jVlp2">
+                              C$20.78
+                            </span>
+</div>
+<div class="choice-card--cardSuperDeals--1FSJIpw"></div>
+</div>
+<div class="choice-card--cardFooter--3ndDdlQ choice-card--bottomBorder--3CNjSi1">
+<button class="choice-card--btnQuick--QBaf1OU">
+                            View more
+                          </button>
+</div>
+</a>
+<a class="choice-card--cardWrapper--3jsUFpw" href="https://www.aliexpress.com/ssr/300001505/rEkz8fMwjY?disableNav=YES&pha_manifest=ssr&_immersiveMode=true&productIds=1005006131687328" target="_blank">
+<div class="choice-card--card--WFgnb1n choice-card--topBorder--2G_YXfz">
+<div class="choice-card--cardHeader--3zDrun4">
+<div class="lazy-load-placeholder" style="height: 100%"></div>
+<div class="choice-card--cartWrapper--35wjIf2" style="right: 12px; left: auto">
+<span class="comet-icon comet-icon-shoppingcartadd32 choice-card--cartIcon--aJpkW9s">
+<svg aria-hidden='false' fill="currentColor" focusable='false' height="1em" viewbox="0 0 1024 1024" width="1em">
+<path d="M256 960a64 64 0 1 0 0-128 64 64 0 0 0 0 128z m544 0a64 64 0 1 0 0-128 64 64 0 0 0 0 128zM31.424 92.736a48 48 0 0 1 67.84 2.688 186.208 186.208 0 0 1 46.976 96.32l1.28 9.024 50.496 444.64a48 48 0 0 0 43.168 42.368l4.512 0.224H812.16a48 48 0 0 0 46.72-37.152l0.832-4.384 44.256-326.24a48 48 0 0 1 95.52 8.32l-0.384 4.576-44.256 326.24a144 144 0 0 1-135.776 124.48l-6.912 0.16H245.696a144 144 0 0 1-142.144-120.96l-0.928-6.784L52.16 211.584a90.208 90.208 0 0 0-19.2-46.176l-4.16-4.832a48 48 0 0 1 2.656-67.84z"></path>
+<path d="M528 128c24.96 0 45.44 16.512 47.776 37.6L576 169.6V288h118.4c22.976 0 41.6 21.504 41.6 48 0 24.96-16.512 45.44-37.6 47.776L694.4 384H576v118.4c0 22.976-21.504 41.6-48 41.6-24.96 0-45.44-16.512-47.776-37.6L480 502.4V384h-118.4c-22.976 0-41.6-21.504-41.6-48 0-24.96 16.512-45.44 37.6-47.776L361.6 288H480V169.6c0-22.976 21.504-41.6 48-41.6z"></path>
+</svg>
+</span>
+</div>
+</div>
+<div class="choice-card--cardTitle--768udKd">
+                            Magcubic Projector 4K Android 11 HY300 Pro Dual
+                            Wifi6 260ANSI Allwinner H713 BT5.0 1280*720P Cinema
+                            Outdoor Portable Projetor
+                          </div>
+<div class="choice-card--cardReview--1VvyjrG">
+<div class="rc-modules--stars--o9mzAea" title='4.7'>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='44.80000000000001' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='19.19999999999999' x='44.80000000000001' y='0'></rect>
+</g>
+</svg>
+</div>
+<span class="choice-card--text--2bU-SGq">
+                              5,000+
+                              <!-- -->
+<!-- -->
+                              sold
+                            </span>
+</div>
+<div class="choice-card--cardPrice--ARWuZ9-">
+<div class="es--wrap--2p8eS4Q notranslate" style="font-size: 14.4px">
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                C$
+                              </span>
+<span class="es--space2--2NEE6dI"> </span>
+<span class="es--char53--1jg_1HC choice-card--priceInteger--1LBSCA0">
+                                7
+                              </span>
+<span class="es--char53--1jg_1HC choice-card--priceInteger--1LBSCA0">
+                                2
+                              </span>
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                .
+                              </span>
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                4
+                              </span>
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                8
+                              </span>
+</div>
+<span class="choice-card--originPrice--1_jVlp2">
+                              C$93.50
+                            </span>
+</div>
+<div class="choice-card--cardSuperDeals--1FSJIpw"></div>
+</div>
+<div class="choice-card--cardFooter--3ndDdlQ choice-card--bottomBorder--3CNjSi1">
+<button class="choice-card--btnQuick--QBaf1OU">
+                            View more
+                          </button>
+</div>
+</a>
+<a class="choice-card--cardWrapper--3jsUFpw" href="https://www.aliexpress.com/ssr/300001505/rEkz8fMwjY?disableNav=YES&pha_manifest=ssr&_immersiveMode=true&productIds=1005007154918647" target="_blank">
+<div class="choice-card--card--WFgnb1n choice-card--topBorder--2G_YXfz">
+<div class="choice-card--cardHeader--3zDrun4">
+<div class="lazy-load-placeholder" style="height: 100%"></div>
+<div class="choice-card--cartWrapper--35wjIf2" style="right: 12px; left: auto">
+<span class="comet-icon comet-icon-shoppingcartadd32 choice-card--cartIcon--aJpkW9s">
+<svg aria-hidden='false' fill="currentColor" focusable='false' height="1em" viewbox="0 0 1024 1024" width="1em">
+<path d="M256 960a64 64 0 1 0 0-128 64 64 0 0 0 0 128z m544 0a64 64 0 1 0 0-128 64 64 0 0 0 0 128zM31.424 92.736a48 48 0 0 1 67.84 2.688 186.208 186.208 0 0 1 46.976 96.32l1.28 9.024 50.496 444.64a48 48 0 0 0 43.168 42.368l4.512 0.224H812.16a48 48 0 0 0 46.72-37.152l0.832-4.384 44.256-326.24a48 48 0 0 1 95.52 8.32l-0.384 4.576-44.256 326.24a144 144 0 0 1-135.776 124.48l-6.912 0.16H245.696a144 144 0 0 1-142.144-120.96l-0.928-6.784L52.16 211.584a90.208 90.208 0 0 0-19.2-46.176l-4.16-4.832a48 48 0 0 1 2.656-67.84z"></path>
+<path d="M528 128c24.96 0 45.44 16.512 47.776 37.6L576 169.6V288h118.4c22.976 0 41.6 21.504 41.6 48 0 24.96-16.512 45.44-37.6 47.776L694.4 384H576v118.4c0 22.976-21.504 41.6-48 41.6-24.96 0-45.44-16.512-47.776-37.6L480 502.4V384h-118.4c-22.976 0-41.6-21.504-41.6-48 0-24.96 16.512-45.44 37.6-47.776L361.6 288H480V169.6c0-22.976 21.504-41.6 48-41.6z"></path>
+</svg>
+</span>
+</div>
+</div>
+<div class="choice-card--cardTitle--768udKd">
+                            Underneath Mounted Bike Lights for Night
+                            Riding,USB-C Rechargeable Bike Headlight, IPX 6
+                            Waterproof Bike Front Light EVO1700
+                          </div>
+<div class="choice-card--cardReview--1VvyjrG">
+<div class="rc-modules--stars--o9mzAea" title='5'>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+</div>
+<span class="choice-card--text--2bU-SGq">
+                              60
+                              <!-- -->
+<!-- -->
+                              sold
+                            </span>
+</div>
+<div class="choice-card--cardPrice--ARWuZ9-">
+<div class="es--wrap--2p8eS4Q notranslate" style="font-size: 14.4px">
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                C$
+                              </span>
+<span class="es--space2--2NEE6dI"> </span>
+<span class="es--char53--1jg_1HC choice-card--priceInteger--1LBSCA0">
+                                8
+                              </span>
+<span class="es--char53--1jg_1HC choice-card--priceInteger--1LBSCA0">
+                                1
+                              </span>
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                .
+                              </span>
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                7
+                              </span>
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                9
+                              </span>
+</div>
+<span class="choice-card--originPrice--1_jVlp2">
+                              C$124.41
+                            </span>
+</div>
+<div class="choice-card--cardSuperDeals--1FSJIpw"></div>
+</div>
+<div class="choice-card--cardFooter--3ndDdlQ choice-card--bottomBorder--3CNjSi1">
+<button class="choice-card--btnQuick--QBaf1OU">
+                            View more
+                          </button>
+</div>
+</a>
+</div>
+<div class="pc2023-normal-slider--loopBtn--tePrwd5 pc2023-normal-slider--rightBtn--22k3fOX"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="common-floor" data-component-id='5561744' data-floor-name="pc2023-category-new" data-spm="category_new">
+<div class="row-container--root--33oSY1n">
+<div class="pc2023-category-new--category-new-main--3_ybH1k" data-spm="category_new" id="pc2023Category">
+<span class="pc2023-category-new--title--1GsulwZ">
+                    Shop by categories
+                  </span>
+<div class="pc2023-category-new--category-part--2QUY5Hl">
+<div class="pc2023-category-new--lucency-main--2iBZ60M"></div>
+<div class="pc2023-category-new--loopBtn--2tn3pYs" style="left: 84px; background-position: center"></div>
+<div class="es--root--3PUGUTI" style="display: flex; flex-direction: row">
+<div>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--right-item--1t-lmQj" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=home_%26_garden" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--left-item--2IvtqT3" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=hair_extensions_%26_wigs" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+</div>
+<div>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--right-item--1t-lmQj" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=men%27s_clothing" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--left-item--2IvtqT3" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=accessories" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+</div>
+<div>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--right-item--1t-lmQj" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=consumer_electronics" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--left-item--2IvtqT3" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=home_improvement_%26_lighting" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+</div>
+<div>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--right-item--1t-lmQj" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=home_appliances" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--left-item--2IvtqT3" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=automotive_%26_motorcycle" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+</div>
+<div>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--right-item--1t-lmQj" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=luggages_%26_bags" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--left-item--2IvtqT3" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=shoes" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+</div>
+<div>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--right-item--1t-lmQj" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=special_occasion_costume" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--left-item--2IvtqT3" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=women%27s_clothing" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+</div>
+<div>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--right-item--1t-lmQj" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=sports_%26_entertainment" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--left-item--2IvtqT3" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=toys_%26_games" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+</div>
+<div>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--right-item--1t-lmQj" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=babies_%26_kids" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--left-item--2IvtqT3" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=phones_%26_telecommunications" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+</div>
+<div>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--right-item--1t-lmQj" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=computer%2C_office_%26_education" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--left-item--2IvtqT3" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=furniture" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+</div>
+<div>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--right-item--1t-lmQj" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=pet_supplies" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--left-item--2IvtqT3" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=security_%26_protection" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+</div>
+<div>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--right-item--1t-lmQj" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=beauty_%26_health" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--left-item--2IvtqT3" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=tools_%26_industrail" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+</div>
+<div>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--right-item--1t-lmQj" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=lingerie_%26_loungewear" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--left-item--2IvtqT3" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=jewelry_%26_watches" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+</div>
+<div>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--right-item--1t-lmQj" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=home_%26_garden" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--left-item--2IvtqT3" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=hair_extensions_%26_wigs" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+</div>
+<div>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--right-item--1t-lmQj" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=men%27s_clothing" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--left-item--2IvtqT3" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=accessories" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+</div>
+<div>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--right-item--1t-lmQj" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=consumer_electronics" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--left-item--2IvtqT3" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=home_improvement_%26_lighting" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+</div>
+<div>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--right-item--1t-lmQj" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=home_appliances" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--left-item--2IvtqT3" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=automotive_%26_motorcycle" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+</div>
+<div>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--right-item--1t-lmQj" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=luggages_%26_bags" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--left-item--2IvtqT3" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=shoes" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+</div>
+<div>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--right-item--1t-lmQj" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=special_occasion_costume" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--left-item--2IvtqT3" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=women%27s_clothing" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+</div>
+<div>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--right-item--1t-lmQj" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=sports_%26_entertainment" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--left-item--2IvtqT3" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=toys_%26_games" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+</div>
+<div>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--right-item--1t-lmQj" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=babies_%26_kids" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--left-item--2IvtqT3" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=phones_%26_telecommunications" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+</div>
+<div>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--right-item--1t-lmQj" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=computer%2C_office_%26_education" target="_blank">
+<div class="pc2023-category-new--placeholder--23Oyflc lazy-load-placeholder" style="height: undefinedpx"></div>
+</a>
+<a aria-hidden='true' class="pc2023-category-new--item--1wh80l3 pc2023-category-new--left-item--2IvtqT3" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=furniture" target="_blank">
+
+        ```
+        
