@@ -54,17 +54,17 @@ class HTMLPipeline:
     def chunk_and_modify_html_single(self, audit):
         print(f"Starting HTML single audit modifications for {audit}...")
 
-        self.start_modifications(lighthouse_audits={audit: self.audits[audit]})
+        self.start_modifications(lighthouse_audits={audit: self.audits[audit]}, audit_key=audit)
 
         print(f"HTML modifications for {audit} completed and saved.")
                
-    def start_modifications(self, lighthouse_audits):
+    def start_modifications(self, lighthouse_audits, audit_key=None):
         lighthouse_audit_issue = self.html_modifier.formatted_audits(lighthouse_audits)
 
-        modified_html = self.html_modifier.modify_html_with_llm(lighthouse_audit_issue)
+        modified_html = self.html_modifier.modify_html_with_llm(lighthouse_audit_issue, audit_key=audit_key)
 
-        self.html_modifier.save_modified_files(modified_html)
-        self.html_modifier.save_modifications()
+        self.html_modifier.save_modified_files(modified_html, audit_key=audit_key)
+        self.html_modifier.save_modifications(audit_key=audit_key)
 
         print("HTML modifications completed and saved.")
 
