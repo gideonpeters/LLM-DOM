@@ -18,7 +18,6 @@ import time
 from datetime import datetime
 from report_generator import run_lighthouse
 from audit_analyser import run as run_audit_analyser
-import itertools
 
 
 class HTMLPipeline:
@@ -114,7 +113,7 @@ class HTMLPipeline:
         else:
             print(f"Failed to compare Lighthouse scores for {llm_modified_reports_path}")
 
-def run_pipeline(experiment):
+def run_pipeline(experiment: str):
     pipeline = HTMLPipeline()
     pipeline.experiment_name = "xDOM-00001-single"
     pipeline.mode = "single"
@@ -126,10 +125,13 @@ def run_pipeline(experiment):
 
         audits = HTMLModifier.get_audit_issues(experiment)
 
+        def process_wrapper(args):
+            audit, experiment = args
+            return pipeline.chunk_and_modify_html_single(audit, experiment)
+
         with concurrent.futures.ProcessPoolExecutor(max_workers=5) as executor:
             all_audits = list(audits.keys())
-            executor.map(itertools.starmap(pipeline.chunk_and_modify_html_single, zip(all_audits, itertools.repeat(experiment))))
-
+            executor.map(process_wrapper, [(audit, experiment) for audit in all_audits])
 
 if  __name__ == "__main__":
     experiments = [
