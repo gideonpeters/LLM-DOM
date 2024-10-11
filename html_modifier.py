@@ -138,8 +138,7 @@ def save_tokens_usage(prompt: str, api_key, estimator: callable):
 class HTMLModifier:
     def __init__(self, html, dom_name):
         # check_for_existing_tokens_usage()
-        get_existing_tokens_usage()
-        self.api_key = get_existing_tokens_usage()[0]['api_key']
+        self.api_key = os.getenv("OPENAI_API_KEY_ME")
 
         if self.api_key is None:
             raise Exception("All API keys have exceeded their rate limits.")
@@ -158,7 +157,7 @@ class HTMLModifier:
         self.script_store = {}
         self.only_estimate_tokens = False
 
-    def get_api_key(self):
+    def get_api_key(self, api_keys):
         # Get the most recently used API key that has not exceeded the rate limit
         # Sort the API keys by the last request time
 
