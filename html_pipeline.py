@@ -24,52 +24,49 @@ class HTMLPipeline:
     def __init__(self):
         self.experiment_name = ""
         self.mode = "all"
-    
-    def chunk_and_modify_html(self, experiment):
+        self.audits = {}
+        self.html_modifier = None
+
+    def load_chunker(self, experiment):
         html_file = f"extracted-doms/original/{experiment}.html"
 
+        original_html = ""
         with open(html_file, 'r') as file:
             original_html = file.read()
 
-            html_modifier = HTMLModifier(original_html, experiment)
-            html_modifier.experiment_name = self.experiment_name
-            html_modifier.mode = self.mode
-            # html_modifier.only_estimate_tokens = True
-            
-            lighthouse_audits = html_modifier.get_audit_issues()
+        html_modifier = HTMLModifier(original_html, experiment)
+        html_modifier.experiment_name = self.experiment_name
+        html_modifier.mode = self.mode
 
-            if lighthouse_audits and html_modifier.mode == "all":
+        self.audits = html_modifier.get_audit_issues()
+        self.html_modifier = html_modifier
 
-                print("Starting HTML all modifications...")
-                
-                self.start_modifications(html_modifier, lighthouse_audits)
-                
-            elif lighthouse_audits and html_modifier.mode == "single":
-                audit_count = len(lighthouse_audits)
-                print(f"Starting HTML single audit modifications for {audit_count} audits...")
-
-                for audit in lighthouse_audits:
-                    print(f"Starting HTML single audit modifications for {audit}...")
-
-                    self.start_modifications(html_modifier, lighthouse_audits={audit: lighthouse_audits[audit]})
-
-                    print(f"HTML modifications for {audit} completed and saved.")
-
-                print("HTML modifications for all audits completed and saved.")
-                                 
-            else:
-                print("No audits to be resolved.")
+        return html_modifier
     
-    def start_modifications(self, html_modifier: HTMLModifier, lighthouse_audits):
-        lighthouse_audit_issue = html_modifier.formatted_audits(lighthouse_audits)
+    def chunk_and_modify_html(self, experiment):
+        if self.audits and self.html_modifier.mode == "all":
+            print(f"Starting HTML all modifications for {experiment}...")
+            
+            self.start_modifications(self.audits)               
+        else:
+            print("No audits to be resolved.")
+    
+    def chunk_and_modify_html_single(self, audit):
+        print(f"Starting HTML single audit modifications for {audit}...")
 
-        modified_html = html_modifier.modify_html_with_llm(lighthouse_audit_issue)
+        self.start_modifications(lighthouse_audits={audit: self.audits[audit]})
 
-        html_modifier.save_modified_files(modified_html)
-        html_modifier.save_modifications()
+        print(f"HTML modifications for {audit} completed and saved.")
+               
+    def start_modifications(self, lighthouse_audits):
+        lighthouse_audit_issue = self.html_modifier.formatted_audits(lighthouse_audits)
+
+        modified_html = self.html_modifier.modify_html_with_llm(lighthouse_audit_issue)
+
+        self.html_modifier.save_modified_files(modified_html)
+        self.html_modifier.save_modifications()
 
         print("HTML modifications completed and saved.")
-
 
     def generate_lighthouse_reports_for_modified_html(self, filename, audit_key=None):
         modified_html_path = f"modified-doms/{self.experiment_name}"
@@ -116,11 +113,19 @@ class HTMLPipeline:
 
 def run_pipeline(experiment):
     pipeline = HTMLPipeline()
-    pipeline.experiment_name = "DOM-00001"
-    pipeline.mode = "all"
+    pipeline.experiment_name = "xDOM-00001-single"
+    pipeline.mode = "single"
 
     # Chunk and modify HTML
-    pipeline.chunk_and_modify_html(experiment)
+    if pipeline.mode == "all":
+        pipeline.chunk_and_modify_html(experiment)
+    elif pipeline.mode == "single":
+
+        pipeline.load_chunker(experiment)
+        audits = pipeline.audits
+        with concurrent.futures.ProcessPoolExecutor(max_workers=5) as executor:
+            all_audits = list(audits.keys())
+            executor.map(pipeline.chunk_and_modify_html_single, all_audits)
 
     # # Compare Lighthouse scores
     # if pipeline.mode == "all":
@@ -139,7 +144,8 @@ def run_pipeline(experiment):
 
 if  __name__ == "__main__":
     experiments = [
-        'airbnb', 'aliexpress', 
+        'airbnb', 
+        # 'aliexpress', 
                 #    'ebay', 'facebook', 
                 #    'github', 'linkedin', 
                 #    'medium', 'netflix', 
@@ -149,5 +155,7 @@ if  __name__ == "__main__":
                 #    'youtube'
                    ]
 
-    with concurrent.futures.ProcessPoolExecutor(max_workers=10) as executor:
-        executor.map(run_pipeline, experiments)
+    run_pipeline(experiments[0])
+
+    # with concurrent.futures.ProcessPoolExecutor(max_workers=10) as executor:
+    #     executor.map(run_pipeline, experiments)
