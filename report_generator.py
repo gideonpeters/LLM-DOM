@@ -53,7 +53,7 @@ def run_lighthouse(url, result_path):
 
 
 
-def generate_lighthouse_reports(report_dir):
+def generate_lighthouse_reports(report_dir, output_dir=output_original_dir):
     results = {}
     
     current_formatted_datetime = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
@@ -62,11 +62,11 @@ def generate_lighthouse_reports(report_dir):
     # Ensure the result_path and raw_result_path directories exists
     os.makedirs(result_path, exist_ok=True)
 
-    for filename in os.listdir(output_original_dir):
+    for filename in os.listdir(output_dir):
         if filename.endswith(".html"):
             print(f"Generating Lighthouse report for {filename}...")
 
-            html_file_path = os.path.join(output_original_dir, filename)
+            html_file_path = os.path.join(output_dir, filename)
 
             formatted_filename = filename.replace(".html", "")
 
@@ -133,10 +133,10 @@ def generate_lh_production_reports():
 
     return results
 
-def main():
-    generate_lighthouse_reports(lh_report_original_dir)
-    # generate_lighthouse_reports(lh_report_llm_dir)
-    # generate_lh_production_reports()
+# def main():
+#     generate_lighthouse_reports(lh_report_original_dir)
+#     # generate_lighthouse_reports(lh_report_llm_dir)
+#     # generate_lh_production_reports()
     
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()

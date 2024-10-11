@@ -20,9 +20,88 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-OPENAI_KEY = os.getenv("OPENAI_API_KEY")
+# OPENAI_KEY = os.getenv("OPENAI_API_KEY")
 TOKEN_LIMIT = 12000
 MAX_LIMIT = 16100
+
+api_keys = [
+    {
+        "api_key": os.getenv("OPENAI_API_KEY_ME"),
+        "key": "me",
+        "rate_limit": 2000000,
+        "tokens_used": 0,
+        "no_of_requests": 0,
+        "last_request": time.time(),
+    },
+     {
+        "api_key": os.getenv("OPENAI_API_KEY_ALOR"),
+        "key": "alor",
+        "rate_limit": 20000000,
+        "tokens_used": 0,
+        "no_of_requests": 0,
+        "last_request": time.time(),
+    },
+     {
+        "api_key": os.getenv("OPENAI_API_KEY_CAREN"),
+        "key": "caren",
+        "rate_limit": 2000000,
+        "tokens_used": 0,
+        "no_of_requests": 0,
+        "last_request": time.time(),
+    },
+     {
+        "api_key": os.getenv("OPENAI_API_KEY_MAYRA"),
+        "key": "mayra",
+        "rate_limit": 2000000,
+        "tokens_used": 0,
+        "no_of_requests": 0,
+        "last_request": time.time(),
+    },
+     {
+        "api_key": os.getenv("OPENAI_API_KEY_CHAIMA"),
+        "key": "chaima",
+        "rate_limit": 2000000,
+        "tokens_used": 0,
+        "no_of_requests": 0,
+        "last_request": time.time(),
+    },
+    {
+        "api_key": os.getenv("OPENAI_API_KEY_WAMIRI"),
+        "key": "wamiri",
+        "rate_limit": 2000000,
+        "tokens_used": 0,
+        "no_of_requests": 0,
+        "last_request": time.time(),
+    }
+]
+
+
+def check_for_existing_tokens_usage():
+    existing_token_file = "tokens_usage.json"
+
+    existing_usage = []
+    if os.path.exists(existing_token_file):
+        with open(existing_token_file, 'r') as file:
+            existing_usage = json.load(file)
+
+    for usage in existing_usage:
+        for key in api_keys:
+            if key['key'] == usage['api_key']:
+                key['tokens_used'] = usage['tokens_used']
+                key['no_of_requests'] = usage['no_of_requests']
+                key['last_request'] = usage['last_request']
+
+def save_tokens_usage():
+    existing_token_file = "tokens_usage.json"
+
+    api_keys_copy = api_keys.copy()
+    for key in api_keys_copy:
+        key["api_key"] = key["key"]
+        key.pop("key")
+
+    with open(existing_token_file, 'w') as file:
+        json.dump(api_keys, file, indent=4)
+
 
 # Class to split HTML into chunks and send each chunk to the LLM for modification
 # Directories
@@ -42,12 +121,18 @@ MAX_LIMIT = 16100
 # - error_{dom_name}.log - Error log file
 
 
-class HTMLSplitter:
+class HTMLModifier:
     def __init__(self, html, dom_name):
+        check_for_existing_tokens_usage()
+        self.api_key = self.get_api_key()
+
+        if self.api_key is None:
+            raise Exception("All API keys have exceeded their rate limits.")
+
         self.html = html
         self.max_tokens = TOKEN_LIMIT
         self.model = "gpt-4o-mini"
-        self.experiment_name = "html_modifier_batch_0001B"
+        self.experiment_name = "html_modifier_batch_0001B-alpha"
         self.dom_name = dom_name
         self.no_of_modifications = 0
         self.temperature = 0.2
@@ -57,6 +142,68 @@ class HTMLSplitter:
         self.style_store = {}
         self.script_store = {}
         self.only_estimate_tokens = False
+
+    def get_api_key(self):
+        # Get the most recently used API key that has not exceeded the rate limit
+        # Sort the API keys by the last request time
+
+        api_keys.sort(key=lambda x: x['last_request'])
+
+        selected_key = None
+        for key in api_keys:
+            if key['tokens_used'] < key['rate_limit']:
+                selected_key = key
+                break
+        
+        return selected_key['api_key']
+
+    def get_experiment_details(self):
+
+        chunker = HTMLChunker(self.html, TOKEN_LIMIT)
+        
+        chunks = chunker.split_html()
+
+        chunks = chunker.store_chunks(chunks, store_chunks=False)
+
+        no_of_chunks = len(chunks)
+
+        prompts = []
+        if self.mode == "all":
+            for chunk in chunks:
+                audits = self.audits
+                formatted_audit = self.formatted_audits(audits)
+
+                prompt = self.send_to_llm(chunk['content'], formatted_audit, None, True)
+                prompts.append({
+                    "dom_name": self.dom_name,
+                    "chunk": chunk['id'],
+                    "audits": list(audits.keys()),
+                    "tokens":self.estimate_tokens(prompt),
+                    "content": prompt,
+                })
+        else:
+            audits = self.audits
+            for audit in audits:
+                for chunk in chunks:
+                    formatted_audit = self.formatted_audits({audit: audits[audit]})
+                    prompt = self.send_to_llm(chunk['content'], formatted_audit, audit, True)
+                    prompts.append({
+                        "dom_name": self.dom_name,
+                        "chunk": chunk['id'],
+                        "audits": [audit],
+                        "tokens":self.estimate_tokens(prompt),
+                        "content": prompt,
+                    })
+        
+        no_of_prompts = len(prompts)
+
+        return {
+            "no_of_chunks": no_of_chunks,
+            "dom_name": self.dom_name,
+            "no_of_prompts": no_of_prompts,
+            "total_tokens": sum([prompt['tokens'] for prompt in prompts]),
+            "prompts": prompts
+        }
 
     @retry(wait=wait_random_exponential(min=1, max=60), stop=stop_after_attempt(4))
     def measure_speed(self):
@@ -72,10 +219,6 @@ class HTMLSplitter:
             # Convert speeds to Mbps
             download_speed_mbps = download_speed / 1_000_000
             upload_speed_mbps = upload_speed / 1_000_000
-
-            # print(f"Download Speed: {download_speed_mbps:.2f} Mbps")
-            # print(f"Upload Speed: {upload_speed_mbps:.2f} Mbps")
-            # print(f"Ping: {ping:.2f} ms")
 
             return {
                 "download_speed": download_speed_mbps,
@@ -135,7 +278,7 @@ class HTMLSplitter:
         with open(response_time_filename, 'w') as file:
             json.dump(response_times, file, indent=4)
 
-    def send_to_llm(self, html_part, audit_issues, audit_key=None):
+    def send_to_llm(self, html_part, audit_issues, audit_key=None, only_return_prompt=False):
         issue_text = "issues" if self.mode == "all" else "issue"
             
         prompt = f"""
@@ -175,6 +318,9 @@ class HTMLSplitter:
         ```
         """
 
+        if only_return_prompt:
+            return prompt   
+
         prompt_uuid = self.store_prompt(prompt, audit_key)
 
         try:
@@ -208,6 +354,17 @@ class HTMLSplitter:
 
             else:
                 response_content = response.choices[0].message.content
+
+                # Update token usage
+                for key in api_keys:
+                    if key['api_key'] == self.api_key:
+                        key['tokens_used'] += self.estimate_tokens(prompt)
+                        key['no_of_requests'] += 1
+                        key['last_request'] = time.time()
+                        break
+                
+                save_tokens_usage()
+
                 response_content = self.parse_chatgpt_response(response_content)
 
                 no_of_modifications = response_content.count("<!-- Optimized by LLM -->")
@@ -221,8 +378,9 @@ class HTMLSplitter:
             
     @retry(wait=wait_random_exponential(min=1, max=60), stop=stop_after_attempt(4))
     def chatgpt_response_with_backoff(self, **kwargs):
+
         client = OpenAI(
-            api_key=OPENAI_KEY
+            api_key=self.api_key
         )
 
         return client.chat.completions.create(**kwargs)
@@ -270,7 +428,7 @@ class HTMLSplitter:
         for i, chunk in enumerate(chunks):
             if chunk['id'] != 'style_store' and chunk['id'] != 'script_store':
                 print(f"Processing chunk {i+1}/{chunk_count} with {chunker.estimate_tokens(str(chunk['content']))} tokens...")
-                modified_chunk = self.send_to_llm(chunk['content'], audit_issue, audit_key)
+                modified_chunk = self.send_to_llm(chunk['content'], audit_issue, audit_key, self.only_estimate_tokens)
                 # modified_chunk = chunk['content']
 
                 current_chunks = chunker.modify_chunk(current_chunks, chunk['id'], modified_chunk)
@@ -367,7 +525,7 @@ class HTMLSplitter:
     def save_modifications(self, audit_key=None): 
         modifications = []
         modifications_path = f"modifications" if self.mode == "all" else f"modifications_single"
-        modifications_filename = f"{modifications_path}/{self.experiment_name}.json" if html_splitter.mode == "all" else f"{modifications_path}/{self.experiment_name}.json"
+        modifications_filename = f"{modifications_path}/{self.experiment_name}.json" if self.mode == "all" else f"{modifications_path}/{self.experiment_name}.json"
 
         os.makedirs(modifications_path, exist_ok=True)
 
@@ -378,7 +536,7 @@ class HTMLSplitter:
         modification_tracker = {}
         modification_tracker['name'] = self.dom_name
         modification_tracker['modifications'] = self.no_of_modifications
-        modification_tracker['no_of_issues'] = len(lighthouse_audits)
+        modification_tracker['no_of_issues'] = len(self.audits)
         modification_tracker['experiment_name'] = self.experiment_name
         modification_tracker['mode'] = self.mode
         if(self.mode == "single"):
@@ -390,58 +548,111 @@ class HTMLSplitter:
             json.dump(modifications, file, indent=4)
 
 
-def run_changes(html_splitter: HTMLSplitter, lighthouse_audits, audit_key=None):
-    lighthouse_audit_issue = html_splitter.formatted_audits(lighthouse_audits)
+def run_changes(html_modifier: HTMLModifier, lighthouse_audits, audit_key=None):
+    lighthouse_audit_issue = html_modifier.formatted_audits(lighthouse_audits)
 
-    modified_html = html_splitter.modify_html_with_llm(lighthouse_audit_issue, audit_key)
-    html_splitter.save_modified_files(modified_html, audit_key)
-    html_splitter.save_modifications(audit_key)
+    modified_html = html_modifier.modify_html_with_llm(lighthouse_audit_issue, audit_key)
+
+    if html_modifier.only_estimate_tokens:
+        return
+    
+    html_modifier.save_modified_files(modified_html, audit_key)
+    html_modifier.save_modifications(audit_key)
 
 
-# Example of usage:
-if __name__ == '__main__':
-    # check if command has optional --clear flag
-    if len(sys.argv) > 1 and sys.argv[1] == "--clear":
-        html_splitter = HTMLSplitter("", "")
-        html_splitter.clear_storage()
-        exit()
+# # Example of usage:
+# if __name__ == '__main__':
+#     # check if command has optional --clear flag
+#     if len(sys.argv) > 1:
+#         if sys.argv[1] == "--clear":
+#             html_modifier = HTMLModifier("", "")
+#             html_modifier.clear_storage()
+#             exit()
+#         elif sys.argv[1] == "--describe":
+#             mode = None
+#             experiment_name = None
+#             if len(sys.argv) > 2:
+#                 mode = sys.argv[2].split('=')[1]
 
-    html_file = "extracted-doms/original/youtube.html"
+#             if len(sys.argv) > 3:
+#                 # argument has to be in the format --experiment-name=experiment_name, then extract everything after the =
+#                 experiment_name = sys.argv[3].split('=')[1]
+#                 if experiment_name is None:
+#                     print("Please provide an experiment name.")
+#                     exit()
+                
+#             if mode is None:
+#                 print("Please provide a mode.")
+#                 exit()
 
-    files_to_exclude = ['amazon', 'ubereats', 'glassdoor', 'ziprecruiter', 'behance']
-    audits_to_exclude = []
+#             experiments = ['airbnb', 'aliexpress', 'ebay', 'facebook', 'github', 'linkedin', 'medium', 'netflix', 'pinterest', 'quora', 'reddit', 'twitch', 'twitter', 'walmart', 'youtube']
 
-    if any(exclude in html_file for exclude in files_to_exclude):
-        print(f"Skipping {html_file}...")
-        exit()
+#             all_experiment_details = []
+#             for experiment in experiments:
+#                 html_file = f"extracted-doms/original/{experiment}.html"
+#                 with open(html_file, 'r') as file:
+#                     original_html = file.read()
 
-    with open(html_file, 'r') as file:
-        original_html = file.read()
+#                     html_modifier = HTMLModifier(original_html, experiment)
+#                     html_modifier.mode = mode
+#                     html_modifier.only_estimate_tokens = True
+#                     html_modifier.get_audit_issues()
+#                     experiment_details = html_modifier.get_experiment_details()
 
-    # Example Lighthouse audit issue
-    lighthouse_audit_issue = ""
+#                     all_experiment_details.append(experiment_details)
 
-    html_name = os.path.basename(html_file).split('.')[0]
-    html_splitter = HTMLSplitter(original_html, html_name)
+#                     os.makedirs(f"experiment_details/{experiment_name}", exist_ok=True)
+                    
+#                     with open(f"experiment_details/{experiment_name}/{experiment}.json", 'w') as file:
+#                         json.dump(experiment_details, file, indent=4)
 
-    lighthouse_audits = html_splitter.get_audit_issues()
+#             experiments_summary = {
+#                 "mode": mode,
+#                 "no_of_experiments": len(experiments),
+#                 "no_of_prompts": sum([experiment['no_of_prompts'] for experiment in all_experiment_details]),
+#                 "total_tokens": sum([experiment['total_tokens'] for experiment in all_experiment_details]),
+#             }
 
-    if lighthouse_audits and html_splitter.mode == "all":
-        print("Starting HTML all modifications...")
+#             with open(f"experiment_details/{experiment_name}/_summary.json", 'w') as file:
+#                 json.dump(experiments_summary, file, indent=4)
+#             exit()
 
-        run_changes(html_splitter, lighthouse_audits)
+#     html_file = "extracted-doms/original/youtube.html"
 
-        print("HTML modifications completed and saved.")
-    elif lighthouse_audits and html_splitter.mode == "single":
-        audit_count = len(lighthouse_audits)
-        print(f"Starting HTML single audit modifications for {audit_count} audits...")
+#     files_to_exclude = ['amazon', 'ubereats', 'glassdoor', 'ziprecruiter', 'behance']
+#     audits_to_exclude = []
 
-        for audit in lighthouse_audits:
-            print(f"Starting HTML single audit modifications for {audit}...")
+#     if any(exclude in html_file for exclude in files_to_exclude):
+#         print(f"Skipping {html_file}...")
+#         exit()
 
-            run_changes(html_splitter, {audit: lighthouse_audits[audit]}, audit)
+#     with open(html_file, 'r') as file:
+#         original_html = file.read()
+
+#     # Example Lighthouse audit issue
+#     lighthouse_audit_issue = ""
+
+#     html_name = os.path.basename(html_file).split('.')[0]
+#     html_modifier = HTMLModifier(original_html, html_name)
+
+#     lighthouse_audits = html_modifier.get_audit_issues()
+
+#     if lighthouse_audits and html_modifier.mode == "all":
+#         print("Starting HTML all modifications...")
+
+#         run_changes(html_modifier, lighthouse_audits)
+
+#         print("HTML modifications completed and saved.")
+#     elif lighthouse_audits and html_modifier.mode == "single":
+#         audit_count = len(lighthouse_audits)
+#         print(f"Starting HTML single audit modifications for {audit_count} audits...")
+
+#         for audit in lighthouse_audits:
+#             print(f"Starting HTML single audit modifications for {audit}...")
+
+#             run_changes(html_modifier, {audit: lighthouse_audits[audit]}, audit)
         
-        print("HTML modifications completed and saved.")
-    else:
-        print("No audits to be resolved.")
+#         print("HTML modifications completed and saved.")
+#     else:
+#         print("No audits to be resolved.")
         

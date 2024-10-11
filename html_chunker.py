@@ -217,7 +217,7 @@ class HTMLChunker:
             content = content.replace(f'// chunk_script_{chunk_id}', script_content)
         return content
 
-    def store_chunks(self, chunks, chunked_file_directory="chunked-doms/original/", direct=False):
+    def store_chunks(self, chunks, chunked_file_directory="chunked-doms/original/", direct=False, store_chunks=True):
 
         all_chunks = []
         if not direct:
@@ -246,8 +246,9 @@ class HTMLChunker:
         else:
             all_chunks = chunks
         
-        with open(chunked_file_directory + '.json', 'w') as f:
-            f.write(json.dumps(all_chunks, indent=2))
+        if store_chunks:
+            with open(chunked_file_directory + '.json', 'w') as f:
+                f.write(json.dumps(all_chunks, indent=2))
 
         return all_chunks
 
