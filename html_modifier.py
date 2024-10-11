@@ -138,7 +138,7 @@ def save_tokens_usage(prompt: str, api_key, estimator: callable):
 class HTMLModifier:
     def __init__(self, html, dom_name):
         # check_for_existing_tokens_usage()
-        self.api_key = os.getenv("OPENAI_API_KEY_ME")
+        self.api_key = os.getenv("OPENAI_API_KEY_MAYRA")
 
         if self.api_key is None:
             raise Exception("All API keys have exceeded their rate limits.")
@@ -470,14 +470,13 @@ class HTMLModifier:
         
         return modified_html
     
-    def get_audit_issues(self):
-        audit_file = f"lh-reports/original/audits/{self.dom_name}.json"
+    @staticmethod
+    def get_audit_issues(dom_name):
+        audit_file = f"lh-reports/original/audits/{dom_name}.json"
 
         with open(audit_file, 'r') as file:
             audit_data = json.load(file)
         
-        self.audits = audit_data
-
         return audit_data
 
     def formatted_audits(self, audits, with_location=False):

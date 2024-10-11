@@ -18,6 +18,7 @@ import time
 from datetime import datetime
 from report_generator import run_lighthouse
 from audit_analyser import run as run_audit_analyser
+import itertools
 
 
 class HTMLPipeline:
@@ -25,7 +26,6 @@ class HTMLPipeline:
         self.experiment_name = ""
         self.mode = "all"
         self.audits = {}
-        self.html_modifier = None
 
     def load_chunker(self, experiment):
         html_file = f"extracted-doms/original/{experiment}.html"
@@ -38,33 +38,36 @@ class HTMLPipeline:
         html_modifier.experiment_name = self.experiment_name
         html_modifier.mode = self.mode
 
-        self.audits = html_modifier.get_audit_issues()
-        self.html_modifier = html_modifier
+        self.audits = HTMLModifier.get_audit_issues()
 
         return html_modifier
     
     def chunk_and_modify_html(self, experiment):
-        if self.audits and self.html_modifier.mode == "all":
+        html_modifier = self.load_chunker(experiment)
+
+        if self.audits and html_modifier.mode == "all":
             print(f"Starting HTML all modifications for {experiment}...")
             
-            self.start_modifications(self.audits)               
+            self.start_modifications(html_modifier, self.audits)               
         else:
             print("No audits to be resolved.")
     
-    def chunk_and_modify_html_single(self, audit):
+    def chunk_and_modify_html_single(self, experiment, audit):
+        html_modifier = self.load_chunker(experiment)
+
         print(f"Starting HTML single audit modifications for {audit}...")
 
-        self.start_modifications(lighthouse_audits={audit: self.audits[audit]}, audit_key=audit)
+        self.start_modifications(html_modifier, lighthouse_audits={audit: self.audits[audit]}, audit_key=audit)
 
         print(f"HTML modifications for {audit} completed and saved.")
                
-    def start_modifications(self, lighthouse_audits, audit_key=None):
-        lighthouse_audit_issue = self.html_modifier.formatted_audits(lighthouse_audits)
+    def start_modifications(self, html_modifier: HTMLModifier, lighthouse_audits, audit_key=None):
+        lighthouse_audit_issue = html_modifier.formatted_audits(lighthouse_audits)
 
-        modified_html = self.html_modifier.modify_html_with_llm(lighthouse_audit_issue, audit_key=audit_key)
+        modified_html = html_modifier.modify_html_with_llm(lighthouse_audit_issue, audit_key=audit_key)
 
-        self.html_modifier.save_modified_files(modified_html, audit_key=audit_key)
-        self.html_modifier.save_modifications(audit_key=audit_key)
+        html_modifier.save_modified_files(modified_html, audit_key=audit_key)
+        html_modifier.save_modifications(audit_key=audit_key)
 
         print("HTML modifications completed and saved.")
 
@@ -121,31 +124,17 @@ def run_pipeline(experiment):
         pipeline.chunk_and_modify_html(experiment)
     elif pipeline.mode == "single":
 
-        pipeline.load_chunker(experiment)
-        audits = pipeline.audits
+        audits = HTMLModifier.get_audit_issues(experiment)
+
         with concurrent.futures.ProcessPoolExecutor(max_workers=5) as executor:
             all_audits = list(audits.keys())
-            executor.map(pipeline.chunk_and_modify_html_single, all_audits)
-
-    # # Compare Lighthouse scores
-    # if pipeline.mode == "all":
-    #     pipeline.generate_lighthouse_reports_for_modified_html(experiment)
-    #     pipeline.compare_lighthouse_scores()
-    #     # pipeline.compare_html_similarity(experiment)
-    # elif pipeline.mode == "single":
-    #     audits_path = f"lh-reports/original/audits"
-
-    #     if os.path.exists(audits_path):
-    #         for audit in os.listdir(audits_path):
-    #             pipeline.generate_lighthouse_reports_for_modified_html(experiment, audit)
-    #             pipeline.compare_lighthouse_scores(experiment, audit)
-    #             # pipeline.compare_html_similarity(experiment)
+            executor.map(itertools.starmap(pipeline.chunk_and_modify_html_single, zip(all_audits, itertools.repeat(experiment))))
 
 
 if  __name__ == "__main__":
     experiments = [
-        'airbnb', 
-        # 'aliexpress', 
+        # 'airbnb', 
+        'aliexpress', 
                 #    'ebay', 'facebook', 
                 #    'github', 'linkedin', 
                 #    'medium', 'netflix', 
