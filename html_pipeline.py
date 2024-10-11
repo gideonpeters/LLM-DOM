@@ -18,6 +18,7 @@ import time
 from datetime import datetime
 from report_generator import run_lighthouse
 from audit_analyser import run as run_audit_analyser
+from joblib import Parallel, delayed
 
 
 class HTMLPipeline:
@@ -37,7 +38,7 @@ class HTMLPipeline:
         html_modifier.experiment_name = self.experiment_name
         html_modifier.mode = self.mode
 
-        self.audits = HTMLModifier.get_audit_issues()
+        self.audits = HTMLModifier.get_audit_issues(experiment)
 
         return html_modifier
     
@@ -51,7 +52,7 @@ class HTMLPipeline:
         else:
             print("No audits to be resolved.")
     
-    def chunk_and_modify_html_single(self, experiment, audit):
+    def chunk_and_modify_html_single(self, experiment: str, audit):
         html_modifier = self.load_chunker(experiment)
 
         print(f"Starting HTML single audit modifications for {audit}...")
@@ -113,7 +114,7 @@ class HTMLPipeline:
         else:
             print(f"Failed to compare Lighthouse scores for {llm_modified_reports_path}")
 
-def run_pipeline(experiment: str):
+def run_pipeline(experiment: str, audit_key=None):
     pipeline = HTMLPipeline()
     pipeline.experiment_name = "xDOM-00001-single"
     pipeline.mode = "single"
@@ -122,16 +123,9 @@ def run_pipeline(experiment: str):
     if pipeline.mode == "all":
         pipeline.chunk_and_modify_html(experiment)
     elif pipeline.mode == "single":
+        pipeline.chunk_and_modify_html_single(experiment, audit_key)
 
-        audits = HTMLModifier.get_audit_issues(experiment)
-
-        def process_wrapper(args):
-            audit, experiment = args
-            return pipeline.chunk_and_modify_html_single(audit, experiment)
-
-        with concurrent.futures.ProcessPoolExecutor(max_workers=5) as executor:
-            all_audits = list(audits.keys())
-            executor.map(process_wrapper, [(audit, experiment) for audit in all_audits])
+    print("Pipeline execution completed.")
 
 if  __name__ == "__main__":
     experiments = [
@@ -146,7 +140,19 @@ if  __name__ == "__main__":
                 #    'youtube'
                    ]
 
-    run_pipeline(experiments[0])
+    # run_pipeline(experiments[0])
 
-    # with concurrent.futures.ProcessPoolExecutor(max_workers=10) as executor:
-    #     executor.map(run_pipeline, experiments)
+    current_experiment = experiments[0]
+    print("Running pipeline for: ", current_experiment)
+    
+    audits = HTMLModifier.get_audit_issues(current_experiment)
+    audits_list = list(audits.keys())
+
+    results = Parallel(n_jobs=5)(delayed(run_pipeline)(current_experiment, audit) for audit in audits_list)
+
+    print("All experiments completed: ", len(results))
+
+
+    
+
+
