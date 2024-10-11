@@ -1,0 +1,448 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. unminified-css => Minify CSS: Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        <div class="pc0djro atm_da_cbdd7d atm_h3_lh1qj6 dir dir-ltr">
+<span aria-busy='true' style="
+                                                    display: block;
+                                                    height: 19px;
+                                                    width: 26%;
+                                                    background-color: white;
+                                                    border-radius: 4px;
+                                                  ">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="
+                                                      height: 100%;
+                                                      width: 100%;
+                                                      border-radius: 4px;
+                                                    ">
+</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="c1l1h97y atm_d2_1kqhmmj l1aqx8qh atm_vl_15vqwwr atm_k4_idpfg4 cikyho8 atm_9s_glywfm atm_93_15vqwwr__hp14bx atm_9s_1txwivl__hp14bx dir dir-ltr" style="
+                                            --transition-element_transition-delay: 800ms;
+                                            --transition-element_transition-duration: 200ms;
+                                          "></div>
+</div>
+</div>
+<div class="dir dir-ltr">
+<div class="c4mnd7m atm_9s_11p5wf0 atm_dz_1osqo2v dir dir-ltr">
+<div class="c1pbo4kt atm_ar_1bp4okc atm_d2_1kqhmmj atm_e2_1osqo2v atm_gi_idpfg4 atm_lo_idpfg4 atm_wq_cs5v99 l179zchc atm_vl_ewfl5b atm_93_ewfl5b atm_k4_kb7nvz dir dir-ltr" style="
+                                            --transition-element_transition-delay: 850ms;
+                                            --transition-element_transition-duration: 200ms;
+                                          ">
+<div>
+<div class="m1cp3yuo atm_gq_1gibeiw atm_72g4pb_llf7ib atm_1mz0ff6_1lk22r2 atm_1p5rjfj_h2mmj6 dir dir-ltr">
+<div class="dir dir-ltr">
+<div class="awuxh4x atm_1w_12kg1i__4c1lm5 atm_lo_1auwtbz__320uii atm_mk_hqdblt__320uii dir dir-ltr">
+<div class="cw9aemg atm_e2_1osqo2v atm_jb_idpfg4 atm_mk_n7od8j atm_mk_stnw88__320uii atm_e2_1osqo2v__320uii atm_vy_1osqo2v__320uii atm_tk_idpfg4__320uii atm_fq_idpfg4__320uii atm_n3_idpfg4__320uii atm_6i_idpfg4__320uii dir dir-ltr">
+<span aria-busy='true' style="
+                                                        display: block;
+                                                        height: 100%;
+                                                        width: 100%;
+                                                        background-color: white;
+                                                        border-radius: var(
+                                                          --linaria-theme_corner-radius-medium12px-border-radius
+                                                        );
+                                                      ">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="
+                                                          height: 100%;
+                                                          width: 100%;
+                                                          border-radius: var(
+                                                            --linaria-theme_corner-radius-medium12px-border-radius
+                                                          );
+                                                        ">
+</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="g1wiliwt atm_u80d3j_1li1fea atm_1jl3gu2_tak4gr c1v0rf5q atm_9s_11p5wf0 atm_cx_4wguik atm_dz_7esijk atm_e0_1lo05zz dir dir-ltr">
+<span aria-busy='true' style="
+                                                  display: block;
+                                                  height: 19px;
+                                                  width: 65%;
+                                                  background-color: white;
+                                                  border-radius: 4px;
+                                                ">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="
+                                                    height: 100%;
+                                                    width: 100%;
+                                                    border-radius: 4px;
+                                                  ">
+</span>
+</span>
+<div class="a3g92ry atm_da_1ko3t4y atm_dm_kb7nvz atm_fg_h9n0ih atm_vy_1osqo2v dir dir-ltr">
+<span aria-busy='true' style="
+                                                    display: block;
+                                                    height: 19px;
+                                                    width: 100%;
+                                                    background-color: white;
+                                                    border-radius: 4px;
+                                                  ">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="
+                                                      height: 100%;
+                                                      width: 100%;
+                                                      border-radius: 4px;
+                                                    ">
+</span>
+</span>
+</div>
+<div class="fb4nyux atm_da_cbdd7d dir dir-ltr">
+<span aria-busy='true' style="
+                                                    display: block;
+                                                    height: 19px;
+                                                    width: 39%;
+                                                    background-color: white;
+                                                    border-radius: 4px;
+                                                  ">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="
+                                                      height: 100%;
+                                                      width: 100%;
+                                                      border-radius: 4px;
+                                                    ">
+</span>
+</span>
+</div>
+<div class="fb4nyux atm_da_cbdd7d dir dir-ltr">
+<span aria-busy='true' style="
+                                                    display: block;
+                                                    height: 19px;
+                                                    width: 28%;
+                                                    background-color: white;
+                                                    border-radius: 4px;
+                                                  ">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="
+                                                      height: 100%;
+                                                      width: 100%;
+                                                      border-radius: 4px;
+                                                    ">
+</span>
+</span>
+</div>
+<div class="pc0djro atm_da_cbdd7d atm_h3_lh1qj6 dir dir-ltr">
+<span aria-busy='true' style="
+                                                    display: block;
+                                                    height: 19px;
+                                                    width: 26%;
+                                                    background-color: white;
+                                                    border-radius: 4px;
+                                                  ">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="
+                                                      height: 100%;
+                                                      width: 100%;
+                                                      border-radius: 4px;
+                                                    ">
+</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="c1l1h97y atm_d2_1kqhmmj l1aqx8qh atm_vl_15vqwwr atm_k4_idpfg4 cikyho8 atm_9s_glywfm atm_93_15vqwwr__hp14bx atm_9s_1txwivl__hp14bx dir dir-ltr" style="
+                                            --transition-element_transition-delay: 850ms;
+                                            --transition-element_transition-duration: 200ms;
+                                          "></div>
+</div>
+</div>
+<div class="dir dir-ltr">
+<div class="c4mnd7m atm_9s_11p5wf0 atm_dz_1osqo2v dir dir-ltr">
+<div class="c1pbo4kt atm_ar_1bp4okc atm_d2_1kqhmmj atm_e2_1osqo2v atm_gi_idpfg4 atm_lo_idpfg4 atm_wq_cs5v99 l179zchc atm_vl_ewfl5b atm_93_ewfl5b atm_k4_kb7nvz dir dir-ltr" style="
+                                            --transition-element_transition-delay: 900ms;
+                                            --transition-element_transition-duration: 200ms;
+                                          ">
+<div>
+<div class="m1cp3yuo atm_gq_1gibeiw atm_72g4pb_llf7ib atm_1mz0ff6_1lk22r2 atm_1p5rjfj_h2mmj6 dir dir-ltr">
+<div class="dir dir-ltr">
+<div class="awuxh4x atm_1w_12kg1i__4c1lm5 atm_lo_1auwtbz__320uii atm_mk_hqdblt__320uii dir dir-ltr">
+<div class="cw9aemg atm_e2_1osqo2v atm_jb_idpfg4 atm_mk_n7od8j atm_mk_stnw88__320uii atm_e2_1osqo2v__320uii atm_vy_1osqo2v__320uii atm_tk_idpfg4__320uii atm_fq_idpfg4__320uii atm_n3_idpfg4__320uii atm_6i_idpfg4__320uii dir dir-ltr">
+<span aria-busy='true' style="
+                                                        display: block;
+                                                        height: 100%;
+                                                        width: 100%;
+                                                        background-color: white;
+                                                        border-radius: var(
+                                                          --linaria-theme_corner-radius-medium12px-border-radius
+                                                        );
+                                                      ">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="
+                                                          height: 100%;
+                                                          width: 100%;
+                                                          border-radius: var(
+                                                            --linaria-theme_corner-radius-medium12px-border-radius
+                                                          );
+                                                        ">
+</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="g1wiliwt atm_u80d3j_1li1fea atm_1jl3gu2_tak4gr c1v0rf5q atm_9s_11p5wf0 atm_cx_4wguik atm_dz_7esijk atm_e0_1lo05zz dir dir-ltr">
+<span aria-busy='true' style="
+                                                  display: block;
+                                                  height: 19px;
+                                                  width: 65%;
+                                                  background-color: white;
+                                                  border-radius: 4px;
+                                                ">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="
+                                                    height: 100%;
+                                                    width: 100%;
+                                                    border-radius: 4px;
+                                                  ">
+</span>
+</span>
+<div class="a3g92ry atm_da_1ko3t4y atm_dm_kb7nvz atm_fg_h9n0ih atm_vy_1osqo2v dir dir-ltr">
+<span aria-busy='true' style="
+                                                    display: block;
+                                                    height: 19px;
+                                                    width: 100%;
+                                                    background-color: white;
+                                                    border-radius: 4px;
+                                                  ">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="
+                                                      height: 100%;
+                                                      width: 100%;
+                                                      border-radius: 4px;
+                                                    ">
+</span>
+</span>
+</div>
+<div class="fb4nyux atm_da_cbdd7d dir dir-ltr">
+<span aria-busy='true' style="
+                                                    display: block;
+                                                    height: 19px;
+                                                    width: 39%;
+                                                    background-color: white;
+                                                    border-radius: 4px;
+                                                  ">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="
+                                                      height: 100%;
+                                                      width: 100%;
+                                                      border-radius: 4px;
+                                                    ">
+</span>
+</span>
+</div>
+<div class="fb4nyux atm_da_cbdd7d dir dir-ltr">
+<span aria-busy='true' style="
+                                                    display: block;
+                                                    height: 19px;
+                                                    width: 28%;
+                                                    background-color: white;
+                                                    border-radius: 4px;
+                                                  ">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="
+                                                      height: 100%;
+                                                      width: 100%;
+                                                      border-radius: 4px;
+                                                    ">
+</span>
+</span>
+</div>
+<div class="pc0djro atm_da_cbdd7d atm_h3_lh1qj6 dir dir-ltr">
+<span aria-busy='true' style="
+                                                    display: block;
+                                                    height: 19px;
+                                                    width: 26%;
+                                                    background-color: white;
+                                                    border-radius: 4px;
+                                                  ">
+<span class="s15ewrxi atm_y_1x514to atm_12_q7pw6w atm_16_12c5xpv atm_1c_4hnrxs atm_k4_7tcf61 atm_1k_13wvj1x atm_q_1itp2sw atm_2d_1r31cwp atm_9s_1ulexfb atm_mk_h2mmj6 atm_p_glywfm__1rrf6b5 dir dir-ltr" style="
+                                                      height: 100%;
+                                                      width: 100%;
+                                                      border-radius: 4px;
+                                                    ">
+</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="c1l1h97y atm_d2_1kqhmmj l1aqx8qh atm_vl_15vqwwr atm_k4_idpfg4 cikyho8 atm_9s_glywfm atm_93_15vqwwr__hp14bx atm_9s_1txwivl__hp14bx dir dir-ltr" style="
+                                            --transition-element_transition-delay: 900ms;
+                                            --transition-element_transition-duration: 200ms;
+                                          "></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="m1szzjq8 atm_g3_idpfg4 atm_1anz5yx_y7qtfx atm_9s_1ulexfb atm_am_1wugsn5 atm_bb_idpfg4 atm_tr_jq3td1 atm_vl_15vqwwr atm_vy_1osqo2v atm_bb_n7od8j__1v156lz atm_tr_n7od8j__1v156lz atm_vl_n7od8j__1v156lz atm_vy_n7od8j__1v156lz dir dir-ltr">
+<div class="m1fvera1 atm_mk_1if85x1 atm_tk_1hlw8f3 atm_wq_kb7nvz dir dir-ltr">
+<div class="c1yo0219 atm_9s_1txwivl_vmtskl atm_92_1yyfdc7_vmtskl atm_9s_1txwivl_9in345 atm_92_1yyfdc7_9in345 dir dir-ltr" data-pageslot='true'>
+<div style="display: contents">
+<div class="chwtxzy atm_7l_1x778eo atm_e2_11wdtgu dir dir-ltr">
+<div aria-hidden='false' data-testid="map/GoogleMap" style="
+                                  contain: paint layout;
+                                  position: relative;
+                                  width: 100%;
+                                  height: 100%;
+                                ">
+<div style="
+                                    height: 100%;
+                                    background-color: #e6e3df;
+                                  "></div>
+<div class="c2omdfz atm_mk_stnw88 atm_tk_1ssbidh atm_fq_1ssbidh atm_tr_pryxvc dir dir-ltr">
+<span>
+<span class="d13up9z1 atm_2d_dezgoh atm_vy_ftgil2 atm_e2_ftgil2 atm_gi_eflcwz atm_5j_1osqo2v atm_9s_1o8liyq atm_1c_1hzm978 atm_y_17f45by atm_16_12c5xpv atm_1k_1ar7sfh atm_12_1hrf63d atm_vh_nkobfv d1ybflfs atm_q_bwqryj dir dir-ltr">
+</span>
+<span class="d13up9z1 atm_2d_dezgoh atm_vy_ftgil2 atm_e2_ftgil2 atm_gi_eflcwz atm_5j_1osqo2v atm_9s_1o8liyq atm_1c_1hzm978 atm_y_17f45by atm_16_12c5xpv atm_1k_1ar7sfh atm_12_1hrf63d atm_vh_nkobfv dsawj3h atm_q_1gqjw39 dir dir-ltr">
+</span>
+<span class="d13up9z1 atm_2d_dezgoh atm_vy_ftgil2 atm_e2_ftgil2 atm_gi_eflcwz atm_5j_1osqo2v atm_9s_1o8liyq atm_1c_1hzm978 atm_y_17f45by atm_16_12c5xpv atm_1k_1ar7sfh atm_12_1hrf63d atm_vh_nkobfv dir dir-ltr">
+</span>
+</span>
+</div>
+<div class="f8jn9pg atm_mk_stnw88 atm_2d_1bt4v6k atm_vy_1osqo2v atm_e2_1osqo2v atm_wq_kb7nvz atm_mj_glywfm dir dir-ltr"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<div class="c1yo0219 atm_9s_1txwivl_vmtskl atm_92_1yyfdc7_vmtskl atm_9s_1txwivl_9in345 atm_92_1yyfdc7_9in345 dir dir-ltr" data-pageslot='true'>
+<div style="display: contents">
+<div style="--gp-section-max-width: 1600px">
+<div class="f1enclhd atm_2d_116dmco dir dir-ltr">
+<div class="_1a6d9c4">
+<div class="plmw1e5 atm_e2_1osqo2v atm_gz_1wugsn5 atm_h0_1wugsn5 atm_vy_1osqo2v mq5rv0q atm_j3_1v7vjkn dir dir-ltr" style="--maxWidth: 1120px">
+<div class="c1yo0219 atm_9s_1txwivl_vmtskl atm_92_1yyfdc7_vmtskl atm_9s_1txwivl_9in345 atm_92_1yyfdc7_9in345 dir dir-ltr" data-pageslot='true'>
+<footer class="_3hmsj">
+<div class="_14lk9e14">
+<span class="a8jt5op atm_3f_idpfg4 atm_7h_hxbz6r atm_7i_ysn8ba atm_e2_t94yts atm_ks_zryt35 atm_l8_idpfg4 atm_mk_stnw88 atm_vv_1q9ccgz atm_vy_t94yts dir dir-ltr">
+<h2>Site Footer</h2>
+</span>
+<div class="_jis43y">
+<div class="w1pndi7o atm_vy_1osqo2v atm_gw_1fwxnve atm_9s_11p5wf0__oggzyc atm_dz_1h3c94l__oggzyc atm_84_ftgil2__oggzyc atm_67_i-glywfm_13ayz6n_oggzyc atm_lb_i-idpfg4_13ayz6n_oggzyc dir dir-ltr">
+<section class="se5ui3x atm_67_1vlbu9m atm_lb_1ph3nq8 atm_67_idpfg4_13mkcot atm_67_idpfg4__1v156lz atm_lb_dnsvzo__1v156lz dir dir-ltr">
+<h3 class="trsc28b atm_gi_idpfg4 atm_7l_dezgoh atm_c8_km0zk7 atm_g3_18khvle atm_fr_1m9t47k atm_cs_10d11i2 atm_gq_1gibeiw dir dir-ltr">
+                                          Support
+                                        </h3>
+<ul class="l1qzr284 atm_gi_idpfg4 atm_l8_idpfg4 atm_gb_glywfm atm_9s_11p5wf0 atm_cx_1gibeiw dir dir-ltr">
+<li>
+<a class="l1ovpqvx atm_1he2i46_1k8pnbi_10saat9 atm_yxpdqi_1pv6nv4_10saat9 atm_1a0hdzc_w1h1e8_10saat9 atm_2bu6ew_929bqk_10saat9 atm_12oyo1u_73u7pn_10saat9 atm_fiaz40_1etamxe_10saat9 c1kblhex atm_1s_glywfm atm_26_1j28jx2 atm_3f_idpfg4 atm_9j_tlke0l atm_gi_idpfg4 atm_l8_idpfg4 atm_vb_1wugsn5 atm_rd_glywfm atm_c8_km0zk7 atm_g3_18khvle atm_fr_1m9t47k atm_7l_dezgoh atm_cs_6adqpa atm_kd_glywfm atm_9j_13gfvf7_1o5j5ji atm_rd_glywfm_1mj13j2_uv4tnr atm_rd_8stvzk_1nos8r atm_3f_glywfm_jo46a5 atm_l8_idpfg4_jo46a5 atm_gi_idpfg4_jo46a5 atm_3f_glywfm_1icshfk atm_kd_glywfm_19774hq atm_7l_1ulhtn1_pfnrn2 atm_rd_8stvzk_pfnrn2 atm_uc_ryfd4z_pfnrn2 atm_5j_yh40bf_pfnrn2 atm_70_pd3o52_pfnrn2 atm_uc_glywfm_pfnrn2_1rrf6b5 dir dir-ltr" href="/help/home?from=footer">
+                                              Help Centre
+                                            </a>
+</li>
+<li>
+<a class="l1ovpqvx atm_1he2i46_1k8pnbi_10saat9 atm_yxpdqi_1pv6nv4_10saat9 atm_1a0hdzc_w1h1e8_10saat9 atm_2bu6ew_929bqk_10saat9 atm_12oyo1u_73u7pn_10saat9 atm_fiaz40_1etamxe_10saat9 c1kblhex atm_1s_glywfm atm_26_1j28jx2 atm_3f_idpfg4 atm_9j_tlke0l atm_gi_idpfg4 atm_l8_idpfg4 atm_vb_1wugsn5 atm_rd_glywfm atm_c8_km0zk7 atm_g3_18khvle atm_fr_1m9t47k atm_7l_dezgoh atm_cs_6adqpa atm_kd_glywfm atm_9j_13gfvf7_1o5j5ji atm_rd_glywfm_1mj13j2_uv4tnr atm_rd_8stvzk_1nos8r atm_3f_glywfm_jo46a5 atm_l8_idpfg4_jo46a5 atm_gi_idpfg4_jo46a5 atm_3f_glywfm_1icshfk atm_kd_glywfm_19774hq atm_7l_1ulhtn1_pfnrn2 atm_rd_8stvzk_pfnrn2 atm_uc_ryfd4z_pfnrn2 atm_5j_yh40bf_pfnrn2 atm_70_pd3o52_pfnrn2 atm_uc_glywfm_pfnrn2_1rrf6b5 dir dir-ltr" href="/aircover">
+                                              AirCover
+                                            </a>
+</li>
+<li>
+<a class="l1ovpqvx atm_1he2i46_1k8pnbi_10saat9 atm_yxpdqi_1pv6nv4_10saat9 atm_1a0hdzc_w1h1e8_10saat9 atm_2bu6ew_929bqk_10saat9 atm_12oyo1u_73u7pn_10saat9 atm_fiaz40_1etamxe_10saat9 c1kblhex atm_1s_glywfm atm_26_1j28jx2 atm_3f_idpfg4 atm_9j_tlke0l atm_gi_idpfg4 atm_l8_idpfg4 atm_vb_1wugsn5 atm_rd_glywfm atm_c8_km0zk7 atm_g3_18khvle atm_fr_1m9t47k atm_7l_dezgoh atm_cs_6adqpa atm_kd_glywfm atm_9j_13gfvf7_1o5j5ji atm_rd_glywfm_1mj13j2_uv4tnr atm_rd_8stvzk_1nos8r atm_3f_glywfm_jo46a5 atm_l8_idpfg4_jo46a5 atm_gi_idpfg4_jo46a5 atm_3f_glywfm_1icshfk atm_kd_glywfm_19774hq atm_7l_1ulhtn1_pfnrn2 atm_rd_8stvzk_pfnrn2 atm_uc_ryfd4z_pfnrn2 atm_5j_yh40bf_pfnrn2 atm_70_pd3o52_pfnrn2 atm_uc_glywfm_pfnrn2_1rrf6b5 dir dir-ltr" href="/against-discrimination">
+                                              Anti-discrimination
+                                            </a>
+</li>
+<li>
+<a class="l1ovpqvx atm_1he2i46_1k8pnbi_10saat9 atm_yxpdqi_1pv6nv4_10saat9 atm_1a0hdzc_w1h1e8_10saat9 atm_2bu6ew_929bqk_10saat9 atm_12oyo1u_73u7pn_10saat9 atm_fiaz40_1etamxe_10saat9 c1kblhex atm_1s_glywfm atm_26_1j28jx2 atm_3f_idpfg4 atm_9j_tlke0l atm_gi_idpfg4 atm_l8_idpfg4 atm_vb_1wugsn5 atm_rd_glywfm atm_c8_km0zk7 atm_g3_18khvle atm_fr_1m9t47k atm_7l_dezgoh atm_cs_6adqpa atm_kd_glywfm atm_9j_13gfvf7_1o5j5ji atm_rd_glywfm_1mj13j2_uv4tnr atm_rd_8stvzk_1nos8r atm_3f_glywfm_jo46a5 atm_l8_idpfg4_jo46a5 atm_gi_idpfg4_jo46a5 atm_3f_glywfm_1icshfk atm_kd_glywfm_19774hq atm_7l_1ulhtn1_pfnrn2 atm_rd_8stvzk_pfnrn2 atm_uc_ryfd4z_pfnrn2 atm_5j_yh40bf_pfnrn2 atm_70_pd3o52_pfnrn2 atm_uc_glywfm_pfnrn2_1rrf6b5 dir dir-ltr" href="/accessibility">
+                                              Disability support
+                                            </a>
+</li>
+<li>
+<a class="l1ovpqvx atm_1he2i46_1k8pnbi_10saat9 atm_yxpdqi_1pv6nv4_10saat9 atm_1a0hdzc_w1h1e8_10saat9 atm_2bu6ew_929bqk_10saat9 atm_12oyo1u_73u7pn_10saat9 atm_fiaz40_1etamxe_10saat9 c1kblhex atm_1s_glywfm atm_26_1j28jx2 atm_3f_idpfg4 atm_9j_tlke0l atm_gi_idpfg4 atm_l8_idpfg4 atm_vb_1wugsn5 atm_rd_glywfm atm_c8_km0zk7 atm_g3_18khvle atm_fr_1m9t47k atm_7l_dezgoh atm_cs_6adqpa atm_kd_glywfm atm_9j_13gfvf7_1o5j5ji atm_rd_glywfm_1mj13j2_uv4tnr atm_rd_8stvzk_1nos8r atm_3f_glywfm_jo46a5 atm_l8_idpfg4_jo46a5 atm_gi_idpfg4_jo46a5 atm_3f_glywfm_1icshfk atm_kd_glywfm_19774hq atm_7l_1ulhtn1_pfnrn2 atm_rd_8stvzk_pfnrn2 atm_uc_ryfd4z_pfnrn2 atm_5j_yh40bf_pfnrn2 atm_70_pd3o52_pfnrn2 atm_uc_glywfm_pfnrn2_1rrf6b5 dir dir-ltr" href="/help/article/2701/extenuating-circumstances-policy-and-the-coronavirus-covid19">
+                                              Cancellation options
+                                            </a>
+</li>
+<li>
+<a class="l1ovpqvx atm_1he2i46_1k8pnbi_10saat9 atm_yxpdqi_1pv6nv4_10saat9 atm_1a0hdzc_w1h1e8_10saat9 atm_2bu6ew_929bqk_10saat9 atm_12oyo1u_73u7pn_10saat9 atm_fiaz40_1etamxe_10saat9 c1kblhex atm_1s_glywfm atm_26_1j28jx2 atm_3f_idpfg4 atm_9j_tlke0l atm_gi_idpfg4 atm_l8_idpfg4 atm_vb_1wugsn5 atm_rd_glywfm atm_c8_km0zk7 atm_g3_18khvle atm_fr_1m9t47k atm_7l_dezgoh atm_cs_6adqpa atm_kd_glywfm atm_9j_13gfvf7_1o5j5ji atm_rd_glywfm_1mj13j2_uv4tnr atm_rd_8stvzk_1nos8r atm_3f_glywfm_jo46a5 atm_l8_idpfg4_jo46a5 atm_gi_idpfg4_jo46a5 atm_3f_glywfm_1icshfk atm_kd_glywfm_19774hq atm_7l_1ulhtn1_pfnrn2 atm_rd_8stvzk_pfnrn2 atm_uc_ryfd4z_pfnrn2 atm_5j_yh40bf_pfnrn2 atm_70_pd3o52_pfnrn2 atm_uc_glywfm_pfnrn2_1rrf6b5 dir dir-ltr" href="/neighbors">
+                                              Report neighbourhood concern
+                                            </a>
+</li>
+</ul>
+</section>
+<section class="se5ui3x atm_67_1vlbu9m atm_lb_1ph3nq8 atm_67_idpfg4_13mkcot atm_67_idpfg4__1v156lz atm_lb_dnsvzo__1v156lz dir dir-ltr">
+<h3 class="trsc28b atm_gi_idpfg4 atm_7l_dezgoh atm_c8_km0zk7 atm_g3_18khvle atm_fr_1m9t47k atm_cs_10d11i2 atm_gq_1gibeiw dir dir-ltr">
+                                          Hosting
+                                        </h3>
+<ul class="l1qzr284 atm_gi_idpfg4 atm_l8_idpfg4 atm_gb_glywfm atm_9s_11p5wf0 atm_cx_1gibeiw dir dir-ltr">
+<li>
+<a class="l1ovpqvx atm_1he2i46_1k8pnbi_10saat9 atm_yxpdqi_1pv6nv4_10saat9 atm_1a0hdzc_w1h1e8_10saat9 atm_2bu6ew_929bqk_10saat9 atm_12oyo1u_73u7pn_10saat9 atm_fiaz40_1etamxe_10saat9 c1kblhex atm_1s_glywfm atm_26_1j28jx2 atm_3f_idpfg4 atm_9j_tlke0l atm_gi_idpfg4 atm_l8_idpfg4 atm_vb_1wugsn5 atm_rd_glywfm atm_c8_km0zk7 atm_g3_18khvle atm_fr_1m9t47k atm_7l_dezgoh atm_cs_6adqpa atm_kd_glywfm atm_9j_13gfvf7_1o5j5ji atm_rd_glywfm_1mj13j2_uv4tnr atm_rd_8stvzk_1nos8r atm_3f_glywfm_jo46a5 atm_l8_idpfg4_jo46a5 atm_gi_idpfg4_jo46a5 atm_3f_glywfm_1icshfk atm_kd_glywfm_19774hq atm_7l_1ulhtn1_pfnrn2 atm_rd_8stvzk_pfnrn2 atm_uc_ryfd4z_pfnrn2 atm_5j_yh40bf_pfnrn2 atm_70_pd3o52_pfnrn2 atm_uc_glywfm_pfnrn2_1rrf6b5 dir dir-ltr" href="/host/homes?from_footer=1">
+                                              Airbnb your home
+                                            </a>
+</li>
+<li>
+<a class="l1ovpqvx atm_1he2i46_1k8pnbi_10saat9 atm_yxpdqi_1pv6nv4_10saat9 atm_1a0hdzc_w1h1e8_10saat9 atm_2bu6ew_929bqk_10saat9 atm_12oyo1u_73u7pn_10saat9 atm_fiaz40_1etamxe_10saat9 c1kblhex atm_1s_glywfm atm_26_1j28jx2 atm_3f_idpfg4 atm_9j_tlke0l atm_gi_idpfg4 atm_l8_idpfg4 atm_vb_1wugsn5 atm_rd_glywfm atm_c8_km0zk7 atm_g3_18khvle atm_fr_1m9t47k atm_7l_dezgoh atm_cs_6adqpa atm_kd_glywfm atm_9j_13gfvf7_1o5j5ji atm_rd_glywfm_1mj13j2_uv4tnr atm_rd_8stvzk_1nos8r atm_3f_glywfm_jo46a5 atm_l8_idpfg4_jo46a5 atm_gi_idpfg4_jo46a5 atm_3f_glywfm_1icshfk atm_kd_glywfm_19774hq atm_7l_1ulhtn1_pfnrn2 atm_rd_8stvzk_pfnrn2 atm_uc_ryfd4z_pfnrn2 atm_5j_yh40bf_pfnrn2 atm_70_pd3o52_pfnrn2 atm_uc_glywfm_pfnrn2_1rrf6b5 dir dir-ltr" href="/aircover-for-hosts">
+                                              AirCover for Hosts
+                                            </a>
+</li>
+<li>
+<a class="l1ovpqvx atm_1he2i46_1k8pnbi_10saat9 atm_yxpdqi_1pv6nv4_10saat9 atm_1a0hdzc_w1h1e8_10saat9 atm_2bu6ew_929bqk_10saat9 atm_12oyo1u_73u7pn_10saat9 atm_fiaz40_1etamxe_10saat9 c1kblhex atm_1s_glywfm atm_26_1j28jx2 atm_3f_idpfg4 atm_9j_tlke0l atm_gi_idpfg4 atm_l8_idpfg4 atm_vb_1wugsn5 atm_rd_glywfm atm_c8_km0zk7 atm_g3_18khvle atm_fr_1m9t47k atm_7l_dezgoh atm_cs_6adqpa atm_kd_glywfm atm_9j_13gfvf7_1o5j5ji atm_rd_glywfm_1mj13j2_uv4tnr atm_rd_8stvzk_1nos8r atm_3f_glywfm_jo46a5 atm_l8_idpfg4_jo46a5 atm_gi_idpfg4_jo46a5 atm_3f_glywfm_1icshfk atm_kd_glywfm_19774hq atm_7l_1ulhtn1_pfnrn2 atm_rd_8stvzk_pfnrn2 atm_uc_ryfd4z_pfnrn2 atm_5j_yh40bf_pfnrn2 atm_70_pd3o52_pfnrn2 atm_uc_glywfm_pfnrn2_1rrf6b5 dir dir-ltr" href="/resources">
+                                              Hosting resources
+                                            </a>
+</li>
+<li>
+<a class="l1ovpqvx atm_1he2i46_1k8pnbi_10saat9 atm_yxpdqi_1pv6nv4_10saat9 atm_1a0hdzc_w1h1e8_10saat9 atm_2bu6ew_929bqk_10saat9 atm_12oyo1u_73u7pn_10saat9 atm_fiaz40_1etamxe_10saat9 c1kblhex atm_1s_glywfm atm_26_1j28jx2 atm_3f_idpfg4 atm_9j_tlke0l atm_gi_idpfg4 atm_l8_idpfg4 atm_vb_1wugsn5 atm_rd_glywfm atm_c8_km0zk7 atm_g3_18khvle atm_fr_1m9t47k atm_7l_dezgoh atm_cs_6adqpa atm_kd_glywfm atm_9j_13gfvf7_1o5j5ji atm_rd_glywfm_1mj13j2_uv4tnr atm_rd_8stvzk_1nos8r atm_3f_glywfm_jo46a5 atm_l8_idpfg4_jo46a5 atm_gi_idpfg4_jo46a5 atm_3f_glywfm_1icshfk atm_kd_glywfm_19774hq atm_7l_1ulhtn1_pfnrn2 atm_rd_8stvzk_pfnrn2 atm_uc_ryfd4z_pfnrn2 atm_5j_yh40bf_pfnrn2 atm_70_pd3o52_pfnrn2 atm_uc_glywfm_pfnrn2_1rrf6b5 dir dir-ltr" href="/help/community?s=footer">
+                                              Community forum
+                                            </a>
+</li>
+<li>
+<a class="l1ovpqvx atm_1he2i46_1k8pnbi_10saat9 atm_yxpdqi_1pv6nv4_10saat9 atm_1a0hdzc_w1h1e8_10saat9 atm_2bu6ew_929bqk_10saat9 atm_12oyo1u_73u7pn_10saat9 atm_fiaz40_1etamxe_10saat9 c1kblhex atm_1s_glywfm atm_26_1j28jx2 atm_3f_idpfg4 atm_9j_tlke0l atm_gi_idpfg4 atm_l8_idpfg4 atm_vb_1wugsn5 atm_rd_glywfm atm_c8_km0zk7 atm_g3_18khvle atm_fr_1m9t47k atm_7l_dezgoh atm_cs_6adqpa atm_kd_glywfm atm_9j_13gfvf7_1o5j5ji atm_rd_glywfm_1mj13j2_uv4tnr atm_rd_8stvzk_1nos8r atm_3f_glywfm_jo46a5 atm_l8_idpfg4_jo46a5 atm_gi_idpfg4_jo46a5 atm_3f_glywfm_1icshfk atm_kd_glywfm_19774hq atm_7l_1ulhtn1_pfnrn2 atm_rd_8stvzk_pfnrn2 atm_uc_ryfd4z_pfnrn2 atm_5j_yh40bf_pfnrn2 atm_70_pd3o52_pfnrn2 atm_uc_glywfm_pfnrn2_1rrf6b5 dir dir-ltr" href="/help/responsible-hosting">
+                                              Hosting responsibly
+                                            </a>
+</li>
+<li>
+<a class="l1ovpqvx atm_1he2i46_1k8pnbi_10saat9 atm_yxpdqi_1pv6nv4_10saat9 atm_1a0hdzc_w1h1e8_10saat9 atm_2bu6ew_929bqk_10saat9 atm_12oyo1u_73u7pn_10saat9 atm_fiaz40_1etamxe_10saat9 c1kblhex atm_1s_glywfm atm_26_1j28jx2 atm_3f_idpfg4 atm_9j_tlke0l atm_gi_idpfg4 atm_l8_idpfg4 atm_vb_1wugsn5 atm_rd_glywfm atm_c8_km0zk7 atm_g3_18khvle atm_fr_1m9t47k atm_7l_dezgoh atm_cs_6adqpa atm_kd_glywfm atm_9j_13gfvf7_1o5j5ji atm_rd_glywfm_1mj13j2_uv4tnr atm_rd_8stvzk_1nos8r atm_3f_glywfm_jo46a5 atm_l8_idpfg4_jo46a5 atm_gi_idpfg4_jo46a5 atm_3f_glywfm_1icshfk atm_kd_glywfm_19774hq atm_7l_1ulhtn1_pfnrn2 atm_rd_8stvzk_pfnrn2 atm_uc_ryfd4z_pfnrn2 atm_5j_yh40bf_pfnrn2 atm_70_pd3o52_pfnrn2 atm_uc_glywfm_pfnrn2_1rrf6b5 dir dir-ltr" href="/ambassadors/joinaclass">
+                                              Join a free hosting class
+                                            </a>
+</li>
+</ul>
+</section>
+<section class="se5ui3x atm_67_1vlbu9m atm_lb_1ph3nq8 atm_67_idpfg4_13mkcot atm_67_idpfg4__1v156lz atm_lb_dnsvzo__1v156lz dir dir-ltr">
+<h3 class="trsc28b atm_gi_idpfg4 atm_7l_dezgoh atm_c8_km0zk7 atm_g3_18khvle atm_fr_1m9t47k atm_cs_10d11i2 atm_gq_1gibeiw dir dir-ltr">
+                                          Airbnb
+                                        </h3>
+<ul class="l1qzr284 atm_gi_idpfg4 atm_l8_idpfg4 atm_gb_glywfm atm_9s_11p5wf0 atm_cx_1gibeiw dir dir-ltr">
+<li>
+<a class="l1ovpqvx atm_1he2i46_1k8pnbi_10saat9 atm_yxpdqi_1pv6nv4_10saat9 atm_1a0hdzc_w1h1e8_10saat9 atm_2bu6ew_929bqk_10saat9 atm_12oyo1u_73u7pn_10saat9 atm_fiaz40_1etamxe_10saat9 c1kblhex atm_1s_glywfm atm_26_1j28jx2 atm_3f_idpfg4 atm_9j_tlke0l atm_gi_idpfg4 atm_l8_idpfg4 atm_vb_1wugsn5 atm_rd_glywfm atm_c8_km0zk7 atm_g3_18khvle atm_fr_1m9t47k atm_7l_dezgoh atm_cs_6adqpa atm_kd_glywfm atm_9j_13gfvf7_1o5j5ji atm_rd_glywfm_1mj13j2_uv4tnr atm_rd_8stvzk_1nos8r atm_3f_glywfm_jo46a5 atm_l8_idpfg4_jo46a5 atm_gi_idpfg4_jo46a5 atm_3f_glywfm_1icshfk atm_kd_glywfm_19774hq atm_7l_1ulhtn1_pfnrn2 atm_rd_8stvzk_pfnrn2 atm_uc_ryfd4z_pfnrn2 atm_5j_yh40bf_pfnrn2 atm_70_pd3o52_pfnrn2 atm_uc_glywfm_pfnrn2_1rrf6b5 dir dir-ltr" href="/press/news">
+                                              Newsroom
+                                            </a>
+</li>
+<li>
+
+        ```
+        
