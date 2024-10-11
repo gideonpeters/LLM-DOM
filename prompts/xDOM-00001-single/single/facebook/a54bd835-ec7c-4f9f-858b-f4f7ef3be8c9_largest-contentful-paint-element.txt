@@ -1,0 +1,77 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. largest-contentful-paint-element => Largest Contentful Paint element: This is the largest contentful element painted within the viewport. [Learn more about the Largest Contentful Paint element](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        
+<meta charset="utf-8"></meta>
+<meta content="default" id="meta_referrer" name="referrer"></meta>
+<script data-chunk-uuid="30fb710c-c5fd-494c-9107-016d686cb4d0" nonce="sC4SLfjB">// chunk_script_30fb710c-c5fd-494c-9107-016d686cb4d0
+</script>
+<script data-chunk-uuid="e65c0863-f10f-4f20-b256-e87c4dc090d0" nonce="sC4SLfjB">// chunk_script_e65c0863-f10f-4f20-b256-e87c4dc090d0
+</script>
+<style data-chunk-uuid="cd450108-b406-46fb-afff-ff4ae36ef6c4" nonce="sC4SLfjB">/* chunk_style_cd450108-b406-46fb-afff-ff4ae36ef6c4 */
+</style>
+<script data-chunk-uuid="cd047ddd-18ab-4739-b15c-8bfa701e36bb" nonce="sC4SLfjB">// chunk_script_cd047ddd-18ab-4739-b15c-8bfa701e36bb
+</script>
+<noscript>
+<meta content="0; URL=/?_fb_noscript=1" http-equiv="refresh"></meta>
+</noscript>
+<link crossorigin="use-credentials" href="/data/manifest/" id="MANIFEST_LINK" rel="manifest"></link>
+<title id="pageTitle">
+   Facebook - log in or sign up
+  </title>
+<meta content="noarchive" name="bingbot"></meta>
+<meta content="Facebook" property="og:site_name"></meta>
+<meta content="https://www.facebook.com/" property="og:url"></meta>
+<meta content="https://www.facebook.com/images/fb_icon_325x325.png" property="og:image"></meta>
+<meta content="en_US" property="og:locale"></meta>
+<link href="https://m.facebook.com/" media="only screen and (max-width: 640px)" rel="alternate"></link>
+<link href="https://m.facebook.com/" media="handheld" rel="alternate"></link>
+<meta content="Log into Facebook to start sharing and connecting with your friends, family, and people you know." name="description"></meta>
+<script data-chunk-uuid="b52b9f0d-70e2-42da-a90c-23b7439bc0c1" nonce="sC4SLfjB" type="application/ld+json">// chunk_script_b52b9f0d-70e2-42da-a90c-23b7439bc0c1
+</script>
+<link href="https://www.facebook.com/" rel="canonical"></link>
+<link href="https://static.xx.fbcdn.net/rsrc.php/yv/r/B8BxsscfVBr.ico" rel="icon"></link>
+<link data-bootloader-hash="I1Cw2oh" href="https://static.xx.fbcdn.net/rsrc.php/v3/y5/l/0,cross/9uJ85fBP1ql.css?_nc_x=Ij3Wp8lg5Kz" rel="stylesheet" type="text/css"></link>
+<link data-bootloader-hash="12sKuLa" href="https://static.xx.fbcdn.net/rsrc.php/v3/yi/l/0,cross/5C7LQe6FV-U.css?_nc_x=Ij3Wp8lg5Kz" rel="stylesheet" type="text/css"></link>
+<link data-bootloader-hash="Czen+rq" href="https://static.xx.fbcdn.net/rsrc.php/v3/y0/l/0,cross/z38r275Iuu2.css?_nc_x=Ij3Wp8lg5Kz" rel="stylesheet" type="text/css"></link>
+<script data-chunk-uuid="132c982a-47c2-40b7-8a32-d425fc8a877a" data-bootloader-hash="VDAvrq2" nonce="sC4SLfjB" src="https://static.xx.fbcdn.net/rsrc.php/v3/yW/r/9nUz5AS-QWA.js?_nc_x=Ij3Wp8lg5Kz">// chunk_script_132c982a-47c2-40b7-8a32-d425fc8a877a
+</script>
+<script data-chunk-uuid="dc999e03-0f66-4f36-b628-a03fb9a4a056" nonce="sC4SLfjB">// chunk_script_dc999e03-0f66-4f36-b628-a03fb9a4a056
+</script>
+
+        ```
+        

@@ -310,5 +310,149 @@
         "experiment_name": "xDOM-00001-single",
         "mode": "single",
         "audit_key": "link-text"
+    },
+    {
+        "name": "facebook",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "speed-index"
+    },
+    {
+        "name": "facebook",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "first-contentful-paint"
+    },
+    {
+        "name": "facebook",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "viewport"
+    },
+    {
+        "name": "facebook",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "total-blocking-time"
+    },
+    {
+        "name": "facebook",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "largest-contentful-paint"
+    },
+    {
+        "name": "facebook",
+        "modifications": 0,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "max-potential-fid"
+    },
+    {
+        "name": "facebook",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "unsized-images"
+    },
+    {
+        "name": "facebook",
+        "modifications": 0,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "errors-in-console"
+    },
+    {
+        "name": "facebook",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "color-contrast"
+    },
+    {
+        "name": "facebook",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "target-size"
+    },
+    {
+        "name": "facebook",
+        "modifications": 0,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "interactive"
+    },
+    {
+        "name": "facebook",
+        "modifications": 0,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "deprecations"
+    },
+    {
+        "name": "facebook",
+        "modifications": 0,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "largest-contentful-paint-element"
+    },
+    {
+        "name": "facebook",
+        "modifications": 0,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "font-size"
+    },
+    {
+        "name": "facebook",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "render-blocking-resources"
+    },
+    {
+        "name": "facebook",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "unused-javascript"
+    },
+    {
+        "name": "facebook",
+        "modifications": 0,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "uses-text-compression"
+    },
+    {
+        "name": "facebook",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "legacy-javascript"
     }
 ]

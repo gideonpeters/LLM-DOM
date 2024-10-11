@@ -1,0 +1,391 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. target-size => Touch targets do not have sufficient size or spacing.: Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. [Learn more about touch targets](https://dequeuniversity.com/rules/axe/4.9/target-size).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        
+<script data-chunk-uuid="695f41c0-781f-4068-b98a-03dbb2b0fb5c" nonce="sC4SLfjB" type="text/javascript">// chunk_script_695f41c0-781f-4068-b98a-03dbb2b0fb5c
+</script>
+<div class="_li" id="u_0_1_ho">
+<div class="uiContextualLayerParent" id="globalContainer">
+<div class="fb_content clearfix" id="content" role="main">
+<div>
+<div class="_8esj _95k9 _8esf _8opv _8f3m _8ilg _8icx _8op_ _95ka">
+<div class="_8esk">
+<div class="_8esl">
+<div class="_8ice">
+<img alt="Facebook" class="fb_logo _8ilh img" src="https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg"></img>
+</div>
+<h2 class="_8eso">
+          Connect with friends and the world around you on Facebook.
+         </h2>
+</div>
+<div class="_8esn">
+<div class="_8iep _8icy _9ahz _9ah-">
+<div class="_6luv _52jv">
+<form action="/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNzIzNDg3Njc4LCJjYWxsc2l0ZV9pZCI6MzgxMjI5MDc5NTc1OTQ2fQ%3D%3D&next" class="_9vtf" data-testid="royal_login_form" id="u_0_2_s7" method="post" onsubmit="">
+<input autocomplete="off" name="jazoest" type="hidden" value='2832'></input>
+<input autocomplete="off" name="lsd" type="hidden" value="AVoX7G9-NAo"></input>
+<div>
+<div class="_6lux">
+<input aria-label="Email or phone number" autofocus='1' class="inputtext _55r1 _6luy" data-testid="royal_email" id="email" name="email" placeholder="Email or phone number" type="text"></input>
+</div>
+<div class="_6lux">
+<div class="_6luy _55r1 _1kbt" id="passContainer">
+<input aria-label="Password" class="inputtext _55r1 _6luy _9npi" data-testid="royal_pass" id="pass" name="pass" placeholder="Password" type="password"></input>
+<div class="_9ls7" id="u_0_3_qc">
+<a href="#" role="button">
+<div class="_9lsa">
+<div class="_9lsb" id="u_0_4_7F">
+</div>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+<input autocomplete="off" name="login_source" type="hidden" value="comet_headerless_login"></input>
+<input autocomplete="off" name="next" type="hidden" value=""></input>
+<div class="_6ltg">
+<button class="_42ft _4jy0 _6lth _4jy6 _4jy1 selected _51sy" data-testid="royal_login_button" id="u_0_5_pr" name="login" type="submit" value='1'>
+              Log In
+             </button>
+</div>
+<div class="_6ltj">
+<a href="https://www.facebook.com/recover/initiate/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNzIzNDg3Njc4LCJjYWxsc2l0ZV9pZCI6MzgxMjI5MDc5NTc1OTQ2fQ%3D%3D&ars=facebook_login&next">
+              Forgot password?
+             </a>
+</div>
+<div class="_8icz">
+</div>
+<div class="_6ltg">
+<a ajaxify="/reg/spotlight/" class="_42ft _4jy0 _6lti _4jy6 _4jy2 selected _51sy" data-testid="open-registration-form-button" href="#" id="u_0_0_sM" rel="async" role="button">
+              Create new account
+             </a>
+</div>
+</form>
+</div>
+<div class="_58mk" id="reg_pages_msg">
+<a class="_8esh" href="/pages/create/?ref_type=registration_form">
+            Create a Page
+           </a>
+           for a celebrity, brand or business.
+          </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="">
+<div class="_95ke _8opy">
+<div data-referrer="page_footer" data-testid="page_footer" id="pageFooter">
+<ul class="uiList localeSelectorList _2pid _509- _4ki _6-h _6-j _6-i" data-nocookies='1'>
+<li>
+         English (US)
+        </li>
+<li>
+<a class="_sv4" dir="ltr" href="https://fr-ca.facebook.com/" onclick="require("IntlUtils").setCookieLocale("fr_CA", "en_US", "https:\/\/fr-ca.facebook.com\/", "www_list_selector", 0); return false;" title="French (Canada)">
+          Français (Canada)
+         </a>
+</li>
+<li>
+<a class="_sv4" dir="ltr" href="https://es-la.facebook.com/" onclick="require("IntlUtils").setCookieLocale("es_LA", "en_US", "https:\/\/es-la.facebook.com\/", "www_list_selector", 1); return false;" title="Spanish">
+          Español
+         </a>
+</li>
+<li>
+<a class="_sv4" dir="ltr" href="https://zh-cn.facebook.com/" onclick="require("IntlUtils").setCookieLocale("zh_CN", "en_US", "https:\/\/zh-cn.facebook.com\/", "www_list_selector", 2); return false;" title="Simplified Chinese (China)">
+          中文(简体)
+         </a>
+</li>
+<li>
+<a class="_sv4" dir="ltr" href="https://ko-kr.facebook.com/" onclick="require("IntlUtils").setCookieLocale("ko_KR", "en_US", "https:\/\/ko-kr.facebook.com\/", "www_list_selector", 3); return false;" title="Korean">
+          한국어
+         </a>
+</li>
+<li>
+<a class="_sv4" dir="ltr" href="https://ja-jp.facebook.com/" onclick="require("IntlUtils").setCookieLocale("ja_JP", "en_US", "https:\/\/ja-jp.facebook.com\/", "www_list_selector", 4); return false;" title="Japanese">
+          日本語
+         </a>
+</li>
+<li>
+<a class="_sv4" dir="ltr" href="https://pt-br.facebook.com/" onclick="require("IntlUtils").setCookieLocale("pt_BR", "en_US", "https:\/\/pt-br.facebook.com\/", "www_list_selector", 5); return false;" title="Portuguese (Brazil)">
+          Português (Brasil)
+         </a>
+</li>
+<li>
+<a class="_sv4" dir="ltr" href="https://de-de.facebook.com/" onclick="require("IntlUtils").setCookieLocale("de_DE", "en_US", "https:\/\/de-de.facebook.com\/", "www_list_selector", 6); return false;" title="German">
+          Deutsch
+         </a>
+</li>
+<li>
+<a class="_sv4" dir="ltr" href="https://it-it.facebook.com/" onclick="require("IntlUtils").setCookieLocale("it_IT", "en_US", "https:\/\/it-it.facebook.com\/", "www_list_selector", 7); return false;" title="Italian">
+          Italiano
+         </a>
+</li>
+<li>
+<a class="_sv4" dir="rtl" href="https://ar-ar.facebook.com/" onclick="require("IntlUtils").setCookieLocale("ar_AR", "en_US", "https:\/\/ar-ar.facebook.com\/", "www_list_selector", 8); return false;" title="Arabic">
+          العربية
+         </a>
+</li>
+<li>
+<a class="_sv4" dir="ltr" href="https://hi-in.facebook.com/" onclick="require("IntlUtils").setCookieLocale("hi_IN", "en_US", "https:\/\/hi-in.facebook.com\/", "www_list_selector", 9); return false;" title="Hindi">
+          हिन्दी
+         </a>
+</li>
+<li>
+<a ajaxify="/settings/language/language/?uri=https%3A%2F%2Fhi-in.facebook.com%2F&source=www_list_selector_more" class="_42ft _4jy0 _517i _517h _51sy" href="#" rel="dialog" role="button" title="Show more languages">
+<i class="img sp_zdwpDYaFwZF sx_db60e6">
+</i>
+</a>
+</li>
+</ul>
+<div id="contentCurve">
+</div>
+<div aria-label="Facebook site links" id="pageFooterChildren" role="contentinfo">
+<ul class="uiList pageFooterLinkList _509- _4ki _703 _6-i">
+<li>
+<a href="/reg/" title="Sign Up for Facebook">
+           Sign Up
+          </a>
+</li>
+<li>
+<a href="/login/" title="Log into Facebook">
+           Log In
+          </a>
+</li>
+<li>
+<a href="https://messenger.com/" title="Check out Messenger.">
+           Messenger
+          </a>
+</li>
+<li>
+<a href="/lite/" title="Facebook Lite for Android.">
+           Facebook Lite
+          </a>
+</li>
+<li>
+<a href="https://www.facebook.com/watch/" title="Browse in Video">
+           Video
+          </a>
+</li>
+<li>
+<a href="/places/" title="Check out popular places on Facebook.">
+           Places
+          </a>
+</li>
+<li>
+<a href="/games/" title="Check out Facebook games.">
+           Games
+          </a>
+</li>
+<li>
+<a href="/marketplace/" title="Buy and sell on Facebook Marketplace.">
+           Marketplace
+          </a>
+</li>
+<li>
+<a href="https://pay.facebook.com/" target="_blank" title="Learn more about Meta Pay">
+           Meta Pay
+          </a>
+</li>
+<li>
+<a href="https://www.meta.com/" target="_blank" title="Check out Meta">
+           Meta Store
+          </a>
+</li>
+<li>
+<a href="https://www.meta.com/quest/" target="_blank" title="Learn more about Meta Quest">
+           Meta Quest
+          </a>
+</li>
+<li>
+<a href="https://www.meta.ai/" title="Meta AI">
+           Meta AI
+          </a>
+</li>
+<li>
+<a data-lynx-mode="hover" href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2F&h=AT0tRznMPQiM9L6rr_COfwv4ubOB_z6zwFLRhGerIZ8T--3CQX_2y3CwKFb74zcQsHnfMii_Si2aDJ8vq0WXja4UcGmYQU91MElp_v4tOQ8DYR1vCuj9TCOKEKD53UwTYqy-plP0s5-J4pe-" rel="nofollow" target="_blank" title="Check out Instagram">
+           Instagram
+          </a>
+</li>
+<li>
+<a href="https://www.threads.net/" title="Check out Threads">
+           Threads
+          </a>
+</li>
+<li>
+<a href="/fundraisers/" title="Donate to worthy causes.">
+           Fundraisers
+          </a>
+</li>
+<li>
+<a href="/biz/directory/" title="Browse our Facebook Services directory.">
+           Services
+          </a>
+</li>
+<li>
+<a href="/votinginformationcenter/?entry_point=c2l0ZQ%3D%3D" title="See the Voting Information Center.">
+           Voting Information Center
+          </a>
+</li>
+<li>
+<a href="/privacy/policy/?entry_point=facebook_page_footer" title="Learn how we collect, use and share information to support Facebook.">
+           Privacy Policy
+          </a>
+</li>
+<li>
+<a href="/privacy/center/?entry_point=facebook_page_footer" title="Learn how to manage and control your privacy on Facebook.">
+           Privacy Center
+          </a>
+</li>
+<li>
+<a href="/groups/discover/" title="Explore our Groups.">
+           Groups
+          </a>
+</li>
+<li>
+<a accesskey="8" href="https://about.meta.com/" title="Read our blog, discover the resource center, and find job opportunities.">
+           About
+          </a>
+</li>
+<li>
+<a href="/ad_campaign/landing.php?placement=pflo&campaign_id=402047449186&nav_source=unknown&extra_1=auto" title="Advertise on Facebook.">
+           Create ad
+          </a>
+</li>
+<li>
+<a href="/pages/create/?ref_type=site_footer" title="Create a page">
+           Create Page
+          </a>
+</li>
+<li>
+<a href="https://developers.facebook.com/?ref=pf" title="Develop on our platform.">
+           Developers
+          </a>
+</li>
+<li>
+<a href="/careers/?ref=pf" title="Make your next career move to our awesome company.">
+           Careers
+          </a>
+</li>
+<li>
+<a data-nocookies='1' href="/policies/cookies/" title="Learn about cookies and Facebook.">
+           Cookies
+          </a>
+</li>
+<li>
+<a class="_41ug" data-nocookies='1' href="https://www.facebook.com/help/568137493302217" title="Learn about Ad Choices.">
+           Ad choices
+           <i class="img sp_zdwpDYaFwZF sx_470b13">
+</i>
+</a>
+</li>
+<li>
+<a accesskey="9" data-nocookies='1' href="/policies?ref=pf" title="Review our terms and policies.">
+           Terms
+          </a>
+</li>
+<li>
+<a accesskey="0" href="/help/?ref=pf" title="Visit our Help Center.">
+           Help
+          </a>
+</li>
+<li>
+<a href="help/637205020878504" title="Visit our Contact Uploading & Non-Users Notice.">
+           Contact Uploading & Non-Users
+          </a>
+</li>
+<li>
+<a accesskey="6" class="accessible_elem" href="/settings" title="View and edit your Facebook settings.">
+           Settings
+          </a>
+</li>
+<li>
+<a accesskey="7" class="accessible_elem" href="/allactivity?privacy_source=activity_log_top_menu" title="View your activity log">
+           Activity log
+          </a>
+</li>
+</ul>
+</div>
+<div class="mvl copyright">
+<div>
+<span>
+          Meta © 2024
+         </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div>
+</div>
+<span>
+<img height='0' src="https://facebook.com/security/hsts-pixel.gif?c=3.2.5" style="display:none" width='0'></img>
+</span>
+</div>
+<div style="display:none">
+</div>
+<script data-chunk-uuid="abbd9382-c8a7-40e1-960c-f994c9349fd0">// chunk_script_abbd9382-c8a7-40e1-960c-f994c9349fd0
+</script>
+<script data-chunk-uuid="9678ed04-72ea-4301-8753-48724bd065c7">// chunk_script_9678ed04-72ea-4301-8753-48724bd065c7
+</script>
+<script data-chunk-uuid="5d69a9ec-5c43-482f-98fe-dfebbcbfd07d">// chunk_script_5d69a9ec-5c43-482f-98fe-dfebbcbfd07d
+</script>
+<script data-chunk-uuid="127c0863-4528-42d2-a15a-2d9b15b8a06a">// chunk_script_127c0863-4528-42d2-a15a-2d9b15b8a06a
+</script>
+<link as="style" href="https://static.xx.fbcdn.net/rsrc.php/v3/y5/l/0,cross/9uJ85fBP1ql.css?_nc_x=Ij3Wp8lg5Kz" rel="preload"></link>
+<link as="style" href="https://static.xx.fbcdn.net/rsrc.php/v3/yi/l/0,cross/5C7LQe6FV-U.css?_nc_x=Ij3Wp8lg5Kz" rel="preload"></link>
+<link as="style" href="https://static.xx.fbcdn.net/rsrc.php/v3/y0/l/0,cross/z38r275Iuu2.css?_nc_x=Ij3Wp8lg5Kz" rel="preload"></link>
+<link as="script" href="https://static.xx.fbcdn.net/rsrc.php/v3/yS/r/IQesjrfZ6d8.js?_nc_x=Ij3Wp8lg5Kz" nonce="sC4SLfjB" rel="preload"></link>
+<link as="script" href="https://static.xx.fbcdn.net/rsrc.php/v3i7M54/yn/l/en_US/4Pp4F7gpCJ9.js?_nc_x=Ij3Wp8lg5Kz" nonce="sC4SLfjB" rel="preload"></link>
+<link as="script" href="https://static.xx.fbcdn.net/rsrc.php/v3/yu/r/oMdLeeyxQqZ.js?_nc_x=Ij3Wp8lg5Kz" nonce="sC4SLfjB" rel="preload"></link>
+<script data-chunk-uuid="69d7011d-1aad-47af-8c99-2d58047589b0">// chunk_script_69d7011d-1aad-47af-8c99-2d58047589b0
+</script>
+<script data-chunk-uuid="7fda89d2-1c78-42eb-b3e8-979af7c96e3d" nonce="sC4SLfjB">// chunk_script_7fda89d2-1c78-42eb-b3e8-979af7c96e3d
+</script>
+<script data-chunk-uuid="6c2397c7-f90a-4776-87c3-aafb32845ad9" nonce="sC4SLfjB">// chunk_script_6c2397c7-f90a-4776-87c3-aafb32845ad9
+</script>
+<script data-chunk-uuid="40da0a89-ea9b-47c0-a29c-c176e594e9ee">// chunk_script_40da0a89-ea9b-47c0-a29c-c176e594e9ee
+</script>
+<script data-chunk-uuid="99acce68-e0fb-43e6-91f5-afdf52e2f21e" nonce="sC4SLfjB">// chunk_script_99acce68-e0fb-43e6-91f5-afdf52e2f21e
+</script>
+<script data-chunk-uuid="f23b050c-7491-471d-a220-b691ca619491" nonce="sC4SLfjB">// chunk_script_f23b050c-7491-471d-a220-b691ca619491
+</script>
+
+        ```
+        
