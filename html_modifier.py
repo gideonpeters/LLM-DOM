@@ -24,7 +24,7 @@ load_dotenv()
 TOKEN_LIMIT = 12000
 MAX_LIMIT = 16100
 
-api_keys = [
+ref_api_keys = [
     {
         "api_key": os.getenv("OPENAI_API_KEY_ME"),
         "key": "me",
@@ -76,7 +76,7 @@ api_keys = [
 ]
 
 
-def check_for_existing_tokens_usage():
+def get_existing_tokens_usage():
     existing_token_file = "tokens_usage.json"
 
     existing_usage = []
@@ -84,24 +84,38 @@ def check_for_existing_tokens_usage():
         with open(existing_token_file, 'r') as file:
             existing_usage = json.load(file)
 
+    # existing_usage = []
     for usage in existing_usage:
+        for key in ref_api_keys:
+            if key['key'] == usage['key']:
+                usage['api_key'] = key['api_key']
+                
+    return existing_usage
+
+def save_tokens_usage(prompt: str, api_key, estimator: callable):
+    try:
+        existing_token_file = "tokens_usage.json"
+
+        existing_usage = get_existing_tokens_usage()
+
+        api_keys = existing_usage
+
+        # Update token usage
         for key in api_keys:
-            if key['key'] == usage['api_key']:
-                key['tokens_used'] = usage['tokens_used']
-                key['no_of_requests'] = usage['no_of_requests']
-                key['last_request'] = usage['last_request']
+            if key['api_key'] == api_key:
+                key['tokens_used'] += estimator(prompt)
+                key['no_of_requests'] += 1
+                key['last_request'] = time.time()
 
-def save_tokens_usage():
-    existing_token_file = "tokens_usage.json"
+        api_keys_copy = api_keys.copy()
+        for key in api_keys_copy:
+            key.pop("api_key")
 
-    api_keys_copy = api_keys.copy()
-    for key in api_keys_copy:
-        key["api_key"] = key["key"]
-        key.pop("key")
+        with open(existing_token_file, 'w') as file:
+            json.dump(api_keys_copy, file, indent=4)
 
-    with open(existing_token_file, 'w') as file:
-        json.dump(api_keys, file, indent=4)
-
+    except Exception as e:
+        print(f"Error saving token usage: {e}")
 
 # Class to split HTML into chunks and send each chunk to the LLM for modification
 # Directories
@@ -123,8 +137,9 @@ def save_tokens_usage():
 
 class HTMLModifier:
     def __init__(self, html, dom_name):
-        check_for_existing_tokens_usage()
-        self.api_key = self.get_api_key()
+        # check_for_existing_tokens_usage()
+        get_existing_tokens_usage()
+        self.api_key = get_existing_tokens_usage()[0]['api_key']
 
         if self.api_key is None:
             raise Exception("All API keys have exceeded their rate limits.")
@@ -354,16 +369,8 @@ class HTMLModifier:
 
             else:
                 response_content = response.choices[0].message.content
-
-                # Update token usage
-                for key in api_keys:
-                    if key['api_key'] == self.api_key:
-                        key['tokens_used'] += self.estimate_tokens(prompt)
-                        key['no_of_requests'] += 1
-                        key['last_request'] = time.time()
-                        break
                 
-                save_tokens_usage()
+                # save_tokens_usage(prompt, self.api_key, self.estimate_tokens)
 
                 response_content = self.parse_chatgpt_response(response_content)
 
@@ -371,7 +378,7 @@ class HTMLModifier:
                 self.no_of_modifications += no_of_modifications
         except Exception as e:
             print(f"Error: {e}")
-            self.log_error(self.dom_name, self.experiment_name, "No finish reason",e, response)
+            self.log_error(self.dom_name, self.experiment_name, "No finish reason", e, response)
             response_content = html_part
         
         return response_content

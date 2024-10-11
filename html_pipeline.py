@@ -138,7 +138,16 @@ def run_pipeline(experiment):
 
 
 if  __name__ == "__main__":
-    experiments = ['airbnb', 'aliexpress', 'ebay', 'facebook', 'github', 'linkedin', 'medium', 'netflix', 'pinterest', 'quora', 'reddit', 'twitch', 'twitter', 'walmart', 'youtube']
+    experiments = [
+        'airbnb', 'aliexpress', 
+                #    'ebay', 'facebook', 
+                #    'github', 'linkedin', 
+                #    'medium', 'netflix', 
+                #    'pinterest', 'quora', 
+                #    'reddit', 'twitch', 
+                #    'twitter', 'walmart', 
+                #    'youtube'
+                   ]
 
     with concurrent.futures.ProcessPoolExecutor(max_workers=10) as executor:
         executor.map(run_pipeline, experiments)
