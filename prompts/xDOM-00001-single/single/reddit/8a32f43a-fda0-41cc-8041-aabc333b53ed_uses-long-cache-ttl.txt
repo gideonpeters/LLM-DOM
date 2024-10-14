@@ -1,0 +1,752 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. uses-long-cache-ttl => Serve static assets with an efficient cache policy: A long cache lifetime can speed up repeat visits to your page. [Learn more about efficient cache policies](https://developer.chrome.com/docs/lighthouse/performance/uses-long-cache-ttl/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        <svg fill="currentColor" height='12' icon-name="external-fill" rpl="" viewbox="0 0 20 20" width='12' xmlns="http://www.w3.org/2000/svg">
+<path d="M15 13h2v3.35A2.653 2.653 0 0 1 14.35 19H3.65A2.653 2.653 0 0 1 1 16.35V5.653A2.656 2.656 0 0 1 3.653 3H7v2H3.653A.654.654 0 0 0 3 5.653v10.7a.65.65 0 0 0 .65.65h10.7a.65.65 0 0 0 .65-.65V13Zm3.375-12h-5.438a.625.625 0 0 0-.422 1.085L14.591 4l-6.423 6.418 1.414 1.414 6.483-6.483 1.887 1.736A.626.626 0 0 0 19 6.625v-5A.625.625 0 0 0 18.375 1Z">
+</path>
+</svg>
+</div>
+</div>
+</div>
+</div>
+</div>
+</shreddit-post>
+</article>
+<hr class="border-0 border-b-sm border-solid border-b-neutral-border-weak"></hr>
+<article aria-label="A second photo of JD Vance in drag while at Yale Law School" class="w-full m-0">
+<!-- "data-ks-item" is used by the modqueue-keyboard-shortcuts manager to fetch the item on which to dispatch events to -->
+<shreddit-post author="CrispyMiner" author-id="t2_pvyub" award-count='7' award-icon-url="https://www.redditstatic.com/marketplace-assets/v1/core/awards/popcorn_v1_40.png" award-id="award_popcorn" class="block relative cursor-pointer group bg-neutral-background focus-within:bg-neutral-background-hover hover:bg-neutral-background-hover xs:rounded-[16px] px-md py-2xs my-2xs nd:visible" comment-count='2673' content-href="https://i.redd.it/dizfkpd0e9id1.jpeg" created-timestamp="2024-08-12T16:22:12.013000+0000" data-ks-item="" domain="i.redd.it" feedindex='2' icon="https://styles.redditmedia.com/t5_7hjjj/styles/profileIcon_snoo3644b302-49d0-46e1-b14b-d167bf19abd4-headshot.png?width=64&height=64&frame=1&auto=webp&crop=64:64,smart&s=293af0cfbccf94f771974d0a2540172f62d3ba1e" id="t3_1eqi2k5" is-awardable="" is-desktop-viewport="" is-embeddable="" is-not-brand-safe="" item-state="" moderation-verdict="" pdp-target="_self" permalink="/r/pics/comments/1eqi2k5/a_second_photo_of_jd_vance_in_drag_while_at_yale/" post-title="A second photo of JD Vance in drag while at Yale Law School" post-type="image" previous-actions-feature="" score='27142' subreddit-id="t5_2qh0u" subreddit-prefixed-name="r/pics" view-context="AggregateFeed" view-type="cardView" vote-type="">
+<!-- "data-ks-id" is used by the modqueue-keyboard-shortcuts manager to track focus for the current item in the modqueue to trigger shortcuts for -->
+<a class="absolute inset-0" data-ks-id="t3_1eqi2k5" href="/r/pics/comments/1eqi2k5/a_second_photo_of_jd_vance_in_drag_while_at_yale/" slot="full-post-link" target="_self">
+<faceplate-screen-reader-content>
+            A second photo of JD Vance in drag while at Yale Law School
+           </faceplate-screen-reader-content>
+</a>
+<span class="flex justify-between text-12 min-h-[32px] mb-2xs mt-[-4px]" slot="credit-bar">
+<span class="flex flex-wrap text-12 gap-2xs items-center min-w-0 relative">
+<span class="flex items-center gap 2xs" data-post-click-location="subreddit-link">
+<shreddit-async-loader bundlename="faceplate_hovercard" class="">
+<faceplate-hovercard aria-label="r/pics" class="nd:visible" data-id="community-hover-card" position="bottom-start">
+<a class="text-neutral-content whitespace-nowrap flex items-center h-xl a text-12 font-semibold no-visited no-underline hover:no-underline" data-testid="subreddit-name" href="/r/pics/" rpl="">
+<div class="pr-[6px]">
+<faceplate-img alt="r/pics icon" class="shreddit-subreddit-icon__icon rounded-full overflow-hidden nd:visible nd:bg-secondary-background flex items-center justify-center nd:w-lg nd:h-lg text-16" height='24' loading="lazy" src="https://b.thumbs.redditmedia.com/VZX_KQLnI1DPhlEZ07bIcLzwR1Win808RIt7zm49VIQ.png" style="color: #553200; background-color: #553200" width='24'>
+</faceplate-img>
+</div>
+<span>
+                 r/pics
+                </span>
+</a>
+<div class="max-w-[360px] w-[90vw] overflow-hidden p-0 -m-[0.5rem]" slot="content">
+<div class="flex flex-col">
+<div class="h-[80px] w-auto overflow-hidden relative rounded-t-[16px]">
+<faceplate-img alt="A banner for the subreddit" class="w-full h-full object-cover absolute" src="https://styles.redditmedia.com/t5_2qh0u/styles/bannerBackgroundImage_if1cbgj4mc7b1.jpg?format=pjpg&s=531e105575a44022ba215e8d710b933eba3bbd70">
+</faceplate-img>
+</div>
+<div class="px-sm pt-sm flex items-center">
+<span class="w-[48px] h-[48px] text-24 shrink-0">
+<faceplate-img alt="r/pics icon" class="shreddit-subreddit-icon__icon rounded-full overflow-hidden nd:visible nd:bg-secondary-background" height='48' loading="lazy" src="https://b.thumbs.redditmedia.com/VZX_KQLnI1DPhlEZ07bIcLzwR1Win808RIt7zm49VIQ.png" style="color: #553200; background-color: #553200" width='48'>
+</faceplate-img>
+</span>
+<span class="flex ml-xs grow-0 w-100">
+<faceplate-tracker action="click" noun="title" source="subreddit_hovercard">
+<a class="text-18 font-bold text-neutral-content-strong leading-6 a text-14 no-visited hover:underline" href="/r/pics/" rpl="">
+                     r/pics
+                    </a>
+</faceplate-tracker>
+</span>
+<faceplate-tracker action="click" class="ml-auto" noun="join_signup_cta" source="subreddit_hovercard">
+<shreddit-join-button button-type="secondary" buttonsize="x-small" name="pics" subreddit-id="t5_2qh0u">
+</shreddit-join-button>
+</faceplate-tracker>
+</div>
+<p class="px-md pt-md m-0 whitespace-normal text-14 leading-5 font-normal">
+                  A place for photographs, pictures, and other images.
+                 </p>
+<hr class="mx-md mt-md border-neutral-border-weak"></hr>
+<div class="px-md py-md flex items-center">
+<span class="flex flex-col">
+<span class="text-14 text-neutral-content leading-5 font-semibold">
+<faceplate-number number='31003465' pretty="">
+</faceplate-number>
+</span>
+<span class="text-12 leading-4 text-neutral-content-weak">
+                    Members
+                   </span>
+</span>
+<span class="ml-xl flex flex-col" data-testid="community-hover-card:active-count">
+<span class="text-14 text-neutral-content leading-5 font-semibold">
+<faceplate-number number='7459' pretty="">
+</faceplate-number>
+</span>
+<span class="flex items-center">
+<span class="bg-kiwigreen-400 rounded-full w-xs h-xs">
+</span>
+<span class="text-12 leading-4 text-neutral-content-weak ml-2xs">
+                     Online
+                    </span>
+</span>
+</span>
+</div>
+</div>
+</div>
+</faceplate-hovercard>
+</shreddit-async-loader>
+</span>
+<shreddit-async-loader bundlename="distinguished_post_tags" class="contents">
+<shreddit-distinguished-post-tags class="nd:visible flex" post-id="t3_1eqi2k5">
+<span aria-label="Post distinguished by admin" class="hidden font-semibold text-12 tracking-wide distinguished-admin text-identity-admin">
+               ADMIN
+              </span>
+<span aria-label="Post distinguished by moderator" class="hidden font-semibold text-12 tracking-wide distinguished-mod text-identity-moderator">
+               MOD
+              </span>
+</shreddit-distinguished-post-tags>
+</shreddit-async-loader>
+<span class="inline-block my-0 created-separator text-neutral-content-weak">
+             •
+            </span>
+<faceplate-timeago class="whitespace-nowrap text-neutral-content-weak" format="short" ts="2024-08-12T16:22:12.013000+0000">
+</faceplate-timeago>
+</span>
+<span class="flex items-center pl-xs">
+<shreddit-join-button button-classes="h-[24px]" button-type="primary" buttonsize="x-small" class="relative px-2xs" data-testid="credit-bar-join-button" name="pics" prefixed-name="r/pics" subreddit-id="t5_2qh0u">
+</shreddit-join-button>
+<shreddit-async-loader bundlename="shreddit_post_overflow_menu" class="relative min-w-[32px] -mr-[7px]">
+<shreddit-post-overflow-menu ama-ends-at="" ama-starts-at="" ama-state="" author-id="t2_pvyub" author-name="CrispyMiner" can-update-commercial-communication-status="" comment-count='2673' feed-index='2' is-desktop-viewport="" permalink="/r/pics/comments/1eqi2k5/a_second_photo_of_jd_vance_in_drag_while_at_yale/" post-id="t3_1eqi2k5" post-view-context="AggregateFeed" subreddit-id="t5_2qh0u" subreddit-prefixed-name="r/pics">
+<div slot="devvit-context-actions">
+</div>
+</shreddit-post-overflow-menu>
+</shreddit-async-loader>
+</span>
+</span>
+<a class="block font-semibold text-neutral-content-strong m-0 visited:text-neutral-content-weak text-16 xs:text-18 mb-2xs xs:mb-xs" href="/r/pics/comments/1eqi2k5/a_second_photo_of_jd_vance_in_drag_while_at_yale/" id="post-title-t3_1eqi2k5" slot="title">
+           A second photo of JD Vance in drag while at Yale Law School
+          </a>
+<shreddit-post-flair flair-class=" relative top-[-0.25rem] xs:top-[-2px] my-2xs xs:mb-sm py-0 " post-id="t3_1eqi2k5" slot="post-flair">
+</shreddit-post-flair>
+<div class="relative overflow-hidden pointer-cursor mb-xs isolate bg-neutral-background rounded-[16px]" slot="post-media-container">
+<div class="pointer-events-none absolute inset-0 border-sm border-solid border-neutral-border-weak pointer-events-none absolute inset-0 z-[3] border-sm border-solid border-neutral-border-weak rounded-[16px]">
+</div>
+<shreddit-aspect-ratio id="t3_1eqi2k5-aspect-ratio" style="
+    --aspect-ratio: 1;
+    --max-height: min(100%, 540px);
+    ">
+<shreddit-media-lightbox-listener class="nd:visible contents" permalink="/r/pics/comments/1eqi2k5/a_second_photo_of_jd_vance_in_drag_while_at_yale/" post-id="t3_1eqi2k5">
+<div class="media-lightbox-img max-h-[100vw] h-full w-full object-contain overflow-hidden relative bg-black">
+<img alt="" class="absolute top-1/2 -translate-y-1/2 left-0 w-full opacity-30 object-cover scale-[1.2] post-background-image-filter" fetchpriority="auto" loading="lazy" role="presentation" sizes="(min-width: 1415px) 750px, (min-width: 768px) 50vw, 100vw" src="https://preview.redd.it/a-second-photo-of-jd-vance-in-drag-while-at-yale-law-school-v0-dizfkpd0e9id1.jpeg?width=640&crop=smart&auto=webp&s=095e901e01f1d85115683c5076e8e8bc652b9986" srcset="https://preview.redd.it/a-second-photo-of-jd-vance-in-drag-while-at-yale-law-school-v0-dizfkpd0e9id1.jpeg?width=320&crop=smart&auto=webp&s=78d1e54ed099fd4392d3a24d39b11ac3c01788ef 320w, https://preview.redd.it/a-second-photo-of-jd-vance-in-drag-while-at-yale-law-school-v0-dizfkpd0e9id1.jpeg?width=640&crop=smart&auto=webp&s=095e901e01f1d85115683c5076e8e8bc652b9986 640w, https://preview.redd.it/a-second-photo-of-jd-vance-in-drag-while-at-yale-law-school-v0-dizfkpd0e9id1.jpeg?width=1080&crop=smart&auto=webp&s=33f9943c911e2317058f4d84bb610286963eaab8 1080w, https://preview.redd.it/a-second-photo-of-jd-vance-in-drag-while-at-yale-law-school-v0-dizfkpd0e9id1.jpeg?auto=webp&s=b9d8aca749db988afde6d15509deb2c9b1780785 1170w"></img>
+<img alt="r/pics - A second photo of JD Vance in drag while at Yale Law School" class="i18n-post-media-img preview-img media-lightbox-img max-h-[100vw] h-full w-full object-contain relative" fetchpriority="auto" loading="lazy" sizes="(min-width: 1415px) 750px, (min-width: 768px) 50vw, 100vw" src="https://preview.redd.it/a-second-photo-of-jd-vance-in-drag-while-at-yale-law-school-v0-dizfkpd0e9id1.jpeg?width=640&crop=smart&auto=webp&s=095e901e01f1d85115683c5076e8e8bc652b9986" srcset="https://preview.redd.it/a-second-photo-of-jd-vance-in-drag-while-at-yale-law-school-v0-dizfkpd0e9id1.jpeg?width=320&crop=smart&auto=webp&s=78d1e54ed099fd4392d3a24d39b11ac3c01788ef 320w, https://preview.redd.it/a-second-photo-of-jd-vance-in-drag-while-at-yale-law-school-v0-dizfkpd0e9id1.jpeg?width=640&crop=smart&auto=webp&s=095e901e01f1d85115683c5076e8e8bc652b9986 640w, https://preview.redd.it/a-second-photo-of-jd-vance-in-drag-while-at-yale-law-school-v0-dizfkpd0e9id1.jpeg?width=1080&crop=smart&auto=webp&s=33f9943c911e2317058f4d84bb610286963eaab8 1080w, https://preview.redd.it/a-second-photo-of-jd-vance-in-drag-while-at-yale-law-school-v0-dizfkpd0e9id1.jpeg?auto=webp&s=b9d8aca749db988afde6d15509deb2c9b1780785 1170w"></img>
+<div class="zoomable-img-wrapper hidden">
+<zoomable-img fill-container='true'>
+<img alt="r/pics - A second photo of JD Vance in drag while at Yale Law School" class="i18n-post-media-img media-lightbox-img" loading="lazy" src="https://i.redd.it/dizfkpd0e9id1.jpeg"></img>
+</zoomable-img>
+</div>
+</div>
+</shreddit-media-lightbox-listener>
+</shreddit-aspect-ratio>
+<div>
+</div>
+</div>
+</shreddit-post>
+</article>
+<hr class="border-0 border-b-sm border-solid border-b-neutral-border-weak"></hr>
+<faceplate-partial loading="programmatic" method="GET" slot="load-after" src="/svc/shreddit/feeds/popular-feed?after=dDNfMWVxaTJrNQ%3D%3D&distance=3&sort=HOT&navigationSessionId=9eec75f5-7d81-454e-b7e8-5a0512b420e1&cursor=dDNfMWVxaTJrNQ%3D%3D">
+<shreddit-feed-page-loading page-type="popular">
+</shreddit-feed-page-loading>
+</faceplate-partial>
+</shreddit-feed>
+</main>
+<div class="right-sidebar w-[316px] min-w-[316px] hidden s:block styled-scrollbars xs:sticky xs:top-[56px] xs:max-h-[calc(100vh-var(--shreddit-header-height)-57px)] xs:overflow-y-auto xs:overflow-x-hidden" data-scroll-restore="" id="right-sidebar-container">
+<aside class="flex flex-col py-md box-border">
+<aside aria-label="Popular Communities" class="bg-neutral-background-weak rounded-[8px] pb-2xs pt-xs mb-md">
+<div class="px-md text-neutral-content-weak">
+<div class="flex justify-between items-center">
+<h2 class="font-semibold uppercase text-12 mt-0 mb-sm">
+<div class="i18n-translatable-text">
+             Popular Communities
+            </div>
+</h2>
+</div>
+<li class="list-none" id="popular-communities-list" list-item-group="" rpl="">
+<ul class="p-0">
+<li class="relative list-none mt-0" data-testid="listItem" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 no-underline" href="/r/AskMen" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex shrink-0 items-center justify-center h-xl w-xl">
+<span class="text-20 leading-4">
+<faceplate-img alt="r/AskMen icon" class="shreddit-subreddit-icon__icon rounded-full overflow-hidden nd:visible nd:bg-secondary-background h-auto w-auto overflow-visible mr-xs" height='32' loading="lazy" src="https://styles.redditmedia.com/t5_2s30g/styles/communityIcon_wpxjh8fuvcw51.png" style="" width='32'>
+</faceplate-img>
+</span>
+</span>
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+<span class="text-neutral-content block text-ellipsis whitespace-nowrap overflow-hidden">
+                  r/AskMen
+                 </span>
+</span>
+<span class="text-12 text-secondary-weak">
+                 6,238,618 members
+                </span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0" data-testid="listItem" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 no-underline" href="/r/PS4" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex shrink-0 items-center justify-center h-xl w-xl">
+<span class="text-20 leading-4">
+<faceplate-img alt="r/PS4 icon" class="shreddit-subreddit-icon__icon rounded-full overflow-hidden nd:visible nd:bg-secondary-background h-auto w-auto overflow-visible mr-xs" height='32' loading="lazy" src="https://styles.redditmedia.com/t5_2rrlp/styles/communityIcon_06pablpo0le21.png" style="" width='32'>
+</faceplate-img>
+</span>
+</span>
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+<span class="text-neutral-content block text-ellipsis whitespace-nowrap overflow-hidden">
+                  r/PS4
+                 </span>
+</span>
+<span class="text-12 text-secondary-weak">
+                 5,570,212 members
+                </span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0" data-testid="listItem" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 no-underline" href="/r/apple" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex shrink-0 items-center justify-center h-xl w-xl">
+<span class="text-20 leading-4">
+<faceplate-img alt="r/apple icon" class="shreddit-subreddit-icon__icon rounded-full overflow-hidden nd:visible nd:bg-secondary-background h-auto w-auto overflow-visible mr-xs" height='32' loading="lazy" src="https://styles.redditmedia.com/t5_2qh1f/styles/communityIcon_y756q32hdubd1.jpg?format=pjpg&s=8c942a4247544747dddce40b7132914a5709d561" style="" width='32'>
+</faceplate-img>
+</span>
+</span>
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+<span class="text-neutral-content block text-ellipsis whitespace-nowrap overflow-hidden">
+                  r/apple
+                 </span>
+</span>
+<span class="text-12 text-secondary-weak">
+                 5,365,192 members
+                </span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0" data-testid="listItem" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 no-underline" href="/r/NBA2k" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex shrink-0 items-center justify-center h-xl w-xl">
+<span class="text-20 leading-4">
+<faceplate-img alt="r/NBA2k icon" class="shreddit-subreddit-icon__icon rounded-full overflow-hidden nd:visible nd:bg-secondary-background h-auto w-auto overflow-visible mr-xs" height='32' loading="lazy" src="https://styles.redditmedia.com/t5_2s84e/styles/communityIcon_ml4cqjrh42gd1.jpg?format=pjpg&s=57ebe420019ae4d379c40955af48c3ac68ff241e" style="" width='32'>
+</faceplate-img>
+</span>
+</span>
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+<span class="text-neutral-content block text-ellipsis whitespace-nowrap overflow-hidden">
+                  r/NBA2k
+                 </span>
+</span>
+<span class="text-12 text-secondary-weak">
+                 550,996 members
+                </span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0" data-testid="listItem" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 no-underline" href="/r/sysadmin" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex shrink-0 items-center justify-center h-xl w-xl">
+<span class="text-20 leading-4">
+<faceplate-img alt="r/sysadmin icon" class="shreddit-subreddit-icon__icon rounded-full overflow-hidden nd:visible nd:bg-secondary-background h-auto w-auto overflow-visible mr-xs" height='32' loading="lazy" src="https://styles.redditmedia.com/t5_2qnp7/styles/communityIcon_gcx9bz62dbg01.png" style="" width='32'>
+</faceplate-img>
+</span>
+</span>
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+<span class="text-neutral-content block text-ellipsis whitespace-nowrap overflow-hidden">
+                  r/sysadmin
+                 </span>
+</span>
+<span class="text-12 text-secondary-weak">
+                 923,825 members
+                </span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0 hidden" data-testid="listItem" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 no-underline" href="/r/nba" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex shrink-0 items-center justify-center h-xl w-xl">
+<span class="text-20 leading-4">
+<icon-community aria-hidden='true' class="flex items-center shreddit-subreddit-icon__icon rounded-full overflow-hidden nd:visible nd:bg-secondary-background h-auto w-auto overflow-visible mr-xs" fill="" size="lg">
+</icon-community>
+</span>
+</span>
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+<span class="text-neutral-content block text-ellipsis whitespace-nowrap overflow-hidden">
+                  r/nba
+                 </span>
+</span>
+<span class="text-12 text-secondary-weak">
+                 12,522,205 members
+                </span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0 hidden" data-testid="listItem" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 no-underline" href="/r/askscience" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex shrink-0 items-center justify-center h-xl w-xl">
+<span class="text-20 leading-4">
+<icon-community aria-hidden='true' class="flex items-center shreddit-subreddit-icon__icon rounded-full overflow-hidden nd:visible nd:bg-secondary-background h-auto w-auto overflow-visible mr-xs" fill="" size="lg">
+</icon-community>
+</span>
+</span>
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+<span class="text-neutral-content block text-ellipsis whitespace-nowrap overflow-hidden">
+                  r/askscience
+                 </span>
+</span>
+<span class="text-12 text-secondary-weak">
+                 25,397,631 members
+                </span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0 hidden" data-testid="listItem" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 no-underline" href="/r/cars" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex shrink-0 items-center justify-center h-xl w-xl">
+<span class="text-20 leading-4">
+<faceplate-img alt="r/cars icon" class="shreddit-subreddit-icon__icon rounded-full overflow-hidden nd:visible nd:bg-secondary-background h-auto w-auto overflow-visible mr-xs" height='32' loading="lazy" src="https://styles.redditmedia.com/t5_2qhl2/styles/communityIcon_u1yvm8lizyv41.png" style="" width='32'>
+</faceplate-img>
+</span>
+</span>
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+<span class="text-neutral-content block text-ellipsis whitespace-nowrap overflow-hidden">
+                  r/cars
+                 </span>
+</span>
+<span class="text-12 text-secondary-weak">
+                 6,492,192 members
+                </span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0 hidden" data-testid="listItem" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 no-underline" href="/r/pcmasterrace" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex shrink-0 items-center justify-center h-xl w-xl">
+<span class="text-20 leading-4">
+<faceplate-img alt="r/pcmasterrace icon" class="shreddit-subreddit-icon__icon rounded-full overflow-hidden nd:visible nd:bg-secondary-background h-auto w-auto overflow-visible mr-xs" height='32' loading="lazy" src="https://styles.redditmedia.com/t5_2sgp1/styles/communityIcon_1mit7n6qhy481.png" style="" width='32'>
+</faceplate-img>
+</span>
+</span>
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+<span class="text-neutral-content block text-ellipsis whitespace-nowrap overflow-hidden">
+                  r/pcmasterrace
+                 </span>
+</span>
+<span class="text-12 text-secondary-weak">
+                 12,472,589 members
+                </span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0 hidden" data-testid="listItem" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 no-underline" href="/r/pokemon" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex shrink-0 items-center justify-center h-xl w-xl">
+<span class="text-20 leading-4">
+<faceplate-img alt="r/pokemon icon" class="shreddit-subreddit-icon__icon rounded-full overflow-hidden nd:visible nd:bg-secondary-background h-auto w-auto overflow-visible mr-xs" height='32' loading="lazy" src="https://styles.redditmedia.com/t5_2qmeb/styles/communityIcon_3ywju3j3zy3d1.png" style="" width='32'>
+</faceplate-img>
+</span>
+</span>
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+<span class="text-neutral-content block text-ellipsis whitespace-nowrap overflow-hidden">
+                  r/pokemon
+                 </span>
+</span>
+<span class="text-12 text-secondary-weak">
+                 4,552,993 members
+                </span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0 hidden" data-testid="listItem" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 no-underline" href="/r/netflix" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex shrink-0 items-center justify-center h-xl w-xl">
+<span class="text-20 leading-4">
+<faceplate-img alt="r/netflix icon" class="shreddit-subreddit-icon__icon rounded-full overflow-hidden nd:visible nd:bg-secondary-background h-auto w-auto overflow-visible mr-xs" height='32' loading="lazy" src="https://styles.redditmedia.com/t5_2qoxj/styles/communityIcon_j9f3pbthqfy01.png" style="" width='32'>
+</faceplate-img>
+</span>
+</span>
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+<span class="text-neutral-content block text-ellipsis whitespace-nowrap overflow-hidden">
+                  r/netflix
+                 </span>
+</span>
+<span class="text-12 text-secondary-weak">
+                 1,688,494 members
+                </span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0 hidden" data-testid="listItem" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 no-underline" href="/r/nvidia" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex shrink-0 items-center justify-center h-xl w-xl">
+<span class="text-20 leading-4">
+<faceplate-img alt="r/nvidia icon" class="shreddit-subreddit-icon__icon rounded-full overflow-hidden nd:visible nd:bg-secondary-background h-auto w-auto overflow-visible mr-xs" height='32' loading="lazy" src="https://styles.redditmedia.com/t5_2rlgy/styles/communityIcon_vjvyn29wsuj51.png" style="" width='32'>
+</faceplate-img>
+</span>
+</span>
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+<span class="text-neutral-content block text-ellipsis whitespace-nowrap overflow-hidden">
+                  r/nvidia
+                 </span>
+</span>
+<span class="text-12 text-secondary-weak">
+                 1,777,639 members
+                </span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0 hidden" data-testid="listItem" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 no-underline" href="/r/headphones" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex shrink-0 items-center justify-center h-xl w-xl">
+<span class="text-20 leading-4">
+<icon-community aria-hidden='true' class="flex items-center shreddit-subreddit-icon__icon rounded-full overflow-hidden nd:visible nd:bg-secondary-background h-auto w-auto overflow-visible mr-xs" fill="" size="lg">
+</icon-community>
+</span>
+</span>
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+<span class="text-neutral-content block text-ellipsis whitespace-nowrap overflow-hidden">
+                  r/headphones
+                 </span>
+</span>
+<span class="text-12 text-secondary-weak">
+                 1,185,489 members
+                </span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0 hidden" data-testid="listItem" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 no-underline" href="/r/hearthstone" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex shrink-0 items-center justify-center h-xl w-xl">
+<span class="text-20 leading-4">
+<faceplate-img alt="r/hearthstone icon" class="shreddit-subreddit-icon__icon rounded-full overflow-hidden nd:visible nd:bg-secondary-background h-auto w-auto overflow-visible mr-xs" height='32' loading="lazy" src="https://styles.redditmedia.com/t5_2w31t/styles/communityIcon_4m21sq2u56101.png" style="" width='32'>
+</faceplate-img>
+</span>
+</span>
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+<span class="text-neutral-content block text-ellipsis whitespace-nowrap overflow-hidden">
+                  r/hearthstone
+                 </span>
+</span>
+<span class="text-12 text-secondary-weak">
+                 1,926,861 members
+                </span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0 hidden" data-testid="listItem" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 no-underline" href="/r/fantasyfootball" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex shrink-0 items-center justify-center h-xl w-xl">
+<span class="text-20 leading-4">
+<faceplate-img alt="r/fantasyfootball icon" class="shreddit-subreddit-icon__icon rounded-full overflow-hidden nd:visible nd:bg-secondary-background h-auto w-auto overflow-visible mr-xs" height='32' loading="lazy" src="https://styles.redditmedia.com/t5_2qlqq/styles/communityIcon_kl5x5zxhtqrc1.png" style="" width='32'>
+</faceplate-img>
+</span>
+</span>
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+<span class="text-neutral-content block text-ellipsis whitespace-nowrap overflow-hidden">
+                  r/fantasyfootball
+                 </span>
+</span>
+<span class="text-12 text-secondary-weak">
+                 2,787,799 members
+                </span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0 hidden" data-testid="listItem" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 no-underline" href="/r/pathofexile" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex shrink-0 items-center justify-center h-xl w-xl">
+<span class="text-20 leading-4">
+<icon-community aria-hidden='true' class="flex items-center shreddit-subreddit-icon__icon rounded-full overflow-hidden nd:visible nd:bg-secondary-background h-auto w-auto overflow-visible mr-xs" fill="" size="lg">
+</icon-community>
+</span>
+</span>
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+<span class="text-neutral-content block text-ellipsis whitespace-nowrap overflow-hidden">
+                  r/pathofexile
+                 </span>
+</span>
+<span class="text-12 text-secondary-weak">
+                 784,563 members
+                </span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0 hidden" data-testid="listItem" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 no-underline" href="/r/canada" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex shrink-0 items-center justify-center h-xl w-xl">
+<span class="text-20 leading-4">
+<faceplate-img alt="r/canada icon" class="shreddit-subreddit-icon__icon rounded-full overflow-hidden nd:visible nd:bg-secondary-background h-auto w-auto overflow-visible mr-xs" height='32' loading="lazy" src="https://styles.redditmedia.com/t5_2qh68/styles/communityIcon_fl2udvka4pw81.jpg?format=pjpg&s=e574bc27bd6ae5b237048fde65907cf5f066e2f9" style="" width='32'>
+</faceplate-img>
+</span>
+</span>
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+<span class="text-neutral-content block text-ellipsis whitespace-nowrap overflow-hidden">
+                  r/canada
+                 </span>
+</span>
+<span class="text-12 text-secondary-weak">
+                 2,766,979 members
+                </span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0 hidden" data-testid="listItem" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 no-underline" href="/r/nosleep" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex shrink-0 items-center justify-center h-xl w-xl">
+<span class="text-20 leading-4">
+<faceplate-img alt="r/nosleep icon" class="shreddit-subreddit-icon__icon rounded-full overflow-hidden nd:visible nd:bg-secondary-background h-auto w-auto overflow-visible mr-xs" height='32' loading="lazy" src="https://styles.redditmedia.com/t5_2rm4d/styles/communityIcon_q054jahxvm5b1.png" style="" width='32'>
+</faceplate-img>
+</span>
+</span>
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+<span class="text-neutral-content block text-ellipsis whitespace-nowrap overflow-hidden">
+                  r/nosleep
+                 </span>
+</span>
+<span class="text-12 text-secondary-weak">
+                 18,010,992 members
+                </span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<button class="button-small px-[var(--rem10)] button-plain items-center justify-center button inline-flex" data-see-less-label="See less" data-see-more-label="See more" id="popular-communities-list-see-more" rpl="">
+<span class="flex items-center justify-center">
+<span class="flex items-center gap-xs">
+               See more
+              </span>
+</span>
+</button>
+</ul>
+</li>
+</div>
+</aside>
+</aside>
+</div>
+</div>
+</div>
+<div class="left-sidebar theme-rpl isolate order-first hidden m:block border-0 border-solid s:border-r-sm border-r-neutral-border" id="left-sidebar-container">
+<reddit-sidebar-nav class="nd:visible block w-full sticky top-[56px] h-screen-without-header styled-scrollbars overflow-y-scroll overflow-x-hidden bg-neutral-background box-border px-md" data-persistent="" data-scroll-restore="" id="left-sidebar">
+<nav aria-label="Primary" class="z-[2] box-border flex flex-col mt-0 mb-0 pt-md shrink-0 s:shrink w-full min-h-screen-without-header select-none">
+<left-nav-top-section home="" popular="" selectedpagetype="popular">
+<!-- Render dummy placeholder items to prevent layout shift -->
+<li class="relative list-none mt-0 invisible" role="presentation" rpl="">
+<div class="flex justify-between relative px-md gap-[0.5rem] text-secondary py-2xs -outline-offset-1" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+             &nbsp;
+            </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</div>
+</li>
+<li class="relative list-none mt-0 invisible" role="presentation" rpl="">
+<div class="flex justify-between relative px-md gap-[0.5rem] text-secondary py-2xs -outline-offset-1" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+             &nbsp;
+            </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</div>
+</li>
+</left-nav-top-section>
+<hr class="w-100 my-sm border-neutral-border-weak"></hr>
+<faceplate-loader loading="lazy" name="LeftNavRecentSection_wrMMJh" src="https://www.redditstatic.com/shreddit/en-US/left-nav-recent-section-client-js-4eea2d4c.js">
+</faceplate-loader>
+<faceplate-partial loading="lazy" name="LeftNavRecentSection_wrMMJh" src="/svc/shreddit/left-nav-recent-section">
+</faceplate-partial>
+<faceplate-expandable-section-helper open="" rpl="">
+<details class="p-0 m-0 bg-transparent border-none rounded-none" open="">
+<summary aria-controls="TOPICS" aria-expanded='true' class="font-normal">
+<faceplate-tracker action="click" noun="topics_menu" source="nav">
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<div class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 bg-transparent s:rounded-[8px]" style="padding-right: 16px" tabindex='-1'>
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+<span class="text-12 text-secondary-weak tracking-widest">
+                 TOPICS
+                </span>
+</span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+
+        ```
+        

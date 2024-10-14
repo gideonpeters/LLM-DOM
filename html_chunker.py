@@ -4,6 +4,7 @@ import uuid
 import re
 import tiktoken
 import os
+from html_chunking import get_html_chunks, merge_html_chunk
 
 class HTMLChunker:
     def __init__(self, html_content, chunk_size=15000):
@@ -15,8 +16,12 @@ class HTMLChunker:
         self.script_store = {}
         self.style_store = {}
         self.attrs_store = {}
+        self.chunk_organized = True
 
     def split_html(self):
+        if self.chunk_organized:
+            return get_html_chunks(self.soup, self.chunk_size)
+        
         self.process_section(self.soup.head, 'head')
         self.process_section(self.soup.body, 'body')
         self.finish_current_chunk()
@@ -254,16 +259,16 @@ class HTMLChunker:
 
 def rahhh():
     files_to_be_chunked_directory = "extracted-doms/original/"
-    chunked_file_directory = "chunked-doms/original/"
+    chunked_file_directory = "chunked-doms/v2/"
 
-    merged_chunks_file_directory = "merged-chunks/original/"
+    merged_chunks_file_directory = "merged-chunks/v2/"
 
     os.makedirs(chunked_file_directory, exist_ok=True)
     os.makedirs(merged_chunks_file_directory, exist_ok=True)
 
     files_to_exclude = ['amazon', 'ubereats', 'glassdoor', 'ziprecruiter', 'behance']
     
-    for file in os.listdir(files_to_be_chunked_directory):
+    for file in os.listdir(files_to_be_chunked_directory)[:1]:
         # create chunks from only html files then store them
         filename = file.split('.')[0]
 
@@ -271,23 +276,45 @@ def rahhh():
 
             with open(files_to_be_chunked_directory + file, 'r', encoding='utf-8') as f:
                 html_content = f.read()
-            
-            chunker = HTMLChunker(html_content)
-            chunks = chunker.split_html()
-            
-            chunker.store_chunks(chunks)
-            
-            # merge chunks and store them
-            chunked_file = chunked_file_directory + filename + '.json'
-            created_chunks = []
 
-            with open(chunked_file, 'r') as f:
-                created_chunks = json.load(f)
+            chunks = get_html_chunks(html_content, 15000, is_clean_html=False, attr_cutoff_len=None)
 
-            reassembled_html = chunker.reassemble_html(created_chunks)
-            with open(merged_chunks_file_directory + filename + '.html', 'w', encoding='utf-8') as f:
-                f.write(reassembled_html)   
+            with open(chunked_file_directory + filename + '.json', 'w') as f:
+                f.write(json.dumps(chunks, indent=4))
+            
+            # chunker = HTMLChunker(html_content)
+            # chunks = chunker.split_html()
+            
+            # chunker.store_chunks(chunks, 
+            #                      chunked_file_directory=chunked_file_directory + filename, 
+            #                      direct=True,
+            #                      store_chunks=True
+            #                      )
+
+            first_chunk = chunks[0]
+
+            for chunk in chunks[1:]:
+                first_chunk = merge_html_chunk(first_chunk, chunk)
+
+            
+            with open('testttingngg.html', 'w', encoding='utf-8') as f:
+                f.write(first_chunk)
+
+            
+            # # merge chunks and store them
+            # chunked_file = chunked_file_directory + filename + '.json'
+            # created_chunks = []
+
+            # with open(chunked_file, 'r') as f:
+            #     created_chunks = json.load(f)
+
+            # reassembled_html = chunker.reassemble_html(created_chunks)
+            # with open(merged_chunks_file_directory + filename + '.html', 'w', encoding='utf-8') as f:
+            #     f.write(reassembled_html)   
 
             print(f"Processed {filename}")
         else:
             print(f"Skipping {filename}")
+
+if __name__ == "__main__":
+    rahhh()

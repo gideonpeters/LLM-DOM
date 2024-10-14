@@ -1,0 +1,88 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. is-on-https => Does not use HTTPS: All sites should be protected with HTTPS, even ones that don't handle sensitive data. This includes avoiding [mixed content](https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content), where some resources are loaded over HTTP despite the initial request being served over HTTPS. HTTPS prevents intruders from tampering with or passively listening in on the communications between your app and your users, and is a prerequisite for HTTP/2 and many new web platform APIs. [Learn more about HTTPS](https://developer.chrome.com/docs/lighthouse/pwa/is-on-https/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta>
+<link as="script" href="https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-27-691154c7c2510bef.webpack" rel="preload"></link>
+<link as="script" href="https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-vendor-27-c663ad026f3abd51.webpack" rel="preload"></link>
+<link as="script" href="https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-common-27-f7d782a84d76b3a5.webpack" rel="preload"></link>
+<link as="script" href="https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-page-LoginPages-27-5093d9c02053cab6.webpack" rel="preload"></link>
+<link as="script" href="https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-common-LoggedOut-27-e52ae2e2f6390f40.webpack" rel="preload"></link>
+<link as="style" href="https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-main.css-28-f4ef3e8b8aa95a7d.webpack" rel="preload"></link>
+<link href="https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-main.css-28-f4ef3e8b8aa95a7d.webpack" id="ans-frontend-main-css" rel="stylesheet" type="text/css"></link>
+<link as="fetch" crossorigin="anonymous" href="https://qsbr.cf2.quoracdn.net/-4-l10n_main-30-fr-8ff1e114b66a9c16.translation.json" rel="preload"></link>
+<script data-chunk-uuid="804f37d6-027a-4562-86dd-12ff41698c78" type="text/javascript">// chunk_script_804f37d6-027a-4562-86dd-12ff41698c78
+</script>
+<script data-chunk-uuid="08689b37-117c-4d56-9ea5-445c7fff95bd" id="entryjs_wrapper" type="text/javascript">// chunk_script_08689b37-117c-4d56-9ea5-445c7fff95bd
+</script>
+<script data-chunk-uuid="dc8a41ba-c0df-43e6-8ebf-65e79d8c0501" type="text/javascript">// chunk_script_dc8a41ba-c0df-43e6-8ebf-65e79d8c0501
+</script>
+<script data-chunk-uuid="8542d9e8-45cf-432c-8790-b6fd73e74626" type="text/javascript">// chunk_script_8542d9e8-45cf-432c-8790-b6fd73e74626
+</script>
+<script data-chunk-uuid="96591710-2255-4051-9a87-dbcc0e8cad09" type="text/javascript">// chunk_script_96591710-2255-4051-9a87-dbcc0e8cad09
+</script>
+<script data-chunk-uuid="87835949-f514-4ab8-a497-6c9849220d5a" async='1' id="entryjs" onerror="addAssetErr(this.src)" src="https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-27-691154c7c2510bef.webpack" type="text/javascript">// chunk_script_87835949-f514-4ab8-a497-6c9849220d5a
+</script>
+<script data-chunk-uuid="c251d0ff-4bc0-4a59-a590-9f1d19002f31" async='1' onerror="addAssetErr(this.src)" src="https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-vendor-27-c663ad026f3abd51.webpack" type="text/javascript">// chunk_script_c251d0ff-4bc0-4a59-a590-9f1d19002f31
+</script>
+<script data-chunk-uuid="cda6a930-a13c-4f23-90c0-85c9f38ffa82" async='1' onerror="addAssetErr(this.src)" src="https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-common-27-f7d782a84d76b3a5.webpack" type="text/javascript">// chunk_script_cda6a930-a13c-4f23-90c0-85c9f38ffa82
+</script>
+<script data-chunk-uuid="3b45fa1f-186b-429e-8f28-8300f67be5e4" async='1' onerror="addAssetErr(this.src)" src="https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-page-LoginPages-27-5093d9c02053cab6.webpack" type="text/javascript">// chunk_script_3b45fa1f-186b-429e-8f28-8300f67be5e4
+</script>
+<script data-chunk-uuid="e541e7f5-7590-466c-9499-4b4f2aa5e8bd" async='1' onerror="addAssetErr(this.src)" src="https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-common-LoggedOut-27-e52ae2e2f6390f40.webpack" type="text/javascript">// chunk_script_e541e7f5-7590-466c-9499-4b4f2aa5e8bd
+</script>
+<script data-chunk-uuid="1a86a9a8-836f-4888-9303-07344c5efad1" type="text/javascript">// chunk_script_1a86a9a8-836f-4888-9303-07344c5efad1
+</script>
+<title>
+   Quora - Un lieu pour partager le savoir et mieux comprendre le monde
+  </title>
+<link href="https://qsf.cf2.quoracdn.net/-4-images.favicon-new.ico-26-07ecf7cd341b6919.ico" rel="icon"></link>
+<meta content="noarchive" name="robots"></meta>
+<meta content='136609459636' property="fb:app_id"></meta>
+<meta content="Quora" property="og:title"></meta>
+<meta content="website" property="og:type"></meta>
+<meta content="Quora" property="og:site_name"></meta>
+<meta content="https://qsf.cf2.quoracdn.net/-4-images.Illustration_fb_share_default_1280x720.png-26-7b8bc71e8107b6f5.png" property="og:image"></meta>
+<meta content="https://fr.quora.com/" property="og:url"></meta>
+<meta content="" property="og:description"></meta>
+<meta content="Quora est un endroit conçu pour apprendre et partager ses connaissances. Il s&#039;agit d&#039;une plateforme sur laquelle on peut poser ses questions et entrer en contact avec des personnes qui apportent leur contribution en partageant leurs idées uniques ..." name="description"></meta>
+<link href="https://fr.quora.com/" rel="canonical"></link>
+<meta content='255232486973' property="fb:pages"></meta>
+<meta content="light" name="twitter:widgets:theme"></meta>
+
+        ```
+        

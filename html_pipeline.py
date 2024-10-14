@@ -129,15 +129,21 @@ def run_pipeline(experiment: str, audit_key=None):
 
 if  __name__ == "__main__":
     experiments = [
-        'airbnb', 
+        # 'airbnb', 
         # 'aliexpress', 
-                #    'ebay', 'facebook', 
-                #    'github', 'linkedin', 
-                #    'medium', 'netflix', 
-                #    'pinterest', 'quora', 
-                #    'reddit', 'twitch', 
-                #    'twitter', 'walmart', 
-                #    'youtube'
+                #    'ebay', 
+                # 'facebook', 
+                #    'github',
+                #  'linkedin', 
+                #    'medium', 
+                # 'netflix', 
+                #    'pinterest', 
+                # 'quora', 
+                #    'reddit', 
+                # 'twitch', 
+                #    'twitter',
+                #  'walmart', 
+                   'youtube'
                    ]
 
     # run_pipeline(experiments[0])

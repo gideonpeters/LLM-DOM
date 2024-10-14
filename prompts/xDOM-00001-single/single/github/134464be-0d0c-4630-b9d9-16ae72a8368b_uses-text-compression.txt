@@ -1,0 +1,537 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. uses-text-compression => Enable text compression: Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more about text compression](https://developer.chrome.com/docs/lighthouse/performance/uses-text-compression/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        <path d="m8 14.25.345.666a.75.75 0 0 1-.69 0l-.008-.004-.018-.01a7.152 7.152 0 0 1-.31-.17 22.055 22.055 0 0 1-3.434-2.414C2.045 10.731 0 8.35 0 5.5 0 2.836 2.086 1 4.25 1 5.797 1 7.153 1.802 8 3.02 8.847 1.802 10.203 1 11.75 1 13.914 1 16 2.836 16 5.5c0 2.85-2.045 5.231-3.885 6.818a22.066 22.066 0 0 1-3.744 2.584l-.018.01-.006.003h-.002ZM4.25 2.5c-1.336 0-2.75 1.164-2.75 3 0 2.15 1.58 4.144 3.365 5.682A20.58 20.58 0 0 0 8 13.393a20.58 20.58 0 0 0 3.135-2.211C12.92 9.644 14.5 7.65 14.5 5.5c0-1.836-1.414-3-2.75-3-1.373 0-2.609.986-3.029 2.456a.749.749 0 0 1-1.442 0C6.859 3.486 5.623 2.5 4.25 2.5Z">
+</path>
+</svg>
+</span>
+<span class="Button-label">
+                Sponsor
+               </span>
+</span>
+</button>
+</a>
+</div>
+<div class="col-6 col-sm-4 col-md-6 col-lg-4">
+<a class="rounded p-4 border color-bg-subtle no-underline d-flex flex-column flex-items-center m-2 box-shadow-default-mktg js-build-in-item build-in-scale-up" href="/dayhaysoos" tabindex='-1' target="_blank">
+<img alt="Nick DeJesus avatar" class="d-block circle" decoding="async" height='96' loading="lazy" src="https://github.githubassets.com/assets/dayhaysoos-c50659cac73b.jpeg" width='96'></img>
+<div class="color-fg-muted text-truncate my-2">
+              Nick DeJesus
+             </div>
+<button class="Button--secondary Button--medium Button" data-view-component='true' tabindex='-1' type="button">
+<span class="Button-content">
+<span class="Button-visual Button-leadingVisual">
+<svg aria-hidden='true' class="octicon octicon-heart" data-view-component='true' height='16' version='1.1' viewbox="0 0 16 16" width='16'>
+<path d="m8 14.25.345.666a.75.75 0 0 1-.69 0l-.008-.004-.018-.01a7.152 7.152 0 0 1-.31-.17 22.055 22.055 0 0 1-3.434-2.414C2.045 10.731 0 8.35 0 5.5 0 2.836 2.086 1 4.25 1 5.797 1 7.153 1.802 8 3.02 8.847 1.802 10.203 1 11.75 1 13.914 1 16 2.836 16 5.5c0 2.85-2.045 5.231-3.885 6.818a22.066 22.066 0 0 1-3.744 2.584l-.018.01-.006.003h-.002ZM4.25 2.5c-1.336 0-2.75 1.164-2.75 3 0 2.15 1.58 4.144 3.365 5.682A20.58 20.58 0 0 0 8 13.393a20.58 20.58 0 0 0 3.135-2.211C12.92 9.644 14.5 7.65 14.5 5.5c0-1.836-1.414-3-2.75-3-1.373 0-2.609.986-3.029 2.456a.749.749 0 0 1-1.442 0C6.859 3.486 5.623 2.5 4.25 2.5Z">
+</path>
+</svg>
+</span>
+<span class="Button-label">
+                Sponsor
+               </span>
+</span>
+</button>
+</a>
+</div>
+<div class="col-6 col-sm-4 col-md-6 col-lg-4">
+<a class="rounded p-4 border color-bg-subtle no-underline d-flex flex-column flex-items-center m-2 box-shadow-default-mktg js-build-in-item build-in-scale-up" href="/curl" tabindex='-1' target="_blank">
+<img alt="curl avatar" class="d-block rounded" decoding="async" height='96' loading="lazy" src="https://github.githubassets.com/assets/curl-24ff778d1afc.jpeg" width='96'></img>
+<div class="color-fg-muted text-truncate my-2">
+              curl
+             </div>
+<button class="Button--secondary Button--medium Button" data-view-component='true' tabindex='-1' type="button">
+<span class="Button-content">
+<span class="Button-visual Button-leadingVisual">
+<svg aria-hidden='true' class="octicon octicon-heart" data-view-component='true' height='16' version='1.1' viewbox="0 0 16 16" width='16'>
+<path d="m8 14.25.345.666a.75.75 0 0 1-.69 0l-.008-.004-.018-.01a7.152 7.152 0 0 1-.31-.17 22.055 22.055 0 0 1-3.434-2.414C2.045 10.731 0 8.35 0 5.5 0 2.836 2.086 1 4.25 1 5.797 1 7.153 1.802 8 3.02 8.847 1.802 10.203 1 11.75 1 13.914 1 16 2.836 16 5.5c0 2.85-2.045 5.231-3.885 6.818a22.066 22.066 0 0 1-3.744 2.584l-.018.01-.006.003h-.002ZM4.25 2.5c-1.336 0-2.75 1.164-2.75 3 0 2.15 1.58 4.144 3.365 5.682A20.58 20.58 0 0 0 8 13.393a20.58 20.58 0 0 0 3.135-2.211C12.92 9.644 14.5 7.65 14.5 5.5c0-1.836-1.414-3-2.75-3-1.373 0-2.609.986-3.029 2.456a.749.749 0 0 1-1.442 0C6.859 3.486 5.623 2.5 4.25 2.5Z">
+</path>
+</svg>
+</span>
+<span class="Button-label">
+                Sponsor
+               </span>
+</span>
+</button>
+</a>
+</div>
+<div class="col-6 col-sm-4 col-md-6 col-lg-4">
+<a class="rounded p-4 border color-bg-subtle no-underline d-flex flex-column flex-items-center m-2 box-shadow-default-mktg js-build-in-item build-in-scale-up" href="/prophen" tabindex='-1' target="_blank">
+<img alt="Nikema avatar" class="d-block circle" decoding="async" height='96' loading="lazy" src="https://github.githubassets.com/assets/prophen-da9b089d8a25.jpeg" width='96'></img>
+<div class="color-fg-muted text-truncate my-2">
+              Nikema
+             </div>
+<button class="Button--secondary Button--medium Button" data-view-component='true' tabindex='-1' type="button">
+<span class="Button-content">
+<span class="Button-visual Button-leadingVisual">
+<svg aria-hidden='true' class="octicon octicon-heart" data-view-component='true' height='16' version='1.1' viewbox="0 0 16 16" width='16'>
+<path d="m8 14.25.345.666a.75.75 0 0 1-.69 0l-.008-.004-.018-.01a7.152 7.152 0 0 1-.31-.17 22.055 22.055 0 0 1-3.434-2.414C2.045 10.731 0 8.35 0 5.5 0 2.836 2.086 1 4.25 1 5.797 1 7.153 1.802 8 3.02 8.847 1.802 10.203 1 11.75 1 13.914 1 16 2.836 16 5.5c0 2.85-2.045 5.231-3.885 6.818a22.066 22.066 0 0 1-3.744 2.584l-.018.01-.006.003h-.002ZM4.25 2.5c-1.336 0-2.75 1.164-2.75 3 0 2.15 1.58 4.144 3.365 5.682A20.58 20.58 0 0 0 8 13.393a20.58 20.58 0 0 0 3.135-2.211C12.92 9.644 14.5 7.65 14.5 5.5c0-1.836-1.414-3-2.75-3-1.373 0-2.609.986-3.029 2.456a.749.749 0 0 1-1.442 0C6.859 3.486 5.623 2.5 4.25 2.5Z">
+</path>
+</svg>
+</span>
+<span class="Button-label">
+                Sponsor
+               </span>
+</span>
+</button>
+</a>
+</div>
+</div>
+</div>
+<div class="position-absolute bottom-0 right-0 events-none z-n1" data-target="card-skew.shine">
+</div>
+</div>
+</card-skew>
+</div>
+</div>
+<div class="home-campaign-footer position-relative js-section overflow-hidden" data-color-mode="dark" data-dark-theme="dark" data-light-theme="light">
+<div class="container-xl position-relative z-2 px-3">
+<div class="d-flex js-build-in-trigger" data-build-in-stagger='100'>
+<div class="col-1 d-flex flex-column flex-items-center js-build-in-trigger">
+<div class="home-campaign-git-line rounded js-build-in-item build-in-scale-top" style="height: 100%; background: linear-gradient(transparent, #6639BA 10%, #A371F7, #D2A8FF);">
+</div>
+<div class="mx-auto my-3 home-campaign-glowing-icon">
+<div class="position-relative d-inline-block z-1">
+<svg aria-hidden='true' class="octicon octicon-code" data-view-component='true' height='24' version='1.1' viewbox="0 0 24 24" width='24'>
+<path d="M15.22 4.97a.75.75 0 0 1 1.06 0l6.5 6.5a.75.75 0 0 1 0 1.06l-6.5 6.5a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L21.19 12l-5.97-5.97a.75.75 0 0 1 0-1.06Zm-6.44 0a.75.75 0 0 1 0 1.06L2.81 12l5.97 5.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215l-6.5-6.5a.75.75 0 0 1 0-1.06l6.5-6.5a.75.75 0 0 1 1.06 0Z">
+</path>
+</svg>
+<span class="position-absolute left-0 bottom-0 height-full width-full home-campaign-glowing-icon-glow z-n1" style="background-color: var(--mktg-accent-primary); filter: blur(17px);">
+</span>
+</div>
+</div>
+</div>
+<div class="col-11 ml-2 ml-md-0">
+<div class="col-md-11 col-lg-9 py-8">
+<h2 class="h2-mktg mb-5">
+           Over 100 million developers call GitHub home
+           <sup class="f3-mktg" style="vertical-align: super">
+            3
+           </sup>
+</h2>
+<p class="f3-mktg color-fg-muted">
+           Whether you’re scaling your startup or just learning how to code, GitHub is your home. Join the world’s largest developer platform to build the innovations that empower humanity. Let’s build from here.
+          </p>
+</div>
+<div class="pb-2">
+<div>
+<label class="d-block pb-2" for="user_email">
+            Email address
+           </label>
+<div class="d-flex flex-column flex-md-row">
+<!-- '"` -->
+<!-- </textarea></xmp> -->
+<form accept-charset="UTF-8" action="/signup" autocomplete="off" class="mx-0 col-12 col-md-7 col-lg-5 js-signup-form position-relative z-2" data-turbo='false' method="get">
+<div class="d-flex flex-column flex-md-row flex-items-center">
+<input autocomplete="off" class="col-12 my-0 mb-3 mb-md-0 flex-auto form-control f4-mktg width-full rounded-md-right-0" data-color-mode="light" data-dark-theme="dark" data-light-theme="light" id="user_email" name="user_email" placeholder="you@company.com" required="" spellcheck='false' style="height: 3rem" type="email"></input>
+<input name="source" type="hidden" value="form-home-signup"></input>
+<button class="btn-mktg width-full width-md-auto mb-3 mb-md-0 rounded-md-left-0 home-campaign-signup-button btn-signup-mktg" data-analytics-event='{"category": "Home campaign", "action": "click to Sign up for GitHub", "label": "ref_page:/;ref_cta:Sign up for GitHub;ref_loc:footer"}' type="submit">
+               Sign up for GitHub
+              </button>
+</div>
+</form>
+<div class="border-top border-md-left mx-md-3 mb-3 mb-md-0">
+</div>
+<a class="btn-mktg home-campaign-enterprise btn-muted-mktg" data-analytics-event='{"category": "Start a free enterprise trial", "action": "click to Start a free enterprise trial", "label": "ref_cta:Start a free enterprise trial;"}' data-test-selector="start-trial-button" href="/organizations/enterprise_plan?ref_cta=Start+a+free+enterprise+trial&ref_loc=Home+campaign+footer&ref_page=%2F">
+             Start a free enterprise trial
+             <svg class="octicon arrow-symbol-mktg" fill="none" height='16' viewbox="0 0 16 16" width='16' xmlns="http://www.w3.org/2000/svg">
+<path d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z" fill="currentColor">
+</path>
+<path class="octicon-chevrow-stem" d="M1.75 8H11" stroke="currentColor" stroke-linecap="round" stroke-width='1.5'>
+</path>
+</svg>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="js-globe-root" id="globe">
+<div aria-label="Millions of developers from around the world are collaborating right now, opening and merging pull requests on GitHub." class="position-relative z-2 user-select-none home-globe-scene js-webgl-globe-data events-none" role="img">
+<div class="home-globe-container home-globe-container-webgl mx-auto">
+<div class="mx-auto width-full position-relative height-full js-webgl-globe js-webgl-globe-trigger">
+<video class="home-globe-container-video js-globe-fallback-video" height='918' hidden="" loop="" muted="" playsinline="" preload="none" width='916'>
+<source src="https://github.githubassets.com/assets/globe-900.hevc-58019d77b21c.mp4" type="video/mp4; codecs=hevc,mp4a.40.2"></source>
+<source src="https://github.githubassets.com/assets/globe-900.h264-975e7b5ac572.mp4" type="video/mp4; codecs=avc1.4D401E,mp4a.40.2"></source>
+</video>
+<video class="home-globe-container-video js-globe-fallback-video-small" hidden="" loop="" muted="" playsinline="" preload="none">
+<source src="https://github.githubassets.com/assets/globe-500.hevc-42032a395ff1.mp4" type="video/mp4; codecs=hevc,mp4a.40.2"></source>
+<source src="https://github.githubassets.com/assets/globe-500.h264-f00ceaddc706.mp4" type="video/mp4; codecs=avc1.4D401E,mp4a.40.2"></source>
+</video>
+<img alt="Planet earth with visualization of GitHub activity crossing the globe" class="width-full height-auto js-globe-fallback-image" decoding="async" height='1404' hidden="" loading="lazy" sizes="(max-width: 700px) 70vw, 700px" src="https://github.githubassets.com/assets/globe-d6f3f4ee645a.jpg" srcset="https://github.githubassets.com/assets/globe-700-7504469d0f87.jpg 700w,
+                https://github.githubassets.com/assets/globe-d6f3f4ee645a.jpg 1400w" width='1238'></img>
+<svg class="js-webgl-globe-loading position-absolute left-0 right-0 top-0 bottom-0" fill="none" height='704' style="margin: auto; transform: scale(0.8)" viewbox="0 0 704 704" width='704' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<filter color-interpolation-filters="sRGB" filterunits="userSpaceOnUse" height='560' id="a" width='560' x='70' y='70'>
+<feflood flood-opacity='0' result="BackgroundImageFix">
+</feflood>
+<feblend in="SourceGraphic" in2="BackgroundImageFix" mode="normal" result="shape">
+</feblend>
+<fecolormatrix in="SourceAlpha" result="hardAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0">
+</fecolormatrix>
+<feoffset dx='2' dy='2'>
+</feoffset>
+<fegaussianblur stddeviation='7.5'>
+</fegaussianblur>
+<fecomposite in2="hardAlpha" k2='-1' k3='1' operator="arithmetic">
+</fecomposite>
+<fecolormatrix type="matrix" values="0 0 0 0 0.447059 0 0 0 0 0.643137 0 0 0 0 0.988235 0 0 0 0.49 0">
+</fecolormatrix>
+<feblend in2="shape" mode="normal" result="effect1_innerShadow">
+</feblend>
+<fecolormatrix in="SourceAlpha" result="hardAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0">
+</fecolormatrix>
+<feoffset dx='1' dy='1'>
+</feoffset>
+<fegaussianblur stddeviation='3'>
+</fegaussianblur>
+<fecomposite in2="hardAlpha" k2='-1' k3='1' operator="arithmetic">
+</fecomposite>
+<fecolormatrix type="matrix" values="0 0 0 0 0.625 0 0 0 0 0.9325 0 0 0 0 1 0 0 0 0.32 0">
+</fecolormatrix>
+<feblend in2="effect1_innerShadow" mode="normal" result="effect2_innerShadow">
+</feblend>
+<fecolormatrix in="SourceAlpha" result="hardAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0">
+</fecolormatrix>
+<feoffset dx='-10' dy='-10'>
+</feoffset>
+<fegaussianblur stddeviation='3'>
+</fegaussianblur>
+<fecomposite in2="hardAlpha" k2='-1' k3='1' operator="arithmetic">
+</fecomposite>
+<fecolormatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0">
+</fecolormatrix>
+<feblend in2="effect2_innerShadow" mode="normal" result="effect3_innerShadow">
+</feblend>
+</filter>
+<radialgradient cx='0' cy='0' gradienttransform="matrix(-199.20400108 -199.20400108 199.20400108 -199.20400108 332.08 338.37)" gradientunits="userSpaceOnUse" id="b" r='1'>
+<stop offset=".875" stop-color="#fff">
+</stop>
+<stop offset=".937507" stop-color="#3e68ff">
+</stop>
+<stop offset='1' stop-color="#03009f" stop-opacity='0'>
+</stop>
+</radialgradient>
+<lineargradient gradientunits="userSpaceOnUse" id="c" x1='352' x2='352' y1='331' y2='628'>
+<stop offset='0' stop-color="#06060e">
+</stop>
+<stop offset='1' stop-color="#0f0e20">
+</stop>
+</lineargradient>
+<radialgradient cx='0' cy='0' gradienttransform="matrix(-5.99972278 523.99965313 -523.99965313 -5.99972278 170 147)" gradientunits="userSpaceOnUse" id="d" r='1'>
+<stop offset='0' stop-color="#4b60fb">
+</stop>
+<stop offset=".565687" stop-color="#33205d">
+</stop>
+<stop offset='1' stop-color="#33205d" stop-opacity='0'>
+</stop>
+</radialgradient>
+<radialgradient cx='0' cy='0' gradienttransform="matrix(41.99992987 206.0000547 -206.0000547 41.99992987 292 327)" gradientunits="userSpaceOnUse" id="e" r='1'>
+<stop offset='0' stop-color="#354097">
+</stop>
+<stop offset='1' stop-color="#243273" stop-opacity='0'>
+</stop>
+</radialgradient>
+<radialgradient cx='0' cy='0' gradienttransform="matrix(-84.00137423 185.99914213 -185.99914213 -84.00137423 462 399)" gradientunits="userSpaceOnUse" id="f" r='1'>
+<stop offset='0' stop-color="#040d20">
+</stop>
+<stop offset='1' stop-color="#040d20" stop-opacity='0'>
+</stop>
+</radialgradient>
+<circle cx='352' cy='352' fill="url(#b)" r='303' transform="matrix(.98453041 .1752138 -.1752138 .98453041 67.120553 -56.22996)">
+</circle>
+<g filter="url(#a)">
+<circle cx='352' cy='352' fill="url(#c)" r='276'>
+</circle>
+<circle cx='352' cy='352' fill="url(#d)" r='276'>
+</circle>
+<circle cx='352' cy='352' fill="url(#e)" r='276'>
+</circle>
+<circle cx='352' cy='352' fill="url(#f)" r='276'>
+</circle>
+</g>
+</svg>
+</div>
+<img alt="" aria-hidden='true' class="d-none d-md-block position-absolute home-footer-float z-1" decoding="async" height='150' loading="lazy" src="https://github.githubassets.com/assets/footer-copilot-54114bfd1d20.png" style="left: 0; top: 30%;" width='150'></img>
+<img alt="" aria-hidden='true' class="d-none d-md-block position-absolute home-footer-float z-2" decoding="async" height='200' loading="lazy" src="https://github.githubassets.com/assets/footer-mona-d1c861cd8018.png" style="right: 5%; top: 50%; animation-delay: 1s;" width='200'>
+<img alt="" aria-hidden='true' class="d-none d-md-block position-absolute home-footer-rotate" decoding="async" height='48' loading="lazy" src="https://github.githubassets.com/assets/footer-star-36e5b5724973.png" style="left: -5%; top: 50%;" width='48'></img>
+<img alt="" aria-hidden='true' class="d-none d-md-block position-absolute home-footer-rotate" decoding="async" height='50' loading="lazy" src="https://github.githubassets.com/assets/footer-diamond-ed642fc95144.png" style="right: 10%; top: 20%;" width='50'></img>
+<img alt="" aria-hidden='true' class="d-none d-md-block position-absolute home-footer-float" decoding="async" height='90' loading="lazy" src="https://github.githubassets.com/assets/footer-orb-a0438104a7a2.png" style="right: -10%; top: 30%;" width='98'></img>
+<img alt="" aria-hidden='true' class="d-none d-md-block position-absolute home-footer-float" decoding="async" height='64' loading="lazy" src="https://github.githubassets.com/assets/footer-blur-8bc8e1f23df6.png" style="left: 10%; top: 70%; animation-delay: 2s;" width='64'></img>
+</img>
+</div>
+<video class="js-globe-aurora position-absolute top-0 left-0 right-0" hidden="" loop="" muted="" playsinline="" preload="none" style="margin: auto; z-index: -1; min-width: 100%; min-height: 100%; -webkit-mask-image: -webkit-linear-gradient(transparent, #000 20%, transparent 90%);">
+<source src="https://github.githubassets.com/assets/aurora.h264-25af1afc4e69.mp4" type="video/mp4; codecs=avc1.4D401E,mp4a.40.2"></source>
+</video>
+</div>
+<div class="text-center position-relative z-3 mt-5 mb-7">
+<button aria-pressed='false' class="f4-mktg js-animation-pause-toggle js-globe-pause-toggle animation-pause-toggle rounded-2" data-pause-aria-label="Globe is curently animating. Click to pause animation." data-play-aria-label="Globe is paused. Click to play animation." data-target-id="globe" type="button">
+<span class="animation-toggle-pause-label">
+          Pause
+         </span>
+<span class="animation-toggle-play-label">
+          Play
+         </span>
+</button>
+</div>
+</div>
+</div>
+<div class="container-xl p-responsive" data-color-mode="dark" data-dark-theme="dark">
+<ul class="list-style-none col-lg-9 color-fg-muted f5">
+<li class="mb-3">
+<sup id="footnote-1">
+         1
+        </sup>
+        This 7X times factor is based on data from the industry’s longest running analysis of fix rates
+Veracode State of Software Security 2023, which cites the average time to fix 50% of flaws as 198 days vs. GitHub’s fix rates of 72% of flaws with in 28 days which is at a minimum of 7X faster when compared.
+       </li>
+<li class="mb-3">
+<sup id="footnote-2">
+         2
+        </sup>
+        The Total Economic Impact™ Of GitHub Enterprise Cloud and Advanced Security, a commissioned study conducted by Forrester Consulting, 2022. Results are for a composite organization based on interviewed customers.
+       </li>
+<li class="mb-3">
+<sup id="footnote-3">
+         3
+        </sup>
+        There are now 100 million developers around the world using GitHub.
+        <a class="color-fg-muted text-underline" href="https://github.blog/2023-01-25-100-million-developers-and-counting/" target="_blank">
+         Read the blog post
+        </a>
+        .
+       </li>
+</ul>
+</div>
+</main>
+</div>
+<footer class="footer pt-6 position-relative" data-analytics-visible='{"category": "Footer", "action": "visible", "label": "text: Marketing footer"}' data-color-mode="dark" data-dark-theme="dark" role="contentinfo">
+<h2 class="sr-only">
+     Site-wide Links
+    </h2>
+<div class="container-xl p-responsive">
+<div class="d-flex flex-wrap py-5 mb-5">
+<section class="col-12 col-lg-4 mb-5">
+<a aria-label="Go to GitHub homepage" class="color-fg-default d-inline-block" data-analytics-event='{"category": "Footer", "action": "go to home", "label": "text:home"}' href="/">
+<svg aria-hidden='true' class="octicon octicon-logo-github footer-logo-mktg width-auto d-block" data-view-component='true' height='30' version='1.1' viewbox="0 0 68 24" width='85'>
+<path d="M27.8 17.908h-.03c.013 0 .022.014.035.017l.01-.002-.016-.015Zm.005.017c-.14.001-.49.073-.861.073-1.17 0-1.575-.536-1.575-1.234v-4.652h2.385c.135 0 .24-.12.24-.283V9.302c0-.133-.12-.252-.24-.252H25.37V5.913c0-.119-.075-.193-.21-.193h-3.24c-.136 0-.21.074-.21.193V9.14s-1.636.401-1.741.416a.255.255 0 0 0-.195.253v2.021c0 .164.12.282.255.282h1.665v4.876c0 3.627 2.55 3.998 4.29 3.998.796 0 1.756-.252 1.906-.327.09-.03.135-.134.135-.238v-2.23a.264.264 0 0 0-.219-.265Zm35.549-3.272c0-2.69-1.095-3.047-2.25-2.928-.9.06-1.62.505-1.62.505v5.232s.735.506 1.83.536c1.545.044 2.04-.506 2.04-3.345ZM67 14.415c0 5.099-1.665 6.555-4.576 6.555-2.46 0-3.78-1.233-3.78-1.233s-.06.683-.135.773c-.045.089-.12.118-.21.118h-2.22c-.15 0-.286-.119-.286-.252l.03-16.514a.26.26 0 0 1 .255-.252h3.196a.26.26 0 0 1 .255.252v5.604s1.23-.788 3.03-.788l-.015-.03c1.8 0 4.456.67 4.456 5.767ZM53.918 9.05h-3.15c-.165 0-.255.119-.255.282v8.086s-.826.58-1.95.58c-1.126 0-1.456-.506-1.456-1.62v-7.06a.262.262 0 0 0-.255-.254h-3.21a.262.262 0 0 0-.256.253v7.596c0 3.27 1.846 4.087 4.381 4.087 2.085 0 3.78-1.145 3.78-1.145s.076.58.12.67c.03.074.136.133.24.133h2.011a.243.243 0 0 0 .255-.253l.03-11.103c0-.133-.12-.252-.285-.252Zm-35.556-.015h-3.195c-.135 0-.255.134-.255.297v10.91c0 .297.195.401.45.401h2.88c.3 0 .375-.134.375-.401V9.287a.262.262 0 0 0-.255-.252ZM16.787 4.01c-1.155 0-2.07.907-2.07 2.051 0 1.145.915 2.051 2.07 2.051a2.04 2.04 0 0 0 2.04-2.05 2.04 2.04 0 0 0-2.04-2.052Zm24.74-.372H38.36a.262.262 0 0 0-.255.253v6.08H33.14v-6.08a.262.262 0 0 0-.255-.253h-3.196a.262.262 0 0 0-.255.253v16.514c0 .133.135.252.255.252h3.196a.262.262 0 0 0 .255-.253v-7.06h4.966l-.03 7.06c0 .134.12.253.255.253h3.195a.262.262 0 0 0 .255-.253V3.892a.262.262 0 0 0-.255-.253Zm-28.31 7.313v8.532c0 .06-.015.163-.09.193 0 0-1.875 1.323-4.966 1.323C4.426 21 0 19.84 0 12.2S3.87 2.986 7.651 3c3.27 0 4.59.728 4.8.862.06.075.09.134.09.208l-.63 2.646c0 .134-.134.297-.3.253-.54-.164-1.35-.49-3.255-.49-2.205 0-4.575.623-4.575 5.543s2.25 5.5 3.87 5.5c1.38 0 1.875-.164 1.875-.164V13.94H7.321c-.165 0-.285-.12-.285-.253v-2.735c0-.134.12-.252.285-.252h5.61c.166 0 .286.118.286.252Z">
+</path>
+</svg>
+</a>
+<h3 class="h5 mt-4 mb-0" id="subscribe-to-newsletter">
+        Subscribe to our developer newsletter
+       </h3>
+<p class="f5 color-fg-muted mb-3">
+        Get tips, technical guides, and best practices. Twice a month. Right in your inbox.
+       </p>
+<a class="btn-mktg mb-4 btn-muted-mktg" data-analytics-event='{"category": "Subscribe", "action": "click to Subscribe", "label": "ref_cta:Subscribe;"}' href="https://resources.github.com/newsletter/">
+        Subscribe
+       </a>
+</section>
+<nav aria-labelledby="footer-title-product" class="col-6 col-sm-3 col-lg-2 mb-6 mb-md-2 pr-3 pr-lg-0 pl-lg-4">
+<h3 class="h5 mb-3 text-mono color-fg-muted text-normal" id="footer-title-product">
+        Product
+       </h3>
+<ul class="list-style-none color-fg-muted f5">
+<li class="lh-condensed mb-3">
+<a class="Link--secondary" data-analytics-event='{"location": "footer", "action": "features", "context": "product", "tag": "link", "label": "features_link_product_footer"}' href="/features">
+          Features
+         </a>
+</li>
+<li class="lh-condensed mb-3">
+<a class="Link--secondary" data-analytics-event='{"location": "footer", "action": "enterprise", "context": "product", "tag": "link", "label": "enterprise_link_product_footer"}' href="/enterprise">
+          Enterprise
+         </a>
+</li>
+<li class="lh-condensed mb-3">
+<a class="Link--secondary" data-analytics-event='{"location": "footer", "action": "copilot", "context": "product", "tag": "link", "label": "copilot_link_product_footer"}' href="/features/copilot">
+          Copilot
+         </a>
+</li>
+<li class="lh-condensed mb-3">
+<a class="Link--secondary" data-analytics-event='{"location": "footer", "action": "security", "context": "product", "tag": "link", "label": "security_link_product_footer"}' href="/security">
+          Security
+         </a>
+</li>
+<li class="lh-condensed mb-3">
+<a class="Link--secondary" data-analytics-event='{"location": "footer", "action": "pricing", "context": "product", "tag": "link", "label": "pricing_link_product_footer"}' href="/pricing">
+          Pricing
+         </a>
+</li>
+<li class="lh-condensed mb-3">
+<a class="Link--secondary" data-analytics-event='{"location": "footer", "action": "team", "context": "product", "tag": "link", "label": "team_link_product_footer"}' href="/team">
+          Team
+         </a>
+</li>
+<li class="lh-condensed mb-3">
+<a class="Link--secondary" data-analytics-event='{"location": "footer", "action": "resources", "context": "product", "tag": "link", "label": "resources_link_product_footer"}' href="https://resources.github.com">
+          Resources
+         </a>
+</li>
+<li class="lh-condensed mb-3">
+<a class="Link--secondary" data-analytics-event='{"location": "footer", "action": "roadmap", "context": "product", "tag": "link", "label": "roadmap_link_product_footer"}' href="https://github.com/github/roadmap">
+          Roadmap
+         </a>
+</li>
+<li class="lh-condensed mb-3">
+<a class="Link--secondary" data-analytics-event='{"location": "footer", "action": "compare", "context": "product", "tag": "link", "label": "compare_link_product_footer"}' href="https://resources.github.com/devops/tools/compare">
+          Compare GitHub
+         </a>
+</li>
+</ul>
+</nav>
+<nav aria-labelledby="footer-title-platform" class="col-6 col-sm-3 col-lg-2 mb-6 mb-md-2 pr-3 pr-md-0 pl-md-4">
+<h3 class="h5 mb-3 text-mono color-fg-muted text-normal" id="footer-title-platform">
+        Platform
+       </h3>
+<ul class="list-style-none f5">
+<li class="lh-condensed mb-3">
+<a class="Link--secondary" data-analytics-event='{"location": "footer", "action": "dev-api", "context": "platform", "tag": "link", "label": "dev-api_link_platform_footer"}' href="https://docs.github.com/get-started/exploring-integrations/about-building-integrations">
+          Developer API
+         </a>
+</li>
+<li class="lh-condensed mb-3">
+<a class="Link--secondary" data-analytics-event='{"location": "footer", "action": "partners", "context": "platform", "tag": "link", "label": "partners_link_platform_footer"}' href="https://partner.github.com">
+          Partners
+         </a>
+</li>
+<li class="lh-condensed mb-3">
+<a class="Link--secondary" data-analytics-event='{"location": "footer", "action": "edu", "context": "platform", "tag": "link", "label": "edu_link_platform_footer"}' href="https://github.com/edu">
+          Education
+         </a>
+</li>
+<li class="lh-condensed mb-3">
+<a class="Link--secondary" data-analytics-event='{"location": "footer", "action": "cli", "context": "platform", "tag": "link", "label": "cli_link_platform_footer"}' href="https://cli.github.com">
+          GitHub CLI
+         </a>
+</li>
+<li class="lh-condensed mb-3">
+<a class="Link--secondary" data-analytics-event='{"location": "footer", "action": "desktop", "context": "platform", "tag": "link", "label": "desktop_link_platform_footer"}' href="https://desktop.github.com">
+          GitHub Desktop
+         </a>
+</li>
+<li class="lh-condensed mb-3">
+<a class="Link--secondary" data-analytics-event='{"location": "footer", "action": "mobile", "context": "platform", "tag": "link", "label": "mobile_link_platform_footer"}' href="https://github.com/mobile">
+          GitHub Mobile
+         </a>
+</li>
+</ul>
+</nav>
+<nav aria-labelledby="footer-title-support" class="col-6 col-sm-3 col-lg-2 mb-6 mb-md-2 pr-3 pr-md-0 pl-md-4">
+<h3 class="h5 mb-3 text-mono color-fg-muted text-normal" id="footer-title-support">
+        Support
+       </h3>
+<ul class="list-style-none f5">
+<li class="lh-condensed mb-3">
+<a class="Link--secondary" data-analytics-event='{"location": "footer", "action": "docs", "context": "support", "tag": "link", "label": "docs_link_support_footer"}' href="https://docs.github.com">
+          Docs
+         </a>
+</li>
+<li class="lh-condensed mb-3">
+<a class="Link--secondary" data-analytics-event='{"location": "footer", "action": "community", "context": "support", "tag": "link", "label": "community_link_support_footer"}' href="https://github.community">
+          Community Forum
+         </a>
+</li>
+<li class="lh-condensed mb-3">
+<a class="Link--secondary" data-analytics-event='{"location": "footer", "action": "services", "context": "support", "tag": "link", "label": "services_link_support_footer"}' href="https://services.github.com">
+          Professional Services
+         </a>
+</li>
+<li class="lh-condensed mb-3">
+<a class="Link--secondary" data-analytics-event='{"location": "footer", "action": "premium_support", "context": "support", "tag": "link", "label": "premium_support_link_support_footer"}' href="/enterprise/premium-support">
+          Premium Support
+         </a>
+</li>
+<li class="lh-condensed mb-3">
+<a class="Link--secondary" data-analytics-event='{"location": "footer", "action": "skills", "context": "support", "tag": "link", "label": "skills_link_support_footer"}' href="https://skills.github.com">
+          Skills
+         </a>
+</li>
+<li class="lh-condensed mb-3">
+<a class="Link--secondary" data-analytics-event='{"location": "footer", "action": "status", "context": "support", "tag": "link", "label": "status_link_support_footer"}' href="https://www.githubstatus.com">
+          Status
+         </a>
+</li>
+<li class="lh-condensed mb-3">
+<a class="Link--secondary" data-analytics-event='{"location": "footer", "action": "contact_github", "context": "support", "tag": "link", "label": "contact_github_link_support_footer"}' href="https://support.github.com?tags=dotcom-footer">
+          Contact GitHub
+         </a>
+</li>
+</ul>
+</nav>
+<nav aria-labelledby="footer-title-company" class="col-6 col-sm-3 col-lg-2 mb-6 mb-md-2 pr-3 pr-md-0 pl-md-4">
+<h3 class="h5 mb-3 text-mono color-fg-muted text-normal" id="footer-title-company">
+        Company
+       </h3>
+<ul class="list-style-none f5">
+<li class="lh-condensed mb-3">
+<a class="Link--secondary" data-analytics-event='{"location": "footer", "action": "about", "context": "company", "tag": "link", "label": "about_link_company_footer"}' href="https://github.com/about">
+          About
+         </a>
+</li>
+<li class="lh-condensed mb-3">
+<a class="Link--secondary" data-analytics-event='{"location": "footer", "action": "customer_stories", "context": "company", "tag": "link", "label": "customer_stories_link_company_footer"}' href="/customer-stories?type=enterprise">
+          Customer stories
+         </a>
+</li>
+<li class="lh-condensed mb-3">
+<a class="Link--secondary" data-analytics-event='{"location": "footer", "action": "blog", "context": "company", "tag": "link", "label": "blog_link_company_footer"}' href="https://github.blog">
+          Blog
+         </a>
+</li>
+<li class="lh-condensed mb-3">
+<a class="Link--secondary" data-analytics-event='{"location": "footer", "action": "readme", "context": "company", "tag": "link", "label": "readme_link_company_footer"}' href="/readme">
+          The ReadME Project
+         </a>
+</li>
+<li class="lh-condensed mb-3">
+<a class="Link--secondary" data-analytics-event='{"location": "footer", "action": "careers", "context": "company", "tag": "link", "label": "careers_link_company_footer"}' href="https://github.careers">
+          Careers
+         </a>
+</li>
+<li class="lh-condensed mb-3">
+<a class="Link--secondary" data-analytics-event='{"location": "footer", "action": "press", "context": "company", "tag": "link", "label": "press_link_company_footer"}' href="/about/press">
+          Press
+         </a>
+</li>
+<li class="lh-condensed mb-3">
+<a class="Link--secondary" data-analytics-event='{"location": "footer", "action": "inclusion", "context": "company", "tag": "link", "label": "inclusion_link_company_footer"}' href="/about/diversity">
+          Inclusion
+         </a>
+</li>
+
+        ```
+        

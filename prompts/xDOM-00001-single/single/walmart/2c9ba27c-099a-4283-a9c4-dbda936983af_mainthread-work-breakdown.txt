@@ -1,0 +1,513 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. mainthread-work-breakdown => Minimize main-thread work: Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to minimize main-thread work](https://developer.chrome.com/docs/lighthouse/performance/mainthread-work-breakdown/)
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        
+<div data-reactroot="" id="__next">
+<div class="flex flex-column min-vh-100 shadow-2" data-testid="layout-container" style="transform:none;transition:transform .2s">
+<span class="sticky bg-secondary w-100 top-0 z-1" data-pcss-show='true' data-testid="global-header" style="transition:top 0.65s">
+<a class="o-0 absolute" link-identifier="Generic Name" tabindex='-1'>
+</a>
+<a class="slider skip-main bg-white-90" href="#maincontent" link-identifier="Generic Name">
+      Skip to Main Content
+     </a>
+<header class="flex items-center justify-center pa3 center-hdkp ph4-hdkp pv3-hdkp" data-testid="responsiveHeader" style="transition:top 0.65s">
+<div class="flex items-center justify-center dn-hdkp" style="transition:opacity .3s">
+<a aria-hidden='false' aria-label="All Departments Menu" class="flex items-center b--none bg-transparent mr3 pa0 pointer h3 w3 no-underline white" href="/all-departments" link-identifier="hamburgerMenu">
+<i aria-hidden='true' class="ld ld-Menu" style="font-size:1.5rem;vertical-align:-0.25em;width:24px;height:24px;box-sizing:content-box">
+</i>
+</a>
+<a aria-hidden='false' aria-label="Walmart Homepage" class="gold h3 w3 dn-hdkp" data-automation-id="header-link-walmartLogo" href="/" link-identifier="walmartLogoMobile">
+<i aria-hidden='true' class="ld ld-Spark" style="font-size:2rem;vertical-align:-0.325em;width:2rem;height:2rem;box-sizing:content-box">
+</i>
+</a>
+</div>
+<a aria-label="Walmart Homepage" class="header-navigation flex-hdkp items-center no-underline justify-center mr3 pa3 hover-bg-dark-primary hover-bg-navy" href="/" link-identifier="walmartLogoDesktop" style="border-radius:37px;transition:all 100ms cubic-bezier(0.77, 0, 0.175, 1);height:52px;padding:0.5rem;width:52px;margin-right:12px">
+<i aria-hidden='true' class="ld ld-Spark" style="font-size:36px;vertical-align:-0.325em;color:#ffc220;width:36px;height:36px;box-sizing:content-box">
+</i>
+</a>
+<section aria-label="How do you want your items?" class="pr3 dn db-hdkp bg-dark-blue hover-bg-navy white" style="width:314px;height:52px;border-radius:32px;padding-left:10px;padding-right:12px">
+<div class="white sticky z-3 gic-wrapper gic-wrapper-redesign-top" data-pcss-show='true' data-testid="gic-wrapper" id="gic-wrapper" style="min-height:41px">
+<hr aria-hidden='true' class="w_8Gn9 banner-divider redesign"></hr>
+<div class="items-center flex flex-auto ph3 ph4-m pv1 gic-container redesignv2" data-pcss-hide='true'>
+<div class="flex items-center h3">
+<img alt="Banner title icon" class="mr2 br-100 v-btm" height='32' loading="lazy" src="https://i5.walmartimages.com/dfwrs/76316474-3850/k2-_c6d4aec7-b4a7-4ea4-9223-07c8daef4fcf.v1.png" width='32'></img>
+<span class="b f5">
+           How do you want your items?
+          </span>
+</div>
+</div>
+</div>
+</section>
+<form action="/search" aria-label="Walmart Site-Wide" autocomplete="off" class="flex flex-auto items-center justify-center pl3 justify-start-hdkp pa0-hdkp ml4-hdkp static" data-testid="search-form" role="search">
+<div class="flex flex-auto items-center relative">
+<input aria-activedescendant="" aria-autocomplete="list" aria-haspopup="listbox" aria-label="Search" autocomplete="off" class="flex-auto lh-solid sans-serif search-bar br-pill f5 search-input-field-v2 b--none search-bar-redesigned-v2" data-automation-id="header-input-search" name="q" placeholder="Search Walmart" style="padding-left:1.5rem;padding-right:2.5rem" type="search" value=""></input>
+<button aria-hidden='true' aria-label="Clear search field text" class="absolute bn bg-transparent h-100 right-2" style="padding:0 0.75rem;cursor:pointer;opacity:0;right:3rem" tabindex='-1' type="reset">
+<i class="ld ld-Close" style="font-size:1.5rem;vertical-align:-0.25em;width:1.5rem;height:1.5rem;box-sizing:content-box">
+</i>
+</button>
+<button aria-label="Search icon" class="absolute bn br-100 hover-bg-navy search-icon-redesigned-v2" style="cursor:pointer">
+<i aria-hidden='true' class="ld ld-Search absolute" data-automation-id="search-icon" style="font-size:1rem;vertical-align:-0.175em;top:50%;left:50%;transform:translate(-50%, -50%);width:1rem;height:1rem;box-sizing:content-box">
+</i>
+</button>
+</div>
+<button aria-hidden='true' aria-label="Cancel" class="bn bg-transparent mh1 ph2 pv2 pointer sans-serif underline z-1 dn-hdkp clip o-0 white" style="transition:opacity .3s" tabindex='-1' type="button">
+        Cancel
+       </button>
+</form>
+<nav aria-label="Account and Cart">
+<ul class="flex ma0 pa0 list" style="height:52px">
+<li class="dn db-hdkp ml3 relative">
+<a aria-expanded='false' aria-haspopup='true' class="flex items-center no-underline desktop-header-trigger lh-title lh-solid redesign-nav-v2 white hover-bg-navy" href="/my-items" link-identifier="Reorder my items" role="button" style="border-radius:32px;height:52px;transition:all 100ms cubic-bezier(0.77, 0, 0.175, 1)">
+<i aria-hidden='true' class="ld ld-Heart pr2" style="font-size:1rem;vertical-align:-0.175em;width:16px;height:1rem;box-sizing:content-box">
+</i>
+<div class="nowrap">
+<div class="lh-title f6" style="height:20px">
+            Reorder
+           </div>
+<div class="b f5 lh-copy" style="margin-top:-4px">
+            My Items
+           </div>
+</div>
+</a>
+<div class="absolute bg-white br3 br--bottom left-0 lh-copy mt3 overflow-hidden shadow-1 dn" data-testid="my-items-flyout" style="margin-top:16px;left:50%;transform:translateX(-50%)">
+<div class="ph4 pt4 pb2" data-automation-id="walmart-myitems">
+<a class="dark-gray db f6 no-underline nowrap desktop-header-flyout-link mb3" data-automation-id="walmart-reorder" href="/my-items" link-identifier="Reorder">
+<i class="ld ld-Reorder mr2" style="font-size:1rem;vertical-align:-0.175em;width:1rem;height:1rem;box-sizing:content-box">
+</i>
+            Reorder
+           </a>
+<a class="dark-gray db f6 no-underline nowrap desktop-header-flyout-link mb3" data-automation-id="walmart-list" href="/lists" link-identifier="Lists">
+<i class="ld ld-Heart mr2" style="font-size:1rem;vertical-align:-0.175em;width:1rem;height:1rem;box-sizing:content-box">
+</i>
+            Lists
+           </a>
+<a class="dark-gray db f6 no-underline nowrap desktop-header-flyout-link mb3" href="/my-registries" link-identifier="Registries">
+<i class="ld ld-Gift mr2" style="font-size:1rem;vertical-align:-0.175em;width:1rem;height:1rem;box-sizing:content-box">
+</i>
+            Registries
+           </a>
+</div>
+</div>
+</li>
+<li class="dn db-hdkp ml2 relative">
+<a aria-expanded='false' aria-haspopup='true' class="flex items-center no-underline desktop-header-trigger lh-title lh-solid redesign-nav-v2 white hover-bg-navy" href="/" link-identifier="Account" role="button" style="border-radius:32px;height:52px;transition:all 100ms cubic-bezier(0.77, 0, 0.175, 1)">
+<i aria-hidden='true' class="ld ld-User" style="font-size:16px;vertical-align:-0.175em;width:16px;height:16px;box-sizing:content-box">
+</i>
+<div class="ml2 nowrap" data-automation-id="headerSignIn">
+<div class="mw3 mw4-hdkp truncate lh-copy f6" style="height:20px">
+            Sign In
+           </div>
+<div class="b lh-copy h2 f5" style="margin-top:-4px">
+            Account
+           </div>
+</div>
+</a>
+<div class="absolute bg-white br3 br--bottom left-0 lh-copy mt3 overflow-hidden shadow-1 dn" data-testid="account-flyout" style="margin-top:16px;left:50%;transform:translateX(-50%)">
+<div class="pa4">
+<button class="w_hhLG w_8nsR w_0_LY db mb3 w-100" data-testid="sign-in" type="button">
+            Sign In
+           </button>
+<button class="w_hhLG w_XK4d w_0_LY db mb3 w-100" data-automation-id="header-create-account" type="button">
+            Create an account
+           </button>
+<div class="mb3">
+<hr aria-hidden='true' class="w_8Gn9"></hr>
+</div>
+<a class="dark-gray db f6 no-underline nowrap desktop-header-flyout-link" data-automation-id="headerPurchaseHistory" href="/orders" link-identifier="Purchase History">
+<i class="ld ld-Receipt mr2" style="font-size:1rem;vertical-align:-0.175em;width:1rem;height:1rem;box-sizing:content-box">
+</i>
+            Purchase History
+           </a>
+<a class="dark-gray db f6 no-underline nowrap desktop-header-flyout-link mt3" href="/plus" link-identifier="Walmart Plus">
+<img alt="Walmart+" class="mr2 f5" height='16' loading="lazy" src="//i5.walmartimages.com/dfw/63fd9f59-ac39/29c6759d-7f14-49fa-bd3a-b870eb4fb8fb/v1/wplus-icon-blue.svg" style="vertical-align:-0.175em" width='16'></img>
+            Walmart+
+           </a>
+</div>
+</div>
+</li>
+<li aria-hidden='false' class="undefined" style="transition:opacity .3s">
+<div class="relative">
+<div class="cart-button cart-button-wrapper-redesigned ml2 flex justify-center db-hdkp justify-start-hdkp h-auto-hdkp ml2-hdkp flex-column">
+<button aria-label="Cart contains 0 items Total Amount $0.00" class="bn bg-transparent br2 flex flex-column items-center pa0 pointer relative sans-serif white hover-bg-dark-primary hover-bg-navy cart-button-redesigned" data-automation-id="cart-button-header" id="cart-button-header" style="border-radius:32px;transition:all 100ms cubic-bezier(0.77, 0, 0.175, 1);height:52px;padding:2px 12px" type="button">
+<i class="ld ld-Cart mr1 white mb1" style="font-size:1.5rem;vertical-align:-0.25em;width:24px;height:24px;box-sizing:content-box">
+</i>
+<span class="db nowrap cart-total cart-total-without-id redesigned-cart-total">
+             $0.00
+            </span>
+</button>
+</div>
+</div>
+</li>
+</ul>
+</nav>
+</header>
+<div class="flex items-center header-navigation ph4" data-testid="hearder-navigation" style="height:48px;background-color:#f2f8fd">
+<div class="flex items-center">
+<nav aria-label="Primary" class="flex">
+<ul class="flex flex-row pa0 ma0 list">
+<li style="padding-right:2px">
+<section class="dn db-hdkp">
+<div>
+<div class="relative">
+<button aria-expanded='false' aria-haspopup='true' class="flex items-center no-underline desktop-header-trigger lh-title b navy secondary-nav-flyout-trigger redesign-secondary-nav-flyout-button-v2 pointer sans-serif bg-transparent b--none" style="border-radius:100px;height:32px;transition:all 100ms cubic-bezier(0.77, 0, 0.175, 1)" type="button">
+<i aria-hidden='true' class="ld ld-Grid pr2" style="font-size:1rem;vertical-align:-0.175em;width:1rem;height:1rem;box-sizing:content-box">
+</i>
+              Departments
+              <i class="ld ld-ChevronDown pl2" style="font-size:1rem;vertical-align:-0.175em;width:1rem;height:1rem;box-sizing:content-box">
+</i>
+</button>
+<div class="absolute bg-white br3 br--bottom left-0 lh-copy mt3 overflow-hidden shadow-1 dn" data-testid="departments-flyout" style="margin-top:8px;left:0;transform:none;margin-left:0px;max-height:0">
+<div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</li>
+<li style="padding-right:2px">
+<section class="dn db-hdkp">
+<div>
+<div class="relative">
+<button aria-expanded='false' aria-haspopup='true' class="flex items-center no-underline desktop-header-trigger lh-title b navy secondary-nav-flyout-trigger redesign-secondary-nav-flyout-button-v2 pointer sans-serif bg-transparent b--none" style="border-radius:100px;height:32px;transition:all 100ms cubic-bezier(0.77, 0, 0.175, 1)" type="button">
+<i aria-hidden='true' class="ld ld-Services pr2" style="font-size:1rem;vertical-align:-0.175em;width:1rem;height:1rem;box-sizing:content-box">
+</i>
+              Services
+              <i class="ld ld-ChevronDown pl2" style="font-size:1rem;vertical-align:-0.175em;width:1rem;height:1rem;box-sizing:content-box">
+</i>
+</button>
+<div class="absolute bg-white br3 br--bottom left-0 lh-copy mt3 overflow-hidden shadow-1 dn" data-testid="services-flyout" style="margin-top:8px;left:0;transform:none;margin-left:0px;max-height:0">
+<div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</li>
+</ul>
+</nav>
+<div class="flex ph2 items-center blue mr1 mh1">
+        |
+       </div>
+</div>
+</div>
+</span>
+<div aria-hidden='false' class="flex flex-column flex-auto relative z-0">
+<div class="white sticky z-3 gic-wrapper gic-wrapper-redesign-top layout-gic-wrapper" data-pcss-show='true' data-testid="gic-wrapper" id="gic-wrapper" style="min-height:41px;transition:top 0.65s">
+<hr aria-hidden='true' class="w_8Gn9 banner-divider redesign"></hr>
+<div class="items-center flex flex-auto ph3 ph4-m pv1 gic-container redesignv2" data-pcss-hide='true'>
+<div class="flex items-center h3">
+<img alt="Banner title icon" class="mr2 br-100 v-btm" height='32' loading="lazy" src="https://i5.walmartimages.com/dfwrs/76316474-3850/k2-_c6d4aec7-b4a7-4ea4-9223-07c8daef4fcf.v1.png" width='32'></img>
+<span class="b f5">
+         How do you want your items?
+        </span>
+</div>
+</div>
+</div>
+<div class="flex-auto relative z-1" data-testid="main-content-container">
+<div class="main-content w-100 center" data-testid="maincontent" id="maincontent">
+<main class="ph3 ph4-xl mb4-xl mb3 mh0-l mw1660 center" id="maincontentredesign" style="min-height:50vh">
+<span class="w_iUH7">
+<h1>
+<!-- -->
+          Walmart | Save Money. Live better.
+          <!-- -->
+</h1>
+</span>
+<div class="flex flex-column h-100" data-testid="flex-container">
+<div class="h-100 relative">
+<div class="w_KPWk w_GxNv flex-row undefined" data-testid="flex-container">
+<div class="w_aoqv w_wRee w_b0y1">
+</div>
+</div>
+</div>
+<div class="h-100 relative">
+<div class="w_KPWk w_GxNv flex-row undefined" data-testid="flex-container">
+<div class="w_aoqv w_wRee w_b_WN">
+<div class="flex flex-column h-100" data-testid="flex-container">
+<div class="h-100 relative">
+<section>
+<div class="card-wrapper w-100 aspect-ratio br3 mt4-xl mt3 aspect-ratio--gpov-m">
+<div class="aspect-ratio--object br3 flex pv3 pv4-xl overflow-hidden z-0 justify-start items-start">
+<div class="w-100 absolute absolute--fill br3 overflow-hidden" style="background-color:#FFFFFF">
+<img alt="" class="w-100 absolute absolute--fill" height="auto" id="GridPOVBanners-mediumBanner-contentZone5-xbuijFc1" loading="lazy" src="https://i5.walmartimages.com/dfw/4ff9c6c9-21b2/k2-_f1e09ede-f82b-4f5c-9f3b-d507155a38b5.v1.jpg?odnHeight=256&odnWidth=385&odnBg=&odnDynImageQuality=70" srcset="https://i5.walmartimages.com/dfw/4ff9c6c9-21b2/k2-_f1e09ede-f82b-4f5c-9f3b-d507155a38b5.v1.jpg?odnHeight=256&odnWidth=385&odnBg=&odnDynImageQuality=70 1x, https://i5.walmartimages.com/dfw/4ff9c6c9-21b2/k2-_f1e09ede-f82b-4f5c-9f3b-d507155a38b5.v1.jpg?odnHeight=512&odnWidth=770&odnBg=&odnDynImageQuality=70 2x" width="auto"></img>
+</div>
+<section class="flex flex-wrap w-60 justify-start items-start pl3 pl4-xl z-0 mw-calc">
+<p class="b f4 f5-l f4-hdkp f3-xl f3-xxl f2-rdxl f1-rdxxl lh-title ma0 w-100" id="heading-GridPOVBanners-mediumBanner-contentZone5-xbuijFc1" style="color:#041E42">
+                   Trending dorm inspo
+                  </p>
+<a aria-labelledby="link-Shopnow-GridPOVBanners-mediumBanner-contentZone5-xbuijFc1 heading-GridPOVBanners-mediumBanner-contentZone5-xbuijFc1" class="z-2 nowrap link mt3-xl mt2 mr3-xl mr2 underline no-underline-hover h-auto pa0 f6 f6-rdxl" href="/shop/back-to-college/trending-on-tiktok?athAsset=eyJhdGhjcGlkIjoiZWRjNDk3ODQtZGQ2Yy00OThjLWEyYTAtZDM3ZmZhM2M5MzgxIn0=&athena=true" id="link-Shopnow-GridPOVBanners-mediumBanner-contentZone5-xbuijFc1" link-identifier="Shop now" style="color:#041E42" title="Shop now">
+<span>
+                    Shop now
+                   </span>
+</a>
+<a aria-hidden='true' aria-labelledby="linkcard-Shopnow-GridPOVBanners-mediumBanner-contentZone5-xbuijFc1 heading-GridPOVBanners-mediumBanner-contentZone5-xbuijFc1" class="absolute fill-focus z-1" href="/shop/back-to-college/trending-on-tiktok?athAsset=eyJhdGhjcGlkIjoiZWRjNDk3ODQtZGQ2Yy00OThjLWEyYTAtZDM3ZmZhM2M5MzgxIn0=&athena=true" id="linkcard-Shopnow-GridPOVBanners-mediumBanner-contentZone5-xbuijFc1" link-identifier="Shop now" tabindex='-1' title="Shop now">
+<span class="w_iUH7">
+                    Shop now
+                   </span>
+</a>
+</section>
+</div>
+</div>
+</section>
+<section>
+<div class="card-wrapper w-100 aspect-ratio br3 mt4-xl mt3 aspect-ratio--gpov-t">
+<div class="aspect-ratio--object br3 flex pv3 pv4-xl overflow-hidden z-0 justify-start items-start">
+<div class="w-100 absolute absolute--fill br3 overflow-hidden" style="background-color:#FFFFFF">
+<img alt="" class="w-100 absolute absolute--fill" height="auto" id="GridPOVBanners-tallBanner-contentZone7-aW1mGhOh" loading="lazy" src="https://i5.walmartimages.com/dfw/4ff9c6c9-7244/k2-_6da31dd3-a3cf-4f25-b30a-7a196dac6ce3.v1.jpg?odnHeight=578&odnWidth=385&odnBg=&odnDynImageQuality=70" srcset="https://i5.walmartimages.com/dfw/4ff9c6c9-7244/k2-_6da31dd3-a3cf-4f25-b30a-7a196dac6ce3.v1.jpg?odnHeight=578&odnWidth=385&odnBg=&odnDynImageQuality=70 1x, https://i5.walmartimages.com/dfw/4ff9c6c9-7244/k2-_6da31dd3-a3cf-4f25-b30a-7a196dac6ce3.v1.jpg?odnHeight=1156&odnWidth=770&odnBg=&odnDynImageQuality=70 2x" width="auto"></img>
+</div>
+<section class="flex flex-wrap w-90 justify-start items-start pl3 pl4-xl z-0 mw-calc">
+<p class="b f3 f4-l f3-hdkp f2-xl f1-xxl f1-rdxl f9-rdxxl lh-title ma0 w-100" id="heading-GridPOVBanners-tallBanner-contentZone7-aW1mGhOh" style="color:#041E42">
+                   Coolest room in the hall
+                  </p>
+<a aria-labelledby="link-Shopfurniture-GridPOVBanners-tallBanner-contentZone7-aW1mGhOh heading-GridPOVBanners-tallBanner-contentZone7-aW1mGhOh" class="z-2 nowrap link mt3-xl mt2 mr3-xl mr2 underline no-underline-hover h-auto pa0 f6 f6-rdxl" href="/browse/home/dorm-decor/4044_1225301_1225229_7471338?athAsset=eyJhdGhjcGlkIjoiZmQ0ZThhZTMtMGU2YS00MWMzLWEwYWYtYWRkYjUyZmYzOTFmIn0=&athena=true" id="link-Shopfurniture-GridPOVBanners-tallBanner-contentZone7-aW1mGhOh" link-identifier="Shop furniture" style="color:#041E42" title="Shop furniture">
+<span>
+                    Shop furniture
+                   </span>
+</a>
+<a aria-hidden='true' aria-labelledby="linkcard-Shopfurniture-GridPOVBanners-tallBanner-contentZone7-aW1mGhOh heading-GridPOVBanners-tallBanner-contentZone7-aW1mGhOh" class="absolute fill-focus z-1" href="/browse/home/dorm-decor/4044_1225301_1225229_7471338?athAsset=eyJhdGhjcGlkIjoiZmQ0ZThhZTMtMGU2YS00MWMzLWEwYWYtYWRkYjUyZmYzOTFmIn0=&athena=true" id="linkcard-Shopfurniture-GridPOVBanners-tallBanner-contentZone7-aW1mGhOh" link-identifier="Shop furniture" tabindex='-1' title="Shop furniture">
+<span class="w_iUH7">
+                    Shop furniture
+                   </span>
+</a>
+</section>
+</div>
+</div>
+</section>
+<section>
+<div class="card-wrapper w-100 aspect-ratio br3 mt4-xl mt3 aspect-ratio--16x9">
+<div class="aspect-ratio--object br3 flex pv3 pv4-xl overflow-hidden z-0 justify-start items-start">
+<div class="w-100 absolute absolute--fill br3 overflow-hidden" style="background-color:#FFFFFF">
+<img alt="" class="w-100 absolute absolute--fill" height="auto" id="GridPOVBanners-smallBanner-contentZone9-cRfhtFCx" loading="lazy" src="https://i5.walmartimages.com/dfw/4ff9c6c9-1c5e/k2-_73bdd39b-9573-4519-b323-92f685df67d6.v1.jpg?odnHeight=216&odnWidth=385&odnBg=&odnDynImageQuality=70" srcset="https://i5.walmartimages.com/dfw/4ff9c6c9-1c5e/k2-_73bdd39b-9573-4519-b323-92f685df67d6.v1.jpg?odnHeight=216&odnWidth=385&odnBg=&odnDynImageQuality=70 1x, https://i5.walmartimages.com/dfw/4ff9c6c9-1c5e/k2-_73bdd39b-9573-4519-b323-92f685df67d6.v1.jpg?odnHeight=432&odnWidth=770&odnBg=&odnDynImageQuality=70 2x" width="auto"></img>
+</div>
+<section class="flex flex-wrap w-90 justify-start items-start pl3 pl4-xl z-0 mw-calc">
+<p class="b f3 f4-l f3-hdkp f2-xl f2-xxl f1-rdxl f1-rdxxl lh-title lh-copy-xl lh-title-rdxl ma0 w-100" id="heading-GridPOVBanners-smallBanner-contentZone9-cRfhtFCx" style="color:#041E42">
+                   Save on MacBook & more
+                  </p>
+<a aria-labelledby="link-Shopnow-GridPOVBanners-smallBanner-contentZone9-cRfhtFCx heading-GridPOVBanners-smallBanner-contentZone9-cRfhtFCx" class="z-2 nowrap link mt3-xl mt2 mr3-xl mr2 underline no-underline-hover h-auto pa0 f6 f6-rdxl" href="/shop/apple-back-to-school?athAsset=eyJhdGhjcGlkIjoiMTgzY2FlODgtM2Q5MS00ZjE0LWExMjMtNDhkOWJkZDYxNzFhIn0=&athena=true" id="link-Shopnow-GridPOVBanners-smallBanner-contentZone9-cRfhtFCx" link-identifier="Shop now" style="color:#041E42" title="Shop now">
+<span>
+                    Shop now
+                   </span>
+</a>
+<a aria-hidden='true' aria-labelledby="linkcard-Shopnow-GridPOVBanners-smallBanner-contentZone9-cRfhtFCx heading-GridPOVBanners-smallBanner-contentZone9-cRfhtFCx" class="absolute fill-focus z-1" href="/shop/apple-back-to-school?athAsset=eyJhdGhjcGlkIjoiMTgzY2FlODgtM2Q5MS00ZjE0LWExMjMtNDhkOWJkZDYxNzFhIn0=&athena=true" id="linkcard-Shopnow-GridPOVBanners-smallBanner-contentZone9-cRfhtFCx" link-identifier="Shop now" tabindex='-1' title="Shop now">
+<span class="w_iUH7">
+                    Shop now
+                   </span>
+</a>
+</section>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+<div class="w_aoqv w_wRee w_EP2w">
+<div class="flex flex-column h-100" data-testid="flex-container">
+<div class="h-100 relative">
+<div class="flex flex-column h-100" data-testid="flex-container">
+<div class="h-100 relative">
+<section>
+<div class="card-wrapper w-100 aspect-ratio br3 mt4-xl mt3 aspect-ratio--16x9">
+<div class="aspect-ratio--object br3 flex pv3 pv4-xl overflow-hidden z-0 justify-start items-start">
+<div class="w-100 absolute absolute--fill br3 overflow-hidden" style="background-color:#FFFFFF">
+<img alt="" class="w-100 absolute absolute--fill" elementtiming="home-hero-image" height="auto" id="GridHeroPOVBanner-contentZone11-N2QdOLTb" loading="lazy" src="https://i5.walmartimages.com/dfw/4ff9c6c9-2d05/k2-_55e4a7cc-ea44-40ad-ac0b-7cd56785815a.v1.jpg?odnHeight=447&odnWidth=794&odnBg=&odnDynImageQuality=70" width="auto"></img>
+</div>
+<section class="flex flex-wrap w-80 justify-start items-start pl3 pl4-xl z-0 mw-calc">
+<p class="fw4 f4 f6-l f6-hdkp f5-xl f4-xxl f3-rdxl f2-rdxxl lh-title lh-copy-rdxl z-0 w-100 ma0" id="" style="color:#041E42">
+                     School gear, check!
+                    </p>
+<p class="fw4 f12 f10-l f11-hdkp f18-xl f10-xxl f16-rdxl f12-rdxxl lh-title ma0 w-100" id="heading-GridHeroPOVBanner-contentZone11-N2QdOLTb" style="color:#041E42">
+                     Ace the year
+                    </p>
+<a aria-labelledby="link-Shopall-GridHeroPOVBanner-contentZone11-N2QdOLTb heading-GridHeroPOVBanner-contentZone11-N2QdOLTb" class="z-2 nowrap link mt4-xl mt3 mr4-xl mr3 no-underline br-pill br-pill-cta dark-gray bg-white flex items-center b f6 h3 ph3" href="/browse/shop-all-back-to-school/1085632_1071204_5186082?athAsset=eyJhdGhjcGlkIjoiYzNlMDJjZWEtYzRiYy00YTE0LWJiYjEtNGM1MThlMGQ1ZTkwIn0=&athena=true" id="link-Shopall-GridHeroPOVBanner-contentZone11-N2QdOLTb" link-identifier="Shop all" title="Shop all">
+<span>
+                      Shop all
+                     </span>
+</a>
+<a aria-hidden='true' aria-labelledby="linkcard-Shopall-GridHeroPOVBanner-contentZone11-N2QdOLTb heading-GridHeroPOVBanner-contentZone11-N2QdOLTb" class="absolute fill-focus z-1" href="/browse/shop-all-back-to-school/1085632_1071204_5186082?athAsset=eyJhdGhjcGlkIjoiYzNlMDJjZWEtYzRiYy00YTE0LWJiYjEtNGM1MThlMGQ1ZTkwIn0=&athena=true" id="linkcard-Shopall-GridHeroPOVBanner-contentZone11-N2QdOLTb" link-identifier="Shop all" tabindex='-1' title="Shop all">
+<span class="w_iUH7">
+                      Shop all
+                     </span>
+</a>
+</section>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+<div class="h-100 relative">
+<div class="w_KPWk w_GxNv flex-row undefined" data-testid="flex-container">
+<div class="w_aoqv w_wRee w_EP2w">
+<div class="flex flex-column h-100" data-testid="flex-container">
+<div class="h-100 relative">
+<div class="flex flex-column h-100" data-testid="flex-container">
+<div class="h-100 relative">
+<section>
+<div class="card-wrapper w-100 aspect-ratio br3 mt4-xl mt3 aspect-ratio--gpov-l">
+<div class="aspect-ratio--object br3 flex pv3 pv4-xl overflow-hidden z-0 justify-start items-start">
+<div class="w-100 absolute absolute--fill br3 overflow-hidden" style="background-color:#FFFFFF">
+<img alt="" class="w-100 absolute absolute--fill" height="auto" id="GridPOVBanners-largeBanner-contentZone14-46Hdr7JI" loading="lazy" src="https://i5.walmartimages.com/dfw/4ff9c6c9-bd03/k2-_5f00c5c1-4fb1-4890-b719-b92355070506.v1.jpg?odnHeight=388&odnWidth=385&odnBg=&odnDynImageQuality=70" srcset="https://i5.walmartimages.com/dfw/4ff9c6c9-bd03/k2-_5f00c5c1-4fb1-4890-b719-b92355070506.v1.jpg?odnHeight=388&odnWidth=385&odnBg=&odnDynImageQuality=70 1x, https://i5.walmartimages.com/dfw/4ff9c6c9-bd03/k2-_5f00c5c1-4fb1-4890-b719-b92355070506.v1.jpg?odnHeight=776&odnWidth=770&odnBg=&odnDynImageQuality=70 2x" width="auto"></img>
+</div>
+<section class="flex flex-wrap w-90 justify-start items-start pl3 pl4-xl z-0 mw-calc">
+<p class="b f4 f5-l f4-hdkp f4-xl f3-xxl f2-rdxl f1-rdxxl lh-title ma0 w-100" id="heading-GridPOVBanners-largeBanner-contentZone14-46Hdr7JI" style="color:#041E42">
+                         Tune into fall: new TVs
+                        </p>
+<a aria-labelledby="link-Shopnow-GridPOVBanners-largeBanner-contentZone14-46Hdr7JI heading-GridPOVBanners-largeBanner-contentZone14-46Hdr7JI" class="z-2 nowrap link mt3-xl mt2 mr3-xl mr2 underline no-underline-hover h-auto pa0 f6 f6-rdxl" href="/browse/electronics/shop-tvs-by-size/3944_1060825_2489948?athAsset=eyJhdGhjcGlkIjoiMTNjNzk2ZGEtOGRkMS00MWRjLTk0OTgtZjg5OWQ3NjNkMzViIn0=&athena=true" id="link-Shopnow-GridPOVBanners-largeBanner-contentZone14-46Hdr7JI" link-identifier="Shop now" style="color:#041E42" title="Shop now">
+<span>
+                          Shop now
+                         </span>
+</a>
+<a aria-hidden='true' aria-labelledby="linkcard-Shopnow-GridPOVBanners-largeBanner-contentZone14-46Hdr7JI heading-GridPOVBanners-largeBanner-contentZone14-46Hdr7JI" class="absolute fill-focus z-1" href="/browse/electronics/shop-tvs-by-size/3944_1060825_2489948?athAsset=eyJhdGhjcGlkIjoiMTNjNzk2ZGEtOGRkMS00MWRjLTk0OTgtZjg5OWQ3NjNkMzViIn0=&athena=true" id="linkcard-Shopnow-GridPOVBanners-largeBanner-contentZone14-46Hdr7JI" link-identifier="Shop now" tabindex='-1' title="Shop now">
+<span class="w_iUH7">
+                          Shop now
+                         </span>
+</a>
+</section>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="w_aoqv w_wRee w_EP2w">
+<div class="flex flex-column h-100" data-testid="flex-container">
+<div class="h-100 relative">
+<div class="flex flex-column h-100" data-testid="flex-container">
+<div class="h-100 relative">
+<section>
+<div class="card-wrapper w-100 aspect-ratio br3 mt4-xl mt3 aspect-ratio--gpov-l">
+<div class="aspect-ratio--object br3 flex pv3 pv4-xl overflow-hidden z-0 justify-start items-start">
+<div class="w-100 absolute absolute--fill br3 overflow-hidden" style="background-color:#FFFFFF">
+<img alt="" class="w-100 absolute absolute--fill" height="auto" id="GridPOVBanners-largeBanner-contentZone15-Bqxa0vAb" loading="lazy" src="https://i5.walmartimages.com/dfw/4ff9c6c9-b177/k2-_0843ca46-6721-4c3a-bbbc-f15cb0e7e467.v1.jpg?odnHeight=388&odnWidth=385&odnBg=&odnDynImageQuality=70" srcset="https://i5.walmartimages.com/dfw/4ff9c6c9-b177/k2-_0843ca46-6721-4c3a-bbbc-f15cb0e7e467.v1.jpg?odnHeight=388&odnWidth=385&odnBg=&odnDynImageQuality=70 1x, https://i5.walmartimages.com/dfw/4ff9c6c9-b177/k2-_0843ca46-6721-4c3a-bbbc-f15cb0e7e467.v1.jpg?odnHeight=776&odnWidth=770&odnBg=&odnDynImageQuality=70 2x" width="auto"></img>
+</div>
+<section class="flex flex-wrap w-60 justify-start items-start pl3 pl4-xl z-0 mw-calc">
+<p class="b f4 f5-l f4-hdkp f4-xl f3-xxl f2-rdxl f1-rdxxl lh-title ma0 w-100" id="heading-GridPOVBanners-largeBanner-contentZone15-Bqxa0vAb" style="color:#041E42">
+                         Up to 30% off
+                        </p>
+<a aria-labelledby="link-Shopnow-GridPOVBanners-largeBanner-contentZone15-Bqxa0vAb heading-GridPOVBanners-largeBanner-contentZone15-Bqxa0vAb" class="z-2 nowrap link mt3-xl mt2 mr3-xl mr2 underline no-underline-hover h-auto pa0 f6 f6-rdxl" href="/shop/deals/flash-deals?athAsset=eyJhdGhjcGlkIjoiNThkNzc5NzUtM2Y0Yy00NGFhLTgzNzgtNDVmMjA2YjJiMTA4In0=&athena=true" id="link-Shopnow-GridPOVBanners-largeBanner-contentZone15-Bqxa0vAb" link-identifier="Shop now" style="color:#041E42" title="Shop now">
+<span>
+                          Shop now
+                         </span>
+</a>
+<a aria-hidden='true' aria-labelledby="linkcard-Shopnow-GridPOVBanners-largeBanner-contentZone15-Bqxa0vAb heading-GridPOVBanners-largeBanner-contentZone15-Bqxa0vAb" class="absolute fill-focus z-1" href="/shop/deals/flash-deals?athAsset=eyJhdGhjcGlkIjoiNThkNzc5NzUtM2Y0Yy00NGFhLTgzNzgtNDVmMjA2YjJiMTA4In0=&athena=true" id="linkcard-Shopnow-GridPOVBanners-largeBanner-contentZone15-Bqxa0vAb" link-identifier="Shop now" tabindex='-1' title="Shop now">
+<span class="w_iUH7">
+                          Shop now
+                         </span>
+</a>
+</section>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="h-100 relative">
+<div class="flex wplus-grid-container flex-column h-100" data-testid="flex-container">
+<div class="h-100 relative">
+<section>
+<div class="card-wrapper wplus-wrapper w-100 aspect-ratio overflow-hidden br3 mt4-l bottom-0-l mt3 aspect-ratio--wplus" style="background-color:#FFFFFF">
+<img alt="Walmart Plus" class="w-100 absolute absolute--fill z-0" height="auto" id="wPlusBanner" loading="lazy" src="https://i5.walmartimages.com/dfw/4ff9c6c9-21d7/k2-_010ce435-9cfa-4871-98d9-b58993dee070.v1.jpg?odnHeight=216&odnWidth=794&odnBg=&odnDynImageQuality=70" srcset="https://i5.walmartimages.com/dfw/4ff9c6c9-21d7/k2-_010ce435-9cfa-4871-98d9-b58993dee070.v1.jpg?odnHeight=216&odnWidth=794&odnBg=&odnDynImageQuality=70 1x, https://i5.walmartimages.com/dfw/4ff9c6c9-21d7/k2-_010ce435-9cfa-4871-98d9-b58993dee070.v1.jpg?odnHeight=432&odnWidth=1588&odnBg=&odnDynImageQuality=70 2x" width="auto"></img>
+<div class="aspect-ratio--object br3 overflow-hidden flex pa3 pa4-xl justify-start items-start">
+<section class="flex flex-wrap w-75 justify-start items-start">
+<a aria-hidden='true' class="w-100 absolute absolute--fill z-1" href="https://www.walmart.com/plus?povid=Walmart+_members_save_big_with_free_delivery_from_stores&athAsset=eyJhdGhjcGlkIjoiNTY2MjBiM2QtNWZiZC0zNTI1LTkxMjgtODY3N2FlM2Y1NGUxIiwiYXRoc3RpZCI6IkNTMTAwIiwiYXRodHZpZCI6IjEiLCJhdGhiYW1oZCI6MS4wLCJhdGhiYW1yZCI6MS4wfQ==&athena=true" link-identifier="Join Walmart+" tabindex='-1' title="Join Walmart+">
+<span class="w_iUH7">
+                      Join Walmart+
+                     </span>
+</a>
+<p class="fw4 f3 f4-l f4-hdkp f2-xl f2-xxl f1-rdxl f9-rdxxl lh-title ma0 w-100" style="color:#041E42">
+                     Walmart+ members save big with free delivery from stores
+                    </p>
+<p class="fw4 f6 f6-l f6-hdkp f6-xl f12-xxl f6-rdxl f6-rdxxl lh-copy mt1 mh0 mb0 w-100" style="color:#041E42">
+                     Terms apply.
+                    </p>
+<a aria-label="Join Walmart+Walmart+ members save big with free delivery from stores" class="f6 z-2 mr3 mt2 mt3-rdxl" href="https://www.walmart.com/plus?povid=Walmart+_members_save_big_with_free_delivery_from_stores&athAsset=eyJhdGhjcGlkIjoiNTY2MjBiM2QtNWZiZC0zNTI1LTkxMjgtODY3N2FlM2Y1NGUxIiwiYXRoc3RpZCI6IkNTMTAwIiwiYXRodHZpZCI6IjEiLCJhdGhiYW1oZCI6MS4wLCJhdGhiYW1yZCI6MS4wfQ==&athena=true" link-identifier="Join Walmart+" style="color:#041E42">
+<span>
+                      Join Walmart+
+                     </span>
+</a>
+</section>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="w_aoqv w_wRee w_b_WN">
+<div class="flex flex-column h-100" data-testid="flex-container">
+<div class="h-100 relative">
+<section>
+<div class="card-wrapper w-100 aspect-ratio br3 mt4-xl mt3 aspect-ratio--16x9">
+<div class="aspect-ratio--object br3 flex pv3 pv4-xl overflow-hidden z-0 justify-start items-start">
+<div class="w-100 absolute absolute--fill br3 overflow-hidden" style="background-color:#FFFFFF">
+<img alt="" class="w-100 absolute absolute--fill" height="auto" id="GridPOVBanners-smallBanner-contentZone19-SVGMVYuc" loading="lazy" src="https://i5.walmartimages.com/dfw/4ff9c6c9-6270/k2-_b05f0304-c8b9-4def-88e6-cf69c86395c2.v1.jpg?odnHeight=216&odnWidth=385&odnBg=&odnDynImageQuality=70" srcset="https://i5.walmartimages.com/dfw/4ff9c6c9-6270/k2-_b05f0304-c8b9-4def-88e6-cf69c86395c2.v1.jpg?odnHeight=216&odnWidth=385&odnBg=&odnDynImageQuality=70 1x, https://i5.walmartimages.com/dfw/4ff9c6c9-6270/k2-_b05f0304-c8b9-4def-88e6-cf69c86395c2.v1.jpg?odnHeight=432&odnWidth=770&odnBg=&odnDynImageQuality=70 2x" width="auto"></img>
+</div>
+<section class="flex flex-wrap w-90 justify-start items-start pl3 pl4-xl z-0 mw-calc">
+<p class="b f3 f4-l f3-hdkp f2-xl f2-xxl f1-rdxl f1-rdxxl lh-title lh-copy-xl lh-title-rdxl ma0 w-100" id="heading-GridPOVBanners-smallBanner-contentZone19-SVGMVYuc" style="color:#041E42">
+                   Seasonal beauty faves
+                  </p>
+<a aria-labelledby="link-Shopnow-GridPOVBanners-smallBanner-contentZone19-SVGMVYuc heading-GridPOVBanners-smallBanner-contentZone19-SVGMVYuc" class="z-2 nowrap link mt3-xl mt2 mr3-xl mr2 underline no-underline-hover h-auto pa0 f6 f6-rdxl" href="/browse/beauty/fall-beauty/1085666_5053208_4208908?athAsset=eyJhdGhjcGlkIjoiNjcyZDg4NzUtMmVjOC00MWNjLWI1ZWYtZWZlYmQ1MjlmZTY2In0=&athena=true" id="link-Shopnow-GridPOVBanners-smallBanner-contentZone19-SVGMVYuc" link-identifier="Shop now" style="color:#041E42" title="Shop now">
+<span>
+                    Shop now
+                   </span>
+</a>
+<a aria-hidden='true' aria-labelledby="linkcard-Shopnow-GridPOVBanners-smallBanner-contentZone19-SVGMVYuc heading-GridPOVBanners-smallBanner-contentZone19-SVGMVYuc" class="absolute fill-focus z-1" href="/browse/beauty/fall-beauty/1085666_5053208_4208908?athAsset=eyJhdGhjcGlkIjoiNjcyZDg4NzUtMmVjOC00MWNjLWI1ZWYtZWZlYmQ1MjlmZTY2In0=&athena=true" id="linkcard-Shopnow-GridPOVBanners-smallBanner-contentZone19-SVGMVYuc" link-identifier="Shop now" tabindex='-1' title="Shop now">
+<span class="w_iUH7">
+                    Shop now
+                   </span>
+</a>
+</section>
+</div>
+</div>
+</section>
+<section>
+<div class="card-wrapper w-100 aspect-ratio br3 mt4-xl mt3 aspect-ratio--gpov-m">
+<div class="aspect-ratio--object br3 flex pv3 pv4-xl overflow-hidden z-0 justify-start items-start">
+<div class="w-100 absolute absolute--fill br3 overflow-hidden" style="background-color:#FFFFFF">
+<img alt="" class="w-100 absolute absolute--fill" height="auto" id="GridPOVBanners-mediumBanner-contentZone21-yymARtfb" loading="lazy" src="https://i5.walmartimages.com/dfw/4ff9c6c9-d88f/k2-_a1674598-9203-4840-a450-b74d71f05288.v1.jpg?odnHeight=256&odnWidth=385&odnBg=&odnDynImageQuality=70" srcset="https://i5.walmartimages.com/dfw/4ff9c6c9-d88f/k2-_a1674598-9203-4840-a450-b74d71f05288.v1.jpg?odnHeight=256&odnWidth=385&odnBg=&odnDynImageQuality=70 1x, https://i5.walmartimages.com/dfw/4ff9c6c9-d88f/k2-_a1674598-9203-4840-a450-b74d71f05288.v1.jpg?odnHeight=512&odnWidth=770&odnBg=&odnDynImageQuality=70 2x" width="auto"></img>
+</div>
+<section class="flex flex-wrap w-60 justify-start items-start pl3 pl4-xl z-0 mw-calc">
+
+        ```
+        

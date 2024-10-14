@@ -1,0 +1,47 @@
+[
+    {
+        "prompt_uuid": "92cc34f0-9947-4a8b-8db4-1e3771afac28",
+        "dom_name": "walmart",
+        "prompt_token_size": 10458,
+        "duration": 170.35308194160461,
+        "mode": "single",
+        "audit_key": "legacy-javascript",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 0,
+            "upload_speed": 0,
+            "ping": 0,
+            "error": "module 'speedtest' has no attribute 'Speedtest'"
+        }
+    },
+    {
+        "prompt_uuid": "15e229e3-9871-42b0-ad67-311be8365806",
+        "dom_name": "walmart",
+        "prompt_token_size": 12072,
+        "duration": 2.086751937866211,
+        "mode": "single",
+        "audit_key": "legacy-javascript",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 0,
+            "upload_speed": 0,
+            "ping": 0,
+            "error": "module 'speedtest' has no attribute 'Speedtest'"
+        }
+    },
+    {
+        "prompt_uuid": "b78fa3f3-cb3e-4183-9a16-75a0f7572fd7",
+        "dom_name": "walmart",
+        "prompt_token_size": 4714,
+        "duration": 1.3930208683013916,
+        "mode": "single",
+        "audit_key": "legacy-javascript",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 0,
+            "upload_speed": 0,
+            "ping": 0,
+            "error": "module 'speedtest' has no attribute 'Speedtest'"
+        }
+    }
+]

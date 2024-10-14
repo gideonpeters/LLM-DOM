@@ -1,0 +1,194 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. inspector-issues => Issues were logged in the `Issues` panel in Chrome Devtools: Issues logged to the `Issues` panel in Chrome Devtools indicate unresolved problems. They can come from network request failures, insufficient security controls, and other browser concerns. Open up the Issues panel in Chrome DevTools for more details on each issue.
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        
+<meta charset="utf-8"></meta>
+<script data-chunk-uuid="1cee982a-ec6f-465b-89e0-2290c7c6d646" blocking="render" id="ttp-marker" nonce="oZuHSM-FhZEnom4k">// chunk_script_1cee982a-ec6f-465b-89e0-2290c7c6d646
+</script>
+<meta content='105223049547814' property="fb:app_id"></meta>
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1, interactive-widget=resizes-content" name="viewport"></meta>
+<link href="https://tap.walmart.com " rel="dns-prefetch"></link>
+<link as="font" crossorigin="anonymous" fetchpriority="high" href="https://i5.walmartimages.com/dfw/63fd9f59-a78c/fcfae9b6-2f69-4f89-beed-f0eeb4237946/v1/BogleWeb_subset-Bold.woff2" rel="preload" type="font/woff2"></link>
+<link as="font" crossorigin="anonymous" fetchpriority="high" href="https://i5.walmartimages.com/dfw/63fd9f59-a78c/fcfae9b6-2f69-4f89-beed-f0eeb4237946/v1/BogleWeb_subset-Regular.woff2" rel="preload" type="font/woff2"></link>
+<link href="https://beacon.walmart.com" rel="preconnect"></link>
+<link href="https://b.wal.co" rel="preconnect"></link>
+<script data-chunk-uuid="2b9d54ed-9e10-4ad0-b4b5-c50f1854c546" nonce="oZuHSM-FhZEnom4k">// chunk_script_2b9d54ed-9e10-4ad0-b4b5-c50f1854c546
+</script>
+<script data-chunk-uuid="431aa40f-490e-4132-a492-ee5fa73ac420" async="" data-testid="pulse-script" nonce="oZuHSM-FhZEnom4k" src="//i5.walmartimages.com/beacon/beacon.js?bd=beacon.walmart.com&bh=beacon.lightest.walmart.com">// chunk_script_431aa40f-490e-4132-a492-ee5fa73ac420
+</script>
+<title>
+   Walmart | Save Money. Live better.
+  </title>
+<meta content="Shop Walmart today for Every Day Low Prices. Join Walmart+ for unlimited free delivery from your store & free shipping with no order minimum. Start your free 30-day trial now!" name="description"></meta>
+<meta content="Walmart,Walmart.com,Online Shopping,Gifts,Toys,Home,Jewelry,TVs,HD TVs,Smart TVs,Electronics,Baby Products,Video Games,Computers,Laptops,Cell Phones,Games,Apparel,Clothing,Fashion,Accessories,Shoes,Watches,Sports & Outdoors, Sporting Goods,Office Products,Health,Vitamins,Personal Care,Beauty Products,Garden,Bed,Bath,Furniture,Tools,Hardware, Vacuums,Outdoor Living,Automotive Parts,Pet Food,Pet Supplies,iphone" name="keywords"></meta>
+<link href="https://www.walmart.com/" rel="canonical"></link>
+<style data-chunk-uuid="50fd7a15-2a97-4730-bf11-a10979767271">/* chunk_style_50fd7a15-2a97-4730-bf11-a10979767271 */
+</style>
+<meta content="INDEX,FOLLOW" name="robots"></meta>
+<meta content="https://www.walmart.com/" property="og:url"></meta>
+<meta content="Shop Walmart today for Every Day Low Prices. Join Walmart+ for unlimited free delivery from your store & free shipping with no order minimum. Start your free 30-day trial now!" property="og:description"></meta>
+<meta content="Walmart | Save Money. Live better." property="og:title"></meta>
+<meta content="Website" property="og:type"></meta>
+<meta content="https://i5.walmartimages.com/dfw/63fd9f59-49ff/k2-_52fee322-2e60-452a-bccc-1e847f452a13.v1.png" name="image" property="og:image"></meta>
+<meta content="Walmart.com" property="og:site_name"></meta>
+<script data-chunk-uuid="fb1aa420-fe3e-42c7-9574-215578e70e05" nonce="oZuHSM-FhZEnom4k" type="application/ld+json">// chunk_script_fb1aa420-fe3e-42c7-9574-215578e70e05
+</script>
+<script data-chunk-uuid="81b9245f-0549-4706-879e-e0ba7b7ba1c3" nonce="oZuHSM-FhZEnom4k" type="application/ld+json">// chunk_script_81b9245f-0549-4706-879e-e0ba7b7ba1c3
+</script>
+<link as="image" fetchpriority="high" href="https://i5.walmartimages.com/dfw/4ff9c6c9-2d05/k2-_55e4a7cc-ea44-40ad-ac0b-7cd56785815a.v1.jpg?odnHeight=447&odnWidth=794&odnBg=&odnDynImageQuality=70" rel="preload"></link>
+<meta content='26' name="next-head-count"></meta>
+<script data-chunk-uuid="0c4eb290-9462-41d0-87f9-1af5e96ec939" nonce="oZuHSM-FhZEnom4k">// chunk_script_0c4eb290-9462-41d0-87f9-1af5e96ec939
+</script>
+<link href="https://i5.walmartimages.com" rel="preconnect"></link>
+<link href="https://i5.walmartimages.ca" rel="preconnect"></link>
+<script data-chunk-uuid="e4efa122-d31c-45d1-8e97-ff3722321570" nonce="oZuHSM-FhZEnom4k">// chunk_script_e4efa122-d31c-45d1-8e97-ff3722321570
+</script>
+<script data-chunk-uuid="9e98a1e9-b11e-4223-a634-232ee7e2f7d0" async="" nonce="oZuHSM-FhZEnom4k" src="/px/PXu6b0qd2S/init.js">// chunk_script_9e98a1e9-b11e-4223-a634-232ee7e2f7d0
+</script>
+<link as="style" href="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/css/75eaed84c11d02c2.css" nonce="oZuHSM-FhZEnom4k" rel="preload"></link>
+<link data-n-g="" href="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/css/75eaed84c11d02c2.css" nonce="oZuHSM-FhZEnom4k" rel="stylesheet"></link>
+<noscript data-n-css="oZuHSM-FhZEnom4k">
+</noscript>
+<script data-chunk-uuid="a0c45056-fef1-4044-8d52-4a19320b9de3" defer="" nomodule="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js">// chunk_script_a0c45056-fef1-4044-8d52-4a19320b9de3
+</script>
+<script data-chunk-uuid="d8987278-c988-4b42-957a-f0ac64de315e" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/ui_event-timer_queue-timer-54688fc346458a7f.js">// chunk_script_d8987278-c988-4b42-957a-f0ac64de315e
+</script>
+<script data-chunk-uuid="7268a72b-d369-4767-bb6f-65439b7f3f86" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/ui_item-queue_banner_queue-banner-9c482a92a102b71c.js">// chunk_script_7268a72b-d369-4767-bb6f-65439b7f3f86
+</script>
+<script data-chunk-uuid="2260254b-8d16-47d9-b648-0d6ff474d978" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/ui_image_utils.5d34933f2a1a4b1f.js">// chunk_script_2260254b-8d16-47d9-b648-0d6ff474d978
+</script>
+<script data-chunk-uuid="6d47f8ef-5787-4479-9859-42929fd2951c" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/node_modules_.pnpm_@walmart+use-safeframe@0.4.0_react@17.0_node_modules_@walmart_use-safeframe_lib_index-29b5da6dfb811bc2.js">// chunk_script_6d47f8ef-5787-4479-9859-42929fd2951c
+</script>
+<script data-chunk-uuid="6c341696-886e-4b2a-9cb4-2d9e24fb90b2" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/node_modules_.pnpm_react-device-detect@2.2.3_react-dom@17.0.2_react@17.0_node_modules_react-device-detect_dist_lib-2e1c001aa432c31d.js">// chunk_script_6c341696-886e-4b2a-9cb4-2d9e24fb90b2
+</script>
+<script data-chunk-uuid="e2dbbc27-09b0-4b02-82f4-bed60e9afb9b" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/ads_core_hooks_use-is-tracking-enabled-27f30893e7bbb0fa.js">// chunk_script_e2dbbc27-09b0-4b02-82f4-bed60e9afb9b
+</script>
+<script data-chunk-uuid="23a83ef6-75c8-418c-9247-efbca1f71197" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/ads_core_utils_get-viewport-db1d3083360ff380.js">// chunk_script_23a83ef6-75c8-418c-9247-efbca1f71197
+</script>
+<script data-chunk-uuid="7ee4faec-522c-4ff0-a2eb-5612a796a0c7" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/intl-ads_video_vast-video-player-39e9b980c0e8800a.js">// chunk_script_7ee4faec-522c-4ff0-a2eb-5612a796a0c7
+</script>
+<script data-chunk-uuid="a380f6af-bc44-41e1-82c6-861f71bfd408" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/intl-ads_ui_btf-23eb2766826c51b1.js">// chunk_script_a380f6af-bc44-41e1-82c6-861f71bfd408
+</script>
+<script data-chunk-uuid="f30b153a-a7fc-49a0-ab3d-e9693426896b" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/ads_third-party-tracking_hooks_use-3p-tracking.afcd82922bfc885c.js">// chunk_script_f30b153a-a7fc-49a0-ab3d-e9693426896b
+</script>
+<script data-chunk-uuid="30fc0fe0-c4ee-4e4e-a54f-97b53673ca34" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/ads_data-access_hooks_use-get-ad-query.fbe4cbd4b29cbc43.js">// chunk_script_30fc0fe0-c4ee-4e4e-a54f-97b53673ca34
+</script>
+<script data-chunk-uuid="7a95f5b0-284d-4809-afb5-10edf73f6bc4" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/intl-ads_ad-routing_intl-ad-routing-d7bfa676426b58e8.js">// chunk_script_7a95f5b0-284d-4809-afb5-10edf73f6bc4
+</script>
+<script data-chunk-uuid="fcd478f0-ef98-47ac-b0f8-f46eef4cdfdf" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/intl-ads_ad-wrapper.d09eb26ac0ff4c71.js">// chunk_script_fcd478f0-ef98-47ac-b0f8-f46eef4cdfdf
+</script>
+<script data-chunk-uuid="dcf895fc-9c2f-4813-a1ef-fefeaba39213" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/tempo-shared-modules_adaptive-card_adaptive-card-wrapper.64ef5b94355e915c.js">// chunk_script_dcf895fc-9c2f-4813-a1ef-fefeaba39213
+</script>
+<script data-chunk-uuid="97d76cf8-de24-49e0-9504-487996fd08b3" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/intl-ads_ad-routing_hooks_useAdOptions.f874456d4a0d0424.js">// chunk_script_97d76cf8-de24-49e0-9504-487996fd08b3
+</script>
+<script data-chunk-uuid="f8e9b127-a7b0-499c-bd1f-f77cd06209d2" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/tempo-shared-modules_w-plus-banner.1eab5b4ef555a6fd.js">// chunk_script_f8e9b127-a7b0-499c-bd1f-f77cd06209d2
+</script>
+<script data-chunk-uuid="46201f29-ac3e-42be-a3fc-30ea5a006d7b" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/webpack-ce943fd392ba20ab.js">// chunk_script_46201f29-ac3e-42be-a3fc-30ea5a006d7b
+</script>
+<script data-chunk-uuid="24a18725-a115-41e4-8087-a8f8c90f68a4" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/framework-c32375f01f4331c0.js">// chunk_script_24a18725-a115-41e4-8087-a8f8c90f68a4
+</script>
+<script data-chunk-uuid="3c706990-b0e3-469b-a0b8-874a673a9720" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/main-ba02a9c4c401c7f5.js">// chunk_script_3c706990-b0e3-469b-a0b8-874a673a9720
+</script>
+<script data-chunk-uuid="3899f781-ad1e-4eb4-a8e5-d801a47a3df4" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/pages/_app-34422b23c57f61c8.js">// chunk_script_3899f781-ad1e-4eb4-a8e5-d801a47a3df4
+</script>
+<script data-chunk-uuid="3b79b99c-95f5-437a-b754-0270e0611911" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/node_modules_.pnpm_isomorphic-dompurify@0.13_node_modules_isomorphic-dompurify_browser-40a80efbab37a530.js">// chunk_script_3b79b99c-95f5-437a-b754-0270e0611911
+</script>
+<script data-chunk-uuid="d00f9baa-376b-49e7-aff7-268b346a03ef" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/ui_horizontal-scroller_horizontal-scroller-05a20e3c4991d78d.js">// chunk_script_d00f9baa-376b-49e7-aff7-268b346a03ef
+</script>
+<script data-chunk-uuid="b2805187-23bc-46d7-aac9-dd296ccb1982" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/ui_product-tile_constants-c3d1a4df2370b13d.js">// chunk_script_b2805187-23bc-46d7-aac9-dd296ccb1982
+</script>
+<script data-chunk-uuid="1ecae487-b7d5-486d-a478-28623de05e32" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/payments_context_hooks_use-purchase-contract-409d94556d7b9440.js">// chunk_script_1ecae487-b7d5-486d-a478-28623de05e32
+</script>
+<script data-chunk-uuid="c04b2731-2a90-4abb-9574-31ef6b7e7347" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/subscription_data-access_subscription-cloud-variables-bded44a08da914b2.js">// chunk_script_c04b2731-2a90-4abb-9574-31ef6b7e7347
+</script>
+<script data-chunk-uuid="b4f633ca-59b2-4ea9-94cd-a1c59521e268" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/ui_quantity-stepper_quantity-stepper-16eb5214fa4f7d28.js">// chunk_script_b4f633ca-59b2-4ea9-94cd-a1c59521e268
+</script>
+<script data-chunk-uuid="7878a015-ae35-4695-9e7e-4fe91f0ef5be" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/checkout_cloud-variables_cloud-variables-0e5f6c16cb482f3c.js">// chunk_script_7878a015-ae35-4695-9e7e-4fe91f0ef5be
+</script>
+<script data-chunk-uuid="53f6c658-0bb3-42e9-b479-fb9c45bdd020" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/item_data-access_utils_analytics-994abd94cdc27018.js">// chunk_script_53f6c658-0bb3-42e9-b479-fb9c45bdd020
+</script>
+<script data-chunk-uuid="910b94d8-07c4-4366-9946-32ccccea3b39" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/cart_data-access_hooks_use-get-cart-query-info-a6afd2985ef09bfa.js">// chunk_script_910b94d8-07c4-4366-9946-32ccccea3b39
+</script>
+<script data-chunk-uuid="575b0377-55c9-4a33-a8cf-e59b6cea19b8" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/cart_page-view-checkout-beacon_page-view-beacon-f8dce95d2481ad50.js">// chunk_script_575b0377-55c9-4a33-a8cf-e59b6cea19b8
+</script>
+<script data-chunk-uuid="ef354058-e227-4e9e-807e-db0a8232bd44" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/ui_intl-fees-dialog_intl-fees-dialog-18a0596ce85db7a3.js">// chunk_script_ef354058-e227-4e9e-807e-db0a8232bd44
+</script>
+<script data-chunk-uuid="7bdad79d-490b-46d3-9688-9d22c0a909cd" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/cart_common-components_locale_messages-d47c13aa2f27cef4.js">// chunk_script_7bdad79d-490b-46d3-9688-9d22c0a909cd
+</script>
+<script data-chunk-uuid="a9aba228-e32d-49de-899d-31ddaf920b71" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/cart_pos_fees-b845438c82ca820d.js">// chunk_script_a9aba228-e32d-49de-899d-31ddaf920b71
+</script>
+<script data-chunk-uuid="811da051-e987-43ec-ae72-e1fa33d02624" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/item_data-hooks_item-data-hooks-dbc4da36502d2e6c.js">// chunk_script_811da051-e987-43ec-ae72-e1fa33d02624
+</script>
+<script data-chunk-uuid="8219338e-7233-4e0f-bb56-0bca2106c5d8" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/payments_context-shared_payments-cloud-variables-5622877a8724e220.js">// chunk_script_8219338e-7233-4e0f-bb56-0bca2106c5d8
+</script>
+<script data-chunk-uuid="bfd2964d-fd16-4c21-a724-858ccba1ff23" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/cart_add-to-cart_add-to-cart-3edd6cf58c36cb74.js">// chunk_script_bfd2964d-fd16-4c21-a724-858ccba1ff23
+</script>
+<script data-chunk-uuid="8a8fa9ae-2b1c-495b-936f-292616ac3b1f" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/ads_provider_utils_get-ads-ccm-10af9d0beb6a7fb8.js">// chunk_script_8a8fa9ae-2b1c-495b-936f-292616ac3b1f
+</script>
+<script data-chunk-uuid="fe15859b-8e26-4a16-a477-f300a337ee6d" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/ui_product-tile_vertical_product-reward-69ff6e1b448563c1.js">// chunk_script_fe15859b-8e26-4a16-a477-f300a337ee6d
+</script>
+<script data-chunk-uuid="cee59846-2d2d-486a-b953-b2bda837e531" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/ui_product-tile_vertical-4f32604487e08cb5.js">// chunk_script_cee59846-2d2d-486a-b953-b2bda837e531
+</script>
+<script data-chunk-uuid="26452296-ed63-4161-8b19-531e98105813" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/platform_tempo_components_tempo-layout-e2906825303c8008.js">// chunk_script_26452296-ed63-4161-8b19-531e98105813
+</script>
+<script data-chunk-uuid="102f0b72-b246-4da8-a226-598c374c2696" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/ui_product-carousel_product-carousel-c6717bafaf5a46ab.js">// chunk_script_102f0b72-b246-4da8-a226-598c374c2696
+</script>
+<script data-chunk-uuid="1acef2b7-b78b-4f7d-8000-5f49f43fbbae" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/ui_product-tile_vertical_group-product-badge-ff84a9ef4375277c.js">// chunk_script_1acef2b7-b78b-4f7d-8000-5f49f43fbbae
+</script>
+<script data-chunk-uuid="597a7f12-9afc-4078-b674-be160a3372ff" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/ads_provider_ads-context-provider-1fa23113416fa75e.js">// chunk_script_597a7f12-9afc-4078-b674-be160a3372ff
+</script>
+<script data-chunk-uuid="3c3fd0c4-3236-44a8-b93f-6bf046e41b0d" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/ads_ui_video_video-player-241189e936b728dd.js">// chunk_script_3c3fd0c4-3236-44a8-b93f-6bf046e41b0d
+</script>
+<script data-chunk-uuid="b88a778f-4f49-47dd-bc10-9fcb868ae72c" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/cart_add-to-cart_use-hot-pac-bottom-sheet-eafff982e42b8e0f.js">// chunk_script_b88a778f-4f49-47dd-bc10-9fcb868ae72c
+</script>
+<script data-chunk-uuid="f50f3f85-5b6b-4706-9a27-7b98cb5c3c6d" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/repurchase_data-access_repurchase-cloud-variables-64fcbbc0e163a3e2.js">// chunk_script_f50f3f85-5b6b-4706-9a27-7b98cb5c3c6d
+</script>
+<script data-chunk-uuid="63a59a73-ba0e-4cbd-9eda-bcc5996ea6a0" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/home_data-access_utils-d5b4d28163c20b25.js">// chunk_script_63a59a73-ba0e-4cbd-9eda-bcc5996ea6a0
+</script>
+<script data-chunk-uuid="78fbc9b7-d347-4c3c-bc3a-9a0794de2531" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/ads_core_hooks_use-intersection-observable-f29db919e983c640.js">// chunk_script_78fbc9b7-d347-4c3c-bc3a-9a0794de2531
+</script>
+<script data-chunk-uuid="5b1d0f4a-c459-4f44-b653-a3588dd6dcf8" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/ads_core_components_ads-error-boundary-1af07b0dd5ec4205.js">// chunk_script_5b1d0f4a-c459-4f44-b653-a3588dd6dcf8
+</script>
+<script data-chunk-uuid="d1995536-f881-40be-9728-3ecc38a64b1b" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/chunks/pages/index-525cad66688ef1f3.js">// chunk_script_d1995536-f881-40be-9728-3ecc38a64b1b
+</script>
+<script data-chunk-uuid="d6260838-ad1b-4e8b-aa69-27d44519dfa3" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/production_20240806T042541340Z-en-US/_buildManifest.js">// chunk_script_d6260838-ad1b-4e8b-aa69-27d44519dfa3
+</script>
+<script data-chunk-uuid="277cae76-483c-485c-a5b0-5b279bc66d66" defer="" nonce="oZuHSM-FhZEnom4k" src="https://i5.walmartimages.com/dfw/63fd9f59-2e59/6a7a7336-9e08-4280-99f7-482d032a6979/v2/en-US/_next/static/production_20240806T042541340Z-en-US/_ssgManifest.js">// chunk_script_277cae76-483c-485c-a5b0-5b279bc66d66
+</script>
+
+        ```
+        

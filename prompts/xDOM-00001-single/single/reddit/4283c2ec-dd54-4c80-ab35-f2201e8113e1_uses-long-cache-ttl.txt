@@ -1,0 +1,473 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. uses-long-cache-ttl => Serve static assets with an efficient cache policy: A long cache lifetime can speed up repeat visits to your page. [Learn more about efficient cache policies](https://developer.chrome.com/docs/lighthouse/performance/uses-long-cache-ttl/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        
+<a class="button-medium px-[var(--rem14)] button-primary items-center justify-center button inline-flex" href="#main-content" id="shreddit-skip-link" rpl="">
+<span class="flex items-center justify-center">
+<span class="flex items-center gap-xs">
+     Skip to main content
+    </span>
+</span>
+</a>
+<shreddit-app app-name="web3x" class="overflow-visible pt-[var(--page-y-padding)]" clienthash="rW0iGpWZXFoVK6+Q" comments-partial-ssr="" correlation-id="1a7d4ed2-319e-4906-8122-7a7794274ff8" country="CA" ctn="CSRF" devicetype="desktop" devvit-allow-navigation='true' disable-send-beacon='true' feed-correlation-id="9eec75f5-7d81-454e-b7e8-5a0512b420e1" loid="0000000016j1njiibl.2.1723487676346.Z0FBQUFBQm11bFc4LTNLSC1sakhONkl5MFd6aktEWlliUG1jTjVhdl9wblZVLWdhS254ZGp5UVFJZkFMc3NUWVZTbTgxLV9DLTV6RzNZZldFWmlaSzZ6V2NvdXd1dHFFeGlZWFUwNl9mSWJtZDVHcXFhekpmWFNoVmRUNWlvNVBhODFDLWREV3RlZ2g" microapp-deployment="production" microapp-name="feeds" microapp-pool="first-time-user" more-comments-route="/svc/shreddit/events" pagetype="popular" referrer="" referrer-type="other" routename="frontpage" serverrenderid="e74fba31-ac39-4d7d-970f-779b1018be31" update-recaptcha='true' use-local-storage-events-caching='true'>
+<faceplate-server-session timestamp='1723487676380'>
+</faceplate-server-session>
+<slot name="use-app" slot="use-app">
+</slot>
+<shreddit-good-visit-tracker pagetype="popular" referrertype="other">
+</shreddit-good-visit-tracker>
+<shreddit-async-loader bundlename="screen_reader_alerts">
+<screen-reader-alert-outlet>
+</screen-reader-alert-outlet>
+</shreddit-async-loader>
+<!-- routable page start -->
+<shreddit-page-meta>
+<template>
+<shreddit-app-attrs app-name="web3x" correlation-id="1a7d4ed2-319e-4906-8122-7a7794274ff8" feed-correlation-id="9eec75f5-7d81-454e-b7e8-5a0512b420e1" microapp-deployment="production" microapp-name="feeds" microapp-pool="first-time-user" pagetype="popular" referrer-type="other" routename="frontpage" serverrenderid="e74fba31-ac39-4d7d-970f-779b1018be31">
+</shreddit-app-attrs>
+<shreddit-good-visit-tracker-attrs pagetype="popular" referrertype="other">
+</shreddit-good-visit-tracker-attrs>
+</template>
+</shreddit-page-meta>
+<reddit-header-large class="nd:visible top-0 left-0 right-0 fixed z-[4] theme-beta" is-hamburger-menu-included="" show-accountmanager-modal='true'>
+<shreddit-async-loader bundlename="reddit_header_action_items">
+</shreddit-async-loader>
+<shreddit-async-loader bundlename="faceplate_tooltip">
+</shreddit-async-loader>
+<reddit-header-action-items class="contents nd:visible">
+<header class="v2 bg-neutral-background pointer-events-auto border-solid border-0 border-b border-neutral-border px-md">
+<nav class="h-header-large flex items-center">
+<div class="pr-lg flex gap-xs items-center justify-start">
+<pdp-back-button class="nd:visible nd:w-xl hidden pwa:block">
+</pdp-back-button>
+<faceplate-tooltip appearance="inverted" class="nd:visible contents" id="hamburger-button-tooltip" position="right" style="--faceplate-tooltip-z-index: 1001;">
+<faceplate-tracker action="open" class="nd:visible" noun="hamburger_menu" slot="trigger" source="nav">
+<activate-feature activation="intent" name="HamburgerMenu_nwYSWB">
+<button class="m:hidden button-medium px-[var(--rem8)] button-plain icon items-center justify-center button inline-flex" id="navbar-menu-button" rpl="" type="button">
+<span class="flex items-center justify-center">
+<span class="flex">
+<svg fill="currentColor" height='20' icon-name="menu-outline" rpl="" viewbox="0 0 20 20" width='20' xmlns="http://www.w3.org/2000/svg">
+<path d="M19 10.625H1v-1.25h18v1.25Zm0-7.875H1V4h18V2.75ZM19 16H1v1.25h18V16Z">
+</path>
+</svg>
+</span>
+</span>
+<faceplate-screen-reader-content>
+             Open menu
+            </faceplate-screen-reader-content>
+</button>
+</activate-feature>
+</faceplate-tracker>
+<span>
+          Open navigation
+         </span>
+</faceplate-tooltip>
+<faceplate-tracker action="click" class="nd:visible flex items-center" noun="reddit_logo" source="nav">
+<faceplate-tooltip appearance="inverted" class="nd:visible contents" position="right" style="--faceplate-tooltip-z-index: 1001;">
+<a aria-label="Home" class="no-underline flex items-center" href="/" id="reddit-logo" slot="trigger">
+<span class="pr-0 s:pr-xs flex items-center">
+<svg height='32' viewbox="0 0 216 216" width='32' xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<style data-chunk-uuid="4dcc17f7-6bd0-41e9-abff-10c117440e27">/* chunk_style_4dcc17f7-6bd0-41e9-abff-10c117440e27 */
+</style>
+<radialgradient cx='169.75' cy='92.19' fx='169.75' fy='92.19' gradienttransform="translate(0 11.64) scale(1 .87)" gradientunits="userSpaceOnUse" id="snoo-radial-gragient" r='50.98'>
+<stop offset='0' stop-color="#feffff">
+</stop>
+<stop offset=".4" stop-color="#feffff">
+</stop>
+<stop offset=".51" stop-color="#f9fcfc">
+</stop>
+<stop offset=".62" stop-color="#edf3f5">
+</stop>
+<stop offset=".7" stop-color="#dee9ec">
+</stop>
+<stop offset=".72" stop-color="#d8e4e8">
+</stop>
+<stop offset=".76" stop-color="#ccd8df">
+</stop>
+<stop offset=".8" stop-color="#c8d5dd">
+</stop>
+<stop offset=".83" stop-color="#ccd6de">
+</stop>
+<stop offset=".85" stop-color="#d8dbe2">
+</stop>
+<stop offset=".88" stop-color="#ede3e9">
+</stop>
+<stop offset=".9" stop-color="#ffebef">
+</stop>
+</radialgradient>
+<radialgradient cx='47.31' fx='47.31' id="snoo-radial-gragient-2" r='50.98' xlink:href="#snoo-radial-gragient">
+</radialgradient>
+<radialgradient cx='109.61' cy='85.59' fx='109.61' fy='85.59' gradienttransform="translate(0 25.56) scale(1 .7)" id="snoo-radial-gragient-3" r='153.78' xlink:href="#snoo-radial-gragient">
+</radialgradient>
+<radialgradient cx='-6.01' cy='64.68' fx='-6.01' fy='64.68' gradienttransform="translate(81.08 27.26) scale(1.07 1.55)" gradientunits="userSpaceOnUse" id="snoo-radial-gragient-4" r='12.85'>
+<stop offset='0' stop-color="#f60">
+</stop>
+<stop offset=".5" stop-color="#ff4500">
+</stop>
+<stop offset=".7" stop-color="#fc4301">
+</stop>
+<stop offset=".82" stop-color="#f43f07">
+</stop>
+<stop offset=".92" stop-color="#e53812">
+</stop>
+<stop offset='1' stop-color="#d4301f">
+</stop>
+</radialgradient>
+<radialgradient cx='-73.55' cy='64.68' fx='-73.55' fy='64.68' gradienttransform="translate(62.87 27.26) rotate(-180) scale(1.07 -1.55)" id="snoo-radial-gragient-5" r='12.85' xlink:href="#snoo-radial-gragient-4">
+</radialgradient>
+<radialgradient cx='107.93' cy='166.96' fx='107.93' fy='166.96' gradienttransform="translate(0 57.4) scale(1 .66)" gradientunits="userSpaceOnUse" id="snoo-radial-gragient-6" r='45.3'>
+<stop offset='0' stop-color="#172e35">
+</stop>
+<stop offset=".29" stop-color="#0e1c21">
+</stop>
+<stop offset=".73" stop-color="#030708">
+</stop>
+<stop offset='1' stop-color="#000">
+</stop>
+</radialgradient>
+<radialgradient cx='147.88' cy='32.94' fx='147.88' fy='32.94' gradienttransform="translate(0 .54) scale(1 .98)" id="snoo-radial-gragient-7" r='39.77' xlink:href="#snoo-radial-gragient">
+</radialgradient>
+<radialgradient cx='131.31' cy='73.08' fx='131.31' fy='73.08' gradientunits="userSpaceOnUse" id="snoo-radial-gragient-8" r='32.6'>
+<stop offset=".48" stop-color="#7a9299">
+</stop>
+<stop offset=".67" stop-color="#172e35">
+</stop>
+<stop offset=".75" stop-color="#000">
+</stop>
+<stop offset=".82" stop-color="#172e35">
+</stop>
+</radialgradient>
+</defs>
+<path class="snoo-cls-10" d="m108,0h0C48.35,0,0,48.35,0,108h0c0,29.82,12.09,56.82,31.63,76.37l-20.57,20.57c-4.08,4.08-1.19,11.06,4.58,11.06h92.36s0,0,0,0c59.65,0,108-48.35,108-108h0C216,48.35,167.65,0,108,0Z">
+</path>
+<circle class="snoo-cls-1" cx='169.22' cy='106.98' r='25.22'>
+</circle>
+<circle class="snoo-cls-2" cx='46.78' cy='106.98' r='25.22'>
+</circle>
+<ellipse class="snoo-cls-3" cx='108.06' cy='128.64' rx='72' ry='54'>
+</ellipse>
+<path class="snoo-cls-4" d="m86.78,123.48c-.42,9.08-6.49,12.38-13.56,12.38s-12.46-4.93-12.04-14.01c.42-9.08,6.49-15.02,13.56-15.02s12.46,7.58,12.04,16.66Z">
+</path>
+<path class="snoo-cls-7" d="m129.35,123.48c.42,9.08,6.49,12.38,13.56,12.38s12.46-4.93,12.04-14.01c-.42-9.08-6.49-15.02-13.56-15.02s-12.46,7.58-12.04,16.66Z">
+</path>
+<ellipse class="snoo-cls-11" cx='79.63' cy='116.37' rx='2.8' ry='3.05'>
+</ellipse>
+<ellipse class="snoo-cls-11" cx='146.21' cy='116.37' rx='2.8' ry='3.05'>
+</ellipse>
+<path class="snoo-cls-5" d="m108.06,142.92c-8.76,0-17.16.43-24.92,1.22-1.33.13-2.17,1.51-1.65,2.74,4.35,10.39,14.61,17.69,26.57,17.69s22.23-7.3,26.57-17.69c.52-1.23-.33-2.61-1.65-2.74-7.77-.79-16.16-1.22-24.92-1.22Z">
+</path>
+<circle class="snoo-cls-8" cx='147.49' cy='49.43' r='17.87'>
+</circle>
+<path class="snoo-cls-6" d="m107.8,76.92c-2.14,0-3.87-.89-3.87-2.27,0-16.01,13.03-29.04,29.04-29.04,2.14,0,3.87,1.73,3.87,3.87s-1.73,3.87-3.87,3.87c-11.74,0-21.29,9.55-21.29,21.29,0,1.38-1.73,2.27-3.87,2.27Z">
+</path>
+<path class="snoo-cls-9" d="m62.82,122.65c.39-8.56,6.08-14.16,12.69-14.16,6.26,0,11.1,6.39,11.28,14.33.17-8.88-5.13-15.99-12.05-15.99s-13.14,6.05-13.56,15.2c-.42,9.15,4.97,13.83,12.04,13.83.17,0,.35,0,.52,0-6.44-.16-11.3-4.79-10.91-13.2Z">
+</path>
+<path class="snoo-cls-9" d="m153.3,122.65c-.39-8.56-6.08-14.16-12.69-14.16-6.26,0-11.1,6.39-11.28,14.33-.17-8.88,5.13-15.99,12.05-15.99,7.07,0,13.14,6.05,13.56,15.2.42,9.15-4.97,13.83-12.04,13.83-.17,0-.35,0-.52,0,6.44-.16,11.3-4.79,10.91-13.2Z">
+</path>
+</svg>
+</span>
+<span class="hidden s:flex items-center">
+<svg class="h-[22px]" style="color: var(--shreddit-color-wordmark)" viewbox="0 0 514 149" xmlns="http://www.w3.org/2000/svg">
+<g style="fill: currentColor">
+<path d="m71.62,45.92l-12.01,28.56c-1.51-.76-5.11-1.61-8.51-1.61s-6.81.85-10.12,2.46c-6.53,3.31-11.35,9.93-11.35,19.48v52.3H-.26V45.35h29.04v14.28h.57c6.81-9.08,17.21-15.79,30.74-15.79,4.92,0,9.65.95,11.54,2.08Z">
+</path>
+<path d="m65.84,96.52c0-29.41,20.15-52.68,50.32-52.68,27.33,0,46.91,19.96,46.91,48.05,0,4.92-.47,9.55-1.51,14h-68.48c3.12,10.69,12.39,19.01,26.29,19.01,7.66,0,18.54-2.74,24.4-7.28l9.27,22.32c-8.61,5.86-21.75,8.7-33.29,8.7-32.25,0-53.91-20.81-53.91-52.11Zm26.67-9.36h43.03c0-13.05-8.89-19.96-19.77-19.96-12.3,0-20.62,7.94-23.27,19.96Z">
+</path>
+<path d="m419.53-.37c10.03,0,18.25,8.23,18.25,18.25s-8.23,18.25-18.25,18.25-18.25-8.23-18.25-18.25S409.51-.37,419.53-.37Zm14.94,147.49h-29.89V45.35h29.89v101.77Z">
+</path>
+<path d="m246,1.47l-.09,53.53h-.57c-8.23-7.85-17.12-11.07-28.75-11.07-28.66,0-47.67,23.08-47.67,52.3s17.78,52.4,46.72,52.4c12.11,0,23.55-4.16,30.93-13.62h.85v12.11h28.47V1.47h-29.89Zm1.42,121.39h-.99l-6.67-6.93c-4.34,4.33-10.28,6.93-17.22,6.93-14.64,0-24.88-11.58-24.88-26.6s10.24-26.6,24.88-26.6,24.88,11.58,24.88,26.6v26.6Z">
+</path>
+<path d="m360.15,1.47l-.09,53.53h-.57c-8.23-7.85-17.12-11.07-28.75-11.07-28.66,0-47.67,23.08-47.67,52.3s17.78,52.4,46.72,52.4c12.11,0,23.55-4.16,30.93-13.62h.85v12.11h28.47V1.47h-29.89Zm1.28,121.39h-.99l-6.67-6.93c-4.34,4.33-10.28,6.93-17.22,6.93-14.64,0-24.88-11.58-24.88-26.6s10.24-26.6,24.88-26.6,24.88,11.58,24.88,26.6v26.6Z">
+</path>
+<path d="m492.44,45.35h21.85v25.44h-21.85v76.33h-29.89v-76.33h-21.75v-25.44h21.75v-27.66h29.89v27.66Z">
+</path>
+</g>
+</svg>
+</span>
+</a>
+<span>
+           Go to Reddit Home
+          </span>
+</faceplate-tooltip>
+</faceplate-tracker>
+</div>
+<div class="h-[40px] flex-1 py-xs flex justify-stretch">
+<div class="flex justify-stretch w-full l:absolute l:top-xs l:h-[40px] l:pointer-events-none l:left-0 l:right-0 l:flex">
+<div class="flex justify-stretch w-full m:block m:pointer-events-auto m:w-[560px] m:mx-auto">
+<search-dynamic-id-cache-controller class="contents" search-telemetry-source="qf">
+<reddit-search-large class="nd:visible w-[inherit] translate-x-0 max-w-[750px] w-full" initial-query="" scope='{"type": "global", "path": "/"}'>
+<form action="/search/?q=&type=link" autocomplete="off" class="reddit-search-bar flex relative items-center text-neutral-content-strong w-100 m-0 bg-secondary-background rounded-[1.25rem]">
+<faceplate-search-input class="search-input border-none bg-transparent m-0 flex items-center w-full outline-none text-14 p-0 placeholder:text-neutral-content-weak" maxlength='25' name="q" placeholder="Search Reddit" type="search" value="">
+</faceplate-search-input>
+</form>
+</reddit-search-large>
+</search-dynamic-id-cache-controller>
+<faceplate-perfmark name="first-contentful-paint">
+</faceplate-perfmark>
+</div>
+</div>
+</div>
+<div class="pl-lg gap-xs flex items-center justify-end">
+<span class="contents" data-part="campaign">
+</span>
+<span class="contents" data-part="secondary">
+<span class="hidden m:block">
+<faceplate-tooltip appearance="inverted" class="nd:visible contents" position="bottom" style="--faceplate-tooltip-z-index: 1001;">
+<faceplate-tracker action="click" class="nd:visible" noun="top_button" slot="trigger" source="xpromo">
+<button class="button-medium pl-[var(--rem10)] pr-[var(--rem14)] button-secondary items-center justify-center button inline-flex" id="get-app" rpl="">
+<span class="flex items-center justify-center">
+<span class="flex mr-xs">
+<svg fill="currentColor" height='20' icon-name="qr-code-outline" rpl="" viewbox="0 0 20 20" width='20' xmlns="http://www.w3.org/2000/svg">
+<path d="M14.8 16h-3.7v-1.2h3.7v-3.7H16v3.7c0 .7-.5 1.2-1.2 1.2ZM9 7.8V5.2C9 4.5 8.5 4 7.8 4H5.2C4.5 4 4 4.5 4 5.2v2.5C4 8.5 4.5 9 5.2 9h2.5C8.5 9 9 8.5 9 7.8Zm-1.2 0H5.3V5.3h2.5v2.5Zm8.2 0V5.2c0-.7-.5-1.2-1.2-1.2h-2.5c-.8 0-1.3.5-1.3 1.2v2.5c0 .8.5 1.3 1.2 1.3h2.5c.8 0 1.3-.5 1.3-1.2Zm-1.2 0h-2.5V5.3h2.5v2.5Zm-5.8 7v-2.5c0-.8-.5-1.3-1.2-1.3H5.2c-.7 0-1.2.5-1.2 1.2v2.5c0 .8.5 1.3 1.2 1.3h2.5c.8 0 1.3-.5 1.3-1.2Zm-1.2 0H5.3v-2.5h2.5v2.5Zm-.8 3H2.6c-.2 0-.4-.2-.4-.4V13H1v4.4c0 .9.7 1.6 1.6 1.6H7v-1.2Zm12-.4V13h-1.2v4.4c0 .2-.2.4-.4.4H13V19h4.4c.9 0 1.6-.7 1.6-1.6Zm0-14.8c0-.9-.7-1.6-1.6-1.6H13v1.2h4.4c.2 0 .4.2.4.4V7H19V2.6Zm-16.8 0c0-.2.2-.4.4-.4H7V1H2.6C1.7 1 1 1.7 1 2.6V7h1.2V2.6Z">
+</path>
+</svg>
+</span>
+<span class="flex items-center gap-xs">
+               Get app
+              </span>
+</span>
+</button>
+</faceplate-tracker>
+<span>
+            Get the Reddit app
+           </span>
+</faceplate-tooltip>
+</span>
+</span>
+<span class="contents" data-part="primary">
+<faceplate-tracker action="click" class="nd:visible flex items-center" noun="login" source="nav">
+<faceplate-tooltip appearance="inverted" class="nd:visible contents" position="bottom" style="--faceplate-tooltip-z-index: 1001;">
+<a class="px-sm hover:no-underline button-medium px-[var(--rem14)] button-brand items-center justify-center button inline-flex" href="https://www.reddit.com/login/" id="login-button" rpl="" slot="trigger">
+<span class="flex items-center justify-center">
+<span class="flex items-center gap-xs">
+              Log In
+             </span>
+</span>
+</a>
+<span>
+            Log in to Reddit
+           </span>
+</faceplate-tooltip>
+</faceplate-tracker>
+</span>
+<div class="flex items-center justify-center w-[40px] h-[40px]">
+<shreddit-async-loader bundlename="faceplate_dropdown_menu" class="nd:visible">
+<faceplate-dropdown-menu class="nd:visible">
+<faceplate-tooltip appearance="inverted" position="bottom-end" style="--faceplate-tooltip-z-index: 1001;">
+<button class="min-w-[40px] button-medium px-[var(--rem8)] button-plain icon items-center justify-center button inline-flex" id="expand-user-drawer-button" rpl="" slot="trigger" type="button">
+<span class="flex items-center justify-center">
+<span class="flex">
+<svg fill="currentColor" height='20' icon-name="overflow-horizontal-outline" rpl="" viewbox="0 0 20 20" width='20' xmlns="http://www.w3.org/2000/svg">
+<path d="M5.5 10a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0ZM10 8.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Zm6 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z">
+</path>
+</svg>
+</span>
+</span>
+<faceplate-screen-reader-content>
+              Expand user menu
+             </faceplate-screen-reader-content>
+</button>
+<span>
+             Open settings menu
+            </span>
+</faceplate-tooltip>
+<div class="min-w-[256px] bg-neutral-background-strong" id="user-drawer-content" slot="menu">
+<ul class="w-100 p-0 m-0 list-none my-xs">
+<faceplate-tracker action="click" class="contents" noun="login" role="none" source="user_drawer">
+<li class="relative list-none mt-0" id="login-list-item" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="https://www.reddit.com/login/" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex shrink-0 items-center justify-center h-xl w-xl text-20 leading-4">
+<svg fill="currentColor" height='20' icon-name="logout-outline" rpl="" viewbox="0 0 20 20" width='20' xmlns="http://www.w3.org/2000/svg">
+<path d="M11.991 10.625H1v-1.25h10.991l-1.933-1.933.884-.884 3 3a.624.624 0 0 1 0 .884l-3 3-.884-.884 1.933-1.933ZM15.375 1h-9.75A2.629 2.629 0 0 0 3 3.625v.792h1.25v-.792A1.377 1.377 0 0 1 5.625 2.25h9.75a1.377 1.377 0 0 1 1.375 1.375v12.75a1.377 1.377 0 0 1-1.375 1.375h-9.75a1.377 1.377 0 0 1-1.375-1.375v-.792H3v.792A2.63 2.63 0 0 0 5.625 19h9.75A2.63 2.63 0 0 0 18 16.375V3.625A2.63 2.63 0 0 0 15.375 1Z">
+</path>
+</svg>
+</span>
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                   Log In / Sign Up
+                  </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+</faceplate-tracker>
+<faceplate-tracker action="click" class="contents" noun="advertise" role="none" source="user_drawer">
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="https://accounts.reddit.com/adsregister?utm_source=web3x_consumer&utm_name=user_menu_cta" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex shrink-0 items-center justify-center h-xl w-xl text-20 leading-4">
+<svg fill="currentColor" height='20' icon-name="conversion" rpl="" viewbox="0 0 20 20" width='20' xmlns="http://www.w3.org/2000/svg">
+<path d="M6.75799 11.0341L7.34299 12.4641C6.50628 12.3459 5.71928 11.9962 5.07089 11.4543C4.4225 10.9124 3.93855 10.2001 3.67371 9.39764C3.40887 8.59521 3.3737 7.73471 3.57217 6.91334C3.77063 6.09198 4.19483 5.34248 4.79684 4.74951C5.39885 4.15653 6.15468 3.74372 6.97895 3.5577C7.80323 3.37168 8.66309 3.41986 9.46142 3.69681C10.2598 3.97375 10.9647 4.46842 11.4967 5.12494C12.0287 5.78145 12.3665 6.57366 12.472 7.41205L11.054 6.81805C10.8579 6.31223 10.5393 5.863 10.1267 5.51068C9.7142 5.15836 9.22065 4.91397 8.69037 4.79945C8.16009 4.68492 7.60967 4.70383 7.0885 4.8545C6.56733 5.00516 6.09172 5.28285 5.70435 5.66266C5.31697 6.04247 5.02995 6.51251 4.86904 7.0306C4.70813 7.5487 4.67836 8.09864 4.7824 8.63107C4.88645 9.16351 5.12105 9.66179 5.46516 10.0812C5.80928 10.5006 6.25213 10.828 6.75399 11.0341H6.75799ZM3.22699 12.7721C2.60032 12.1453 2.10325 11.4012 1.76415 10.5823C1.42505 9.76335 1.25056 8.88568 1.25066 7.99934C1.25084 6.20931 1.96211 4.49266 3.22799 3.22705C4.49387 1.96144 6.21066 1.25053 8.0007 1.25072C9.79073 1.2509 11.5074 1.96217 12.773 3.22805C13.4019 3.85308 13.9005 4.59672 14.2398 5.41587C14.5792 6.23502 14.7526 7.11339 14.75 8.00005C14.75 8.12105 14.739 8.24005 14.732 8.36005L15.95 8.87005C15.9823 8.58116 15.9989 8.29074 16 8.00005C16 6.41776 15.5309 4.87098 14.6518 3.55534C13.7728 2.23969 12.5233 1.21426 11.0615 0.60874C9.59965 0.00321448 7.99107 -0.155213 6.43919 0.153493C4.8873 0.462199 3.46181 1.22417 2.34299 2.34305C1.22411 3.46187 0.462138 4.88736 0.153432 6.43925C-0.155274 7.99113 0.00315344 9.59971 0.608679 11.0616C1.2142 12.5234 2.23963 13.7729 3.55528 14.6519C4.87092 15.5309 6.4177 16.0001 7.99999 16.0001C8.25799 16.0001 8.51566 15.9877 8.77299 15.9631L8.27299 14.7381C7.34155 14.7782 6.41195 14.6241 5.54325 14.2857C4.67455 13.9472 3.88576 13.4318 3.22699 12.7721ZM12.851 19.9131L14.051 17.0391L16.072 19.0501C16.2032 19.181 16.3811 19.2546 16.5665 19.2546C16.7519 19.2546 16.9298 19.181 17.061 19.0501L18.947 17.1801C19.0789 17.0497 19.1537 16.8724 19.155 16.687C19.1564 16.5016 19.0841 16.3232 18.954 16.1911L16.96 14.1531L19.46 13.1291C19.5877 13.0759 19.6969 12.986 19.7736 12.8709C19.8503 12.7557 19.8911 12.6204 19.891 12.4821L19.852 12.0001L8.71099 7.26205C8.51114 7.17944 8.29138 7.15756 8.07916 7.19915C7.86695 7.24075 7.6717 7.34398 7.51783 7.49593C7.36396 7.64788 7.25829 7.84181 7.21404 8.05348C7.16978 8.26516 7.18889 8.48518 7.26899 8.68605L11.717 19.5251C11.7696 19.6532 11.8591 19.7628 11.9741 19.8401C12.0891 19.9174 12.2245 19.9588 12.363 19.9591L12.851 19.9131ZM17.764 12.4771L14.772 13.7001L17.684 16.6771L16.572 17.7771L13.621 14.8391L12.371 17.8201L8.61299 8.64205L17.764 12.4771Z" fill="currentColor">
+</path>
+</svg>
+</span>
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                   Advertise on Reddit
+                  </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+</faceplate-tracker>
+<faceplate-tracker action="click" class="contents" noun="avatar_shop" role="none" source="user_drawer">
+<li class="relative list-none mt-0" id="avatar-shop-list-item" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="/avatar/shop" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex shrink-0 items-center justify-center h-xl w-xl text-20 leading-4">
+<svg fill="currentColor" height='20' icon-name="topic-marketplace-outline" rpl="" viewbox="0 0 20 20" width='20' xmlns="http://www.w3.org/2000/svg">
+<path d="M19 7.627v9.777A2.617 2.617 0 0 1 16.307 20H3.745a2.675 2.675 0 0 1-2.719-2.62L1 7.627a.627.627 0 0 1 .625-.626h2.187v1.25H2.251l.025 9.124a1.423 1.423 0 0 0 1.469 1.373h12.562a1.385 1.385 0 0 0 1.443-1.345V8.251h-1.563v-1.25h2.188a.625.625 0 0 1 .625.626ZM8.013 7.002v1.25h3.974v-1.25H8.013ZM15 4.627a4.828 4.828 0 0 0-5-4.624 4.83 4.83 0 0 0-5 4.624v5.3h1.25v-5.3A3.58 3.58 0 0 1 10 1.253a3.581 3.581 0 0 1 3.75 3.374v5.3H15v-5.3Z">
+</path>
+</svg>
+</span>
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                   Shop Collectible Avatars
+                  </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+</faceplate-tracker>
+</ul>
+</div>
+</faceplate-dropdown-menu>
+</shreddit-async-loader>
+</div>
+</div>
+</nav>
+</header>
+</reddit-header-action-items>
+<faceplate-dialog id="get-app-dialog">
+<section class="flex justify-between items-center p-16 text-[32px] xs:min-w-[500px]">
+<h3 class="m-0 font-bold mr-xs">
+       Get the Reddit app
+      </h3>
+<div slot="action">
+<button aria-label="Close dialog" class="button-medium px-[var(--rem8)] button flex items-center justify-center" id="close-dialog" type="button">
+<span class="flex items-center justify-center">
+<span class="flex text-20">
+<svg aria-hidden='true' class="mt-[2px]" fill="currentColor" height='20' icon-name="close-outline" rpl="" viewbox="0 0 20 20" width='20' xmlns="http://www.w3.org/2000/svg">
+<path d="m18.442 2.442-.884-.884L10 9.116 2.442 1.558l-.884.884L9.116 10l-7.558 7.558.884.884L10 10.884l7.558 7.558.884-.884L10.884 10l7.558-7.558Z">
+</path>
+</svg>
+</span>
+</span>
+</button>
+</div>
+</section>
+<section class="px-8 text-center text-[1rem]">
+<div class="text-center font-bold p-[1rem] py-8 my-0 mx-auto max-w-[12rem]">
+<span>
+        Scan this QR code to download the app now
+       </span>
+</div>
+<faceplate-img alt="Shreddit QR Code" aria-label="Shreddit QR" class="border-solid border-2 border-white" height='200' src="https://www.redditstatic.com/shreddit/assets/shreddit-qr-code.svg" width='200'>
+</faceplate-img>
+<div class="text-center p-md py-8">
+       Or check it out in the app stores
+      </div>
+<div class="flex justify-center gap-x-md">
+<a href="https://play.google.com/store/apps/details?id=com.reddit.frontpage" target="_blank">
+<faceplate-img alt="Get it on Google Play" aria-label="Google play" src="https://www.redditstatic.com/shreddit/assets/google-play.svg">
+</faceplate-img>
+</a>
+<a href="https://apps.apple.com/US/app/id1064216828" target="_blank">
+<faceplate-img alt="Download on the App Store" aria-label="App store" src="https://www.redditstatic.com/shreddit/assets/app-store.svg">
+</faceplate-img>
+</a>
+</div>
+</section>
+</faceplate-dialog>
+<faceplate-loader loading="programmatic" name="HamburgerMenu_nwYSWB" src="https://www.redditstatic.com/shreddit/en-US/left-nav-resources-section-client-js-312fc34c.js,https://www.redditstatic.com/shreddit/en-US/left-nav-topics-section-client-js-c4943967.js,https://www.redditstatic.com/shreddit/en-US/left-nav-client-js-8c57d1bd.js,https://www.redditstatic.com/shreddit/en-US/hamburger-menu-client-js-dc0e4f42.js,https://www.redditstatic.com/shreddit/en-US/deprecated-content-client-js-77d2591c.js,https://www.redditstatic.com/shreddit/en-US/left-nav-resources-section-client-js-312fc34c.js,https://www.redditstatic.com/shreddit/en-US/left-nav-topics-section-client-js-c4943967.js,https://www.redditstatic.com/shreddit/en-US/left-nav-client-js-8c57d1bd.js,https://www.redditstatic.com/shreddit/en-US/hamburger-menu-client-js-dc0e4f42.js,https://www.redditstatic.com/shreddit/en-US/deprecated-content-client-js-77d2591c.js">
+</faceplate-loader>
+<faceplate-partial loading="programmatic" name="HamburgerMenu_nwYSWB" src="/svc/shreddit/hamburger-menu?selected-page-type=popular">
+</faceplate-partial>
+<div data-persistent="" id="reddit-chat">
+</div>
+</reddit-header-large>
+<faceplate-loader loading="lazy" name="AlertController_nwPwX3" src="https://www.redditstatic.com/shreddit/en-US/alert-controller-client-js-6cbf1ba6.js">
+</faceplate-loader>
+<template name="AlertController_nwPwX3">
+<alert-controller>
+</alert-controller>
+</template>
+<faceplate-loader loading="programmatic" name="ShareMenu_tv6gfD" src="https://www.redditstatic.com/shreddit/en-US/share-menu-client-js-d9f43cbd.js">
+</faceplate-loader>
+<faceplate-partial loading="programmatic" name="ShareMenu_tv6gfD" src="/svc/shreddit/share-menu">
+</faceplate-partial>
+<faceplate-loader loading="programmatic" name="AwardDialog_GzBkf2" src="https://www.redditstatic.com/shreddit/en-US/award-leaderboard-empty-banner-client-js-6b06873a.js,https://www.redditstatic.com/shreddit/en-US/award-leaderboard-client-js-9c9b2c3e.js,https://www.redditstatic.com/shreddit/en-US/award-dialog-client-js-a60392ae.js">
+</faceplate-loader>
+<faceplate-partial loading="programmatic" name="AwardDialog_GzBkf2" src="/svc/shreddit/award-dialog/:thingId">
+</faceplate-partial>
+<faceplate-loader loading="programmatic" name="LeadGenDialog_4ym4rB" src="https://www.redditstatic.com/shreddit/en-US/lead-gen-dialog-client-js-b8109673.js">
+</faceplate-loader>
+<faceplate-partial loading="programmatic" name="LeadGenDialog_4ym4rB" src="/svc/shreddit/lead-gen-dialog">
+</faceplate-partial>
+<reddit-breadcrumbs page-title="r/popular" page-url="/r/popular/" slot="breadcrumbs">
+<icon-popular class="text-16 leading-[0] align-middle" slot="breadcrumbs-icon">
+</icon-popular>
+</reddit-breadcrumbs>
+<div class="grid-container theme-rpl grid grid-cols-1 m:grid-cols-[272px_1fr]" rpl="">
+<div class="subgrid-container m:col-start-2 box-border flex flex-col order-2 w-full m:w-[1120px] m:max-w-[calc(100vw-272px)] xs:px-md mx-auto">
+<div class="masthead w-full">
+<div class="mt-md">
+<search-dynamic-id-cache-controller search-telemetry-source="popular_carousel">
+<shreddit-gallery-carousel class="block h-[210px] nd:visible nd:overflow-hidden" data-faceplate-tracking-context='{"action_info": {"page_type": "popular", "pane_name": "popular_carousel"}, "feed": {"correlation_id": "9eec75f5-7d81-454e-b7e8-5a0512b420e1"}, "search": {"conversation_id": "3196a589-2ffa-4414-9396-516314ceb6e5", "impression_id": "bee7e313-51bd-4031-9163-03a9529cbab8", "origin_page_type": "popular", "range": "all", "sort": "relevance"}}'>
+
+        ```
+        

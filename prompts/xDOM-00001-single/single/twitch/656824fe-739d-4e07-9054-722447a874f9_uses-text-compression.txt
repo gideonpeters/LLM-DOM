@@ -1,0 +1,110 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. uses-text-compression => Enable text compression: Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more about text compression](https://developer.chrome.com/docs/lighthouse/performance/uses-text-compression/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        
+<div class="root" id="root">
+<style data-chunk-uuid="0ccdec56-99bf-4ca1-a2e1-3d958539f7f6">/* chunk_style_0ccdec56-99bf-4ca1-a2e1-3d958539f7f6 */
+</style>
+<script data-chunk-uuid="f077a597-93b8-4bb7-b85f-5c506f07423c">// chunk_script_f077a597-93b8-4bb7-b85f-5c506f07423c
+</script>
+<div class="shell-nav">
+<figure class="shell-nav__logo">
+<svg height="40px" version='1.1' viewbox="0 0 40 40" width="40px" x="0px" y="0px">
+<g fill-rule="evenodd">
+<path d="M19 6v6h-2V6h2zm-7 0h2v6h-2V6zM5 0L0 5v18h6v5l5-5h4l9-9V0H5zm17 13l-4 4h-4l-4 4v-4H6V2h16v11z">
+</path>
+<path d="M18 17l4-4V2H6v15h4v4l4-4h4zM12 6h2v6h-2V6zm7 0h-2v6h2V6z" fill="#FFF">
+</path>
+</g>
+</svg>
+</figure>
+<div class="shell-nav__link-list">
+<div class="shell-nav__link shell-nav__link--discovery">
+</div>
+<div class="shell-nav__link shell-nav__link--follow">
+</div>
+<div class="shell-nav__link shell-nav__link--browse">
+</div>
+</div>
+<div class="shell-nav__ellipsis">
+<figure class="shell__svg--navmore">
+<svg height="20px" version='1.1' viewbox="0 0 20 20" width="20px" x="0px" y="0px">
+<path d="M4 8a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm6 0a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm6 0a2 2 0 1 1 0 4 2 2 0 0 1 0-4z" fill-rule="evenodd">
+</path>
+</svg>
+</figure>
+</div>
+<div class="shell-nav__search-container">
+<div class="shell-nav__search">
+</div>
+</div>
+<div class="shell-nav__user-auth">
+<div class="shell-nav__user-auth-button shell-nav__user-auth-button--login">
+</div>
+<div class="shell-nav__user-auth-button shell-nav__user-auth-button--singup">
+</div>
+</div>
+<div class="shell-nav__user-card">
+<div class="shell-nav__user-card-avatar">
+</div>
+</div>
+</div>
+<div class="shell-loader" data-a-target="shell-loader">
+<div class="shell-loader__spinner">
+</div>
+</div>
+</div>
+<script data-chunk-uuid="31a7d1b5-5d33-48b1-b430-b400300ee324">// chunk_script_31a7d1b5-5d33-48b1-b430-b400300ee324
+</script>
+<script data-chunk-uuid="69e06bd2-02db-4f6c-8835-1456a0b68de9" crossorigin="anonymous" src="https://assets.twitch.tv/config/settings.ffe973d9a7cbf13a845a23a2598caf27.js">// chunk_script_69e06bd2-02db-4f6c-8835-1456a0b68de9
+</script>
+<script data-chunk-uuid="50619b55-aada-45a2-8a29-aa4167b1cfce">// chunk_script_50619b55-aada-45a2-8a29-aa4167b1cfce
+</script>
+<link href="https://assets.twitch.tv/assets/core-0afbcdeaff154d87e89d.css" rel="stylesheet"></link>
+<script data-chunk-uuid="27107ff1-30f0-4c9e-8b15-3fb9cf0623ec">// chunk_script_27107ff1-30f0-4c9e-8b15-3fb9cf0623ec
+</script>
+<script data-chunk-uuid="c84b2f2e-717e-4fc9-9308-5e929f60bdf0" src="https://assets.twitch.tv/assets/vendor-5a3405cf3be13d3fb193.js">// chunk_script_c84b2f2e-717e-4fc9-9308-5e929f60bdf0
+</script>
+<script data-chunk-uuid="35182619-846b-4ec1-bbcf-9b377fb69ac4" nomodule="" src="https://assets.twitch.tv/assets/nomodulePolyfills-46100576e19cbb82aad7.js">// chunk_script_35182619-846b-4ec1-bbcf-9b377fb69ac4
+</script>
+<script data-chunk-uuid="5c42b606-7967-409a-9ebf-e75cb773f923" src="https://assets.twitch.tv/assets/polyfills-cc5b9bf3b3f7bc813c6c.js">// chunk_script_5c42b606-7967-409a-9ebf-e75cb773f923
+</script>
+<script data-chunk-uuid="1be7f4e2-65ce-43b3-be94-91b2856770eb" src="https://assets.twitch.tv/assets/core-6770001ba32ecc8e7c53.js">// chunk_script_1be7f4e2-65ce-43b3-be94-91b2856770eb
+</script>
+
+        ```
+        

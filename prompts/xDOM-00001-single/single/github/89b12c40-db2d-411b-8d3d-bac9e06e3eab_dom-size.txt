@@ -1,0 +1,385 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. dom-size => Avoid an excessive DOM size: A large DOM will increase memory usage, cause longer [style calculations](https://developers.google.com/web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations), and produce costly [layout reflows](https://developers.google.com/speed/articles/reflow). [Learn how to avoid an excessive DOM size](https://developer.chrome.com/docs/lighthouse/performance/dom-size/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        <div class="position-absolute bottom-0 right-0 events-none z-n1" data-target="card-skew.shine">
+</div>
+</div>
+</card-skew>
+</div>
+<div class="col-md-6 d-flex">
+<card-skew class="overflow-hidden rounded-3 mb-3 mb-md-5">
+<div class="feature-card-mktg d-md-flex rounded-3 color-bg-subtle border position-relative flex-justify-between z-1 height-full flex-column" data-target="card-skew.bounding">
+<div class="d-md-flex flex-column flex-1 p-5 p-sm-6 py-lg-8 pl-lg-8 pr-lg-12 flex-justify-start">
+<p class="f2-mktg text-medium color-fg-muted mb-4">
+<em>
+              Secret scanning
+             </em>
+             automatically looks for partner patterns and prevents fraudulent use of accidentally committed secrets.
+            </p>
+<div>
+<a class="link-mktg text-semibold color-fg-default py-1 f3-mktg" data-analytics-event='{"category": "Read about secret scanning", "action": "click to Read about secret scanning", "label": "ref_cta:Read about secret scanning;"}' href="/features/security/code">
+              Read about secret scanning
+              <svg class="octicon arrow-symbol-mktg" fill="none" height='16' viewbox="0 0 16 16" width='16' xmlns="http://www.w3.org/2000/svg">
+<path d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z" fill="currentColor">
+</path>
+<path class="octicon-chevrow-stem" d="M1.75 8H11" stroke="currentColor" stroke-linecap="round" stroke-width='1.5'>
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="overflow-hidden rounded-bottom-3">
+<picture>
+<source sizes="(max-width: 768px) 90vw, (max-width: 1280px) 50vw, 604px" srcset="https://github.githubassets.com/assets/illu-secret-scanning-2-88fb429376d6.png?width=1208&format=webpll 1208w,https://github.githubassets.com/assets/illu-secret-scanning-2-88fb429376d6.png?width=966&format=webpll 966w,https://github.githubassets.com/assets/illu-secret-scanning-2-88fb429376d6.png?width=724&format=webpll 724w,https://github.githubassets.com/assets/illu-secret-scanning-2-88fb429376d6.png?width=604&format=webpll 604w,https://github.githubassets.com/assets/illu-secret-scanning-2-88fb429376d6.png?width=483&format=webpll 483w,https://github.githubassets.com/assets/illu-secret-scanning-2-88fb429376d6.png?width=241&format=webpll 241w" type="image/webp"></source>
+<source sizes="(max-width: 768px) 90vw, (max-width: 1280px) 50vw, 604px" srcset="https://github.githubassets.com/assets/illu-secret-scanning-2-88fb429376d6.png 1208w,https://github.githubassets.com/assets/illu-secret-scanning-2-88fb429376d6.png?width=604 604w,https://github.githubassets.com/assets/illu-secret-scanning-2-88fb429376d6.png?width=483 483w,https://github.githubassets.com/assets/illu-secret-scanning-2-88fb429376d6.png?width=302 302w" type="image/png"></source>
+<img alt="" aria-hidden='true' class="width-full d-block height-auto js-build-in-item build-in-scale-fade" decoding="async" height='804' loading="lazy" src="https://github.githubassets.com/assets/illu-secret-scanning-2-88fb429376d6.png" width='1208'></img>
+</picture>
+</div>
+<div class="position-absolute bottom-0 right-0 events-none z-n1" data-target="card-skew.shine">
+</div>
+</div>
+</card-skew>
+</div>
+</div>
+<div class="col-1 d-flex flex-column flex-items-center js-build-in-trigger">
+<div class="home-campaign-git-line mt-n3 mt-md-n4 mb-n8 rounded js-build-in-item build-in-scale-top" style="height: 160px; background: linear-gradient(transparent, #F778BA 40%);">
+</div>
+</div>
+</div>
+</div>
+<div class="home-campaign-collaboration js-section pt-5 px-3 overflow-hidden" data-color-mode="dark" data-dark-theme="dark" data-light-theme="light" id="collaboration">
+<div class="container-xl">
+<div class="d-flex js-build-in-trigger position-relative" data-build-in-stagger='100'>
+<div class="col-1 d-flex flex-column flex-items-center">
+<div class="mb-4 position-relative home-campaign-glowing-icon js-build-in-item build-in-scale-fade">
+<svg aria-hidden='true' class="octicon octicon-code-of-conduct" data-view-component='true' height='24' version='1.1' viewbox="0 0 24 24" width='24'>
+<path d="M2.828 4.328C5.26 1.896 9.5 1.881 11.935 4.317c.024.024.046.05.067.076 1.391-1.078 2.993-1.886 4.777-1.89a6.22 6.22 0 0 1 4.424 1.825c.559.56 1.023 1.165 1.34 1.922.318.756.47 1.617.468 2.663 0 2.972-2.047 5.808-4.269 8.074-2.098 2.14-4.507 3.924-5.974 5.009l-.311.23a.752.752 0 0 1-.897 0l-.312-.23c-1.466-1.085-3.875-2.869-5.973-5.009-2.22-2.263-4.264-5.095-4.27-8.063a6.216 6.216 0 0 1 1.823-4.596Zm8.033 1.042c-1.846-1.834-5.124-1.823-6.969.022a4.712 4.712 0 0 0-1.382 3.52c0 2.332 1.65 4.79 3.839 7.022 1.947 1.986 4.184 3.66 5.66 4.752a78.214 78.214 0 0 0 2.159-1.645l-2.14-1.974a.752.752 0 0 1 1.02-1.106l2.295 2.118c.616-.52 1.242-1.08 1.85-1.672l-2.16-1.992a.753.753 0 0 1 1.021-1.106l2.188 2.02a18.963 18.963 0 0 0 1.528-1.877l-.585-.586-1.651-1.652c-1.078-1.074-2.837-1.055-3.935.043-.379.38-.76.758-1.132 1.126-1.14 1.124-2.96 1.077-4.07-.043-.489-.495-.98-.988-1.475-1.482a.752.752 0 0 1-.04-1.019c.234-.276.483-.576.745-.893.928-1.12 2.023-2.442 3.234-3.576Zm9.725 6.77c.579-1.08.92-2.167.92-3.228.002-.899-.128-1.552-.35-2.08-.22-.526-.551-.974-1.017-1.44a4.71 4.71 0 0 0-3.356-1.384c-1.66.004-3.25.951-4.77 2.346-1.18 1.084-2.233 2.353-3.188 3.506l-.351.423c.331.332.663.664.993.998a1.375 1.375 0 0 0 1.943.03c.37-.365.748-.74 1.125-1.118 1.662-1.663 4.373-1.726 6.06-.045.56.558 1.12 1.12 1.658 1.658Z">
+</path>
+</svg>
+<span class="position-absolute left-0 top-0 height-full width-full home-campaign-glowing-icon-glow circle z-n1" style="background-color: var(--mktg-accent-primary); filter: blur(18px);">
+</span>
+</div>
+<div class="home-campaign-git-line height-full rounded js-build-in-item build-in-scale-top" data-build-delay='500' style="background: linear-gradient(#F778BA 40%, transparent);">
+</div>
+</div>
+<div class="col-11 col-lg-8 ml-2 ml-md-0 mb-6 mb-md-10 pr-lg-3">
+<h2 class="h5-mktg mb-4 text-medium js-build-in-item build-in-slideX-left">
+          Collaboration
+         </h2>
+<h3 class="h3-mktg mb-4 text-medium js-build-in-item build-in-slideX-left">
+<span class="text-accent-primary d-block">
+           Supercharge collaboration
+          </span>
+          GitHub helps your teams work more efficiently together.
+         </h3>
+</div>
+<img alt="" aria-hidden='true' class="position-absolute height-auto d-none d-md-block col-5 events-none js-build-in-item build-in-fade" decoding="async" height='735' loading="lazy" src="https://github.githubassets.com/assets/shape-3-9e542b5c31b8.svg" style="top: -9%; right: -12%;" width='502'></img>
+</div>
+<picture>
+<source sizes="(max-width: 1200px) 90vw, 1248px" srcset="https://github.githubassets.com/assets/issues-plan-2-46d1ce1d4519.png?width=2498&format=webpll 2498w,https://github.githubassets.com/assets/issues-plan-2-46d1ce1d4519.png?width=1998&format=webpll 1998w,https://github.githubassets.com/assets/issues-plan-2-46d1ce1d4519.png?width=1498&format=webpll 1498w,https://github.githubassets.com/assets/issues-plan-2-46d1ce1d4519.png?width=1249&format=webpll 1249w,https://github.githubassets.com/assets/issues-plan-2-46d1ce1d4519.png?width=999&format=webpll 999w,https://github.githubassets.com/assets/issues-plan-2-46d1ce1d4519.png?width=499&format=webpll 499w" type="image/webp"></source>
+<source sizes="(max-width: 1200px) 90vw, 1248px" srcset="https://github.githubassets.com/assets/issues-plan-2-46d1ce1d4519.png 2498w,https://github.githubassets.com/assets/issues-plan-2-46d1ce1d4519.png?width=1249 1249w,https://github.githubassets.com/assets/issues-plan-2-46d1ce1d4519.png?width=999 999w,https://github.githubassets.com/assets/issues-plan-2-46d1ce1d4519.png?width=624 624w" type="image/png"></source>
+<img alt="Illustration of project table view with cards grouped by 'Feature planning' phase." class="position-relative z-1 width-full height-auto d-block rounded-3 border box-shadow-card-dark-mktg" decoding="async" height='1450' loading="lazy" src="https://github.githubassets.com/assets/issues-plan-2-46d1ce1d4519.png" width='2498'></img>
+</picture>
+<div class="d-flex position-relative">
+<div class="col-1 d-flex flex-column flex-items-center position-relative js-build-in-trigger">
+<div class="home-campaign-git-line height-full position-relative z-1 js-build-in-item build-in-scale-top" style="transition-duration: 1100ms; background: linear-gradient(transparent, #F778BA, #F778BA, transparent);">
+</div>
+<img alt="" aria-hidden='true' class="d-none d-md-block position-absolute bottom-4 js-build-in-item build-in-scale-fade" decoding="async" height='612' loading="lazy" src="https://github.githubassets.com/assets/git-branch-collaboration-2-e46b1fb1d363.svg" style="left: calc(50% - 2px); height: auto; max-width: 9vw;" width='81'></img>
+</div>
+<div class="col-11 ml-2 ml-md-6">
+<div class="river-mktg js-build-in-trigger d-flex gutter gutter-spacious my-5 my-sm-7 my-md-8 position-relative flex-column-reverse flex-md-items-center flex-md-row flex-column pb-4 pb-md-7" data-build-in-stagger='100'>
+<div class="col-12 py-3 mb-2 js-build-in-item col-sm-10 col-md-6 text-left col-lg-6 build-in-slideX-right">
+<div class="pr-md-4">
+<h2 class="color-fg-default mb-3 f2-mktg color-fg-muted">
+<em>
+              GitHub Issues and GitHub Projects
+             </em>
+             supply project management tools that adapt to your team alongside your code.
+            </h2>
+<a class="link-mktg text-semibold color-fg-default py-1 f3-mktg" data-analytics-event='{"category": "Get started with GitHub Issues", "action": "click to Get started with GitHub Issues", "label": "ref_cta:Get started with GitHub Issues;"}' href="/features/issues">
+             Get started with GitHub Issues
+             <svg class="octicon arrow-symbol-mktg" fill="none" height='16' viewbox="0 0 16 16" width='16' xmlns="http://www.w3.org/2000/svg">
+<path d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z" fill="currentColor">
+</path>
+<path class="octicon-chevrow-stem" d="M1.75 8H11" stroke="currentColor" stroke-linecap="round" stroke-width='1.5'>
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="col-12 py-3 col-md-6 col-lg-6">
+<div class="position-relative">
+<div class="d-flex flex-column position-relative">
+<div class="js-build-in-item build-in-slideY border box-shadow-mktg-xl overflow-hidden rounded-2 position-relative left-4 z-1" style="max-width: 595px; margin-top: -50%;">
+<img alt="" class="width-full height-auto d-block" decoding="async" height='964' loading="lazy" src="https://github.githubassets.com/assets/illu-projects-2-26077f1dd188.png" width='1190'></img>
+</div>
+<img alt="" aria-hidden='true' class="position-absolute d-none d-md-block events-none js-build-in-item build-in-fade" decoding="async" height='1000' loading="lazy" src="https://github.githubassets.com/assets/bg-glow-purple-6e9a6a96cb04.png" style="bottom: -300px; right: -240px;" width='1000'></img>
+</div>
+</div>
+</div>
+</div>
+<div class="mb-6 mb-md-9 pb-4 js-build-in-trigger">
+<div class="py-3 text-left col-sm-10 col-md-6 col-lg-3 js-build-in-item build-in-slideX-left">
+<div class="gradient-border-mktg d-inline-block z-1 position-relative px-2 lh-condensed f6-mktg" style="top: -1px">
+<span class="text-gradient-mktg text-semibold">
+             Did you know?
+            </span>
+</div>
+<h3 class="text-accent-primary mb-2 mt-3 h1-mktg text-medium">
+            80%
+           </h3>
+<p class="mb-3 f2-mktg text-medium col-6-max">
+            reduction in onboarding time with GitHub
+            <sup>
+             2
+            </sup>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex flex-column flex-md-row gutter js-build-in-trigger">
+<div class="position-relative z-1 col-md-6 d-flex">
+<card-skew class="overflow-hidden rounded-3 mb-3 mb-md-5">
+<div class="feature-card-mktg d-md-flex rounded-3 color-bg-subtle border position-relative flex-justify-between z-1 height-full flex-column" data-target="card-skew.bounding">
+<div class="d-md-flex flex-column flex-1 p-5 p-sm-6 py-lg-8 pl-lg-8 pr-lg-12 flex-justify-start">
+<p class="f2-mktg text-medium color-fg-muted mb-4">
+<em>
+              GitHub Discussions
+             </em>
+             creates space to ask questions and have open-ended conversations.
+            </p>
+<div>
+<a class="link-mktg text-semibold color-fg-default py-1 f3-mktg" data-analytics-event='{"category": "Jump into GitHub Discussions", "action": "click to Jump into GitHub Discussions", "label": "ref_cta:Jump into GitHub Discussions;"}' href="/features/discussions">
+              Jump into GitHub Discussions
+              <svg class="octicon arrow-symbol-mktg" fill="none" height='16' viewbox="0 0 16 16" width='16' xmlns="http://www.w3.org/2000/svg">
+<path d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z" fill="currentColor">
+</path>
+<path class="octicon-chevrow-stem" d="M1.75 8H11" stroke="currentColor" stroke-linecap="round" stroke-width='1.5'>
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="overflow-hidden rounded-bottom-3">
+<picture>
+<source sizes="(max-width: 768px) 90vw, (max-width: 1280px) 50vw, 604px" srcset="https://github.githubassets.com/assets/illu-discussions-2-b915a6dd867e.png?width=1208&format=webpll 1208w,https://github.githubassets.com/assets/illu-discussions-2-b915a6dd867e.png?width=966&format=webpll 966w,https://github.githubassets.com/assets/illu-discussions-2-b915a6dd867e.png?width=724&format=webpll 724w,https://github.githubassets.com/assets/illu-discussions-2-b915a6dd867e.png?width=604&format=webpll 604w,https://github.githubassets.com/assets/illu-discussions-2-b915a6dd867e.png?width=483&format=webpll 483w,https://github.githubassets.com/assets/illu-discussions-2-b915a6dd867e.png?width=241&format=webpll 241w" type="image/webp"></source>
+<source sizes="(max-width: 768px) 90vw, (max-width: 1280px) 50vw, 604px" srcset="https://github.githubassets.com/assets/illu-discussions-2-b915a6dd867e.png 1208w,https://github.githubassets.com/assets/illu-discussions-2-b915a6dd867e.png?width=604 604w,https://github.githubassets.com/assets/illu-discussions-2-b915a6dd867e.png?width=483 483w,https://github.githubassets.com/assets/illu-discussions-2-b915a6dd867e.png?width=302 302w" type="image/png"></source>
+<img alt="" aria-hidden='true' class="width-full d-block height-auto js-build-in-item build-in-scale-up" decoding="async" height='804' loading="lazy" src="https://github.githubassets.com/assets/illu-discussions-2-b915a6dd867e.png" width='1208'></img>
+</picture>
+</div>
+<div class="position-absolute bottom-0 right-0 events-none z-n1" data-target="card-skew.shine">
+</div>
+</div>
+</card-skew>
+</div>
+<div class="col-md-6 d-flex">
+<card-skew class="overflow-hidden rounded-3 mb-3 mb-md-5">
+<div class="feature-card-mktg d-md-flex rounded-3 color-bg-subtle border position-relative flex-justify-between z-1 height-full flex-column" data-target="card-skew.bounding">
+<div class="d-md-flex flex-column flex-1 p-5 p-sm-6 py-lg-8 pl-lg-8 pr-lg-12 flex-justify-start">
+<p class="f2-mktg text-medium color-fg-muted mb-4">
+<em>
+              Pull requests
+             </em>
+             allow real-time communication and collaboration about code changes.
+            </p>
+<div>
+<a class="link-mktg text-semibold color-fg-default py-1 f3-mktg" data-analytics-event='{"category": "Check out pull requests", "action": "click to Check out pull requests", "label": "ref_cta:Check out pull requests;"}' href="/features/code-review">
+              Check out pull requests
+              <svg class="octicon arrow-symbol-mktg" fill="none" height='16' viewbox="0 0 16 16" width='16' xmlns="http://www.w3.org/2000/svg">
+<path d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z" fill="currentColor">
+</path>
+<path class="octicon-chevrow-stem" d="M1.75 8H11" stroke="currentColor" stroke-linecap="round" stroke-width='1.5'>
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="overflow-hidden rounded-bottom-3">
+<picture>
+<source sizes="(max-width: 768px) 90vw, (max-width: 1280px) 50vw, 604px" srcset="https://github.githubassets.com/assets/illu-pull-requests-2-280cc958fc05.png?width=1208&format=webpll 1208w,https://github.githubassets.com/assets/illu-pull-requests-2-280cc958fc05.png?width=966&format=webpll 966w,https://github.githubassets.com/assets/illu-pull-requests-2-280cc958fc05.png?width=724&format=webpll 724w,https://github.githubassets.com/assets/illu-pull-requests-2-280cc958fc05.png?width=604&format=webpll 604w,https://github.githubassets.com/assets/illu-pull-requests-2-280cc958fc05.png?width=483&format=webpll 483w,https://github.githubassets.com/assets/illu-pull-requests-2-280cc958fc05.png?width=241&format=webpll 241w" type="image/webp"></source>
+<source sizes="(max-width: 768px) 90vw, (max-width: 1280px) 50vw, 604px" srcset="https://github.githubassets.com/assets/illu-pull-requests-2-280cc958fc05.png 1208w,https://github.githubassets.com/assets/illu-pull-requests-2-280cc958fc05.png?width=604 604w,https://github.githubassets.com/assets/illu-pull-requests-2-280cc958fc05.png?width=483 483w,https://github.githubassets.com/assets/illu-pull-requests-2-280cc958fc05.png?width=302 302w" type="image/png"></source>
+<img alt="" aria-hidden='true' class="width-full d-block height-auto js-build-in-item build-in-scale-up" decoding="async" height='804' loading="lazy" src="https://github.githubassets.com/assets/illu-pull-requests-2-280cc958fc05.png" width='1208'></img>
+</picture>
+</div>
+<div class="position-absolute bottom-0 right-0 events-none z-n1" data-target="card-skew.shine">
+</div>
+</div>
+</card-skew>
+</div>
+</div>
+<card-skew class="overflow-hidden rounded-3 mb-3 mb-md-5">
+<div class="feature-card-mktg d-md-flex rounded-3 color-bg-subtle border position-relative flex-justify-between z-1 height-full flex-row" data-target="card-skew.bounding">
+<div class="d-md-flex flex-column flex-1 p-5 p-sm-6 py-lg-8 pl-lg-8 pr-lg-12 col-md-6 flex-justify-between">
+<p class="f2-mktg text-medium color-fg-muted mb-4">
+<em>
+            GitHub Sponsors
+           </em>
+           lets you support your favorite open source maintainers and projects.
+          </p>
+<div>
+<a class="link-mktg text-semibold color-fg-default py-1 f3-mktg" data-analytics-event='{"category": "Invest with GitHub Sponsors", "action": "click to Invest with GitHub Sponsors", "label": "ref_cta:Invest with GitHub Sponsors;"}' href="/sponsors">
+            Invest with GitHub Sponsors
+            <svg class="octicon arrow-symbol-mktg" fill="none" height='16' viewbox="0 0 16 16" width='16' xmlns="http://www.w3.org/2000/svg">
+<path d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z" fill="currentColor">
+</path>
+<path class="octicon-chevrow-stem" d="M1.75 8H11" stroke="currentColor" stroke-linecap="round" stroke-width='1.5'>
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="overflow-hidden col-md-6 rounded-right-3">
+<div class="d-flex flex-wrap position-relative top-n12 mt-n4 right-n4 p-4 js-build-in-trigger" data-build-in-stagger='75' style="transform: rotate(-15deg) translateZ(10px); max-height: 480px;">
+<div class="col-6 col-sm-4 col-md-6 col-lg-4">
+<a class="rounded p-4 border color-bg-subtle no-underline d-flex flex-column flex-items-center m-2 box-shadow-default-mktg js-build-in-item build-in-scale-up" href="/imolorhe" tabindex='-1' target="_blank">
+<img alt="Samuel avatar" class="d-block circle" decoding="async" height='96' loading="lazy" src="https://github.githubassets.com/assets/imolorhe-9d771b1d4332.jpeg" width='96'></img>
+<div class="color-fg-muted text-truncate my-2">
+              Samuel
+             </div>
+<button class="Button--secondary Button--medium Button" data-view-component='true' tabindex='-1' type="button">
+<span class="Button-content">
+<span class="Button-visual Button-leadingVisual">
+<svg aria-hidden='true' class="octicon octicon-heart" data-view-component='true' height='16' version='1.1' viewbox="0 0 16 16" width='16'>
+<path d="m8 14.25.345.666a.75.75 0 0 1-.69 0l-.008-.004-.018-.01a7.152 7.152 0 0 1-.31-.17 22.055 22.055 0 0 1-3.434-2.414C2.045 10.731 0 8.35 0 5.5 0 2.836 2.086 1 4.25 1 5.797 1 7.153 1.802 8 3.02 8.847 1.802 10.203 1 11.75 1 13.914 1 16 2.836 16 5.5c0 2.85-2.045 5.231-3.885 6.818a22.066 22.066 0 0 1-3.744 2.584l-.018.01-.006.003h-.002ZM4.25 2.5c-1.336 0-2.75 1.164-2.75 3 0 2.15 1.58 4.144 3.365 5.682A20.58 20.58 0 0 0 8 13.393a20.58 20.58 0 0 0 3.135-2.211C12.92 9.644 14.5 7.65 14.5 5.5c0-1.836-1.414-3-2.75-3-1.373 0-2.609.986-3.029 2.456a.749.749 0 0 1-1.442 0C6.859 3.486 5.623 2.5 4.25 2.5Z">
+</path>
+</svg>
+</span>
+<span class="Button-label">
+                Sponsor
+               </span>
+</span>
+</button>
+</a>
+</div>
+<div class="col-6 col-sm-4 col-md-6 col-lg-4">
+<a class="rounded p-4 border color-bg-subtle no-underline d-flex flex-column flex-items-center m-2 box-shadow-default-mktg js-build-in-item build-in-scale-up" href="/yyx990803" tabindex='-1' target="_blank">
+<img alt="Evan You avatar" class="d-block circle" decoding="async" height='96' loading="lazy" src="https://github.githubassets.com/assets/yyx990803-e11c7b140b17.jpeg" width='96'></img>
+<div class="color-fg-muted text-truncate my-2">
+              Evan You
+             </div>
+<button class="Button--secondary Button--medium Button" data-view-component='true' tabindex='-1' type="button">
+<span class="Button-content">
+<span class="Button-visual Button-leadingVisual">
+<svg aria-hidden='true' class="octicon octicon-heart" data-view-component='true' height='16' version='1.1' viewbox="0 0 16 16" width='16'>
+<path d="m8 14.25.345.666a.75.75 0 0 1-.69 0l-.008-.004-.018-.01a7.152 7.152 0 0 1-.31-.17 22.055 22.055 0 0 1-3.434-2.414C2.045 10.731 0 8.35 0 5.5 0 2.836 2.086 1 4.25 1 5.797 1 7.153 1.802 8 3.02 8.847 1.802 10.203 1 11.75 1 13.914 1 16 2.836 16 5.5c0 2.85-2.045 5.231-3.885 6.818a22.066 22.066 0 0 1-3.744 2.584l-.018.01-.006.003h-.002ZM4.25 2.5c-1.336 0-2.75 1.164-2.75 3 0 2.15 1.58 4.144 3.365 5.682A20.58 20.58 0 0 0 8 13.393a20.58 20.58 0 0 0 3.135-2.211C12.92 9.644 14.5 7.65 14.5 5.5c0-1.836-1.414-3-2.75-3-1.373 0-2.609.986-3.029 2.456a.749.749 0 0 1-1.442 0C6.859 3.486 5.623 2.5 4.25 2.5Z">
+</path>
+</svg>
+</span>
+<span class="Button-label">
+                Sponsor
+               </span>
+</span>
+</button>
+</a>
+</div>
+<div class="col-6 col-sm-4 col-md-6 col-lg-4">
+<a class="rounded p-4 border color-bg-subtle no-underline d-flex flex-column flex-items-center m-2 box-shadow-default-mktg js-build-in-item build-in-scale-up" href="/eslint" tabindex='-1' target="_blank">
+<img alt="ESLint avatar" class="d-block rounded" decoding="async" height='96' loading="lazy" src="https://github.githubassets.com/assets/eslint-33bd6140c37f.png" width='96'></img>
+<div class="color-fg-muted text-truncate my-2">
+              ESLint
+             </div>
+<button class="Button--secondary Button--medium Button" data-view-component='true' tabindex='-1' type="button">
+<span class="Button-content">
+<span class="Button-visual Button-leadingVisual">
+<svg aria-hidden='true' class="octicon octicon-heart" data-view-component='true' height='16' version='1.1' viewbox="0 0 16 16" width='16'>
+<path d="m8 14.25.345.666a.75.75 0 0 1-.69 0l-.008-.004-.018-.01a7.152 7.152 0 0 1-.31-.17 22.055 22.055 0 0 1-3.434-2.414C2.045 10.731 0 8.35 0 5.5 0 2.836 2.086 1 4.25 1 5.797 1 7.153 1.802 8 3.02 8.847 1.802 10.203 1 11.75 1 13.914 1 16 2.836 16 5.5c0 2.85-2.045 5.231-3.885 6.818a22.066 22.066 0 0 1-3.744 2.584l-.018.01-.006.003h-.002ZM4.25 2.5c-1.336 0-2.75 1.164-2.75 3 0 2.15 1.58 4.144 3.365 5.682A20.58 20.58 0 0 0 8 13.393a20.58 20.58 0 0 0 3.135-2.211C12.92 9.644 14.5 7.65 14.5 5.5c0-1.836-1.414-3-2.75-3-1.373 0-2.609.986-3.029 2.456a.749.749 0 0 1-1.442 0C6.859 3.486 5.623 2.5 4.25 2.5Z">
+</path>
+</svg>
+</span>
+<span class="Button-label">
+                Sponsor
+               </span>
+</span>
+</button>
+</a>
+</div>
+<div class="col-6 col-sm-4 col-md-6 col-lg-4">
+<a class="rounded p-4 border color-bg-subtle no-underline d-flex flex-column flex-items-center m-2 box-shadow-default-mktg js-build-in-item build-in-scale-up" href="/directus" tabindex='-1' target="_blank">
+<img alt="Directus avatar" class="d-block rounded" decoding="async" height='96' loading="lazy" src="https://github.githubassets.com/assets/directus-4da9e46da0ac.png" width='96'></img>
+<div class="color-fg-muted text-truncate my-2">
+              Directus
+             </div>
+<button class="Button--secondary Button--medium Button" data-view-component='true' tabindex='-1' type="button">
+<span class="Button-content">
+<span class="Button-visual Button-leadingVisual">
+<svg aria-hidden='true' class="octicon octicon-heart" data-view-component='true' height='16' version='1.1' viewbox="0 0 16 16" width='16'>
+<path d="m8 14.25.345.666a.75.75 0 0 1-.69 0l-.008-.004-.018-.01a7.152 7.152 0 0 1-.31-.17 22.055 22.055 0 0 1-3.434-2.414C2.045 10.731 0 8.35 0 5.5 0 2.836 2.086 1 4.25 1 5.797 1 7.153 1.802 8 3.02 8.847 1.802 10.203 1 11.75 1 13.914 1 16 2.836 16 5.5c0 2.85-2.045 5.231-3.885 6.818a22.066 22.066 0 0 1-3.744 2.584l-.018.01-.006.003h-.002ZM4.25 2.5c-1.336 0-2.75 1.164-2.75 3 0 2.15 1.58 4.144 3.365 5.682A20.58 20.58 0 0 0 8 13.393a20.58 20.58 0 0 0 3.135-2.211C12.92 9.644 14.5 7.65 14.5 5.5c0-1.836-1.414-3-2.75-3-1.373 0-2.609.986-3.029 2.456a.749.749 0 0 1-1.442 0C6.859 3.486 5.623 2.5 4.25 2.5Z">
+</path>
+</svg>
+</span>
+<span class="Button-label">
+                Sponsor
+               </span>
+</span>
+</button>
+</a>
+</div>
+<div class="col-6 col-sm-4 col-md-6 col-lg-4">
+<a class="rounded p-4 border color-bg-subtle no-underline d-flex flex-column flex-items-center m-2 box-shadow-default-mktg js-build-in-item build-in-scale-up" href="/kazupon" tabindex='-1' target="_blank">
+<img alt="kazuya kawaguchi avatar" class="d-block circle" decoding="async" height='96' loading="lazy" src="https://github.githubassets.com/assets/kazupon-d7aeb7b8df20.jpeg" width='96'></img>
+<div class="color-fg-muted text-truncate my-2">
+              kazuya kawaguchi
+             </div>
+<button class="Button--secondary Button--medium Button" data-view-component='true' tabindex='-1' type="button">
+<span class="Button-content">
+<span class="Button-visual Button-leadingVisual">
+<svg aria-hidden='true' class="octicon octicon-heart" data-view-component='true' height='16' version='1.1' viewbox="0 0 16 16" width='16'>
+<path d="m8 14.25.345.666a.75.75 0 0 1-.69 0l-.008-.004-.018-.01a7.152 7.152 0 0 1-.31-.17 22.055 22.055 0 0 1-3.434-2.414C2.045 10.731 0 8.35 0 5.5 0 2.836 2.086 1 4.25 1 5.797 1 7.153 1.802 8 3.02 8.847 1.802 10.203 1 11.75 1 13.914 1 16 2.836 16 5.5c0 2.85-2.045 5.231-3.885 6.818a22.066 22.066 0 0 1-3.744 2.584l-.018.01-.006.003h-.002ZM4.25 2.5c-1.336 0-2.75 1.164-2.75 3 0 2.15 1.58 4.144 3.365 5.682A20.58 20.58 0 0 0 8 13.393a20.58 20.58 0 0 0 3.135-2.211C12.92 9.644 14.5 7.65 14.5 5.5c0-1.836-1.414-3-2.75-3-1.373 0-2.609.986-3.029 2.456a.749.749 0 0 1-1.442 0C6.859 3.486 5.623 2.5 4.25 2.5Z">
+</path>
+</svg>
+</span>
+<span class="Button-label">
+                Sponsor
+               </span>
+</span>
+</button>
+</a>
+</div>
+<div class="col-6 col-sm-4 col-md-6 col-lg-4">
+<a class="rounded p-4 border color-bg-subtle no-underline d-flex flex-column flex-items-center m-2 box-shadow-default-mktg js-build-in-item build-in-scale-up" href="/chaynhq" tabindex='-1' target="_blank">
+<img alt="chaynHQ avatar" class="d-block rounded" decoding="async" height='96' loading="lazy" src="https://github.githubassets.com/assets/chaynhq-4c5953025dca.png" width='96'></img>
+<div class="color-fg-muted text-truncate my-2">
+              chaynHQ
+             </div>
+<button class="Button--secondary Button--medium Button" data-view-component='true' tabindex='-1' type="button">
+<span class="Button-content">
+<span class="Button-visual Button-leadingVisual">
+<svg aria-hidden='true' class="octicon octicon-heart" data-view-component='true' height='16' version='1.1' viewbox="0 0 16 16" width='16'>
+
+        ```
+        

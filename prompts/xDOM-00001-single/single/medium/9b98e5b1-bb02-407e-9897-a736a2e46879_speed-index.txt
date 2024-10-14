@@ -1,0 +1,106 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. speed-index => Speed Index: Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        
+<title data-rh='true'>
+   Medium: Read and write stories.
+  </title>
+<meta charset="utf-8" data-rh='true'></meta>
+<meta content="width=device-width,minimum-scale=1,initial-scale=1,maximum-scale=1" data-rh='true' name="viewport"></meta>
+<meta content="#000000" data-rh='true' name="theme-color"></meta>
+<meta content="Medium" data-rh='true' name="twitter:app:name:iphone"></meta>
+<meta content='828256236' data-rh='true' name="twitter:app:id:iphone"></meta>
+<meta content="Medium" data-rh='true' property="al:ios:app_name"></meta>
+<meta content='828256236' data-rh='true' property="al:ios:app_store_id"></meta>
+<meta content="com.medium.reader" data-rh='true' property="al:android:package"></meta>
+<meta content="Medium" data-rh='true' property="al:android:app_name"></meta>
+<meta content='542599432471018' data-rh='true' property="fb:app_id"></meta>
+<meta content="index,follow" data-rh='true' name="robots"></meta>
+<meta content="Medium: Read and write stories." data-rh='true' name="title"></meta>
+<meta content="On Medium, anyone can share insightful perspectives, useful knowledge, and life wisdom with the world." data-rh='true' name="description"></meta>
+<meta content="summary_large_image" data-rh='true' name="twitter:card"></meta>
+<meta content="@Medium" data-rh='true' name="twitter:creator"></meta>
+<meta content="On Medium, anyone can share insightful perspectives, useful knowledge, and life wisdom with the world." data-rh='true' name="twitter:description"></meta>
+<meta content="https://miro.medium.com/v2/4*EBuOxSGT7JZTGq0n4W8A5w.png" data-rh='true' name="twitter:image:src"></meta>
+<meta content="@Medium" data-rh='true' name="twitter:site"></meta>
+<meta content="Medium: Read and write stories." data-rh='true' name="twitter:title"></meta>
+<meta content="On Medium, anyone can share insightful perspectives, useful knowledge, and life wisdom with the world." data-rh='true' property="og:description"></meta>
+<meta content="https://miro.medium.com/v2/4*EBuOxSGT7JZTGq0n4W8A5w.png" data-rh='true' property="og:image"></meta>
+<meta content="Medium" data-rh='true' property="og:site_name"></meta>
+<meta content="Medium: Read and write stories." data-rh='true' property="og:title"></meta>
+<meta content="website" data-rh='true' property="og:type"></meta>
+<meta content="https://medium.com" data-rh='true' property="og:url"></meta>
+<link data-rh='true' href="https://miro.medium.com/v2/1*m-R_BkNf1Qjr1YbyOIJY2w.png" rel="icon"></link>
+<link data-rh='true' href="/osd.xml" rel="search" title="Medium" type="application/opensearchdescription+xml"></link>
+<link data-rh='true' href="https://miro.medium.com/v2/resize:fill:304:304/1*sHhtYhaCe2Uc3IU0IgKwIQ.png" rel="apple-touch-icon" sizes="152x152"></link>
+<link data-rh='true' href="https://miro.medium.com/v2/resize:fill:240:240/1*sHhtYhaCe2Uc3IU0IgKwIQ.png" rel="apple-touch-icon" sizes="120x120"></link>
+<link data-rh='true' href="https://miro.medium.com/v2/resize:fill:152:152/1*sHhtYhaCe2Uc3IU0IgKwIQ.png" rel="apple-touch-icon" sizes="76x76"></link>
+<link data-rh='true' href="https://miro.medium.com/v2/resize:fill:120:120/1*sHhtYhaCe2Uc3IU0IgKwIQ.png" rel="apple-touch-icon" sizes="60x60"></link>
+<link color="#171717" data-rh='true' href="https://cdn-static-1.medium.com/_/fp/icons/Medium-Avatar-500x500.svg" rel="mask-icon"></link>
+<link crossorigin="" data-rh='true' href="https://glyph.medium.com" rel="preconnect"></link>
+<link as="style" data-rh='true' href="https://glyph.medium.com/css/unbound.css" id="glyph_preload_link" rel="preload" type="text/css"></link>
+<link data-rh='true' href="https://glyph.medium.com/css/unbound.css" id="glyph_link" rel="stylesheet" type="text/css"></link>
+<link data-rh='true' href="https://medium.com" rel="canonical"></link>
+<script data-chunk-uuid="46fbd5bd-4bc5-43ff-af15-f4f3a8fc80c2" data-rh='true' type="application/ld+json">// chunk_script_46fbd5bd-4bc5-43ff-af15-f4f3a8fc80c2
+</script>
+<style data-chunk-uuid="889e3e59-75b7-42e5-bf42-742231c29075" data-fela-rehydration='141' data-fela-type="STATIC" type="text/css">/* chunk_style_889e3e59-75b7-42e5-bf42-742231c29075 */
+</style>
+<style data-chunk-uuid="e3d67118-a26b-4eb8-b4ee-4326fe22a9f1" data-fela-rehydration='141' data-fela-type="KEYFRAME" type="text/css">/* chunk_style_e3d67118-a26b-4eb8-b4ee-4326fe22a9f1 */
+</style>
+<style data-chunk-uuid="aef5f7a7-bb75-4b79-be61-e841a9a8dca6" data-fela-rehydration='141' data-fela-type="RULE" type="text/css">/* chunk_style_aef5f7a7-bb75-4b79-be61-e841a9a8dca6 */
+</style>
+<style data-chunk-uuid="65089d86-6ef5-4627-8166-bd8319fabac0" data-fela-rehydration='141' data-fela-type="RULE" media="all and (min-width: 1080px)" type="text/css">/* chunk_style_65089d86-6ef5-4627-8166-bd8319fabac0 */
+</style>
+<style data-chunk-uuid="4dddb352-bcb8-4f82-99a2-f78536216d1c" data-fela-rehydration='141' data-fela-type="RULE" media="all and (max-width: 1079.98px)" type="text/css">/* chunk_style_4dddb352-bcb8-4f82-99a2-f78536216d1c */
+</style>
+<style data-chunk-uuid="4b20671b-3a87-4e41-bef2-1568cdbed778" data-fela-rehydration='141' data-fela-type="RULE" media="all and (max-width: 903.98px)" type="text/css">/* chunk_style_4b20671b-3a87-4e41-bef2-1568cdbed778 */
+</style>
+<style data-chunk-uuid="7d64b95a-2d26-49f0-8c1a-21709e404c92" data-fela-rehydration='141' data-fela-type="RULE" media="all and (max-width: 727.98px)" type="text/css">/* chunk_style_7d64b95a-2d26-49f0-8c1a-21709e404c92 */
+</style>
+<style data-chunk-uuid="42ec20d7-c309-4b23-91e4-6c3be2d66934" data-fela-rehydration='141' data-fela-type="RULE" media="all and (max-width: 551.98px)" type="text/css">/* chunk_style_42ec20d7-c309-4b23-91e4-6c3be2d66934 */
+</style>
+<style data-chunk-uuid="bfcff62a-f74c-4239-8668-e0233da0eb91" data-fela-rehydration='141' data-fela-type="RULE" media="all and (min-width: 904px) and (max-width: 1079.98px)" type="text/css">/* chunk_style_bfcff62a-f74c-4239-8668-e0233da0eb91 */
+</style>
+<style data-chunk-uuid="4b7f5fc6-252d-4b29-b0ee-f60d20f2bf37" data-fela-rehydration='141' data-fela-type="RULE" media="all and (min-width: 728px) and (max-width: 903.98px)" type="text/css">/* chunk_style_4b7f5fc6-252d-4b29-b0ee-f60d20f2bf37 */
+</style>
+<style data-chunk-uuid="64d33dc1-a330-48c3-aa9c-8421b5de65f5" data-fela-rehydration='141' data-fela-type="RULE" media="all and (min-width: 552px) and (max-width: 727.98px)" type="text/css">/* chunk_style_64d33dc1-a330-48c3-aa9c-8421b5de65f5 */
+</style>
+<style data-chunk-uuid="57b77fd6-2494-4ce2-86d0-31c6188069e8" data-fela-rehydration='141' data-fela-type="RULE" media="(prefers-reduced-motion: no-preference)" type="text/css">/* chunk_style_57b77fd6-2494-4ce2-86d0-31c6188069e8 */
+</style>
+
+        ```
+        

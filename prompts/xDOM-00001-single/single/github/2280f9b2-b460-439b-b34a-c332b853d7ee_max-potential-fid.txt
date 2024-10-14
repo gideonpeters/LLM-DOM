@@ -1,0 +1,410 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. max-potential-fid => Max Potential First Input Delay: The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        
+                DevOps
+               </a>
+</li>
+<li>
+<a class="HeaderMenu-dropdown-link d-block no-underline position-relative py-2 Link--secondary" data-analytics-event='{"location": "navbar", "action": "devsecops", "context": "solutions", "tag": "link", "label": "devsecops_link_solutions_navbar"}' href="https://github.com/solutions/devsecops">
+                DevSecOps
+               </a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="HeaderMenu-item position-relative flex-wrap flex-justify-between flex-items-center d-block d-lg-flex flex-lg-nowrap flex-lg-items-center js-details-container js-header-menu-item">
+<button aria-expanded='false' class="HeaderMenu-link border-0 width-full width-lg-auto px-0 px-lg-2 py-lg-2 no-wrap d-flex flex-items-center flex-justify-between js-details-target" type="button">
+            Resources
+            <svg aria-hidden='true' class="octicon octicon-chevron-down HeaderMenu-icon ml-1" data-view-component='true' height='16' opacity='0.5' version='1.1' viewbox="0 0 16 16" width='16'>
+<path d="M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z">
+</path>
+</svg>
+</button>
+<div class="HeaderMenu-dropdown dropdown-menu rounded m-0 p-0 py-2 py-lg-4 position-relative position-lg-absolute left-0 left-lg-n3 d-lg-flex dropdown-menu-wide">
+<div class="px-lg-4 border-lg-right mb-4 mb-lg-0 pr-lg-7">
+<span class="d-block h4 color-fg-default my-1" id="resources-topics-heading">
+              Topics
+             </span>
+<ul aria-labelledby="resources-topics-heading" class="list-style-none f5">
+<li>
+<a class="HeaderMenu-dropdown-link d-block no-underline position-relative py-2 Link--secondary" data-analytics-event='{"location": "navbar", "action": "ai", "context": "resources", "tag": "link", "label": "ai_link_resources_navbar"}' href="/resources/articles/ai">
+                AI
+               </a>
+</li>
+<li>
+<a class="HeaderMenu-dropdown-link d-block no-underline position-relative py-2 Link--secondary" data-analytics-event='{"location": "navbar", "action": "devops", "context": "resources", "tag": "link", "label": "devops_link_resources_navbar"}' href="/resources/articles/devops">
+                DevOps
+               </a>
+</li>
+<li>
+<a class="HeaderMenu-dropdown-link d-block no-underline position-relative py-2 Link--secondary" data-analytics-event='{"location": "navbar", "action": "security", "context": "resources", "tag": "link", "label": "security_link_resources_navbar"}' href="/resources/articles/security">
+                Security
+               </a>
+</li>
+<li>
+<a class="HeaderMenu-dropdown-link d-block no-underline position-relative py-2 Link--secondary" data-analytics-event='{"location": "navbar", "action": "software_development", "context": "resources", "tag": "link", "label": "software_development_link_resources_navbar"}' href="/resources/articles/software-development">
+                Software Development
+               </a>
+</li>
+</ul>
+</div>
+<div class="px-lg-4">
+<span class="d-block h4 color-fg-default my-1" id="resources-explore-heading">
+              Explore
+             </span>
+<ul aria-labelledby="resources-explore-heading" class="list-style-none f5">
+<li>
+<a class="HeaderMenu-dropdown-link d-block no-underline position-relative py-2 Link--secondary Link--external" data-analytics-event='{"location": "navbar", "action": "learning_pathways", "context": "resources", "tag": "link", "label": "learning_pathways_link_resources_navbar"}' href="https://resources.github.com/learn/pathways" target="_blank">
+                Learning Pathways
+                <svg aria-hidden='true' class="octicon octicon-link-external HeaderMenu-external-icon color-fg-subtle" data-view-component='true' height='16' version='1.1' viewbox="0 0 16 16" width='16'>
+<path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2Zm6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1Z">
+</path>
+</svg>
+</a>
+</li>
+<li>
+<a class="HeaderMenu-dropdown-link d-block no-underline position-relative py-2 Link--secondary Link--external" data-analytics-event='{"location": "navbar", "action": "white_papers_ebooks_webinars", "context": "resources", "tag": "link", "label": "white_papers_ebooks_webinars_link_resources_navbar"}' href="https://resources.github.com" target="_blank">
+                White papers, Ebooks, Webinars
+                <svg aria-hidden='true' class="octicon octicon-link-external HeaderMenu-external-icon color-fg-subtle" data-view-component='true' height='16' version='1.1' viewbox="0 0 16 16" width='16'>
+<path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2Zm6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1Z">
+</path>
+</svg>
+</a>
+</li>
+<li>
+<a class="HeaderMenu-dropdown-link d-block no-underline position-relative py-2 Link--secondary" data-analytics-event='{"location": "navbar", "action": "customer_stories", "context": "resources", "tag": "link", "label": "customer_stories_link_resources_navbar"}' href="https://github.com/customer-stories">
+                Customer Stories
+               </a>
+</li>
+<li>
+<a class="HeaderMenu-dropdown-link d-block no-underline position-relative py-2 Link--secondary Link--external" data-analytics-event='{"location": "navbar", "action": "partners", "context": "resources", "tag": "link", "label": "partners_link_resources_navbar"}' href="https://partner.github.com" target="_blank">
+                Partners
+                <svg aria-hidden='true' class="octicon octicon-link-external HeaderMenu-external-icon color-fg-subtle" data-view-component='true' height='16' version='1.1' viewbox="0 0 16 16" width='16'>
+<path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2Zm6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1Z">
+</path>
+</svg>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="HeaderMenu-item position-relative flex-wrap flex-justify-between flex-items-center d-block d-lg-flex flex-lg-nowrap flex-lg-items-center js-details-container js-header-menu-item">
+<button aria-expanded='false' class="HeaderMenu-link border-0 width-full width-lg-auto px-0 px-lg-2 py-lg-2 no-wrap d-flex flex-items-center flex-justify-between js-details-target" type="button">
+            Open Source
+            <svg aria-hidden='true' class="octicon octicon-chevron-down HeaderMenu-icon ml-1" data-view-component='true' height='16' opacity='0.5' version='1.1' viewbox="0 0 16 16" width='16'>
+<path d="M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z">
+</path>
+</svg>
+</button>
+<div class="HeaderMenu-dropdown dropdown-menu rounded m-0 p-0 py-2 py-lg-4 position-relative position-lg-absolute left-0 left-lg-n3 px-lg-4">
+<div class="border-bottom pb-3 mb-3">
+<ul class="list-style-none f5">
+<li>
+<a class="HeaderMenu-dropdown-link d-block no-underline position-relative py-2 Link--secondary d-flex flex-items-center Link--has-description" data-analytics-event='{"location": "navbar", "action": "github_sponsors", "context": "open_source", "tag": "link", "label": "github_sponsors_link_open_source_navbar"}' href="/sponsors">
+<div>
+<div class="color-fg-default h4">
+                  GitHub Sponsors
+                 </div>
+                 Fund open source developers
+                </div>
+</a>
+</li>
+</ul>
+</div>
+<div class="border-bottom pb-3 mb-3">
+<ul class="list-style-none f5">
+<li>
+<a class="HeaderMenu-dropdown-link d-block no-underline position-relative py-2 Link--secondary d-flex flex-items-center Link--has-description" data-analytics-event='{"location": "navbar", "action": "the_readme_project", "context": "open_source", "tag": "link", "label": "the_readme_project_link_open_source_navbar"}' href="https://github.com/readme">
+<div>
+<div class="color-fg-default h4">
+                  The ReadME Project
+                 </div>
+                 GitHub community articles
+                </div>
+</a>
+</li>
+</ul>
+</div>
+<div class="">
+<span class="d-block h4 color-fg-default my-1" id="open-source-repositories-heading">
+              Repositories
+             </span>
+<ul aria-labelledby="open-source-repositories-heading" class="list-style-none f5">
+<li>
+<a class="HeaderMenu-dropdown-link d-block no-underline position-relative py-2 Link--secondary" data-analytics-event='{"location": "navbar", "action": "topics", "context": "open_source", "tag": "link", "label": "topics_link_open_source_navbar"}' href="https://github.com/topics">
+                Topics
+               </a>
+</li>
+<li>
+<a class="HeaderMenu-dropdown-link d-block no-underline position-relative py-2 Link--secondary" data-analytics-event='{"location": "navbar", "action": "trending", "context": "open_source", "tag": "link", "label": "trending_link_open_source_navbar"}' href="https://github.com/trending">
+                Trending
+               </a>
+</li>
+<li>
+<a class="HeaderMenu-dropdown-link d-block no-underline position-relative py-2 Link--secondary" data-analytics-event='{"location": "navbar", "action": "collections", "context": "open_source", "tag": "link", "label": "collections_link_open_source_navbar"}' href="https://github.com/collections">
+                Collections
+               </a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="HeaderMenu-item position-relative flex-wrap flex-justify-between flex-items-center d-block d-lg-flex flex-lg-nowrap flex-lg-items-center js-details-container js-header-menu-item">
+<button aria-expanded='false' class="HeaderMenu-link border-0 width-full width-lg-auto px-0 px-lg-2 py-lg-2 no-wrap d-flex flex-items-center flex-justify-between js-details-target" type="button">
+            Enterprise
+            <svg aria-hidden='true' class="octicon octicon-chevron-down HeaderMenu-icon ml-1" data-view-component='true' height='16' opacity='0.5' version='1.1' viewbox="0 0 16 16" width='16'>
+<path d="M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z">
+</path>
+</svg>
+</button>
+<div class="HeaderMenu-dropdown dropdown-menu rounded m-0 p-0 py-2 py-lg-4 position-relative position-lg-absolute left-0 left-lg-n3 px-lg-4">
+<div class="border-bottom pb-3 mb-3">
+<ul class="list-style-none f5">
+<li>
+<a class="HeaderMenu-dropdown-link d-block no-underline position-relative py-2 Link--secondary d-flex flex-items-center Link--has-description" data-analytics-event='{"location": "navbar", "action": "enterprise_platform", "context": "enterprise", "tag": "link", "label": "enterprise_platform_link_enterprise_navbar"}' href="/enterprise">
+<svg aria-hidden='true' class="octicon octicon-stack color-fg-subtle mr-3" data-view-component='true' height='24' version='1.1' viewbox="0 0 24 24" width='24'>
+<path d="M11.063 1.456a1.749 1.749 0 0 1 1.874 0l8.383 5.316a1.751 1.751 0 0 1 0 2.956l-8.383 5.316a1.749 1.749 0 0 1-1.874 0L2.68 9.728a1.751 1.751 0 0 1 0-2.956Zm1.071 1.267a.25.25 0 0 0-.268 0L3.483 8.039a.25.25 0 0 0 0 .422l8.383 5.316a.25.25 0 0 0 .268 0l8.383-5.316a.25.25 0 0 0 0-.422Z">
+</path>
+<path d="M1.867 12.324a.75.75 0 0 1 1.035-.232l8.964 5.685a.25.25 0 0 0 .268 0l8.964-5.685a.75.75 0 0 1 .804 1.267l-8.965 5.685a1.749 1.749 0 0 1-1.874 0l-8.965-5.685a.75.75 0 0 1-.231-1.035Z">
+</path>
+<path d="M1.867 16.324a.75.75 0 0 1 1.035-.232l8.964 5.685a.25.25 0 0 0 .268 0l8.964-5.685a.75.75 0 0 1 .804 1.267l-8.965 5.685a1.749 1.749 0 0 1-1.874 0l-8.965-5.685a.75.75 0 0 1-.231-1.035Z">
+</path>
+</svg>
+<div>
+<div class="color-fg-default h4">
+                  Enterprise platform
+                 </div>
+                 AI-powered developer platform
+                </div>
+</a>
+</li>
+</ul>
+</div>
+<div class="">
+<span class="d-block h4 color-fg-default my-1" id="enterprise-available-add-ons-heading">
+              Available add-ons
+             </span>
+<ul aria-labelledby="enterprise-available-add-ons-heading" class="list-style-none f5">
+<li>
+<a class="HeaderMenu-dropdown-link d-block no-underline position-relative py-2 Link--secondary d-flex flex-items-center Link--has-description pb-lg-3" data-analytics-event='{"location": "navbar", "action": "advanced_security", "context": "enterprise", "tag": "link", "label": "advanced_security_link_enterprise_navbar"}' href="https://github.com/enterprise/advanced-security">
+<svg aria-hidden='true' class="octicon octicon-shield-check color-fg-subtle mr-3" data-view-component='true' height='24' version='1.1' viewbox="0 0 24 24" width='24'>
+<path d="M16.53 9.78a.75.75 0 0 0-1.06-1.06L11 13.19l-1.97-1.97a.75.75 0 0 0-1.06 1.06l2.5 2.5a.75.75 0 0 0 1.06 0l5-5Z">
+</path>
+<path d="m12.54.637 8.25 2.675A1.75 1.75 0 0 1 22 4.976V10c0 6.19-3.771 10.704-9.401 12.83a1.704 1.704 0 0 1-1.198 0C5.77 20.705 2 16.19 2 10V4.976c0-.758.489-1.43 1.21-1.664L11.46.637a1.748 1.748 0 0 1 1.08 0Zm-.617 1.426-8.25 2.676a.249.249 0 0 0-.173.237V10c0 5.46 3.28 9.483 8.43 11.426a.199.199 0 0 0 .14 0C17.22 19.483 20.5 15.461 20.5 10V4.976a.25.25 0 0 0-.173-.237l-8.25-2.676a.253.253 0 0 0-.154 0Z">
+</path>
+</svg>
+<div>
+<div class="color-fg-default h4">
+                  Advanced Security
+                 </div>
+                 Enterprise-grade security features
+                </div>
+</a>
+</li>
+<li>
+<a class="HeaderMenu-dropdown-link d-block no-underline position-relative py-2 Link--secondary d-flex flex-items-center Link--has-description pb-lg-3" data-analytics-event='{"location": "navbar", "action": "github_copilot", "context": "enterprise", "tag": "link", "label": "github_copilot_link_enterprise_navbar"}' href="/features/copilot#enterprise">
+<svg aria-hidden='true' class="octicon octicon-copilot color-fg-subtle mr-3" data-view-component='true' height='24' version='1.1' viewbox="0 0 24 24" width='24'>
+<path d="M23.922 16.992c-.861 1.495-5.859 5.023-11.922 5.023-6.063 0-11.061-3.528-11.922-5.023A.641.641 0 0 1 0 16.736v-2.869a.841.841 0 0 1 .053-.22c.372-.935 1.347-2.292 2.605-2.656.167-.429.414-1.055.644-1.517a10.195 10.195 0 0 1-.052-1.086c0-1.331.282-2.499 1.132-3.368.397-.406.89-.717 1.474-.952 1.399-1.136 3.392-2.093 6.122-2.093 2.731 0 4.767.957 6.166 2.093.584.235 1.077.546 1.474.952.85.869 1.132 2.037 1.132 3.368 0 .368-.014.733-.052 1.086.23.462.477 1.088.644 1.517 1.258.364 2.233 1.721 2.605 2.656a.832.832 0 0 1 .053.22v2.869a.641.641 0 0 1-.078.256ZM12.172 11h-.344a4.323 4.323 0 0 1-.355.508C10.703 12.455 9.555 13 7.965 13c-1.725 0-2.989-.359-3.782-1.259a2.005 2.005 0 0 1-.085-.104L4 11.741v6.585c1.435.779 4.514 2.179 8 2.179 3.486 0 6.565-1.4 8-2.179v-6.585l-.098-.104s-.033.045-.085.104c-.793.9-2.057 1.259-3.782 1.259-1.59 0-2.738-.545-3.508-1.492a4.323 4.323 0 0 1-.355-.508h-.016.016Zm.641-2.935c.136 1.057.403 1.913.878 2.497.442.544 1.134.938 2.344.938 1.573 0 2.292-.337 2.657-.751.384-.435.558-1.15.558-2.361 0-1.14-.243-1.847-.705-2.319-.477-.488-1.319-.862-2.824-1.025-1.487-.161-2.192.138-2.533.529-.269.307-.437.808-.438 1.578v.021c0 .265.021.562.063.893Zm-1.626 0c.042-.331.063-.628.063-.894v-.02c-.001-.77-.169-1.271-.438-1.578-.341-.391-1.046-.69-2.533-.529-1.505.163-2.347.537-2.824 1.025-.462.472-.705 1.179-.705 2.319 0 1.211.175 1.926.558 2.361.365.414 1.084.751 2.657.751 1.21 0 1.902-.394 2.344-.938.475-.584.742-1.44.878-2.497Z">
+</path>
+<path d="M14.5 14.25a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0v-2a1 1 0 0 1 1-1Zm-5 0a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0v-2a1 1 0 0 1 1-1Z">
+</path>
+</svg>
+<div>
+<div class="color-fg-default h4">
+                  GitHub Copilot
+                 </div>
+                 Enterprise-grade AI features
+                </div>
+</a>
+</li>
+<li>
+<a class="HeaderMenu-dropdown-link d-block no-underline position-relative py-2 Link--secondary d-flex flex-items-center Link--has-description" data-analytics-event='{"location": "navbar", "action": "premium_support", "context": "enterprise", "tag": "link", "label": "premium_support_link_enterprise_navbar"}' href="/premium-support">
+<svg aria-hidden='true' class="octicon octicon-comment-discussion color-fg-subtle mr-3" data-view-component='true' height='24' version='1.1' viewbox="0 0 24 24" width='24'>
+<path d="M1.75 1h12.5c.966 0 1.75.784 1.75 1.75v9.5A1.75 1.75 0 0 1 14.25 14H8.061l-2.574 2.573A1.458 1.458 0 0 1 3 15.543V14H1.75A1.75 1.75 0 0 1 0 12.25v-9.5C0 1.784.784 1 1.75 1ZM1.5 2.75v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25Z">
+</path>
+<path d="M22.5 8.75a.25.25 0 0 0-.25-.25h-3.5a.75.75 0 0 1 0-1.5h3.5c.966 0 1.75.784 1.75 1.75v9.5A1.75 1.75 0 0 1 22.25 20H21v1.543a1.457 1.457 0 0 1-2.487 1.03L15.939 20H10.75A1.75 1.75 0 0 1 9 18.25v-1.465a.75.75 0 0 1 1.5 0v1.465c0 .138.112.25.25.25h5.5a.75.75 0 0 1 .53.22l2.72 2.72v-2.19a.75.75 0 0 1 .75-.75h2a.25.25 0 0 0 .25-.25v-9.5Z">
+</path>
+</svg>
+<div>
+<div class="color-fg-default h4">
+                  Premium Support
+                 </div>
+                 Enterprise-grade 24/7 support
+                </div>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="HeaderMenu-item position-relative flex-wrap flex-justify-between flex-items-center d-block d-lg-flex flex-lg-nowrap flex-lg-items-center js-details-container js-header-menu-item">
+<a class="HeaderMenu-link no-underline px-0 px-lg-2 py-3 py-lg-2 d-block d-lg-inline-block" data-analytics-event='{"location": "navbar", "action": "pricing", "context": "global", "tag": "link", "label": "pricing_link_global_navbar"}' href="https://github.com/pricing">
+            Pricing
+           </a>
+</li>
+</ul>
+</nav>
+<div class="d-flex flex-column flex-lg-row width-full flex-justify-end flex-lg-items-center text-center mt-3 mt-lg-0 text-lg-left ml-lg-3">
+<qbsearch-input class="search-input" data-blackbird-suggestions-path="/search/suggestions" data-copilot-chat-enabled='false' data-current-org="" data-current-owner="" data-current-repository="" data-custom-scopes-path="/search/custom_scopes" data-delete-custom-scopes-csrf="uFRDQfKg4rnjkMDiSsIfIRxa3kWBlPIl9ylhc_VrX7RwqqicdH0EQyR_jEI0k1Vst-5YtiT9PRfk74Iav4Kitg" data-header-redesign-enabled='false' data-initial-value="" data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations" data-logged-in='false' data-max-custom-scopes='10' data-nl-search-enabled='false' data-retain-scroll-position='true' data-scope="">
+<div class="search-input-container search-with-dialog position-relative d-flex flex-row flex-items-center mr-4 rounded" data-action="click:qbsearch-input#searchInputContainerClicked">
+<button aria-haspopup="dialog" aria-label="Search or jump to…" autocapitalize="off" class="header-search-button placeholder input-button form-control d-flex flex-1 flex-self-stretch flex-items-center no-wrap width-full py-0 pl-2 pr-0 text-left border-0 box-shadow-none" data-action="click:qbsearch-input#handleExpand" data-analytics-event='{"location": "navbar", "action": "searchbar", "context": "global", "tag": "input", "label": "searchbar_input_global_navbar"}' data-hotkey="s,/" data-target="qbsearch-input.inputButton" placeholder="Search or jump to..." type="button">
+<div class="mr-2 color-fg-muted">
+<svg aria-hidden='true' class="octicon octicon-search" data-view-component='true' height='16' version='1.1' viewbox="0 0 16 16" width='16'>
+<path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z">
+</path>
+</svg>
+</div>
+<span class="flex-1" data-target="qbsearch-input.inputButtonText">
+             Search or jump to...
+            </span>
+<div class="d-flex" data-target="qbsearch-input.hotkeyIndicator">
+<svg aria-hidden='true' class="mr-1" height='20' width='22' xmlns="http://www.w3.org/2000/svg">
+<path d="M3.5.5h12c1.7 0 3 1.3 3 3v13c0 1.7-1.3 3-3 3h-12c-1.7 0-3-1.3-3-3v-13c0-1.7 1.3-3 3-3z" fill="none" opacity=".4" stroke="#979A9C">
+</path>
+<path d="M11.8 6L8 15.1h-.9L10.8 6h1z" fill="#979A9C">
+</path>
+</svg>
+</div>
+</button>
+<input class="js-site-search-type-field" name="type" type="hidden"></input>
+<div class="Overlay--hidden" data-modal-dialog-overlay="">
+<modal-dialog aria-labelledby="search-suggestions-dialog-header" aria-modal='true' class="Overlay Overlay--width-large Overlay--height-auto" data-action="close:qbsearch-input#handleClose cancel:qbsearch-input#handleClose" data-target="qbsearch-input.searchSuggestionsDialog" data-view-component='true' id="search-suggestions-dialog" role="dialog">
+<h1 class="sr-only" id="search-suggestions-dialog-header">
+              Search code, repositories, users, issues, pull requests...
+             </h1>
+<div class="Overlay-body Overlay-body--paddingNone">
+<div data-view-component='true'>
+<div class="search-suggestions position-fixed width-full color-shadow-large border color-fg-default color-bg-default overflow-hidden d-flex flex-column query-builder-container" data-target="qbsearch-input.queryBuilderContainer" hidden="" style="border-radius: 12px;">
+<!-- '"` -->
+<!-- </textarea></xmp> -->
+<form accept-charset="UTF-8" action="" id="query-builder-test-form" method="get">
+<query-builder class="QueryBuilder search-query-builder" data-filter-key=":" data-target="qbsearch-input.queryBuilder" data-view-component='true' id="query-builder-query-builder-test">
+<div class="FormControl FormControl--fullWidth">
+<label class="FormControl-label sr-only" for="query-builder-test" id="query-builder-test-label">
+                    Search
+                   </label>
+<div class="QueryBuilder-StyledInput width-fit" data-target="query-builder.styledInput">
+<span class="FormControl-input-leadingVisualWrap QueryBuilder-leadingVisualWrap" id="query-builder-test-leadingvisual-wrap">
+<svg aria-hidden='true' class="octicon octicon-search FormControl-input-leadingVisual" data-view-component='true' height='16' version='1.1' viewbox="0 0 16 16" width='16'>
+<path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z">
+</path>
+</svg>
+</span>
+<div class="QueryBuilder-StyledInputContainer" data-target="query-builder.styledInputContainer">
+<div aria-hidden='true' class="QueryBuilder-StyledInputContent" data-target="query-builder.styledInputContent">
+</div>
+<div class="QueryBuilder-InputWrapper">
+<div aria-hidden='true' class="QueryBuilder-Sizer" data-target="query-builder.sizer">
+</div>
+<input aria-describedby="validation-c0fb81cd-1ef9-4163-88c5-25ed284406fa" aria-expanded='false' autocomplete="off" class="FormControl-input QueryBuilder-Input FormControl-medium" data-action="
+          input:query-builder#inputChange
+          blur:query-builder#inputBlur
+          keydown:query-builder#inputKeydown
+          focus:query-builder#inputFocus
+        " data-target="query-builder.input" data-view-component='true' id="query-builder-test" name="query-builder-test" role="combobox" spellcheck='false' type="text" value=""></input>
+</div>
+</div>
+<span class="sr-only" id="query-builder-test-clear">
+                     Clear
+                    </span>
+<button aria-labelledby="query-builder-test-clear query-builder-test-label" class="Button Button--iconOnly Button--invisible Button--medium mr-1 px-2 py-0 d-flex flex-items-center rounded-1 color-fg-muted" data-action="
+                click:query-builder#clear
+                focus:query-builder#clearButtonFocus
+                blur:query-builder#clearButtonBlur
+              " data-target="query-builder.clearButton" data-view-component='true' hidden="hidden" id="query-builder-test-clear-button" role="button" type="button" variant="small">
+<svg aria-hidden='true' class="octicon octicon-x-circle-fill Button-visual" data-view-component='true' height='16' version='1.1' viewbox="0 0 16 16" width='16'>
+<path d="M2.343 13.657A8 8 0 1 1 13.658 2.343 8 8 0 0 1 2.343 13.657ZM6.03 4.97a.751.751 0 0 0-1.042.018.751.751 0 0 0-.018 1.042L6.94 8 4.97 9.97a.749.749 0 0 0 .326 1.275.749.749 0 0 0 .734-.215L8 9.06l1.97 1.97a.749.749 0 0 0 1.275-.326.749.749 0 0 0-.215-.734L9.06 8l1.97-1.97a.749.749 0 0 0-.326-1.275.749.749 0 0 0-.734.215L8 6.94Z">
+</path>
+</svg>
+</button>
+</div>
+<template id="search-icon">
+<svg aria-hidden='true' class="octicon octicon-search" data-view-component='true' height='16' version='1.1' viewbox="0 0 16 16" width='16'>
+<path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z">
+</path>
+</svg>
+</template>
+<template id="code-icon">
+<svg aria-hidden='true' class="octicon octicon-code" data-view-component='true' height='16' version='1.1' viewbox="0 0 16 16" width='16'>
+<path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215Zm-6.56 0a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z">
+</path>
+</svg>
+</template>
+<template id="file-code-icon">
+<svg aria-hidden='true' class="octicon octicon-file-code" data-view-component='true' height='16' version='1.1' viewbox="0 0 16 16" width='16'>
+<path d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0 1 14.25 15h-9a.75.75 0 0 1 0-1.5h9a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 10 4.25V1.5H5.75a.25.25 0 0 0-.25.25v2.5a.75.75 0 0 1-1.5 0Zm1.72 4.97a.75.75 0 0 1 1.06 0l2 2a.75.75 0 0 1 0 1.06l-2 2a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734l1.47-1.47-1.47-1.47a.75.75 0 0 1 0-1.06ZM3.28 7.78 1.81 9.25l1.47 1.47a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018l-2-2a.75.75 0 0 1 0-1.06l2-2a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042Zm8.22-6.218V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914-.013-.011Z">
+</path>
+</svg>
+</template>
+<template id="history-icon">
+<svg aria-hidden='true' class="octicon octicon-history" data-view-component='true' height='16' version='1.1' viewbox="0 0 16 16" width='16'>
+<path d="m.427 1.927 1.215 1.215a8.002 8.002 0 1 1-1.6 5.685.75.75 0 1 1 1.493-.154 6.5 6.5 0 1 0 1.18-4.458l1.358 1.358A.25.25 0 0 1 3.896 6H.25A.25.25 0 0 1 0 5.75V2.104a.25.25 0 0 1 .427-.177ZM7.75 4a.75.75 0 0 1 .75.75v2.992l2.028.812a.75.75 0 0 1-.557 1.392l-2.5-1A.751.751 0 0 1 7 8.25v-3.5A.75.75 0 0 1 7.75 4Z">
+</path>
+</svg>
+</template>
+<template id="repo-icon">
+<svg aria-hidden='true' class="octicon octicon-repo" data-view-component='true' height='16' version='1.1' viewbox="0 0 16 16" width='16'>
+<path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z">
+</path>
+</svg>
+</template>
+<template id="bookmark-icon">
+<svg aria-hidden='true' class="octicon octicon-bookmark" data-view-component='true' height='16' version='1.1' viewbox="0 0 16 16" width='16'>
+<path d="M3 2.75C3 1.784 3.784 1 4.75 1h6.5c.966 0 1.75.784 1.75 1.75v11.5a.75.75 0 0 1-1.227.579L8 11.722l-3.773 3.107A.751.751 0 0 1 3 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.91l3.023-2.489a.75.75 0 0 1 .954 0l3.023 2.49V2.75a.25.25 0 0 0-.25-.25Z">
+</path>
+</svg>
+</template>
+<template id="plus-circle-icon">
+<svg aria-hidden='true' class="octicon octicon-plus-circle" data-view-component='true' height='16' version='1.1' viewbox="0 0 16 16" width='16'>
+<path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm7.25-3.25v2.5h2.5a.75.75 0 0 1 0 1.5h-2.5v2.5a.75.75 0 0 1-1.5 0v-2.5h-2.5a.75.75 0 0 1 0-1.5h2.5v-2.5a.75.75 0 0 1 1.5 0Z">
+</path>
+</svg>
+</template>
+<template id="circle-icon">
+<svg aria-hidden='true' class="octicon octicon-dot-fill" data-view-component='true' height='16' version='1.1' viewbox="0 0 16 16" width='16'>
+<path d="M8 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z">
+</path>
+</svg>
+</template>
+<template id="trash-icon">
+<svg aria-hidden='true' class="octicon octicon-trash" data-view-component='true' height='16' version='1.1' viewbox="0 0 16 16" width='16'>
+
+        ```
+        

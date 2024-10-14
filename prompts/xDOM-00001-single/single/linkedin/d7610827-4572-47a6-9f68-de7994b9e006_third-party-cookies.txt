@@ -1,0 +1,720 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. third-party-cookies => Uses third-party cookies: Support for third-party cookies will be removed in a future version of Chrome. [Learn more about phasing out third-party cookies](https://developer.chrome.com/en/docs/privacy-sandbox/third-party-cookie-phase-out/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        
+</p>
+</div>
+<img alt="" class="w-[450px] rounded-[50%] mamabear:max-w-[50vw] babybear:h-[300px] babybear:w-[300px] babybear:mt-[16px] babybear:mx-auto" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/ann24vsq7r0ux3vipqa1n90gg"></img>
+</li>
+</ul>
+</div>
+<div class="slide-list__nav">
+<div class="slide-list__nav-wrap absolute flex h-full items-center top-0 z-1 slide-list__nav-wrap--next right-[-20px]">
+<div class="next-slide-list__a11y-notification sr-only hidden" role="alert">
+        No more next content
+       </div>
+<button aria-label="Next Slide" class="slide-list__nav-button btn-sm btn-overlay cursor-pointer disabled:hidden" data-direction="next" data-tracking-control-name="homepage-basic_testimonials_slide_list_next_button">
+<icon class="slide-list__nav-icon flex items-center justify-center pointer-events-none h-3 rtl:-scale-x-100 rtl:translate-x-[7px]" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/c9dcz2pyrbwi3sr6xwxigmvlz">
+</icon>
+</button>
+</div>
+</div>
+<!-- -->
+<code id="i18n_slide_list_current_slide_aria_label" style="display: none">
+<!--"Current Item"-->
+</code>
+</section>
+</div>
+<section class="section py-section">
+<div class="flex flex-row flex-wrap justify-between w-full babybear:flex-column mamabear:py-[60px] mamabear:px-[0px] papabear:py-[60px] papabear:px-[0px]" data-test-id="product-cta">
+<section class="tile-module section py-section flex-wrap">
+<div class="flex flex-grow mr-2 self-start flex-col last:mr-0">
+<img alt="" class="flex-shrink-0 xs:mr-[72px] mb-2 babybear:h-[240px] babybear:w-[240px] h-32 w-32" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/43h6n82li4xu0q23s8jqizk6j"></img>
+<div class="max-w-[456px] my-auto babybear:w-full">
+<h2 class="header">
+         Connect with people who can help
+        </h2>
+<!-- -->
+<div class="mt-5 babybear:mt-3">
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-control-name="homepage-basic" data-tracking-will-navigate="" href="https://www.linkedin.com/pub/dir/+/+?trk=homepage-basic">
+          Find people you know
+         </a>
+</div>
+</div>
+</div>
+<div class="flex flex-grow mr-2 self-start flex-col last:mr-0">
+<img alt="" class="flex-shrink-0 xs:mr-[72px] mb-2 babybear:h-[240px] babybear:w-[240px] h-32 w-32" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/1dhh8rr3wohexkaya6jhn2y8j"></img>
+<div class="max-w-[456px] my-auto babybear:w-full">
+<h2 class="header">
+         Learn the skills you need to succeed
+        </h2>
+<!-- -->
+<div class="mt-5 babybear:mt-3">
+<div class="dropdown-to-modal learning-cta__dropdown-modal">
+<div class="collapsible-dropdown flex items-center relative hyphens-auto">
+<button aria-expanded='false' class="dropdown-to-modal__button collapsible-dropdown__button btn-md btn-tertiary cursor-pointer bg-white flex h-auto items-center justify-between w-[360px] py-[16px] pr-[12px] pl-[16px] border-[1px] border-solid border-black-a16 rounded-[5px] hover:text-black-a90 babybear:w-full" data-tracking-control-name="homepage-basic_learning-cta">
+<span class="font-sans font-regular text-[20px] text-black-a90 leading-regular">
+             Choose a topic to learn about
+            </span>
+<icon aria-hidden='true' class="w-[24px] h-[24px] ml-[8px]" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/7asbl4deqijhoy3z2ivveispv">
+</icon>
+</button>
+<div class="collapsible-dropdown__list hidden container-raised absolute w-auto overflow-y-auto flex-col items-stretch z-1 bottom-auto top-[100%]" tabindex='-1'>
+<ul class="w-[358px] overflow-scroll mt-[4px] pb-[16px] max-h-[380px]">
+<li aria-label="Business Analysis and Strategy 1,530+ course" class="mt-[16px] mr-[8px] mb-[0] ml-[16px]" role="menuitem">
+<a class="flex flex-col text-black-a90 hover:text-blue-70 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_learning-cta" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/business-analysis-and-strategy?trk=homepage-basic_learning-cta">
+<span class="etta-dropdown-header">
+                Business Analysis and Strategy
+               </span>
+<span class="etta-dropdown-subtext">
+                1,530+ course
+               </span>
+</a>
+</li>
+<li aria-label="Business Software and Tools 2,500+ courses" class="mt-[16px] mr-[8px] mb-[0] ml-[16px]" role="menuitem">
+<a class="flex flex-col text-black-a90 hover:text-blue-70 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_learning-cta" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/business-software-and-tools?trk=homepage-basic_learning-cta">
+<span class="etta-dropdown-header">
+                Business Software and Tools
+               </span>
+<span class="etta-dropdown-subtext">
+                2,500+ courses
+               </span>
+</a>
+</li>
+<li aria-label="Career Development 590+ courses" class="mt-[16px] mr-[8px] mb-[0] ml-[16px]" role="menuitem">
+<a class="flex flex-col text-black-a90 hover:text-blue-70 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_learning-cta" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/career-development-5?trk=homepage-basic_learning-cta">
+<span class="etta-dropdown-header">
+                Career Development
+               </span>
+<span class="etta-dropdown-subtext">
+                590+ courses
+               </span>
+</a>
+</li>
+<li aria-label="Customer Service 230+ courses" class="mt-[16px] mr-[8px] mb-[0] ml-[16px]" role="menuitem">
+<a class="flex flex-col text-black-a90 hover:text-blue-70 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_learning-cta" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/customer-service-3?trk=homepage-basic_learning-cta">
+<span class="etta-dropdown-header">
+                Customer Service
+               </span>
+<span class="etta-dropdown-subtext">
+                230+ courses
+               </span>
+</a>
+</li>
+<li aria-label="Diversity, Equity, and Inclusion (DEI) 310+ courses" class="mt-[16px] mr-[8px] mb-[0] ml-[16px]" role="menuitem">
+<a class="flex flex-col text-black-a90 hover:text-blue-70 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_learning-cta" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/diversity-equity-and-inclusion-dei?trk=homepage-basic_learning-cta">
+<span class="etta-dropdown-header">
+                Diversity, Equity, and Inclusion (DEI)
+               </span>
+<span class="etta-dropdown-subtext">
+                310+ courses
+               </span>
+</a>
+</li>
+<li aria-label="Finance and Accounting 280+ courses" class="mt-[16px] mr-[8px] mb-[0] ml-[16px]" role="menuitem">
+<a class="flex flex-col text-black-a90 hover:text-blue-70 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_learning-cta" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/finance-and-accounting?trk=homepage-basic_learning-cta">
+<span class="etta-dropdown-header">
+                Finance and Accounting
+               </span>
+<span class="etta-dropdown-subtext">
+                280+ courses
+               </span>
+</a>
+</li>
+<li aria-label="Human Resources 520+ courses" class="mt-[16px] mr-[8px] mb-[0] ml-[16px]" role="menuitem">
+<a class="flex flex-col text-black-a90 hover:text-blue-70 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_learning-cta" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/human-resources-3?trk=homepage-basic_learning-cta">
+<span class="etta-dropdown-header">
+                Human Resources
+               </span>
+<span class="etta-dropdown-subtext">
+                520+ courses
+               </span>
+</a>
+</li>
+<li aria-label="Leadership and Management 1,890+ course" class="mt-[16px] mr-[8px] mb-[0] ml-[16px]" role="menuitem">
+<a class="flex flex-col text-black-a90 hover:text-blue-70 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_learning-cta" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/leadership-and-management?trk=homepage-basic_learning-cta">
+<span class="etta-dropdown-header">
+                Leadership and Management
+               </span>
+<span class="etta-dropdown-subtext">
+                1,890+ course
+               </span>
+</a>
+</li>
+<li aria-label="Marketing 980+ courses" class="mt-[16px] mr-[8px] mb-[0] ml-[16px]" role="menuitem">
+<a class="flex flex-col text-black-a90 hover:text-blue-70 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_learning-cta" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/marketing-2?trk=homepage-basic_learning-cta">
+<span class="etta-dropdown-header">
+                Marketing
+               </span>
+<span class="etta-dropdown-subtext">
+                980+ courses
+               </span>
+</a>
+</li>
+<li aria-label="Professional Development 1,830+ course" class="mt-[16px] mr-[8px] mb-[0] ml-[16px]" role="menuitem">
+<a class="flex flex-col text-black-a90 hover:text-blue-70 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_learning-cta" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/professional-development?trk=homepage-basic_learning-cta">
+<span class="etta-dropdown-header">
+                Professional Development
+               </span>
+<span class="etta-dropdown-subtext">
+                1,830+ course
+               </span>
+</a>
+</li>
+<li aria-label="Project Management 540+ courses" class="mt-[16px] mr-[8px] mb-[0] ml-[16px]" role="menuitem">
+<a class="flex flex-col text-black-a90 hover:text-blue-70 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_learning-cta" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/project-management?trk=homepage-basic_learning-cta">
+<span class="etta-dropdown-header">
+                Project Management
+               </span>
+<span class="etta-dropdown-subtext">
+                540+ courses
+               </span>
+</a>
+</li>
+<li aria-label="Sales 300+ courses" class="mt-[16px] mr-[8px] mb-[0] ml-[16px]" role="menuitem">
+<a class="flex flex-col text-black-a90 hover:text-blue-70 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_learning-cta" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/sales-3?trk=homepage-basic_learning-cta">
+<span class="etta-dropdown-header">
+                Sales
+               </span>
+<span class="etta-dropdown-subtext">
+                300+ courses
+               </span>
+</a>
+</li>
+<li aria-label="Small Business and Entrepreneurship 340+ courses" class="mt-[16px] mr-[8px] mb-[0] ml-[16px]" role="menuitem">
+<a class="flex flex-col text-black-a90 hover:text-blue-70 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_learning-cta" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/small-business-and-entrepreneurship?trk=homepage-basic_learning-cta">
+<span class="etta-dropdown-header">
+                Small Business and Entrepreneurship
+               </span>
+<span class="etta-dropdown-subtext">
+                340+ courses
+               </span>
+</a>
+</li>
+<li aria-label="Training and Education 310+ courses" class="mt-[16px] mr-[8px] mb-[0] ml-[16px]" role="menuitem">
+<a class="flex flex-col text-black-a90 hover:text-blue-70 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_learning-cta" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/training-and-education?trk=homepage-basic_learning-cta">
+<span class="etta-dropdown-header">
+                Training and Education
+               </span>
+<span class="etta-dropdown-subtext">
+                310+ courses
+               </span>
+</a>
+</li>
+<li aria-label="AEC 1,470+ course" class="mt-[16px] mr-[8px] mb-[0] ml-[16px]" role="menuitem">
+<a class="flex flex-col text-black-a90 hover:text-blue-70 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_learning-cta" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/aec?trk=homepage-basic_learning-cta">
+<span class="etta-dropdown-header">
+                AEC
+               </span>
+<span class="etta-dropdown-subtext">
+                1,470+ course
+               </span>
+</a>
+</li>
+<li aria-label="Animation and Illustration 1,800+ course" class="mt-[16px] mr-[8px] mb-[0] ml-[16px]" role="menuitem">
+<a class="flex flex-col text-black-a90 hover:text-blue-70 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_learning-cta" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/animation-and-illustration?trk=homepage-basic_learning-cta">
+<span class="etta-dropdown-header">
+                Animation and Illustration
+               </span>
+<span class="etta-dropdown-subtext">
+                1,800+ course
+               </span>
+</a>
+</li>
+<li aria-label="Audio and Music 420+ courses" class="mt-[16px] mr-[8px] mb-[0] ml-[16px]" role="menuitem">
+<a class="flex flex-col text-black-a90 hover:text-blue-70 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_learning-cta" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/audio-and-music?trk=homepage-basic_learning-cta">
+<span class="etta-dropdown-header">
+                Audio and Music
+               </span>
+<span class="etta-dropdown-subtext">
+                420+ courses
+               </span>
+</a>
+</li>
+<li aria-label="Graphic Design 1,040+ course" class="mt-[16px] mr-[8px] mb-[0] ml-[16px]" role="menuitem">
+<a class="flex flex-col text-black-a90 hover:text-blue-70 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_learning-cta" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/graphic-design?trk=homepage-basic_learning-cta">
+<span class="etta-dropdown-header">
+                Graphic Design
+               </span>
+<span class="etta-dropdown-subtext">
+                1,040+ course
+               </span>
+</a>
+</li>
+<li aria-label="Motion Graphics and VFX 910+ courses" class="mt-[16px] mr-[8px] mb-[0] ml-[16px]" role="menuitem">
+<a class="flex flex-col text-black-a90 hover:text-blue-70 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_learning-cta" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/motion-graphics-and-vfx?trk=homepage-basic_learning-cta">
+<span class="etta-dropdown-header">
+                Motion Graphics and VFX
+               </span>
+<span class="etta-dropdown-subtext">
+                910+ courses
+               </span>
+</a>
+</li>
+<li aria-label="Photography 1,230+ course" class="mt-[16px] mr-[8px] mb-[0] ml-[16px]" role="menuitem">
+<a class="flex flex-col text-black-a90 hover:text-blue-70 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_learning-cta" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/photography-2?trk=homepage-basic_learning-cta">
+<span class="etta-dropdown-header">
+                Photography
+               </span>
+<span class="etta-dropdown-subtext">
+                1,230+ course
+               </span>
+</a>
+</li>
+<li aria-label="Product and Manufacturing 1,480+ course" class="mt-[16px] mr-[8px] mb-[0] ml-[16px]" role="menuitem">
+<a class="flex flex-col text-black-a90 hover:text-blue-70 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_learning-cta" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/product-and-manufacturing?trk=homepage-basic_learning-cta">
+<span class="etta-dropdown-header">
+                Product and Manufacturing
+               </span>
+<span class="etta-dropdown-subtext">
+                1,480+ course
+               </span>
+</a>
+</li>
+<li aria-label="User Experience 570+ courses" class="mt-[16px] mr-[8px] mb-[0] ml-[16px]" role="menuitem">
+<a class="flex flex-col text-black-a90 hover:text-blue-70 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_learning-cta" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/user-experience?trk=homepage-basic_learning-cta">
+<span class="etta-dropdown-header">
+                User Experience
+               </span>
+<span class="etta-dropdown-subtext">
+                570+ courses
+               </span>
+</a>
+</li>
+<li aria-label="Video 680+ courses" class="mt-[16px] mr-[8px] mb-[0] ml-[16px]" role="menuitem">
+<a class="flex flex-col text-black-a90 hover:text-blue-70 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_learning-cta" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/video-2?trk=homepage-basic_learning-cta">
+<span class="etta-dropdown-header">
+                Video
+               </span>
+<span class="etta-dropdown-subtext">
+                680+ courses
+               </span>
+</a>
+</li>
+<li aria-label="Visualization and Real-Time 1,330+ course" class="mt-[16px] mr-[8px] mb-[0] ml-[16px]" role="menuitem">
+<a class="flex flex-col text-black-a90 hover:text-blue-70 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_learning-cta" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/visualization-and-real-time?trk=homepage-basic_learning-cta">
+<span class="etta-dropdown-header">
+                Visualization and Real-Time
+               </span>
+<span class="etta-dropdown-subtext">
+                1,330+ course
+               </span>
+</a>
+</li>
+<li aria-label="Web Design 540+ courses" class="mt-[16px] mr-[8px] mb-[0] ml-[16px]" role="menuitem">
+<a class="flex flex-col text-black-a90 hover:text-blue-70 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_learning-cta" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/web-design?trk=homepage-basic_learning-cta">
+<span class="etta-dropdown-header">
+                Web Design
+               </span>
+<span class="etta-dropdown-subtext">
+                540+ courses
+               </span>
+</a>
+</li>
+<li aria-label="Artificial Intelligence (AI) 610+ courses" class="mt-[16px] mr-[8px] mb-[0] ml-[16px]" role="menuitem">
+<a class="flex flex-col text-black-a90 hover:text-blue-70 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_learning-cta" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/artificial-intelligence?trk=homepage-basic_learning-cta">
+<span class="etta-dropdown-header">
+                Artificial Intelligence (AI)
+               </span>
+<span class="etta-dropdown-subtext">
+                610+ courses
+               </span>
+</a>
+</li>
+<li aria-label="Cloud Computing 1,470+ course" class="mt-[16px] mr-[8px] mb-[0] ml-[16px]" role="menuitem">
+<a class="flex flex-col text-black-a90 hover:text-blue-70 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_learning-cta" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/cloud-computing-5?trk=homepage-basic_learning-cta">
+<span class="etta-dropdown-header">
+                Cloud Computing
+               </span>
+<span class="etta-dropdown-subtext">
+                1,470+ course
+               </span>
+</a>
+</li>
+<li aria-label="Cybersecurity 990+ courses" class="mt-[16px] mr-[8px] mb-[0] ml-[16px]" role="menuitem">
+<a class="flex flex-col text-black-a90 hover:text-blue-70 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_learning-cta" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/security-3?trk=homepage-basic_learning-cta">
+<span class="etta-dropdown-header">
+                Cybersecurity
+               </span>
+<span class="etta-dropdown-subtext">
+                990+ courses
+               </span>
+</a>
+</li>
+<li aria-label="Data Science 1,410+ course" class="mt-[16px] mr-[8px] mb-[0] ml-[16px]" role="menuitem">
+<a class="flex flex-col text-black-a90 hover:text-blue-70 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_learning-cta" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/data-science?trk=homepage-basic_learning-cta">
+<span class="etta-dropdown-header">
+                Data Science
+               </span>
+<span class="etta-dropdown-subtext">
+                1,410+ course
+               </span>
+</a>
+</li>
+<li aria-label="Database Management 490+ courses" class="mt-[16px] mr-[8px] mb-[0] ml-[16px]" role="menuitem">
+<a class="flex flex-col text-black-a90 hover:text-blue-70 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_learning-cta" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/database-management?trk=homepage-basic_learning-cta">
+<span class="etta-dropdown-header">
+                Database Management
+               </span>
+<span class="etta-dropdown-subtext">
+                490+ courses
+               </span>
+</a>
+</li>
+<li aria-label="DevOps 340+ courses" class="mt-[16px] mr-[8px] mb-[0] ml-[16px]" role="menuitem">
+<a class="flex flex-col text-black-a90 hover:text-blue-70 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_learning-cta" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/devops?trk=homepage-basic_learning-cta">
+<span class="etta-dropdown-header">
+                DevOps
+               </span>
+<span class="etta-dropdown-subtext">
+                340+ courses
+               </span>
+</a>
+</li>
+<li aria-label="Hardware 80+ courses" class="mt-[16px] mr-[8px] mb-[0] ml-[16px]" role="menuitem">
+<a class="flex flex-col text-black-a90 hover:text-blue-70 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_learning-cta" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/hardware?trk=homepage-basic_learning-cta">
+<span class="etta-dropdown-header">
+                Hardware
+               </span>
+<span class="etta-dropdown-subtext">
+                80+ courses
+               </span>
+</a>
+</li>
+<li aria-label="IT Help Desk 370+ courses" class="mt-[16px] mr-[8px] mb-[0] ml-[16px]" role="menuitem">
+<a class="flex flex-col text-black-a90 hover:text-blue-70 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_learning-cta" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/it-help-desk-5?trk=homepage-basic_learning-cta">
+<span class="etta-dropdown-header">
+                IT Help Desk
+               </span>
+<span class="etta-dropdown-subtext">
+                370+ courses
+               </span>
+</a>
+</li>
+<li aria-label="Mobile Development 490+ courses" class="mt-[16px] mr-[8px] mb-[0] ml-[16px]" role="menuitem">
+<a class="flex flex-col text-black-a90 hover:text-blue-70 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_learning-cta" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/mobile-development?trk=homepage-basic_learning-cta">
+<span class="etta-dropdown-header">
+                Mobile Development
+               </span>
+<span class="etta-dropdown-subtext">
+                490+ courses
+               </span>
+</a>
+</li>
+<li aria-label="Network and System Administration 1,550+ course" class="mt-[16px] mr-[8px] mb-[0] ml-[16px]" role="menuitem">
+<a class="flex flex-col text-black-a90 hover:text-blue-70 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_learning-cta" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/network-and-system-administration?trk=homepage-basic_learning-cta">
+<span class="etta-dropdown-header">
+                Network and System Administration
+               </span>
+<span class="etta-dropdown-subtext">
+                1,550+ course
+               </span>
+</a>
+</li>
+<li aria-label="Software Development 2,800+ courses" class="mt-[16px] mr-[8px] mb-[0] ml-[16px]" role="menuitem">
+<a class="flex flex-col text-black-a90 hover:text-blue-70 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_learning-cta" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/software-development?trk=homepage-basic_learning-cta">
+<span class="etta-dropdown-header">
+                Software Development
+               </span>
+<span class="etta-dropdown-subtext">
+                2,800+ courses
+               </span>
+</a>
+</li>
+<li aria-label="Web Development 1,780+ course" class="mt-[16px] mr-[8px] mb-[0] ml-[16px]" role="menuitem">
+<a class="flex flex-col text-black-a90 hover:text-blue-70 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_learning-cta" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/web-development?trk=homepage-basic_learning-cta">
+<span class="etta-dropdown-header">
+                Web Development
+               </span>
+<span class="etta-dropdown-subtext">
+                1,780+ course
+               </span>
+</a>
+</li>
+</ul>
+</div>
+<!-- -->
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</section>
+<section class="section min-h-section py-section">
+<div class="flex flex-row flex-nowrap h-[720px] w-full after:full-color-bkg after:content-[''] after:bg-color-background-canvas papabear:after:brand-discovery-bkg mamabear:after:brand-discovery-bkg babybear:h-full" data-impression-id="homepage-basic_brand-discovery" data-test-id="brand-discovery">
+<div class="flex flex-row flex-nowrap h-auto mb-hero-content babybear:w-full babybear:mb-[0px] !block min-w-[50%] w-[50%] my-auto pr-[50px] babybear:pr-[0px]" data-impression-id="homepage-basic_brand-discovery_intent-module" data-test-id="">
+<h2 class="header !text-warm-red-70 mb-[8px]">
+       Who is LinkedIn for?
+      </h2>
+<h3 class="body mb-[40px] babybear:mb-[24px]">
+       Anyone looking to navigate their professional life.
+      </h3>
+<ul class="w-full">
+<li class="mb-[16px]">
+<a class="etta-btn bg-color-background-canvas-mobile hover:text-color-text hover:bg-[#e1dad0]" data-tracking-control-name="homepage-basic_brand-discovery_intent-module-firstBtn" data-tracking-will-navigate="" href="https://www.linkedin.com/pub/dir/+/+?trk=homepage-basic_brand-discovery_intent-module-firstBtn">
+         Find a coworker or classmate
+         <icon aria-hidden='true' class="ml-[16px] flip-rtl" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/3l4csbmaa6sv4gtsledhbu9lq">
+</icon>
+</a>
+</li>
+<li class="mb-[16px]">
+<a class="etta-btn bg-color-background-canvas-mobile hover:text-color-text hover:bg-[#e1dad0]" data-tracking-control-name="homepage-basic_brand-discovery_intent-module-secondBtn" data-tracking-will-navigate="" href="https://www.linkedin.com/jobs/jobs-in-montreal-qc?trk=homepage-basic_brand-discovery_intent-module-secondBtn">
+         Find a new job
+         <icon aria-hidden='true' class="ml-[16px] flip-rtl" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/3l4csbmaa6sv4gtsledhbu9lq">
+</icon>
+</a>
+</li>
+<li class="mb-[16px]">
+<a class="etta-btn bg-color-background-canvas-mobile hover:text-color-text hover:bg-[#e1dad0]" data-tracking-control-name="homepage-basic_brand-discovery_intent-module-thirdBtn" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/search?trk=homepage-basic_brand-discovery_intent-module-thirdBtn">
+         Find a course or training
+         <icon aria-hidden='true' class="ml-[16px] flip-rtl" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/3l4csbmaa6sv4gtsledhbu9lq">
+</icon>
+</a>
+</li>
+</ul>
+</div>
+<img alt="Who is LinkedIn for?" class="h-[840px] self-center ml-[96px] flip-rtl babybear:hidden" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/292yd0en6qdvkbezeuj71yu4y"></img>
+</div>
+</section>
+<!-- -->
+<section class="section min-h-section py-section">
+<div class="w-full self-start lazy-load after-lazy-bg-join after:content-[''] after:full-color-bkg after:bg-repeat-x after:bg-bottom after:bg-full-y babybear:h-full babybear:p-[0] babybear:after:content-[none]" data-test-id="bottom-cta-section">
+<h2 class="header mt-[48px] mb-[16px] keep-all babybear:mt-[0px] babybear:mb-[24px]" id="bottom-cta-section__header">
+      Join your colleagues, classmates, and friends on LinkedIn.
+     </h2>
+<!-- -->
+<a aria-describedby="bottom-cta-section__header" class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-primary" data-tracking-control-name="homepage-basic_join-cta" data-tracking-will-navigate="" href="https://www.linkedin.com/signup?trk=homepage-basic_join-cta">
+      Get started
+     </a>
+</div>
+</section>
+<section class="directory section w-full flex justify-between pt-[24px] pb-[22px] after:full-color-bkg after:content-[''] after:bg-color-background-canvas babybear:flex-col babybear:max-w-full babybear:py-[24px] babybear:px-mobile-container-padding" data-impression-id="homepage-basic_directory" data-test-id="directory-section">
+<icon class="flex self-start h-[21px] w-[84px] text-blue-70" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/b0sinzszgdrksde0dzc0leckm">
+</icon>
+<div class="w-full flex justify-end pl-[16px] babybear:flex-col babybear:flex-wrap babybear:mt-[24px] babybear:pl-[0px]">
+<div class="w-full max-w-[192px] mr-3">
+<h3 class="font-sans text-[16px] font-bold text-black-a90 leading-[1.25] mb-1 babybear:max-w-full babybear:my-[10px]">
+       General
+      </h3>
+<ul>
+<li class="babybear:my-[10px] babybear:max-w-full">
+<a class="font-sans text-[14px] text-black-a60 font-bold leading-[1.25] visited:text-black-a60 hover:visited:text-blue-70" data-tracking-control-name="guest_homepage-basic_directory" data-tracking-will-navigate="" href="https://www.linkedin.com/signup?trk=guest_homepage-basic_directory">
+         Sign Up
+        </a>
+</li>
+<li class="babybear:my-[10px] babybear:max-w-full">
+<a class="font-sans text-[14px] text-black-a60 font-bold leading-[1.25] visited:text-black-a60 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_directory_helpCenterUrl" data-tracking-will-navigate="" href="https://www.linkedin.com/help/linkedin?lang=en&trk=homepage-basic_directory_helpCenterUrl">
+         Help Center
+        </a>
+</li>
+<li class="babybear:my-[10px] babybear:max-w-full">
+<a class="font-sans text-[14px] text-black-a60 font-bold leading-[1.25] visited:text-black-a60 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_directory_aboutUrl" data-tracking-will-navigate="" href="https://about.linkedin.com/?trk=homepage-basic_directory_aboutUrl">
+         About
+        </a>
+</li>
+<li class="babybear:my-[10px] babybear:max-w-full">
+<a class="font-sans text-[14px] text-black-a60 font-bold leading-[1.25] visited:text-black-a60 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_directory_pressMicrositeUrl" data-tracking-will-navigate="" href="https://press.linkedin.com/?trk=homepage-basic_directory_pressMicrositeUrl">
+         Press
+        </a>
+</li>
+<li class="babybear:my-[10px] babybear:max-w-full">
+<a class="font-sans text-[14px] text-black-a60 font-bold leading-[1.25] visited:text-black-a60 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_directory_blogMicrositeUrl" data-tracking-will-navigate="" href="https://blog.linkedin.com/?trk=homepage-basic_directory_blogMicrositeUrl">
+         Blog
+        </a>
+</li>
+<li class="babybear:my-[10px] babybear:max-w-full">
+<a class="font-sans text-[14px] text-black-a60 font-bold leading-[1.25] visited:text-black-a60 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_directory_careersUrl" data-tracking-will-navigate="" href="https://www.linkedin.com/company/linkedin/jobs?trk=homepage-basic_directory_careersUrl">
+         Careers
+        </a>
+</li>
+<li class="babybear:my-[10px] babybear:max-w-full">
+<a class="font-sans text-[14px] text-black-a60 font-bold leading-[1.25] visited:text-black-a60 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_directory_developerMicrositeUrl" data-tracking-will-navigate="" href="https://developer.linkedin.com/?trk=homepage-basic_directory_developerMicrositeUrl">
+         Developers
+        </a>
+</li>
+</ul>
+</div>
+<div class="w-full max-w-[192px] mr-3">
+<h3 class="font-sans text-[16px] font-bold text-black-a90 leading-[1.25] mb-1 babybear:max-w-full babybear:my-[10px]">
+       Browse LinkedIn
+      </h3>
+<ul>
+<li class="babybear:my-[10px] babybear:max-w-full">
+<a class="font-sans text-[14px] text-black-a60 font-bold leading-[1.25] visited:text-black-a60 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_directory_learningHomeUrl" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/?trk=homepage-basic_directory_learningHomeUrl">
+         Learning
+        </a>
+</li>
+<li class="babybear:my-[10px] babybear:max-w-full">
+<a class="font-sans text-[14px] text-black-a60 font-bold leading-[1.25] visited:text-black-a60 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_directory_jobsHomeUrl" data-tracking-will-navigate="" href="https://www.linkedin.com/jobs?trk=homepage-basic_directory_jobsHomeUrl">
+         Jobs
+        </a>
+</li>
+<li class="babybear:my-[10px] babybear:max-w-full">
+<a class="font-sans text-[14px] text-black-a60 font-bold leading-[1.25] visited:text-black-a60 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_directory_gameHubUrl" data-tracking-will-navigate="" href="https://www.linkedin.com/games?trk=homepage-basic_directory_gameHubUrl">
+         Games
+        </a>
+</li>
+<li class="babybear:my-[10px] babybear:max-w-full">
+<a class="font-sans text-[14px] text-black-a60 font-bold leading-[1.25] visited:text-black-a60 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_directory_salaryHomeUrl" data-tracking-will-navigate="" href="https://www.linkedin.com/salary/?trk=homepage-basic_directory_salaryHomeUrl">
+         Salary
+        </a>
+</li>
+<li class="babybear:my-[10px] babybear:max-w-full">
+<a class="font-sans text-[14px] text-black-a60 font-bold leading-[1.25] visited:text-black-a60 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_directory_mobileMicrositeUrl" data-tracking-will-navigate="" href="https://mobile.linkedin.com/?trk=homepage-basic_directory_mobileMicrositeUrl">
+         Mobile
+        </a>
+</li>
+<li class="babybear:my-[10px] babybear:max-w-full">
+<a class="font-sans text-[14px] text-black-a60 font-bold leading-[1.25] visited:text-black-a60 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_directory_servicesHomeUrl" data-tracking-will-navigate="" href="https://www.linkedin.com/services?trk=homepage-basic_directory_servicesHomeUrl">
+         Services
+        </a>
+</li>
+<li class="babybear:my-[10px] babybear:max-w-full">
+<a class="font-sans text-[14px] text-black-a60 font-bold leading-[1.25] visited:text-black-a60 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_directory_productsHomeUrl" data-tracking-will-navigate="" href="https://www.linkedin.com/products?trk=homepage-basic_directory_productsHomeUrl">
+         Products
+        </a>
+</li>
+<li class="babybear:my-[10px] babybear:max-w-full">
+<a class="font-sans text-[14px] text-black-a60 font-bold leading-[1.25] visited:text-black-a60 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_directory_topCompaniesHubHomeUrl" data-tracking-will-navigate="" href="https://www.linkedin.com/hubs/top-companies/?trk=homepage-basic_directory_topCompaniesHubHomeUrl">
+         Top Companies Hub
+        </a>
+</li>
+</ul>
+</div>
+<div class="w-full max-w-[192px] mr-3">
+<h3 class="font-sans text-[16px] font-bold text-black-a90 leading-[1.25] mb-1 babybear:max-w-full babybear:my-[10px]">
+       Business Solutions
+      </h3>
+<ul>
+<li class="babybear:my-[10px] babybear:max-w-full">
+<a class="font-sans text-[14px] text-black-a60 font-bold leading-[1.25] visited:text-black-a60 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_directory_talentSolutionsMicrositeUrl" data-tracking-will-navigate="" href="https://business.linkedin.com/talent-solutions?src=li-footer&utm_source=linkedin&utm_medium=footer&trk=homepage-basic_directory_talentSolutionsMicrositeUrl">
+         Talent
+        </a>
+</li>
+<li class="babybear:my-[10px] babybear:max-w-full">
+<a class="font-sans text-[14px] text-black-a60 font-bold leading-[1.25] visited:text-black-a60 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_directory_marketingSolutionsMicrositeUrl" data-tracking-will-navigate="" href="https://business.linkedin.com/marketing-solutions?src=li-footer&utm_source=linkedin&utm_medium=footer&trk=homepage-basic_directory_marketingSolutionsMicrositeUrl">
+         Marketing
+        </a>
+</li>
+<li class="babybear:my-[10px] babybear:max-w-full">
+<a class="font-sans text-[14px] text-black-a60 font-bold leading-[1.25] visited:text-black-a60 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_directory_salesSolutionsMicrositeUrl" data-tracking-will-navigate="" href="https://business.linkedin.com/sales-solutions?src=li-footer&utm_source=linkedin&utm_medium=footer&trk=homepage-basic_directory_salesSolutionsMicrositeUrl">
+         Sales
+        </a>
+</li>
+<li class="babybear:my-[10px] babybear:max-w-full">
+<a class="font-sans text-[14px] text-black-a60 font-bold leading-[1.25] visited:text-black-a60 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_directory_learningMicrositeUrl" data-tracking-will-navigate="" href="https://learning.linkedin.com/?src=li-footer&trk=homepage-basic_directory_learningMicrositeUrl">
+         Learning
+        </a>
+</li>
+</ul>
+</div>
+<div class="w-full max-w-[192px] mr-3">
+<h3 class="font-sans text-[16px] font-bold text-black-a90 leading-[1.25] mb-1 babybear:max-w-full babybear:my-[10px]">
+       Directories
+      </h3>
+<ul>
+<li class="babybear:my-[10px] babybear:max-w-full">
+<a class="font-sans text-[14px] text-black-a60 font-bold leading-[1.25] visited:text-black-a60 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_directory_peopleDirectoryUrl" data-tracking-will-navigate="" href="https://www.linkedin.com/directory/people?trk=homepage-basic_directory_peopleDirectoryUrl">
+         Members
+        </a>
+</li>
+<li class="babybear:my-[10px] babybear:max-w-full">
+<a class="font-sans text-[14px] text-black-a60 font-bold leading-[1.25] visited:text-black-a60 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_directory_jobSearchDirectoryUrl" data-tracking-will-navigate="" href="https://www.linkedin.com/directory/jobs?trk=homepage-basic_directory_jobSearchDirectoryUrl">
+         Jobs
+        </a>
+</li>
+<li class="babybear:my-[10px] babybear:max-w-full">
+<a class="font-sans text-[14px] text-black-a60 font-bold leading-[1.25] visited:text-black-a60 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_directory_companyDirectoryUrl" data-tracking-will-navigate="" href="https://www.linkedin.com/directory/companies?trk=homepage-basic_directory_companyDirectoryUrl">
+         Companies
+        </a>
+</li>
+<li class="babybear:my-[10px] babybear:max-w-full">
+<a class="font-sans text-[14px] text-black-a60 font-bold leading-[1.25] visited:text-black-a60 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_directory_featuredDirectoryUrl" data-tracking-will-navigate="" href="https://www.linkedin.com/directory/featured?trk=homepage-basic_directory_featuredDirectoryUrl">
+         Featured
+        </a>
+</li>
+<li class="babybear:my-[10px] babybear:max-w-full">
+<a class="font-sans text-[14px] text-black-a60 font-bold leading-[1.25] visited:text-black-a60 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_directory_learningDirectoryUrl" data-tracking-will-navigate="" href="https://www.linkedin.com/directory/learning?trk=homepage-basic_directory_learningDirectoryUrl">
+         Learning
+        </a>
+</li>
+<li class="babybear:my-[10px] babybear:max-w-full">
+<a class="font-sans text-[14px] text-black-a60 font-bold leading-[1.25] visited:text-black-a60 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_directory_postsDirectoryUrl" data-tracking-will-navigate="" href="https://www.linkedin.com/directory/posts?trk=homepage-basic_directory_postsDirectoryUrl">
+         Posts
+        </a>
+</li>
+<li class="babybear:my-[10px] babybear:max-w-full">
+<a class="font-sans text-[14px] text-black-a60 font-bold leading-[1.25] visited:text-black-a60 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_directory_articlesDirectoryUrl" data-tracking-will-navigate="" href="https://www.linkedin.com/directory/articles?trk=homepage-basic_directory_articlesDirectoryUrl">
+         Articles
+        </a>
+</li>
+<li class="babybear:my-[10px] babybear:max-w-full">
+<a class="font-sans text-[14px] text-black-a60 font-bold leading-[1.25] visited:text-black-a60 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_directory_schoolsDirectoryUrl" data-tracking-will-navigate="" href="https://www.linkedin.com/directory/schools?trk=homepage-basic_directory_schoolsDirectoryUrl">
+         Schools
+        </a>
+</li>
+<li class="babybear:my-[10px] babybear:max-w-full">
+<a class="font-sans text-[14px] text-black-a60 font-bold leading-[1.25] visited:text-black-a60 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_directory_newsDirectoryUrl" data-tracking-will-navigate="" href="https://www.linkedin.com/directory/news?trk=homepage-basic_directory_newsDirectoryUrl">
+         News
+        </a>
+</li>
+<li class="babybear:my-[10px] babybear:max-w-full">
+<a class="font-sans text-[14px] text-black-a60 font-bold leading-[1.25] visited:text-black-a60 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_directory_newslettersDirectoryUrl" data-tracking-will-navigate="" href="https://www.linkedin.com/directory/newsletters?trk=homepage-basic_directory_newslettersDirectoryUrl">
+         News Letters
+        </a>
+</li>
+<li class="babybear:my-[10px] babybear:max-w-full">
+<a class="font-sans text-[14px] text-black-a60 font-bold leading-[1.25] visited:text-black-a60 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_directory_servicesDirectoryUrl" data-tracking-will-navigate="" href="https://www.linkedin.com/directory/services?trk=homepage-basic_directory_servicesDirectoryUrl">
+         Services
+        </a>
+</li>
+<li class="babybear:my-[10px] babybear:max-w-full">
+<a class="font-sans text-[14px] text-black-a60 font-bold leading-[1.25] visited:text-black-a60 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_directory_productsDirectoryUrl" data-tracking-will-navigate="" href="https://www.linkedin.com/directory/products?trk=homepage-basic_directory_productsDirectoryUrl">
+         Products
+        </a>
+</li>
+<li class="babybear:my-[10px] babybear:max-w-full">
+<a class="font-sans text-[14px] text-black-a60 font-bold leading-[1.25] visited:text-black-a60 hover:visited:text-blue-70" data-tracking-control-name="homepage-basic_directory_adviceDirectoryUrl" data-tracking-will-navigate="" href="https://www.linkedin.com/directory/advice?trk=homepage-basic_directory_adviceDirectoryUrl">
+         Advice
+        </a>
+</li>
+<li class="babybear:my-[10px] babybear:max-w-full">
+
+        ```
+        

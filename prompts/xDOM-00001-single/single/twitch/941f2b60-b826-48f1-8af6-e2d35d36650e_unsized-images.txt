@@ -1,0 +1,110 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. unsized-images => Image elements do not have explicit `width` and `height`: Set an explicit width and height on image elements to reduce layout shifts and improve CLS. [Learn how to set image dimensions](https://web.dev/articles/optimize-cls#images_without_dimensions)
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        
+<div class="root" id="root">
+<style data-chunk-uuid="24f713bd-4b88-46bf-a423-ff165ba8d16f">/* chunk_style_24f713bd-4b88-46bf-a423-ff165ba8d16f */
+</style>
+<script data-chunk-uuid="b81ba6ef-9d9b-4176-84df-4310a964d252">// chunk_script_b81ba6ef-9d9b-4176-84df-4310a964d252
+</script>
+<div class="shell-nav">
+<figure class="shell-nav__logo">
+<svg height="40px" version='1.1' viewbox="0 0 40 40" width="40px" x="0px" y="0px">
+<g fill-rule="evenodd">
+<path d="M19 6v6h-2V6h2zm-7 0h2v6h-2V6zM5 0L0 5v18h6v5l5-5h4l9-9V0H5zm17 13l-4 4h-4l-4 4v-4H6V2h16v11z">
+</path>
+<path d="M18 17l4-4V2H6v15h4v4l4-4h4zM12 6h2v6h-2V6zm7 0h-2v6h2V6z" fill="#FFF">
+</path>
+</g>
+</svg>
+</figure>
+<div class="shell-nav__link-list">
+<div class="shell-nav__link shell-nav__link--discovery">
+</div>
+<div class="shell-nav__link shell-nav__link--follow">
+</div>
+<div class="shell-nav__link shell-nav__link--browse">
+</div>
+</div>
+<div class="shell-nav__ellipsis">
+<figure class="shell__svg--navmore">
+<svg height="20px" version='1.1' viewbox="0 0 20 20" width="20px" x="0px" y="0px">
+<path d="M4 8a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm6 0a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm6 0a2 2 0 1 1 0 4 2 2 0 0 1 0-4z" fill-rule="evenodd">
+</path>
+</svg>
+</figure>
+</div>
+<div class="shell-nav__search-container">
+<div class="shell-nav__search">
+</div>
+</div>
+<div class="shell-nav__user-auth">
+<div class="shell-nav__user-auth-button shell-nav__user-auth-button--login">
+</div>
+<div class="shell-nav__user-auth-button shell-nav__user-auth-button--singup">
+</div>
+</div>
+<div class="shell-nav__user-card">
+<div class="shell-nav__user-card-avatar">
+</div>
+</div>
+</div>
+<div class="shell-loader" data-a-target="shell-loader">
+<div class="shell-loader__spinner">
+</div>
+</div>
+</div>
+<script data-chunk-uuid="bf18c9a0-3fef-49ca-9ead-846dbab410e0">// chunk_script_bf18c9a0-3fef-49ca-9ead-846dbab410e0
+</script>
+<script data-chunk-uuid="cbba8d16-6aa1-4298-bc1a-79e3644069e7" crossorigin="anonymous" src="https://assets.twitch.tv/config/settings.ffe973d9a7cbf13a845a23a2598caf27.js">// chunk_script_cbba8d16-6aa1-4298-bc1a-79e3644069e7
+</script>
+<script data-chunk-uuid="8f981e8b-edc1-4e68-b848-38fa1859105c">// chunk_script_8f981e8b-edc1-4e68-b848-38fa1859105c
+</script>
+<link href="https://assets.twitch.tv/assets/core-0afbcdeaff154d87e89d.css" rel="stylesheet"></link>
+<script data-chunk-uuid="ffe339bd-4169-4940-ab43-dc5cbb695a5e">// chunk_script_ffe339bd-4169-4940-ab43-dc5cbb695a5e
+</script>
+<script data-chunk-uuid="d1c1d4d4-9c47-44c7-ba83-4099e85cad39" src="https://assets.twitch.tv/assets/vendor-5a3405cf3be13d3fb193.js">// chunk_script_d1c1d4d4-9c47-44c7-ba83-4099e85cad39
+</script>
+<script data-chunk-uuid="cea29cae-9cae-43b6-91ed-fd1d21cf81a0" nomodule="" src="https://assets.twitch.tv/assets/nomodulePolyfills-46100576e19cbb82aad7.js">// chunk_script_cea29cae-9cae-43b6-91ed-fd1d21cf81a0
+</script>
+<script data-chunk-uuid="518f31c2-6656-4272-84f0-13dc69f6c85e" src="https://assets.twitch.tv/assets/polyfills-cc5b9bf3b3f7bc813c6c.js">// chunk_script_518f31c2-6656-4272-84f0-13dc69f6c85e
+</script>
+<script data-chunk-uuid="08637917-3377-437e-92b7-14678a769bc2" src="https://assets.twitch.tv/assets/core-6770001ba32ecc8e7c53.js">// chunk_script_08637917-3377-437e-92b7-14678a769bc2
+</script>
+
+        ```
+        

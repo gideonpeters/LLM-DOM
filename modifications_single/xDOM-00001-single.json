@@ -454,5 +454,2221 @@
         "experiment_name": "xDOM-00001-single",
         "mode": "single",
         "audit_key": "legacy-javascript"
+    },
+    {
+        "name": "github",
+        "modifications": 9,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "first-contentful-paint"
+    },
+    {
+        "name": "github",
+        "modifications": 9,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "total-blocking-time"
+    },
+    {
+        "name": "github",
+        "modifications": 8,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "max-potential-fid"
+    },
+    {
+        "name": "github",
+        "modifications": 7,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "largest-contentful-paint"
+    },
+    {
+        "name": "github",
+        "modifications": 8,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "interactive"
+    },
+    {
+        "name": "github",
+        "modifications": 5,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "speed-index"
+    },
+    {
+        "name": "github",
+        "modifications": 8,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "image-aspect-ratio"
+    },
+    {
+        "name": "github",
+        "modifications": 9,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "third-party-summary"
+    },
+    {
+        "name": "github",
+        "modifications": 9,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "bootup-time"
+    },
+    {
+        "name": "github",
+        "modifications": 6,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "mainthread-work-breakdown"
+    },
+    {
+        "name": "github",
+        "modifications": 6,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "errors-in-console"
+    },
+    {
+        "name": "github",
+        "modifications": 7,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "unsized-images"
+    },
+    {
+        "name": "github",
+        "modifications": 9,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "largest-contentful-paint-element"
+    },
+    {
+        "name": "github",
+        "modifications": 8,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "total-byte-weight"
+    },
+    {
+        "name": "github",
+        "modifications": 6,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "render-blocking-resources"
+    },
+    {
+        "name": "github",
+        "modifications": 7,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "offscreen-images"
+    },
+    {
+        "name": "github",
+        "modifications": 5,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "target-size"
+    },
+    {
+        "name": "github",
+        "modifications": 8,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "unused-css-rules"
+    },
+    {
+        "name": "github",
+        "modifications": 8,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "uses-responsive-images"
+    },
+    {
+        "name": "github",
+        "modifications": 9,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "uses-text-compression"
+    },
+    {
+        "name": "github",
+        "modifications": 10,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "modern-image-formats"
+    },
+    {
+        "name": "github",
+        "modifications": 7,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "unused-javascript"
+    },
+    {
+        "name": "github",
+        "modifications": 8,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "duplicated-javascript"
+    },
+    {
+        "name": "github",
+        "modifications": 7,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "dom-size"
+    },
+    {
+        "name": "github",
+        "modifications": 5,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "cumulative-layout-shift"
+    },
+    {
+        "name": "linkedin",
+        "modifications": 4,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "first-contentful-paint"
+    },
+    {
+        "name": "linkedin",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "largest-contentful-paint"
+    },
+    {
+        "name": "linkedin",
+        "modifications": 3,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "speed-index"
+    },
+    {
+        "name": "linkedin",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "max-potential-fid"
+    },
+    {
+        "name": "linkedin",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "total-blocking-time"
+    },
+    {
+        "name": "linkedin",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "errors-in-console"
+    },
+    {
+        "name": "linkedin",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "is-on-https"
+    },
+    {
+        "name": "linkedin",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "interactive"
+    },
+    {
+        "name": "linkedin",
+        "modifications": 3,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "bootup-time"
+    },
+    {
+        "name": "linkedin",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "image-aspect-ratio"
+    },
+    {
+        "name": "linkedin",
+        "modifications": 4,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "third-party-summary"
+    },
+    {
+        "name": "linkedin",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "third-party-cookies"
+    },
+    {
+        "name": "linkedin",
+        "modifications": 3,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "largest-contentful-paint-element"
+    },
+    {
+        "name": "linkedin",
+        "modifications": 4,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "render-blocking-resources"
+    },
+    {
+        "name": "linkedin",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "label-content-name-mismatch"
+    },
+    {
+        "name": "linkedin",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "uses-long-cache-ttl"
+    },
+    {
+        "name": "linkedin",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "mainthread-work-breakdown"
+    },
+    {
+        "name": "linkedin",
+        "modifications": 5,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "offscreen-images"
+    },
+    {
+        "name": "linkedin",
+        "modifications": 4,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "legacy-javascript"
+    },
+    {
+        "name": "linkedin",
+        "modifications": 5,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "modern-image-formats"
+    },
+    {
+        "name": "linkedin",
+        "modifications": 5,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "unused-javascript"
+    },
+    {
+        "name": "linkedin",
+        "modifications": 3,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "uses-text-compression"
+    },
+    {
+        "name": "linkedin",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "unused-css-rules"
+    },
+    {
+        "name": "linkedin",
+        "modifications": 4,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "charset"
+    },
+    {
+        "name": "linkedin",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "inspector-issues"
+    },
+    {
+        "name": "linkedin",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "uses-passive-event-listeners"
+    },
+    {
+        "name": "medium",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "first-contentful-paint"
+    },
+    {
+        "name": "medium",
+        "modifications": 0,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "total-blocking-time"
+    },
+    {
+        "name": "medium",
+        "modifications": 0,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "speed-index"
+    },
+    {
+        "name": "medium",
+        "modifications": 0,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "max-potential-fid"
+    },
+    {
+        "name": "medium",
+        "modifications": 0,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "is-on-https"
+    },
+    {
+        "name": "medium",
+        "modifications": 0,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "errors-in-console"
+    },
+    {
+        "name": "medium",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "third-party-cookies"
+    },
+    {
+        "name": "medium",
+        "modifications": 6,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "interactive"
+    },
+    {
+        "name": "medium",
+        "modifications": 0,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "bootup-time"
+    },
+    {
+        "name": "medium",
+        "modifications": 6,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "mainthread-work-breakdown"
+    },
+    {
+        "name": "medium",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "meta-viewport"
+    },
+    {
+        "name": "medium",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "third-party-summary"
+    },
+    {
+        "name": "medium",
+        "modifications": 0,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "color-contrast"
+    },
+    {
+        "name": "medium",
+        "modifications": 7,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "uses-long-cache-ttl"
+    },
+    {
+        "name": "medium",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "uses-text-compression"
+    },
+    {
+        "name": "medium",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "render-blocking-resources"
+    },
+    {
+        "name": "medium",
+        "modifications": 7,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "unused-javascript"
+    },
+    {
+        "name": "medium",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "legacy-javascript"
+    },
+    {
+        "name": "medium",
+        "modifications": 6,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "inspector-issues"
+    },
+    {
+        "name": "medium",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "meta-description"
+    },
+    {
+        "name": "netflix",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "largest-contentful-paint"
+    },
+    {
+        "name": "netflix",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "speed-index"
+    },
+    {
+        "name": "netflix",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "total-blocking-time"
+    },
+    {
+        "name": "netflix",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "max-potential-fid"
+    },
+    {
+        "name": "netflix",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "first-contentful-paint"
+    },
+    {
+        "name": "netflix",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "interactive"
+    },
+    {
+        "name": "netflix",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "font-display"
+    },
+    {
+        "name": "netflix",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "bootup-time"
+    },
+    {
+        "name": "netflix",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "valid-source-maps"
+    },
+    {
+        "name": "netflix",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "mainthread-work-breakdown"
+    },
+    {
+        "name": "netflix",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "uses-rel-preconnect"
+    },
+    {
+        "name": "netflix",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "third-party-summary"
+    },
+    {
+        "name": "netflix",
+        "modifications": 0,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "largest-contentful-paint-element"
+    },
+    {
+        "name": "netflix",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "unminified-javascript"
+    },
+    {
+        "name": "netflix",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "meta-viewport"
+    },
+    {
+        "name": "netflix",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "unused-javascript"
+    },
+    {
+        "name": "netflix",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "uses-long-cache-ttl"
+    },
+    {
+        "name": "netflix",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "render-blocking-resources"
+    },
+    {
+        "name": "netflix",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "offscreen-images"
+    },
+    {
+        "name": "netflix",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "unused-css-rules"
+    },
+    {
+        "name": "netflix",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "legacy-javascript"
+    },
+    {
+        "name": "netflix",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "uses-text-compression"
+    },
+    {
+        "name": "netflix",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "inspector-issues"
+    },
+    {
+        "name": "netflix",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "font-size"
+    },
+    {
+        "name": "netflix",
+        "modifications": 0,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "link-text"
+    },
+    {
+        "name": "pinterest",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "first-contentful-paint"
+    },
+    {
+        "name": "pinterest",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "max-potential-fid"
+    },
+    {
+        "name": "pinterest",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "speed-index"
+    },
+    {
+        "name": "pinterest",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "total-blocking-time"
+    },
+    {
+        "name": "pinterest",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "largest-contentful-paint"
+    },
+    {
+        "name": "pinterest",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "cumulative-layout-shift"
+    },
+    {
+        "name": "pinterest",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "errors-in-console"
+    },
+    {
+        "name": "pinterest",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "interactive"
+    },
+    {
+        "name": "pinterest",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "font-display"
+    },
+    {
+        "name": "pinterest",
+        "modifications": 0,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "deprecations"
+    },
+    {
+        "name": "pinterest",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "bootup-time"
+    },
+    {
+        "name": "pinterest",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "target-size"
+    },
+    {
+        "name": "pinterest",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "uses-rel-preconnect"
+    },
+    {
+        "name": "pinterest",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "third-party-summary"
+    },
+    {
+        "name": "pinterest",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "largest-contentful-paint-element"
+    },
+    {
+        "name": "pinterest",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "mainthread-work-breakdown"
+    },
+    {
+        "name": "pinterest",
+        "modifications": 0,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "unused-css-rules"
+    },
+    {
+        "name": "pinterest",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "modern-image-formats"
+    },
+    {
+        "name": "pinterest",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "uses-optimized-images"
+    },
+    {
+        "name": "pinterest",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "uses-long-cache-ttl"
+    },
+    {
+        "name": "pinterest",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "uses-text-compression"
+    },
+    {
+        "name": "pinterest",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "legacy-javascript"
+    },
+    {
+        "name": "pinterest",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "total-byte-weight"
+    },
+    {
+        "name": "pinterest",
+        "modifications": 0,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "offscreen-images"
+    },
+    {
+        "name": "pinterest",
+        "modifications": 0,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "uses-responsive-images"
+    },
+    {
+        "name": "pinterest",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "unused-javascript"
+    },
+    {
+        "name": "pinterest",
+        "modifications": 0,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "uses-passive-event-listeners"
+    },
+    {
+        "name": "pinterest",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "dom-size"
+    },
+    {
+        "name": "quora",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "first-contentful-paint"
+    },
+    {
+        "name": "quora",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "largest-contentful-paint"
+    },
+    {
+        "name": "quora",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "viewport"
+    },
+    {
+        "name": "quora",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "speed-index"
+    },
+    {
+        "name": "quora",
+        "modifications": 0,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "is-on-https"
+    },
+    {
+        "name": "quora",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "max-potential-fid"
+    },
+    {
+        "name": "quora",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "total-blocking-time"
+    },
+    {
+        "name": "quora",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "interactive"
+    },
+    {
+        "name": "quora",
+        "modifications": 0,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "errors-in-console"
+    },
+    {
+        "name": "quora",
+        "modifications": 0,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "image-size-responsive"
+    },
+    {
+        "name": "quora",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "third-party-summary"
+    },
+    {
+        "name": "quora",
+        "modifications": 0,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "largest-contentful-paint-element"
+    },
+    {
+        "name": "quora",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "uses-rel-preconnect"
+    },
+    {
+        "name": "quora",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "prioritize-lcp-image"
+    },
+    {
+        "name": "quora",
+        "modifications": 0,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "unsized-images"
+    },
+    {
+        "name": "quora",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "unused-css-rules"
+    },
+    {
+        "name": "quora",
+        "modifications": 0,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "image-alt"
+    },
+    {
+        "name": "quora",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "unused-javascript"
+    },
+    {
+        "name": "quora",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "uses-text-compression"
+    },
+    {
+        "name": "quora",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "font-size"
+    },
+    {
+        "name": "quora",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "legacy-javascript"
+    },
+    {
+        "name": "reddit",
+        "modifications": 12,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "largest-contentful-paint"
+    },
+    {
+        "name": "reddit",
+        "modifications": 7,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "first-contentful-paint"
+    },
+    {
+        "name": "reddit",
+        "modifications": 5,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "total-blocking-time"
+    },
+    {
+        "name": "reddit",
+        "modifications": 5,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "speed-index"
+    },
+    {
+        "name": "reddit",
+        "modifications": 5,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "max-potential-fid"
+    },
+    {
+        "name": "reddit",
+        "modifications": 6,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "errors-in-console"
+    },
+    {
+        "name": "reddit",
+        "modifications": 8,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "font-display"
+    },
+    {
+        "name": "reddit",
+        "modifications": 6,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "interactive"
+    },
+    {
+        "name": "reddit",
+        "modifications": 9,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "third-party-summary"
+    },
+    {
+        "name": "reddit",
+        "modifications": 6,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "bootup-time"
+    },
+    {
+        "name": "reddit",
+        "modifications": 11,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "lcp-lazy-loaded"
+    },
+    {
+        "name": "reddit",
+        "modifications": 5,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "mainthread-work-breakdown"
+    },
+    {
+        "name": "reddit",
+        "modifications": 6,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "largest-contentful-paint-element"
+    },
+    {
+        "name": "reddit",
+        "modifications": 10,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "list"
+    },
+    {
+        "name": "reddit",
+        "modifications": 13,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "listitem"
+    },
+    {
+        "name": "reddit",
+        "modifications": 10,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "aria-hidden-focus"
+    },
+    {
+        "name": "reddit",
+        "modifications": 23,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "render-blocking-resources"
+    },
+    {
+        "name": "reddit",
+        "modifications": 6,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "uses-long-cache-ttl"
+    },
+    {
+        "name": "reddit",
+        "modifications": 9,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "uses-text-compression"
+    },
+    {
+        "name": "reddit",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "target-size"
+    },
+    {
+        "name": "reddit",
+        "modifications": 7,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "unused-javascript"
+    },
+    {
+        "name": "reddit",
+        "modifications": 7,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "unused-css-rules"
+    },
+    {
+        "name": "reddit",
+        "modifications": 7,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "modern-image-formats"
+    },
+    {
+        "name": "reddit",
+        "modifications": 9,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "dom-size"
+    },
+    {
+        "name": "reddit",
+        "modifications": 7,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "uses-passive-event-listeners"
+    },
+    {
+        "name": "reddit",
+        "modifications": 11,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "uses-responsive-images"
+    },
+    {
+        "name": "reddit",
+        "modifications": 9,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "charset"
+    },
+    {
+        "name": "twitch",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "first-contentful-paint"
+    },
+    {
+        "name": "twitch",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "speed-index"
+    },
+    {
+        "name": "twitch",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "viewport"
+    },
+    {
+        "name": "twitch",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "largest-contentful-paint"
+    },
+    {
+        "name": "twitch",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "total-blocking-time"
+    },
+    {
+        "name": "twitch",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "cumulative-layout-shift"
+    },
+    {
+        "name": "twitch",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "interactive"
+    },
+    {
+        "name": "twitch",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "max-potential-fid"
+    },
+    {
+        "name": "twitch",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "errors-in-console"
+    },
+    {
+        "name": "twitch",
+        "modifications": 0,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "deprecations"
+    },
+    {
+        "name": "twitch",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "mainthread-work-breakdown"
+    },
+    {
+        "name": "twitch",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "bootup-time"
+    },
+    {
+        "name": "twitch",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "third-party-cookies"
+    },
+    {
+        "name": "twitch",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "font-display"
+    },
+    {
+        "name": "twitch",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "uses-long-cache-ttl"
+    },
+    {
+        "name": "twitch",
+        "modifications": 0,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "largest-contentful-paint-element"
+    },
+    {
+        "name": "twitch",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "unsized-images"
+    },
+    {
+        "name": "twitch",
+        "modifications": 3,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "third-party-summary"
+    },
+    {
+        "name": "twitch",
+        "modifications": 6,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "unused-javascript"
+    },
+    {
+        "name": "twitch",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "legacy-javascript"
+    },
+    {
+        "name": "twitch",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "modern-image-formats"
+    },
+    {
+        "name": "twitch",
+        "modifications": 0,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "uses-text-compression"
+    },
+    {
+        "name": "twitch",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "uses-responsive-images"
+    },
+    {
+        "name": "twitch",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "font-size"
+    },
+    {
+        "name": "twitch",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "inspector-issues"
+    },
+    {
+        "name": "twitch",
+        "modifications": 0,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "uses-passive-event-listeners"
+    },
+    {
+        "name": "twitter",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "total-blocking-time"
+    },
+    {
+        "name": "twitter",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "first-contentful-paint"
+    },
+    {
+        "name": "twitter",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "speed-index"
+    },
+    {
+        "name": "twitter",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "largest-contentful-paint"
+    },
+    {
+        "name": "twitter",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "max-potential-fid"
+    },
+    {
+        "name": "twitter",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "errors-in-console"
+    },
+    {
+        "name": "twitter",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "interactive"
+    },
+    {
+        "name": "twitter",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "mainthread-work-breakdown"
+    },
+    {
+        "name": "twitter",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "redirects"
+    },
+    {
+        "name": "twitter",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "third-party-cookies"
+    },
+    {
+        "name": "twitter",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "bootup-time"
+    },
+    {
+        "name": "twitter",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "third-party-summary"
+    },
+    {
+        "name": "twitter",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "font-display"
+    },
+    {
+        "name": "twitter",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "diagnostics"
+    },
+    {
+        "name": "twitter",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "main-thread-tasks"
+    },
+    {
+        "name": "twitter",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "long-tasks"
+    },
+    {
+        "name": "twitter",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "largest-contentful-paint-element"
+    },
+    {
+        "name": "twitter",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "third-party-facades"
+    },
+    {
+        "name": "twitter",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "color-contrast"
+    },
+    {
+        "name": "twitter",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "meta-viewport"
+    },
+    {
+        "name": "twitter",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "target-size"
+    },
+    {
+        "name": "twitter",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "unused-javascript"
+    },
+    {
+        "name": "twitter",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "inspector-issues"
+    },
+    {
+        "name": "twitter",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "legacy-javascript"
+    },
+    {
+        "name": "twitter",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "is-crawlable"
+    },
+    {
+        "name": "walmart",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "first-contentful-paint"
+    },
+    {
+        "name": "walmart",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "largest-contentful-paint"
+    },
+    {
+        "name": "walmart",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "is-on-https"
+    },
+    {
+        "name": "walmart",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "max-potential-fid"
+    },
+    {
+        "name": "walmart",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "total-blocking-time"
+    },
+    {
+        "name": "walmart",
+        "modifications": 0,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "speed-index"
+    },
+    {
+        "name": "walmart",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "cumulative-layout-shift"
+    },
+    {
+        "name": "walmart",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "errors-in-console"
+    },
+    {
+        "name": "walmart",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "interactive"
+    },
+    {
+        "name": "walmart",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "deprecations"
+    },
+    {
+        "name": "walmart",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "bootup-time"
+    },
+    {
+        "name": "walmart",
+        "modifications": 3,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "third-party-summary"
+    },
+    {
+        "name": "walmart",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "mainthread-work-breakdown"
+    },
+    {
+        "name": "walmart",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "third-party-cookies"
+    },
+    {
+        "name": "walmart",
+        "modifications": 3,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "lcp-lazy-loaded"
+    },
+    {
+        "name": "walmart",
+        "modifications": 3,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "uses-long-cache-ttl"
+    },
+    {
+        "name": "walmart",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "unused-css-rules"
+    },
+    {
+        "name": "walmart",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "uses-text-compression"
+    },
+    {
+        "name": "walmart",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "unused-javascript"
+    },
+    {
+        "name": "walmart",
+        "modifications": 0,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "largest-contentful-paint-element"
+    },
+    {
+        "name": "walmart",
+        "modifications": 3,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "uses-http2"
+    },
+    {
+        "name": "walmart",
+        "modifications": 3,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "legacy-javascript"
+    },
+    {
+        "name": "walmart",
+        "modifications": 3,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "uses-responsive-images"
+    },
+    {
+        "name": "walmart",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "inspector-issues"
+    },
+    {
+        "name": "walmart",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "crawlable-anchors"
+    },
+    {
+        "name": "youtube",
+        "modifications": 3,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "first-contentful-paint"
+    },
+    {
+        "name": "youtube",
+        "modifications": 3,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "is-on-https"
+    },
+    {
+        "name": "youtube",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "largest-contentful-paint"
+    },
+    {
+        "name": "youtube",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "viewport"
+    },
+    {
+        "name": "youtube",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "speed-index"
+    },
+    {
+        "name": "youtube",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "total-blocking-time"
+    },
+    {
+        "name": "youtube",
+        "modifications": 10,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "max-potential-fid"
+    },
+    {
+        "name": "youtube",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "interactive"
+    },
+    {
+        "name": "youtube",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "deprecations"
+    },
+    {
+        "name": "youtube",
+        "modifications": 3,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "uses-rel-preconnect"
+    },
+    {
+        "name": "youtube",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "largest-contentful-paint-element"
+    },
+    {
+        "name": "youtube",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "bootup-time"
+    },
+    {
+        "name": "youtube",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "mainthread-work-breakdown"
+    },
+    {
+        "name": "youtube",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "aria-tooltip-name"
+    },
+    {
+        "name": "youtube",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "aria-dialog-name"
+    },
+    {
+        "name": "youtube",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "unused-css-rules"
+    },
+    {
+        "name": "youtube",
+        "modifications": 10,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "third-party-summary"
+    },
+    {
+        "name": "youtube",
+        "modifications": 3,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "uses-text-compression"
+    },
+    {
+        "name": "youtube",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "total-byte-weight"
+    },
+    {
+        "name": "youtube",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "legacy-javascript"
+    },
+    {
+        "name": "youtube",
+        "modifications": 10,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "render-blocking-resources"
+    },
+    {
+        "name": "youtube",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "dom-size"
+    },
+    {
+        "name": "youtube",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "charset"
+    },
+    {
+        "name": "youtube",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "inspector-issues"
+    },
+    {
+        "name": "youtube",
+        "modifications": 3,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "font-size"
+    },
+    {
+        "name": "youtube",
+        "modifications": 2,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "crawlable-anchors"
+    },
+    {
+        "name": "youtube",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "errors-in-console"
+    },
+    {
+        "name": "youtube",
+        "modifications": 10,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "unused-javascript"
+    },
+    {
+        "name": "youtube",
+        "modifications": 1,
+        "no_of_issues": 0,
+        "experiment_name": "xDOM-00001-single",
+        "mode": "single",
+        "audit_key": "uses-passive-event-listeners"
     }
 ]

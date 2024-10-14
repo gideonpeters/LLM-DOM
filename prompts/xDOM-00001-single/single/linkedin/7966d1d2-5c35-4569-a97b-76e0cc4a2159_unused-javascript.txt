@@ -1,0 +1,150 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. unused-javascript => Reduce unused JavaScript: Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        
+<meta content="d_homepage-guest-home" name="pageKey"></meta>
+<!-- -->
+<!-- -->
+<meta content="en_US" name="locale"></meta>
+<meta data-app-version="2.1.1585" data-browser-id="338cfb50-7da6-419e-80a4-2b958835179f" data-call-tree-id="AAYfgL6dw1Jp8sPcSyIgvg==" data-dfp-member-lix-treatment="control" data-disable-jsbeacon-pagekey-suffix='false' data-dna-member-lix-treatment="control" data-enable-page-view-heartbeat-tracking="" data-human-member-lix-treatment="control" data-jet-tags="guest-homepage" data-member-id='0' data-multiproduct-name="homepage-guest-frontend" data-page-instance="urn:li:page:d_homepage-guest-home;0XvtV6q8SL+bEbonETDdSw==" data-service-name="homepage-guest-frontend" id="config"></meta>
+<link href="https://www.linkedin.com/" rel="canonical"></link>
+<link href="https://de.linkedin.com/" hreflang="de" rel="alternate"></link>
+<link href="https://ie.linkedin.com/" hreflang="en-IE" rel="alternate"></link>
+<link href="https://www.linkedin.com/" hreflang="en-US" rel="alternate"></link>
+<link href="https://pt.linkedin.com/" hreflang="pt" rel="alternate"></link>
+<link href="https://il.linkedin.com/" hreflang="en-IL" rel="alternate"></link>
+<link href="https://my.linkedin.com/" hreflang="ms-MY" rel="alternate"></link>
+<link href="https://in.linkedin.com/" hreflang="en-IN" rel="alternate"></link>
+<link href="https://bo.linkedin.com/" hreflang="es-BO" rel="alternate"></link>
+<link href="https://za.linkedin.com/" hreflang="en-ZA" rel="alternate"></link>
+<link href="https://cn.linkedin.com/" hreflang="zh-CN" rel="alternate"></link>
+<link href="https://au.linkedin.com/" hreflang="en-AU" rel="alternate"></link>
+<link href="https://id.linkedin.com/" hreflang="id" rel="alternate"></link>
+<link href="https://ng.linkedin.com/" hreflang="en-NG" rel="alternate"></link>
+<link href="https://ch.linkedin.com/" hreflang="de-CH" rel="alternate"></link>
+<link href="https://jp.linkedin.com/" hreflang="ja-JP" rel="alternate"></link>
+<link href="https://zw.linkedin.com/" hreflang="en-ZW" rel="alternate"></link>
+<link href="https://jm.linkedin.com/" hreflang="en-JM" rel="alternate"></link>
+<link href="https://sv.linkedin.com/" hreflang="es-SV" rel="alternate"></link>
+<link href="https://my.linkedin.com/" hreflang="ms" rel="alternate"></link>
+<link href="https://gt.linkedin.com/" hreflang="es-GT" rel="alternate"></link>
+<link href="https://www.linkedin.com/" hreflang="en" rel="alternate"></link>
+<link href="https://cr.linkedin.com/" hreflang="es-CR" rel="alternate"></link>
+<link href="https://it.linkedin.com/" hreflang="it" rel="alternate"></link>
+<link href="https://cl.linkedin.com/" hreflang="es-CL" rel="alternate"></link>
+<link href="https://es.linkedin.com/" hreflang="es" rel="alternate"></link>
+<link href="https://cn.linkedin.com/" hreflang="zh" rel="alternate"></link>
+<link href="https://co.linkedin.com/" hreflang="es-CO" rel="alternate"></link>
+<link href="https://pe.linkedin.com/" hreflang="es-PE" rel="alternate"></link>
+<link href="https://ae.linkedin.com/" hreflang="ar" rel="alternate"></link>
+<link href="https://nz.linkedin.com/" hreflang="en-NZ" rel="alternate"></link>
+<link href="https://pt.linkedin.com/" hreflang="pt-PT" rel="alternate"></link>
+<link href="https://pa.linkedin.com/" hreflang="es-PA" rel="alternate"></link>
+<link href="https://jp.linkedin.com/" hreflang="ja" rel="alternate"></link>
+<link href="https://sg.linkedin.com/" hreflang="en-SG" rel="alternate"></link>
+<link href="https://fr.linkedin.com/" hreflang="fr-FR" rel="alternate"></link>
+<link href="https://ro.linkedin.com/" hreflang="ro" rel="alternate"></link>
+<link href="https://uk.linkedin.com/" hreflang="en-GB" rel="alternate"></link>
+<link href="https://nl.linkedin.com/" hreflang="nl" rel="alternate"></link>
+<link href="https://ke.linkedin.com/" hreflang="en-KE" rel="alternate"></link>
+<link href="https://no.linkedin.com/" hreflang="no" rel="alternate"></link>
+<link href="https://ca.linkedin.com/" hreflang="en-CA" rel="alternate"></link>
+<link href="https://ru.linkedin.com/" hreflang="ru" rel="alternate"></link>
+<link href="https://gh.linkedin.com/" hreflang="en-GH" rel="alternate"></link>
+<link href="https://pr.linkedin.com/" hreflang="es-PR" rel="alternate"></link>
+<link href="https://fr.linkedin.com/" hreflang="fr" rel="alternate"></link>
+<link href="https://do.linkedin.com/" hreflang="es-DO" rel="alternate"></link>
+<link href="https://at.linkedin.com/" hreflang="de-AT" rel="alternate"></link>
+<link href="https://ec.linkedin.com/" hreflang="es-EC" rel="alternate"></link>
+<link href="https://cz.linkedin.com/" hreflang="cs-CZ" rel="alternate"></link>
+<link href="https://ph.linkedin.com/" hreflang="en-PH" rel="alternate"></link>
+<link href="https://pk.linkedin.com/" hreflang="en-PK" rel="alternate"></link>
+<link href="https://de.linkedin.com/" hreflang="de-DE" rel="alternate"></link>
+<link href="https://se.linkedin.com/" hreflang="sv" rel="alternate"></link>
+<link href="https://kr.linkedin.com/" hreflang="ko" rel="alternate"></link>
+<link href="https://tt.linkedin.com/" hreflang="en-TT" rel="alternate"></link>
+<link href="https://tw.linkedin.com/" hreflang="zh-TW" rel="alternate"></link>
+<link href="https://hk.linkedin.com/" hreflang="en-HK" rel="alternate"></link>
+<link href="https://br.linkedin.com/" hreflang="pt-BR" rel="alternate"></link>
+<link href="https://uy.linkedin.com/" hreflang="es-UY" rel="alternate"></link>
+<link href="https://es.linkedin.com/" hreflang="es-ES" rel="alternate"></link>
+<link href="https://ve.linkedin.com/" hreflang="es-VE" rel="alternate"></link>
+<link href="https://mx.linkedin.com/" hreflang="es-MX" rel="alternate"></link>
+<link href="https://cz.linkedin.com/" hreflang="cs" rel="alternate"></link>
+<link href="https://ar.linkedin.com/" hreflang="es-AR" rel="alternate"></link>
+<link href="https://th.linkedin.com/" hreflang="th" rel="alternate"></link>
+<link href="https://se.linkedin.com/" hreflang="sv-SE" rel="alternate"></link>
+<link href="https://ph.linkedin.com/" hreflang="tl" rel="alternate"></link>
+<link href="https://dk.linkedin.com/" hreflang="da-DK" rel="alternate"></link>
+<link href="https://lu.linkedin.com/" hreflang="fr-LU" rel="alternate"></link>
+<link href="https://pl.linkedin.com/" hreflang="pl" rel="alternate"></link>
+<link href="https://dk.linkedin.com/" hreflang="da" rel="alternate"></link>
+<link href="https://tr.linkedin.com/" hreflang="tr" rel="alternate"></link>
+<link href="https://www.linkedin.com/" hreflang="x-default" rel="alternate"></link>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<link href="https://static.licdn.com/aero-v1/sc/h/al2o9zrvru7aqj8e1x2rzsrca" rel="icon"></link>
+<script data-chunk-uuid="74efc89d-625e-404b-8d20-6ca673c119d8">// chunk_script_74efc89d-625e-404b-8d20-6ca673c119d8
+</script>
+<!-- -->
+<title>
+   LinkedIn: Log In or Sign Up
+  </title>
+<meta content="LinkedIn" property="og:site_name"></meta>
+<meta content="width=device-width, initial-scale=1" name="viewport"></meta>
+<meta content="LinkedIn: Log In or Sign Up" property="og:title"></meta>
+<meta content="1 billion members | Manage your professional identity. Build and engage with your professional network. Access knowledge, insights and opportunities." property="og:description"></meta>
+<meta content="https://static.licdn.com/scds/common/u/images/logos/favicons/v1/favicon.ico" property="og:image"></meta>
+<meta content="website" property="og:type"></meta>
+<meta content="https://www.linkedin.com/" property="og:url"></meta>
+<meta content="summary" name="twitter:card"></meta>
+<meta content="@linkedin" name="twitter:site"></meta>
+<meta content="LinkedIn: Log In or Sign Up" name="twitter:title"></meta>
+<meta content="1 billion members | Manage your professional identity. Build and engage with your professional network. Access knowledge, insights and opportunities." name="twitter:description"></meta>
+<meta content="1 billion members | Manage your professional identity. Build and engage with your professional network. Access knowledge, insights and opportunities." name="description"></meta>
+<meta content="basic" name="linkedin:pageTag"></meta>
+<meta content="6c180087cc8c9aef0b448521383709b955b7dc5b" name="naver-site-verification"></meta>
+<meta content="homepage-guest-frontend" name="litmsProfileName"></meta>
+<!-- -->
+<meta content="noarchive" name="robots"></meta>
+<link href="https://static.licdn.com/aero-v1/sc/h/cqhvyhtd1xe3vd202mlsy7s5h" rel="stylesheet"></link>
+<!-- -->
+
+        ```
+        

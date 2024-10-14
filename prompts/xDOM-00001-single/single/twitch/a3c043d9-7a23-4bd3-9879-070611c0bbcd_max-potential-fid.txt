@@ -1,0 +1,123 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. max-potential-fid => Max Potential First Input Delay: The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        
+<meta charset="utf-8"></meta>
+<title>
+   Twitch
+  </title>
+<meta content="id460177396" name="twitter:app:id:ipad"></meta>
+<meta content="https://www.twitch.tv" property="og:url">
+<meta content="website" property="og:type"></meta>
+<meta content="Twitch is an interactive livestreaming service for content spanning gaming, entertainment, sports, music, and more. Thereâs something for everyone on Twitch." name="twitter:description"></meta>
+<meta content="Twitch" name="twitter:app:name:googleplay"></meta>
+<meta content="Twitch" name="twitter:app:name:iphone"></meta>
+<link href="https://m.twitch.tv" media="only screen and(max-width: 640px)" rel="alternate"></link>
+<meta content="Twitch is an interactive livestreaming service for content spanning gaming, entertainment, sports, music, and more. Thereâs something for everyone on Twitch." name="description"></meta>
+<meta content="Twitch" property="og:site_name"></meta>
+<meta content='161273083968709' property="fb:app_id"></meta>
+<meta content="Twitch" name="twitter:app:name:ipad"></meta>
+<meta content="index" name="robots"></meta>
+<meta content="@twitch" name="twitter:site"></meta>
+<meta content="id460177396" property="al:ios:app_store_id"></meta>
+<meta content="tv.twitch.android.app" property="al:android:package"></meta>
+<meta content="Twitch" property="al:ios:app_name"></meta>
+<meta content="twitch.tv" name="twitter:app:url:ipad"></meta>
+<meta content="twitch.tv" name="twitter:app:url:googleplay"></meta>
+<meta content="https://static-cdn.jtvnw.net/ttv-static-metadata/twitch_logo3.jpg" property="og:image"></meta>
+<meta content="Twitch is an interactive livestreaming service for content spanning gaming, entertainment, sports, music, and more. Thereâs something for everyone on Twitch." property="og:description"></meta>
+<meta content="tv.twitch.android.app" name="twitter:app:id:googleplay"></meta>
+<meta content="Twitch" name="twitter:title"></meta>
+<meta content="https://static-cdn.jtvnw.net/ttv-static-metadata/twitch_logo3.jpg" name="twitter:image"></meta>
+<meta content="id460177396" name="twitter:app:id:iphone"></meta>
+<meta content="twitch.tv" property="al:ios:url"></meta>
+<link href="https://www.twitch.tv" rel="canonical"></link>
+<meta content="twitch.tv" name="twitter:app:url:iphone"></meta>
+<meta content="Twitch" name="title"></meta>
+<meta content="Twitch" property="og:title"></meta>
+<meta content="summary" name="twitter:card"></meta>
+<meta content="Twitch" property="al:android:app_name"></meta>
+<link href="https://www.twitch.tv/?lang=bg" hreflang="bg" rel="alternate"></link>
+<link href="https://www.twitch.tv/?lang=cs" hreflang="cs" rel="alternate"></link>
+<link href="https://www.twitch.tv/?lang=da" hreflang="da" rel="alternate"></link>
+<link href="https://www.twitch.tv/?lang=de" hreflang="de" rel="alternate"></link>
+<link href="https://www.twitch.tv/?lang=el" hreflang="el" rel="alternate"></link>
+<link href="https://www.twitch.tv/?lang=es" hreflang="es" rel="alternate"></link>
+<link href="https://www.twitch.tv/?lang=es-mx" hreflang="es-mx" rel="alternate"></link>
+<link href="https://www.twitch.tv/?lang=fi" hreflang="fi" rel="alternate"></link>
+<link href="https://www.twitch.tv/?lang=fr" hreflang="fr" rel="alternate"></link>
+<link href="https://www.twitch.tv/?lang=hu" hreflang="hu" rel="alternate"></link>
+<link href="https://www.twitch.tv/?lang=it" hreflang="it" rel="alternate"></link>
+<link href="https://www.twitch.tv/?lang=ja" hreflang="ja" rel="alternate"></link>
+<link href="https://www.twitch.tv/?lang=ko" hreflang="ko" rel="alternate"></link>
+<link href="https://www.twitch.tv/?lang=nl" hreflang="nl" rel="alternate"></link>
+<link href="https://www.twitch.tv/?lang=no" hreflang="no" rel="alternate"></link>
+<link href="https://www.twitch.tv/?lang=pl" hreflang="pl" rel="alternate"></link>
+<link href="https://www.twitch.tv/?lang=pt" hreflang="pt" rel="alternate"></link>
+<link href="https://www.twitch.tv/?lang=pt-br" hreflang="pt-br" rel="alternate"></link>
+<link href="https://www.twitch.tv/?lang=ro" hreflang="ro" rel="alternate"></link>
+<link href="https://www.twitch.tv/?lang=ru" hreflang="ru" rel="alternate"></link>
+<link href="https://www.twitch.tv/?lang=sk" hreflang="sk" rel="alternate"></link>
+<link href="https://www.twitch.tv/?lang=sv" hreflang="sv" rel="alternate"></link>
+<link href="https://www.twitch.tv/?lang=th" hreflang="th" rel="alternate"></link>
+<link href="https://www.twitch.tv/?lang=tr" hreflang="tr" rel="alternate"></link>
+<link href="https://www.twitch.tv/?lang=vi" hreflang="vi" rel="alternate"></link>
+<link href="https://www.twitch.tv/?lang=zh-cn" hreflang="zh-cn" rel="alternate"></link>
+<link href="https://www.twitch.tv/?lang=zh-tw" hreflang="zh-tw" rel="alternate"></link>
+<link href="https://www.twitch.tv" hreflang="x-default" rel="alternate"></link>
+<script data-chunk-uuid="afc4eabe-b852-47a5-9ea9-cd6eda54f740" type="application/ld+json">// chunk_script_afc4eabe-b852-47a5-9ea9-cd6eda54f740
+</script>
+<link crossorigin="anonymous" href="https://assets.twitch.tv/assets/favicon-32-e29e246c157142c94346.png" rel="icon" sizes="32x32" type="image/png"></link>
+<link crossorigin="anonymous" href="https://assets.twitch.tv/assets/favicon-16-52e571ffea063af7a7f4.png" rel="icon" sizes="16x16" type="image/png"></link>
+<link crossorigin="" href="https://api.twitch.tv/" rel="preconnect"></link>
+<link href="https://api.twitch.tv/" rel="dns-prefetch"></link>
+<link href="https://static-cdn.jtvnw.net/" rel="preconnect"></link>
+<link href="https://static-cdn.jtvnw.net/" rel="dns-prefetch"></link>
+<link href="https://passport.twitch.tv/" rel="dns-prefetch"></link>
+<link crossorigin="" href="https://gql.twitch.tv/" rel="preconnect"></link>
+<link href="https://gql.twitch.tv/" rel="dns-prefetch"></link>
+<link href="https://assets.twitch.tv/" rel="preconnect"></link>
+<link href="https://assets.twitch.tv/" rel="dns-prefetch"></link>
+<link href="https://irc-ws.chat.twitch.tv/" rel="dns-prefetch"></link>
+<link href="https://pubsub-edge.twitch.tv/" rel="dns-prefetch"></link>
+<!-- MSE in Workers for https://twitch.tv -->
+<meta content="Ag8gjMC7YpL/OUcwEHEkvOQaTSL//OWmEo9qcm/0rXZjbHCcN4YmRh7aBjNBOmmLwO3JqWrSUL6Qg1+eTmmXxAQAAABqeyJvcmlnaW4iOiJodHRwczovL3R3aXRjaC50djo0NDMiLCJmZWF0dXJlIjoiTWVkaWFTb3VyY2VJbldvcmtlcnMiLCJleHBpcnkiOjE2NDc5OTM1OTksImlzU3ViZG9tYWluIjp0cnVlfQ==" http-equiv="origin-trial"></meta>
+<link href="/opensearch.xml" rel="search" type="application/opensearchdescription+xml"></link>
+</meta>
+
+        ```
+        

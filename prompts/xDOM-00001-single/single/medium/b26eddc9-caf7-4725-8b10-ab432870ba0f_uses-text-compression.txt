@@ -1,0 +1,277 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. uses-text-compression => Enable text compression: Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more about text compression](https://developer.chrome.com/docs/lighthouse/performance/uses-text-compression/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        
+<div id="root">
+<div class="a b c">
+<div class="d e f g h i j k">
+</div>
+<script data-chunk-uuid="446dc5fd-3522-40db-8a5a-d0e87cb9e9d0">// chunk_script_446dc5fd-3522-40db-8a5a-d0e87cb9e9d0
+</script>
+<div class="l n s">
+<div class="t u l n s v w x y">
+<div class="ao ap m aq ar as at au av">
+<div class="n p">
+<div class="ax ay az ba bb bc bd m">
+<div class="be bf n o bg">
+<div class="bh">
+<a class="bi bj bk bl bm bn bo bp bq br bs bt bu bv bw" href="/" rel="noopener follow">
+<svg class="bx by" fill="none" height='26' viewbox="0 0 120 26" width='120' xmlns="http://www.w3.org/2000/svg">
+<path d="m29.57 1.404.036-.008V1.12h-7.27l-6.75 15.979-6.75-15.98H1.003v.278l.035.008c1.327.302 2 .752 2 2.374v18.993c0 1.623-.676 2.073-2.003 2.374L1 25.153v.279h5.315v-.278l-.035-.008c-1.327-.302-2-.751-2-2.374V4.88l8.67 20.552h.492l8.924-21.125V23.24c-.114 1.282-.782 1.677-1.983 1.95l-.036.009v.275h9.259V25.2l-.036-.008c-1.203-.274-1.886-.67-2-1.95l-.006-19.464h.006c0-1.622.674-2.072 2-2.374m4.23 12.582c.15-3.412 1.367-5.875 3.41-5.918.629.01 1.157.219 1.568.62.872.852 1.282 2.634 1.219 5.298zm-.092.962h10.85v-.046c-.03-2.61-.78-4.64-2.228-6.033-1.25-1.204-3.103-1.867-5.048-1.867h-.043c-1.01 0-2.248.246-3.13.693a7.3 7.3 0 0 0-2.623 2.086c-1.185 1.479-1.903 3.477-2.078 5.724a14 14 0 0 0-.04.755q-.007.292-.001.587C29.484 21.934 32.213 26 37.059 26c4.254 0 6.73-3.132 7.348-7.336l-.312-.11c-1.085 2.259-3.034 3.628-5.252 3.461-3.028-.228-5.347-3.32-5.137-7.066m23.122 6.893c-.356.85-1.099 1.319-2.094 1.319s-1.905-.689-2.552-1.939c-.694-1.342-1.06-3.24-1.06-5.487 0-4.678 1.445-7.704 3.68-7.704.937 0 1.674.468 2.026 1.284zm7.198 3.335c-1.327-.316-2-.787-2-2.492V0l-8.062 2.392v.293l.05-.004c1.111-.09 1.866.064 2.304.472.343.32.51.809.51 1.498v3.11C56.033 7.25 55.088 7 53.94 7c-2.326 0-4.453.987-5.986 2.779-1.599 1.867-2.444 4.42-2.444 7.38 0 5.287 2.584 8.84 6.43 8.84 2.25 0 4.06-1.242 4.888-3.336v2.811h7.233v-.29zM70.94 3.085c0-1.65-1.236-2.896-2.875-2.896-1.632 0-2.908 1.272-2.908 2.896s1.278 2.896 2.908 2.896c1.64 0 2.875-1.245 2.875-2.896m1.903 22.092c-1.327-.316-2-.787-2-2.492h-.006V7.055l-7.234 2.092v.284l.043.004c1.566.14 1.994.683 1.994 2.525v13.515h7.24v-.29zm18.536 0c-1.327-.316-2-.787-2-2.492V7.055L82.49 9.078v.285l.04.004c1.28.136 1.65.71 1.65 2.56v9.88c-.426.85-1.227 1.356-2.196 1.39-1.573 0-2.439-1.07-2.439-3.012V7.055l-7.234 2.092v.284l.044.004c1.565.14 1.994.683 1.994 2.525v8.362a9.4 9.4 0 0 0 .15 1.741l.13.57C75.243 24.845 76.848 26 79.362 26c2.129 0 3.996-1.328 4.818-3.405v2.885h7.233v-.291zm28.102.298v-.291l-.035-.009c-1.44-.334-2.001-.964-2.001-2.248V12.295C117.445 8.98 115.597 7 112.5 7c-2.257 0-4.16 1.314-4.893 3.36-.582-2.168-2.257-3.36-4.734-3.36-2.175 0-3.88 1.156-4.612 3.11V7.056l-7.233 2.006v.286l.043.004c1.547.138 1.994.697 1.994 2.492v13.631h6.75v-.29l-.037-.01c-1.148-.271-1.519-.767-1.519-2.04V10.95c.304-.715.917-1.562 2.127-1.562 1.504 0 2.266 1.05 2.266 3.116v12.972h6.751v-.29l-.035-.01c-1.149-.271-1.52-.767-1.52-2.04V12.294a7 7 0 0 0-.095-1.21c.322-.777.97-1.696 2.23-1.696 1.524 0 2.265 1.02 2.265 3.116v12.972z" fill="#000">
+</path>
+</svg>
+</a>
+</div>
+<div class="bh bz">
+</div>
+<div class="n o bg">
+<div class="h k ca cb cc">
+<div class="cd bh">
+<p class="ce b cf cg ch">
+<a class="bi bj bk bl bm bn bo bp bq br bs bt bu bv bw" href="/about?autoplay=1" rel="noopener follow">
+               Our story
+              </a>
+</p>
+</div>
+</div>
+<div class="h k ca cb cc">
+<div class="cd bh">
+<p class="ce b cf cg ch">
+<a class="bi bj bk bl bm bn bo bp bq br bs bt bu bv bw" href="/membership" rel="noopener follow">
+               Membership
+              </a>
+</p>
+</div>
+</div>
+<div class="h k ca cb cc">
+<div class="cd bh">
+<p class="ce b cf cg ch">
+<span>
+<a class="bi bj bk bl bm bn bo bp bq br bs bt bu bv bw" href="/m/signin?operation=register&redirect=https%3A%2F%2Fmedium.com%2Fnew-story&source=--------------------------new_post_topnav-----------" rel="noopener follow">
+                Write
+               </a>
+</span>
+</p>
+</div>
+</div>
+<div class="h ci ca cb cc">
+<div class="cd bh">
+<p class="ce b cf cg ch">
+<span>
+<a class="bi bj bk bl bm bn bo bp bq br bs bt bu bv bw" href="/m/signin?operation=login&redirect=https%3A%2F%2Fmedium.com%2F&source=--------------------------lo_home_nav-----------" rel="noopener follow">
+                Sign in
+               </a>
+</span>
+</p>
+</div>
+</div>
+<div class="aw">
+<span>
+<a class="bi bj bk bl bm bn bo bp bq br bs bt bu bv bw" href="/m/signin?operation=register&redirect=https%3A%2F%2Fmedium.com%2F&source=--------------------------lo_home_nav-----------" rel="noopener follow">
+<button class="ce b cf cg cj ck cl cm cn co cp cq cr cs ct cu cv cw cx cy cz da db">
+               Get started
+              </button>
+</a>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bf bh">
+</div>
+<div class="dc m n o p w">
+<div class="dd de df dg dh m bc bd bh db">
+<div class="z ab ac ae af ag ah ai aj ak al">
+<h2 class="ce di dj dk dl ch">
+          Be part of a
+          <br></br>
+<strong>
+           better internet
+          </strong>
+</h2>
+</div>
+<div class="z am an">
+<h3 class="ce b dm dn ch">
+          Read. Write. Deepen your understanding.
+         </h3>
+</div>
+<span>
+<button class="ce b do dp cj dq cl cm cn co cp cq cr cs ct cu cv dr cw cx cy cz da db">
+          Become a member
+         </button>
+</span>
+</div>
+</div>
+<div class="i d w">
+<div class="ds dt n o du au dv at dw">
+<div class="n p">
+<div class="ax ay az ba bb bc bd m">
+<div class="bh">
+<p class="ce b dx cg dy">
+<a class="bi bj bk bl bm bn bo bp bq br bs dz ea eb ec" href="/about?autoplay=1" rel="noopener follow">
+             About
+            </a>
+<a class="bi bj bk bl bm bn bo bp bq br bs dz ea eb ec" href="https://help.medium.com/hc/en-us" rel="noopener follow">
+             Help
+            </a>
+<a class="bi bj bk bl bm bn bo bp bq br bs dz ea eb ec" href="https://policy.medium.com/medium-terms-of-service-9db0094a1e0f" rel="noopener follow">
+             Terms
+            </a>
+<a class="bi bj bk bl bm bn bo bp bq br bs dz ea eb" href="https://policy.medium.com/medium-privacy-policy-f03bf92035c9" rel="noopener follow">
+             Privacy
+            </a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="h k j w">
+<div class="ed m aq">
+</div>
+<div class="n p">
+<div class="bd m ee ef eg eh">
+<div class="ei n bg p ej">
+<div class="ek el bh">
+<a class="bi bj bk bl bm bn bo bp bq br bs bt bu bv bw" href="https://help.medium.com/hc/en-us" rel="noopener follow">
+<p class="ce b dx cg ch">
+             Help
+            </p>
+</a>
+</div>
+<div class="ek el bh">
+<a class="bi bj bk bl bm bn bo bp bq br bs bt bu bv bw" href="https://medium.statuspage.io" rel="noopener follow">
+<p class="ce b dx cg ch">
+             Status
+            </p>
+</a>
+</div>
+<div class="ek el bh">
+<a class="bi bj bk bl bm bn bo bp bq br bs bt bu bv bw" href="/about?autoplay=1" rel="noopener follow">
+<p class="ce b dx cg ch">
+             About
+            </p>
+</a>
+</div>
+<div class="ek el bh">
+<a class="bi bj bk bl bm bn bo bp bq br bs bt bu bv bw" href="/jobs-at-medium/work-at-medium-959d1a85284e" rel="noopener follow">
+<p class="ce b dx cg ch">
+             Careers
+            </p>
+</a>
+</div>
+<div class="ek el bh">
+<a class="bi bj bk bl bm bn bo bp bq br bs bt bu bv bw" href="mailto:pressinquiries@medium.com" rel="noopener follow">
+<p class="ce b dx cg ch">
+             Press
+            </p>
+</a>
+</div>
+<div class="ek el bh">
+<a class="bi bj bk bl bm bn bo bp bq br bs bt bu bv bw" href="https://blog.medium.com" rel="noopener follow">
+<p class="ce b dx cg ch">
+             Blog
+            </p>
+</a>
+</div>
+<div class="ek el bh">
+<a class="bi bj bk bl bm bn bo bp bq br bs bt bu bv bw" href="https://policy.medium.com/medium-privacy-policy-f03bf92035c9" rel="noopener follow">
+<p class="ce b dx cg ch">
+             Privacy
+            </p>
+</a>
+</div>
+<div class="ek el bh">
+<a class="bi bj bk bl bm bn bo bp bq br bs bt bu bv bw" href="https://policy.medium.com/medium-terms-of-service-9db0094a1e0f" rel="noopener follow">
+<p class="ce b dx cg ch">
+             Terms
+            </p>
+</a>
+</div>
+<div class="ek el bh">
+<a class="bi bj bk bl bm bn bo bp bq br bs bt bu bv bw" href="https://speechify.com/medium" rel="noopener follow">
+<p class="ce b dx cg ch">
+             Text to speech
+            </p>
+</a>
+</div>
+<div class="ek bh">
+<a class="bi bj bk bl bm bn bo bp bq br bs bt bu bv bw" href="/business" rel="noopener follow">
+<p class="ce b dx cg ch">
+             Teams
+            </p>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script data-chunk-uuid="0cb424b0-c4a8-42ae-ad9b-b5079fb9a52c">// chunk_script_0cb424b0-c4a8-42ae-ad9b-b5079fb9a52c
+</script>
+<script data-chunk-uuid="a97e6817-effe-4525-b72e-5d68fe8feeca">// chunk_script_a97e6817-effe-4525-b72e-5d68fe8feeca
+</script>
+<script data-chunk-uuid="9f5cef4b-388f-4567-a951-72d263a98cee">// chunk_script_9f5cef4b-388f-4567-a951-72d263a98cee
+</script>
+<script data-chunk-uuid="490fda85-c81a-4e7e-91f5-8d40d619b38c">// chunk_script_490fda85-c81a-4e7e-91f5-8d40d619b38c
+</script>
+<script data-chunk-uuid="ecf096dc-1d00-4998-9e36-be6c8ac5ce93">// chunk_script_ecf096dc-1d00-4998-9e36-be6c8ac5ce93
+</script>
+<script data-chunk-uuid="fc85318b-134e-4a61-9fcc-b63b7038fbad" src="https://cdn-client.medium.com/lite/static/js/manifest.eb5f3528.js">// chunk_script_fc85318b-134e-4a61-9fcc-b63b7038fbad
+</script>
+<script data-chunk-uuid="68bf0f75-91c1-4bc1-8eb3-6499645c71bd" src="https://cdn-client.medium.com/lite/static/js/3905.cfd85a7e.js">// chunk_script_68bf0f75-91c1-4bc1-8eb3-6499645c71bd
+</script>
+<script data-chunk-uuid="56b8be2d-7c1d-4e24-b57f-88d6b6a3cd66" src="https://cdn-client.medium.com/lite/static/js/main.787ba51b.js">// chunk_script_56b8be2d-7c1d-4e24-b57f-88d6b6a3cd66
+</script>
+<script data-chunk-uuid="494773a9-2a38-4586-b72b-dd2fa01110e7" src="https://cdn-client.medium.com/lite/static/js/instrumentation.d9108df7.chunk.js">// chunk_script_494773a9-2a38-4586-b72b-dd2fa01110e7
+</script>
+<script data-chunk-uuid="7b3c9cda-201c-40b4-a8d7-f1a952387c5e" src="https://cdn-client.medium.com/lite/static/js/reporting.ff22a7a5.chunk.js">// chunk_script_7b3c9cda-201c-40b4-a8d7-f1a952387c5e
+</script>
+<script data-chunk-uuid="b65382e8-e0e1-4e11-8d9a-b933546b016d" src="https://cdn-client.medium.com/lite/static/js/HomeLoLegacyPage.MainContent.b29122ba.chunk.js">// chunk_script_b65382e8-e0e1-4e11-8d9a-b933546b016d
+</script>
+<script data-chunk-uuid="ed490c49-3165-4d36-bf44-251e25db9139">// chunk_script_ed490c49-3165-4d36-bf44-251e25db9139
+</script>
+<script data-chunk-uuid="f47a549b-9e20-4231-8820-46180a98e3b5">// chunk_script_f47a549b-9e20-4231-8820-46180a98e3b5
+</script>
+
+        ```
+        

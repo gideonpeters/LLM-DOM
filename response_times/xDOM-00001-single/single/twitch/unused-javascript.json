@@ -1,0 +1,32 @@
+[
+    {
+        "prompt_uuid": "34470bcd-f87d-417f-9ad6-80609912847d",
+        "dom_name": "twitch",
+        "prompt_token_size": 2467,
+        "duration": 20.718943119049072,
+        "mode": "single",
+        "audit_key": "unused-javascript",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 0,
+            "upload_speed": 0,
+            "ping": 0,
+            "error": "module 'speedtest' has no attribute 'Speedtest'"
+        }
+    },
+    {
+        "prompt_uuid": "e96e2343-61de-4174-8d25-8e80e70e6e85",
+        "dom_name": "twitch",
+        "prompt_token_size": 1895,
+        "duration": 14.858998775482178,
+        "mode": "single",
+        "audit_key": "unused-javascript",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 0,
+            "upload_speed": 0,
+            "ping": 0,
+            "error": "module 'speedtest' has no attribute 'Speedtest'"
+        }
+    }
+]

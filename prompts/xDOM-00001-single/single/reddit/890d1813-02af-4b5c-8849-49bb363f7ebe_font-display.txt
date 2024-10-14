@@ -1,0 +1,141 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. font-display => Ensure text remains visible during webfont load: Leverage the `font-display` CSS feature to ensure text is user-visible while webfonts are loading. [Learn more about `font-display`](https://developer.chrome.com/docs/lighthouse/performance/font-display/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        
+<title>
+   Reddit - Dive into anything
+  </title>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"></meta>
+<meta content="yes" name="apple-mobile-web-app-capable"></meta>
+<meta content="black" name="apple-mobile-web-app-status-bar-style"></meta>
+<meta content="#000000" name="msapplication-navbutton-color"></meta>
+<meta content="#000000" name="theme-color"></meta>
+<meta content="Reddit is a network of communities where people can dive into their interests, hobbies and passions. There's a community for whatever you're interested in on Reddit." name="description"></meta>
+<meta content="https://www.redditstatic.com/shreddit/assets/favicon/192x192.png" property="og:image"></meta>
+<meta content='256' property="og:image:width"></meta>
+<meta content='256' property="og:image:height"></meta>
+<meta content="Reddit" property="og:site_name"></meta>
+<meta content="reddit" property="og:title">
+<meta content='600' property="og:ttl">
+<meta content="website" property="og:type">
+<meta content="https://www.reddit.com/" property="og:url">
+<meta content="summary" name="twitter:card">
+<meta content="https://www.redditstatic.com/shreddit/assets/favicon/192x192.png" name="twitter:image"></meta>
+<meta content="@reddit" name="twitter:site"></meta>
+<meta content="reddit" name="twitter:title"></meta>
+<link href="https://www.reddit.com/" rel="canonical"></link>
+<meta content="noarchive" name="bingbot"></meta>
+<link crossorigin="anonymous" href="https://www.redditstatic.com/" rel="preconnect"></link>
+<link href="https://www.redditstatic.com/" rel="dns-prefetch"></link>
+<script data-chunk-uuid="ca6d8281-4046-4be3-bf1c-be6d2f9c2d05" nonce="ZlzM3mmoFx/GdrPsZCx41A==" type="module">// chunk_script_ca6d8281-4046-4be3-bf1c-be6d2f9c2d05
+</script>
+<script data-chunk-uuid="9a5bcb21-8b3f-4f71-955b-784b76936eed" nonce="ZlzM3mmoFx/GdrPsZCx41A==">// chunk_script_9a5bcb21-8b3f-4f71-955b-784b76936eed
+</script>
+<script data-chunk-uuid="e8fce154-5282-417d-b9ff-2f43dfe616e4" nonce="ZlzM3mmoFx/GdrPsZCx41A==" type="module">// chunk_script_e8fce154-5282-417d-b9ff-2f43dfe616e4
+</script>
+<style data-chunk-uuid="06a379e7-a564-45d0-8ab1-822476780313" nonce="ZlzM3mmoFx/GdrPsZCx41A==">/* chunk_style_06a379e7-a564-45d0-8ab1-822476780313 */
+</style>
+<script data-chunk-uuid="be9a59fc-a70d-4b40-acb7-519c97da59fb" nonce="ZlzM3mmoFx/GdrPsZCx41A==" type="module">// chunk_script_be9a59fc-a70d-4b40-acb7-519c97da59fb
+</script>
+<script data-chunk-uuid="8ec369c1-83ed-4bff-9729-e89ad2e608f9" nonce="ZlzM3mmoFx/GdrPsZCx41A==">// chunk_script_8ec369c1-83ed-4bff-9729-e89ad2e608f9
+</script>
+<script data-chunk-uuid="4e9aee38-a806-4e51-8f74-2077e0889848" nonce="ZlzM3mmoFx/GdrPsZCx41A==" type="module">// chunk_script_4e9aee38-a806-4e51-8f74-2077e0889848
+</script>
+<script data-chunk-uuid="3300b081-e984-4d93-a1d4-4d597cf96892" nonce="ZlzM3mmoFx/GdrPsZCx41A==" type="module">// chunk_script_3300b081-e984-4d93-a1d4-4d597cf96892
+</script>
+<script data-chunk-uuid="be276720-e714-4f86-bc40-446980352e63" nonce="ZlzM3mmoFx/GdrPsZCx41A==">// chunk_script_be276720-e714-4f86-bc40-446980352e63
+</script>
+<script data-chunk-uuid="45320aa3-75fa-4f7d-ad92-219937b87f1f" fetchpriority="high" importance="high" nonce="ZlzM3mmoFx/GdrPsZCx41A==" src="https://www.redditstatic.com/shreddit/en-US/shell-521789b6.js" type="module">// chunk_script_45320aa3-75fa-4f7d-ad92-219937b87f1f
+</script>
+<script data-chunk-uuid="505ae0fa-0f76-4750-a051-4533594346a8" nonce="ZlzM3mmoFx/GdrPsZCx41A==" src="https://www.redditstatic.com/shreddit/en-US/feed-post-client-js-401be183.js" type="module">// chunk_script_505ae0fa-0f76-4750-a051-4533594346a8
+</script>
+<script data-chunk-uuid="41c562da-9add-473e-aeaa-b5381d46b265" nonce="ZlzM3mmoFx/GdrPsZCx41A==" src="https://www.redditstatic.com/shreddit/en-US/feed-ad-client-js-c11e7759.js" type="module">// chunk_script_41c562da-9add-473e-aeaa-b5381d46b265
+</script>
+<script data-chunk-uuid="5f9a8dc7-aeae-442c-8d4c-ce55d9b46edc" nonce="ZlzM3mmoFx/GdrPsZCx41A==" src="https://www.redditstatic.com/shreddit/en-US/chat-channel-feed-element-client-js-09974211.js" type="module">// chunk_script_5f9a8dc7-aeae-442c-8d4c-ce55d9b46edc
+</script>
+<script data-chunk-uuid="dac0cbfa-e4d4-438f-9cb7-454c570dd326" nonce="ZlzM3mmoFx/GdrPsZCx41A==" src="https://www.redditstatic.com/shreddit/en-US/dsa-transparency-modal-provider-client-js-3d299235.js" type="module">// chunk_script_dac0cbfa-e4d4-438f-9cb7-454c570dd326
+</script>
+<script data-chunk-uuid="a2b390ab-220c-4a16-b7dc-887c3e62a446" nonce="ZlzM3mmoFx/GdrPsZCx41A==" src="https://www.redditstatic.com/shreddit/en-US/media-lightbox-client-js-4990fff6.js" type="module">// chunk_script_a2b390ab-220c-4a16-b7dc-887c3e62a446
+</script>
+<script data-chunk-uuid="948e61c7-7a06-4961-abfd-7b8693e34d86" nonce="ZlzM3mmoFx/GdrPsZCx41A==" src="https://www.redditstatic.com/shreddit/en-US/header-action-item-user-drawer-client-js-2989517f.js" type="module">// chunk_script_948e61c7-7a06-4961-abfd-7b8693e34d86
+</script>
+<script data-chunk-uuid="4499f72e-bb0b-4f77-983d-46b1ff4ee82b" nonce="ZlzM3mmoFx/GdrPsZCx41A==" src="https://www.redditstatic.com/shreddit/en-US/user-drawer-client-js-b5868c2c.js" type="module">// chunk_script_4499f72e-bb0b-4f77-983d-46b1ff4ee82b
+</script>
+<script data-chunk-uuid="0e2f4be8-8465-4a99-92de-e63fe3604c8f" nonce="ZlzM3mmoFx/GdrPsZCx41A==" src="https://www.redditstatic.com/shreddit/en-US/hui-translation-button-client-js-23c8752e.js" type="module">// chunk_script_0e2f4be8-8465-4a99-92de-e63fe3604c8f
+</script>
+<script data-chunk-uuid="d2392fe5-54cd-45ac-8328-4f9acc68d27e" nonce="ZlzM3mmoFx/GdrPsZCx41A==" src="https://www.redditstatic.com/shreddit/en-US/header-large-client-js-c3a38ea0.js" type="module">// chunk_script_d2392fe5-54cd-45ac-8328-4f9acc68d27e
+</script>
+<link href="https://www.redditstatic.com/shreddit/header-large-client-css-64f76952.css" rel="stylesheet"></link>
+<script data-chunk-uuid="35416bb5-9b14-42db-8b11-ba80b90b8d86" nonce="ZlzM3mmoFx/GdrPsZCx41A==" src="https://www.redditstatic.com/shreddit/en-US/deprecated-content-client-js-77d2591c.js" type="module">// chunk_script_35416bb5-9b14-42db-8b11-ba80b90b8d86
+</script>
+<link href="https://www.redditstatic.com/shreddit/header-client-css-28ebcb96.css" rel="stylesheet"></link>
+<script data-chunk-uuid="f701f462-5195-4982-b4a2-e27e6d7007c8" nonce="ZlzM3mmoFx/GdrPsZCx41A==" src="https://www.redditstatic.com/shreddit/en-US/left-nav-resources-section-client-js-312fc34c.js" type="module">// chunk_script_f701f462-5195-4982-b4a2-e27e6d7007c8
+</script>
+<script data-chunk-uuid="039975ac-4722-484e-9386-c736f53b76f4" nonce="ZlzM3mmoFx/GdrPsZCx41A==" src="https://www.redditstatic.com/shreddit/en-US/left-nav-topics-section-client-js-c4943967.js" type="module">// chunk_script_039975ac-4722-484e-9386-c736f53b76f4
+</script>
+<script data-chunk-uuid="6fd924b6-fc1d-4cdb-b8a0-848238fb89ac" nonce="ZlzM3mmoFx/GdrPsZCx41A==" src="https://www.redditstatic.com/shreddit/en-US/left-nav-client-js-8c57d1bd.js" type="module">// chunk_script_6fd924b6-fc1d-4cdb-b8a0-848238fb89ac
+</script>
+<script data-chunk-uuid="653cf529-03fd-405c-b347-f6edde13e68c" nonce="ZlzM3mmoFx/GdrPsZCx41A==" src="https://www.redditstatic.com/shreddit/en-US/trending-carousel-client-js-50c518e8.js" type="module">// chunk_script_653cf529-03fd-405c-b347-f6edde13e68c
+</script>
+<script data-chunk-uuid="ffb37f5d-f5d0-4b9d-89d4-f2199652a120" nonce="ZlzM3mmoFx/GdrPsZCx41A==" src="https://www.redditstatic.com/shreddit/en-US/popular-communities-client-js-54d8153a.js" type="module">// chunk_script_ffb37f5d-f5d0-4b9d-89d4-f2199652a120
+</script>
+<script data-chunk-uuid="2dab3ca1-c7ab-4af7-a7a3-e7e3a456a4c2" nonce="ZlzM3mmoFx/GdrPsZCx41A==" src="https://www.redditstatic.com/shreddit/en-US/auth-overlay-client-js-65990b70.js" type="module">// chunk_script_2dab3ca1-c7ab-4af7-a7a3-e7e3a456a4c2
+</script>
+<script data-chunk-uuid="edbd6797-59de-463c-b50a-70777ad885c6" nonce="ZlzM3mmoFx/GdrPsZCx41A==" src="https://www.redditstatic.com/shreddit/en-US/popular-feed-client-js-34ed1d9e.js" type="module">// chunk_script_edbd6797-59de-463c-b50a-70777ad885c6
+</script>
+<link href="https://www.redditstatic.com/shreddit/assets/favicon/64x64.png" rel="icon shortcut" sizes="64x64"></link>
+<link href="https://www.redditstatic.com/shreddit/assets/favicon/128x128.png" rel="icon shortcut" sizes="128x128"></link>
+<link href="https://www.redditstatic.com/shreddit/assets/favicon/192x192.png" rel="icon shortcut" sizes="192x192"></link>
+<link href="https://www.redditstatic.com/shreddit/assets/favicon/76x76.png" rel="apple-touch-icon" sizes="76x76"></link>
+<link href="https://www.redditstatic.com/shreddit/assets/favicon/120x120.png" rel="apple-touch-icon" sizes="120x120"></link>
+<link href="https://www.redditstatic.com/shreddit/assets/favicon/152x152.png" rel="apple-touch-icon" sizes="152x152"></link>
+<link href="https://www.redditstatic.com/shreddit/assets/favicon/180x180.png" rel="apple-touch-icon" sizes="180x180"></link>
+<link href="https://www.redditstatic.com/shreddit/assets/favicon/manifest.json" rel="manifest"></link>
+<script data-chunk-uuid="ee1156f9-60f0-4883-a083-3a0b9382d314" data-src="https://www.google.com/recaptcha/enterprise.js?render=6LfirrMoAAAAAHZOipvza4kpp_VtTwLNuXVwURNQ" id="reputation-recaptcha" nonce="ZlzM3mmoFx/GdrPsZCx41A==">// chunk_script_ee1156f9-60f0-4883-a083-3a0b9382d314
+</script>
+<shreddit-async-loader bundlename="reputation_recaptcha">
+<reputation-recaptcha site-key="6LfirrMoAAAAAHZOipvza4kpp_VtTwLNuXVwURNQ">
+</reputation-recaptcha>
+</shreddit-async-loader>
+</meta>
+</meta>
+</meta>
+</meta>
+</meta>
+
+        ```
+        

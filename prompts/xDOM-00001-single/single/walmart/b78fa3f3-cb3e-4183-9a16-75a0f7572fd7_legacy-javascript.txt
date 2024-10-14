@@ -1,0 +1,280 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. legacy-javascript => Avoid serving legacy JavaScript to modern browsers: Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. For your bundled JavaScript, adopt a modern script deployment strategy using module/nomodule feature detection to reduce the amount of code shipped to modern browsers, while retaining support for legacy browsers. [Learn how to use modern JavaScript](https://web.dev/articles/publish-modern-javascript)
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        <p class="b f4 f5-l f4-hdkp f3-xl f3-xxl f2-rdxl f1-rdxxl lh-title ma0 w-100" id="heading-GridPOVBanners-mediumBanner-contentZone21-yymARtfb" style="color:#041E42">
+                   Here come the mums, for less
+                  </p>
+<a aria-labelledby="link-Shopnow-GridPOVBanners-mediumBanner-contentZone21-yymARtfb heading-GridPOVBanners-mediumBanner-contentZone21-yymARtfb" class="z-2 nowrap link mt3-xl mt2 mr3-xl mr2 underline no-underline-hover h-auto pa0 f6 f6-rdxl" href="/browse/patio-garden/mums/5428_6061364_8994513_8677774?athAsset=eyJhdGhjcGlkIjoiOTliNGI3Y2UtYmNhMS00MmM1LTk3NTYtMTU3NTdiNDM2ZjhlIn0=&athena=true" id="link-Shopnow-GridPOVBanners-mediumBanner-contentZone21-yymARtfb" link-identifier="Shop now" style="color:#041E42" title="Shop now">
+<span>
+                    Shop now
+                   </span>
+</a>
+<a aria-hidden='true' aria-labelledby="linkcard-Shopnow-GridPOVBanners-mediumBanner-contentZone21-yymARtfb heading-GridPOVBanners-mediumBanner-contentZone21-yymARtfb" class="absolute fill-focus z-1" href="/browse/patio-garden/mums/5428_6061364_8994513_8677774?athAsset=eyJhdGhjcGlkIjoiOTliNGI3Y2UtYmNhMS00MmM1LTk3NTYtMTU3NTdiNDM2ZjhlIn0=&athena=true" id="linkcard-Shopnow-GridPOVBanners-mediumBanner-contentZone21-yymARtfb" link-identifier="Shop now" tabindex='-1' title="Shop now">
+<span class="w_iUH7">
+                    Shop now
+                   </span>
+</a>
+</section>
+</div>
+</div>
+</section>
+<section>
+<div class="card-wrapper w-100 aspect-ratio br3 mt4-xl mt3 aspect-ratio--gpov-t">
+<div class="aspect-ratio--object br3 flex pv3 pv4-xl overflow-hidden z-0 justify-start items-start">
+<div class="w-100 absolute absolute--fill br3 overflow-hidden" style="background-color:#FFFFFF">
+<img alt="" class="w-100 absolute absolute--fill" height="auto" id="GridPOVBanners-tallBanner-contentZone23-t6FNlSqB" loading="lazy" src="https://i5.walmartimages.com/dfw/4ff9c6c9-cac5/k2-_ef9b4a1b-7578-4aaf-a4b4-5eeeb5f32a2d.v1.jpg?odnHeight=578&odnWidth=385&odnBg=&odnDynImageQuality=70" srcset="https://i5.walmartimages.com/dfw/4ff9c6c9-cac5/k2-_ef9b4a1b-7578-4aaf-a4b4-5eeeb5f32a2d.v1.jpg?odnHeight=578&odnWidth=385&odnBg=&odnDynImageQuality=70 1x, https://i5.walmartimages.com/dfw/4ff9c6c9-cac5/k2-_ef9b4a1b-7578-4aaf-a4b4-5eeeb5f32a2d.v1.jpg?odnHeight=1156&odnWidth=770&odnBg=&odnDynImageQuality=70 2x" width="auto"></img>
+</div>
+<section class="flex flex-wrap w-90 justify-start items-start pl3 pl4-xl z-0 mw-calc">
+<p class="b f3 f4-l f3-hdkp f2-xl f1-xxl f1-rdxl f9-rdxxl lh-title ma0 w-100" id="heading-GridPOVBanners-tallBanner-contentZone23-t6FNlSqB" style="color:#041E42">
+                   Rake in leaves & low prices
+                  </p>
+<a aria-labelledby="link-Shoppowertools-GridPOVBanners-tallBanner-contentZone23-t6FNlSqB heading-GridPOVBanners-tallBanner-contentZone23-t6FNlSqB" class="z-2 nowrap link mt3-xl mt2 mr3-xl mr2 underline no-underline-hover h-auto pa0 f6 f6-rdxl" href="/shop/fall-cleanup?athAsset=eyJhdGhjcGlkIjoiNGVmMzFiMmMtNGM2My00NjAyLWEzOGEtNTEyNzYxYTQyMmFkIn0=&athena=true" id="link-Shoppowertools-GridPOVBanners-tallBanner-contentZone23-t6FNlSqB" link-identifier="Shop power tools" style="color:#041E42" title="Shop power tools">
+<span>
+                    Shop power tools
+                   </span>
+</a>
+<a aria-hidden='true' aria-labelledby="linkcard-Shoppowertools-GridPOVBanners-tallBanner-contentZone23-t6FNlSqB heading-GridPOVBanners-tallBanner-contentZone23-t6FNlSqB" class="absolute fill-focus z-1" href="/shop/fall-cleanup?athAsset=eyJhdGhjcGlkIjoiNGVmMzFiMmMtNGM2My00NjAyLWEzOGEtNTEyNzYxYTQyMmFkIn0=&athena=true" id="linkcard-Shoppowertools-GridPOVBanners-tallBanner-contentZone23-t6FNlSqB" link-identifier="Shop power tools" tabindex='-1' title="Shop power tools">
+<span class="w_iUH7">
+                    Shop power tools
+                   </span>
+</a>
+</section>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="h-100 relative">
+<div class="w_KPWk w_GxNv flex-row undefined" data-testid="flex-container">
+<div class="w_aoqv w_wRee w_b0y1">
+</div>
+</div>
+</div>
+<div class="h-100 relative">
+<div class="w_KPWk w_GxNv flex-row undefined" data-testid="flex-container">
+<div class="w_aoqv w_wRee w_b0y1">
+</div>
+</div>
+</div>
+<div class="h-100 relative">
+<div class="w_KPWk w_GxNv flex-row undefined" data-testid="flex-container">
+<div class="w_aoqv w_wRee w_b0y1">
+</div>
+</div>
+</div>
+<div class="h-100 relative">
+<div class="w_KPWk w_GxNv flex-row undefined" data-testid="flex-container">
+<div class="w_aoqv w_wRee w_b0y1">
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+<span>
+<footer class="db pt5-hdkp lh-copy relative z-0">
+<section class="flex flex-column flex-row-hdkp justify-center bg-washed-primary">
+<section class="">
+<div class="pb4 pt3 pa0-hdkp footer-wrapper ph3 tc" style="padding-top:2rem;padding-bottom:2rem">
+<p class="f5 mt0">
+           We’d love to hear what you think!
+          </p>
+<button class="w_hhLG w_XK4d w_jDfj" type="button">
+           Give feedback
+          </button>
+</div>
+</section>
+</section>
+<div class="bw2 bt-0 bl-0 br-0 b--solid b--near-white b--none-hdkp">
+</div>
+<section>
+<ul class="list ma0 mt3 ph3 pt1 ma0-hdkp ph4-hdkp pb4-hdkp pt3-hdkp flex-hdkp flex-wrap-hdkp justify-center-hdkp footer-list" data-testid="responsive-footer-list">
+<li>
+<a class="f6 no-underline mb3 ma0-hdkp footer-link mr4-hdkp db" href="/all-departments" link-identifier="All Departments">
+           All Departments
+          </a>
+</li>
+<li>
+<a aria-label="Store Directory - opens in a new window" class="f6 no-underline mb3 ma0-hdkp footer-link mr4-hdkp db" href="/store/directory" link-identifier="Store Directory" rel="noopener noreferrer" target="_blank">
+           Store Directory
+          </a>
+</li>
+<li>
+<a aria-label="Careers - opens in a new window" class="f6 no-underline mb3 ma0-hdkp footer-link mr4-hdkp db" href="https://careers.walmart.com/" link-identifier="Careers" rel="noopener noreferrer" target="_blank">
+           Careers
+          </a>
+</li>
+<li>
+<a aria-label="Our Company - opens in a new window" class="f6 no-underline mb3 ma0-hdkp footer-link mr4-hdkp db" href="https://corporate.walmart.com/" link-identifier="Our Company" rel="noopener noreferrer" target="_blank">
+           Our Company
+          </a>
+</li>
+<li>
+<a aria-label="Sell on Walmart.com - opens in a new window" class="f6 no-underline mb3 ma0-hdkp footer-link mr4-hdkp db" href="https://marketplace.walmart.com/?utm_source=Walmart.com&utm_medium=link&utm_campaign=footer" link-identifier="Sell on Walmart.com" rel="noopener noreferrer" target="_blank">
+           Sell on Walmart.com
+          </a>
+</li>
+<li>
+<a class="f6 no-underline mb3 ma0-hdkp footer-link mr4-hdkp db" href="/help" link-identifier="Help">
+           Help
+          </a>
+</li>
+<li>
+<a aria-label="Product Recalls - opens in a new window" class="f6 no-underline mb3 ma0-hdkp footer-link mr4-hdkp db" href="https://corporate.walmart.com/recalls" link-identifier="Product Recalls" rel="noopener noreferrer" target="_blank">
+           Product Recalls
+          </a>
+</li>
+<li>
+<a aria-label="Accessibility - opens in a new window" class="f6 no-underline mb3 ma0-hdkp footer-link mr4-hdkp db" href="https://www.walmart.com/help/article/responsible-disclosure-and-accessibility-policies/0f173dab8bd942da84b1cd7ab5ffc3cb" link-identifier="Accessibility" rel="noopener noreferrer" target="_blank">
+           Accessibility
+          </a>
+</li>
+<li>
+<a class="f6 no-underline mb3 ma0-hdkp footer-link mr4-hdkp db" href="https://www.walmart.com/cp/tax-exemption-program/8480422" link-identifier="Tax Exempt Program">
+           Tax Exempt Program
+          </a>
+</li>
+<li>
+<a class="f6 no-underline mb3 ma0-hdkp footer-link mr4-hdkp db" href="https://walmart.onelink.me/UIev?pid=walmart.com&af_web_dp=https%3A%2F%2Fwww.walmart.com%2Fcp%2Fwalmart-mobile-app%2F1087865&c=Walmart.com%20Site%20Footer&af_dp=walmart%3A%2F%2F" link-identifier="Get the Walmart App">
+           Get the Walmart App
+          </a>
+</li>
+<li>
+<a class="f6 no-underline mb3 ma0-hdkp footer-link mr4-hdkp db" href="https://www.walmart.com/cp/email-opt-in/8196352?gbo=1" link-identifier="Sign-up for Email">
+           Sign-up for Email
+          </a>
+</li>
+<li>
+<a class="f6 no-underline mb3 ma0-hdkp footer-link mr4-hdkp db" href="http://msds.walmartstores.com/" link-identifier="Safety Data Sheet">
+           Safety Data Sheet
+          </a>
+</li>
+<li>
+<a class="f6 no-underline mb3 ma0-hdkp footer-link mr4-hdkp db" href="/help/article/walmart-com-terms-of-use/3b75080af40340d6bbd596f116fae5a0" link-identifier="Terms of Use">
+           Terms of Use
+          </a>
+</li>
+<li>
+<a aria-label="Privacy & Security - opens in a new window" class="f6 no-underline mb3 ma0-hdkp footer-link mr4-hdkp db" href="https://corporate.walmart.com/privacy-security" link-identifier="Privacy & Security" rel="noopener noreferrer" target="_blank">
+           Privacy & Security
+          </a>
+</li>
+<li>
+<a aria-label="California Supply Chain Act - opens in a new window" class="f6 no-underline mb3 ma0-hdkp footer-link mr4-hdkp db" href="https://corporate.walmart.com/california-transparency" link-identifier="California Supply Chain Act" rel="noopener noreferrer" target="_blank">
+           California Supply Chain Act
+          </a>
+</li>
+<li>
+<a aria-label="Your Privacy Choices - opens in a new window" class="f6 no-underline mb3 ma0-hdkp footer-link mr4-hdkp flex items-center" href="https://www.walmart.com/account/api/ccpa-intake?native=false&app=gm&type=sod" link-identifier="Your Privacy Choices" rel="noopener noreferrer" target="_blank">
+<img alt="Privacy choices icon" class="mr1" height='14' loading="lazy" src="//i5.walmartimages.com/dfwrs/76316474-f70e/k2-_67001355-c576-4ca2-989d-260a2673c41a.v1.png" width='29'></img>
+           Your Privacy Choices
+          </a>
+</li>
+<li>
+<a aria-label="Notice at Collection - opens in a new window" class="f6 no-underline mb3 ma0-hdkp footer-link mr4-hdkp db" href="https://corporate.walmart.com/privacy-security/california-privacy-rights#what-are-the-categories-of-personal-information-collected" link-identifier="Notice at Collection" rel="noopener noreferrer" target="_blank">
+           Notice at Collection
+          </a>
+</li>
+<li>
+<a class="f6 no-underline mb3 ma0-hdkp footer-link mr4-hdkp db" href="https://corporate.walmart.com/privacy-security/walmart-consumer-health-data-privacy-notices/walmart-nevada-consumer-health-data-privacy-notice" link-identifier="NV Consumer Health Data Privacy Notice">
+           NV Consumer Health Data Privacy Notice
+          </a>
+</li>
+<li>
+<a class="f6 no-underline mb3 ma0-hdkp footer-link mr4-hdkp db" href="https://corporate.walmart.com/privacy-security/walmart-consumer-health-data-privacy-notices/walmart-washington-consumer-health-data-privacy-notice" link-identifier="WA Consumer Health Data Privacy Notice">
+           WA Consumer Health Data Privacy Notice
+          </a>
+</li>
+<li>
+<a aria-label="Request My Personal Information - opens in a new window" class="f6 no-underline mb3 ma0-hdkp footer-link mr4-hdkp db" href="https://www.walmart.com/account/api/ccpa-intake?native=false&app=gm&type=access" link-identifier="Request My Personal Information" rel="noopener noreferrer" target="_blank">
+           Request My Personal Information
+          </a>
+</li>
+<li>
+<a class="f6 no-underline mb3 ma0-hdkp footer-link mr4-hdkp db" href="https://www.walmart.com/brand/branddirectory" link-identifier="Brand Shop Directory">
+           Brand Shop Directory
+          </a>
+</li>
+<li>
+<a class="f6 no-underline mb3 ma0-hdkp footer-link mr4-hdkp db" href="https://www.walmart.com/cp/pharmacy/5431?povid=HWS_GlobalFooter_Pharmacy" link-identifier="Pharmacy">
+           Pharmacy
+          </a>
+</li>
+<li>
+<a class="f6 no-underline mb3 ma0-hdkp footer-link mr4-hdkp db" href="https://business.walmart.com/account/logout?vid=b2b&tid=0&returnUrl=%3Fpovid%3D5008973_homepage_WMTFOOTER" link-identifier="Walmart Business">
+           Walmart Business
+          </a>
+</li>
+<li>
+<a class="f6 no-underline mb3 ma0-hdkp footer-link mr4-hdkp db" href="https://www.walmart.com/cp/walmart-in-the-know/7781927" link-identifier="#IYWYK">
+           #IYWYK
+          </a>
+</li>
+<li>
+<a class="f6 no-underline mb3 ma0-hdkp footer-link db" href="https://www.walmart.com/account/login?vid=oaoh&tid=0&returnUrl=%2Faccount%2Fdelete-account" link-identifier="Delete Account">
+           Delete Account
+          </a>
+</li>
+</ul>
+<div class="f7 lh-title mt6 pb5 ph3 pt1 tc-hdkp pa0-hdkp pt2-hdkp ma0-hdkp pb5-hdkp footer-copyright">
+         © 2024 Walmart. All Rights Reserved.
+        </div>
+</section>
+</footer>
+</span>
+</div>
+</div>
+<span aria-live="assertive" class="w_iUH7">
+</span>
+<span aria-live="polite" class="w_iUH7">
+</span>
+<div aria-live="assertive">
+</div>
+<div aria-live="assertive">
+</div>
+</div>
+<script data-chunk-uuid="f8991980-449c-489f-bf87-e3504c70d078" id="__NEXT_DATA__" nonce="oZuHSM-FhZEnom4k" type="application/json">// chunk_script_f8991980-449c-489f-bf87-e3504c70d078
+</script>
+<script data-chunk-uuid="10cbf649-d48d-404d-bc91-e4eecccb327b" id="release-metadata" nonce="oZuHSM-FhZEnom4k" type="application/json">// chunk_script_10cbf649-d48d-404d-bc91-e4eecccb327b
+</script>
+
+        ```
+        

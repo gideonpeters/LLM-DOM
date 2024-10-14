@@ -1,0 +1,273 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. modern-image-formats => Serve images in next-gen formats: Image formats like WebP and AVIF often provide better compression than PNG or JPEG, which means faster downloads and less data consumption. [Learn more about modern image formats](https://developer.chrome.com/docs/lighthouse/performance/uses-webp-images/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        <li class="lh-condensed mb-3">
+<a class="Link--secondary" data-analytics-event='{"location": "footer", "action": "social_impact", "context": "company", "tag": "link", "label": "social_impact_link_company_footer"}' href="https://socialimpact.github.com">
+          Social Impact
+         </a>
+</li>
+<li class="lh-condensed mb-3">
+<a class="Link--secondary" data-analytics-event='{"location": "footer", "action": "shop", "context": "company", "tag": "link", "label": "shop_link_company_footer"}' href="https://shop.github.com">
+          Shop
+         </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<div class="color-bg-subtle">
+<div class="container-xl p-responsive f6 py-4 d-md-flex flex-justify-between flex-items-center">
+<nav aria-label="Legal and Resource Links">
+<ul class="list-style-none d-flex flex-wrap color-fg-muted">
+<li class="mr-3">
+         ©
+         <time datetime='2024'>
+          2024
+         </time>
+         GitHub, Inc.
+        </li>
+<li class="mr-3">
+<a class="Link--secondary" data-analytics-event='{"location": "footer", "action": "terms", "context": "subfooter", "tag": "link", "label": "terms_link_subfooter_footer"}' href="https://docs.github.com/site-policy/github-terms/github-terms-of-service">
+          Terms
+         </a>
+</li>
+<li class="mr-3">
+<a class="Link--secondary" data-analytics-event='{"location": "footer", "action": "privacy", "context": "subfooter", "tag": "link", "label": "privacy_link_subfooter_footer"}' href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement">
+          Privacy
+         </a>
+         (
+         <a class="Link--secondary" href="https://github.com/github/site-policy/pull/582">
+          Updated
+          <time datetime="2022-08">
+           08/2022
+          </time>
+</a>
+         )
+        </li>
+<li class="mr-3">
+<a class="Link--secondary" data-analytics-event='{"location": "footer", "action": "sitemap", "context": "subfooter", "tag": "link", "label": "sitemap_link_subfooter_footer"}' href="/sitemap">
+          Sitemap
+         </a>
+</li>
+<li class="mr-3">
+<a class="Link--secondary" data-analytics-event='{"location": "footer", "action": "what_is_git", "context": "subfooter", "tag": "link", "label": "what_is_git_link_subfooter_footer"}' href="/git-guides">
+          What is Git?
+         </a>
+</li>
+<li class="mr-3">
+<cookie-consent-link>
+<button class="Link--secondary underline-on-hover border-0 p-0 color-bg-transparent" data-action="click:cookie-consent-link#showConsentManagement" data-analytics-event='{"location": "footer", "action": "cookies", "context": "subfooter", "tag": "link", "label": "cookies_link_subfooter_footer"}' type="button">
+           Manage cookies
+          </button>
+</cookie-consent-link>
+</li>
+<li class="mr-3">
+<cookie-consent-link>
+<button class="Link--secondary underline-on-hover border-0 p-0 color-bg-transparent" data-action="click:cookie-consent-link#showConsentManagement" data-analytics-event='{"location": "footer", "action": "dont_share_info", "context": "subfooter", "tag": "link", "label": "dont_share_info_link_subfooter_footer"}' type="button">
+           Do not share my personal information
+          </button>
+</cookie-consent-link>
+</li>
+</ul>
+</nav>
+<nav aria-label="GitHub's Social Media Links" class="mt-3 mt-md-0">
+<ul class="list-style-none d-flex flex-items-center lh-condensed-ultra">
+<li class="ml-md-3">
+<a class="footer-social-icon d-block Link--outlineOffset" data-analytics-event='{"category": "Footer", "action": "go to X", "label": "text:text:x"}' href="https://x.com/github">
+<svg aria-hidden='true' class="d-block" fill="currentColor" height='16' viewbox="0 0 1200 1227" width='16' xmlns="http://www.w3.org/2000/svg">
+<path d="M714.163 519.284 1160.89 0h-105.86L667.137 450.887 357.328 0H0l468.492 681.821L0 1226.37h105.866l409.625-476.152 327.181 476.152H1200L714.137 519.284h.026ZM569.165 687.828l-47.468-67.894-377.686-540.24h162.604l304.797 435.991 47.468 67.894 396.2 566.721H892.476L569.165 687.854v-.026Z">
+</path>
+</svg>
+<span class="sr-only">
+           GitHub on X
+          </span>
+</a>
+</li>
+<li class="ml-3">
+<a class="footer-social-icon d-block Link--outlineOffset" data-analytics-event='{"category": "Footer", "action": "go to Facebook", "label": "text:text:facebook"}' href="https://www.facebook.com/GitHub">
+<svg aria-hidden='true' class="d-block" height='18' viewbox="0 0 15.3 15.4" width='18' xmlns="http://www.w3.org/2000/svg">
+<path d="M14.5 0H.8a.88.88 0 0 0-.8.9v13.6a.88.88 0 0 0 .8.9h7.3v-6h-2V7.1h2V5.4a2.87 2.87 0 0 1 2.5-3.1h.5a10.87 10.87 0 0 1 1.8.1v2.1h-1.3c-1 0-1.1.5-1.1 1.1v1.5h2.3l-.3 2.3h-2v5.9h3.9a.88.88 0 0 0 .9-.8V.8a.86.86 0 0 0-.8-.8z" fill="currentColor">
+</path>
+</svg>
+<span class="sr-only">
+           GitHub on Facebook
+          </span>
+</a>
+</li>
+<li class="ml-3">
+<a class="footer-social-icon d-block Link--outlineOffset" data-analytics-event='{"category": "Footer", "action": "go to Linkedin", "label": "text:text:linkedin"}' href="https://www.linkedin.com/company/github">
+<svg aria-hidden='true' class="d-block" height='18' viewbox="0 0 19 18" width='19' xmlns="http://www.w3.org/2000/svg">
+<path d="M3.94 2A2 2 0 1 1 2 0a2 2 0 0 1 1.94 2zM4 5.48H0V18h4zm6.32 0H6.34V18h3.94v-6.57c0-3.66 4.77-4 4.77 0V18H19v-7.93c0-6.17-7.06-5.94-8.72-2.91z" fill="currentColor">
+</path>
+</svg>
+<span class="sr-only">
+           GitHub on LinkedIn
+          </span>
+</a>
+</li>
+<li class="ml-3">
+<a class="footer-social-icon d-block Link--outlineOffset" data-analytics-event='{"category": "Footer", "action": "go to YouTube", "label": "text:text:youtube"}' href="https://www.youtube.com/github">
+<svg aria-hidden='true' class="d-block" height='16' viewbox="0 0 19.17 13.6" width='23' xmlns="http://www.w3.org/2000/svg">
+<path d="M18.77 2.13A2.4 2.4 0 0 0 17.09.42C15.59 0 9.58 0 9.58 0a57.55 57.55 0 0 0-7.5.4A2.49 2.49 0 0 0 .39 2.13 26.27 26.27 0 0 0 0 6.8a26.15 26.15 0 0 0 .39 4.67 2.43 2.43 0 0 0 1.69 1.71c1.52.42 7.5.42 7.5.42a57.69 57.69 0 0 0 7.51-.4 2.4 2.4 0 0 0 1.68-1.71 25.63 25.63 0 0 0 .4-4.67 24 24 0 0 0-.4-4.69zM7.67 9.71V3.89l5 2.91z" fill="currentColor">
+</path>
+</svg>
+<span class="sr-only">
+           GitHub on YouTube
+          </span>
+</a>
+</li>
+<li class="ml-3">
+<a class="footer-social-icon d-block Link--outlineOffset" data-analytics-event='{"category": "Footer", "action": "go to Twitch", "label": "text:text:twitch"}' href="https://www.twitch.tv/github">
+<svg aria-hidden='true' class="d-block" height='18' role="img" viewbox="0 0 24 24" width='18' xmlns="http://www.w3.org/2000/svg">
+<title>
+            Twitch
+           </title>
+<path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z" fill="currentColor">
+</path>
+</svg>
+<span class="sr-only">
+           GitHub on Twitch
+          </span>
+</a>
+</li>
+<li class="ml-3">
+<a class="footer-social-icon d-block Link--outlineOffset" data-analytics-event='{"category": "Footer", "action": "go to tiktok", "label": "text:text:tiktok"}' href="https://www.tiktok.com/@github">
+<svg aria-hidden='true' class="d-block" height='18' role="img" viewbox="0 0 24 24" width='18' xmlns="http://www.w3.org/2000/svg">
+<title>
+            TikTok
+           </title>
+<path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" fill="currentColor">
+</path>
+</svg>
+<span class="sr-only">
+           GitHub on TikTok
+          </span>
+</a>
+</li>
+<li class="ml-3">
+<a class="footer-social-icon d-block Link--outlineOffset" data-analytics-event='{"category": "Footer", "action": "go to github's org", "label": "text:text:github"}' href="https://github.com/github">
+<svg aria-hidden='true' class="d-block" height='20' viewbox="0 0 16 16" width='20' xmlns="http://www.w3.org/2000/svg">
+<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" fill="currentColor">
+</path>
+</svg>
+<span class="sr-only">
+           GitHub’s organization on GitHub
+          </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</footer>
+<fullstory-capture data-fs-script-domain="https://github.githubassets.com">
+</fullstory-capture>
+<ghcc-consent class="position-fixed bottom-0 left-0" data-cookie-consent-required='false' data-initial-cookie-consent-allowed="" id="ghcc" style="z-index: 999999">
+</ghcc-consent>
+<div class="ajax-error-message flash flash-error" hidden="" id="ajax-error-message">
+<svg aria-hidden='true' class="octicon octicon-alert" data-view-component='true' height='16' version='1.1' viewbox="0 0 16 16" width='16'>
+<path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z">
+</path>
+</svg>
+<button aria-label="Dismiss error" class="flash-close js-ajax-error-dismiss" type="button">
+<svg aria-hidden='true' class="octicon octicon-x" data-view-component='true' height='16' version='1.1' viewbox="0 0 16 16" width='16'>
+<path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z">
+</path>
+</svg>
+</button>
+    You can’t perform that action at this time.
+   </div>
+<template id="site-details-dialog">
+<details class="details-reset details-overlay details-overlay-dark lh-default color-fg-default hx_rsm" open="">
+<summary aria-label="Close dialog" role="button">
+</summary>
+<details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast hx_rsm-dialog hx_rsm-modal">
+<button aria-label="Close dialog" class="Box-btn-octicon m-0 btn-octicon position-absolute right-0 top-0" data-close-dialog="" type="button">
+<svg aria-hidden='true' class="octicon octicon-x" data-view-component='true' height='16' version='1.1' viewbox="0 0 16 16" width='16'>
+<path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z">
+</path>
+</svg>
+</button>
+<div class="octocat-spinner my-6 js-details-dialog-spinner">
+</div>
+</details-dialog>
+</details>
+</template>
+<div class="Popover js-hovercard-content position-absolute" style="display: none; outline: none;">
+<div class="Popover-message Popover-message--bottom-left Popover-message--large Box color-shadow-large" style="width:360px;">
+</div>
+</div>
+<template id="snippet-clipboard-copy-button">
+<div class="zeroclipboard-container position-absolute right-0 top-0">
+<clipboard-copy aria-label="Copy" class="ClipboardButton btn js-clipboard-copy m-2 p-0" data-copy-feedback="Copied!" data-tooltip-direction="w">
+<svg aria-hidden='true' class="octicon octicon-copy js-clipboard-copy-icon m-2" data-view-component='true' height='16' version='1.1' viewbox="0 0 16 16" width='16'>
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+</path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+</path>
+</svg>
+<svg aria-hidden='true' class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none m-2" data-view-component='true' height='16' version='1.1' viewbox="0 0 16 16" width='16'>
+<path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+</path>
+</svg>
+</clipboard-copy>
+</div>
+</template>
+<template id="snippet-clipboard-copy-button-unpositioned">
+<div class="zeroclipboard-container">
+<clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w">
+<svg aria-hidden='true' class="octicon octicon-copy js-clipboard-copy-icon" data-view-component='true' height='16' version='1.1' viewbox="0 0 16 16" width='16'>
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+</path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+</path>
+</svg>
+<svg aria-hidden='true' class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none" data-view-component='true' height='16' version='1.1' viewbox="0 0 16 16" width='16'>
+<path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+</path>
+</svg>
+</clipboard-copy>
+</div>
+</template>
+</div>
+<div aria-atomic='true' aria-live="polite" class="sr-only mt-n1" id="js-global-screen-reader-notice">
+</div>
+<div aria-atomic='true' aria-live="assertive" class="sr-only mt-n1" id="js-global-screen-reader-notice-assertive">
+</div>
+
+        ```
+        

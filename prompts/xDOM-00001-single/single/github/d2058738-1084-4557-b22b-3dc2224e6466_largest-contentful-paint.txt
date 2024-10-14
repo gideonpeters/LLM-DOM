@@ -1,0 +1,505 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. largest-contentful-paint => Largest Contentful Paint: Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        <path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0 1 14.25 16H1.75A1.75 1.75 0 0 1 0 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V1.75a.25.25 0 0 0-.25-.25Zm7.47 3.97a.75.75 0 0 1 1.06 0l2 2a.75.75 0 0 1 0 1.06l-2 2a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L10.69 8 9.22 6.53a.75.75 0 0 1 0-1.06ZM6.78 6.53 5.31 8l1.47 1.47a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215l-2-2a.75.75 0 0 1 0-1.06l2-2a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042Z">
+</path>
+</svg>
+</template>
+<template id="device-desktop-icon">
+<svg aria-hidden='true' class="octicon octicon-device-desktop" data-view-component='true' height='16' version='1.1' viewbox="0 0 16 16" width='16'>
+<path d="M14.25 1c.966 0 1.75.784 1.75 1.75v7.5A1.75 1.75 0 0 1 14.25 12h-3.727c.099 1.041.52 1.872 1.292 2.757A.752.752 0 0 1 11.25 16h-6.5a.75.75 0 0 1-.565-1.243c.772-.885 1.192-1.716 1.292-2.757H1.75A1.75 1.75 0 0 1 0 10.25v-7.5C0 1.784.784 1 1.75 1ZM1.75 2.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25ZM9.018 12H6.982a5.72 5.72 0 0 1-.765 2.5h3.566a5.72 5.72 0 0 1-.765-2.5Z">
+</path>
+</svg>
+</template>
+<div class="position-relative">
+<ul aria-label="Suggestions" class="ActionListWrap QueryBuilder-ListWrap" data-action="
+                    combobox-commit:query-builder#comboboxCommit
+                    mousedown:query-builder#resultsMousedown
+                  " data-persist-list='false' data-target="query-builder.resultsList" id="query-builder-test-results" role="listbox">
+</ul>
+</div>
+<div class="FormControl-inlineValidation" hidden="hidden" id="validation-c0fb81cd-1ef9-4163-88c5-25ed284406fa">
+<span class="FormControl-inlineValidation--visual">
+<svg aria-hidden='true' class="octicon octicon-alert-fill" data-view-component='true' height='12' version='1.1' viewbox="0 0 12 12" width='12'>
+<path d="M4.855.708c.5-.896 1.79-.896 2.29 0l4.675 8.351a1.312 1.312 0 0 1-1.146 1.954H1.33A1.313 1.313 0 0 1 .183 9.058ZM7 7V3H5v4Zm-1 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z">
+</path>
+</svg>
+</span>
+<span>
+</span>
+</div>
+</div>
+<div aria-atomic='true' aria-live="polite" class="sr-only" data-target="query-builder.screenReaderFeedback">
+</div>
+</query-builder>
+</form>
+<div class="d-flex flex-row color-fg-muted px-3 text-small color-bg-default search-feedback-prompt">
+<a class="Link color-fg-accent text-normal ml-2" data-view-component='true' href="https://docs.github.com/search-github/github-code-search/understanding-github-code-search-syntax" target="_blank">
+                  Search syntax tips
+                 </a>
+<div class="d-flex flex-1">
+</div>
+</div>
+</div>
+</div>
+</div>
+</modal-dialog>
+</div>
+</div>
+<div class="dark-backdrop position-fixed" data-action="click:qbsearch-input#retract" data-target="qbsearch-input.darkBackdrop" hidden="">
+</div>
+<div class="color-fg-default">
+<dialog-helper>
+<dialog aria-describedby="feedback-dialog-description" aria-labelledby="feedback-dialog-title" aria-modal='true' class="Overlay Overlay-whenNarrow Overlay--size-medium Overlay--motion-scaleFade" data-action="close:qbsearch-input#handleDialogClose cancel:qbsearch-input#handleDialogClose" data-target="qbsearch-input.feedbackDialog" data-view-component='true' id="feedback-dialog">
+<div class="Overlay-header" data-view-component='true'>
+<div class="Overlay-headerContentWrap">
+<div class="Overlay-titleWrap">
+<h1 class="Overlay-title" id="feedback-dialog-title">
+                 Provide feedback
+                </h1>
+</div>
+<div class="Overlay-actionWrap">
+<button aria-label="Close" class="close-button Overlay-closeButton" data-close-dialog-id="feedback-dialog" data-view-component='true' type="button">
+<svg aria-hidden='true' class="octicon octicon-x" data-view-component='true' height='16' version='1.1' viewbox="0 0 16 16" width='16'>
+<path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z">
+</path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+<scrollable-region data-labelled-by="feedback-dialog-title">
+<div class="Overlay-body" data-view-component='true'>
+<!-- '"` -->
+<!-- </textarea></xmp> -->
+<form accept-charset="UTF-8" action="/search/feedback" data-turbo='false' id="code-search-feedback-form" method="post">
+<input data-csrf='true' name="authenticity_token" type="hidden" value="aQdeMpmJaoNuzDla3n+oJ9Kgg6nIZkD0x0Og6ZY+apPiql+Yf264zonlsWBf2t9XshBbQvZmKXuB93MEXyZKcg=="></input>
+<p>
+                 We read every piece of feedback, and take your input very seriously.
+                </p>
+<textarea class="form-control width-full mb-2" id="feedback" name="feedback" style="height: 120px"></textarea>
+<input aria-label="Include my email address so I can be contacted" class="form-control mr-2" id="include_email" name="include_email" type="checkbox"></input>
+<label for="include_email" style="font-weight: normal">
+                 Include my email address so I can be contacted
+                </label>
+</form>
+</div>
+</scrollable-region>
+<div class="Overlay-footer Overlay-footer--alignEnd" data-view-component='true'>
+<button class="btn" data-close-dialog-id="feedback-dialog" data-view-component='true' type="button">
+               Cancel
+              </button>
+<button class="btn-primary btn" data-action="click:qbsearch-input#submitFeedback" data-view-component='true' form="code-search-feedback-form" type="submit">
+               Submit feedback
+              </button>
+</div>
+</dialog>
+</dialog-helper>
+<custom-scopes data-target="qbsearch-input.customScopesManager">
+<dialog-helper>
+<dialog aria-describedby="custom-scopes-dialog-description" aria-labelledby="custom-scopes-dialog-title" aria-modal='true' class="Overlay Overlay-whenNarrow Overlay--size-medium Overlay--motion-scaleFade" data-action="close:qbsearch-input#handleDialogClose cancel:qbsearch-input#handleDialogClose" data-target="custom-scopes.customScopesModalDialog" data-view-component='true' id="custom-scopes-dialog">
+<div class="Overlay-header Overlay-header--divided" data-view-component='true'>
+<div class="Overlay-headerContentWrap">
+<div class="Overlay-titleWrap">
+<h1 class="Overlay-title" id="custom-scopes-dialog-title">
+                  Saved searches
+                 </h1>
+<h2 class="Overlay-description" id="custom-scopes-dialog-description">
+                  Use saved searches to filter your results more quickly
+                 </h2>
+</div>
+<div class="Overlay-actionWrap">
+<button aria-label="Close" class="close-button Overlay-closeButton" data-close-dialog-id="custom-scopes-dialog" data-view-component='true' type="button">
+<svg aria-hidden='true' class="octicon octicon-x" data-view-component='true' height='16' version='1.1' viewbox="0 0 16 16" width='16'>
+<path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z">
+</path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+<scrollable-region data-labelled-by="custom-scopes-dialog-title">
+<div class="Overlay-body" data-view-component='true'>
+<div data-target="custom-scopes.customScopesModalDialogFlash">
+</div>
+<div class="create-custom-scope-form" data-target="custom-scopes.createCustomScopeForm" hidden="">
+<!-- '"` -->
+<!-- </textarea></xmp> -->
+<form accept-charset="UTF-8" action="/search/custom_scopes" data-turbo='false' id="custom-scopes-dialog-form" method="post">
+<input data-csrf='true' name="authenticity_token" type="hidden" value="UtA0+dUmaccnwnHrAyV+NP+8DS6GkiMbkXiqvm0ac1U1F/OOJ5deROFb/oQ+/rcY7P8SeAHHYgJdhDND3t7edA=="></input>
+<div data-target="custom-scopes.customScopesModalDialogFlash">
+</div>
+<input data-target="custom-scopes.customScopesIdField" id="custom_scope_id" name="custom_scope_id" type="hidden">
+<div class="form-group">
+<label for="custom_scope_name">
+                     Name
+                    </label>
+<auto-check required="" src="/search/custom_scopes/check_name">
+<input autocomplete="off" class="form-control" data-target="custom-scopes.customScopesNameField" id="custom_scope_name" maxlength='50' name="custom_scope_name" placeholder="github-ruby" required="" type="text"></input>
+<input data-csrf='true' type="hidden" value="p78503t5J5e7p0uzixS2gz6+1+2CixZXpCdgKl2IBm5rHiE5R9RyVQpS9npYgkEPSVv0CA0zniEY8n5ijVJO8Q=="></input>
+</auto-check>
+</div>
+<div class="form-group">
+<label for="custom_scope_query">
+                     Query
+                    </label>
+<input autocomplete="off" class="form-control" data-target="custom-scopes.customScopesQueryField" id="custom_scope_query" maxlength='500' name="custom_scope_query" placeholder="(repo:mona/a OR repo:mona/b) AND lang:python" required="" type="text"></input>
+</div>
+<p class="text-small color-fg-muted">
+                    To see all available qualifiers, see our
+                    <a class="Link--inTextBlock" href="https://docs.github.com/search-github/github-code-search/understanding-github-code-search-syntax">
+                     documentation
+                    </a>
+                    .
+                   </p>
+</input>
+</form>
+</div>
+<div data-target="custom-scopes.manageCustomScopesForm">
+<div data-target="custom-scopes.list">
+</div>
+</div>
+</div>
+</scrollable-region>
+<div class="Overlay-footer Overlay-footer--alignEnd Overlay-footer--divided" data-view-component='true'>
+<button class="btn" data-action="click:custom-scopes#customScopesCancel" data-view-component='true' type="button">
+                Cancel
+               </button>
+<button class="btn-primary btn" data-action="click:custom-scopes#customScopesSubmit" data-target="custom-scopes.customScopesSubmitButton" data-view-component='true' form="custom-scopes-dialog-form" type="submit">
+                Create saved search
+               </button>
+</div>
+</dialog>
+</dialog-helper>
+</custom-scopes>
+</div>
+</qbsearch-input>
+<div class="position-relative HeaderMenu-link-wrap d-lg-inline-block">
+<a class="HeaderMenu-link HeaderMenu-link--sign-in HeaderMenu-button flex-shrink-0 no-underline d-none d-lg-inline-flex border border-lg-0 rounded rounded-lg-0 px-2 py-1" data-analytics-event='{"category": "Marketing nav", "action": "click to go to homepage", "label": "ref_page:Marketing;ref_cta:Sign in;ref_loc:Header"}' data-hydro-click='{"event_type": "authentication.click", "payload": {"location_in_page": "site header menu", "repository_id": null, "auth_type": "SIGN_UP", "originating_url": "https://github.com/", "user_id": null}}' data-hydro-click-hmac="1ac0bd316eb4ecff0fd1f338bc397cea8b5025ce78fffb7ade6ffdd600360286" href="/login" style="margin-left: 12px;">
+           Sign in
+          </a>
+</div>
+<a class="HeaderMenu-link HeaderMenu-link--sign-up HeaderMenu-button flex-shrink-0 d-flex d-lg-inline-flex no-underline border color-border-default rounded px-2 py-1" data-analytics-event='{"category": "Sign up", "action": "click to sign up for account", "label": "ref_page:/;ref_cta:Sign up;ref_loc:header logged out"}' data-hydro-click='{"event_type": "authentication.click", "payload": {"location_in_page": "site header menu", "repository_id": null, "auth_type": "SIGN_UP", "originating_url": "https://github.com/", "user_id": null}}' data-hydro-click-hmac="1ac0bd316eb4ecff0fd1f338bc397cea8b5025ce78fffb7ade6ffdd600360286" href="/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home">
+          Sign up
+         </a>
+<button class="sr-only js-header-menu-focus-trap d-block d-lg-none" type="button">
+          Reseting focus
+         </button>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="js-stale-session-flash stale-session-flash flash flash-warn flash-full" data-view-component='true' hidden="hidden">
+<svg aria-hidden='true' class="octicon octicon-alert" data-view-component='true' height='16' version='1.1' viewbox="0 0 16 16" width='16'>
+<path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z">
+</path>
+</svg>
+<span class="js-stale-session-flash-signed-in" hidden="">
+      You signed in with another tab or window.
+      <a class="Link--inTextBlock" href="">
+       Reload
+      </a>
+      to refresh your session.
+     </span>
+<span class="js-stale-session-flash-signed-out" hidden="">
+      You signed out in another tab or window.
+      <a class="Link--inTextBlock" href="">
+       Reload
+      </a>
+      to refresh your session.
+     </span>
+<span class="js-stale-session-flash-switched" hidden="">
+      You switched accounts on another tab or window.
+      <a class="Link--inTextBlock" href="">
+       Reload
+      </a>
+      to refresh your session.
+     </span>
+<button aria-labelledby="tooltip-afa0e779-cd61-4e4c-bff8-27b2a44da250" class="Button Button--iconOnly Button--invisible Button--medium flash-close js-flash-close" data-view-component='true' id="icon-button-9a964269-c3e9-40fb-84fd-9e6e86abe89e" type="button">
+<svg aria-hidden='true' class="octicon octicon-x Button-visual" data-view-component='true' height='16' version='1.1' viewbox="0 0 16 16" width='16'>
+<path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z">
+</path>
+</svg>
+</button>
+<tool-tip class="sr-only position-absolute" data-direction="s" data-type="label" data-view-component='true' for="icon-button-9a964269-c3e9-40fb-84fd-9e6e86abe89e" id="tooltip-afa0e779-cd61-4e4c-bff8-27b2a44da250" popover="manual">
+      Dismiss alert
+     </tool-tip>
+</div>
+</div>
+<div class="show-on-focus" id="start-of-content">
+</div>
+<div class="flash-container" data-turbo-replace="" id="js-flash-container">
+<template class="js-flash-template">
+<div class="flash flash-full {{ className }}">
+<div>
+<button aria-label="Dismiss this message" autofocus="" class="flash-close js-flash-close" type="button">
+<svg aria-hidden='true' class="octicon octicon-x" data-view-component='true' height='16' version='1.1' viewbox="0 0 16 16" width='16'>
+<path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z">
+</path>
+</svg>
+</button>
+<div aria-atomic='true' class="js-flash-alert" role="alert">
+<div>
+         {{ message }}
+        </div>
+</div>
+</div>
+</div>
+</template>
+</div>
+<include-fragment class="js-notification-shelf-include-fragment" data-base-src="https://github.com/notifications/beta/shelf">
+</include-fragment>
+<div class="application-main" data-commit-hovercards-enabled="" data-discussion-hovercards-enabled="" data-issue-and-pr-hovercards-enabled="">
+<main class="font-mktg">
+<div class="experimental-video position-fixed bottom-0 right-0 mr-3 mb-3 hidden" style="height: 268px; z-index: 1000;">
+<img alt="" aria-hidden='true' class="d-block width-full height-full object-fit-cover rounded-2" height='268' src="https://github.githubassets.com/assets/thumbnail-6bd32d9da8a5.png" width='470'></img>
+<span class="position-absolute width-full height-full top-0 left-0 d-flex flex-column text-left p-3 p-lg-4">
+<span class="d-block d-flex flex-row flex-nowrap flex-justify-between flex-items-start">
+<span class="h6-mktg color-fg-default" style="color: white !important;">
+         What is GitHub Copilot?
+        </span>
+</span>
+</span>
+<div class="position-absolute top-0 right-0 mt-2 mr-2">
+<span class="d-inline-block rounded p-2 mx-auto">
+<button aria-label="Close dialog" class="Box-btn-octicon btn-octicon float-right js-close-video" data-close-dialog="" style="color: white;" type="button">
+<svg aria-hidden='false' aria-label="Close Dialog" class="octicon octicon-x" data-view-component='true' height='16' role="img" version='1.1' viewbox="0 0 16 16" width='16'>
+<path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z">
+</path>
+</svg>
+</button>
+</span>
+</div>
+<div class="position-absolute bottom-0 left-0 mb-1 ml-1">
+<details class="js-video-container details-reset details-overlay details-overlay-dark">
+<summary aria-label="Play button" class="js-video-play d-block d-sm-inline-block mb-3 mr-sm-3" role="button">
+<img alt="" class="d-block width-full height-full object-fit-cover" height='32' role="none" src="https://github.githubassets.com/assets/play-1844e8414ade.png" width='178'></img>
+</summary>
+<details-dialog class="Box container-lg text-left border-0 overflow-auto col-12 color-fg-default" data-color-mode="dark" data-dark-theme="dark">
+<button aria-label="Close" class="js-video-close Box-btn-octicon btn-octicon position-absolute top-0 right-0 px-2 py-1 mr-0 mt-0 border-0 z-3" data-close-dialog="" type="button">
+<svg aria-hidden='true' class="octicon octicon-x" data-view-component='true' height='16' version='1.1' viewbox="0 0 16 16" width='16'>
+<path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z">
+</path>
+</svg>
+</button>
+<div class="position-relative z-1">
+<svg aria-hidden='true' class="width-full height-auto d-block" height='1080' version='1.1' viewbox="0 0 1920 1080" width='1920'>
+</svg>
+<iframe allow="autoplay;" allowfullscreen="" class="js-video position-absolute width-full height-full top-0 left-0 border-0" data-src="https://www.youtube-nocookie.com/embed/Z7hp241--vc?si=66DKDWNxWwlKi3A2&autoplay=1" frameborder='0' height='1080' title="Watch video" type="text/html" width='1920'>
+</iframe>
+</div>
+</details-dialog>
+</details>
+</div>
+</div>
+<div class="overflow-hidden" data-color-mode="dark" data-dark-theme="dark" data-light-theme="light">
+<div class="container-xl position-relative">
+<img alt="" aria-hidden='true' class="position-absolute top-0 height-auto events-none d-none d-sm-block" height='1630' src="https://github.githubassets.com/assets/hero-desktop-a38b0fd77b6c.webp" style="width: min(1118px, max(100vh, 100vw)); left: 67%;" width='2236'></img>
+<img alt="" aria-hidden='true' class="events-none d-sm-none width-full height-auto mb-n3" height='544' src="https://github.githubassets.com/assets/hero-mobile-7163f4f5de41.webp" width='860'></img>
+</div>
+<div class="px-3 home-campaign-hero">
+<div class="position-relative pt-3 pt-sm-8 pt-lg-12 container-xl js-build-in-trigger" data-hpc="">
+<div class="d-flex pt-sm-9">
+<div class="col-1 d-flex flex-column events-none position-relative">
+<div class="mx-auto">
+<div class="d-inline-block circle p-1" style="border: 2px solid rgba(255, 255, 255, 0.3);">
+</div>
+</div>
+<div class="home-campaign-git-line rounded mx-auto" style="background: linear-gradient(transparent, #7C72FF 30%); height: 72%">
+</div>
+<div class="mx-auto my-3 home-campaign-glowing-icon">
+<div class="position-relative d-inline-block z-1">
+<svg aria-hidden='true' class="octicon octicon-code" data-view-component='true' height='24' version='1.1' viewbox="0 0 24 24" width='24'>
+<path d="M15.22 4.97a.75.75 0 0 1 1.06 0l6.5 6.5a.75.75 0 0 1 0 1.06l-6.5 6.5a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L21.19 12l-5.97-5.97a.75.75 0 0 1 0-1.06Zm-6.44 0a.75.75 0 0 1 0 1.06L2.81 12l5.97 5.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215l-6.5-6.5a.75.75 0 0 1 0-1.06l6.5-6.5a.75.75 0 0 1 1.06 0Z">
+</path>
+</svg>
+<span class="position-absolute left-0 top-0 height-full width-full home-campaign-glowing-icon-glow circle z-n1" style="background-color: var(--mktg-accent-primary); filter: blur(18px);">
+</span>
+</div>
+</div>
+<div class="home-campaign-git-line height-full rounded mx-auto" style="background: linear-gradient(#7C72FF, #2DA44E 80%, #3FB950);">
+</div>
+</div>
+<div class="col-11 text-left pl-2 pl-sm-0 mt-n4">
+<div class="position-relative z-1 mb-2 mb-sm-6">
+</div>
+<h1 class="h0-mktg mb-3 position-relative z-2">
+<span style="font-size: 1.2em">
+            Let’s build from here
+           </span>
+</h1>
+<p class="f2-mktg text-normal color-fg-muted mb-3 mb-md-10 position-relative z-1">
+           The world’s leading AI-powered developer platform.
+          </p>
+<div>
+<label class="d-block pb-2" for="user_email">
+            Email address
+           </label>
+<div class="d-flex flex-column flex-md-row">
+<!-- '"` -->
+<!-- </textarea></xmp> -->
+<form accept-charset="UTF-8" action="/signup" autocomplete="off" class="mx-0 col-12 col-md-7 col-lg-5 js-signup-form position-relative z-2" data-turbo='false' method="get">
+<div class="d-flex flex-column flex-md-row flex-items-center">
+<input autocomplete="off" class="col-12 my-0 mb-3 mb-md-0 flex-auto form-control f4-mktg width-full rounded-md-right-0" data-color-mode="light" data-dark-theme="dark" data-light-theme="light" id="user_email" name="user_email" placeholder="you@company.com" required="" spellcheck='false' style="height: 3rem" type="email"></input>
+<input name="source" type="hidden" value="form-home-signup"></input>
+<button class="btn-mktg width-full width-md-auto mb-3 mb-md-0 rounded-md-left-0 home-campaign-signup-button btn-signup-mktg" data-analytics-event='{"category": "Home campaign", "action": "click to Sign up for GitHub", "label": "ref_page:/;ref_cta:Sign up for GitHub;ref_loc:hero"}' type="submit">
+               Sign up for GitHub
+              </button>
+</div>
+</form>
+<div class="border-top border-md-left mx-md-3 mb-3 mb-md-0">
+</div>
+<a class="btn-mktg home-campaign-enterprise btn-muted-mktg" data-analytics-event='{"category": "Start a free enterprise trial", "action": "click to Start a free enterprise trial", "label": "ref_cta:Start a free enterprise trial;"}' data-test-selector="start-trial-button" href="/organizations/enterprise_plan?ref_cta=Start+a+free+enterprise+trial&ref_loc=Home+campaign+hero&ref_page=%2F">
+             Start a free enterprise trial
+             <svg class="octicon arrow-symbol-mktg" fill="none" height='16' viewbox="0 0 16 16" width='16' xmlns="http://www.w3.org/2000/svg">
+<path d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z" fill="currentColor">
+</path>
+<path class="octicon-chevrow-stem" d="M1.75 8H11" stroke="currentColor" stroke-linecap="round" stroke-width='1.5'>
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="my-8 my-md-10 build-in-animate col-12">
+<p class="d-block color-fg-subtle f3-mktg">
+            Trusted by the world’s leading organizations ↘︎
+           </p>
+<div class="d-flex flex-wrap flex-justify-around flex-md-justify-between flex-items-center col-12 col-lg-11">
+<img alt="3M logo" class="my-3" height='48' src="https://github.githubassets.com/assets/3m-0151c2fda0ce.svg"></img>
+<img alt="KPMG logo" class="my-3" height='40' src="https://github.githubassets.com/assets/kpmg-c249f20c5173.svg"></img>
+<div class="col-12 d-sm-none">
+</div>
+<img alt="Mercedes-Benz logo" class="my-3" height='44' src="https://github.githubassets.com/assets/mercedes-fcf97d2d6ec4.svg"></img>
+<img alt="SAP logo" class="my-3" height='44' src="https://github.githubassets.com/assets/sap-96248a56d312.svg"></img>
+<div class="col-12 d-none d-sm-block d-md-none">
+</div>
+<div class="col-12 d-sm-none">
+</div>
+<img alt="P&G logo" class="my-3" height='32' src="https://github.githubassets.com/assets/pg-f1f19955c4e4.svg"></img>
+<img alt="Telus logo" class="my-3" height='32' src="https://github.githubassets.com/assets/telus-df0c2109df99.svg"></img>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="js-sticky-state position-sticky z-3 init-hidden" style="height: 1px;">
+<div class="sub-nav-mktg js-toggler-container z-3 is-stuck js-sticky-state position-sticky width-full scrollnav" data-color-mode="dark" data-dark-theme="dark" data-light-theme="light">
+<div class="sub-nav-mktg-wrapper d-flex flex-items-center py-3 p-responsive container-xl">
+<button aria-controls="sub-nav-dropdown" aria-expanded='false' aria-label="Page navigation" class="btn-octicon sub-nav-mktg-toggle d-lg-none p-1 flex-order-1 float-right js-toggler-target mr-n1" type="button">
+<svg aria-hidden='true' class="octicon octicon-chevron-down on-hidden" data-view-component='true' height='24' version='1.1' viewbox="0 0 24 24" width='24'>
+<path d="M5.22 8.22a.749.749 0 0 0 0 1.06l6.25 6.25a.749.749 0 0 0 1.06 0l6.25-6.25a.749.749 0 1 0-1.06-1.06L12 13.939 6.28 8.22a.749.749 0 0 0-1.06 0Z">
+</path>
+</svg>
+<svg aria-hidden='true' class="octicon octicon-chevron-up on-visible" data-view-component='true' height='24' version='1.1' viewbox="0 0 24 24" width='24'>
+<path d="M18.78 15.78a.749.749 0 0 1-1.06 0L12 10.061 6.28 15.78a.749.749 0 1 1-1.06-1.06l6.25-6.25a.749.749 0 0 1 1.06 0l6.25 6.25a.749.749 0 0 1 0 1.06Z">
+</path>
+</svg>
+</button>
+<div class="sub-nav-mktg-links flex-auto f4-mktg d-flex flex-column flex-lg-row gap-4" id="sub-nav-dropdown">
+<a class="sub-nav-mktg-link Link--primary no-underline py-1 py-lg-2 js-scrollnav-item" data-analytics-event='{"location": "scrollnav", "action": "productivity", "context": "homepage", "tag": "link", "label": "productivity_link_homepage_scrollnav"}' href="#productivity">
+          Productivity
+         </a>
+<a class="sub-nav-mktg-link Link--primary no-underline py-1 py-lg-2 js-scrollnav-item" data-analytics-event='{"location": "scrollnav", "action": "security", "context": "homepage", "tag": "link", "label": "security_link_homepage_scrollnav"}' href="#security">
+          Security
+         </a>
+<a class="sub-nav-mktg-link Link--primary no-underline py-1 py-lg-2 js-scrollnav-item" data-analytics-event='{"location": "scrollnav", "action": "collaboration", "context": "homepage", "tag": "link", "label": "collaboration_link_homepage_scrollnav"}' href="#collaboration">
+          Collaboration
+         </a>
+</div>
+<div class="sub-nav-mktg-ctas ml-lg-3">
+<a class="btn-mktg ml-lg-2 mt-2 mt-lg-0 d-block d-lg-inline-block btn-muted-mktg" data-analytics-event='{"category": "Start a free enterprise trial", "action": "click to Start a free enterprise trial", "label": "ref_cta:Start a free enterprise trial;", "context": "homepage", "location": "scrollnav", "tag": "link"}' href="/organizations/enterprise_plan?ref_cta=Start+a+free+enterprise+trial&ref_loc=homepage+sticky+nav&ref_page=%2F">
+          Start a free enterprise trial
+          <svg class="octicon arrow-symbol-mktg" fill="none" height='16' viewbox="0 0 16 16" width='16' xmlns="http://www.w3.org/2000/svg">
+<path d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z" fill="currentColor">
+</path>
+<path class="octicon-chevrow-stem" d="M1.75 8H11" stroke="currentColor" stroke-linecap="round" stroke-width='1.5'>
+</path>
+</svg>
+</a>
+<a class="btn-mktg ml-lg-2 mt-2 mt-lg-0 d-block d-lg-inline-block" data-analytics-event='{"category": "Sign up for GitHub", "action": "click to Sign up for GitHub", "label": "ref_cta:Sign up for GitHub;", "context": "homepage", "location": "scrollnav", "tag": "link"}' href="/join?ref_cta=Sign+up+for+GitHub&ref_loc=homepage+sticky+nav&ref_page=%2F&source=homepage-sticky-nav">
+          Sign up for GitHub
+          <svg class="octicon arrow-symbol-mktg" fill="none" height='16' viewbox="0 0 16 16" width='16' xmlns="http://www.w3.org/2000/svg">
+<path d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z" fill="currentColor">
+</path>
+<path class="octicon-chevrow-stem" d="M1.75 8H11" stroke="currentColor" stroke-linecap="round" stroke-width='1.5'>
+</path>
+</svg>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="home-campaign-productivity js-section overflow-hidden px-3 pb-8 pt-5" data-color-mode="dark" data-dark-theme="dark" data-light-theme="light" id="productivity">
+<div class="container-xl">
+<div class="d-flex js-build-in-trigger position-relative" data-build-in-stagger='100' data-build-margin-bottom='20'>
+<div class="col-1 d-flex flex-column flex-items-center">
+<div class="mb-4 position-relative home-campaign-glowing-icon">
+<svg aria-hidden='true' class="octicon octicon-briefcase" data-view-component='true' height='24' version='1.1' viewbox="0 0 24 24" width='24'>
+<path d="M7.5 1.75C7.5.784 8.284 0 9.25 0h5.5c.966 0 1.75.784 1.75 1.75V4h4.75c.966 0 1.75.784 1.75 1.75v14.5A1.75 1.75 0 0 1 21.25 22H2.75A1.75 1.75 0 0 1 1 20.25V5.75C1 4.784 1.784 4 2.75 4H7.5Zm-5 10.24v8.26c0 .138.112.25.25.25h18.5a.25.25 0 0 0 .25-.25v-8.26A4.235 4.235 0 0 1 18.75 13H5.25a4.235 4.235 0 0 1-2.75-1.01Zm19-3.24v-3a.25.25 0 0 0-.25-.25H2.75a.25.25 0 0 0-.25.25v3a2.75 2.75 0 0 0 2.75 2.75h13.5a2.75 2.75 0 0 0 2.75-2.75Zm-6.5-7a.25.25 0 0 0-.25-.25h-5.5a.25.25 0 0 0-.25.25V4h6Z">
+</path>
+</svg>
+<span class="position-absolute left-0 top-0 height-full width-full home-campaign-glowing-icon-glow circle z-n1" style="background-color: var(--mktg-accent-primary); filter: blur(18px);">
+</span>
+</div>
+<div class="home-campaign-git-line height-full rounded js-build-in-item build-in-scale-top" data-build-delay='500' style="background: linear-gradient(#3FB950, #2EA043, transparent);">
+</div>
+</div>
+<div class="col-11 col-lg-8 ml-2 ml-md-0 mb-6 mb-md-10">
+<h2 class="h5-mktg mb-4 text-medium">
+          Productivity
+         </h2>
+<h3 class="h3-mktg mb-4 text-medium">
+<span class="text-accent-primary d-block">
+           Accelerate innovation
+          </span>
+          Our AI-powered platform increases the pace of software development.
+         </h3>
+</div>
+<img alt="" aria-hidden='true' class="position-absolute height-auto d-none d-md-block col-6 events-none home-shape-rotate" decoding="async" height='626' loading="lazy" src="https://github.githubassets.com/assets/shape-0-df97fa6b0c27.svg" style="top: 0; right: -25%;" width='626'></img>
+</div>
+<div class="js-build-in-trigger">
+<img alt="" aria-hidden='true' class="width-full d-block height-auto position-relative z-1 rounded-3 border js-build-in-item build-in-slideX-right" decoding="async" height='1302' loading="lazy" src="https://github.githubassets.com/assets/illu-copilot-editor-6474457a5b19.png" width='2496'></img>
+</div>
+<div class="d-flex js-build-in-trigger position-relative" data-build-in-stagger='100'>
+<img alt="" aria-hidden='true' class="position-absolute height-auto d-none d-md-block col-7 events-none home-shape-rotate" decoding="async" height='584' loading="lazy" src="https://github.githubassets.com/assets/shape-1-c219318e479a.svg" style="bottom: -50%; right: -20%; animation-duration: 300s;" width='584'></img>
+<div class="col-1 d-flex flex-column flex-items-center position-relative">
+
+        ```
+        
