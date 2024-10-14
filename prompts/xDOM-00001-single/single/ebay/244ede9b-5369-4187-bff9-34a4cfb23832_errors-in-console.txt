@@ -1,0 +1,439 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. errors-in-console => Browser errors were logged to the console: Errors logged to the console indicate unresolved problems. They can come from network request failures and other browser concerns. [Learn more about this errors in console diagnostic audit](https://developer.chrome.com/docs/lighthouse/best-practices/errors-in-console/)
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        <a _sp="p4375194.m166540.l3949.c9" class="vlp-merch-item-tile" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "operationId": "4375194", "flushImmediately": false, "actionKind": "CLICK", "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "276400679497", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121456%26meid%3D6a7fb08f1b6d4435bc7d8be17df4e610%26pid%3D102177%26rk%3D9%26rkt%3D10%26mehot%3Dpp%26b%3D1%26itm%3D276400679497%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3DLenovo%26tu%3D01J53XXMJ4Y6XBTABZR43Y0H2G", "ampid": "MERCH_CLK", "rank": "9", "ammiid": "6a7fb08f1b6d4435bc7d8be17df4e610", "moduledtl": "mi:166540|iid:1|li:3949|luid:9|c:9", "vlpname": "vlp_homepage", "trackableId": "01J53XXMJ4Y6XBTABZR43Y0H2G", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KNFk2WEJUQUJaUjQzWTBIMkc0MDFKNTNYWE1KNFpOVldWRFE3R0s4QzlaV0sACDM5NDkKQ0xJQ0sA", "audience": "general"}}' data-track='[{"operationId": "4375194", "flushImmediately": false, "actionKind": "NAV", "eventProperty": {"trkp": "parentrq:47ded1841910ab8d0e971f48fffff5b0|pageci:8367f410-58d9-11ef-8be2-2a95c25823a1|iid:1|vlpname:vlp_homepage", "sid": "p4375194.m166540.l3949.c9", "audience": "general"}}, {"eventFamily": "VERTLAND", "eventAction": "ACTN", "operationId": "4375194", "flushImmediately": false, "actionKind": "CLICK", "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "276400679497", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121456%26meid%3D6a7fb08f1b6d4435bc7d8be17df4e610%26pid%3D102177%26rk%3D9%26rkt%3D10%26mehot%3Dpp%26b%3D1%26itm%3D276400679497%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3DLenovo%26tu%3D01J53XXMJ4Y6XBTABZR43Y0H2G", "ampid": "MERCH_CLK", "rank": "9", "ammiid": "6a7fb08f1b6d4435bc7d8be17df4e610", "moduledtl": "mi:166540|iid:1|li:3949|luid:9|c:9", "vlpname": "vlp_homepage", "trackableId": "01J53XXMJ4Y6XBTABZR43Y0H2G", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KNFk2WEJUQUJaUjQzWTBIMkc0MDFKNTNYWE1KNFpOVldWRFE3R0s4QzlaV0sACDM5NDkKQ0xJQ0sA", "audience": "general"}}]' href="https://www.ebay.com/itm/276400679497?_trkparms=amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121456%26meid%3D6a7fb08f1b6d4435bc7d8be17df4e610%26pid%3D102177%26rk%3D1%26rkt%3D1%26b%3D1%26itm%3D276400679497%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3DLenovo&_trksid=p4375194.c102177.m166540&_trkparms=parentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Cpageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Ciid%3A1%7Cvlpname%3Avlp_homepage" target="_blank">
+<div class="vlp-merch-content-wrap">
+<div class="vlp-merch-image-wrap-dweb">
+<div class="vlp-merch-image-frame" style=" ">
+<div class="vl-image-js js-only">
+<img alt="Lenovo Thinkbook Plus Gen 3 Dual Display 17.3" 3K Touch i7-12700H 16GB 512GB W11" class="vlp-merch-item-image" crossorigin="anonymous" data-high-res-size='500' data-item-card='true' data-size='300' data-src="https://i.ebayimg.com/thumbs/images/g/WooAAOSwO1xmBIkl/s-l500.jpg" onerror="window.addtoLazyLoad({el: this, fit: false})" onload="window.addtoLazyLoad({el: this, fit: false})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-image__no-fill">
+<img alt="Lenovo Thinkbook Plus Gen 3 Dual Display 17.3" 3K Touch i7-12700H 16GB 512GB W11" src="https://i.ebayimg.com/thumbs/images/g/WooAAOSwO1xmBIkl/s-l500.jpg"></img>
+</div>
+</noscript>
+</div>
+</div>
+<div class="vlp-merch-item-info">
+<h3 class="vlp-merch-item-title vlp-merch-item-title-dweb vlp-merch-item-title-margin">
+                  Lenovo Thinkbook Plus Gen 3 Dual Display 17.3" 3K Touch i7-12700H 16GB 512GB W11
+                 </h3>
+<div class="vlp-merch-sub-group">
+<div class="vlp-merch-price">
+<span role="text">
+                    $1,599.99
+                   </span>
+<span class="vlp-merch-additional-price">
+<span aria-label="previous price $2,299.99" class="sh-strikethrough" role="text">
+                     $2,299.99
+                    </span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</a>
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[7]-2-@match-media-0-@ebay-carousel-4[@8]-3[8]-43-->
+<div class="vlp-merch-add-to-watchlist-btn">
+<button aria-label="Add Lenovo Thinkbook Plus Gen 3 Dual Display 17.3" 3K Touch i7-12700H 16GB 512GB W11 to your watch list" class="btn btn--tertiary" type="button">
+<svg aria-hidden='true' class="vlp-merch-watch-unselected icon icon--16" focusable='false'>
+<use xlink:href="#hp-icon-save-16">
+</use>
+</svg>
+</button>
+</div>
+<!--vertlandweb/-->
+</div>
+<!--F/-->
+</li>
+<li class="vl-carousel__item" style="width:calc(18.51851851851852% - 13.037037037037038px)">
+<!--F#4[@9]-->
+<div class="vlp-merch-item-card-container" data-interactions='[{"actionKind": "CLICK", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KNDdWNUFCQjBITkJOWFhRSzU0MDFKNTNYWE1KNFpOVldWRFE3R0s4QzlaV0sACDM5NDkKQ0xJQ0sA"}]' data-viewport='{"trackableId": "01J53XXMJ47V5ABB0HNBNXXQK5"}'>
+<a _sp="p4375194.m166540.l3949.c10" class="vlp-merch-item-tile" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "operationId": "4375194", "flushImmediately": false, "actionKind": "CLICK", "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "155661726505", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121456%26meid%3D6a7fb08f1b6d4435bc7d8be17df4e610%26pid%3D102177%26rk%3D10%26rkt%3D10%26mehot%3Dpp%26b%3D1%26itm%3D155661726505%26pmt%3D1%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3DBOSS%2BAudio%26tu%3D01J53XXMJ47V5ABB0HNBNXXQK5", "ampid": "MERCH_CLK", "rank": "10", "ammiid": "6a7fb08f1b6d4435bc7d8be17df4e610", "moduledtl": "mi:166540|iid:1|li:3949|luid:10|c:10", "vlpname": "vlp_homepage", "trackableId": "01J53XXMJ47V5ABB0HNBNXXQK5", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KNDdWNUFCQjBITkJOWFhRSzU0MDFKNTNYWE1KNFpOVldWRFE3R0s4QzlaV0sACDM5NDkKQ0xJQ0sA", "audience": "general"}}' data-track='[{"operationId": "4375194", "flushImmediately": false, "actionKind": "NAV", "eventProperty": {"trkp": "parentrq:47ded1841910ab8d0e971f48fffff5b0|pageci:8367f410-58d9-11ef-8be2-2a95c25823a1|iid:1|vlpname:vlp_homepage", "sid": "p4375194.m166540.l3949.c10", "audience": "general"}}, {"eventFamily": "VERTLAND", "eventAction": "ACTN", "operationId": "4375194", "flushImmediately": false, "actionKind": "CLICK", "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "155661726505", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121456%26meid%3D6a7fb08f1b6d4435bc7d8be17df4e610%26pid%3D102177%26rk%3D10%26rkt%3D10%26mehot%3Dpp%26b%3D1%26itm%3D155661726505%26pmt%3D1%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3DBOSS%2BAudio%26tu%3D01J53XXMJ47V5ABB0HNBNXXQK5", "ampid": "MERCH_CLK", "rank": "10", "ammiid": "6a7fb08f1b6d4435bc7d8be17df4e610", "moduledtl": "mi:166540|iid:1|li:3949|luid:10|c:10", "vlpname": "vlp_homepage", "trackableId": "01J53XXMJ47V5ABB0HNBNXXQK5", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KNDdWNUFCQjBITkJOWFhRSzU0MDFKNTNYWE1KNFpOVldWRFE3R0s4QzlaV0sACDM5NDkKQ0xJQ0sA", "audience": "general"}}]' href="https://www.ebay.com/itm/155661726505?_trkparms=amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121456%26meid%3D6a7fb08f1b6d4435bc7d8be17df4e610%26pid%3D102177%26rk%3D1%26rkt%3D1%26b%3D1%26itm%3D155661726505%26pmt%3D1%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3DBOSS%2BAudio&_trksid=p4375194.c102177.m166540&_trkparms=parentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Cpageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Ciid%3A1%7Cvlpname%3Avlp_homepage" target="_blank">
+<div class="vlp-merch-content-wrap">
+<div class="vlp-merch-image-wrap-dweb">
+<div class="vlp-merch-image-frame" style=" ">
+<div class="vl-image-js js-only">
+<img alt="BOSS Audio BRT26A 26" UTV ATV Marine Sound Bar Bluetooth Amplified RGB C-Clamp" class="vlp-merch-item-image" crossorigin="anonymous" data-high-res-size='500' data-item-card='true' data-size='300' data-src="https://i.ebayimg.com/thumbs/images/g/0HIAAOSw9bRihxnS/s-l500.jpg" onerror="window.addtoLazyLoad({el: this, fit: false})" onload="window.addtoLazyLoad({el: this, fit: false})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-image__no-fill">
+<img alt="BOSS Audio BRT26A 26" UTV ATV Marine Sound Bar Bluetooth Amplified RGB C-Clamp" src="https://i.ebayimg.com/thumbs/images/g/0HIAAOSw9bRihxnS/s-l500.jpg"></img>
+</div>
+</noscript>
+</div>
+</div>
+<div class="vlp-merch-item-info">
+<h3 class="vlp-merch-item-title vlp-merch-item-title-dweb vlp-merch-item-title-margin">
+                  BOSS Audio BRT26A 26" UTV ATV Marine Sound Bar Bluetooth Amplified RGB C-Clamp
+                 </h3>
+<div class="vlp-merch-sub-group">
+<div class="vlp-merch-price">
+<span role="text">
+                    $189.00
+                   </span>
+</div>
+</div>
+</div>
+</div>
+</a>
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[7]-2-@match-media-0-@ebay-carousel-4[@9]-3[9]-43-->
+<div class="vlp-merch-add-to-watchlist-btn">
+<button aria-label="Add BOSS Audio BRT26A 26" UTV ATV Marine Sound Bar Bluetooth Amplified RGB C-Clamp to your watch list" class="btn btn--tertiary" type="button">
+<svg aria-hidden='true' class="vlp-merch-watch-unselected icon icon--16" focusable='false'>
+<use xlink:href="#hp-icon-save-16">
+</use>
+</svg>
+</button>
+</div>
+<!--vertlandweb/-->
+</div>
+<!--F/-->
+</li>
+</ul>
+</div>
+<button aria-disabled='true' aria-label="Go to the next slide, Trending in Refurbished - Carousel" class="carousel__control carousel__control--next" id="s0-1-0-52-1-2-4-17[0[0]]-0[7]-2-@match-media-0-@ebay-carousel-next" type="button">
+<svg aria-hidden='true' class="icon icon--16" focusable='false'>
+<use href="#icon-chevron-right-16">
+</use>
+</svg>
+</button>
+</div>
+</div>
+<!--F/-->
+</div>
+<!--F/-->
+<!--vertlandweb/-->
+</div>
+<div class="vl-module vl-popular-destinations off-card vl-atf-module-js" data-m-id='4776' data-view='{"eventFamily": "VERTLAND", "eventAction": "VIEW", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "audience": "general", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "moduledtl": "mi:4776|iid:2", "vlpname": "vlp_homepage"}}' data-viewdtls='{"moduleInstance": "mi:4776|iid:2", "parentrq": "47ded1841910ab8d0e971f48fffff5b0", "trackViews": "true", "trackPerf": "false"}'>
+<div class="vl-card-header">
+<div class="vl-card-header__header-container clearfix">
+<div class="vl-card-header__title">
+<h2 class="vl-card-header__headline">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[8]-1-@title-->
+<a _sp="p4375194.m4776.l9803" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "audience": "general", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "moduledtl": "mi:4776|iid:2|li:9803", "vlpname": "vlp_homepage"}}' href="https://www.ebay.com/b/Back-to-School/bn_7114588886?_trkparms=parentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Cpageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Ciid%3A2%7Cmi%3A4776%7Cli%3A9803">
+<!--F#f_15-->
+<!--F#f_@button-->
+<!--F#f_18-->
+            Fresh finds for the first day of school
+            <!--F/-->
+<!--F/-->
+<!--F/-->
+</a>
+<!--vertlandweb/-->
+</h2>
+</div>
+<div class="vl-card-header__seeall">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[8]-1-@seeall-->
+<a _sp="p4375194.m4776.l8342" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "audience": "general", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "moduledtl": "mi:4776|iid:2|li:8342", "vlpname": "vlp_homepage"}}' href="https://www.ebay.com/b/Back-to-School/bn_7114588886?_trkparms=parentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Cpageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Ciid%3A2%7Cmi%3A4776%7Cli%3A8342">
+<!--F#f_15-->
+<!--F#f_@button-->
+<!--F#f_18-->
+           See all
+           <!--F/-->
+<span class="clipped">
+            Fresh finds for the first day of school
+           </span>
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[8]-1-@seeall-14-1-22-12-0-0-->
+<svg aria-hidden='true' class="vl-cta-arrow vl-card-header__large-arrow icon icon--24" data-marko-key="@svg s0-1-0-52-1-2-4-17[0[0]]-0[8]-1-@seeall-14-1-22-12-0-0" focusable='false'>
+<use href="#icon-arrow-right-24">
+</use>
+</svg>
+<!--vertlandweb/-->
+<!--F/-->
+<!--F/-->
+</a>
+<!--vertlandweb/-->
+</div>
+</div>
+</div>
+<ul class="vl-popular-destinations-elements">
+<li class="vl-popular-destinations-element">
+<a _sp="p4375194.m4776.l8874.c1" class="vl-popular-destinations-link" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "audience": "general", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "moduledtl": "mi:4776|c:1|iid:2|li:8874", "vlpname": "vlp_homepage"}}' href="https://www.ebay.com/e/fashion/back-to-school-sneakers-direct-brands-07-22-24">
+<div class="vl-popular-destinations-image-spacer">
+<div class="vl-image vl-image-js js-only vl-popular-destinations-image vl-image__fill" data-size='200' data-src="https://i.ebayimg.com/images/g/esYAAOSwWNJmmRrx/s-l200.jpg">
+<div class="vl-image__background">
+</div>
+<img alt="" onerror="window.addtoLazyLoad({el: this, fit: true})" onload="window.addtoLazyLoad({el: this, fit: true})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-popular-destinations-image" style="background-image: url('${src}')">
+<img alt="" src="https://i.ebayimg.com/images/g/esYAAOSwWNJmmRrx/s-l200.jpg"></img>
+</div>
+</noscript>
+</div>
+<h3 class="vl-popular-destinations-name">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[8]-8[0]-->
+<!--F#f_15-->
+<!--F#f_@button-->
+<!--F#f_18-->
+           Up to 40% off sneakers
+           <!--F/-->
+<!--F/-->
+<!--F/-->
+<!--vertlandweb/-->
+</h3>
+</a>
+</li>
+<li class="vl-popular-destinations-element">
+<a _sp="p4375194.m4776.l8874.c2" class="vl-popular-destinations-link" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "audience": "general", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "moduledtl": "mi:4776|c:2|iid:2|li:8874", "vlpname": "vlp_homepage"}}' href="https://www.ebay.com/e/home-garden/back-to-school-refurbished-home">
+<div class="vl-popular-destinations-image-spacer">
+<div class="vl-image vl-image-js js-only vl-popular-destinations-image vl-image__fill" data-size='200' data-src="https://i.ebayimg.com/images/g/3SAAAOSwGFxmmSGG/s-l200.jpg">
+<div class="vl-image__background">
+</div>
+<img alt="" onerror="window.addtoLazyLoad({el: this, fit: true})" onload="window.addtoLazyLoad({el: this, fit: true})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-popular-destinations-image" style="background-image: url('${src}')">
+<img alt="" src="https://i.ebayimg.com/images/g/3SAAAOSwGFxmmSGG/s-l200.jpg"></img>
+</div>
+</noscript>
+</div>
+<h3 class="vl-popular-destinations-name">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[8]-8[1]-->
+<!--F#f_15-->
+<!--F#f_@button-->
+<!--F#f_18-->
+           Up to 60% off essentials
+           <!--F/-->
+<!--F/-->
+<!--F/-->
+<!--vertlandweb/-->
+</h3>
+</a>
+</li>
+<li class="vl-popular-destinations-element">
+<a _sp="p4375194.m4776.l8874.c3" class="vl-popular-destinations-link" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "audience": "general", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "moduledtl": "mi:4776|c:3|iid:2|li:8874", "vlpname": "vlp_homepage"}}' href="https://www.ebay.com/e/daily-deals/up-to-50-off-dorm-room-living">
+<div class="vl-popular-destinations-image-spacer">
+<div class="vl-image vl-image-js js-only vl-popular-destinations-image vl-image__fill" data-size='200' data-src="https://i.ebayimg.com/images/g/9JkAAOSwScpmmSHE/s-l200.jpg">
+<div class="vl-image__background">
+</div>
+<img alt="" onerror="window.addtoLazyLoad({el: this, fit: true})" onload="window.addtoLazyLoad({el: this, fit: true})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-popular-destinations-image" style="background-image: url('${src}')">
+<img alt="" src="https://i.ebayimg.com/images/g/9JkAAOSwScpmmSHE/s-l200.jpg"></img>
+</div>
+</noscript>
+</div>
+<h3 class="vl-popular-destinations-name">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[8]-8[2]-->
+<!--F#f_15-->
+<!--F#f_@button-->
+<!--F#f_18-->
+           Up to 50% off dorm room needs
+           <!--F/-->
+<!--F/-->
+<!--F/-->
+<!--vertlandweb/-->
+</h3>
+</a>
+</li>
+<li class="vl-popular-destinations-element">
+<a _sp="p4375194.m4776.l8874.c4" class="vl-popular-destinations-link" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "audience": "general", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "moduledtl": "mi:4776|c:4|iid:2|li:8874", "vlpname": "vlp_homepage"}}' href="https://www.ebay.com/e/_electronics/back-to-school-refurbished-laptops">
+<div class="vl-popular-destinations-image-spacer">
+<div class="vl-image vl-image-js js-only vl-popular-destinations-image vl-image__fill" data-size='200' data-src="https://i.ebayimg.com/images/g/fQYAAOSwKctmmSHb/s-l200.jpg">
+<div class="vl-image__background">
+</div>
+<img alt="" onerror="window.addtoLazyLoad({el: this, fit: true})" onload="window.addtoLazyLoad({el: this, fit: true})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-popular-destinations-image" style="background-image: url('${src}')">
+<img alt="" src="https://i.ebayimg.com/images/g/fQYAAOSwKctmmSHb/s-l200.jpg"></img>
+</div>
+</noscript>
+</div>
+<h3 class="vl-popular-destinations-name">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[8]-8[3]-->
+<!--F#f_15-->
+<!--F#f_@button-->
+<!--F#f_18-->
+           Up to 70% off laptops
+           <!--F/-->
+<!--F/-->
+<!--F/-->
+<!--vertlandweb/-->
+</h3>
+</a>
+</li>
+<li class="vl-popular-destinations-element">
+<a _sp="p4375194.m4776.l8874.c5" class="vl-popular-destinations-link" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "audience": "general", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "moduledtl": "mi:4776|c:5|iid:2|li:8874", "vlpname": "vlp_homepage"}}' href="https://www.ebay.com/e/_electronics/back-to-school-refurbished-portable-audio">
+<div class="vl-popular-destinations-image-spacer">
+<div class="vl-image vl-image-js js-only vl-popular-destinations-image vl-image__fill" data-size='200' data-src="https://i.ebayimg.com/images/g/I0gAAOSwLZdmmTCF/s-l200.jpg">
+<div class="vl-image__background">
+</div>
+<img alt="" onerror="window.addtoLazyLoad({el: this, fit: true})" onload="window.addtoLazyLoad({el: this, fit: true})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-popular-destinations-image" style="background-image: url('${src}')">
+<img alt="" src="https://i.ebayimg.com/images/g/I0gAAOSwLZdmmTCF/s-l200.jpg"></img>
+</div>
+</noscript>
+</div>
+<h3 class="vl-popular-destinations-name">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[8]-8[4]-->
+<!--F#f_15-->
+<!--F#f_@button-->
+<!--F#f_18-->
+           Up to 70% off speakers and more
+           <!--F/-->
+<!--F/-->
+<!--F/-->
+<!--vertlandweb/-->
+</h3>
+</a>
+</li>
+<li class="vl-popular-destinations-element">
+<a _sp="p4375194.m4776.l8874.c6" class="vl-popular-destinations-link" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "audience": "general", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "moduledtl": "mi:4776|c:6|iid:2|li:8874", "vlpname": "vlp_homepage"}}' href="https://www.ebay.com/e/_electronics/back-to-school-refurbished-smartphones">
+<div class="vl-popular-destinations-image-spacer">
+<div class="vl-image vl-image-js js-only vl-popular-destinations-image vl-image__fill" data-size='200' data-src="https://i.ebayimg.com/images/g/a3kAAOSwbiNmmTCd/s-l200.jpg">
+<div class="vl-image__background">
+</div>
+<img alt="" onerror="window.addtoLazyLoad({el: this, fit: true})" onload="window.addtoLazyLoad({el: this, fit: true})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-popular-destinations-image" style="background-image: url('${src}')">
+<img alt="" src="https://i.ebayimg.com/images/g/a3kAAOSwbiNmmTCd/s-l200.jpg"></img>
+</div>
+</noscript>
+</div>
+<h3 class="vl-popular-destinations-name">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[8]-8[5]-->
+<!--F#f_15-->
+<!--F#f_@button-->
+<!--F#f_18-->
+           Smartphones under $500
+           <!--F/-->
+<!--F/-->
+<!--F/-->
+<!--vertlandweb/-->
+</h3>
+</a>
+</li>
+<li class="vl-popular-destinations-element">
+<a _sp="p4375194.m4776.l8874.c7" class="vl-popular-destinations-link" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "audience": "general", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "moduledtl": "mi:4776|c:7|iid:2|li:8874", "vlpname": "vlp_homepage"}}' href="https://www.ebay.com/e/lifestyle-media/back-to-school-refurbished-music">
+<div class="vl-popular-destinations-image-spacer">
+<div class="vl-image vl-image-js js-only vl-popular-destinations-image vl-image__fill" data-size='200' data-src="https://i.ebayimg.com/images/g/IMcAAOSwQvZmmTDH/s-l200.jpg">
+<div class="vl-image__background">
+</div>
+<img alt="" onerror="window.addtoLazyLoad({el: this, fit: true})" onload="window.addtoLazyLoad({el: this, fit: true})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-popular-destinations-image" style="background-image: url('${src}')">
+<img alt="" src="https://i.ebayimg.com/images/g/IMcAAOSwQvZmmTDH/s-l200.jpg"></img>
+</div>
+</noscript>
+</div>
+<h3 class="vl-popular-destinations-name">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[8]-8[6]-->
+<!--F#f_15-->
+<!--F#f_@button-->
+<!--F#f_18-->
+           Up to 50% off instruments
+           <!--F/-->
+<!--F/-->
+<!--F/-->
+<!--vertlandweb/-->
+</h3>
+</a>
+</li>
+</ul>
+</div>
+<div class="vl-module vl-card-list-with-header-card vl-atf-module-js dweb CARD_LIST_WITH_HEADER_CARD" data-m-id='150506' data-view='{"eventFamily": "VERTLAND", "eventAction": "VIEW", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "audience": "general", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "moduledtl": "mi:150506|iid:1", "vlpname": "vlp_homepage"}}' data-viewdtls='{"moduleInstance": "mi:150506|iid:1", "parentrq": "47ded1841910ab8d0e971f48fffff5b0", "trackViews": "true", "trackPerf": "false"}' data-viewport='{"trackableId": "01J53XXMGEZG3TSVCNSKGX0HQ2"}' style="
+            --text-banner-background-color: var(--color-foreground-primary);
+            --text-banner-foreground-color: var(--color-background-primary);
+        ">
+<div class="vl-card-list-with-header-card__grid">
+<div class="vl-card-list-with-header-card__header-card">
+<div class="vl-text-banner evo" style="background-color:var(--color-foreground-primary)">
+<h2 class="vl-text-banner__headline">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[9]-5-1-6-->
+<a _sp="p4375194.m150506.l9803" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "moduledtl": "mi:150506|iid:1|li:9803", "vlpname": "vlp_homepage", "audience": "general"}}' href="https://www.ebay.com/deals?_trkparms=parentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Cpageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Ciid%3A1%7Cvlpname%3Avlp_homepage" style="color:var(--color-background-primary)">
+<!--F#f_15-->
+<!--F#f_@button-->
+<div class="vl-ellipsis-2" style="color:var(--color-background-primary)">
+<span style="color:var(--color-background-primary)">
+              Today's Deals
+             </span>
+</div>
+<!--F/-->
+<!--F/-->
+</a>
+<!--vertlandweb/-->
+</h2>
+<div class="vl-text-banner__subheadline">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[9]-5-1-8-->
+<div aria-label="All With Free Shipping" style="color:var(--color-background-primary)">
+<!--F#f_@button-->
+<div class="vl-ellipsis-2" style="color:var(--color-background-primary)">
+<span style="color:var(--color-background-primary)">
+              All With Free Shipping
+             </span>
+</div>
+<!--F/-->
+</div>
+<!--vertlandweb/-->
+</div>
+<div class="vl-cta vl-text-banner__cta" onfocusin="this.querySelector('.vl-cta__default').onmouseover()" onfocusout="this.querySelector('.vl-cta__default').onmouseout()" style="font-color:var(--color-background-primary);background-color:var(--color-foreground-primary)">
+<a _sp="p4375194.m150506.l8342" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "moduledtl": "mi:150506|iid:1|li:8342", "vlpname": "vlp_homepage", "audience": "general"}}' href="https://www.ebay.com/deals?_trkparms=parentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Cpageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Ciid%3A1%7Cvlpname%3Avlp_homepage">
+<div class="vl-cta__text-only" style="color:var(--color-background-primary)">
+             Shop now
+             <!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[9]-5-1-9-1-1-3-1-0-0-->
+<svg aria-hidden='true' class="vl-cta-arrow vl-text-banner__cta-arrow icon icon--24" data-marko-key="@svg s0-1-0-52-1-2-4-17[0[0]]-0[9]-5-1-9-1-1-3-1-0-0" focusable='false' style="fill:currentColor">
+<use href="#icon-arrow-right-24">
+</use>
+</svg>
+<!--vertlandweb/-->
+</div>
+<div class="vl-cta__default evo" onmouseout="this.style.background='var(--color-background-primary)'; this.style.color='var(--color-foreground-primary)'; this.style['border-color']='var(--color-background-primary)';" onmouseover="this.style.background='null'; this.style.color='null';" style="background-color: var(--color-background-primary); color: var(--color-foreground-primary); border-color: var(--color-background-primary)">
+             Shop now
+             <!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[9]-5-1-9-1-1-5-1-0-0-->
+<svg aria-hidden='true' class="vl-cta-arrow vl-text-banner__cta-arrow icon icon--24" data-marko-key="@svg s0-1-0-52-1-2-4-17[0[0]]-0[9]-5-1-9-1-1-5-1-0-0" focusable='false' style="fill:currentColor">
+<use href="#icon-arrow-right-24">
+</use>
+</svg>
+<!--vertlandweb/-->
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="vlp-merch-item-card-container" data-interactions='[{"actionKind": "CLICK", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1HODJYOEg1NVozWjFOSlJXQVM0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA"}]' data-viewport='{"trackableId": "01J53XXMG82X8H55Z3Z1NJRWAS"}'>
+
+        ```
+        

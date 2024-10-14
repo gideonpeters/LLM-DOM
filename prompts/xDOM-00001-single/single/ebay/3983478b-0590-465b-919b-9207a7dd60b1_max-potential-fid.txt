@@ -1,0 +1,564 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. max-potential-fid => Max Potential First Input Delay: The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        <svg aria-hidden='true' class="vl-cta-arrow icon icon--24" data-marko-key="@svg s0-1-0-52-1-2-4-17[0[0]]-0[10]-1-1-14-3-1-0-0" focusable='false' style="fill:currentColor">
+<use href="#icon-arrow-right-24">
+</use>
+</svg>
+<!--vertlandweb/-->
+</div>
+<div class="vl-cta__default" onmouseout="this.style.color='#000000'; this.style['border-color']='#000000'; this.style['box-shadow']='#000000 0 0px 0px 0px inset'; this.querySelectorAll('.vl-cta-arrow').item(0).style['stroke']='#000000'" onmouseover="this.style.color='#ffffff'; this.style['border-color']='#000000'; this.style['box-shadow']='#000000 0 0px 0px 70px inset'; this.querySelectorAll('.vl-cta-arrow').item(0).style['stroke']='#ffffff'" style="color: #000000; border-color: #000000">
+            Get your thing
+            <!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[10]-1-1-14-5-1-0-0-->
+<svg aria-hidden='true' class="vl-cta-arrow icon icon--24" data-marko-key="@svg s0-1-0-52-1-2-4-17[0[0]]-0[10]-1-1-14-5-1-0-0" focusable='false' style="fill:currentColor">
+<use href="#icon-arrow-right-24">
+</use>
+</svg>
+<!--vertlandweb/-->
+</div>
+</div>
+</div>
+</div>
+</a>
+<div class="vl-ad-row__mrec">
+<div data-from="ads_platform_all_ads" data-slot="PLACEMENT_100716" id="s0-1-0-52-1-2-4-17[0[0]]-0[10]-18-0-0-0">
+<!--F#@_-->
+<div id="scandal100716">
+</div>
+<script data-chunk-uuid="3e3e7b3e-2939-4a5a-9e0c-9f088c801b82" type="module">// chunk_script_3e3e7b3e-2939-4a5a-9e0c-9f088c801b82
+</script>
+<!--F/-->
+</div>
+</div>
+</div>
+<div class="vl-banner vl-banner-color-block vl-atf-module-js evo" data-m-id='146826' data-view='{"eventFamily": "VERTLAND", "eventAction": "VIEW", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"moduledtl": "mi:146826|iid:2", "ammiid": "1476596978871806029", "amdata": "t=0|tdt=iid:1476596978871806029,clkid:1476596978871806028|plmt=(channel:ONSITE_DWEB cnv.cfg.id:6e554464-feef-4d68-9ea0-df8a19c5eabd cnv.id:100001 iid:1476596978871806029 isUEP:1 mesg.id:3004764551241688026 message.mob.trk.id:0b99112e-9a8e-494a-a530-23792fe526c5~Y3YzTRAXq8sijKDtpKrR9pLkLduhDQC6PSPRQkvmi8y~5RBev2OCrT94AtWbLoYqdw5ZHsrrb3mOey2HhJjHhyK pageci:8367f410-58d9-11ef-8be2-2a95c25823a1 parentrq:47ded1841910ab8d0e971f48fffff5b0 plmt.id:100005 site.id:0)|ul=en-US|guid=47ded19a1910ab8d0e9832cfffffbdac|send.trk.id=e578147c-4a5f-4ee0-8f69-842ebd1c2bb6|uc=2|cnv.trk.id=819b78b8-ffcf-41f3-8a91-ea2af6702cae|cr.id=7786817289007379728|cr.vt.id=1722527243040|mobtrkId=dd90ae9a-c381-48da-860e-557e10c812bc~sAi6hM8JmYUNHwT8OvQGeLj9jO4SeWmPj3RyScigTjh~GEmWzRtQRUPOs77AQqkA62XRBm4Xjg4MwPqdEuxnapZ", "parentrq": "47ded1841910ab8d0e971f48fffff5b0", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "audience": "general", "vlpname": "vlp_homepage", "ampid": "MADRONA"}}' data-viewdtls='{"moduleInstance": "mi:146826|iid:2", "parentrq": "47ded1841910ab8d0e971f48fffff5b0", "trackViews": "true", "trackPerf": "false"}' style="background-color:#191919">
+<div class="vl-banner-color-block__container">
+<div class="page-grid">
+<div class="vl-banner-color-block__content has-fine-print">
+<div class="vl-banner__text vl-banner-color-block__text">
+<div class="vl-banner-color-block__text__container">
+<div class="vl-banner__text-heading">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[11]-13-->
+<div aria-label="Embrace elegance with 15% off" style="color:#ffffff">
+<!--F#f_@button-->
+<div class="vl-ellipsis-3" style="color:#ffffff">
+<span style="color:#ffffff">
+                Embrace elegance with 15% off
+               </span>
+</div>
+<!--F/-->
+</div>
+<!--vertlandweb/-->
+</div>
+<div class="vl-banner__text-subheading">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[11]-15-->
+<!--F#f_15-->
+<!--F#f_@button-->
+<div class="vl-ellipsis-2" style="color:#ffffff">
+<span style="color:#ffffff">
+               Elevate your collection with select fine jewelry.
+              </span>
+</div>
+<!--F/-->
+<!--F/-->
+<!--vertlandweb/-->
+</div>
+</div>
+<div class="vl-cta vl-banner__cta" onfocusin="this.querySelector('.vl-cta__default').onmouseover()" onfocusout="this.querySelector('.vl-cta__default').onmouseout()" style="font-color:#ffffff;background-color:#191919">
+<a _sp="p4375194.m146826.l5352.c1" aria-label="Get the coupon" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"moduledtl": "mi:146826|iid:2|li:5352|luid:1|c:1", "ammiid": "1476596978871806029", "amdata": "t=0|tdt=iid:1476596978871806029,clkid:1476596978871806028|plmt=(channel:ONSITE_DWEB cnv.cfg.id:6e554464-feef-4d68-9ea0-df8a19c5eabd cnv.id:100001 iid:1476596978871806029 isUEP:1 mesg.id:3004764551241688026 message.mob.trk.id:0b99112e-9a8e-494a-a530-23792fe526c5~Y3YzTRAXq8sijKDtpKrR9pLkLduhDQC6PSPRQkvmi8y~5RBev2OCrT94AtWbLoYqdw5ZHsrrb3mOey2HhJjHhyK pageci:8367f410-58d9-11ef-8be2-2a95c25823a1 parentrq:47ded1841910ab8d0e971f48fffff5b0 plmt.id:100005 site.id:0)|ul=en-US|guid=47ded19a1910ab8d0e9832cfffffbdac|send.trk.id=e578147c-4a5f-4ee0-8f69-842ebd1c2bb6|uc=2|cnv.trk.id=819b78b8-ffcf-41f3-8a91-ea2af6702cae|cr.id=7786817289007379728|cr.vt.id=1722527243040|mobtrkId=dd90ae9a-c381-48da-860e-557e10c812bc~sAi6hM8JmYUNHwT8OvQGeLj9jO4SeWmPj3RyScigTjh~GEmWzRtQRUPOs77AQqkA62XRBm4Xjg4MwPqdEuxnapZ", "audience": "general", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "vlpname": "vlp_homepage", "ampid": "MADRONA"}}' href="https://www.ebay.com/e/fashion/jewelry-sfc-081224?_trkparms=pageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Cparentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Ciid%3A2%7Cvlpname%3Avlp_homepage">
+<div class="vl-cta__text-only" style="color:#ffffff">
+              Get the coupon
+              <!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[11]-16-1-1-3-1-0-0-->
+<svg aria-hidden='true' class="vl-cta-arrow icon icon--24" data-marko-key="@svg s0-1-0-52-1-2-4-17[0[0]]-0[11]-16-1-1-3-1-0-0" focusable='false' style="fill:currentColor">
+<use href="#icon-arrow-right-24">
+</use>
+</svg>
+<!--vertlandweb/-->
+</div>
+<div class="vl-cta__default evo" onmouseout="this.style.background='#ffffff'; this.style.color='#191919'; this.style['border-color']='#ffffff';" onmouseover="this.style.background='#f5f5f5'; this.style.color='#181818';" style="background-color: #ffffff; color: #191919; border-color: #ffffff">
+              Get the coupon
+              <!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[11]-16-1-1-5-1-0-0-->
+<svg aria-hidden='true' class="vl-cta-arrow icon icon--24" data-marko-key="@svg s0-1-0-52-1-2-4-17[0[0]]-0[11]-16-1-1-5-1-0-0" focusable='false' style="fill:currentColor">
+<use href="#icon-arrow-right-24">
+</use>
+</svg>
+<!--vertlandweb/-->
+</div>
+</a>
+</div>
+</div>
+<div class="vl-fine-print vl-banner__fine-print">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[11]-17-1-->
+<div aria-label="Ends 8/18. Max $500 off orders $300+. 2x use." style="color:#ffffff">
+<!--F#f_@button-->
+<!--F#f_18-->
+<span style="color:#ffffff">
+             Ends 8/18. Max $500 off orders $300+. 2x use.
+            </span>
+<!--F/-->
+<!--F/-->
+</div>
+<!--vertlandweb/-->
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[11]-17-2-->
+<!--vertlandweb/-->
+</div>
+</div>
+<div class="vl-fine-print vl-banner__fine-print">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[11]-18-1-->
+<div aria-label="Ends 8/18. Max $500 off orders $300+. 2x use." style="color:#ffffff">
+<!--F#f_@button-->
+<!--F#f_18-->
+<span style="color:#ffffff">
+            Ends 8/18. Max $500 off orders $300+. 2x use.
+           </span>
+<!--F/-->
+<!--F/-->
+</div>
+<!--vertlandweb/-->
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[11]-18-2-->
+<!--vertlandweb/-->
+</div>
+<a _sp="p4375194.m146826.l5350.c1" class="vl-banner-color-block__image-link" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"moduledtl": "mi:146826|iid:2|li:5350|luid:1|c:1", "ammiid": "1476596978871806029", "amdata": "t=0|tdt=iid:1476596978871806029,clkid:1476596978871806028|plmt=(channel:ONSITE_DWEB cnv.cfg.id:6e554464-feef-4d68-9ea0-df8a19c5eabd cnv.id:100001 iid:1476596978871806029 isUEP:1 mesg.id:3004764551241688026 message.mob.trk.id:0b99112e-9a8e-494a-a530-23792fe526c5~Y3YzTRAXq8sijKDtpKrR9pLkLduhDQC6PSPRQkvmi8y~5RBev2OCrT94AtWbLoYqdw5ZHsrrb3mOey2HhJjHhyK pageci:8367f410-58d9-11ef-8be2-2a95c25823a1 parentrq:47ded1841910ab8d0e971f48fffff5b0 plmt.id:100005 site.id:0)|ul=en-US|guid=47ded19a1910ab8d0e9832cfffffbdac|send.trk.id=e578147c-4a5f-4ee0-8f69-842ebd1c2bb6|uc=2|cnv.trk.id=819b78b8-ffcf-41f3-8a91-ea2af6702cae|cr.id=7786817289007379728|cr.vt.id=1722527243040|mobtrkId=dd90ae9a-c381-48da-860e-557e10c812bc~sAi6hM8JmYUNHwT8OvQGeLj9jO4SeWmPj3RyScigTjh~GEmWzRtQRUPOs77AQqkA62XRBm4Xjg4MwPqdEuxnapZ", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "audience": "general", "ampid": "MADRONA", "vlpname": "vlp_homepage"}}' href="https://www.ebay.com/e/fashion/jewelry-sfc-081224?_trkparms=pageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Cparentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Ciid%3A2%7Cvlpname%3Avlp_homepage">
+<div class="vl-image vl-image-js js-only vl-banner-color-block__image vl-image__fill" data-size='920' data-src="https://i.ebayimg.com/images/g/9f4AAOSwEdhmskV1/s-l960.png">
+<div class="vl-image__background" style="background-color:#191919">
+</div>
+<img alt="A pair of Amour 14k white gold and sapphire 1 CT TW diamond-drop earrings and a 14k white gold 4.60 CT zig-zag round-cut lab-grown diamond tennis bracelet against a black background." onerror="window.addtoLazyLoad({el: this, fit: true})" onload="window.addtoLazyLoad({el: this, fit: true})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-banner-color-block__image" style="background-image: url('${src}')">
+<img alt="A pair of Amour 14k white gold and sapphire 1 CT TW diamond-drop earrings and a 14k white gold 4.60 CT zig-zag round-cut lab-grown diamond tennis bracelet against a black background." src="https://i.ebayimg.com/images/g/9f4AAOSwEdhmskV1/s-l960.png"></img>
+</div>
+</noscript>
+</a>
+</div>
+</div>
+</div>
+<div class="vl-banner vl-banner-color-block vl-atf-module-js evo" data-m-id='146826' data-view='{"eventFamily": "VERTLAND", "eventAction": "VIEW", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"moduledtl": "mi:146826|iid:1", "ammiid": "1476596978871806031", "amdata": "t=0|tdt=iid:1476596978871806031,clkid:1476596978871806030|plmt=(channel:ONSITE_DWEB cnv.cfg.id:6e554464-feef-4d68-9ea0-df8a19c5eabd cnv.id:100001 iid:1476596978871806031 isUEP:1 mesg.id:6429191655554826581 message.mob.trk.id:0b99112e-9a8e-494a-a530-23792fe526c5~Y3YzTRAXq8sijKDtpKrR9pLkLduhDQC6PSPRQkvmi8y~TcMmjoWactMqcV1qwoZEHQBgAy6qVh9cC2aCYRXIHQh pageci:8367f410-58d9-11ef-8be2-2a95c25823a1 parentrq:47ded1841910ab8d0e971f48fffff5b0 plmt.id:100162 site.id:0)|ul=en-US|guid=47ded19a1910ab8d0e9832cfffffbdac|send.trk.id=cc7fd72d-6163-42d2-a6f4-de806c4060b7|uc=2|cnv.trk.id=819b78b8-ffcf-41f3-8a91-ea2af6702cae|cr.id=295164593908269123|cr.vt.id=1705095834892|mobtrkId=dd90ae9a-c381-48da-860e-557e10c812bc~sAi6hM8JmYUNHwT8OvQGeLj9jO4SeWmPj3RyScigTjh~GEmWzRtQRUPOs77AQqkA62XRBm4Xjg4MwPqdEuxnapZ", "parentrq": "47ded1841910ab8d0e971f48fffff5b0", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "audience": "general", "vlpname": "vlp_homepage", "ampid": "MADRONA"}}' data-viewdtls='{"moduleInstance": "mi:146826|iid:1", "parentrq": "47ded1841910ab8d0e971f48fffff5b0", "trackViews": "true", "trackPerf": "false"}' style="background-color:#c2f2ef">
+<div class="vl-banner-color-block__container">
+<div class="page-grid">
+<div class="vl-banner-color-block__content has-fine-print">
+<div class="vl-banner__text vl-banner-color-block__text">
+<div class="vl-banner-color-block__text__container">
+<div class="vl-banner__text-heading">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[12]-13-->
+<div aria-label="Score up to 40% off New Balance" style="color:#003147">
+<!--F#f_@button-->
+<div class="vl-ellipsis-3" style="color:#003147">
+<span style="color:#003147">
+                Score up to 40% off New Balance
+               </span>
+</div>
+<!--F/-->
+</div>
+<!--vertlandweb/-->
+</div>
+<div class="vl-banner__text-subheading">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[12]-15-->
+<!--F#f_15-->
+<!--F#f_@button-->
+<div class="vl-ellipsis-2" style="color:#003147">
+<span style="color:#003147">
+               Save on sneakers and apparel direct from brand.
+              </span>
+</div>
+<!--F/-->
+<!--F/-->
+<!--vertlandweb/-->
+</div>
+</div>
+<div class="vl-cta vl-banner__cta" onfocusin="this.querySelector('.vl-cta__default').onmouseover()" onfocusout="this.querySelector('.vl-cta__default').onmouseout()" style="font-color:#003147;background-color:#c2f2ef">
+<a _sp="p4375194.m146826.l5352.c1" aria-label="Shop now" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"moduledtl": "mi:146826|iid:1|li:5352|luid:1|c:1", "ammiid": "1476596978871806031", "amdata": "t=0|tdt=iid:1476596978871806031,clkid:1476596978871806030|plmt=(channel:ONSITE_DWEB cnv.cfg.id:6e554464-feef-4d68-9ea0-df8a19c5eabd cnv.id:100001 iid:1476596978871806031 isUEP:1 mesg.id:6429191655554826581 message.mob.trk.id:0b99112e-9a8e-494a-a530-23792fe526c5~Y3YzTRAXq8sijKDtpKrR9pLkLduhDQC6PSPRQkvmi8y~TcMmjoWactMqcV1qwoZEHQBgAy6qVh9cC2aCYRXIHQh pageci:8367f410-58d9-11ef-8be2-2a95c25823a1 parentrq:47ded1841910ab8d0e971f48fffff5b0 plmt.id:100162 site.id:0)|ul=en-US|guid=47ded19a1910ab8d0e9832cfffffbdac|send.trk.id=cc7fd72d-6163-42d2-a6f4-de806c4060b7|uc=2|cnv.trk.id=819b78b8-ffcf-41f3-8a91-ea2af6702cae|cr.id=295164593908269123|cr.vt.id=1705095834892|mobtrkId=dd90ae9a-c381-48da-860e-557e10c812bc~sAi6hM8JmYUNHwT8OvQGeLj9jO4SeWmPj3RyScigTjh~GEmWzRtQRUPOs77AQqkA62XRBm4Xjg4MwPqdEuxnapZ", "audience": "general", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "vlpname": "vlp_homepage", "ampid": "MADRONA"}}' href="https://www.ebay.com/e/fashion/new-balance-seller-spotlight-08-05-24?_trkparms=pageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Cparentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Ciid%3A1%7Cvlpname%3Avlp_homepage">
+<div class="vl-cta__text-only" style="color:#003147">
+              Shop now
+              <!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[12]-16-1-1-3-1-0-0-->
+<svg aria-hidden='true' class="vl-cta-arrow icon icon--24" data-marko-key="@svg s0-1-0-52-1-2-4-17[0[0]]-0[12]-16-1-1-3-1-0-0" focusable='false' style="fill:currentColor">
+<use href="#icon-arrow-right-24">
+</use>
+</svg>
+<!--vertlandweb/-->
+</div>
+<div class="vl-cta__default evo" onmouseout="this.style.background='#003147'; this.style.color='#c2f2ef'; this.style['border-color']='#003147';" onmouseover="this.style.background='#002f44'; this.style.color='#bae8e5';" style="background-color: #003147; color: #c2f2ef; border-color: #003147">
+              Shop now
+              <!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[12]-16-1-1-5-1-0-0-->
+<svg aria-hidden='true' class="vl-cta-arrow icon icon--24" data-marko-key="@svg s0-1-0-52-1-2-4-17[0[0]]-0[12]-16-1-1-5-1-0-0" focusable='false' style="fill:currentColor">
+<use href="#icon-arrow-right-24">
+</use>
+</svg>
+<!--vertlandweb/-->
+</div>
+</a>
+</div>
+</div>
+<div class="vl-fine-print vl-banner__fine-print">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[12]-17-1-->
+<div aria-label="Ends 8/13." style="color:#003147">
+<!--F#f_@button-->
+<!--F#f_18-->
+<span style="color:#003147">
+             Ends 8/13.
+            </span>
+<!--F/-->
+<!--F/-->
+</div>
+<!--vertlandweb/-->
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[12]-17-2-->
+<!--vertlandweb/-->
+</div>
+</div>
+<div class="vl-fine-print vl-banner__fine-print">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[12]-18-1-->
+<div aria-label="Ends 8/13." style="color:#003147">
+<!--F#f_@button-->
+<!--F#f_18-->
+<span style="color:#003147">
+            Ends 8/13.
+           </span>
+<!--F/-->
+<!--F/-->
+</div>
+<!--vertlandweb/-->
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[12]-18-2-->
+<!--vertlandweb/-->
+</div>
+<a _sp="p4375194.m146826.l5350.c1" class="vl-banner-color-block__image-link" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"moduledtl": "mi:146826|iid:1|li:5350|luid:1|c:1", "ammiid": "1476596978871806031", "amdata": "t=0|tdt=iid:1476596978871806031,clkid:1476596978871806030|plmt=(channel:ONSITE_DWEB cnv.cfg.id:6e554464-feef-4d68-9ea0-df8a19c5eabd cnv.id:100001 iid:1476596978871806031 isUEP:1 mesg.id:6429191655554826581 message.mob.trk.id:0b99112e-9a8e-494a-a530-23792fe526c5~Y3YzTRAXq8sijKDtpKrR9pLkLduhDQC6PSPRQkvmi8y~TcMmjoWactMqcV1qwoZEHQBgAy6qVh9cC2aCYRXIHQh pageci:8367f410-58d9-11ef-8be2-2a95c25823a1 parentrq:47ded1841910ab8d0e971f48fffff5b0 plmt.id:100162 site.id:0)|ul=en-US|guid=47ded19a1910ab8d0e9832cfffffbdac|send.trk.id=cc7fd72d-6163-42d2-a6f4-de806c4060b7|uc=2|cnv.trk.id=819b78b8-ffcf-41f3-8a91-ea2af6702cae|cr.id=295164593908269123|cr.vt.id=1705095834892|mobtrkId=dd90ae9a-c381-48da-860e-557e10c812bc~sAi6hM8JmYUNHwT8OvQGeLj9jO4SeWmPj3RyScigTjh~GEmWzRtQRUPOs77AQqkA62XRBm4Xjg4MwPqdEuxnapZ", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "audience": "general", "ampid": "MADRONA", "vlpname": "vlp_homepage"}}' href="https://www.ebay.com/e/fashion/new-balance-seller-spotlight-08-05-24?_trkparms=pageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Cparentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Ciid%3A1%7Cvlpname%3Avlp_homepage">
+<div class="vl-image vl-image-js js-only vl-banner-color-block__image vl-image__fill" data-size='920' data-src="https://i.ebayimg.com/images/g/BEoAAOSwS-VmmCos/s-l960.png">
+<div class="vl-image__background" style="background-color:#c2f2ef">
+</div>
+<img alt="Two New Balance Fresh Foam Roav sneakers, one in 'White Black Surf' and one in 'Black/White,' on an aqua background." onerror="window.addtoLazyLoad({el: this, fit: true})" onload="window.addtoLazyLoad({el: this, fit: true})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-banner-color-block__image" style="background-image: url('${src}')">
+<img alt="Two New Balance Fresh Foam Roav sneakers, one in 'White Black Surf' and one in 'Black/White,' on an aqua background." src="https://i.ebayimg.com/images/g/BEoAAOSwS-VmmCos/s-l960.png"></img>
+</div>
+</noscript>
+</a>
+</div>
+</div>
+</div>
+<!--vertlandweb/-->
+</div>
+<!--vertlandweb#s0-1-0-52-1-2-7-->
+<div csrf="4831d6dadf65935bcb5155939bab4a2271835bee67b35ebcc05b374e55d128a0" id="follow-ebay-helper" prefix="fol">
+<!--vertlandweb^s0-1-0-52-1-2-7-7 s0-1-0-52-1-2-7 7-->
+<div hidden="">
+<svg>
+<symbol id="icon-notification" viewbox="0 0 22 24">
+<path d="M11 0a3 3 0 00-3 3v.59A8 8 0 003 11v3.72L.14 19.49A1 1 0 001 21h7a3 3 0 006 0h7a1 1 0 00.86-1.51L19 14.72V11a8 8 0 00-5-7.41V3a3 3 0 00-3-3zM2.77 19l2.09-3.49A1 1 0 005 15v-4a6 6 0 0112 0v4a1 1 0 00.14.51L19.23 19H2.77zM10 3a1 1 0 112 0v.07a7.23 7.23 0 00-2 0V3zm0 18a1 1 0 102 0h-2z">
+</path>
+</symbol>
+<symbol id="icon-attention-filled-small" viewbox="0 0 16 16">
+<path d="M8 0a8 8 0 100 16A8 8 0 008 0zm0 12a1 1 0 110-2 1 1 0 010 2zm1-4a1 1 0 11-2 0V5a1 1 0 112 0v3z" fill="#e62048">
+</path>
+</symbol>
+<symbol id="icon-attention-filled" viewbox="0 0 24 24">
+<path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12C23.994 5.375 18.625.006 12 0zm0 18a1 1 0 110-2 1 1 0 010 2zm1-5V7a1 1 0 00-2 0v6a1 1 0 002 0z" fill-rule="evenodd">
+</path>
+</symbol>
+</svg>
+</div>
+<div data-json='{"isLoggedIn": false, "signIn": "https://signin.ebay.com/ws/eBayISAPI.dll?SignIn&UsingSSL=1&siteid=0&co_partnerId=2&pageType=4432023&ru=https%3A%2F%2Fwww.ebay.com%2F%23fol4831d6dadf65935bcb5155939bab4a2271835bee67b35ebcc05b374e55d128a0", "isSmall": false, "followHost": "https://www.ebay.com/fol", "siteId": 0}' id="follow-ebay-helper-legacy">
+<span class="csrf-ajax-follow">
+<input name="srt" type="hidden" value="010009000000507494c26d7958a65e74abb06919da775504d27313f69d5eee478a76b4d263c2443939d63bfdf39276f561129cba1189b4b8cde7f02221b8328e53f2b94f0fd7247f88781287550c4672cf6848a54277b9"></input>
+</span>
+<span class="csrf-ajax-update">
+<input name="srt" type="hidden" value="0100090000005000314431714a1dec05d1f326f204f2ae3b1b9954850a53ba702b8629b6e23a67e2492ceb7958d96b9423493dbb1d519e8106baa0d27b0744a9068f8c0f8dbfa2bdb3173f7f7fa31c9676ced9f8c1d301"></input>
+</span>
+<span class="csrf-ajax-unfollow">
+<input name="srt" type="hidden" value="01000900000050229991f99ebea58fae4f76775bb9ae50cbb2e5b13cf191ba4a5a413fc4a5681bffe376f0987c12a61e88bb68d594074bf4a4a431bbb180e1c26bdce82e1b3dc6af9386449fb29c19d71d10f8d7e2ed46"></input>
+</span>
+</div>
+<!--vertlandweb/-->
+</div>
+<!--vertlandweb/-->
+</div>
+</div>
+</div>
+<!--vertlandweb^s0-1-0-54 s0-1-0 54-->
+<div>
+<div class="fav-snackbar-container">
+<div class="fav-snackbar_row">
+<div class="fav-snackbar__text">
+</div>
+</div>
+<div aria-live="polite" aria-modal='true' class="snackbar-dialog snackbar-dialog--transition" hidden="" role="dialog">
+<div class="snackbar-dialog__window">
+<div class="snackbar-dialog__header">
+<!--F#14-->
+<!--F/-->
+</div>
+<div class="snackbar-dialog__main">
+<!--F#16-->
+<!--F/-->
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--vertlandweb/-->
+<script data-chunk-uuid="d3c02704-3f23-4124-9176-2bd5d3213f7a">// chunk_script_d3c02704-3f23-4124-9176-2bd5d3213f7a
+</script>
+<script data-chunk-uuid="5752696c-0ec5-4b21-b97e-5d8d07302f1e" crossorigin="" src="https://secureir.ebaystatic.com/cr/v/c1/jquery/jquery-3.7.0.min.js">// chunk_script_5752696c-0ec5-4b21-b97e-5d8d07302f1e
+</script>
+<!--vertlandweb^s0-1-0-58 s0-1-0 58-->
+<!--vertlandweb/-->
+<noscript id="afphtracking">
+</noscript>
+<!--vertlandweb^s0-1-0-64 s0-1-0 64-->
+<div>
+</div>
+<!--vertlandweb/-->
+<div id="vlGlobalFooter">
+<div class="page-grid-container hp-grid-container">
+<div class="page-grid hp-grid">
+<div>
+<div id="widget-platform">
+<script data-chunk-uuid="9742dc7a-ac7c-46a3-9b05-8c3808822572" type="application/javascript">// chunk_script_9742dc7a-ac7c-46a3-9b05-8c3808822572
+</script>
+<div id="gh_user" style="display:none;">
+</div>
+</div>
+<!--[if lt IE 9]><div id="glbfooter" role="contentinfo" class="gh-w gh-flex"><![endif]-->
+<footer class="gh-w gh-flex" id="glbfooter" role="contentinfo">
+<div>
+<div id="rtm_html_1650">
+</div>
+<div id="rtm_html_1651">
+</div>
+</div>
+<h2 class="gh-ar-hdn">
+        Additional site navigation
+       </h2>
+<div class="gffoot" id="gf-BIG">
+<table class="gf-t" role="presentation">
+<tbody>
+<tr>
+<td>
+<h3 class="gf-bttl">
+<a _sp="m571.l3601" class="gf-bttl thrd" data-sp="m571.l3601" href="https://www.ebay.com/n/all-categories">
+              Buy
+             </a>
+</h3>
+<ul>
+<li class="gf-li">
+<a _sp="m571.l2895" class="thrd" data-sp="m571.l2895" href="https://www.ebay.com/help/account/default/ebay-account?id=4188">
+               Registration
+              </a>
+</li>
+<li class="gf-li">
+<a _sp="m571.l2897" class="thrd" data-sp="m571.l2897" href="https://www.ebay.com/help/buying">
+               Bidding & buying help
+              </a>
+</li>
+<li class="gf-li">
+<a _sp="m571.l2899" class="thrd" data-sp="m571.l2899" href="https://www.ebay.com/b/Stores-HUB/bn_7004224522">
+               Stores
+              </a>
+</li>
+<li class="gf-li">
+<a _sp="m571.l3271" class="thrd" data-sp="m571.l3271" href="https://www.charity.ebay.com/">
+               eBay for Charity
+              </a>
+</li>
+<li class="gf-li">
+<a _sp="m571.l9791" class="thrd" data-sp="m571.l9791" href="https://www.ebay.com/b/Charity/bn_7114598164">
+               Charity Shop
+              </a>
+</li>
+<li class="gf-li">
+<a _sp="m571.l158310" class="thrd" data-sp="m571.l158310" href="https://www.ebay.com/b/Sales-Events/bn_7115049177">
+               Seasonal Sales and events
+              </a>
+</li>
+<li class="gf-li">
+<a _sp="m571.l173817" class="thrd" data-sp="m571.l173817" href="https://www.ebay.com/giftcards">
+               eBay Gift Cards
+              </a>
+</li>
+</ul>
+</td>
+<td>
+<h3 class="gf-bttl">
+<a _sp="m571.l2903" class="gf-bttl thrd" data-sp="m571.l2903" href="https://www.ebay.com/sl/sell">
+              Sell
+             </a>
+</h3>
+<ul>
+<li class="gf-li">
+<a _sp="m571.l2904" class="thrd" data-sp="m571.l2904" href="https://www.ebay.com/sl/sell">
+               Start selling
+              </a>
+</li>
+<li class="gf-li">
+<a _sp="m571.l2905" class="thrd" data-sp="m571.l2905" href="https://pages.ebay.com/seller-center/get-started/selling-basics.html?utm_source=gf-learn-to-sell&utm_medium=onsite">
+               How to sell
+              </a>
+</li>
+<li class="gf-li">
+<a _sp="m571.l2906" class="thrd" data-sp="m571.l2906" href="https://pages.ebay.com/seller-center/listing-and-marketing/seller-hub.html">
+               Business sellers
+              </a>
+</li>
+<li class="gf-li">
+<a _sp="m571.l2921" class="thrd" data-sp="m571.l2921" href="https://partnernetwork.ebay.com/">
+               Affiliates
+              </a>
+</li>
+</ul>
+<h3 class="gf-bttl">
+             Tools & apps
+            </h3>
+<ul>
+<li class="gf-li">
+<a _sp="m571.l2924" class="thrd" data-sp="m571.l2924" href="https://developer.ebay.com/">
+               Developers
+              </a>
+</li>
+<li class="gf-li">
+<a _sp="m571.l2907" class="thrd" data-sp="m571.l2907" href="https://pages.ebay.com/securitycenter/index.html">
+               Security center
+              </a>
+</li>
+<li class="gf-li">
+<a _sp="m571.l2909" class="thrd" data-sp="m571.l2909" href="https://pages.ebay.com/sitemap.html">
+               Site map
+              </a>
+</li>
+</ul>
+</td>
+<td>
+<h3 class="gf-bttl">
+             eBay companies
+            </h3>
+<ul>
+<li class="gf-li">
+<a _exsp="m571.l2927" class="thrd" href="https://www.tcgplayer.com/">
+               TCGplayer
+              </a>
+</li>
+</ul>
+<h3 class="gf-bttl">
+             Stay connected
+            </h3>
+<ul>
+<li class="gf-li">
+<link href="https://ir.ebaystatic.com/rs/v/h0uj1osj1y1nlldfgf21ohvmvug.css?proc=DU:N" rel="stylesheet" type="text/css"></link>
+<a _exsp="m571.l2942" class="thrd gf-i" href="https://www.facebook.com/ebay/">
+<i class="gspr icfbg">
+</i>
+               Facebook
+              </a>
+</li>
+<li class="gf-li">
+<a _exsp="m571.l2943" class="thrd gf-i" href="https://twitter.com/eBay">
+<i class="gspr ictwg">
+</i>
+               Twitter
+              </a>
+</li>
+</ul>
+</td>
+<td>
+<h3 class="gf-bttl">
+<a _sp="m571.l2932" class="gf-bttl thrd" data-sp="m571.l2932" href="https://www.ebayinc.com/">
+              About eBay
+             </a>
+</h3>
+<ul>
+<li class="gf-li">
+<a _sp="m571.l2938" class="thrd" data-sp="m571.l2938" href="https://www.ebayinc.com/company/">
+               Company info
+              </a>
+</li>
+<li class="gf-li">
+<a _sp="m571.l2910" class="thrd" data-sp="m571.l2910" href="https://www.ebayinc.com/stories/news/">
+               News
+              </a>
+</li>
+<li class="gf-li">
+<a _sp="m571.l175917" class="thrd" data-sp="m571.l175917" href="https://www.ebayinc.com/stories/press-room/#assets-settlements">
+               Deferred Prosecution Agreement with District of Massachusetts
+              </a>
+</li>
+<li class="gf-li">
+<a _sp="m571.l3271" class="thrd" data-sp="m571.l3271" href="https://investors.ebayinc.com/overview/default.aspx">
+               Investors
+              </a>
+</li>
+<li class="gf-li">
+<a _sp="m571.l2912" class="thrd" data-sp="m571.l2912" href="https://careers.ebayinc.com/">
+               Careers
+              </a>
+</li>
+<li class="gf-li">
+<a _sp="m571.l9789" class="thrd" data-sp="m571.l9789" href="https://www.ebayinc.com/company/diversity-equity-inclusion/">
+               Diversity & Inclusion
+              </a>
+</li>
+<li class="gf-li">
+<a _sp="m571.l9790" class="thrd" data-sp="m571.l9790" href="https://www.ebayinc.com/impact/">
+               Global Impact
+              </a>
+</li>
+<li class="gf-li">
+<a _sp="m571.l2936" class="thrd" data-sp="m571.l2936" href="https://www.ebaymainstreet.com/">
+               Government relations
+              </a>
+</li>
+<li class="gf-li">
+<a _sp="m571.l2938" class="thrd" data-sp="m571.l2938" href="https://www.ebayads.com/">
+               Advertise with us
+              </a>
+</li>
+<li class="gf-li">
+<a _sp="m571.l2910" class="thrd" data-sp="m571.l2910" href="https://www.ebay.com/help/policies/default/ebays-rules-policies?id=4205">
+               Policies
+              </a>
+</li>
+<li class="gf-li">
+<a _sp="m571.l3418" class="thrd" data-sp="m571.l3418" href="https://pages.ebay.com/seller-center/listing-and-marketing/verified-rights-owner-program.html#what-is-the-vero-program">
+               Verified Rights Owner (VeRO) Program
+              </a>
+</li>
+<li class="gf-li">
+<a _sp="m571.l48369" class="thrd" data-sp="m571.l48369" href="https://pages.ebay.com/ebayCommerce/mtl.html">
+               eCI Licenses
+              </a>
+</li>
+</ul>
+</td>
+        ```
+        

@@ -1,0 +1,332 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. total-byte-weight => Avoid enormous network payloads: Large network payloads cost users real money and are highly correlated with long load times. [Learn how to reduce payload sizes](https://developer.chrome.com/docs/lighthouse/performance/total-byte-weight/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        <a _sp="p4375194.m150506.l3949.c4" class="vlp-merch-item-tile" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "204911189760", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D4%26rkt%3D15%26b%3D1%26itm%3D204911189760%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2%26tu%3D01J53XXMG97VRQ1GKYCVH7JCPV", "ampid": "MERCH_CLK", "rank": "4", "ammiid": "9b67e495ee03423a850814347ea1b046", "moduledtl": "mi:150506|iid:1|li:3949|luid:4|c:4", "vlpname": "vlp_homepage", "trackableId": "01J53XXMG97VRQ1GKYCVH7JCPV", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1HOTdWUlExR0tZQ1ZIN0pDUFY0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA", "audience": "general"}}' data-track='[{"actionKind": "NAV", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"trkp": "parentrq:47ded1841910ab8d0e971f48fffff5b0|pageci:8367f410-58d9-11ef-8be2-2a95c25823a1|iid:1|vlpname:vlp_homepage", "sid": "p4375194.m150506.l3949.c4", "audience": "general"}}, {"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "204911189760", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D4%26rkt%3D15%26b%3D1%26itm%3D204911189760%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2%26tu%3D01J53XXMG97VRQ1GKYCVH7JCPV", "ampid": "MERCH_CLK", "rank": "4", "ammiid": "9b67e495ee03423a850814347ea1b046", "moduledtl": "mi:150506|iid:1|li:3949|luid:4|c:4", "vlpname": "vlp_homepage", "trackableId": "01J53XXMG97VRQ1GKYCVH7JCPV", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1HOTdWUlExR0tZQ1ZIN0pDUFY0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA", "audience": "general"}}]' href="https://www.ebay.com/itm/204911189760?_trkparms=amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D1%26rkt%3D1%26b%3D1%26itm%3D204911189760%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2&_trksid=p4375194.c101910.m150506&_trkparms=parentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Cpageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Ciid%3A1%7Cvlpname%3Avlp_homepage" target="_blank">
+<div class="vlp-merch-content-wrap">
+<div class="vlp-merch-image-wrap-dweb">
+<div class="vlp-merch-image-frame" style=" ">
+<div class="vl-image-js js-only">
+<img alt="JBL PartyBox Encore, Portable party speaker with 100W powerful sound" class="vlp-merch-item-image" crossorigin="anonymous" data-high-res-size='500' data-item-card='true' data-size='300' data-src="https://i.ebayimg.com/thumbs/images/g/MW0AAOSwOz9mp3PU/s-l500.jpg" onerror="window.addtoLazyLoad({el: this, fit: false})" onload="window.addtoLazyLoad({el: this, fit: false})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-image__no-fill">
+<img alt="JBL PartyBox Encore, Portable party speaker with 100W powerful sound" src="https://i.ebayimg.com/thumbs/images/g/MW0AAOSwOz9mp3PU/s-l500.jpg"></img>
+</div>
+</noscript>
+</div>
+</div>
+<div class="vlp-merch-item-info">
+<h3 class="vlp-merch-item-title vlp-merch-item-title-dweb vlp-merch-item-title-margin">
+                  JBL PartyBox Encore, Portable party speaker with 100W powerful sound
+                 </h3>
+<div class="vlp-merch-sub-group">
+<div class="vlp-merch-price">
+<span role="text">
+                    $169.99
+                   </span>
+<span class="vlp-merch-additional-price">
+<span aria-label="previous price $299.96" class="sh-strikethrough" role="text">
+                     $299.96
+                    </span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</a>
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[9]-7-@match-media-0-@ebay-carousel-4[@4]-9[3]-43-->
+<div class="vlp-merch-add-to-watchlist-btn">
+<button aria-label="Add JBL PartyBox Encore, Portable party speaker with 100W powerful sound to your watch list" class="btn btn--tertiary" type="button">
+<svg aria-hidden='true' class="vlp-merch-watch-unselected icon icon--16" focusable='false'>
+<use xlink:href="#hp-icon-save-16">
+</use>
+</svg>
+</button>
+</div>
+<!--vertlandweb/-->
+</div>
+<!--F/-->
+</li>
+<li class="vl-carousel__item" style="width:calc(25.974025974025974% - 11.844155844155845px);margin-right:16px">
+<!--F#4[@5]-->
+<div class="vlp-merch-item-card-container" data-interactions='[{"actionKind": "CLICK", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1HQTNLQ05TNjlONDdCNTVaRlE0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA"}]' data-viewport='{"trackableId": "01J53XXMGA3KCNS69N47B55ZFQ"}'>
+<a _sp="p4375194.m150506.l3949.c5" class="vlp-merch-item-tile" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "155713325416", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D5%26rkt%3D15%26b%3D1%26itm%3D155713325416%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2%26tu%3D01J53XXMGA3KCNS69N47B55ZFQ", "ampid": "MERCH_CLK", "rank": "5", "ammiid": "9b67e495ee03423a850814347ea1b046", "moduledtl": "mi:150506|iid:1|li:3949|luid:5|c:5", "vlpname": "vlp_homepage", "trackableId": "01J53XXMGA3KCNS69N47B55ZFQ", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1HQTNLQ05TNjlONDdCNTVaRlE0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA", "audience": "general"}}' data-track='[{"actionKind": "NAV", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"trkp": "parentrq:47ded1841910ab8d0e971f48fffff5b0|pageci:8367f410-58d9-11ef-8be2-2a95c25823a1|iid:1|vlpname:vlp_homepage", "sid": "p4375194.m150506.l3949.c5", "audience": "general"}}, {"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "155713325416", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D5%26rkt%3D15%26b%3D1%26itm%3D155713325416%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2%26tu%3D01J53XXMGA3KCNS69N47B55ZFQ", "ampid": "MERCH_CLK", "rank": "5", "ammiid": "9b67e495ee03423a850814347ea1b046", "moduledtl": "mi:150506|iid:1|li:3949|luid:5|c:5", "vlpname": "vlp_homepage", "trackableId": "01J53XXMGA3KCNS69N47B55ZFQ", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1HQTNLQ05TNjlONDdCNTVaRlE0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA", "audience": "general"}}]' href="https://www.ebay.com/itm/155713325416?_trkparms=amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D1%26rkt%3D1%26b%3D1%26itm%3D155713325416%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2&_trksid=p4375194.c101910.m150506&_trkparms=parentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Cpageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Ciid%3A1%7Cvlpname%3Avlp_homepage" target="_blank">
+<div class="vlp-merch-content-wrap">
+<div class="vlp-merch-image-wrap-dweb">
+<div class="vlp-merch-image-frame" style=" ">
+<div class="vl-image-js js-only">
+<img alt="adidas men OZWEEGO Shoes" class="vlp-merch-item-image" crossorigin="anonymous" data-high-res-size='500' data-item-card='true' data-size='300' data-src="https://i.ebayimg.com/thumbs/images/g/JKkAAOSwH4xmqrX2/s-l500.jpg" onerror="window.addtoLazyLoad({el: this, fit: false})" onload="window.addtoLazyLoad({el: this, fit: false})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-image__no-fill">
+<img alt="adidas men OZWEEGO Shoes" src="https://i.ebayimg.com/thumbs/images/g/JKkAAOSwH4xmqrX2/s-l500.jpg"></img>
+</div>
+</noscript>
+</div>
+</div>
+<div class="vlp-merch-item-info">
+<h3 class="vlp-merch-item-title vlp-merch-item-title-dweb vlp-merch-item-title-margin">
+                  adidas men OZWEEGO Shoes
+                 </h3>
+<div class="vlp-merch-sub-group">
+<div class="vlp-merch-price">
+<span role="text">
+                    $36.00
+                   </span>
+<span class="vlp-merch-additional-price">
+<span aria-label="previous price $120.00" class="sh-strikethrough" role="text">
+                     $120.00
+                    </span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<!--F/-->
+</li>
+<li class="carousel__snap-point vl-carousel__item" style="width:calc(25.974025974025974% - 11.844155844155845px);margin-right:16px">
+<!--F#4[@6]-->
+<div class="vlp-merch-item-card-container" data-interactions='[{"actionKind": "CLICK", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1HQTI5MFNEUEZRMTYzUlNaOVI0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA"}]' data-viewport='{"trackableId": "01J53XXMGA290SDPFQ163RSZ9R"}'>
+<a _sp="p4375194.m150506.l3949.c6" class="vlp-merch-item-tile" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "155596574562", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D6%26rkt%3D15%26b%3D1%26itm%3D155596574562%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2%26tu%3D01J53XXMGA290SDPFQ163RSZ9R", "ampid": "MERCH_CLK", "rank": "6", "ammiid": "9b67e495ee03423a850814347ea1b046", "moduledtl": "mi:150506|iid:1|li:3949|luid:6|c:6", "vlpname": "vlp_homepage", "trackableId": "01J53XXMGA290SDPFQ163RSZ9R", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1HQTI5MFNEUEZRMTYzUlNaOVI0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA", "audience": "general"}}' data-track='[{"actionKind": "NAV", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"trkp": "parentrq:47ded1841910ab8d0e971f48fffff5b0|pageci:8367f410-58d9-11ef-8be2-2a95c25823a1|iid:1|vlpname:vlp_homepage", "sid": "p4375194.m150506.l3949.c6", "audience": "general"}}, {"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "155596574562", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D6%26rkt%3D15%26b%3D1%26itm%3D155596574562%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2%26tu%3D01J53XXMGA290SDPFQ163RSZ9R", "ampid": "MERCH_CLK", "rank": "6", "ammiid": "9b67e495ee03423a850814347ea1b046", "moduledtl": "mi:150506|iid:1|li:3949|luid:6|c:6", "vlpname": "vlp_homepage", "trackableId": "01J53XXMGA290SDPFQ163RSZ9R", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1HQTI5MFNEUEZRMTYzUlNaOVI0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA", "audience": "general"}}]' href="https://www.ebay.com/itm/155596574562?_trkparms=amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D1%26rkt%3D1%26b%3D1%26itm%3D155596574562%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2&_trksid=p4375194.c101910.m150506&_trkparms=parentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Cpageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Ciid%3A1%7Cvlpname%3Avlp_homepage" target="_blank">
+<div class="vlp-merch-content-wrap">
+<div class="vlp-merch-image-wrap-dweb">
+<div class="vlp-merch-image-frame" style=" ">
+<div class="vl-image-js js-only">
+<img alt="adidas men AEROREADY Designed to Move Feelready Sport Tee" class="vlp-merch-item-image" crossorigin="anonymous" data-high-res-size='500' data-item-card='true' data-size='300' data-src="https://i.ebayimg.com/thumbs/images/g/3S4AAOSw9qFmqrRv/s-l500.jpg" onerror="window.addtoLazyLoad({el: this, fit: false})" onload="window.addtoLazyLoad({el: this, fit: false})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-image__no-fill">
+<img alt="adidas men AEROREADY Designed to Move Feelready Sport Tee" src="https://i.ebayimg.com/thumbs/images/g/3S4AAOSw9qFmqrRv/s-l500.jpg"></img>
+</div>
+</noscript>
+</div>
+</div>
+<div class="vlp-merch-item-info">
+<h3 class="vlp-merch-item-title vlp-merch-item-title-dweb vlp-merch-item-title-margin">
+                  adidas men AEROREADY Designed to Move Feelready Sport Tee
+                 </h3>
+<div class="vlp-merch-sub-group">
+<div class="vlp-merch-price">
+<span role="text">
+                    $8.00
+                   </span>
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<!--F/-->
+</li>
+<li class="vl-carousel__item" style="width:calc(25.974025974025974% - 11.844155844155845px);margin-right:16px">
+<!--F#4[@7]-->
+<div class="vlp-merch-item-card-container" data-interactions='[{"actionKind": "CLICK", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1HQTRUVzZSSDUzQVJIOVExS0M0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA"}]' data-viewport='{"trackableId": "01J53XXMGA4TW6RH53ARH9Q1KC"}'>
+<a _sp="p4375194.m150506.l3949.c7" class="vlp-merch-item-tile" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "400880988940", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D7%26rkt%3D15%26b%3D1%26itm%3D400880988940%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2%26tu%3D01J53XXMGA4TW6RH53ARH9Q1KC", "ampid": "MERCH_CLK", "rank": "7", "ammiid": "9b67e495ee03423a850814347ea1b046", "moduledtl": "mi:150506|iid:1|li:3949|luid:7|c:7", "vlpname": "vlp_homepage", "trackableId": "01J53XXMGA4TW6RH53ARH9Q1KC", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1HQTRUVzZSSDUzQVJIOVExS0M0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA", "audience": "general"}}' data-track='[{"actionKind": "NAV", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"trkp": "parentrq:47ded1841910ab8d0e971f48fffff5b0|pageci:8367f410-58d9-11ef-8be2-2a95c25823a1|iid:1|vlpname:vlp_homepage", "sid": "p4375194.m150506.l3949.c7", "audience": "general"}}, {"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "400880988940", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D7%26rkt%3D15%26b%3D1%26itm%3D400880988940%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2%26tu%3D01J53XXMGA4TW6RH53ARH9Q1KC", "ampid": "MERCH_CLK", "rank": "7", "ammiid": "9b67e495ee03423a850814347ea1b046", "moduledtl": "mi:150506|iid:1|li:3949|luid:7|c:7", "vlpname": "vlp_homepage", "trackableId": "01J53XXMGA4TW6RH53ARH9Q1KC", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1HQTRUVzZSSDUzQVJIOVExS0M0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA", "audience": "general"}}]' href="https://www.ebay.com/itm/400880988940?_trkparms=amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D1%26rkt%3D1%26b%3D1%26itm%3D400880988940%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2&_trksid=p4375194.c101910.m150506&_trkparms=parentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Cpageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Ciid%3A1%7Cvlpname%3Avlp_homepage" target="_blank">
+<div class="vlp-merch-content-wrap">
+<div class="vlp-merch-image-wrap-dweb">
+<div class="vlp-merch-image-frame" style=" ">
+<div class="vl-image-js js-only">
+<img alt="mini cologne Versace Eros for Men Brand New In Box" class="vlp-merch-item-image" crossorigin="anonymous" data-high-res-size='500' data-item-card='true' data-size='300' data-src="https://i.ebayimg.com/thumbs/images/g/sZ0AAOSw8BZkwwpt/s-l500.jpg" onerror="window.addtoLazyLoad({el: this, fit: false})" onload="window.addtoLazyLoad({el: this, fit: false})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-image__no-fill">
+<img alt="mini cologne Versace Eros for Men Brand New In Box" src="https://i.ebayimg.com/thumbs/images/g/sZ0AAOSw8BZkwwpt/s-l500.jpg"></img>
+</div>
+</noscript>
+</div>
+</div>
+<div class="vlp-merch-item-info">
+<h3 class="vlp-merch-item-title vlp-merch-item-title-dweb vlp-merch-item-title-margin">
+                  mini cologne Versace Eros for Men Brand New In Box
+                 </h3>
+<div class="vlp-merch-sub-group">
+<div class="vlp-merch-price">
+<span role="text">
+                    $9.39
+                   </span>
+<span class="vlp-merch-additional-price">
+<span aria-label="previous price $20.00" class="sh-strikethrough" role="text">
+                     $20.00
+                    </span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</a>
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[9]-7-@match-media-0-@ebay-carousel-4[@7]-9[6]-43-->
+<div class="vlp-merch-add-to-watchlist-btn">
+<button aria-label="Add mini cologne Versace Eros for Men Brand New In Box to your watch list" class="btn btn--tertiary" type="button">
+<svg aria-hidden='true' class="vlp-merch-watch-unselected icon icon--16" focusable='false'>
+<use xlink:href="#hp-icon-save-16">
+</use>
+</svg>
+</button>
+</div>
+<!--vertlandweb/-->
+</div>
+<!--F/-->
+</li>
+<li class="vl-carousel__item" style="width:calc(25.974025974025974% - 11.844155844155845px)">
+<!--F#4[@8]-->
+<div class="vlp-merch-item-card-container" data-interactions='[{"actionKind": "CLICK", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1HQlZQODBYN1pGTVBEMDc1UVI0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA"}]' data-viewport='{"trackableId": "01J53XXMGBVP80X7ZFMPD075QR"}'>
+<a _sp="p4375194.m150506.l3949.c8" class="vlp-merch-item-tile" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "355169345340", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D8%26rkt%3D15%26b%3D1%26itm%3D355169345340%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2%26tu%3D01J53XXMGBVP80X7ZFMPD075QR", "ampid": "MERCH_CLK", "rank": "8", "ammiid": "9b67e495ee03423a850814347ea1b046", "moduledtl": "mi:150506|iid:1|li:3949|luid:8|c:8", "vlpname": "vlp_homepage", "trackableId": "01J53XXMGBVP80X7ZFMPD075QR", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1HQlZQODBYN1pGTVBEMDc1UVI0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA", "audience": "general"}}' data-track='[{"actionKind": "NAV", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"trkp": "parentrq:47ded1841910ab8d0e971f48fffff5b0|pageci:8367f410-58d9-11ef-8be2-2a95c25823a1|iid:1|vlpname:vlp_homepage", "sid": "p4375194.m150506.l3949.c8", "audience": "general"}}, {"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "355169345340", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D8%26rkt%3D15%26b%3D1%26itm%3D355169345340%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2%26tu%3D01J53XXMGBVP80X7ZFMPD075QR", "ampid": "MERCH_CLK", "rank": "8", "ammiid": "9b67e495ee03423a850814347ea1b046", "moduledtl": "mi:150506|iid:1|li:3949|luid:8|c:8", "vlpname": "vlp_homepage", "trackableId": "01J53XXMGBVP80X7ZFMPD075QR", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1HQlZQODBYN1pGTVBEMDc1UVI0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA", "audience": "general"}}]' href="https://www.ebay.com/itm/355169345340?_trkparms=amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D1%26rkt%3D1%26b%3D1%26itm%3D355169345340%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2&_trksid=p4375194.c101910.m150506&_trkparms=parentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Cpageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Ciid%3A1%7Cvlpname%3Avlp_homepage" target="_blank">
+<div class="vlp-merch-content-wrap">
+<div class="vlp-merch-image-wrap-dweb">
+<div class="vlp-merch-image-frame" style=" ">
+<div class="vl-image-js js-only">
+<img alt="【Refurbished】Creality Ender 3 Max Neo 3D Printer CR Touch Leveling Dual Z-Axis" class="vlp-merch-item-image" crossorigin="anonymous" data-high-res-size='500' data-item-card='true' data-size='300' data-src="https://i.ebayimg.com/thumbs/images/g/XT0AAOSwf7lmujMg/s-l500.jpg" onerror="window.addtoLazyLoad({el: this, fit: false})" onload="window.addtoLazyLoad({el: this, fit: false})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-image__no-fill">
+<img alt="【Refurbished】Creality Ender 3 Max Neo 3D Printer CR Touch Leveling Dual Z-Axis" src="https://i.ebayimg.com/thumbs/images/g/XT0AAOSwf7lmujMg/s-l500.jpg"></img>
+</div>
+</noscript>
+</div>
+</div>
+<div class="vlp-merch-item-info">
+<h3 class="vlp-merch-item-title vlp-merch-item-title-dweb vlp-merch-item-title-margin">
+                  【Refurbished】Creality Ender 3 Max Neo 3D Printer CR Touch Leveling Dual Z-Axis
+                 </h3>
+<div class="vlp-merch-sub-group">
+<div class="vlp-merch-price">
+<span role="text">
+                    $122.00
+                   </span>
+</div>
+</div>
+</div>
+</div>
+</a>
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[9]-7-@match-media-0-@ebay-carousel-4[@8]-9[7]-43-->
+<div class="vlp-merch-add-to-watchlist-btn">
+<button aria-label="Add 【Refurbished】Creality Ender 3 Max Neo 3D Printer CR Touch Leveling Dual Z-Axis to your watch list" class="btn btn--tertiary" type="button">
+<svg aria-hidden='true' class="vlp-merch-watch-unselected icon icon--16" focusable='false'>
+<use xlink:href="#hp-icon-save-16">
+</use>
+</svg>
+</button>
+</div>
+<!--vertlandweb/-->
+</div>
+<!--F/-->
+</li>
+</ul>
+</div>
+<button aria-disabled='true' aria-label="Go to the next slide, Today's Deals - Carousel" class="carousel__control carousel__control--next" id="s0-1-0-52-1-2-4-17[0[0]]-0[9]-7-@match-media-0-@ebay-carousel-next" type="button">
+<svg aria-hidden='true' class="icon icon--16" focusable='false'>
+<use href="#icon-chevron-right-16">
+</use>
+</svg>
+</button>
+</div>
+</div>
+<!--F/-->
+</div>
+<!--F/-->
+<!--vertlandweb/-->
+</div>
+<div class="vl-module vl-ad-row off-card vl-atf-module-js" data-m-id='4818' data-view='{"eventFamily": "VERTLAND", "eventAction": "VIEW", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "moduledtl": "mi:4818|c:1|iid:1|luid:1", "vlpname": "vlp_homepage"}}' data-viewdtls='{"moduleInstance": "mi:4818|iid:1", "parentrq": "47ded1841910ab8d0e971f48fffff5b0", "trackViews": "true", "trackPerf": "true"}' data-viewport='{"trackableId": "wwHmKhYwY/jx0DQwMUo1M1hYTUc4NllBTTJLUkU1TU1TQUFFVDQwMUo1M1hYTUVSN1kwNkZHWVdDSzlBQlNYRtylDA=="}'>
+<a _sp="p4375194.m4818.l8991.c1" class="vl-ad-row__1p-link" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "NAVSRC", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "audience": "general", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "moduledtl": "mi:4818|c:1|iid:1|li:8991", "vlpname": "vlp_homepage"}}' href="https://www.ebay.com/deals?itmprp=enc%3AAQAJAAAAUAgZabFoZBdyn1nppCozdn4z06h82o5J0E4s5Ryj1dQgR4lsF%2ByyW2GdTbVGHdHq170sXW4%2Fyz%2FDqEydpyEsGpXIbRYf8Nzo4ilU9s0otGrx%7Ctkp%3AEElOVEVSTkFMkMj2%2Fahk&_trkparms=parentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Cpageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Cc%3A1%7Ciid%3A1%7Cmi%3A4818%7Cli%3A8991">
+<div class="vl-ad-row__banner">
+<div class="vl-image vl-image-js js-only vl-ad-row__banner__vl-image vl-image__fill" data-size='550' data-src="https://i.ebayimg.com/00/z/7SMAAOSwijBeAU5U/$_58.jpg">
+<div class="vl-image__background" style="background-color:#ffffff">
+</div>
+<img alt="" onerror="window.addtoLazyLoad({el: this, fit: true})" onload="window.addtoLazyLoad({el: this, fit: true})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-ad-row__banner__vl-image" style="background-image: url('${src}')">
+<img alt="" src="https://i.ebayimg.com/00/z/7SMAAOSwijBeAU5U/$_58.jpg"></img>
+</div>
+</noscript>
+</div>
+<div class="vl-ad-row__1p">
+<div class="vl-ad-row__label-logo-wrapper">
+<div class="vl-ad-row__label">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[10]-1-1-7-->
+<!--F#f_15-->
+<!--F#f_@button-->
+<!--F#f_18-->
+           Featured
+           <!--F/-->
+<!--F/-->
+<!--F/-->
+<!--vertlandweb/-->
+</div>
+<div class="vl-image vl-image-js js-only vl-ad-row__logo vl-image__fill" data-size='90' data-src="https://i.ebayimg.com/00/s/MTQzNFgxNjAw/z/ih4AAOSwPbdeAU5a/$_137.JPG">
+<div class="vl-image__background" style="background-color:#ffffff">
+</div>
+<img alt="" onerror="window.addtoLazyLoad({el: this, fit: true})" onload="window.addtoLazyLoad({el: this, fit: true})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-ad-row__logo" style="background-image: url('${src}')">
+<img alt="" src="https://i.ebayimg.com/00/s/MTQzNFgxNjAw/z/ih4AAOSwPbdeAU5a/$_137.JPG"></img>
+</div>
+</noscript>
+</div>
+<div class="vl-ad-row__text-wrapper">
+<div class="ebayui-ellipsis-3 vl-ad-row__primary">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[10]-1-1-11-->
+<!--F#f_15-->
+<!--F#f_@button-->
+<!--F#f_18-->
+           Deals made easy all year long.
+           <!--F/-->
+<!--F/-->
+<!--F/-->
+<!--vertlandweb/-->
+</div>
+<div class="vl-ad-row__secondary ebayui-ellipsis-2">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[10]-1-1-13-->
+<!--F#f_15-->
+<!--F#f_@button-->
+<!--F#f_18-->
+           Free shipping. Best prices.
+           <!--F/-->
+<!--F/-->
+<!--F/-->
+<!--vertlandweb/-->
+</div>
+<div class="vl-cta vl-cta a__inset vl-ad-row__cta-button vl-ad-row__cta">
+<div class="vl-cta__text-only" style="color:#000000">
+            Get your thing
+            <!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[10]-1-1-14-3-1-0-0-->
+
+        ```
+        

@@ -1,0 +1,314 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. uses-optimized-images => Efficiently encode images: Optimized images load faster and consume less cellular data. [Learn how to efficiently encode images](https://developer.chrome.com/docs/lighthouse/performance/uses-optimized-images/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        <!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[1]-2-@match-media-0-@ebay-carousel-4[@1]-3[1]-1-19-1-1-3-1-0-0-->
+<svg aria-hidden='true' class="vl-cta-arrow icon icon--24" data-marko-key="@svg s0-1-0-52-1-2-4-17[0[0]]-0[1]-2-@match-media-0-@ebay-carousel-4[@1]-3[1]-1-19-1-1-3-1-0-0" focusable='false' style="fill:currentColor">
+<use href="#icon-arrow-right-24">
+</use>
+</svg>
+<!--vertlandweb/-->
+</div>
+<div class="vl-cta__default evo" onmouseout="this.style.background='#ffffff'; this.style.color='#191919'; this.style['border-color']='#ffffff';" onmouseover="this.style.background='#f5f5f5'; this.style.color='#181818';" style="background-color: #ffffff; color: #191919; border-color: #ffffff">
+                      Sign in
+                      <!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[1]-2-@match-media-0-@ebay-carousel-4[@1]-3[1]-1-19-1-1-5-1-0-0-->
+<svg aria-hidden='true' class="vl-cta-arrow icon icon--24" data-marko-key="@svg s0-1-0-52-1-2-4-17[0[0]]-0[1]-2-@match-media-0-@ebay-carousel-4[@1]-3[1]-1-19-1-1-5-1-0-0" focusable='false' style="fill:currentColor">
+<use href="#icon-arrow-right-24">
+</use>
+</svg>
+<!--vertlandweb/-->
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--F/-->
+</li>
+<li class="carousel__snap-point vl-carousel__item" style="width:calc(100% - 0px);margin-right:0px">
+<!--F#4[@2]-->
+<div class="tracking-wrapper" data-view='{"eventFamily": "VERTLAND", "eventAction": "VIEW", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"moduledtl": "mi:4518|iid:5", "ammiid": "1476596978871806023", "amdata": "t=0|tdt=iid:1476596978871806023,clkid:1476596978871806022|plmt=(channel:ONSITE_DWEB cnv.cfg.id:6e554464-feef-4d68-9ea0-df8a19c5eabd cnv.id:100001 iid:1476596978871806023 isUEP:1 mesg.id:2526314843181576998 message.mob.trk.id:0b99112e-9a8e-494a-a530-23792fe526c5~Y3YzTRAXq8sijKDtpKrR9pLkLduhDQC6PSPRQkvmi8y~K3aqRLA9rpn0kB8jlzguDX78qryEB94DUQYYZjrGY2s pageci:8367f410-58d9-11ef-8be2-2a95c25823a1 parentrq:47ded1841910ab8d0e971f48fffff5b0 plmt.id:100002 site.id:0)|ul=en-US|guid=47ded19a1910ab8d0e9832cfffffbdac|send.trk.id=38fc0ab8-1bef-4636-a37b-e5bf47c5d083|uc=2|cnv.trk.id=819b78b8-ffcf-41f3-8a91-ea2af6702cae|cr.id=1225515102632461105|cr.vt.id=1714514072847|mobtrkId=dd90ae9a-c381-48da-860e-557e10c812bc~sAi6hM8JmYUNHwT8OvQGeLj9jO4SeWmPj3RyScigTjh~GEmWzRtQRUPOs77AQqkA62XRBm4Xjg4MwPqdEuxnapZ", "parentrq": "47ded1841910ab8d0e971f48fffff5b0", "audience": "general", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "vlpname": "vlp_homepage", "ampid": "MADRONA"}}'>
+<div class="vl-banner vl-banner-full-bleed evo" data-view='{"eventFamily": "VERTLAND", "eventAction": "VIEW", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"moduledtl": "mi:4518|iid:5|li:8658|luid:1|c:1", "ammiid": "1476596978871806023", "amdata": "t=0|tdt=iid:1476596978871806023,clkid:1476596978871806022|plmt=(channel:ONSITE_DWEB cnv.cfg.id:6e554464-feef-4d68-9ea0-df8a19c5eabd cnv.id:100001 iid:1476596978871806023 isUEP:1 mesg.id:2526314843181576998 message.mob.trk.id:0b99112e-9a8e-494a-a530-23792fe526c5~Y3YzTRAXq8sijKDtpKrR9pLkLduhDQC6PSPRQkvmi8y~K3aqRLA9rpn0kB8jlzguDX78qryEB94DUQYYZjrGY2s pageci:8367f410-58d9-11ef-8be2-2a95c25823a1 parentrq:47ded1841910ab8d0e971f48fffff5b0 plmt.id:100002 site.id:0)|ul=en-US|guid=47ded19a1910ab8d0e9832cfffffbdac|send.trk.id=38fc0ab8-1bef-4636-a37b-e5bf47c5d083|uc=2|cnv.trk.id=819b78b8-ffcf-41f3-8a91-ea2af6702cae|cr.id=1225515102632461105|cr.vt.id=1714514072847|mobtrkId=dd90ae9a-c381-48da-860e-557e10c812bc~sAi6hM8JmYUNHwT8OvQGeLj9jO4SeWmPj3RyScigTjh~GEmWzRtQRUPOs77AQqkA62XRBm4Xjg4MwPqdEuxnapZ", "audience": "general", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "ampid": "MADRONA", "vlpname": "vlp_homepage"}}'>
+<div class="vl-banner-full-bleed__container focus-inset page-grid" style="background-color:#191919">
+<div class="vl-banner-full-bleed__image-container">
+<div class="vl-image vl-image-js js-only vl-banner-full-bleed__image vl-image__fill" data-size='1600' data-src="https://i.ebayimg.com/images/g/Lz0AAOSw4qVmM6Kj/s-l1600.jpg">
+<div class="vl-image__background" style="background-color:#191919">
+</div>
+<img alt="" onerror="window.addtoLazyLoad({el: this, fit: true})" onload="window.addtoLazyLoad({el: this, fit: true})" role="presentation" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-banner-full-bleed__image" style="background-image: url('${src}')">
+<img alt="" role="presentation" src="https://i.ebayimg.com/images/g/Lz0AAOSw4qVmM6Kj/s-l1600.jpg"></img>
+</div>
+</noscript>
+<a _sp="p4375194.m4518.l5351.c1" aria-label="A motion-blurred photo of the McLaren MCL38 2024 Formula 1 car on a track against streaks of color. The McLaren and eBay logos sit in the bottom right with 'Official Partner' below them." class="vl-banner-full-bleed__link" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "operationId": "4375194", "flushImmediately": false, "actionKind": "CLICK", "eventProperty": {"moduledtl": "mi:4518|iid:5|li:5351|luid:1|c:1", "ammiid": "1476596978871806023", "amdata": "t=0|tdt=iid:1476596978871806023,clkid:1476596978871806022|plmt=(channel:ONSITE_DWEB cnv.cfg.id:6e554464-feef-4d68-9ea0-df8a19c5eabd cnv.id:100001 iid:1476596978871806023 isUEP:1 mesg.id:2526314843181576998 message.mob.trk.id:0b99112e-9a8e-494a-a530-23792fe526c5~Y3YzTRAXq8sijKDtpKrR9pLkLduhDQC6PSPRQkvmi8y~K3aqRLA9rpn0kB8jlzguDX78qryEB94DUQYYZjrGY2s pageci:8367f410-58d9-11ef-8be2-2a95c25823a1 parentrq:47ded1841910ab8d0e971f48fffff5b0 plmt.id:100002 site.id:0)|ul=en-US|guid=47ded19a1910ab8d0e9832cfffffbdac|send.trk.id=38fc0ab8-1bef-4636-a37b-e5bf47c5d083|uc=2|cnv.trk.id=819b78b8-ffcf-41f3-8a91-ea2af6702cae|cr.id=1225515102632461105|cr.vt.id=1714514072847|mobtrkId=dd90ae9a-c381-48da-860e-557e10c812bc~sAi6hM8JmYUNHwT8OvQGeLj9jO4SeWmPj3RyScigTjh~GEmWzRtQRUPOs77AQqkA62XRBm4Xjg4MwPqdEuxnapZ", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "audience": "general", "vlpname": "vlp_homepage", "ampid": "MADRONA"}}' href="https://www.ebay.com/b/Auto-Parts-and-Vehicles/6000/bn_1865334?_trkparms=pageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Cparentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Ciid%3A5%7Cvlpname%3Avlp_homepage">
+</a>
+</div>
+<div class="vl-banner-full-bleed__wrapper">
+<div class="vl-banner-full-bleed__content">
+<div class="vl-banner__text vl-banner-full-bleed__text">
+<div class="vl-banner-full-bleed_radial-gradient">
+</div>
+<div class="vl-banner__text-heading">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[1]-2-@match-media-0-@ebay-carousel-4[@2]-3[2]-1-16-->
+<div aria-label="Official Partner of McLaren F1" style="color:#ffffff">
+<!--F#f_@button-->
+<div class="vl-ellipsis-3" style="color:#ffffff">
+<span style="color:#ffffff">
+                       Official Partner of McLaren F1
+                      </span>
+</div>
+<!--F/-->
+</div>
+<!--vertlandweb/-->
+</div>
+<div class="vl-banner__text-subheading">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[1]-2-@match-media-0-@ebay-carousel-4[@2]-3[2]-1-18-->
+<!--F#f_15-->
+<!--F#f_@button-->
+<div class="vl-ellipsis-2" style="color:#ffffff">
+<span style="color:#ffffff">
+                      Give your ride the pit stop experience with world-class parts.
+                     </span>
+</div>
+<!--F/-->
+<!--F/-->
+<!--vertlandweb/-->
+</div>
+<div class="vl-cta vl-banner__cta" onfocusin="this.querySelector('.vl-cta__default').onmouseover()" onfocusout="this.querySelector('.vl-cta__default').onmouseout()" style="font-color:#ffffff">
+<a _sp="p4375194.m4518.l5352.c1" aria-label="Shop now" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "operationId": "4375194", "flushImmediately": false, "actionKind": "CLICK", "eventProperty": {"moduledtl": "mi:4518|iid:5|li:5352|luid:1|c:1", "ammiid": "1476596978871806023", "amdata": "t=0|tdt=iid:1476596978871806023,clkid:1476596978871806022|plmt=(channel:ONSITE_DWEB cnv.cfg.id:6e554464-feef-4d68-9ea0-df8a19c5eabd cnv.id:100001 iid:1476596978871806023 isUEP:1 mesg.id:2526314843181576998 message.mob.trk.id:0b99112e-9a8e-494a-a530-23792fe526c5~Y3YzTRAXq8sijKDtpKrR9pLkLduhDQC6PSPRQkvmi8y~K3aqRLA9rpn0kB8jlzguDX78qryEB94DUQYYZjrGY2s pageci:8367f410-58d9-11ef-8be2-2a95c25823a1 parentrq:47ded1841910ab8d0e971f48fffff5b0 plmt.id:100002 site.id:0)|ul=en-US|guid=47ded19a1910ab8d0e9832cfffffbdac|send.trk.id=38fc0ab8-1bef-4636-a37b-e5bf47c5d083|uc=2|cnv.trk.id=819b78b8-ffcf-41f3-8a91-ea2af6702cae|cr.id=1225515102632461105|cr.vt.id=1714514072847|mobtrkId=dd90ae9a-c381-48da-860e-557e10c812bc~sAi6hM8JmYUNHwT8OvQGeLj9jO4SeWmPj3RyScigTjh~GEmWzRtQRUPOs77AQqkA62XRBm4Xjg4MwPqdEuxnapZ", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "audience": "general", "vlpname": "vlp_homepage", "ampid": "MADRONA"}}' href="https://www.ebay.com/b/Auto-Parts-and-Vehicles/6000/bn_1865334?_trkparms=pageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Cparentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Ciid%3A5%7Cvlpname%3Avlp_homepage">
+<div class="vl-cta__text-only" style="color:#ffffff">
+                      Shop now
+                      <!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[1]-2-@match-media-0-@ebay-carousel-4[@2]-3[2]-1-19-1-1-3-1-0-0-->
+<svg aria-hidden='true' class="vl-cta-arrow icon icon--24" data-marko-key="@svg s0-1-0-52-1-2-4-17[0[0]]-0[1]-2-@match-media-0-@ebay-carousel-4[@2]-3[2]-1-19-1-1-3-1-0-0" focusable='false' style="fill:currentColor">
+<use href="#icon-arrow-right-24">
+</use>
+</svg>
+<!--vertlandweb/-->
+</div>
+<div class="vl-cta__default evo" onmouseout="this.style.background='#ffffff'; this.style.color='#191919'; this.style['border-color']='#ffffff';" onmouseover="this.style.background='#f5f5f5'; this.style.color='#181818';" style="background-color: #ffffff; color: #191919; border-color: #ffffff">
+                      Shop now
+                      <!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[1]-2-@match-media-0-@ebay-carousel-4[@2]-3[2]-1-19-1-1-5-1-0-0-->
+<svg aria-hidden='true' class="vl-cta-arrow icon icon--24" data-marko-key="@svg s0-1-0-52-1-2-4-17[0[0]]-0[1]-2-@match-media-0-@ebay-carousel-4[@2]-3[2]-1-19-1-1-5-1-0-0" focusable='false' style="fill:currentColor">
+<use href="#icon-arrow-right-24">
+</use>
+</svg>
+<!--vertlandweb/-->
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--F/-->
+</li>
+<li class="carousel__snap-point vl-carousel__item" style="width:calc(100% - 0px)">
+<!--F#4[@3]-->
+<div class="tracking-wrapper" data-view='{"eventFamily": "VERTLAND", "eventAction": "VIEW", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"moduledtl": "mi:4518|iid:6", "ammiid": "1476596978871806021", "amdata": "t=0|tdt=iid:1476596978871806021,clkid:1476596978871806020|plmt=(channel:ONSITE_DWEB cnv.cfg.id:6e554464-feef-4d68-9ea0-df8a19c5eabd cnv.id:100001 iid:1476596978871806021 isUEP:1 mesg.id:4453497018825559639 message.mob.trk.id:0b99112e-9a8e-494a-a530-23792fe526c5~Y3YzTRAXq8sijKDtpKrR9pLkLduhDQC6PSPRQkvmi8y~VwnZMfD9OWAAtzQhPimbx8008DpydpKM9xxQlLmwpQ7 pageci:8367f410-58d9-11ef-8be2-2a95c25823a1 parentrq:47ded1841910ab8d0e971f48fffff5b0 plmt.id:100003 site.id:0)|ul=en-US|guid=47ded19a1910ab8d0e9832cfffffbdac|send.trk.id=24400070-a33f-4242-b7ef-b98ed29168f0|uc=2|cnv.trk.id=819b78b8-ffcf-41f3-8a91-ea2af6702cae|cr.id=4483081489069386131|cr.vt.id=1722630193161|mobtrkId=dd90ae9a-c381-48da-860e-557e10c812bc~sAi6hM8JmYUNHwT8OvQGeLj9jO4SeWmPj3RyScigTjh~GEmWzRtQRUPOs77AQqkA62XRBm4Xjg4MwPqdEuxnapZ", "parentrq": "47ded1841910ab8d0e971f48fffff5b0", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "audience": "general", "vlpname": "vlp_homepage", "ampid": "MADRONA"}}'>
+<div class="vl-banner vl-banner-color-block evo" data-view='{"eventFamily": "VERTLAND", "eventAction": "VIEW", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"moduledtl": "mi:4518|iid:6|li:8658|luid:1|c:1", "ammiid": "1476596978871806021", "amdata": "t=0|tdt=iid:1476596978871806021,clkid:1476596978871806020|plmt=(channel:ONSITE_DWEB cnv.cfg.id:6e554464-feef-4d68-9ea0-df8a19c5eabd cnv.id:100001 iid:1476596978871806021 isUEP:1 mesg.id:4453497018825559639 message.mob.trk.id:0b99112e-9a8e-494a-a530-23792fe526c5~Y3YzTRAXq8sijKDtpKrR9pLkLduhDQC6PSPRQkvmi8y~VwnZMfD9OWAAtzQhPimbx8008DpydpKM9xxQlLmwpQ7 pageci:8367f410-58d9-11ef-8be2-2a95c25823a1 parentrq:47ded1841910ab8d0e971f48fffff5b0 plmt.id:100003 site.id:0)|ul=en-US|guid=47ded19a1910ab8d0e9832cfffffbdac|send.trk.id=24400070-a33f-4242-b7ef-b98ed29168f0|uc=2|cnv.trk.id=819b78b8-ffcf-41f3-8a91-ea2af6702cae|cr.id=4483081489069386131|cr.vt.id=1722630193161|mobtrkId=dd90ae9a-c381-48da-860e-557e10c812bc~sAi6hM8JmYUNHwT8OvQGeLj9jO4SeWmPj3RyScigTjh~GEmWzRtQRUPOs77AQqkA62XRBm4Xjg4MwPqdEuxnapZ", "audience": "general", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "ampid": "MADRONA", "vlpname": "vlp_homepage"}}' style="background-color:#f7f7f7">
+<div class="vl-banner-color-block__container">
+<div class="page-grid">
+<div class="vl-banner-color-block__content">
+<div class="vl-banner__text vl-banner-color-block__text">
+<div class="vl-banner-color-block__text__container">
+<div class="vl-banner__text-heading">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[1]-2-@match-media-0-@ebay-carousel-4[@3]-3[3]-1-13-->
+<div aria-label="Big hits at the Marquee Auction" style="color:#191919">
+<!--F#f_@button-->
+<div class="vl-ellipsis-3" style="color:#191919">
+<span style="color:#191919">
+                        Big hits at the Marquee Auction
+                       </span>
+</div>
+<!--F/-->
+</div>
+<!--vertlandweb/-->
+</div>
+<div class="vl-banner__text-subheading">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[1]-2-@match-media-0-@ebay-carousel-4[@3]-3[3]-1-15-->
+<!--F#f_15-->
+<!--F#f_@button-->
+<div class="vl-ellipsis-2" style="color:#191919">
+<span style="color:#191919">
+                       Take home coveted sports trading cards and collectibles.
+                      </span>
+</div>
+<!--F/-->
+<!--F/-->
+<!--vertlandweb/-->
+</div>
+</div>
+<div class="vl-cta vl-banner__cta" onfocusin="this.querySelector('.vl-cta__default').onmouseover()" onfocusout="this.querySelector('.vl-cta__default').onmouseout()" style="font-color:#191919;background-color:#f7f7f7">
+<a _sp="p4375194.m4518.l5352.c1" aria-label="Bid now" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "operationId": "4375194", "flushImmediately": false, "actionKind": "CLICK", "eventProperty": {"moduledtl": "mi:4518|iid:6|li:5352|luid:1|c:1", "ammiid": "1476596978871806021", "amdata": "t=0|tdt=iid:1476596978871806021,clkid:1476596978871806020|plmt=(channel:ONSITE_DWEB cnv.cfg.id:6e554464-feef-4d68-9ea0-df8a19c5eabd cnv.id:100001 iid:1476596978871806021 isUEP:1 mesg.id:4453497018825559639 message.mob.trk.id:0b99112e-9a8e-494a-a530-23792fe526c5~Y3YzTRAXq8sijKDtpKrR9pLkLduhDQC6PSPRQkvmi8y~VwnZMfD9OWAAtzQhPimbx8008DpydpKM9xxQlLmwpQ7 pageci:8367f410-58d9-11ef-8be2-2a95c25823a1 parentrq:47ded1841910ab8d0e971f48fffff5b0 plmt.id:100003 site.id:0)|ul=en-US|guid=47ded19a1910ab8d0e9832cfffffbdac|send.trk.id=24400070-a33f-4242-b7ef-b98ed29168f0|uc=2|cnv.trk.id=819b78b8-ffcf-41f3-8a91-ea2af6702cae|cr.id=4483081489069386131|cr.vt.id=1722630193161|mobtrkId=dd90ae9a-c381-48da-860e-557e10c812bc~sAi6hM8JmYUNHwT8OvQGeLj9jO4SeWmPj3RyScigTjh~GEmWzRtQRUPOs77AQqkA62XRBm4Xjg4MwPqdEuxnapZ", "audience": "general", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "vlpname": "vlp_homepage", "ampid": "MADRONA"}}' href="https://www.ebay.com/e/_collectibles/marquee-auction-eg?_trkparms=pageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Cparentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Ciid%3A6%7Cvlpname%3Avlp_homepage">
+<div class="vl-cta__text-only" style="color:#191919">
+                      Bid now
+                      <!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[1]-2-@match-media-0-@ebay-carousel-4[@3]-3[3]-1-16-1-1-3-1-0-0-->
+<svg aria-hidden='true' class="vl-cta-arrow icon icon--24" data-marko-key="@svg s0-1-0-52-1-2-4-17[0[0]]-0[1]-2-@match-media-0-@ebay-carousel-4[@3]-3[3]-1-16-1-1-3-1-0-0" focusable='false' style="fill:currentColor">
+<use href="#icon-arrow-right-24">
+</use>
+</svg>
+<!--vertlandweb/-->
+</div>
+<div class="vl-cta__default evo" onmouseout="this.style.background='#191919'; this.style.color='#f7f7f7'; this.style['border-color']='#191919';" onmouseover="this.style.background='#181818'; this.style.color='#ededed';" style="background-color: #191919; color: #f7f7f7; border-color: #191919">
+                      Bid now
+                      <!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[1]-2-@match-media-0-@ebay-carousel-4[@3]-3[3]-1-16-1-1-5-1-0-0-->
+<svg aria-hidden='true' class="vl-cta-arrow icon icon--24" data-marko-key="@svg s0-1-0-52-1-2-4-17[0[0]]-0[1]-2-@match-media-0-@ebay-carousel-4[@3]-3[3]-1-16-1-1-5-1-0-0" focusable='false' style="fill:currentColor">
+<use href="#icon-arrow-right-24">
+</use>
+</svg>
+<!--vertlandweb/-->
+</div>
+</a>
+</div>
+</div>
+</div>
+<a _sp="p4375194.m4518.l5350.c1" class="vl-banner-color-block__image-link" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "operationId": "4375194", "flushImmediately": false, "actionKind": "CLICK", "eventProperty": {"moduledtl": "mi:4518|iid:6|li:5350|luid:1|c:1", "ammiid": "1476596978871806021", "amdata": "t=0|tdt=iid:1476596978871806021,clkid:1476596978871806020|plmt=(channel:ONSITE_DWEB cnv.cfg.id:6e554464-feef-4d68-9ea0-df8a19c5eabd cnv.id:100001 iid:1476596978871806021 isUEP:1 mesg.id:4453497018825559639 message.mob.trk.id:0b99112e-9a8e-494a-a530-23792fe526c5~Y3YzTRAXq8sijKDtpKrR9pLkLduhDQC6PSPRQkvmi8y~VwnZMfD9OWAAtzQhPimbx8008DpydpKM9xxQlLmwpQ7 pageci:8367f410-58d9-11ef-8be2-2a95c25823a1 parentrq:47ded1841910ab8d0e971f48fffff5b0 plmt.id:100003 site.id:0)|ul=en-US|guid=47ded19a1910ab8d0e9832cfffffbdac|send.trk.id=24400070-a33f-4242-b7ef-b98ed29168f0|uc=2|cnv.trk.id=819b78b8-ffcf-41f3-8a91-ea2af6702cae|cr.id=4483081489069386131|cr.vt.id=1722630193161|mobtrkId=dd90ae9a-c381-48da-860e-557e10c812bc~sAi6hM8JmYUNHwT8OvQGeLj9jO4SeWmPj3RyScigTjh~GEmWzRtQRUPOs77AQqkA62XRBm4Xjg4MwPqdEuxnapZ", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "audience": "general", "ampid": "MADRONA", "vlpname": "vlp_homepage"}}' href="https://www.ebay.com/e/_collectibles/marquee-auction-eg?_trkparms=pageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Cparentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Ciid%3A6%7Cvlpname%3Avlp_homepage">
+<div class="vl-image vl-image-js js-only vl-banner-color-block__image vl-image__fill" data-size='920' data-src="https://i.ebayimg.com/images/g/CRoAAOSwmPFmrUFf/s-l960.png">
+<div class="vl-image__background" style="background-color:#f7f7f7">
+</div>
+<img alt="A graded Aaron Rodgers 2005 rookie card, a graded Chipper Jones 1991 rookie card, and an autographed Emmitt Smith football sit against a white background." onerror="window.addtoLazyLoad({el: this, fit: true})" onload="window.addtoLazyLoad({el: this, fit: true})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-banner-color-block__image" style="background-image: url('${src}')">
+<img alt="A graded Aaron Rodgers 2005 rookie card, a graded Chipper Jones 1991 rookie card, and an autographed Emmitt Smith football sit against a white background." src="https://i.ebayimg.com/images/g/CRoAAOSwmPFmrUFf/s-l960.png"></img>
+</div>
+</noscript>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!--F/-->
+</li>
+</ul>
+</div>
+<button aria-label="Go to next banner" class="carousel__control carousel__control--next" id="s0-1-0-52-1-2-4-17[0[0]]-0[1]-2-@match-media-0-@ebay-carousel-next" type="button">
+<svg aria-hidden='true' class="icon icon--16" focusable='false'>
+<defs>
+<symbol id="icon-chevron-right-16" viewbox="0 0 16 16">
+<path d="m12.707 8.707-6 6a1 1 0 0 1-1.414-1.414L10.586 8 5.293 2.707a1 1 0 0 1 1.414-1.414l6 6a1 1 0 0 1 0 1.414Z">
+</path>
+</symbol>
+</defs>
+<use href="#icon-chevron-right-16">
+</use>
+</svg>
+</button>
+<button aria-label="Pause Banner Carousel" class="carousel__playback" type="button">
+<svg aria-hidden='true' class="icon icon--24" focusable='false'>
+<defs>
+<symbol id="icon-pause-24" viewbox="0 0 24 24">
+<path d="M9 5a2 2 0 1 0-4 0v14a2 2 0 1 0 4 0V5Zm10 0a2 2 0 1 0-4 0v14a2 2 0 1 0 4 0V5Z">
+</path>
+</symbol>
+</defs>
+<use href="#icon-pause-24">
+</use>
+</svg>
+</button>
+</div>
+</div>
+<!--vertlandweb/-->
+<!--F/-->
+<div class="vl-carousel--dots">
+<ul>
+<li class="vl-carousel--dots__active" style="border-color: #553B06; background-color: #553B06">
+</li>
+<li style="border-color: #553B06; background-color: unset">
+</li>
+<li style="border-color: #553B06; background-color: unset">
+</li>
+<li style="border-color: #553B06; background-color: unset">
+</li>
+</ul>
+</div>
+</div>
+<!--F/-->
+<!--vertlandweb/-->
+</div>
+<!--vertlandweb^s0-1-0-52-1-2-4-17[0[0]]-0[2] s0-1-0-52-1-2-4-17[0[0]] 0[2]-->
+<div class="vl-leaderboard-ad" data-m-id='4817' data-view='{"eventFamily": "VERTLAND", "eventAction": "VIEW", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "moduledtl": "mi:4817|c:1|iid:1|luid:1", "vlpname": "vlp_homepage"}}' data-viewdtls='{"moduleInstance": "mi:4817|iid:1", "parentrq": "47ded1841910ab8d0e971f48fffff5b0", "trackViews": "true", "trackPerf": "true"}'>
+<div class="vl-leaderboard-ad__ad-container">
+<div data-from="ads_platform_all_ads" data-slot="PLACEMENT_100712" id="s0-1-0-52-1-2-4-17[0[0]]-0[2]-2-0-0-0">
+<!--F#@_-->
+<div id="scandal100712">
+</div>
+<script data-chunk-uuid="fc05d87d-5310-4d4e-9989-f03510d6785d" type="module">// chunk_script_fc05d87d-5310-4d4e-9989-f03510d6785d
+</script>
+<!--F/-->
+</div>
+</div>
+</div>
+<!--vertlandweb/-->
+<div class="vl-module vl-loyalty off-card vl-atf-module-js evo page-grid-container" data-m-id='4523' data-view='{"eventFamily": "VERTLAND", "eventAction": "VIEW", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"moduledtl": "mi:4523|iid:1", "ammiid": "1476596978871806033", "amdata": "t=0|tdt=iid:1476596978871806033,clkid:1476596978871806032|plmt=(channel:ONSITE_DWEB cnv.cfg.id:6e554464-feef-4d68-9ea0-df8a19c5eabd cnv.id:100001 iid:1476596978871806033 isUEP:1 mesg.id:7442128766012201104 message.mob.trk.id:0b99112e-9a8e-494a-a530-23792fe526c5~Y3YzTRAXq8sijKDtpKrR9pLkLduhDQC6PSPRQkvmi8y~fbdikwXbcUWBf3koFZ0vXp1O8OIfRwA8aTk6zO5ZCl8 pageci:8367f410-58d9-11ef-8be2-2a95c25823a1 parentrq:47ded1841910ab8d0e971f48fffff5b0 plmt.id:100004 site.id:0)|ul=en-US|guid=47ded19a1910ab8d0e9832cfffffbdac|send.trk.id=1c0c5b1d-0634-4e50-b42a-1a53fd5d410c|uc=2|cnv.trk.id=819b78b8-ffcf-41f3-8a91-ea2af6702cae|cr.id=5401251834210144363|cr.vt.id=1722283707165|mobtrkId=dd90ae9a-c381-48da-860e-557e10c812bc~sAi6hM8JmYUNHwT8OvQGeLj9jO4SeWmPj3RyScigTjh~GEmWzRtQRUPOs77AQqkA62XRBm4Xjg4MwPqdEuxnapZ", "parentrq": "47ded1841910ab8d0e971f48fffff5b0", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "vlpname": "vlp_homepage", "ampid": "MADRONA", "audience": "general"}}' data-viewdtls='{"moduleInstance": "mi:4523|iid:1", "parentrq": "47ded1841910ab8d0e971f48fffff5b0", "trackViews": "true", "trackPerf": "false"}' style="background-color:#f7f7f7;border-color:#f7f7f7">
+<div class="vl-loyalty__text">
+<div class="vl-loyalty__text-ctr">
+<div class="vl-loyalty__text-title">
+<a _sp="p4375194.m4523.l5349.c1" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"moduledtl": "mi:4523|iid:1|li:5349|luid:1|c:1", "ammiid": "1476596978871806033", "amdata": "t=0|tdt=iid:1476596978871806033,clkid:1476596978871806032|plmt=(channel:ONSITE_DWEB cnv.cfg.id:6e554464-feef-4d68-9ea0-df8a19c5eabd cnv.id:100001 iid:1476596978871806033 isUEP:1 mesg.id:7442128766012201104 message.mob.trk.id:0b99112e-9a8e-494a-a530-23792fe526c5~Y3YzTRAXq8sijKDtpKrR9pLkLduhDQC6PSPRQkvmi8y~fbdikwXbcUWBf3koFZ0vXp1O8OIfRwA8aTk6zO5ZCl8 pageci:8367f410-58d9-11ef-8be2-2a95c25823a1 parentrq:47ded1841910ab8d0e971f48fffff5b0 plmt.id:100004 site.id:0)|ul=en-US|guid=47ded19a1910ab8d0e9832cfffffbdac|send.trk.id=1c0c5b1d-0634-4e50-b42a-1a53fd5d410c|uc=2|cnv.trk.id=819b78b8-ffcf-41f3-8a91-ea2af6702cae|cr.id=5401251834210144363|cr.vt.id=1722283707165|mobtrkId=dd90ae9a-c381-48da-860e-557e10c812bc~sAi6hM8JmYUNHwT8OvQGeLj9jO4SeWmPj3RyScigTjh~GEmWzRtQRUPOs77AQqkA62XRBm4Xjg4MwPqdEuxnapZ", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "vlpname": "vlp_homepage", "ampid": "MADRONA", "audience": "general"}}' href="https://www.ebay.com/e/fashion/jordan-4-retro-white-thunder?_trkparms=pageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Cparentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Ciid%3A1">
+<h2 class="vl-ellipsis-2" style="color:#191919">
+            High contrast. High impact.
+           </h2>
+</a>
+</div>
+<div class="vl-loyalty__text-subtitle vl-ellipsis-2" style="color:#191919">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[3]-13-->
+<!--F#f_15-->
+<!--F#f_@button-->
+<!--F#f_18-->
+<span style="color:#191919">
+           Cop the new AJ4 'White Thunder.'
+          </span>
+<!--F/-->
+<!--F/-->
+<!--F/-->
+<!--vertlandweb/-->
+</div>
+</div>
+</div>
+<div class="vl-loyalty__call-to-action-wrapper">
+<div class="vl-cta vl-loyalty__call-to-action" onfocusin="this.querySelector('.vl-cta__default').onmouseover()" onfocusout="this.querySelector('.vl-cta__default').onmouseout()" style="font-color:#191919;background-color:#f7f7f7">
+<a _sp="p4375194.m4523.l5352.c1" aria-label="Shop now" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"moduledtl": "mi:4523|iid:1|li:5352|luid:1|c:1", "ammiid": "1476596978871806033", "amdata": "t=0|tdt=iid:1476596978871806033,clkid:1476596978871806032|plmt=(channel:ONSITE_DWEB cnv.cfg.id:6e554464-feef-4d68-9ea0-df8a19c5eabd cnv.id:100001 iid:1476596978871806033 isUEP:1 mesg.id:7442128766012201104 message.mob.trk.id:0b99112e-9a8e-494a-a530-23792fe526c5~Y3YzTRAXq8sijKDtpKrR9pLkLduhDQC6PSPRQkvmi8y~fbdikwXbcUWBf3koFZ0vXp1O8OIfRwA8aTk6zO5ZCl8 pageci:8367f410-58d9-11ef-8be2-2a95c25823a1 parentrq:47ded1841910ab8d0e971f48fffff5b0 plmt.id:100004 site.id:0)|ul=en-US|guid=47ded19a1910ab8d0e9832cfffffbdac|send.trk.id=1c0c5b1d-0634-4e50-b42a-1a53fd5d410c|uc=2|cnv.trk.id=819b78b8-ffcf-41f3-8a91-ea2af6702cae|cr.id=5401251834210144363|cr.vt.id=1722283707165|mobtrkId=dd90ae9a-c381-48da-860e-557e10c812bc~sAi6hM8JmYUNHwT8OvQGeLj9jO4SeWmPj3RyScigTjh~GEmWzRtQRUPOs77AQqkA62XRBm4Xjg4MwPqdEuxnapZ", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "vlpname": "vlp_homepage", "ampid": "MADRONA", "audience": "general"}}' href="https://www.ebay.com/e/fashion/jordan-4-retro-white-thunder?_trkparms=pageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Cparentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Ciid%3A1">
+<div class="vl-cta__text-only" style="color:#191919">
+           Shop now
+           
+        ```
+        

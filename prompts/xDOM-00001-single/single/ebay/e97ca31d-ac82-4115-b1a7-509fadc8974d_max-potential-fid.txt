@@ -1,0 +1,157 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. max-potential-fid => Max Potential First Input Delay: The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        
+<!--vertlandweb^s0-1-0-4 s0-1-0 4-->
+<!--vertlandweb/-->
+<!--vertlandweb^s0-1-0-5 s0-1-0 5-->
+<link href="//ir.ebaystatic.com" rel="dns-prefetch"></link>
+<link href="//secureir.ebaystatic.com" rel="dns-prefetch"></link>
+<link href="//i.ebayimg.com" rel="dns-prefetch"></link>
+<link href="//rover.ebay.com" rel="dns-prefetch"></link>
+<script data-chunk-uuid="707c809d-74dc-44e9-88ea-aa7ef3817387">// chunk_script_707c809d-74dc-44e9-88ea-aa7ef3817387
+</script>
+<!--vertlandweb/-->
+<link as="image" crossorigin="" href="https://ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif" rel="preload"></link>
+<meta charset="utf-8"></meta>
+<link href="https://pages.ebay.com/favicon.ico" rel="icon"></link>
+<meta content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1" name="viewport"></meta>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"></meta>
+<link href="https://srv.main.ebayrtm.com" rel="preconnect"></link>
+<noscript>
+<style data-chunk-uuid="f3ba56b9-7ce3-4289-9f6e-c8ce3119240b">/* chunk_style_f3ba56b9-7ce3-4289-9f6e-c8ce3119240b */
+</style>
+</noscript>
+<script data-chunk-uuid="ae7d0878-6000-4fbc-91c9-bbf286e04dfa">// chunk_script_ae7d0878-6000-4fbc-91c9-bbf286e04dfa
+</script>
+<script data-chunk-uuid="627e7edf-b870-4562-8e83-3a74200ab96b" data-type="inline_js" type="text/javascript">// chunk_script_627e7edf-b870-4562-8e83-3a74200ab96b
+</script>
+<link href="https://ir.ebaystatic.com/rs/v/kt4lmpewo203tcaltpljn4gcuyw.css?proc=DU:N" rel="stylesheet" type="text/css"></link>
+<script data-chunk-uuid="f27e5a41-ccb2-4b89-9ccc-547eb0f64b80">// chunk_script_f27e5a41-ccb2-4b89-9ccc-547eb0f64b80
+</script>
+<script data-chunk-uuid="9a215c5e-a108-4d85-9b5a-359042c9f88a">// chunk_script_9a215c5e-a108-4d85-9b5a-359042c9f88a
+</script>
+<link href="https://pe.ebay.com" hreflang="es-PE" rel="alternate"></link>
+<link href="https://ni.ebay.com" hreflang="es-NI" rel="alternate"></link>
+<link href="https://ve.ebay.com" hreflang="es-VE" rel="alternate"></link>
+<meta content="website" property="og:type"></meta>
+<meta content="5f0e3731bf6d3fc8b2f58b1a585a788f" name="360-site-verification"></meta>
+<meta content="https://ir.ebaystatic.com/cr/v/c1/ebay-logo-1-1200x630-margin.png" property="og:image"></meta>
+<meta content="Buy & sell electronics, cars, clothes, collectibles & more on eBay, the world's online marketplace. Top brands, low prices & free shipping on many items." name="twitter:description">
+<meta content='102628213125203' property="fb:app_id">
+<meta content="summary" name="twitter:card">
+<meta content="eBay" property="og:site_name"></meta>
+<link href="https://pa.ebay.com" hreflang="es-PA" rel="alternate"></link>
+<meta content="Electronics, Cars, Fashion, Collectibles & More | eBay" property="og:title"></meta>
+<link href="https://py.ebay.com" hreflang="es-PY" rel="alternate"></link>
+<link href="https://pr.ebay.com" hreflang="es-PR" rel="alternate"></link>
+<link href="https://www.ebay.com" hreflang="en-us" rel="alternate"></link>
+<link href="https://www.ebay.co.uk" hreflang="en-gb" rel="alternate"></link>
+<title>
+              Electronics, Cars, Fashion, Collectibles & More | eBay
+             </title>
+<link href="https://www.ebay.de" hreflang="de-de" rel="alternate">
+<meta content="en-us" http-equiv="content-language"></meta>
+<link href="https://www.ebay.com.au" hreflang="en-au" rel="alternate">
+<link href="https://www.ebay.fr" hreflang="fr-fr" rel="alternate">
+<link href="https://www.ebay.it" hreflang="it-it" rel="alternate">
+<link href="https://www.ebay.es" hreflang="es-es" rel="alternate">
+<meta content="https://ir.ebaystatic.com/cr/v/c1/ebay-logo-1-1200x1200-margin.png" name="twitter:image"></meta>
+<link href="https://www.ebay.com" rel="canonical">
+<meta content="Buy & sell electronics, cars, clothes, collectibles & more on eBay, the world's online marketplace. Top brands, low prices & free shipping on many items." name="description"></meta>
+<meta content="Buy & sell electronics, cars, clothes, collectibles & more on eBay, the world's online marketplace. Top brands, low prices & free shipping on many items." property="og:description"></meta>
+<script data-chunk-uuid="bcbb16a2-c477-40c7-9887-0cd2bc637950" type="application/ld+json">// chunk_script_bcbb16a2-c477-40c7-9887-0cd2bc637950
+</script>
+<link href="https://www.ebay.ca" hreflang="en-ca" rel="alternate">
+<link href="https://www.ebay.nl" hreflang="nl-nl" rel="alternate">
+<meta content="34E98E6F27109BE1A9DCF19658EEEE33" name="msvalidate.01"></meta>
+<link href="https://www.ebay.pl" hreflang="pl-pl" rel="alternate"></link>
+<link href="https://www.benl.ebay.be" hreflang="nl-be" rel="alternate"></link>
+<link href="https://www.befr.ebay.be" hreflang="fr-be" rel="alternate"></link>
+<link href="https://www.ebay.at" hreflang="de-at" rel="alternate"></link>
+<link href="https://www.ebay.ch" hreflang="de-ch" rel="alternate"></link>
+<link href="https://www.ebay.ie" hreflang="en-ie" rel="alternate"></link>
+<link href="https://www.ebay.com.my" hreflang="en-my" rel="alternate"></link>
+<meta content="Electronics, Cars, Fashion, Collectibles & More | eBay" name="twitter:title"></meta>
+<meta content="@eBay" name="twitter:site"></meta>
+<link href="https://i.ebayimg.com" rel="preconnect"></link>
+<link href="https://www.ebay.com.sg" hreflang="en-sg" rel="alternate"></link>
+<meta content="unsafe-url" name="referrer"></meta>
+<link href="https://www.ebay.ph" hreflang="en-ph" rel="alternate"></link>
+<link href="https://ir.ebaystatic.com" rel="preconnect"></link>
+<link href="https://www.cafr.ebay.ca" hreflang="fr-ca" rel="alternate"></link>
+<link href="https://www.ebay.com.hk" hreflang="zh-hk" rel="alternate"></link>
+<link href="https://cn.ebay.com" hreflang="zh-CN" rel="alternate"></link>
+<link href="https://il.ebay.com" hreflang="en-IL" rel="alternate"></link>
+<link href="https://by.ebay.com" hreflang="ru-BY" rel="alternate"></link>
+<link href="https://pt.ebay.com" hreflang="pt-PT" rel="alternate"></link>
+<meta content="acf32e2a69cbc2b0" name="y_key"></meta>
+<link href="https://kz.ebay.com" hreflang="ru-KZ" rel="alternate"></link>
+<link href="https://br.ebay.com" hreflang="pt-BR" rel="alternate"></link>
+<link href="https://co.ebay.com" hreflang="es-CO" rel="alternate"></link>
+<meta content="8kHr3jd3Z43q1ovwo0KVgo_NZKIEMjthBxti8m8fYTg" name="google-site-verification"></meta>
+<link href="https://mx.ebay.com" hreflang="es-MX" rel="alternate"></link>
+<link href="https://ar.ebay.com" hreflang="es-AR" rel="alternate"></link>
+<link href="https://bo.ebay.com" hreflang="es-BO" rel="alternate"></link>
+<link href="https://cl.ebay.com" hreflang="es-CL" rel="alternate"></link>
+<meta content="https://www.ebay.com" property="og:url"></meta>
+<link href="https://cr.ebay.com" hreflang="es-CR" rel="alternate"></link>
+<link href="https://do.ebay.com" hreflang="es-DO" rel="alternate"></link>
+<link href="https://ec.ebay.com" hreflang="es-EC" rel="alternate"></link>
+<link href="https://sv.ebay.com" hreflang="es-SV" rel="alternate"></link>
+<link href="https://gt.ebay.com" hreflang="es-GT" rel="alternate"></link>
+<link href="https://hn.ebay.com" hreflang="es-HN" rel="alternate"></link>
+<link href="https://uy.ebay.com" hreflang="es-UY" rel="alternate"></link>
+<meta content="6e11485a66d91eff" name="yandex-verification"></meta>
+<!-- NGMARS SIGNATURE -->
+<script data-chunk-uuid="ffa2bd41-c0ed-426f-9251-612eb1ab2968" async="" crossorigin="" src="https://ir.ebaystatic.com/rs/c/vertlandweb/r.21de6834.js">// chunk_script_ffa2bd41-c0ed-426f-9251-612eb1ab2968
+</script>
+<link href="https://ir.ebaystatic.com/rs/c/vertlandweb/r.1bc38966.css" rel="stylesheet"></link>
+</link>
+</link>
+</link>
+</link>
+</link>
+</link></link></link></meta>
+</meta>
+</meta>
+
+
+
+
+        ```
+        

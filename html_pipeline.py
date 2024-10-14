@@ -55,7 +55,10 @@ class HTMLPipeline:
     def chunk_and_modify_html_single(self, experiment: str, audit):
         html_modifier = self.load_chunker(experiment)
 
-        print(f"Starting HTML single audit modifications for {audit}...")
+        audit_list = list(self.audits.keys())
+        audit_index = audit_list.index(audit)
+
+        print(f"Starting HTML single audit modifications for {audit} - {audit_index + 1}/{len(audit_list)}...")
 
         self.start_modifications(html_modifier, lighthouse_audits={audit: self.audits[audit]}, audit_key=audit)
 
@@ -131,26 +134,21 @@ if  __name__ == "__main__":
     experiments = [
         # 'airbnb', 
         # 'aliexpress', 
-                #    'ebay', 
+                   'ebay', 
                 # 'facebook', 
-                #    'github',
-                #  'linkedin', 
-                #    'medium', 
-                # 'netflix', 
-                #    'pinterest', 
-                # 'quora', 
-                #    'reddit', 
-                # 'twitch', 
-                #    'twitter',
-                #  'walmart', 
-                   'youtube'
+                #    'github', 'linkedin', 
+                #    'medium', 'netflix', 
+                #    'pinterest', 'quora', 
+                #    'reddit', 'twitch', 
+                #    'twitter', 'walmart', 
+                #    'youtube'
                    ]
 
     # run_pipeline(experiments[0])
 
     current_experiment = experiments[0]
     print("Running pipeline for: ", current_experiment)
-    
+
     audits = HTMLModifier.get_audit_issues(current_experiment)
     audits_list = list(audits.keys())
 

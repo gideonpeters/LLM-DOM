@@ -1,0 +1,675 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. third-party-summary => Reduce the impact of third-party code: Third-party code can significantly impact load performance. Limit the number of redundant third-party providers and try to load third-party code after your page has primarily finished loading. [Learn how to minimize third-party impact](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        <a _sp="m571.l1545" class="gf-bttl thrd" data-sp="m571.l1545" href="https://www.ebay.com/help/home">
+              Help & Contact
+             </a>
+</h3>
+<ul>
+<li class="gf-li">
+<a _sp="m571.l1613" class="thrd" data-sp="m571.l1613" href="https://pages.ebay.com/seller-center/index.html?utm_source=gf&utm_medium=onsite">
+               Seller Center
+              </a>
+</li>
+<li class="gf-li">
+<a _sp="m571.l2911" class="thrd" data-sp="m571.l2911" href="https://www.ebay.com/help/home">
+               Contact Us
+              </a>
+</li>
+<li class="gf-li">
+<a _sp="m571.l9780" class="thrd" data-sp="m571.l9780" href="https://pages.ebay.com/returns/">
+               eBay Returns
+              </a>
+</li>
+<li class="gf-li">
+<a _sp="m571.l4539" class="thrd" data-sp="m571.l4539" href="https://pages.ebay.com/ebay-money-back-guarantee/">
+               eBay Money Back Guarantee
+              </a>
+</li>
+</ul>
+<h3 class="gf-bttl">
+<a _sp="m571.l2912" class="gf-bttl thrd" data-sp="m571.l2912" href="https://community.ebay.com/">
+              Community
+             </a>
+</h3>
+<ul>
+<li class="gf-li">
+<a _sp="m571.l2913" class="thrd" data-sp="m571.l2913" href="https://community.ebay.com/t5/Announcements/bg-p/Announcements">
+               Announcements
+              </a>
+</li>
+<li class="gf-li">
+<a _sp="m571.l2941" class="thrd" data-sp="m571.l2941" href="https://community.ebay.com/">
+               eBay Community
+              </a>
+</li>
+<li class="gf-li">
+<a _sp="m571.l2941" class="thrd" data-sp="m571.l2941" href="https://community.ebay.com/t5/Podcasts/ct-p/Podcasts">
+               eBay for Business Podcast
+              </a>
+</li>
+</ul>
+<h3 class="gf-bttl">
+             eBay Sites
+            </h3>
+<ul>
+<li class="gf-li">
+<div class="gf-flags-wpr gh-hvr">
+<a _sp="m571.l2586" aria-controls="gf-f" aria-expanded='false' aria-label="eBay sites,United States" class="thrd" href="https://www.ebay.com" id="gf-fbtn" role="button">
+                United States
+                <b class="gf-if gspr flus">
+</b>
+<b class="gh-sprRetina" id="gf-fbtn-arr">
+</b>
+</a>
+<div class="gf_sd" id="gf-f">
+<ul class="gf-ful">
+<li class="gf-f-li0">
+<a "="" class="gf-if-a" href="https://ar.ebay.com">
+<b class="flar gf-if gspr">
+</b>
+<p>
+                    Argentina
+                   </p>
+</a>
+</li>
+<li class="gf-f-li0">
+<a "="" class="gf-if-a" href="https://www.ebay.com.au">
+<b class="flau gf-if gspr">
+</b>
+<p>
+                    Australia
+                   </p>
+</a>
+</li>
+<li class="gf-f-li0">
+<a "="" class="gf-if-a" href="https://www.ebay.at">
+<b class="flat gf-if gspr">
+</b>
+<p>
+                    Austria
+                   </p>
+</a>
+</li>
+<li class="gf-f-li0">
+<a "="" class="gf-if-a" href="https://by.ebay.com">
+<b class="flby gf-if gspr">
+</b>
+<p>
+                    Belarus
+                   </p>
+</a>
+</li>
+<li class="gf-f-li0">
+<a "="" class="gf-if-a" href="https://www.ebay.be">
+<b class="flbe gf-if gspr">
+</b>
+<p>
+                    Belgium
+                   </p>
+</a>
+</li>
+<li class="gf-f-li0">
+<a "="" class="gf-if-a" href="https://bo.ebay.com">
+<b class="flbo gf-if gspr">
+</b>
+<p>
+                    Bolivia
+                   </p>
+</a>
+</li>
+<li class="gf-f-li0">
+<a "="" class="gf-if-a" href="https://br.ebay.com">
+<b class="flbr gf-if gspr">
+</b>
+<p>
+                    Brazil
+                   </p>
+</a>
+</li>
+<li class="gf-f-li0">
+<a "="" class="gf-if-a" href="https://www.ebay.ca">
+<b class="flca gf-if gspr">
+</b>
+<p>
+                    Canada
+                   </p>
+</a>
+</li>
+<li class="gf-f-li0">
+<a "="" class="gf-if-a" href="https://cl.ebay.com">
+<b class="flcl gf-if gspr">
+</b>
+<p>
+                    Chile
+                   </p>
+</a>
+</li>
+<li class="gf-f-li1 gf-f-li-top">
+<a "="" class="gf-if-a" href="https://www.ebay.cn">
+<b class="flcn gf-if gspr">
+</b>
+<p>
+                    China
+                   </p>
+</a>
+</li>
+<li class="gf-f-li1">
+<a "="" class="gf-if-a" href="https://co.ebay.com">
+<b class="flco gf-if gspr">
+</b>
+<p>
+                    Colombia
+                   </p>
+</a>
+</li>
+<li class="gf-f-li1">
+<a "="" class="gf-if-a" href="https://cr.ebay.com">
+<b class="flcr gf-if gspr">
+</b>
+<p>
+                    Costa Rica
+                   </p>
+</a>
+</li>
+<li class="gf-f-li1">
+<a "="" class="gf-if-a" href="https://do.ebay.com">
+<b class="fldo gf-if gspr">
+</b>
+<p>
+                    Dominican Republic
+                   </p>
+</a>
+</li>
+<li class="gf-f-li1">
+<a "="" class="gf-if-a" href="https://ec.ebay.com">
+<b class="flec gf-if gspr">
+</b>
+<p>
+                    Ecuador
+                   </p>
+</a>
+</li>
+<li class="gf-f-li1">
+<a "="" class="gf-if-a" href="https://sv.ebay.com">
+<b class="flsv gf-if gspr">
+</b>
+<p>
+                    El Salvador
+                   </p>
+</a>
+</li>
+<li class="gf-f-li1">
+<a "="" class="gf-if-a" href="https://www.ebay.fr">
+<b class="flfr gf-if gspr">
+</b>
+<p>
+                    France
+                   </p>
+</a>
+</li>
+<li class="gf-f-li1">
+<a "="" class="gf-if-a" href="https://www.ebay.de">
+<b class="flde gf-if gspr">
+</b>
+<p>
+                    Germany
+                   </p>
+</a>
+</li>
+<li class="gf-f-li1">
+<a "="" class="gf-if-a" href="https://gt.ebay.com">
+<b class="flgt gf-if gspr">
+</b>
+<p>
+                    Guatemala
+                   </p>
+</a>
+</li>
+<li class="gf-f-li2 gf-f-li-top">
+<a "="" class="gf-if-a" href="https://hn.ebay.com">
+<b class="flhn gf-if gspr">
+</b>
+<p>
+                    Honduras
+                   </p>
+</a>
+</li>
+<li class="gf-f-li2">
+<a "="" class="gf-if-a" href="https://www.ebay.com.hk">
+<b class="flhk gf-if gspr">
+</b>
+<p>
+                    Hong Kong
+                   </p>
+</a>
+</li>
+<li class="gf-f-li2">
+<a "="" class="gf-if-a" href="https://www.ebay.in">
+<b class="flin gf-if gspr">
+</b>
+<p>
+                    India
+                   </p>
+</a>
+</li>
+<li class="gf-f-li2">
+<a "="" class="gf-if-a" href="https://www.ebay.ie">
+<b class="flie gf-if gspr">
+</b>
+<p>
+                    Ireland
+                   </p>
+</a>
+</li>
+<li class="gf-f-li2">
+<a "="" class="gf-if-a" href="https://il.ebay.com">
+<b class="flil gf-if gspr">
+</b>
+<p>
+                    Israel
+                   </p>
+</a>
+</li>
+<li class="gf-f-li2">
+<a "="" class="gf-if-a" href="https://www.ebay.it">
+<b class="flit gf-if gspr">
+</b>
+<p>
+                    Italy
+                   </p>
+</a>
+</li>
+<li class="gf-f-li2">
+<a "="" class="gf-if-a" href="https://www.ebay.co.jp">
+<b class="fljp gf-if gspr">
+</b>
+<p>
+                    Japan
+                   </p>
+</a>
+</li>
+<li class="gf-f-li2">
+<a "="" class="gf-if-a" href="https://kz.ebay.com">
+<b class="flkz gf-if gspr">
+</b>
+<p>
+                    Kazakhstan
+                   </p>
+</a>
+</li>
+<li class="gf-f-li2">
+<a "="" class="gf-if-a" href="https://www.ebay.co.kr">
+<b class="flkr gf-if gspr">
+</b>
+<p>
+                    Korea
+                   </p>
+</a>
+</li>
+<li class="gf-f-li3 gf-f-li-top">
+<a "="" class="gf-if-a" href="https://www.ebay.com.my">
+<b class="flmy gf-if gspr">
+</b>
+<p>
+                    Malaysia
+                   </p>
+</a>
+</li>
+<li class="gf-f-li3">
+<a "="" class="gf-if-a" href="https://mx.ebay.com">
+<b class="flmx gf-if gspr">
+</b>
+<p>
+                    Mexico
+                   </p>
+</a>
+</li>
+<li class="gf-f-li3">
+<a "="" class="gf-if-a" href="https://www.ebay.nl">
+<b class="flnl gf-if gspr">
+</b>
+<p>
+                    Netherlands
+                   </p>
+</a>
+</li>
+<li class="gf-f-li3">
+<a "="" class="gf-if-a" href="https://www.ebay.co.nz/">
+<b class="flnz gf-if gspr">
+</b>
+<p>
+                    New Zealand
+                   </p>
+</a>
+</li>
+<li class="gf-f-li3">
+<a "="" class="gf-if-a" href="https://ni.ebay.com">
+<b class="flni gf-if gspr">
+</b>
+<p>
+                    Nicaragua
+                   </p>
+</a>
+</li>
+<li class="gf-f-li3">
+<a "="" class="gf-if-a" href="https://pa.ebay.com">
+<b class="flpa gf-if gspr">
+</b>
+<p>
+                    Panama
+                   </p>
+</a>
+</li>
+<li class="gf-f-li3">
+<a "="" class="gf-if-a" href="https://py.ebay.com">
+<b class="flpy gf-if gspr">
+</b>
+<p>
+                    Paraguay
+                   </p>
+</a>
+</li>
+<li class="gf-f-li3">
+<a "="" class="gf-if-a" href="https://pe.ebay.com">
+<b class="flpe gf-if gspr">
+</b>
+<p>
+                    Peru
+                   </p>
+</a>
+</li>
+<li class="gf-f-li3">
+<a "="" class="gf-if-a" href="https://www.ebay.ph">
+<b class="flph gf-if gspr">
+</b>
+<p>
+                    Philippines
+                   </p>
+</a>
+</li>
+<li class="gf-f-li4 gf-f-li-top">
+<a "="" class="gf-if-a" href="https://www.ebay.pl">
+<b class="flpl gf-if gspr">
+</b>
+<p>
+                    Poland
+                   </p>
+</a>
+</li>
+<li class="gf-f-li4">
+<a "="" class="gf-if-a" href="https://pt.ebay.com">
+<b class="flpt gf-if gspr">
+</b>
+<p>
+                    Portugal
+                   </p>
+</a>
+</li>
+<li class="gf-f-li4">
+<a "="" class="gf-if-a" href="https://pr.ebay.com">
+<b class="flpr gf-if gspr">
+</b>
+<p>
+                    Puerto Rico
+                   </p>
+</a>
+</li>
+<li class="gf-f-li4">
+<a "="" class="gf-if-a" href="https://www.ebay.com.sg">
+<b class="flsg gf-if gspr">
+</b>
+<p>
+                    Singapore
+                   </p>
+</a>
+</li>
+<li class="gf-f-li4">
+<a "="" class="gf-if-a" href="https://www.ebay.es">
+<b class="fles gf-if gspr">
+</b>
+<p>
+                    Spain
+                   </p>
+</a>
+</li>
+<li class="gf-f-li4">
+<a "="" class="gf-if-a" href="https://www.ebay.ch">
+<b class="flch gf-if gspr">
+</b>
+<p>
+                    Switzerland
+                   </p>
+</a>
+</li>
+<li class="gf-f-li4">
+<a "="" class="gf-if-a" href="https://www.ebay.com.tw">
+<b class="fltw gf-if gspr">
+</b>
+<p>
+                    Taiwan
+                   </p>
+</a>
+</li>
+<li class="gf-f-li4">
+<a "="" class="gf-if-a" href="https://www.ebay.com">
+<b class="fltr gf-if gspr">
+</b>
+<p>
+                    Turkey
+                   </p>
+</a>
+</li>
+<li class="gf-f-li4">
+<a "="" class="gf-if-a" href="https://www.ebay.co.uk">
+<b class="flgb gf-if gspr">
+</b>
+<p>
+                    United Kingdom
+                   </p>
+</a>
+</li>
+<li class="gf-f-li5 gf-f-li-top">
+<a "="" class="gf-if-a" href="https://uy.ebay.com">
+<b class="fluy gf-if gspr">
+</b>
+<p>
+                    Uruguay
+                   </p>
+</a>
+</li>
+<li class="gf-f-li5">
+<a "="" class="gf-if-a" href="https://ve.ebay.com">
+<b class="flve gf-if gspr">
+</b>
+<p>
+                    Venezuela
+                   </p>
+</a>
+</li>
+</ul>
+<div id="gf-f-trans">
+</div>
+</div>
+</div>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="gf-t-box">
+<table class="gf-t" role="presentation">
+<tr>
+<td colspan='2'>
+<ul class="gf-lb" id="gf-l">
+<li class="gf-li">
+<a _exsp="m571.l2602" class="thrd gf-bar-a" href="https://www.ebayinc.com">
+              About eBay
+             </a>
+</li>
+<li class="gf-li">
+<a _exsp="m571.l2935" class="thrd gf-bar-a" href="https://community.ebay.com/t5/Announcements/bg-p/Announcements">
+              Announcements
+             </a>
+</li>
+<li class="gf-li">
+<a _exsp="m571.l1540" class="thrd gf-bar-a" href="https://community.ebay.com">
+              Community
+             </a>
+</li>
+<li class="gf-li">
+<a _exsp="m571.l2616" class="thrd gf-bar-a" href="https://pages.ebay.com/securitycenter/index.html">
+              Security Center
+             </a>
+</li>
+<li class="gf-li">
+<a _exsp="m571.l1613" class="thrd gf-bar-a" href="https://pages.ebay.com/seller-center/index.html?utm_source=gf&utm_medium=onsite">
+              Seller Center
+             </a>
+</li>
+<li class="gf-li">
+<a _exsp="m571.l2604" class="thrd gf-bar-a" href="https://www.ebay.com/help/policies/default/ebays-rules-policies?id=4205">
+              Policies
+             </a>
+</li>
+<li class="gf-li">
+<a _exsp="m571.l3947" class="thrd gf-bar-a" href="https://partnernetwork.ebay.com/">
+              Affiliates
+             </a>
+</li>
+<li class="gf-li">
+<a _sp="m571.l1545" class="thrd gf-bar-a" data-sp="m571.l1545" href="https://www.ebay.com/help/home">
+              Help & Contact
+             </a>
+</li>
+<li class="gf-li">
+<a _exsp="m571.l2909" class="thrd gf-bar-a" href="https://pages.ebay.com/sitemap.html">
+              Site Map
+             </a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<td class="gf-legal">
+           Copyright © 1995-2024 eBay Inc. All Rights Reserved.
+           <a href="https://www.ebayinc.com/accessibility/">
+            Accessibility
+           </a>
+           ,
+           <a href="https://www.ebay.com/help/policies/member-behaviour-policies/user-agreement?id=4259">
+            User Agreement
+           </a>
+           ,
+           <a href="https://www.ebay.com/help/policies/member-behaviour-policies/user-privacy-notice-privacy-policy?id=4260">
+            Privacy
+           </a>
+           ,
+           <a _sp="m571.l182077" href="https://www.ebayinc.com/company/privacy-center/privacy-notice/consumer-health-data-privacy-policy/">
+            Consumer Health Data
+           </a>
+           ,
+           <a href="https://pages.ebay.com/payment/2.0/terms.html">
+            Payments Terms of Use
+           </a>
+           ,
+           <a href="https://www.ebay.com/help/policies/member-behaviour-policies/ebay-cookie-notice?id=4267">
+            Cookies
+           </a>
+           ,
+           <a href="https://www.ebayinc.com/company/privacy-center/privacy-notice/state-privacy-disclosures/#california">
+            CA Privacy Notice
+           </a>
+           ,
+           <a class="gf-legal__privacy" href="https://www.ebay.com/adchoice/ccpa">
+            Your Privacy Choices
+           </a>
+           and
+           <a href="https://www.ebay.com/adchoice" id="gf-AdChoice">
+            AdChoice
+           </a>
+</td>
+<td align="center" nowrap="">
+</td>
+</tr>
+</table>
+</div>
+<!--[if lt IE 9]></div><![endif]-->
+</footer>
+</div>
+</div>
+</div>
+</div>
+<script data-chunk-uuid="2f91c413-64d1-4657-87ef-c5cdf1f6b534" src="https://ir.ebaystatic.com/rs/v/dimst35tei5k5cjwlytmmoocgq2.js" type="text/javascript">// chunk_script_2f91c413-64d1-4657-87ef-c5cdf1f6b534
+</script>
+<script data-chunk-uuid="b092d320-a716-4457-ad10-94b40c052535" type="text/javascript">// chunk_script_b092d320-a716-4457-ad10-94b40c052535
+</script>
+<script data-chunk-uuid="e122c4b8-7be0-4d61-a318-784a4eaa34d7">// chunk_script_e122c4b8-7be0-4d61-a318-784a4eaa34d7
+</script>
+<!--vertlandweb^s0-1-0-72 s0-1-0 72-->
+<div class="vl-fsom-banner">
+</div>
+<!--vertlandweb/-->
+<div id="af0" style="display:none">
+<noscript id="afph1">
+</noscript>
+</div>
+<div id="aftracking" style="display:none">
+<script data-chunk-uuid="f7ad8a39-317f-435d-85d8-205386e3c81d" type="text/javascript">// chunk_script_f7ad8a39-317f-435d-85d8-205386e3c81d
+</script>
+<script data-chunk-uuid="baef99a4-813f-4df9-a512-2bd059228c8d" src="https://ir.ebaystatic.com/cr/v/c1/ebay-cookies/5.js">// chunk_script_baef99a4-813f-4df9-a512-2bd059228c8d
+</script>
+<script data-chunk-uuid="9b96d6ae-f6ba-494f-8158-c76b56afa3b0" type="text/javascript">// chunk_script_9b96d6ae-f6ba-494f-8158-c76b56afa3b0
+</script>
+<script data-chunk-uuid="bb2cacba-52dd-4546-8709-59506a2832cf" type="text/javascript">// chunk_script_bb2cacba-52dd-4546-8709-59506a2832cf
+</script>
+<script data-chunk-uuid="d018706e-3a04-44e2-bed3-08ff990982e0" crossorigin="" id="taasHeaderRes" src="https://ir.ebaystatic.com/cr/v/c01/nh24070265b74ffae1964cce828.js" type="text/javascript">// chunk_script_d018706e-3a04-44e2-bed3-08ff990982e0
+</script>
+<script data-chunk-uuid="57c42148-8d22-4bca-8f36-a5e4d454acf6" id="taasContent" type="text/javascript">// chunk_script_57c42148-8d22-4bca-8f36-a5e4d454acf6
+</script>
+<script data-chunk-uuid="a9fb16d3-4081-4afe-80a4-9a954903816f" crossorigin="" id="taasFooterRes" src="https://ir.ebaystatic.com/cr/v/c01/ubt24070236dd1e675d8f4e7497.js" type="text/javascript">// chunk_script_a9fb16d3-4081-4afe-80a4-9a954903816f
+</script>
+</div>
+<div id="af1" style="display:none">
+</div>
+<script data-chunk-uuid="041d5379-e3c4-484f-a997-aa15749b7eb9">// chunk_script_041d5379-e3c4-484f-a997-aa15749b7eb9
+</script>
+
+        ```
+        
