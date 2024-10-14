@@ -1,0 +1,498 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. uses-responsive-images => Properly size images: Serve images that are appropriately-sized to save cellular data and improve load time. [Learn how to size images](https://developer.chrome.com/docs/lighthouse/performance/uses-responsive-images/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        
+<div data-src="59322f29" id="s0-1-0-25-0-1-0-0">
+<!--F#@_-->
+<noscript id="afph0">
+</noscript>
+<!--F/-->
+</div>
+<script data-chunk-uuid="7b71a616-28ca-4f87-b1b5-c2b437b0c537">// chunk_script_7b71a616-28ca-4f87-b1b5-c2b437b0c537
+</script>
+<!--vertlandweb#s0-1-0-26-10-->
+<div class="vl-pushdown" data-m-id='4816' data-view='{"eventFamily": "VERTLAND", "eventAction": "VIEW", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "moduledtl": "mi:4816|c:1|iid:1|luid:1", "vlpname": "vlp_homepage"}}' data-viewdtls='{"moduleInstance": "mi:4816|iid:1", "parentrq": "47ded1841910ab8d0e971f48fffff5b0", "trackViews": "true", "trackPerf": "true"}' style="background-color:#FFFFFF">
+<div class="vl-pushdown__wrapper">
+<div class="vl-pushdown__container" id="vl-pushdown__shrinked">
+<div data-from="ads_platform_all_ads" data-slot="PLACEMENT_100713" id="s0-1-0-26-10-18-0-0-0">
+<!--F#@_-->
+<div id="scandal100713">
+</div>
+<script data-chunk-uuid="3f62bd81-1b14-467b-a4ec-821d686f3344" type="module">// chunk_script_3f62bd81-1b14-467b-a4ec-821d686f3344
+</script>
+<!--F/-->
+</div>
+</div>
+<div class="vl-pushdown__container transparent" id="vl-pushdown__expanded">
+</div>
+<button class="vl-pushdown__toggle" disabled="" style="background-color:#FFFFFF;color:inherit" type="button">
+     Open
+     <!--F#23-->
+<svg height="8px" version='1.1' viewbox="0 0 14 8" width="14px" xmlns="https://www.w3.org/2000/svg">
+<desc>
+       Expand Svg
+      </desc>
+<defs>
+</defs>
+<g fill="none" fill-rule="evenodd" id="btn-expand" stroke="none" stroke-width='1'>
+<g fill="inherit" fill-rule="nonzero">
+<g>
+<polygon points="6.5355339 6.8994949 6.7071068 7.0710678 13.0710678 0.7071068 12.363961 0 6.5355339 5.8284271 0.7071068 0 0 0.7071068 6.363961 7.0710678">
+</polygon>
+</g>
+</g>
+</g>
+</svg>
+<!--F/-->
+</button>
+</div>
+<div class="vl-pushdown__overlay">
+</div>
+</div>
+<!--vertlandweb/-->
+<div id="globalHeaderWrapper">
+<div class="page-grid-container hp-grid-container">
+<div class="page-grid hp-grid">
+<div class="global-header-container">
+<script data-chunk-uuid="a5d0fb9f-6b99-46ca-914b-38c0691f2cec" type="text/javascript">// chunk_script_a5d0fb9f-6b99-46ca-914b-38c0691f2cec
+</script>
+<style data-chunk-uuid="778781a9-2017-4a6c-b9e8-0ce39681e026">/* chunk_style_778781a9-2017-4a6c-b9e8-0ce39681e026 */
+</style>
+<div class="gh-acc-exp-div gh-hide-if-nocss">
+<a class="gh-acc-a" href="#mainContent" id="gh-hdn-stm">
+        Skip to main content
+       </a>
+</div>
+<!--[if lt IE 9]><div id="gh" role="banner" class="gh-IE8 gh-flex gh-pre-js gh-w gh-simpleH "><![endif]-->
+<header class="gh-ui-6-5 gh-flex gh-pre-js gh-w gh-sch-prom ghx-evoa gh-simpleH" data-treatment="" id="gh" role="banner">
+<table class="gh-tbl" role="presentation">
+<tbody>
+<tr>
+<td class="gh-td">
+<h1 id="gh-l-h1">
+<a _sp="m570.l2586" href="https://www.ebay.com/" id="gh-la">
+<svg aria-labelledby="ebayLogoTitle" height="100%" id="gh-logo" role="img" viewbox="0 0 122 48.592" width="100%" xmlns="http://www.w3.org/2000/svg">
+<title id="ebayLogoTitle">
+               eBay Home
+              </title>
+<g>
+<path d="M24.355 22.759c-.269-5.738-4.412-7.838-8.826-7.813-4.756.026-8.544 2.459-9.183 7.915zM6.234 26.93c.364 5.553 4.208 8.814 9.476 8.785 3.648-.021 6.885-1.524 7.952-4.763l6.306-.035c-1.187 6.568-8.151 8.834-14.145 8.866C4.911 39.844.043 33.865-.002 25.759c-.05-8.927 4.917-14.822 15.765-14.884 8.628-.048 14.978 4.433 15.033 14.291l.01 1.625z" fill="#E53238">
+</path>
+<path d="M46.544 35.429c5.688-.032 9.543-4.148 9.508-10.32s-3.947-10.246-9.622-10.214-9.543 4.148-9.509 10.32 3.974 10.245 9.623 10.214zM30.652.029l6.116-.034.085 15.369c2.978-3.588 7.1-4.65 11.167-4.674 6.817-.037 14.412 4.518 14.468 14.454.045 8.29-5.941 14.407-14.422 14.454-4.463.026-8.624-1.545-11.218-4.681a33.237 33.237 0 01-.19 3.731l-5.994.034c.09-1.915.185-4.364.174-6.322z" fill="#0064D2">
+</path>
+<path d="M77.282 25.724c-5.548.216-8.985 1.229-8.965 4.883.013 2.365 1.94 4.919 6.7 4.891 6.415-.035 9.826-3.556 9.794-9.289v-.637c-2.252.02-5.039.054-7.529.152zm13.683 7.506c.01 1.778.071 3.538.232 5.1l-5.688.032a33.381 33.381 0 01-.225-3.825c-3.052 3.8-6.708 4.909-11.783 4.938-7.532.042-11.585-3.915-11.611-8.518-.037-6.665 5.434-9.049 14.954-9.318 2.6-.072 5.529-.1 7.945-.116v-.637c-.026-4.463-2.9-6.285-7.854-6.257-3.68.021-6.368 1.561-6.653 4.2l-6.434.035c.645-6.566 7.53-8.269 13.595-8.3 7.263-.04 13.406 2.508 13.448 10.192z" fill="#F5AF02">
+</path>
+<path d="M91.939 19.852l-4.5-8.362 7.154-.04 10.589 20.922 10.328-21.02 6.486-.048-18.707 37.251-6.85.039 5.382-10.348-9.887-18.393" fill="#86B817">
+</path>
+</g>
+</svg>
+</a>
+</h1>
+</td>
+<td class="gh-td">
+</td>
+<td class="gh-td">
+</td>
+<td class="gh-td">
+<div class="gh-hide-if-nocss is-evo" id="gh-shop">
+<button aria-controls="gh-sbc-o" aria-expanded='false' class="gh-control" id="gh-shop-a">
+             Shop by category
+             <i class="gh-sprRetina" id="gh-shop-ei">
+</i>
+</button>
+<div id="gh-sbc-o">
+<h2 class="gh-ar-hdn">
+              Shop by category
+             </h2>
+</div>
+</div>
+</td>
+<td class="gh-td-s">
+<form action="https://www.ebay.com/sch/i.html" id="gh-f" method="get">
+<input name="_from" type="hidden" value="R40"></input>
+<input name="_trksid" type="hidden" value="m570.l1313"></input>
+<table class="gh-tbl2" id="gh-search-wrap" role="presentation">
+<tbody>
+<tr>
+<td class="gh-td-s">
+<div id="gh-ac-box">
+<div id="gh-ac-box2">
+<label class="gh-ar-hdn" for="gh-ac">
+                   Enter your search keyword
+                  </label>
+<input aria-autocomplete="list" aria-expanded='false' aria-label="Search for anything" autocapitalize="off" autocomplete="off" autocorrect="off" class="gh-tb ui-autocomplete-input" id="gh-ac" maxlength='300' name="_nkw" placeholder="Search for anything" size='50' spellcheck='false' type="text"></input>
+<input style="display:none"></input>
+<script data-chunk-uuid="04d6aaf7-32b3-43a2-bfeb-b787bf6da950">// chunk_script_04d6aaf7-32b3-43a2-bfeb-b787bf6da950
+</script>
+<svg aria-hidden='true' class="icon icon--search gh-search__icon" focusable='false' height='16' width='16'>
+<use xlink:href="#gh-icon-search-evo">
+</use>
+</svg>
+</div>
+</div>
+</td>
+<td class="gh-td" id="gh-cat-td">
+<div id="gh-cat-box">
+<select aria-label="Select a category for search" class="gh-sb" id="gh-cat" name="_sacat" size='1'>
+<option value='0'>
+                   All Categories
+                  </option>
+</select>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<td class="gh-td gh-sch-btn">
+<input class="btn btn-prim gh-spr" form="gh-f" id="gh-btn" type="submit" value="Search"></input>
+<svg aria-hidden='true' class="icon icon--search gh-search-btn__icon" focusable='false' height='22' width='22'>
+<use xlink:href="#icon-search">
+</use>
+</svg>
+</td>
+<td class="gh-td" id="gh-as-td">
+<a _sp="m570.l2614" aria-label="Advanced Search" href="https://www.ebay.com/sch/ebayadvsearch" id="gh-as-a" title="Advanced Search">
+              Advanced
+             </a>
+</td>
+</form>
+</td>
+<td class="gh-td">
+</td>
+<td class="sticky_placeholder">
+<ul>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div aria-label="Account" class="gh-hide-if-nocss" id="gh-top" role="navigation">
+<ul id="gh-topl">
+<li class="gh-t" id="gh-eb-u">
+<noscript class="gh-t gh-spr">
+           Hi (
+           <a href="https://signin.ebay.com/ws/eBayISAPI.dll?SignIn&_trksid=m570.l3348">
+            Sign in
+           </a>
+           to bid or buy)
+          </noscript>
+<script data-chunk-uuid="acb7ba69-4db5-4dd8-9d63-3c856a60bfe1">// chunk_script_acb7ba69-4db5-4dd8-9d63-3c856a60bfe1
+</script>
+</li>
+<li class="gh-t gh-divider-l" id="gh-p-1">
+<a _sp="m570.l3188" class="gh-p" data-sp="m570.l3188" href="https://www.ebay.com/deals">
+           Daily Deals
+          </a>
+</li>
+<li class="gh-t gh-divider-l" id="gh-p-4">
+<a _sp="m570.l47233" class="gh-p" data-sp="m570.l47233" href="https://www.ebay.com/b/Brand-Outlet/bn_7115532402">
+           Brand Outlet
+          </a>
+</li>
+<li class="gh-t gh-divider-l" id="gh-p-6">
+<a _sp="m570.l174317" class="gh-p" data-sp="m570.l174317" href="https://www.ebay.com/giftcards">
+           Gift Cards
+          </a>
+</li>
+<li class="gh-t gh-divider-l" id="gh-p-3">
+<a _sp="m570.l1545" class="gh-p" data-sp="m570.l1545" href="https://www.ebay.com/help/home">
+           Help & Contact
+          </a>
+</li>
+</ul>
+<ul id="gh-eb">
+<li class="gh-eb-li gh-t-rt gh--link__divider" id="gh-p-2">
+<a _sp="m570.l1528" class="gh-p" data-sp="m570.l1528" href="https://www.ebay.com/sl/sell">
+           Sell
+          </a>
+</li>
+<li class="gh-eb-li gh-margin rt" id="gh-wl-click">
+<div class="gh-menu gh--link__divider">
+<a _sp="m570.l47137" class="gh-eb-li-a gh-rvi-menu watchlist-menu" href="https://www.ebay.com/mye/myebay/watchlist" title="Watchlist">
+            Watchlist
+            <i class="gh-sprRetina gh-eb-arw gh-rvi-chevron" data-sp="m570.l47137">
+</i>
+</a>
+<a aria-expanded='false' class="gh-acc-exp-a gh-acc-a2 gh-control" data-controltarget="gh-wl-click-o" href="#gh-wl-click" role="button">
+            Expand Watch List
+           </a>
+<div aria-label="Watchlist" class="gh-sublayer gh-flyout__menu" id="gh-wl-click-flyout" role="dialog">
+<button aria-label="Close dialog" class="gh_flyout__close" id="gh-wl-click-close">
+<svg aria-hidden='true' focusable='false' height='17' width='17'>
+<use xlink:href="#icon-close">
+</use>
+</svg>
+</button>
+<div id="gh-wl-click-body">
+<div class="gh-loading">
+<span aria-label="Loading" class="gh-spinner" role="img">
+</span>
+<span class="gh-state">
+               Loading...
+              </span>
+</div>
+<div class="gh-wl-click-gen-error">
+<span>
+<a href="https://signin.ebay.com/ws/eBayISAPI.dll?SignIn&sgfl=gh&ru=ru">
+                Sign in
+               </a>
+               to see your user information
+              </span>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="gh-eb-li gh-hvr gh-dd rt" data-imp='10' id="gh-eb-My">
+<div class="gh-menu">
+<a _sp="m570.l2919" class="gh-eb-li-a gh-rvi-menu" href="https://www.ebay.com/mys/home?source=GBH" title="My eBay">
+            My eBay
+            <i class="gh-sprRetina gh-eb-arw gh-rvi-chevron" data-sp="m570.l2919">
+</i>
+</a>
+<a aria-expanded='false' class="gh-acc-exp-a gh-acc-a2 gh-control" data-controltarget="gh-eb-My-o" href="#gh-eb-My" role="button">
+            Expand My eBay
+           </a>
+<div class="gh-submenu gh-eb-o" id="gh-eb-My-o">
+<ul id="gh-ul-nav" role="navigation">
+<li>
+<a _sp="m570.l1533" class="gh-eb-oa thrd" data-sp="m570.l1533" href="https://www.ebay.com/mye/myebay/summary">
+               Summary
+              </a>
+</li>
+<li>
+<a _sp="m570.l9225" class="gh-eb-oa thrd" data-sp="m570.l9225" href="https://www.ebay.com/mye/myebay/rvi">
+               Recently Viewed
+              </a>
+</li>
+<li>
+<a _sp="m570.l1535" class="gh-eb-oa thrd" data-sp="m570.l1535" href="https://www.ebay.com/mye/myebay/bidsoffers">
+               Bids/Offers
+              </a>
+</li>
+<li>
+<a _sp="m570.l1534" class="gh-eb-oa thrd" data-sp="m570.l1534" href="https://www.ebay.com/mye/myebay/watchlist">
+               Watchlist
+              </a>
+</li>
+<li>
+<a _sp="m570.l1536" class="gh-eb-oa thrd" data-sp="m570.l1536" href="https://www.ebay.com/mye/myebay/purchase">
+               Purchase History
+              </a>
+</li>
+<li id="gh_buyagain">
+<a _sp="m570.l47010" class="gh-eb-oa thrd" data-sp="m570.l47010" href="https://www.ebay.com/mye/buyagain">
+               Buy Again
+              </a>
+</li>
+<li>
+<a _sp="m570.l1537" class="gh-eb-oa thrd" data-sp="m570.l1537" href="https://www.ebay.com/mys/home?CurrentPage=MyeBayAllSelling&ssPageName=STRK:ME:LNLK:MESX&source=GBH">
+               Selling
+              </a>
+</li>
+<li>
+<a _sp="m570.l9503" class="gh-eb-oa thrd" data-sp="m570.l9503" href="https://www.ebay.com/myb/SavedSearches">
+               Saved Searches
+              </a>
+</li>
+<li>
+<a _sp="m570.l9505" class="gh-eb-oa thrd" data-sp="m570.l9505" href="https://www.ebay.com/myb/SavedSellers">
+               Saved Sellers
+              </a>
+</li>
+<li>
+<a _sp="m570.l143039" class="gh-eb-oa thrd" data-sp="m570.l143039" href="https://www.ebay.com/g/mygarage">
+               My Garage
+              </a>
+</li>
+<li id="gh_myebay_sizes">
+<a _sp="m570.l177358" class="gh-eb-oa thrd" data-sp="m570.l177358" href="https://www.ebay.com/mysize/hub">
+               Sizes
+              </a>
+</li>
+<li>
+<a _sp="m570.l1539" class="gh-eb-oa thrd" data-sp="m570.l1539" href="https://mesg.ebay.com/mesgweb/ViewMessages/0">
+               Messages
+              </a>
+</li>
+<li>
+<a _sp="m570.l105163" class="gh-eb-oa thrd" data-sp="m570.l105163" href="https://www.ebay.com/collection/hub">
+               Collection beta
+              </a>
+</li>
+<li>
+<a _sp="m570.l155388" class="gh-eb-oa thrd" data-sp="m570.l155388" href="https://www.ebay.com/collection/category?notionalTypeId=Vault">
+               PSA Vault
+              </a>
+</li>
+<li id="gh-eb-sub-li-cpn">
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="gh-eb-li gh-hvr gh-layer rt" id="gh-eb-Alerts">
+<div class="gh-menu">
+<button aria-controls="gh-eb-Alerts-o" aria-expanded='false' class="gh-control ghn-b gh-eb-li-a" title="Notifications">
+<svg aria-hidden='true' class="gh-cart-icon" focusable='false'>
+<use xlink:href="#gh-icon-notification-evo">
+</use>
+</svg>
+</button>
+<div class="gh-sublayer">
+<div class="gh-eb-o" id="gh-eb-Alerts-o" style="display: none;">
+</div>
+</div>
+</div>
+</li>
+<li class="gh-eb-li gh-margin rt" id="gh-minicart-hover">
+<div class="gh-menu">
+<a _sp="m570.l2633" aria-label="Your shopping cart" class="gh-eb-li-a gh-rvi-menu" data-sp="m570.l2633" href="https://cart.ebay.com">
+<svg aria-hidden='true' class="gh-cart-icon" focusable='false'>
+<use xlink:href="#gh-icon-cart-evo">
+</use>
+</svg>
+</a>
+<a aria-expanded='false' class="gh-acc-exp-a gh-acc-a2 gh-control" data-controltarget="gh-minicart-hover-o" href="#gh-minicart-hover" role="button">
+            Expand Cart
+           </a>
+<div aria-label="Your shopping cart" class="gh-sublayer gh-flyout__menu" id="gh-minicart-hover-flyout" role="dialog">
+<button aria-label="Close dialog" class="gh_flyout__close" id="gh-minicart-hover-close">
+<svg aria-hidden='true' focusable='false' height='17' width='17'>
+<use xlink:href="#icon-close">
+</use>
+</svg>
+</button>
+<div id="gh-minicart-hover-body">
+<div class="gh-loading">
+<span aria-label="Loading" class="gh-spinner" role="img">
+</span>
+<span class="gh-state">
+               Loading...
+              </span>
+</div>
+<div class="gh-minicart-hover-gen-error">
+<span>
+               Something went wrong. View cart for details.
+              </span>
+</div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div id="gh-ihelp" style="display:none;">
+        {"delay":300}
+       </div>
+<link href="https://www.ebay.com/manifest.json" rel="manifest"></link>
+<!--[if lt IE 9]></div><![endif]-->
+</header>
+<div class="widgets-placeholder" id="widgets-placeholder">
+</div>
+<svg hidden="" style="display: none">
+<svg height="100%" id="icon-search" viewbox="0 0 20 20" width="100%">
+<path d="M19.786 18.557l-5.093-5.093a8.1 8.1 0 0 0 1.873-5.21C16.507 3.747 12.82 0 8.254 0 3.688 0 0 3.746 0 8.254c0 4.508 3.688 8.312 8.254 8.312 2.049 0 3.863-.761 5.327-1.932l5.093 5.093a.714.714 0 0 0 .527.234c.176 0 .41-.059.527-.234.351-.351.351-.878.059-1.171l-.001.001zM1.581 8.254a6.67 6.67 0 0 1 6.673-6.673 6.67 6.67 0 0 1 6.673 6.673c0 3.688-2.985 6.732-6.673 6.732s-6.673-2.985-6.673-6.732z">
+</path>
+</svg>
+<symbol id="icon-close" viewbox="1.5 1.5 21 21">
+<path d="M22.182 3.856c.522-.554.306-1.394-.234-1.938-.54-.543-1.433-.523-1.826-.135C19.73 2.17 11.955 10 11.955 10S4.225 2.154 3.79 1.783c-.438-.371-1.277-.4-1.81.135-.533.537-.628 1.513-.25 1.938.377.424 8.166 8.218 8.166 8.218s-7.85 7.864-8.166 8.219c-.317.354-.34 1.335.25 1.805.59.47 1.24.455 1.81 0 .568-.456 8.166-7.951 8.166-7.951l8.167 7.86c.747.72 1.504.563 1.96.09.456-.471.609-1.268.1-1.804-.508-.537-8.167-8.219-8.167-8.219s7.645-7.665 8.167-8.218z">
+</path>
+</symbol>
+<svg id="gh-icon-cart" viewbox="0 0 40 32">
+<path d="M35.0390625,6.8515625 C36.4453195,6.8515625 37.4674447,7.20312148 38.1054688,7.90625 C38.7434928,8.60937852 39.0625,9.66405547 39.0625,11.0703125 L39.0625,18.9609375 C39.0625,20.2369855 38.7434928,21.226559 38.1054688,21.9296875 C37.4674447,22.632816 36.4322988,22.984375 35,22.984375 L31.484375,22.984375 C29.3749895,22.984375 27.0898561,22.9778646 24.6289063,22.9648438 C22.1679564,22.9518229 19.9349059,22.9453125 17.9296875,22.9453125 L14.921875,22.9453125 L6.8359375,4.8203125 L0.859375,4.8203125 L0.8203125,0.7578125 L8.90625,0.7578125 L12.9296875,6.8515625 L35.0390625,6.8515625 Z M34.0625,18.9609375 C34.322918,18.9609375 34.5507803,18.8632822 34.7460938,18.6679688 C34.9414072,18.4726553 35.0390625,18.2317723 35.0390625,17.9453125 C35.0390625,17.6588527 34.9414072,17.4179697 34.7460938,17.2226562 C34.5507803,17.0273428 34.322918,16.9296875 34.0625,16.9296875 L17.9296875,16.9296875 C17.6692695,16.9296875 17.4414072,17.0273428 17.2460938,17.2226562 C17.0507803,17.4179697 16.953125,17.6588527 16.953125,17.9453125 C16.953125,18.2317723 17.0507803,18.4726553 17.2460938,18.6679688 C17.4414072,18.8632822 17.6692695,18.9609375 17.9296875,18.9609375 L34.0625,18.9609375 Z M34.0625,12.90625 C34.322918,12.90625 34.5507803,12.8085947 34.7460938,12.6132812 C34.9414072,12.4179678 35.0390625,12.1770848 35.0390625,11.890625 C35.0390625,11.630207 34.9414072,11.3958344 34.7460938,11.1875 C34.5507803,10.9791656 34.322918,10.875 34.0625,10.875 L15.9375,10.875 C15.6510402,10.875 15.4101572,10.9791656 15.2148438,11.1875 C15.0195303,11.3958344 14.921875,11.630207 14.921875,11.890625 C14.921875,12.1770848 15.0195303,12.4179678 15.2148438,12.6132812 C15.4101572,12.8085947 15.6510402,12.90625 15.9375,12.90625 L34.0625,12.90625 Z M34.0234375,24.8984375 C34.8828168,24.8984375 35.6249969,25.1979137 36.25,25.796875 C36.8750031,26.3958363 37.1875,27.1249957 37.1875,27.984375 C37.1875,28.8437543 36.8750031,29.5729137 36.25,30.171875 C35.6249969,30.7708363 34.8828168,31.0703125 34.0234375,31.0703125 C33.1640582,31.0703125 32.4283885,30.7708363 31.8164062,30.171875 C31.204424,29.5729137 30.8984375,28.8437543 30.8984375,27.984375 C30.8984375,27.1249957 31.204424,26.3958363 31.8164062,25.796875 C32.4283885,25.1979137 33.1640582,24.8984375 34.0234375,24.8984375 Z M19.8828125,24.8984375 C20.7421918,24.8984375 21.4778615,25.1979137 22.0898438,25.796875 C22.701826,26.3958363 23.0078125,27.1249957 23.0078125,27.984375 C23.0078125,28.8437543 22.701826,29.5729137 22.0898438,30.171875 C21.4778615,30.7708363 20.7421918,31.0703125 19.8828125,31.0703125 C19.0234332,31.0703125 18.2877635,30.7708363 17.6757812,30.171875 C17.063799,29.5729137 16.7578125,28.8437543 16.7578125,27.984375 C16.7578125,27.1249957 17.063799,26.3958363 17.6757812,25.796875 C18.2877635,25.1979137 19.0234332,24.8984375 19.8828125,24.8984375 Z">
+</path>
+</svg>
+<symbol id="icon-check" viewbox="0 0 30 30">
+<circle cx='14.5' cy='14.5' fill="#82187c" r='14.5'>
+</circle>
+<path d="M5.548 15.01l5.773 6.286L21.522 9.824" fill="#82187c" stroke="#ffffff" stroke-width='2'>
+</path>
+</symbol>
+<symbol id="icon-cart-new" viewbox="0 0 23 22">
+<path d="M22 4a.999.999 0 01.97 1.242l-2 8A1 1 0 0120 14H7a1 1 0 01-.97-.758L3.22 2H1a1 1 0 110-2h3a1 1 0 01.97.758L5.78 4H22zm-1.277 2H6.28l1.5 6h11.442l1.5-6zm-4.539 12A2.995 2.995 0 0119 16a2.995 2.995 0 11-2.816 4h-5.368a3 3 0 110-2h5.368zM7 19a1 1 0 102 0 1 1 0 00-2 0zm12 1a1 1 0 110-2 1 1 0 010 2z" fill-rule="evenodd">
+</path>
+</symbol>
+<symbol id="gh-icon-cart-evo" viewbox="0 0 20 20">
+<path clip-rule="evenodd" d="M2.23628 3.99999H1C0.447715 3.99999 0 3.55228 0 2.99999C0 2.44771 0.447715 1.99999 1 1.99999H2.96947C3.42767 1.98561 3.85407 2.29636 3.96967 2.75462L4.85471 5.99975H17C17.6537 5.99975 18.1411 6.64595 17.9615 7.27447L16.376 12.8239C16.008 14.1118 14.8308 14.9998 13.4914 14.9998H7.5276C6.17475 14.9998 4.98927 14.0943 4.63331 12.7891L2.23628 3.99999ZM6.56284 12.2629L5.40017 7.99975H15.6743L14.4529 12.2745C14.3303 12.7038 13.9379 12.9998 13.4914 12.9998H7.5276C7.07665 12.9998 6.68149 12.6979 6.56284 12.2629Z" fill="#191919" fill-rule="evenodd">
+</path>
+<path d="M8 18.5C8 19.3284 7.32843 20 6.5 20C5.67157 20 5 19.3284 5 18.5C5 17.6716 5.67157 17 6.5 17C7.32843 17 8 17.6716 8 18.5Z" fill="#191919">
+</path>
+<path d="M14.5 20C15.3284 20 16 19.3284 16 18.5C16 17.6716 15.3284 17 14.5 17C13.6716 17 13 17.6716 13 18.5C13 19.3284 13.6716 20 14.5 20Z" fill="#191919">
+</path>
+</symbol>
+<symbol id="gh-icon-notification-evo" viewbox="0 0 18 20">
+<path clip-rule="evenodd" d="M5.99993 6.98212C6.00956 4.78121 7.79671 3 9.99989 3C12.2031 3 13.9902 4.78121 13.9999 6.98213C13.9997 6.98808 13.9997 6.99403 13.9997 7V9.66154C13.9997 10.0605 14.1058 10.4523 14.3071 10.7968L15.9593 13.6241C16.0567 13.7908 15.9365 14.0002 15.7434 14.0002L10.0003 14H10H9.99974H9.99957L4.25633 14.0002C4.0633 14.0002 3.94308 13.7908 4.04048 13.6241L5.69271 10.7968C5.894 10.4523 6.00009 10.0605 6.00009 9.66154V7C6.00009 6.99403 6.00003 6.98807 5.99993 6.98212ZM4.00009 7H3.99989C3.99989 3.68629 6.68618 1 9.99989 1C13.3136 1 15.9999 3.68629 15.9999 7H15.9997V9.66154C15.9997 9.70587 16.0115 9.7494 16.0338 9.78768L17.6861 12.615C18.5626 14.115 17.4807 16.0003 15.7434 16.0002L12.9999 16.0001C12.9998 17.6569 11.6567 19 9.99989 19C8.34308 19 6.99996 17.6569 6.99989 16.0001L4.25642 16.0002C2.51907 16.0003 1.43714 14.115 2.3137 12.615L3.96593 9.78768C3.9883 9.7494 4.00009 9.70587 4.00009 9.66154V7ZM8.99989 16L9.99965 16H10.0001L10.9999 16C10.9999 16.5523 10.5522 17 9.99989 17C9.44762 17 8.99991 16.5523 8.99989 16Z" fill="#191919" fill-rule="evenodd">
+</path>
+</symbol>
+<symbol id="gh-icon-search-evo" viewbox="0 0 16 17">
+<path d="M3 7C3 5.067 4.567 3.5 6.5 3.5C8.433 3.5 10 5.067 10 7C10 8.933 8.433 10.5 6.5 10.5C4.567 10.5 3 8.933 3 7ZM14.76 13.85L14.739 13.84L11.029 10.159L11.004 10.151C11.63 9.259 12 8.174 12 7C12 3.963 9.537 1.5 6.5 1.5C3.463 1.5 1 3.963 1 7C1 10.037 3.463 12.5 6.5 12.5C7.658 12.5 8.731 12.14 9.618 11.528L13.35 15.26C13.746 15.6 14.338 15.576 14.707 15.207C15.076 14.838 15.1 14.246 14.76 13.85Z">
+</path>
+</symbol>
+<symbol id="gh-ac-icon-clear-evo" viewbox="0 0 16 16">
+<path d="M0 8C0 3.582 3.582 0 8 0C10.122 0 12.1567 0.842667 13.6567 2.34333C15.1573 3.84333 16 5.878 16 8C16 12.418 12.418 16 8 16C3.582 16 0 12.418 0 8ZM11.9789 11.4884C12.0373 11.2462 11.9544 10.9913 11.7654 10.8294L8.91388 7.98215L11.7588 5.1349C11.9842 4.87142 11.969 4.47918 11.7243 4.23361C11.4789 3.98871 11.087 3.97344 10.8237 4.1991L7.97885 7.04634L5.13396 4.19246C4.87401 3.93229 4.45225 3.93229 4.1923 4.19246C3.93235 4.45263 3.93235 4.87474 4.1923 5.1349L7.04381 7.98215L4.19893 10.836C3.97346 11.0995 3.98871 11.4918 4.23341 11.7373C4.47878 11.9822 4.87069 11.9975 5.13396 11.7718L7.97885 8.91796L10.8304 11.7652C10.9922 11.9544 11.2468 12.0373 11.4889 11.9789C11.7316 11.9205 11.9206 11.7314 11.9789 11.4884Z" fill="#707070">
+</path>
+</symbol>
+</svg>
+</div>
+</div>
+</div>
+</div>
+<div hidden="">
+<svg>
+<symbol id="hp-icon-save-filled-16" viewbox="0 0 16 16">
+<path d="M6.552 1.483c.48.244.96.588 1.448 1.053.489-.465.968-.81 1.448-1.053A4.409 4.409 0 0 1 11.5 1c1.55 0 2.709.634 3.461 1.554C15.688 3.443 16 4.55 16 5.5c0 .918-.348 1.711-.704 2.292a7.23 7.23 0 0 1-.978 1.237c-4.201 4.335-4.913 5.014-5.628 5.695l-.01.01a.997.997 0 0 1-1.36 0l-.01-.01c-.715-.681-1.426-1.36-5.628-5.695a7.228 7.228 0 0 1-.978-1.237C.348 7.212 0 6.418 0 5.5c0-.95.311-2.057 1.039-2.946C1.79 1.634 2.95 1 4.5 1c.625 0 1.311.107 2.052.483Z">
+</path>
+</symbol>
+<symbol id="hp-icon-save-16" viewbox="0 0 16 16">
+<path clip-rule="evenodd" d="M8 2.536a6.136 6.136 0 0 0-1.448-1.053A4.409 4.409 0 0 0 4.5 1c-1.55 0-2.709.634-3.461 1.554C.31 3.443 0 4.55 0 5.5c0 .918.348 1.711.704 2.292.36.586.77 1.023.978 1.237 4.193 4.327 4.91 5.011 5.624 5.691a.996.996 0 0 0 1.388 0c.714-.68 1.43-1.364 5.624-5.69a7.23 7.23 0 0 0 .978-1.238c.356-.58.704-1.374.704-2.292 0-.95-.312-2.057-1.039-2.946C14.21 1.634 13.05 1 11.5 1c-.625 0-1.311.107-2.052.483-.48.244-.96.588-1.448 1.053Zm-.778 2.093c-.635-.753-1.155-1.15-1.574-1.362A2.412 2.412 0 0 0 4.5 3c-.95 0-1.541.366-1.914.82A2.73 2.73 0 0 0 2 5.5c0 .415.161.842.409 1.246.245.398.535.711.71.891 2.97 3.065 4.183 4.289 4.881 4.974.698-.685 1.912-1.91 4.882-4.974.174-.18.464-.493.71-.891.247-.404.408-.83.408-1.246a2.73 2.73 0 0 0-.586-1.68C13.04 3.367 12.45 3 11.5 3c-.375 0-.739.06-1.148.267-.42.213-.94.609-1.574 1.362a.998.998 0 0 1-1.208.274.994.994 0 0 1-.348-.274Z" fill-rule="evenodd">
+</path>
+</symbol>
+<symbol id="hp-icon-overflow-vertical-16" viewbox="0 0 16 16">
+<path d="M8 4.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Zm0 10a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM9.5 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z">
+</path>
+</symbol>
+<symbol id="hp-icon-help-16" viewbox="0 0 16 16">
+<path d="M9 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z">
+</path>
+<path clip-rule="evenodd" d="M6.872 3.178c-.384.154-.743.43-.902 1.065a1 1 0 1 1-1.94-.486c.342-1.366 1.232-2.089 2.099-2.435C6.934 1 7.716 1 7.987 1H8c.96 0 1.929.317 2.677.898C11.435 2.488 12 3.386 12 4.5c0 1.319-.523 2.206-1.273 2.872a7.984 7.984 0 0 1-1.097.79 44.72 44.72 0 0 1-.366.224L9 8.548V10a1 1 0 1 1-2 0V8a1 1 0 0 1 .446-.832c.274-.183.562-.359.82-.516l.307-.189c.342-.212.61-.394.825-.585C9.773 5.544 10 5.18 10 4.5c0-.386-.185-.738-.551-1.023A2.411 2.411 0 0 0 8 3c-.24 0-.696.006-1.128.178Z" fill-rule="evenodd">
+</path>
+</symbol>
+<symbol id="hp-icon-help-24" viewbox="0 0 24 24">
+
+        ```
+        

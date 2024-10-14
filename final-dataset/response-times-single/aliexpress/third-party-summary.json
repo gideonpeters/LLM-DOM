@@ -1,0 +1,101 @@
+[
+    {
+        "prompt_uuid": "d85ccf8b-adc8-499a-9471-d1b5228fbfb8",
+        "dom_name": "aliexpress",
+        "prompt_token_size": 3478,
+        "duration": 46.477484941482544,
+        "mode": "single",
+        "audit_key": "third-party-summary",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 445.36708420155367,
+            "upload_speed": 378.77709882626414,
+            "ping": 5.321
+        }
+    },
+    {
+        "prompt_uuid": "236dc77a-a1ad-45db-a773-c0a32269c02a",
+        "dom_name": "aliexpress",
+        "prompt_token_size": 11893,
+        "duration": 167.18594574928284,
+        "mode": "single",
+        "audit_key": "third-party-summary",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 459.8851140601018,
+            "upload_speed": 407.5345274969746,
+            "ping": 6.093
+        }
+    },
+    {
+        "prompt_uuid": "bb1b40b9-730f-46dc-9382-353b0ecb3a65",
+        "dom_name": "aliexpress",
+        "prompt_token_size": 11977,
+        "duration": 172.4739809036255,
+        "mode": "single",
+        "audit_key": "third-party-summary",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 0,
+            "upload_speed": 0,
+            "ping": 0,
+            "error": "HTTP Error 403: Forbidden"
+        }
+    },
+    {
+        "prompt_uuid": "f5683f01-3c59-4c40-b306-766e347a6a1e",
+        "dom_name": "aliexpress",
+        "prompt_token_size": 11991,
+        "duration": 171.6421082019806,
+        "mode": "single",
+        "audit_key": "third-party-summary",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 480.20627819920406,
+            "upload_speed": 390.1666890728415,
+            "ping": 5.065
+        }
+    },
+    {
+        "prompt_uuid": "055e570c-576e-44b1-8e01-cbccba2a4859",
+        "dom_name": "aliexpress",
+        "prompt_token_size": 11992,
+        "duration": 136.57147812843323,
+        "mode": "single",
+        "audit_key": "third-party-summary",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 483.0833086468035,
+            "upload_speed": 419.90335414729554,
+            "ping": 4.97
+        }
+    },
+    {
+        "prompt_uuid": "41bc3dc9-e9c7-4e99-9d7c-14a73f1a6bbf",
+        "dom_name": "aliexpress",
+        "prompt_token_size": 11880,
+        "duration": 3.9355549812316895,
+        "mode": "single",
+        "audit_key": "third-party-summary",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 325.09991592442964,
+            "upload_speed": 487.5084837528047,
+            "ping": 5.84
+        }
+    },
+    {
+        "prompt_uuid": "49b77419-95da-4a98-bcc7-8061090d2143",
+        "dom_name": "aliexpress",
+        "prompt_token_size": 2621,
+        "duration": 4.49277400970459,
+        "mode": "single",
+        "audit_key": "third-party-summary",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 257.93092449672787,
+            "upload_speed": 421.06407046027914,
+            "ping": 5.162
+        }
+    }
+]

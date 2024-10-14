@@ -1,0 +1,76 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. bootup-time => JavaScript execution time: Consider reducing the time spent parsing, compiling, and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to reduce Javascript execution time](https://developer.chrome.com/docs/lighthouse/performance/bootup-time/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        
+<title>
+  x.com
+ </title>
+<meta content="0; url = https://twitter.com/x/migrate?tok=7b2265223a222f3f6c6f676f75743d31373233343837363738333734222c2274223a313732333438373637387df15683e40a1c998d1cc1fb06e3f2538d" http-equiv="refresh"></meta>
+<meta charset="utf-8"></meta>
+<meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover" name="viewport"></meta>
+<link href="//abs.twimg.com" rel="preconnect"></link>
+<link href="//abs.twimg.com" rel="dns-prefetch"></link>
+<link href="//api.twitter.com" rel="preconnect"></link>
+<link href="//api.twitter.com" rel="dns-prefetch"></link>
+<link href="//api.x.com" rel="preconnect"></link>
+<link href="//api.x.com" rel="dns-prefetch"></link>
+<link href="//pbs.twimg.com" rel="preconnect"></link>
+<link href="//pbs.twimg.com" rel="dns-prefetch"></link>
+<link href="//t.co" rel="preconnect"></link>
+<link href="//t.co" rel="dns-prefetch"></link>
+<meta content="https://twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion/" http-equiv="onion-location"></meta>
+<meta content='2231777543' property="fb:app_id"></meta>
+<meta content="X (formerly Twitter)" property="og:site_name">
+<meta content="600dQ0pZYsH2xOFt4hYmf5f5NpjCbWE_qk5Y04dErYM" name="google-site-verification">
+<meta content="x6sdcc8b5ju3bh8nbm59eswogvg6t1" name="facebook-domain-verification"></meta>
+<meta content="yes" name="mobile-web-app-capable"></meta>
+<meta content="Twitter" name="apple-mobile-web-app-title"></meta>
+<meta content="white" name="apple-mobile-web-app-status-bar-style"></meta>
+<link href="/opensearch.xml" rel="search" title="Twitter" type="application/opensearchdescription+xml"></link>
+<link href="https://abs.twimg.com/responsive-web/client-web/icon-ios.77d25eba.png" rel="apple-touch-icon" sizes="192x192"></link>
+<meta content="AUVDWo1JpbjI22xjTe5JOvTAWuW9bK41CpxYxCeCjH97mEVp7rtiHcvdOaUksJrG" name="twitter-site-verification"></meta>
+<link crossorigin="use-credentials" href="/manifest.json" rel="manifest"></link>
+<link color="#1D9BF0" href="https://abs.twimg.com/responsive-web/client-web/icon-svg.ea5ff4aa.svg" rel="mask-icon" sizes="any"></link>
+<link href="https://abs.twimg.com/favicons/twitter-pip.3.ico" rel="shortcut icon"></link>
+<meta content="#000000" name="theme-color"></meta>
+<script data-chunk-uuid="e7859825-d452-434e-82b5-24b62ac6c17e" charset="utf-8" nonce="MjNhNDg5MzAtODMwZC00N2EyLWE0ZWUtODAxMGNjODkwNjVk" type="text/javascript">// chunk_script_e7859825-d452-434e-82b5-24b62ac6c17e
+</script>
+</meta>
+</meta>
+
+        ```
+        

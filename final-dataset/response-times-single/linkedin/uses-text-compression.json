@@ -1,0 +1,62 @@
+[
+    {
+        "prompt_uuid": "a228f7d6-74b6-4b70-a6d2-c91ef5ef6bab",
+        "dom_name": "linkedin",
+        "prompt_token_size": 2873,
+        "duration": 23.67199397087097,
+        "mode": "single",
+        "audit_key": "uses-text-compression",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 0,
+            "upload_speed": 0,
+            "ping": 0,
+            "error": "module 'speedtest' has no attribute 'Speedtest'"
+        }
+    },
+    {
+        "prompt_uuid": "63783332-3cf6-4a54-a30c-2eb3f86a1472",
+        "dom_name": "linkedin",
+        "prompt_token_size": 11945,
+        "duration": 177.81640028953552,
+        "mode": "single",
+        "audit_key": "uses-text-compression",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 0,
+            "upload_speed": 0,
+            "ping": 0,
+            "error": "module 'speedtest' has no attribute 'Speedtest'"
+        }
+    },
+    {
+        "prompt_uuid": "a142f704-c2a0-4ddf-826f-b6c1893ee626",
+        "dom_name": "linkedin",
+        "prompt_token_size": 11927,
+        "duration": 1.878396987915039,
+        "mode": "single",
+        "audit_key": "uses-text-compression",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 0,
+            "upload_speed": 0,
+            "ping": 0,
+            "error": "module 'speedtest' has no attribute 'Speedtest'"
+        }
+    },
+    {
+        "prompt_uuid": "54151ed0-6be2-4c25-894b-2f85bc5fbdbd",
+        "dom_name": "linkedin",
+        "prompt_token_size": 6458,
+        "duration": 1.6719167232513428,
+        "mode": "single",
+        "audit_key": "uses-text-compression",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 0,
+            "upload_speed": 0,
+            "ping": 0,
+            "error": "module 'speedtest' has no attribute 'Speedtest'"
+        }
+    }
+]

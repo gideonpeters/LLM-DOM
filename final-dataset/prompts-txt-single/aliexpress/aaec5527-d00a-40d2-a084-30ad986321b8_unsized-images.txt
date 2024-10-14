@@ -1,0 +1,575 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. unsized-images => Image elements do not have explicit `width` and `height`: Set an explicit width and height on image elements to reduce layout shifts and improve CLS. [Learn how to set image dimensions](https://web.dev/articles/optimize-cls#images_without_dimensions)
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        <a aria-hidden='true' class="base-card--card-main--2xHO1eS horizontal-small-card--new-hs-card--25U8_-Y" href="https://www.aliexpress.com/gcp/300000444/6NcN22X5fS?disableNav=YES&pha_manifest=ssr&_immersiveMode=true&productIds=1005005911878845" id="baseCard" target="_blank">
+<div class="base-card--img-part--na7r0B-">
+<img alt="Popular Pink Purple Color Girls High School Student Backpack Bags" src="//ae-pic-a1.aliexpress-media.com/kf/S9c07ae00a4424ef59d0cd8f0f276da75F.jpg_480x480.jpg" style="max-width: 184px; max-height: 184px"></img>
+</div>
+<div class="base-card--price-part--r0nZsxB undefined" id="pricePart">
+<div class="price-group--price-wrap--1KrCsCb" id="priceWrap">
+<div class="es--wrap--2p8eS4Q notranslate" style="
+                                      font-weight: bold;
+                                      color: #ff0000;
+                                      margin-right: 8px;
+                                      font-size: 12px;
+                                    ">
+<span class="es--char--1Qcd3D7"> C$ </span>
+<span class="es--space2--2NEE6dI"> </span>
+<span class="es--char53--1jg_1HC"> 1 </span>
+<span class="es--char53--1jg_1HC"> 7 </span>
+<span class="es--char--1Qcd3D7"> . </span>
+<span class="es--char--1Qcd3D7"> 3 </span>
+<span class="es--char--1Qcd3D7"> 5 </span>
+</div>
+<span class="price-group--after-format-previous-price--3AQ9Aho">
+                                    C$37.50
+                                  </span>
+</div>
+<div class="base-card--img-discount--wQIeQeC" id="imgDiscount" style="
+                                    background-image: url(//ae01.alicdn.com/kf/S78fc35f117b0418fa0e1ac4befb39eaaH/216x184.png);
+                                  ">
+<span class="base-card--discount-sub--1P581In" id="discountSub">
+                                    53
+                                  </span>
+</div>
+</div>
+</a>
+<a aria-hidden='true' class="base-card--card-main--2xHO1eS horizontal-small-card--new-hs-card--25U8_-Y" href="https://www.aliexpress.com/gcp/300000444/6NcN22X5fS?disableNav=YES&pha_manifest=ssr&_immersiveMode=true&productIds=1005006627400180" id="baseCard" target="_blank">
+<div class="base-card--img-part--na7r0B-">
+<img alt="Ultra Thin Clear Silicone Case For iPhone 15 14 13 12 11 Pro Xs Max Mini XR X 7 8 6s Plus 6 SE 2020 2022 2016 5 5S Back Cover" src="https://ae-pic-a1.aliexpress-media.com/kf/Sa8bc841c22ae435ebaa3493f70f19df2M.jpg_480x480.jpg" style="max-width: 184px; max-height: 184px"></img>
+</div>
+<div class="base-card--price-part--r0nZsxB undefined" id="pricePart">
+<div class="price-group--price-wrap--1KrCsCb" id="priceWrap">
+<div class="es--wrap--2p8eS4Q notranslate" style="
+                                      font-weight: bold;
+                                      color: #ff0000;
+                                      margin-right: 8px;
+                                      font-size: 12px;
+                                    ">
+<span class="es--char--1Qcd3D7"> C$ </span>
+<span class="es--space2--2NEE6dI"> </span>
+<span class="es--char53--1jg_1HC"> 1 </span>
+<span class="es--char--1Qcd3D7"> . </span>
+<span class="es--char--1Qcd3D7"> 3 </span>
+<span class="es--char--1Qcd3D7"> 9 </span>
+</div>
+<span class="price-group--after-format-previous-price--3AQ9Aho">
+                                    C$2.03
+                                  </span>
+</div>
+<div class="base-card--img-discount--wQIeQeC" id="imgDiscount" style="
+                                    background-image: url(//ae01.alicdn.com/kf/S78fc35f117b0418fa0e1ac4befb39eaaH/216x184.png);
+                                  ">
+<span class="base-card--discount-sub--1P581In" id="discountSub">
+                                    31
+                                  </span>
+</div>
+</div>
+</a>
+</div>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="common-floor" data-component-id='9750465' data-floor-name="pc2023-normal-slider" data-spm="bigsave">
+<div class="row-container--root--33oSY1n" style="margin-top: 24px">
+<div class="pc2023-normal-slider--content--1d0e4V3">
+<div class="pc2023-normal-slider--titleWrap--DHtRbsL">
+<div class="pc2023-normal-slider--title-layout--38adm8m">
+<a class="pc2023-normal-slider--title-left--1UBy6jE" href="https://www.aliexpress.com/ssr/300001505/rEkz8fMwjY?disableNav=YES&pha_manifest=ssr&_immersiveMode=true" target="_blank">
+<p class="pc2023-normal-slider--title--1fyE4cY" style="color: Big brands, big savings">
+                          Big Save
+                        </p>
+</a>
+<div class="pc2023-normal-slider--viewmore--Vlk_ZOD">
+<a href="https://www.aliexpress.com/ssr/300001505/rEkz8fMwjY?disableNav=YES&pha_manifest=ssr&_immersiveMode=true">
+<span class="view-more--text--3S9_Bas">
+                            View more
+                          </span>
+<span class="view-more--img--e-F-0hl"> </span>
+</a>
+</div>
+</div>
+</div>
+<div>
+<div class="pc2023-normal-slider--loopBtn--tePrwd5 pc2023-normal-slider--leftBtn--1zGrmc_ disabled"></div>
+<div class="es--root--3PUGUTI pc2023-normal-slider--loop--1yozxS2" style="display: flex; flex-direction: row">
+<a class="choice-card--firstImgWrapper--1FlvXdL" href="https://www.aliexpress.com/ssr/300001505/rEkz8fMwjY?disableNav=YES&pha_manifest=ssr&_immersiveMode=true" target="_blank">
+<div class="choice-card--firstCard--1lV2oKf" style="
+                            background-image: url(https://ae01.alicdn.com/kf/S4d17a08feeac4cc593303dedecb7f957m.png);
+                            background-size: contain;
+                            background-position: center top;
+                            background-repeat: no-repeat;
+                            height: 100%;
+                          "></div>
+</a>
+<a class="choice-card--cardWrapper--3jsUFpw" href="https://www.aliexpress.com/ssr/300001505/rEkz8fMwjY?disableNav=YES&pha_manifest=ssr&_immersiveMode=true&productIds=1005003520210843" target="_blank">
+<div class="choice-card--card--WFgnb1n choice-card--topBorder--2G_YXfz">
+<div class="choice-card--cardHeader--3zDrun4">
+<div class="lazy-load-placeholder" style="height: 100%"></div>
+<div class="choice-card--cartWrapper--35wjIf2" style="right: 12px; left: auto">
+<span class="comet-icon comet-icon-shoppingcartadd32 choice-card--cartIcon--aJpkW9s">
+<svg aria-hidden='false' fill="currentColor" focusable='false' height="1em" viewbox="0 0 1024 1024" width="1em">
+<path d="M256 960a64 64 0 1 0 0-128 64 64 0 0 0 0 128z m544 0a64 64 0 1 0 0-128 64 64 0 0 0 0 128zM31.424 92.736a48 48 0 0 1 67.84 2.688 186.208 186.208 0 0 1 46.976 96.32l1.28 9.024 50.496 444.64a48 48 0 0 0 43.168 42.368l4.512 0.224H812.16a48 48 0 0 0 46.72-37.152l0.832-4.384 44.256-326.24a48 48 0 0 1 95.52 8.32l-0.384 4.576-44.256 326.24a144 144 0 0 1-135.776 124.48l-6.912 0.16H245.696a144 144 0 0 1-142.144-120.96l-0.928-6.784L52.16 211.584a90.208 90.208 0 0 0-19.2-46.176l-4.16-4.832a48 48 0 0 1 2.656-67.84z"></path>
+<path d="M528 128c24.96 0 45.44 16.512 47.776 37.6L576 169.6V288h118.4c22.976 0 41.6 21.504 41.6 48 0 24.96-16.512 45.44-37.6 47.776L694.4 384H576v118.4c0 22.976-21.504 41.6-48 41.6-24.96 0-45.44-16.512-47.776-37.6L480 502.4V384h-118.4c-22.976 0-41.6-21.504-41.6-48 0-24.96 16.512-45.44 37.6-47.776L361.6 288H480V169.6c0-22.976 21.504-41.6 48-41.6z"></path>
+</svg>
+</span>
+</div>
+</div>
+<div class="choice-card--cardTitle--768udKd">
+                            Wigs Human Hair Lace Frontal Wig Brazilian Straight
+                            Human Hair Wig 13X4 Lace Front Wig 4X4 Lace Closure
+                            Wig Human Hair Wig
+                          </div>
+<div class="choice-card--cardReview--1VvyjrG">
+<div class="rc-modules--stars--o9mzAea" title='4.6'>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='38.39999999999998' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='25.600000000000023' x='38.39999999999998' y='0'></rect>
+</g>
+</svg>
+</div>
+<span class="choice-card--text--2bU-SGq">
+                              5,000+
+                              <!-- -->
+<!-- -->
+                              sold
+                            </span>
+</div>
+<div class="choice-card--cardPrice--ARWuZ9-">
+<div class="es--wrap--2p8eS4Q notranslate" style="font-size: 14.4px">
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                C$
+                              </span>
+<span class="es--space2--2NEE6dI"> </span>
+<span class="es--char53--1jg_1HC choice-card--priceInteger--1LBSCA0">
+                                4
+                              </span>
+<span class="es--char53--1jg_1HC choice-card--priceInteger--1LBSCA0">
+                                2
+                              </span>
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                .
+                              </span>
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                0
+                              </span>
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                5
+                              </span>
+</div>
+<span class="choice-card--originPrice--1_jVlp2">
+                              C$200.23
+                            </span>
+</div>
+<div class="choice-card--cardSuperDeals--1FSJIpw"></div>
+</div>
+<div class="choice-card--cardFooter--3ndDdlQ choice-card--bottomBorder--3CNjSi1">
+<button class="choice-card--btnQuick--QBaf1OU">
+                            View more
+                          </button>
+</div>
+</a>
+<a class="choice-card--cardWrapper--3jsUFpw" href="https://www.aliexpress.com/ssr/300001505/rEkz8fMwjY?disableNav=YES&pha_manifest=ssr&_immersiveMode=true&productIds=1005005215387485" target="_blank">
+<div class="choice-card--card--WFgnb1n choice-card--topBorder--2G_YXfz">
+<div class="choice-card--cardHeader--3zDrun4">
+<div class="lazy-load-placeholder" style="height: 100%"></div>
+<div class="choice-card--cartWrapper--35wjIf2" style="right: 12px; left: auto">
+<span class="comet-icon comet-icon-shoppingcartadd32 choice-card--cartIcon--aJpkW9s">
+<svg aria-hidden='false' fill="currentColor" focusable='false' height="1em" viewbox="0 0 1024 1024" width="1em">
+<path d="M256 960a64 64 0 1 0 0-128 64 64 0 0 0 0 128z m544 0a64 64 0 1 0 0-128 64 64 0 0 0 0 128zM31.424 92.736a48 48 0 0 1 67.84 2.688 186.208 186.208 0 0 1 46.976 96.32l1.28 9.024 50.496 444.64a48 48 0 0 0 43.168 42.368l4.512 0.224H812.16a48 48 0 0 0 46.72-37.152l0.832-4.384 44.256-326.24a48 48 0 0 1 95.52 8.32l-0.384 4.576-44.256 326.24a144 144 0 0 1-135.776 124.48l-6.912 0.16H245.696a144 144 0 0 1-142.144-120.96l-0.928-6.784L52.16 211.584a90.208 90.208 0 0 0-19.2-46.176l-4.16-4.832a48 48 0 0 1 2.656-67.84z"></path>
+<path d="M528 128c24.96 0 45.44 16.512 47.776 37.6L576 169.6V288h118.4c22.976 0 41.6 21.504 41.6 48 0 24.96-16.512 45.44-37.6 47.776L694.4 384H576v118.4c0 22.976-21.504 41.6-48 41.6-24.96 0-45.44-16.512-47.776-37.6L480 502.4V384h-118.4c-22.976 0-41.6-21.504-41.6-48 0-24.96 16.512-45.44 37.6-47.776L361.6 288H480V169.6c0-22.976 21.504-41.6 48-41.6z"></path>
+</svg>
+</span>
+</div>
+</div>
+<div class="choice-card--cardTitle--768udKd">
+                            MIYOO Mini Plus Portable Retro Handheld Game Console
+                            3.5-inch IPS HD Screen Children's Gift Linux System
+                            Classic Gaming Emulator
+                          </div>
+<div class="choice-card--cardReview--1VvyjrG">
+<div class="rc-modules--stars--o9mzAea" title='4.8'>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='51.19999999999999' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='12.800000000000011' x='51.19999999999999' y='0'></rect>
+</g>
+</svg>
+</div>
+<span class="choice-card--text--2bU-SGq">
+                              5,000+
+                              <!-- -->
+<!-- -->
+                              sold
+                            </span>
+</div>
+<div class="choice-card--cardPrice--ARWuZ9-">
+<div class="es--wrap--2p8eS4Q notranslate" style="font-size: 14.4px">
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                C$
+                              </span>
+<span class="es--space2--2NEE6dI"> </span>
+<span class="es--char53--1jg_1HC choice-card--priceInteger--1LBSCA0">
+                                7
+                              </span>
+<span class="es--char53--1jg_1HC choice-card--priceInteger--1LBSCA0">
+                                1
+                              </span>
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                .
+                              </span>
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                7
+                              </span>
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                2
+                              </span>
+</div>
+<span class="choice-card--originPrice--1_jVlp2">
+                              C$94.37
+                            </span>
+</div>
+<div class="choice-card--cardSuperDeals--1FSJIpw"></div>
+</div>
+<div class="choice-card--cardFooter--3ndDdlQ choice-card--bottomBorder--3CNjSi1">
+<button class="choice-card--btnQuick--QBaf1OU">
+                            View more
+                          </button>
+</div>
+</a>
+<a class="choice-card--cardWrapper--3jsUFpw" href="https://www.aliexpress.com/ssr/300001505/rEkz8fMwjY?disableNav=YES&pha_manifest=ssr&_immersiveMode=true&productIds=1005006875107810" target="_blank">
+<div class="choice-card--card--WFgnb1n choice-card--topBorder--2G_YXfz">
+<div class="choice-card--cardHeader--3zDrun4">
+<div class="lazy-load-placeholder" style="height: 100%"></div>
+<div class="choice-card--cartWrapper--35wjIf2" style="right: 12px; left: auto">
+<span class="comet-icon comet-icon-shoppingcartadd32 choice-card--cartIcon--aJpkW9s">
+<svg aria-hidden='false' fill="currentColor" focusable='false' height="1em" viewbox="0 0 1024 1024" width="1em">
+<path d="M256 960a64 64 0 1 0 0-128 64 64 0 0 0 0 128z m544 0a64 64 0 1 0 0-128 64 64 0 0 0 0 128zM31.424 92.736a48 48 0 0 1 67.84 2.688 186.208 186.208 0 0 1 46.976 96.32l1.28 9.024 50.496 444.64a48 48 0 0 0 43.168 42.368l4.512 0.224H812.16a48 48 0 0 0 46.72-37.152l0.832-4.384 44.256-326.24a48 48 0 0 1 95.52 8.32l-0.384 4.576-44.256 326.24a144 144 0 0 1-135.776 124.48l-6.912 0.16H245.696a144 144 0 0 1-142.144-120.96l-0.928-6.784L52.16 211.584a90.208 90.208 0 0 0-19.2-46.176l-4.16-4.832a48 48 0 0 1 2.656-67.84z"></path>
+<path d="M528 128c24.96 0 45.44 16.512 47.776 37.6L576 169.6V288h118.4c22.976 0 41.6 21.504 41.6 48 0 24.96-16.512 45.44-37.6 47.776L694.4 384H576v118.4c0 22.976-21.504 41.6-48 41.6-24.96 0-45.44-16.512-47.776-37.6L480 502.4V384h-118.4c-22.976 0-41.6-21.504-41.6-48 0-24.96 16.512-45.44 37.6-47.776L361.6 288H480V169.6c0-22.976 21.504-41.6 48-41.6z"></path>
+</svg>
+</span>
+</div>
+</div>
+<div class="choice-card--cardTitle--768udKd">
+                            MIYOO MINI A30 Portable Retro Handheld Game Kids
+                            Gift 2.8” IPS HD Screen WIFI Open Source Linux
+                            System
+                          </div>
+<div class="choice-card--cardReview--1VvyjrG">
+<div class="rc-modules--stars--o9mzAea" title='4.5'>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='32' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='32' x='32' y='0'></rect>
+</g>
+</svg>
+</div>
+<span class="choice-card--text--2bU-SGq">
+                              1,000+
+                              <!-- -->
+<!-- -->
+                              sold
+                            </span>
+</div>
+<div class="choice-card--cardPrice--ARWuZ9-">
+<div class="es--wrap--2p8eS4Q notranslate" style="font-size: 14.4px">
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                C$
+                              </span>
+<span class="es--space2--2NEE6dI"> </span>
+<span class="es--char53--1jg_1HC choice-card--priceInteger--1LBSCA0">
+                                6
+                              </span>
+<span class="es--char53--1jg_1HC choice-card--priceInteger--1LBSCA0">
+                                3
+                              </span>
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                .
+                              </span>
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                0
+                              </span>
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                7
+                              </span>
+</div>
+<span class="choice-card--originPrice--1_jVlp2">
+                              C$79.59
+                            </span>
+</div>
+<div class="choice-card--cardSuperDeals--1FSJIpw"></div>
+</div>
+<div class="choice-card--cardFooter--3ndDdlQ choice-card--bottomBorder--3CNjSi1">
+<button class="choice-card--btnQuick--QBaf1OU">
+                            View more
+                          </button>
+</div>
+</a>
+<a class="choice-card--cardWrapper--3jsUFpw" href="https://www.aliexpress.com/ssr/300001505/rEkz8fMwjY?disableNav=YES&pha_manifest=ssr&_immersiveMode=true&productIds=1005006236347509" target="_blank">
+<div class="choice-card--card--WFgnb1n choice-card--topBorder--2G_YXfz">
+<div class="choice-card--cardHeader--3zDrun4">
+<div class="lazy-load-placeholder" style="height: 100%"></div>
+<div class="choice-card--cartWrapper--35wjIf2" style="right: 12px; left: auto">
+<span class="comet-icon comet-icon-shoppingcartadd32 choice-card--cartIcon--aJpkW9s">
+<svg aria-hidden='false' fill="currentColor" focusable='false' height="1em" viewbox="0 0 1024 1024" width="1em">
+<path d="M256 960a64 64 0 1 0 0-128 64 64 0 0 0 0 128z m544 0a64 64 0 1 0 0-128 64 64 0 0 0 0 128zM31.424 92.736a48 48 0 0 1 67.84 2.688 186.208 186.208 0 0 1 46.976 96.32l1.28 9.024 50.496 444.64a48 48 0 0 0 43.168 42.368l4.512 0.224H812.16a48 48 0 0 0 46.72-37.152l0.832-4.384 44.256-326.24a48 48 0 0 1 95.52 8.32l-0.384 4.576-44.256 326.24a144 144 0 0 1-135.776 124.48l-6.912 0.16H245.696a144 144 0 0 1-142.144-120.96l-0.928-6.784L52.16 211.584a90.208 90.208 0 0 0-19.2-46.176l-4.16-4.832a48 48 0 0 1 2.656-67.84z"></path>
+<path d="M528 128c24.96 0 45.44 16.512 47.776 37.6L576 169.6V288h118.4c22.976 0 41.6 21.504 41.6 48 0 24.96-16.512 45.44-37.6 47.776L694.4 384H576v118.4c0 22.976-21.504 41.6-48 41.6-24.96 0-45.44-16.512-47.776-37.6L480 502.4V384h-118.4c-22.976 0-41.6-21.504-41.6-48 0-24.96 16.512-45.44 37.6-47.776L361.6 288H480V169.6c0-22.976 21.504-41.6 48-41.6z"></path>
+</svg>
+</span>
+</div>
+</div>
+<div class="choice-card--cardTitle--768udKd">
+                            Haute42 Joystick Hitbox Keyboard Arcade Stick
+                            Controller For PS4/PS5/Switch Arcade Hitbox
+                            Leverless Controller Fight Sticks PC
+                          </div>
+<div class="choice-card--cardReview--1VvyjrG">
+<div class="rc-modules--stars--o9mzAea" title='4.9'>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='57.60000000000002' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='6.399999999999977' x='57.60000000000002' y='0'></rect>
+</g>
+</svg>
+</div>
+<span class="choice-card--text--2bU-SGq">
+                              5,000+
+                              <!-- -->
+<!-- -->
+                              sold
+                            </span>
+</div>
+<div class="choice-card--cardPrice--ARWuZ9-">
+<div class="es--wrap--2p8eS4Q notranslate" style="font-size: 14.4px">
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                C$
+                              </span>
+<span class="es--space2--2NEE6dI"> </span>
+<span class="es--char53--1jg_1HC choice-card--priceInteger--1LBSCA0">
+                                1
+                              </span>
+<span class="es--char53--1jg_1HC choice-card--priceInteger--1LBSCA0">
+                                0
+                              </span>
+<span class="es--char53--1jg_1HC choice-card--priceInteger--1LBSCA0">
+                                4
+                              </span>
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                .
+                              </span>
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                7
+                              </span>
+<span class="es--char--1Qcd3D7 choice-card--priceInteger--1LBSCA0">
+                                1
+                              </span>
+</div>
+<span class="choice-card--originPrice--1_jVlp2">
+                              C$171.15
+                            </span>
+</div>
+<div class="choice-card--cardSuperDeals--1FSJIpw"></div>
+</div>
+<div class="choice-card--cardFooter--3ndDdlQ choice-card--bottomBorder--3CNjSi1">
+<button class="choice-card--btnQuick--QBaf1OU">
+                            View more
+                          </button>
+</div>
+</a>
+<a class="choice-card--cardWrapper--3jsUFpw" href="https://www.aliexpress.com/ssr/300001505/rEkz8fMwjY?disableNav=YES&pha_manifest=ssr&_immersiveMode=true&productIds=1005007210772393" target="_blank">
+<div class="choice-card--card--WFgnb1n choice-card--topBorder--2G_YXfz">
+<div class="choice-card--cardHeader--3zDrun4">
+<div class="lazy-load-placeholder" style="height: 100%"></div>
+<div class="choice-card--cartWrapper--35wjIf2" style="right: 12px; left: auto">
+<span class="comet-icon comet-icon-shoppingcartadd32 choice-card--cartIcon--aJpkW9s">
+<svg aria-hidden='false' fill="currentColor" focusable='false' height="1em" viewbox="0 0 1024 1024" width="1em">
+<path d="M256 960a64 64 0 1 0 0-128 64 64 0 0 0 0 128z m544 0a64 64 0 1 0 0-128 64 64 0 0 0 0 128zM31.424 92.736a48 48 0 0 1 67.84 2.688 186.208 186.208 0 0 1 46.976 96.32l1.28 9.024 50.496 444.64a48 48 0 0 0 43.168 42.368l4.512 0.224H812.16a48 48 0 0 0 46.72-37.152l0.832-4.384 44.256-326.24a48 48 0 0 1 95.52 8.32l-0.384 4.576-44.256 326.24a144 144 0 0 1-135.776 124.48l-6.912 0.16H245.696a144 144 0 0 1-142.144-120.96l-0.928-6.784L52.16 211.584a90.208 90.208 0 0 0-19.2-46.176l-4.16-4.832a48 48 0 0 1 2.656-67.84z"></path>
+<path d="M528 128c24.96 0 45.44 16.512 47.776 37.6L576 169.6V288h118.4c22.976 0 41.6 21.504 41.6 48 0 24.96-16.512 45.44-37.6 47.776L694.4 384H576v118.4c0 22.976-21.504 41.6-48 41.6-24.96 0-45.44-16.512-47.776-37.6L480 502.4V384h-118.4c-22.976 0-41.6-21.504-41.6-48 0-24.96 16.512-45.44 37.6-47.776L361.6 288H480V169.6c0-22.976 21.504-41.6 48-41.6z"></path>
+</svg>
+</span>
+</div>
+</div>
+<div class="choice-card--cardTitle--768udKd">
+                            Nike Dunk Retro Black White Men Women Skateboarding
+                            Shoes Classics Genuine leather Non-slip Comfortable
+                            Sb Running Sneakers
+                          </div>
+<div class="choice-card--cardReview--1VvyjrG">
+<div class="rc-modules--stars--o9mzAea" title='4.7'>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="margin-right: 0; width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='64' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='0' x='64' y='0'></rect>
+</g>
+</svg>
+<svg class="" style="width: 12px" version='1.1' viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="rc-modules--star-clip--avS0UPW">
+<rect fill="#191919" height='64' width='44.80000000000001' x='0' y='0'></rect>
+<rect fill="#e8e8e8" height='64' width='19.19999999999999' x='44.80000000000001' y='0'></rect>
+</g>
+</svg>
+</div>
+<span class="choice-card--text--2bU-SGq">
+                              700+
+                              <!-- -->
+<!-- -->
+                              sold
+                            </span>
+</div>
+<div class="choice-card--cardPrice--ARWuZ9-">
+
+        ```
+        

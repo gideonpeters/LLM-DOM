@@ -1,0 +1,32 @@
+[
+    {
+        "prompt_uuid": "64e15f19-e0dc-4b8d-94a2-30f93c7df438",
+        "dom_name": "facebook",
+        "prompt_token_size": 1543,
+        "duration": 12.831287145614624,
+        "mode": "single",
+        "audit_key": "interactive",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 0,
+            "upload_speed": 0,
+            "ping": 0,
+            "error": "module 'speedtest' has no attribute 'Speedtest'"
+        }
+    },
+    {
+        "prompt_uuid": "767059ed-8ff4-4fc4-95f9-ef2b367aeba0",
+        "dom_name": "facebook",
+        "prompt_token_size": 4888,
+        "duration": 68.81524085998535,
+        "mode": "single",
+        "audit_key": "interactive",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 0,
+            "upload_speed": 0,
+            "ping": 0,
+            "error": "module 'speedtest' has no attribute 'Speedtest'"
+        }
+    }
+]

@@ -1,0 +1,964 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. deprecations => Uses deprecated APIs: Deprecated APIs will eventually be removed from the browser. [Learn more about deprecated APIs](https://developer.chrome.com/docs/lighthouse/best-practices/deprecations/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        <path clip-rule="evenodd" d="M9.492 4.707c-.711.475-1.302 1.235-1.505 2.457a1 1 0 1 1-1.973-.328C6.31 5.058 7.22 3.818 8.383 3.043 9.519 2.285 10.849 2 12 2c3.402 0 6 2.309 6 5 0 2.044-.753 3.429-1.88 4.481-.819.764-1.87 1.37-2.842 1.93l-.278.161V17a1 1 0 0 1-2 0v-4a1 1 0 0 1 .486-.857c.322-.194.63-.372.922-.54.931-.54 1.712-.991 2.347-1.584C15.503 9.32 16 8.456 16 7c0-1.309-1.402-3-4-3-.849 0-1.77.215-2.508.707Z" fill-rule="evenodd">
+</path>
+</symbol>
+<symbol fill="none" id="hp-icon-spinner-24" viewbox="0 0 24 24">
+<path d="M22.5 12A10.5 10.5 0 1 1 9.514 1.798" stroke="var(--color-spinner-icon-background, #3665F3)" stroke-linecap="round" stroke-linejoin="round" stroke-width='3'>
+</path>
+<path d="M14.606 1.829a10.5 10.5 0 0 1 4.056 2.055 10.499 10.499 0 0 1 2.806 3.577" stroke="var(--color-spinner-icon-foreground, #E5E5E5)" stroke-linecap="round" stroke-linejoin="round" stroke-width='3'>
+</path>
+</symbol>
+</svg>
+</div>
+<div class="main-content evo-carousels" id="mainContent" role="main" tabindex='-1'>
+<div class="page-grid-container hp-grid-container">
+<div class="page-grid hp-grid">
+<!--vertlandweb#s0-1-0-52-1-2-2-->
+<div class="vl-flyout-nav evo" id="vl-flyout-nav">
+<ul class="vl-flyout-nav__container">
+<li class="savedTab">
+<a href="https://www.ebay.com/feed">
+         Saved
+        </a>
+</li>
+<li class="vl-flyout-nav__js-tab" data-currenttabindex='0' data-hover-track="p4375194.m1379.l6435">
+<a _sp="p4375194.m1379.l3250" href="https://www.ebay.com/b/Auto-Parts-and-Vehicles/6000/bn_1865334">
+         Motors
+        </a>
+<div class="vl-flyout-nav__expander">
+<button aria-haspopup='true'>
+          Expand: Motors
+         </button>
+</div>
+<div class="vl-flyout-nav__flyout">
+<div class="vl-flyout-nav__sub-cats">
+<nav aria-label="Parts & Accessories" class="vl-flyout-nav__sub-cat-col">
+<h4>
+            Parts & Accessories
+           </h4>
+<ul>
+<li>
+<a _sp="p4375194.m1379.l3251" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Auto-Parts-Accessories/6028/bn_569479">
+              All Parts & Accessories
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1379.l3252" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Car-Truck-Parts/6030/bn_562630">
+              Car & Truck Parts
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1379.l3253" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Car-Truck-Wheels-Tires-Parts/33743/bn_584076">
+              Wheels, Tires & Parts
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1379.l3254" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Motorcycle-Scooter-Parts-Accessories/10063/bn_557636">
+              Motorcycle & Scooter Parts
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1379.l3255" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/ATV-Side-by-Side-UTV-Parts-Accessories/43962/bn_562707">
+              ATV & UTV Parts
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1379.l3256" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Automotive-Tools-Supplies/34998/bn_1865501">
+              Automotive Tools & Supplies
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1379.l3257" class="vl-flyout-nav__js-link" href="https://pages.ebay.com/motors/ebay-guaranteed-fit/">
+              eBay Guaranteed Fit
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1379.l3258" class="vl-flyout-nav__js-link" href="https://www.ebay.com/g/mygarage">
+              My Garage
+             </a>
+</li>
+</ul>
+</nav>
+<nav aria-label="Vehicles" class="vl-flyout-nav__sub-cat-col">
+<h4>
+            Vehicles
+           </h4>
+<ul>
+<li>
+<a _sp="p4375194.m1379.l3259" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Cars-and-Trucks/6001/bn_1865117">
+              Cars & Trucks
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1379.l3260" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Classics/bn_7005623268">
+              Classics
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1379.l3261" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Motorcycles/6024/bn_1865434">
+              Motorcycles
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1379.l3262" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Powersport-Vehicles/66466/bn_1865239">
+              Powersports
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1379.l3263" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/RVs-and-Campers/50054/bn_16581882">
+              RVs & Campers
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1379.l3264" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Other-Vehicles-Trailers/6737/bn_16581863">
+              Trailers & Other Vehicles
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1379.l3265" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Boats/26429/bn_1865510">
+              Boats
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1379.l3266" class="vl-flyout-nav__js-link" href="https://www.ebay.com/motors/blog/">
+              eBay Motors Blog
+             </a>
+</li>
+</ul>
+</nav>
+</div>
+<div class="vl-flyout-nav__rtm" data-marko-key="@rtmImages[] s0-1-0-52-1-2-2">
+</div>
+</div>
+</li>
+<li class="vl-flyout-nav__js-tab" data-currenttabindex='1' data-hover-track="p4375194.m1380.l6435">
+<a _sp="p4375194.m1380.l3250" href="https://www.ebay.com/b/Electronics/bn_7000259124">
+         Electronics
+        </a>
+<div class="vl-flyout-nav__expander">
+<button aria-haspopup='true'>
+          Expand: Electronics
+         </button>
+</div>
+<div class="vl-flyout-nav__flyout">
+<div class="vl-flyout-nav__sub-cats">
+<nav aria-label="Top Categories" class="vl-flyout-nav__sub-cat-col">
+<h4>
+            Top Categories
+           </h4>
+<ul>
+<li>
+<a _sp="p4375194.m1380.l3251" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Computers-Tablets-Network-Hardware/58058/bn_1865247">
+              Computers, Tablets & Network Hardware
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1380.l3252" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Cameras-Photo/625/bn_1865546">
+              Cameras & Photo
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1380.l3253" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Cell-Phones-Smartphones/9355/bn_320094">
+              Cell Phones & Smartphones
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1380.l3254" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Cell-Phone-Cases-Covers-Skins/20349/bn_317585">
+              Cell Phone Cases, Covers & Skins
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1380.l3255" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/TV-Video-Home-Audio-Electronics/32852/bn_1648392">
+              TV, Video & Home Audio Electronics
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1380.l3256" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Vehicle-Electronics-GPS/3270/bn_887004">
+              Vehicle Electronics & GPS
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1380.l3257" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Headphones/112529/bn_879608">
+              Headphones
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1380.l3258" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Surveillance-Smart-Home-Electronics/185067/bn_115028425">
+              Surveillance & Smart Home Electronics
+             </a>
+</li>
+</ul>
+</nav>
+<nav aria-label="Additional Categories" class="vl-flyout-nav__sub-cat-col">
+<h4>
+            Additional Categories
+           </h4>
+<ul>
+<li>
+<a _sp="p4375194.m1380.l3259" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/eBay-Refurbished/bn_7040708936">
+              eBay Refurbished
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1380.l3260" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Video-Games/139973/bn_320034">
+              Video Games
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1380.l3261" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Video-Game-Consoles/139971/bn_320033">
+              Video Game Consoles
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1380.l3262" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Apple-Cell-Phones-Smartphones/9355/bn_319682">
+              Apple iPhone
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1380.l3263" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/PC-Desktops-All-In-One-Computers/179/bn_661752">
+              PC Desktops & All-In-One Computers
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1380.l3264" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Computer-Graphics-Cards/27386/bn_661796">
+              Computer Graphics Cards
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1380.l3265" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Tablets-eReaders/171485/bn_320042">
+              Tablets & eReaders
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1380.l3266" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Laptops-Netbooks/175672/bn_1648276">
+              Laptops & Netbooks
+             </a>
+</li>
+</ul>
+</nav>
+</div>
+<div class="vl-flyout-nav__rtm" data-marko-key="@rtmImages[]_1 s0-1-0-52-1-2-2">
+</div>
+</div>
+</li>
+<li class="vl-flyout-nav__js-tab" data-currenttabindex='2' data-hover-track="p4375194.m1381.l6435">
+<a _sp="p4375194.m1381.l3250" href="https://www.ebay.com/b/Collectibles-Art/bn_7000259855">
+         Collectibles
+        </a>
+<div class="vl-flyout-nav__expander">
+<button aria-haspopup='true'>
+          Expand: Collectibles
+         </button>
+</div>
+<div class="vl-flyout-nav__flyout">
+<div class="vl-flyout-nav__sub-cats">
+<nav aria-label="Top Categories" class="vl-flyout-nav__sub-cat-col">
+<h4>
+            Top Categories
+           </h4>
+<ul>
+<li>
+<a _sp="p4375194.m1381.l3251" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Sports-Trading-Cards-Accessories/212/bn_1859819">
+              Sports Trading Cards
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1381.l3252" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Collectible-Card-Games-Accessories/2536/bn_1852210">
+              Collectible Card Games
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1381.l3253" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Coins-Paper-Money/11116/bn_1857806">
+              Coins & Paper Money
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1381.l3254" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Sports-Memorabilia-Fan-Shop-Sports-Cards/64482/bn_1857919">
+              Sports Memorabilia, Fan Shop & Sports Cards
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1381.l3255" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Toys-Hobbies/220/bn_1865497">
+              Toys & Comic Books
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1381.l3256" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Art/550/bn_1853728">
+              Art
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1381.l3257" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Antiques/20081/bn_1851017">
+              Antiques
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1381.l3258" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Model-Railroads-Trains/262301/bn_73631343">
+              Model Trains
+             </a>
+</li>
+</ul>
+</nav>
+<nav aria-label="Featured" class="vl-flyout-nav__sub-cat-col">
+<h4>
+            Featured
+           </h4>
+<ul>
+<li>
+<a _sp="p4375194.m1381.l3259" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Pokemon-TCG/2536/bn_7117595258">
+              Pokemon
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1381.l3260" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Collectible-Figures-Bobbleheads/149372/bn_3017826">
+              FUNKO
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1381.l3261" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Sports-Trading-Card-Singles/261328/bn_7117732240">
+              Sports Trading Card Singles
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1381.l3262" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Baseball-Sports-Trading-Cards-Accessories/212/bn_2309847">
+              Baseball Cards
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1381.l3263" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Basketball-Sports-Trading-Cards-Accessories/212/bn_2310729">
+              Basketball Cards
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1381.l3264" class="vl-flyout-nav__js-link" href="https://www.ebay.com/e/_collectibles/marquee-auction-eg">
+              Monthly Marquee Auction
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1381.l3265" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Bullion/39482/bn_1642568">
+              Bullion Coins
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1381.l3266" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Stamps/260/bn_1865095">
+              Stamps
+             </a>
+</li>
+</ul>
+</nav>
+</div>
+<div class="vl-flyout-nav__rtm" data-marko-key="@rtmImages[]_2 s0-1-0-52-1-2-2">
+</div>
+</div>
+</li>
+<li class="vl-flyout-nav__js-tab" data-currenttabindex='3' data-hover-track="p4375194.m1382.l6435">
+<a _sp="p4375194.m1382.l3250" href="https://www.ebay.com/b/Home-Garden/11700/bn_1853126">
+         Home & Garden
+        </a>
+<div class="vl-flyout-nav__expander">
+<button aria-haspopup='true'>
+          Expand: Home & Garden
+         </button>
+</div>
+<div class="vl-flyout-nav__flyout">
+<div class="vl-flyout-nav__sub-cats">
+<nav aria-label="Top Categories" class="vl-flyout-nav__sub-cat-col">
+<h4>
+            Top Categories
+           </h4>
+<ul>
+<li>
+<a _sp="p4375194.m1382.l3251" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Home-Improvement/159907/bn_1851980">
+              Home Improvement
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1382.l3252" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Yard-Garden-Outdoor-Living-Items/159912/bn_1853607">
+              Yard, Garden & Outdoor Living Items
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1382.l3253" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Kitchen-Dining-Bar-Supplies/20625/bn_1865564">
+              Kitchen Dining Bar
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1382.l3254" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Lamps-Lighting-Ceiling-Fans/20697/bn_818527">
+              Lamps, Lighting & Ceiling Fans
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1382.l3255" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Home-Decor/10033/bn_1849733">
+              Home Décor
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1382.l3256" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Power-Tools/3247/bn_2310272">
+              Power Tools
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1382.l3257" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Home-Furniture/3197/bn_1642075">
+              Furniture
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1382.l3258" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Rugs-Carpets/20571/bn_1642129">
+              Rugs & Carpets
+             </a>
+</li>
+</ul>
+</nav>
+<nav aria-label="Additional Categories " class="vl-flyout-nav__sub-cat-col">
+<h4>
+            Additional Categories
+           </h4>
+<ul>
+<li>
+<a _sp="p4375194.m1382.l3259" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/eBay-Refurbished/bn_7040708936">
+              eBay Refurbished
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1382.l3260" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Surveillance-Smart-Home-Electronics/185067/bn_115028425">
+              Surveillance & Smart Home
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1382.l3261" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Vacuum-Cleaners/20614/bn_2310596">
+              Vacuum Cleaners
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1382.l3262" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Small-Kitchen-Appliances/20667/bn_2311275">
+              Small Kitchen Appliances
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1382.l3263" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Patio-Garden-Furniture/25863/bn_2309488">
+              Outdoor Entertaining
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1382.l3264" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Bedding/20444/bn_1864382">
+              Bedding
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1382.l3265" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Mattresses/131588/bn_1519179">
+              Mattresses
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1382.l3266" class="vl-flyout-nav__js-link" href="https://www.ebay.com/deals/home-garden">
+              Home & Garden Deals
+             </a>
+</li>
+</ul>
+</nav>
+</div>
+<div class="vl-flyout-nav__rtm" data-marko-key="@rtmImages[]_3 s0-1-0-52-1-2-2">
+</div>
+</div>
+</li>
+<li class="vl-flyout-nav__js-tab" data-currenttabindex='4' data-hover-track="p4375194.m1383.l6435">
+<a _sp="p4375194.m1383.l3250" href="https://www.ebay.com/b/Clothing-Shoes-Accessories/11450/bn_1852545">
+         Fashion
+        </a>
+<div class="vl-flyout-nav__expander">
+<button aria-haspopup='true'>
+          Expand: Fashion
+         </button>
+</div>
+<div class="vl-flyout-nav__flyout">
+<div class="vl-flyout-nav__sub-cats">
+<nav aria-label="Top Categories" class="vl-flyout-nav__sub-cat-col">
+<h4>
+            Top Categories
+           </h4>
+<ul>
+<li>
+<a _sp="p4375194.m1383.l3251" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Womens-Clothing/15724/bn_661783">
+              Women's Clothing
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1383.l3252" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Womens-Shoes/3034/bn_740022">
+              Women's Shoes
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1383.l3253" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Womens-Accessories/4251/bn_1519247">
+              Women’s Accessories
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1383.l3254" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Mens-Clothing/1059/bn_696958">
+              Men's Clothing
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1383.l3255" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Mens-Shoes/93427/bn_61999">
+              Men's Shoes
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1383.l3256" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Mens-Accessories/4250/bn_1642245">
+              Men's Accessories
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1383.l3257" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Girls-Clothing-Sizes-4-Up/11462/bn_1650057">
+              Girls' Clothing
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1383.l3258" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Boys-Clothing-Sizes-4-Up/11452/bn_661760">
+              Boys' Clothing
+             </a>
+</li>
+</ul>
+</nav>
+<nav aria-label="Additional Categories" class="vl-flyout-nav__sub-cat-col">
+<h4>
+            Additional Categories
+           </h4>
+<ul>
+<li>
+<a _sp="p4375194.m1383.l3259" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Designer-Handbags/bn_7117629183">
+              Designer Handbags
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1383.l3260" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Collectible-Sneakers/bn_7000259435">
+              Collectible Sneakers
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1383.l3261" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Streetwear/bn_7121373158">
+              Streetwear
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1383.l3262" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Womens-Dresses/63861/bn_661850">
+              Women's Dresses
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1383.l3263" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Womens-Coats-Jackets-Vests/63862/bn_661792">
+              Women's Coats, Jackets & Vests
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1383.l3264" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Mens-Shirts/185100/bn_115044909">
+              Men's Shirts
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1383.l3265" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Mens-Coats-Jackets-Vests/57988/bn_704986">
+              Men's Coats & Jackets
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1383.l3266" class="vl-flyout-nav__js-link" href="https://www.ebay.com/deals/fashion">
+              Fashion Deals
+             </a>
+</li>
+</ul>
+</nav>
+</div>
+<div class="vl-flyout-nav__rtm" data-marko-key="@rtmImages[]_4 s0-1-0-52-1-2-2">
+</div>
+</div>
+</li>
+<li class="vl-flyout-nav__js-tab" data-currenttabindex='5' data-hover-track="p4375194.m1384.l6435">
+<a _sp="p4375194.m1384.l3250" href="https://www.ebay.com/b/Toys-Hobbies/220/bn_1865497">
+         Toys
+        </a>
+<div class="vl-flyout-nav__expander">
+<button aria-haspopup='true'>
+          Expand: Toys
+         </button>
+</div>
+<div class="vl-flyout-nav__flyout">
+<div class="vl-flyout-nav__sub-cats">
+<nav aria-label="Top Categories" class="vl-flyout-nav__sub-cat-col">
+<h4>
+            Top Categories
+           </h4>
+<ul>
+<li>
+<a _sp="p4375194.m1384.l3251" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Diecast-Toy-Vehicles/222/bn_1850842">
+              Diecast & Toy Vehicles
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1384.l3252" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Model-Trains/180250/bn_1642683">
+              Model Railroads & Trains
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1384.l3253" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Action-Figures-Accessories/246/bn_1648288">
+              Action Figures
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1384.l3254" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Collectible-Card-Games-Accessories/2536/bn_1852210">
+              Collectible Card Games
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1384.l3255" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Toy-Models-Kits/1188/bn_1852447">
+              Models & Kits
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1384.l3256" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/RC-Model-Vehicles-Toys-Control-Line/2562/bn_1851704">
+              Radio Control Toys
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1384.l3257" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Games/233/bn_1849806">
+              Board Games
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1384.l3258" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Vintage-Antique-Toys/717/bn_1860860">
+              Antique Toys
+             </a>
+</li>
+</ul>
+</nav>
+<nav aria-label="Featured" class="vl-flyout-nav__sub-cat-col">
+<h4>
+            Featured
+           </h4>
+<ul>
+<li>
+<a _sp="p4375194.m1384.l3259" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/LEGO-R-Building-Toys/183447/bn_1937200">
+              LEGO
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1384.l3260" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Hot-Wheels-Diecast-and-Toy-Vehicles/222/bn_1853227">
+              Hot Wheels
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1384.l3261" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Other-Marvel-Universe-Action-Figures/261068/bn_7116611368">
+              Marvel
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1384.l3262" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Original-Beanie-Babies/19205/bn_1893223">
+              Beanie Babies
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1384.l3263" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Star-Wars/bn_7000693986">
+              Star Wars
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1384.l3264" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Barbie/bn_21820295">
+              Barbie
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1384.l3265" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/NERF-Dart-Guns-Soft-Darts/158749/bn_1913487">
+              Stuffed Animals
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1384.l3266" class="vl-flyout-nav__js-link" href="https://www.ebay.com/deals/other-deals/toys">
+              Toys Deals
+             </a>
+</li>
+</ul>
+</nav>
+</div>
+<div class="vl-flyout-nav__rtm" data-marko-key="@rtmImages[]_5 s0-1-0-52-1-2-2">
+</div>
+</div>
+</li>
+<li class="vl-flyout-nav__js-tab" data-currenttabindex='6' data-hover-track="p4375194.m1385.l6435">
+<a _sp="p4375194.m1385.l3250" href="https://www.ebay.com/b/Sporting-Goods/888/bn_1865031">
+         Sporting Goods
+        </a>
+<div class="vl-flyout-nav__expander">
+<button aria-haspopup='true'>
+          Expand: Sporting Goods
+         </button>
+</div>
+<div class="vl-flyout-nav__flyout">
+<div class="vl-flyout-nav__sub-cats">
+<nav aria-label="Top Categories" class="vl-flyout-nav__sub-cat-col">
+<h4>
+            Top Categories
+           </h4>
+<ul>
+<li>
+<a _sp="p4375194.m1385.l3251" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Golf-Clubs/115280/bn_7244234">
+              Golf Clubs
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1385.l3252" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Hunting-Equipment/7301/bn_1865054">
+              Hunting Equipment
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1385.l3253" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Cycling-Equipment/7294/bn_1848937">
+              Cycling Equipment
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1385.l3254" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Fishing-Equipment-Supplies/1492/bn_1851047">
+              Fishing Equipment & Supplies
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1385.l3255" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Team-Sports/159049/bn_1865097">
+              Team Sports
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1385.l3256" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Fitness-Running-Yoga-Equipment/15273/bn_1855426">
+              Fitness, Running & Yoga Equipment
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1385.l3257" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Camping-Hiking-Equipment/16034/bn_1959887">
+              Camping & Hiking Equipment
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1385.l3258" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Water-Sports/159136/bn_1855031">
+              Water Sports
+             </a>
+</li>
+</ul>
+</nav>
+<nav aria-label="Popular Topics" class="vl-flyout-nav__sub-cat-col">
+<h4>
+            Popular Topics
+           </h4>
+<ul>
+<li>
+<a _sp="p4375194.m1385.l3259" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Billiard-Cues/21568/bn_1943868">
+              Billiard Cues
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1385.l3260" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Pickleball-Paddle/159135/bn_55191648">
+              Pickleball Paddle
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1385.l3261" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Bikes/177831/bn_1865335">
+              Bikes
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1385.l3262" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Electric-Bikes/74469/bn_1968968">
+              Electric Bikes
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1385.l3263" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/GPS-Running-Watches/75230/bn_1970916">
+              GPS & Running Watches
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1385.l3264" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Dumbbells/137865/bn_1940974">
+              Dumbbells
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1385.l3265" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Shimano-Fishing-Reels/261030/bn_1990188">
+              Shimano Fishing Reels
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1385.l3266" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Scotty-Cameron-Golf-Clubs/115280/bn_7249420">
+              Scotty Cameron Golf Clubs
+             </a>
+</li>
+</ul>
+</nav>
+</div>
+<div class="vl-flyout-nav__rtm" data-marko-key="@rtmImages[]_6 s0-1-0-52-1-2-2">
+</div>
+</div>
+</li>
+<li class="vl-flyout-nav__js-tab" data-currenttabindex='7' data-hover-track="p4375194.m1386.l6435">
+<a _sp="p4375194.m1386.l3250" href="https://www.ebay.com/b/Business-Industrial/12576/bn_1853744">
+         Business & Industrial
+        </a>
+<div class="vl-flyout-nav__expander">
+<button aria-haspopup='true'>
+          Expand: Business & Industrial
+         </button>
+</div>
+<div class="vl-flyout-nav__flyout">
+<div class="vl-flyout-nav__sub-cats">
+<nav aria-label="Top Categories" class="vl-flyout-nav__sub-cat-col">
+<h4>
+            Top Categories
+           </h4>
+<ul>
+<li>
+<a _sp="p4375194.m1386.l3251" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Heavy-Equipment/177641/bn_1511518">
+              Heavy Equipment
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1386.l3252" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Heavy-Equipment-Attachments/177647/bn_1309146">
+              Heavy Equipment Attachments
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1386.l3253" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Heavy-Equipment-Parts-Accessories/41489/bn_7208228">
+              Heavy Equipment Parts & Accessories
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1386.l3254" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Healthcare-Lab-Dental/11815/bn_1851782">
+              Healthcare
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1386.l3255" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Restaurant-Food-Service/11874/bn_1865467">
+              Restaurant & Food Service
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1386.l3256" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Test-Measurement-Inspection-Equipment/181939/bn_16566063">
+              Test, Measurement & Inspection Equipment
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1386.l3257" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/CNC-Metalworking-Manufacturing/11804/bn_1861284">
+              CNC, Metalworking & Manufacturing
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1386.l3258" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Office-Equipment-Supplies/25298/bn_1856567">
+              Office
+             </a>
+</li>
+</ul>
+</nav>
+<nav aria-label="Additional Categories" class="vl-flyout-nav__sub-cat-col">
+<h4>
+            Additional Categories
+           </h4>
+<ul>
+<li>
+<a _sp="p4375194.m1386.l3259" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Industrial-Automation-Motion-Controls/42892/bn_2309506">
+              Industrial Automation & Motion Control
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1386.l3260" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Packing-Shipping/19273/bn_1865376">
+              Shipping & Packaging
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1386.l3261" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Electrical-Equipment-Supplies/92074/bn_1852224">
+              Electrical Equipment & Supplies
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1386.l3262" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Food-Trucks-Concession-Trailers/184249/bn_7717994">
+              Food Trucks & Concession Trailers
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1386.l3263" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Dental/bn_7115058704">
+              Dental
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1386.l3264" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Personal-Protective-Equipment-PPE/183970/bn_78213405">
+              Personal Protective Equipment
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1386.l3265" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Light-Industrial-Equipment-Tools/61573/bn_1521576">
+              Light Industrial Equipment & Tools
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1386.l3266" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/HVAC-Refrigeration/42909/bn_2312341">
+              HVAC & Refrigeration
+             </a>
+</li>
+</ul>
+</nav>
+</div>
+<div class="vl-flyout-nav__rtm" data-marko-key="@rtmImages[]_7 s0-1-0-52-1-2-2">
+</div>
+</div>
+</li>
+<li class="vl-flyout-nav__js-tab" data-currenttabindex='8' data-hover-track="p4375194.m1387.l6435">
+<a _sp="p4375194.m1387.l3250" href="https://www.ebay.com/b/Jewelry-Watches/281/bn_1865273">
+         Jewelry & Watches
+        </a>
+<div class="vl-flyout-nav__expander">
+<button aria-haspopup='true'>
+          Expand: Jewelry & Watches
+         </button>
+</div>
+<div class="vl-flyout-nav__flyout">
+<div class="vl-flyout-nav__sub-cats">
+<nav aria-label="Top Categories" class="vl-flyout-nav__sub-cat-col">
+<h4>
+            Top Categories
+           </h4>
+<ul>
+<li>
+<a _sp="p4375194.m1387.l3251" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Luxury-Watches/31387/bn_36841947">
+              Luxury Watches
+             </a>
+</li>
+<li>
+
+        ```
+        

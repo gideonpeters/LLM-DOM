@@ -1,0 +1,460 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. errors-in-console => Browser errors were logged to the console: Errors logged to the console indicate unresolved problems. They can come from network request failures and other browser concerns. [Learn more about this errors in console diagnostic audit](https://developer.chrome.com/docs/lighthouse/best-practices/errors-in-console/)
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        <div class="home-campaign-git-line height-full position-relative z-1 js-build-in-item build-in-scale-top" style="transition-duration: 900ms; background: linear-gradient(transparent, #3FB950, #3FB950, transparent);">
+</div>
+<img alt="" aria-hidden='true' class="d-none d-md-block position-absolute bottom-4 js-build-in-item build-in-scale-fade" decoding="async" height='485' loading="lazy" src="https://github.githubassets.com/assets/git-branch-productivity-c304b83d09c7.svg" style="left: calc(50% - 2px); height: auto; max-width: 9vw;" width='81'></img>
+</div>
+<div class="col-11 ml-2 ml-md-6">
+<div class="river-mktg js-build-in-trigger d-flex gutter gutter-spacious my-5 my-sm-7 my-md-8 position-relative flex-column-reverse flex-md-items-center flex-md-row flex-column pb-4 pb-md-7" data-build-in-stagger='100'>
+<div class="col-12 py-3 mb-2 js-build-in-item col-sm-10 col-md-6 text-left col-lg-6 build-in-slideX-right">
+<div class="pr-md-4">
+<h2 class="color-fg-default mb-3 f2-mktg color-fg-muted">
+<em>
+               GitHub Copilot
+              </em>
+              empowers developers to complete tasks 55% faster with contextualized AI coding assistance across workflows.
+             </h2>
+<a class="link-mktg text-semibold color-fg-default py-1 f3-mktg" data-analytics-event='{"category": "Explore GitHub Copilot", "action": "click to Explore GitHub Copilot", "label": "ref_cta:Explore GitHub Copilot;"}' href="/features/copilot">
+              Explore GitHub Copilot
+              <svg class="octicon arrow-symbol-mktg" fill="none" height='16' viewbox="0 0 16 16" width='16' xmlns="http://www.w3.org/2000/svg">
+<path d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z" fill="currentColor">
+</path>
+<path class="octicon-chevrow-stem" d="M1.75 8H11" stroke="currentColor" stroke-linecap="round" stroke-width='1.5'>
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="col-12 py-3 col-md-6 col-lg-6">
+<div class="position-relative">
+<div class="d-flex flex-column position-relative">
+<div class="js-build-in-item build-in-slideX-right overflow-hidden rounded-3 position-relative z-1 d-none d-md-block" style="max-width: 480px; margin-top: -100%">
+<img alt="" class="width-full d-block height-auto" decoding="async" height='1222' loading="lazy" src="https://github.githubassets.com/assets/illu-copilot-sidebar-3d2efb504577.png" width='960'>
+</img></div>
+<div class="js-build-in-item build-in-slideX-right overflow-hidden rounded-3 position-absolute right-3 bottom-3 bottom-sm-0 z-1 d-md-none" style="max-width: 60%;">
+<img alt="" class="width-full d-block height-auto" decoding="async" height='1222' loading="lazy" src="https://github.githubassets.com/assets/illu-copilot-sidebar-3d2efb504577.png" width='960'></img>
+</div>
+<img alt="" aria-hidden='true' class="position-absolute d-none d-md-block events-none js-build-in-item build-in-fade" decoding="async" height='1000' loading="lazy" src="https://github.githubassets.com/assets/bg-glow-purple-6e9a6a96cb04.png" style="bottom: -300px; right: -200px;" width='1000'></img>
+</div>
+</div>
+</div>
+</div>
+<div class="mb-6 mb-md-7 pb-4 js-build-in-trigger">
+<div class="py-3 text-left col-sm-8 col-md-7 col-lg-6 col-xl-5 js-build-in-item build-in-slideX-left">
+<div class="gradient-border-mktg d-inline-block z-1 position-relative px-2 lh-condensed f6-mktg" style="top: -1px">
+<span class="text-gradient-mktg text-semibold">
+              Did you know?
+             </span>
+</div>
+<h3 class="text-accent-primary mb-2 mt-3 h1-mktg text-medium">
+             22% increase
+            </h3>
+<p class="mb-3 f2-mktg text-medium col-6-max">
+             in developer productivity after three years with GitHub
+            </p>
+<a class="link-mktg text-semibold color-fg-default py-1 f3-mktg" data-analytics-event='{"category": "Read the report", "action": "click to Read the report", "label": "ref_cta:Read the report;"}' href="https://resources.github.com/forrester/">
+             Read the report
+             <svg class="octicon arrow-symbol-mktg" fill="none" height='16' viewbox="0 0 16 16" width='16' xmlns="http://www.w3.org/2000/svg">
+<path d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z" fill="currentColor">
+</path>
+<path class="octicon-chevrow-stem" d="M1.75 8H11" stroke="currentColor" stroke-linecap="round" stroke-width='1.5'>
+</path>
+</svg>
+</a>
+</div>
+</div>
+</div>
+
+</div>
+<div class="position-relative z-1">
+<card-skew class="overflow-hidden rounded-3 mb-3 mb-md-5">
+<div class="feature-card-mktg d-md-flex rounded-3 color-bg-subtle border position-relative flex-justify-between z-1 height-full flex-row" data-target="card-skew.bounding">
+<div class="d-md-flex flex-column flex-1 p-5 p-sm-6 py-lg-8 pl-lg-8 pr-lg-12 col-md-6 flex-justify-between">
+<p class="f2-mktg text-medium color-fg-muted mb-4">
+<em>
+             GitHub Actions
+            </em>
+            automates your build, test, and deployment workflow with simple and secure CI/CD.
+           </p>
+<div>
+<a class="link-mktg text-semibold color-fg-default py-1 f3-mktg" data-analytics-event='{"category": "Discover GitHub Actions", "action": "click to Discover GitHub Actions", "label": "ref_cta:Discover GitHub Actions;"}' href="/features/actions">
+             Discover GitHub Actions
+             <svg class="octicon arrow-symbol-mktg" fill="none" height='16' viewbox="0 0 16 16" width='16' xmlns="http://www.w3.org/2000/svg">
+<path d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z" fill="currentColor">
+</path>
+<path class="octicon-chevrow-stem" d="M1.75 8H11" stroke="currentColor" stroke-linecap="round" stroke-width='1.5'>
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="overflow-hidden col-md-6 rounded-right-3">
+<picture>
+<source sizes="(max-width: 768px) 90vw, (max-width: 1280px) 50vw, 653px" srcset="https://github.githubassets.com/assets/illu-actions-2-c5178134f381.png?width=1306&format=webpll 1306w,https://github.githubassets.com/assets/illu-actions-2-c5178134f381.png?width=1044&format=webpll 1044w,https://github.githubassets.com/assets/illu-actions-2-c5178134f381.png?width=783&format=webpll 783w,https://github.githubassets.com/assets/illu-actions-2-c5178134f381.png?width=653&format=webpll 653w,https://github.githubassets.com/assets/illu-actions-2-c5178134f381.png?width=522&format=webpll 522w,https://github.githubassets.com/assets/illu-actions-2-c5178134f381.png?width=261&format=webpll 261w" type="image/webp"></source>
+<source sizes="(max-width: 768px) 90vw, (max-width: 1280px) 50vw, 653px" srcset="https://github.githubassets.com/assets/illu-actions-2-c5178134f381.png 1306w,https://github.githubassets.com/assets/illu-actions-2-c5178134f381.png?width=653 653w,https://github.githubassets.com/assets/illu-actions-2-c5178134f381.png?width=522 522w,https://github.githubassets.com/assets/illu-actions-2-c5178134f381.png?width=326 326w" type="image/png"></source>
+<img alt="" aria-hidden='true' class="width-full d-block height-auto" decoding="async" height='992' loading="lazy" src="https://github.githubassets.com/assets/illu-actions-2-c5178134f381.png" width='1306'></img>
+</picture>
+</div>
+<div class="position-absolute bottom-0 right-0 events-none z-n1" data-target="card-skew.shine">
+</div>
+</div>
+</card-skew>
+</div>
+<div class="d-flex flex-column flex-md-row gutter js-build-in-trigger">
+<div class="col-md-6 d-flex">
+<card-skew class="overflow-hidden rounded-3 mb-3 mb-md-5">
+<div class="feature-card-mktg d-md-flex rounded-3 color-bg-subtle border position-relative flex-justify-between z-1 height-full flex-column" data-target="card-skew.bounding">
+<div class="d-md-flex flex-column flex-1 p-5 p-sm-6 py-lg-8 pl-lg-8 pr-lg-12 flex-justify-start">
+<p class="f2-mktg text-medium color-fg-muted mb-4">
+<em>
+              GitHub Codespaces
+             </em>
+             offers a complete dev environment in seconds. Code, build, test, and open pull requests from any repo.
+            </p>
+<div>
+<a class="link-mktg text-semibold color-fg-default py-1 f3-mktg" data-analytics-event='{"category": "Check out GitHub Codespaces", "action": "click to Check out GitHub Codespaces", "label": "ref_cta:Check out GitHub Codespaces;"}' href="/features/codespaces">
+              Check out GitHub Codespaces
+              <svg class="octicon arrow-symbol-mktg" fill="none" height='16' viewbox="0 0 16 16" width='16' xmlns="http://www.w3.org/2000/svg">
+<path d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z" fill="currentColor">
+</path>
+<path class="octicon-chevrow-stem" d="M1.75 8H11" stroke="currentColor" stroke-linecap="round" stroke-width='1.5'>
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="overflow-hidden rounded-bottom-3">
+<picture>
+<source sizes="(max-width: 768px) 90vw, (max-width: 1280px) 50vw, 604px" srcset="https://github.githubassets.com/assets/illu-codespaces-1d2d17e8b2b7.png?width=1209&format=webpll 1209w,https://github.githubassets.com/assets/illu-codespaces-1d2d17e8b2b7.png?width=967&format=webpll 967w,https://github.githubassets.com/assets/illu-codespaces-1d2d17e8b2b7.png?width=725&format=webpll 725w,https://github.githubassets.com/assets/illu-codespaces-1d2d17e8b2b7.png?width=604&format=webpll 604w,https://github.githubassets.com/assets/illu-codespaces-1d2d17e8b2b7.png?width=483&format=webpll 483w,https://github.githubassets.com/assets/illu-codespaces-1d2d17e8b2b7.png?width=241&format=webpll 241w" type="image/webp"></source>
+<source sizes="(max-width: 768px) 90vw, (max-width: 1280px) 50vw, 604px" srcset="https://github.githubassets.com/assets/illu-codespaces-1d2d17e8b2b7.png 1209w,https://github.githubassets.com/assets/illu-codespaces-1d2d17e8b2b7.png?width=604 604w,https://github.githubassets.com/assets/illu-codespaces-1d2d17e8b2b7.png?width=483 483w,https://github.githubassets.com/assets/illu-codespaces-1d2d17e8b2b7.png?width=302 302w" type="image/png"></source>
+<img alt="" aria-hidden='true' class="width-full d-block height-auto js-build-in-item build-in-scale-fade" decoding="async" height='890' loading="lazy" src="https://github.githubassets.com/assets/illu-codespaces-1d2d17e8b2b7.png" width='1209'></img>
+</picture>
+</div>
+<div class="position-absolute bottom-0 right-0 events-none z-n1" data-target="card-skew.shine">
+</div>
+</div>
+</card-skew>
+</div>
+<div class="col-md-6 d-flex">
+<card-skew class="overflow-hidden rounded-3 mb-3 mb-md-5">
+<div class="feature-card-mktg d-md-flex rounded-3 color-bg-subtle border position-relative flex-justify-between z-1 height-full flex-column" data-target="card-skew.bounding">
+<div class="d-md-flex flex-column flex-1 p-5 p-sm-6 py-lg-8 pl-lg-8 pr-lg-12 flex-justify-start">
+<p class="f2-mktg text-medium color-fg-muted mb-4">
+<em>
+              GitHub Mobile and Copilot
+             </em>
+             now let you manage projects and converse with your AI pair programmer on the go.
+            </p>
+<div>
+<a class="link-mktg text-semibold color-fg-default py-1 f3-mktg" data-analytics-event='{"category": "Download GitHub Mobile", "action": "click to Download GitHub Mobile", "label": "ref_cta:Download GitHub Mobile;"}' href="/mobile">
+              Download GitHub Mobile
+              <svg class="octicon arrow-symbol-mktg" fill="none" height='16' viewbox="0 0 16 16" width='16' xmlns="http://www.w3.org/2000/svg">
+<path d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z" fill="currentColor">
+</path>
+<path class="octicon-chevrow-stem" d="M1.75 8H11" stroke="currentColor" stroke-linecap="round" stroke-width='1.5'>
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="overflow-hidden rounded-bottom-3">
+<picture>
+<source sizes="(max-width: 768px) 90vw, (max-width: 1280px) 50vw, 622px" srcset="https://github.githubassets.com/assets/illu-mobile-chat-9e7549906574.webp 1244w,https://github.githubassets.com/assets/illu-mobile-chat-9e7549906574.webp?width=995 995w,https://github.githubassets.com/assets/illu-mobile-chat-9e7549906574.webp?width=746 746w,https://github.githubassets.com/assets/illu-mobile-chat-9e7549906574.webp?width=622 622w,https://github.githubassets.com/assets/illu-mobile-chat-9e7549906574.webp?width=497 497w,https://github.githubassets.com/assets/illu-mobile-chat-9e7549906574.webp?width=248 248w" type="image/webp"></source>
+<img alt="" aria-hidden='true' class="width-full d-block height-auto js-build-in-item build-in-scale-fade" decoding="async" height='1029' loading="lazy" src="https://github.githubassets.com/assets/illu-mobile-chat-9e7549906574.webp" width='1244'></img>
+</picture>
+</div>
+<div class="position-absolute bottom-0 right-0 events-none z-n1" data-target="card-skew.shine">
+</div>
+</div>
+</card-skew>
+</div>
+</div>
+<div class="col-1 d-flex flex-column flex-items-center js-build-in-trigger">
+<div class="home-campaign-git-line mt-n3 mt-md-n4 mb-n8 rounded js-build-in-item build-in-scale-top" style="height: 160px; background: linear-gradient(transparent, #33B3AE 40%);">
+</div>
+</div>
+</div>
+</div>
+<div class="home-campaign-security js-section overflow-hidden px-3 pb-8 pt-5" data-color-mode="dark" data-dark-theme="dark" data-light-theme="light" id="security">
+<div class="container-xl">
+<div class="d-flex js-build-in-trigger position-relative" data-build-in-stagger='100'>
+<div class="col-1 d-flex flex-column flex-items-center">
+<div class="mb-4 position-relative home-campaign-glowing-icon js-build-in-item build-in-scale-fade">
+<svg aria-hidden='true' class="octicon octicon-lock" data-view-component='true' height='24' version='1.1' viewbox="0 0 24 24" width='24'>
+<path d="M6 9V7.25C6 3.845 8.503 1 12 1s6 2.845 6 6.25V9h.5a2.5 2.5 0 0 1 2.5 2.5v8a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 19.5v-8A2.5 2.5 0 0 1 5.5 9Zm-1.5 2.5v8a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1v-8a1 1 0 0 0-1-1h-13a1 1 0 0 0-1 1Zm3-4.25V9h9V7.25c0-2.67-1.922-4.75-4.5-4.75-2.578 0-4.5 2.08-4.5 4.75Z">
+</path>
+</svg>
+<span class="position-absolute left-0 top-0 height-full width-full home-campaign-glowing-icon-glow circle z-n1" style="background-color: var(--mktg-accent-primary); filter: blur(18px);">
+</span>
+</div>
+<div class="home-campaign-git-line height-full rounded js-build-in-item build-in-scale-top" data-build-delay='500' style="background: linear-gradient(#33B3AE 40%, transparent);">
+</div>
+</div>
+<div class="col-11 col-lg-7 ml-2 ml-md-0 mb-6 mb-md-10 pr-lg-3">
+<h2 class="h5-mktg mb-4 text-medium js-build-in-item build-in-slideX-left">
+          Application security
+         </h2>
+<h3 class="h3-mktg mb-4 text-medium js-build-in-item build-in-slideX-left">
+<span class="text-accent-primary d-block">
+           Empower developers
+          </span>
+          With GitHub, you can secure code in minutes.
+         </h3>
+</div>
+<img alt="" aria-hidden='true' class="position-absolute height-auto d-none d-md-block col-8 events-none" decoding="async" height='595' loading="lazy" src="https://github.githubassets.com/assets/shape-2-f30dcc9bd35c.svg" style="top: -10%; right: -25%;" width='595'></img>
+</div>
+<card-skew class="overflow-hidden rounded-3 mb-3 mb-md-5 position-relative z-1">
+<div class="color-bg-subtle border rounded-3 p-2 p-lg-6 js-build-in-trigger feature-card-mktg z-1 position-relative" data-build-in-stagger='200' data-target="card-skew.bounding">
+<div class="color-fg-subtle p-4">
+<div class="f5 text-medium">
+           cmake.yml
+          </div>
+<span class="f6">
+           on: push
+          </span>
+</div>
+<div class="position-relative d-flex flex-column flex-md-row gutter-spacious col-lg-10 mx-auto my-lg-6">
+<div class="col-md-6 js-build-in-item build-in-scale-right">
+<div class="p-4 rounded mt-5 box-shadow-mktg-xl mb-6" style="background: rgba(235, 245, 255, 0.2);">
+<ul class="list-style-none mb-n4">
+<li class="mb-4 f4-mktg d-flex flex-items-center flex-justify-between js-build-in-item build-in-scale-fade">
+<div class="d-flex flex-items-center">
+<svg aria-hidden='true' class="octicon octicon-check-circle-fill color-fg-success mr-2" data-view-component='true' height='24' version='1.1' viewbox="0 0 24 24" width='24'>
+<path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm16.28-2.72a.751.751 0 0 0-.018-1.042.751.751 0 0 0-1.042-.018l-5.97 5.97-2.47-2.47a.751.751 0 0 0-1.042.018.751.751 0 0 0-.018 1.042l3 3a.75.75 0 0 0 1.06 0Z">
+</path>
+</svg>
+<span class="text-medium">
+                Build
+               </span>
+</div>
+<span class="f5 color-fg-muted d-none d-sm-block">
+               1m 21s
+              </span>
+</li>
+</ul>
+</div>
+</div>
+<div class="home-campaign-ghas-connect position-relative position-md-absolute z-1 d-flex flex-items-center js-build-in-item build-in-scale-fade">
+<div class="d-inline-block circle p-1 color-bg-emphasis" style="box-shadow: 0 0 0 2px #444D56;">
+</div>
+<div style="width: 40px; height: 2px; background: #D1D5DA;">
+</div>
+<div class="d-inline-block circle p-1 color-bg-emphasis" style="box-shadow: 0 0 0 2px #444D56;">
+</div>
+</div>
+<div class="col-md-6 js-build-in-item build-in-scale-right">
+<div class="pt-2 pb-1 px-4 rounded-top-2 d-inline-block text-medium" style="background: rgba(235, 245, 255, 0.2);">
+            Steps
+           </div>
+<div class="p-4 rounded-bottom-2 rounded-right-2 box-shadow-mktg-xl mb-6" style="background: rgba(235, 245, 255, 0.2);">
+<ul class="list-style-none mb-n4">
+<li class="mb-4 f4-mktg d-flex flex-items-center flex-justify-between js-build-in-item build-in-scale-fade">
+<div class="d-flex flex-items-center">
+<svg aria-hidden='true' class="octicon octicon-check-circle-fill color-fg-success mr-2" data-view-component='true' height='24' version='1.1' viewbox="0 0 24 24" width='24'>
+<path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm16.28-2.72a.751.751 0 0 0-.018-1.042.751.751 0 0 0-1.042-.018l-5.97 5.97-2.47-2.47a.751.751 0 0 0-1.042.018.751.751 0 0 0-.018 1.042l3 3a.75.75 0 0 0 1.06 0Z">
+</path>
+</svg>
+<span class="text-medium">
+                Initialize CodeQL
+               </span>
+</div>
+<span class="f5 color-fg-muted d-none d-sm-block">
+               1m 42s
+              </span>
+</li>
+<li class="mb-4 f4-mktg d-flex flex-items-center flex-justify-between js-build-in-item build-in-scale-fade">
+<div class="d-flex flex-items-center">
+<svg aria-hidden='true' class="octicon octicon-check-circle-fill color-fg-success mr-2" data-view-component='true' height='24' version='1.1' viewbox="0 0 24 24" width='24'>
+<path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm16.28-2.72a.751.751 0 0 0-.018-1.042.751.751 0 0 0-1.042-.018l-5.97 5.97-2.47-2.47a.751.751 0 0 0-1.042.018.751.751 0 0 0-.018 1.042l3 3a.75.75 0 0 0 1.06 0Z">
+</path>
+</svg>
+<span class="text-medium">
+                Autobuild
+               </span>
+</div>
+<span class="f5 color-fg-muted d-none d-sm-block">
+               1m 24s
+              </span>
+</li>
+<li class="mb-4 f4-mktg d-flex flex-items-center flex-justify-between js-build-in-item build-in-scale-fade">
+<div class="d-flex flex-items-center">
+<svg aria-hidden='true' class="octicon octicon-check-circle-fill color-fg-success mr-2" data-view-component='true' height='24' version='1.1' viewbox="0 0 24 24" width='24'>
+<path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm16.28-2.72a.751.751 0 0 0-.018-1.042.751.751 0 0 0-1.042-.018l-5.97 5.97-2.47-2.47a.751.751 0 0 0-1.042.018.751.751 0 0 0-.018 1.042l3 3a.75.75 0 0 0 1.06 0Z">
+</path>
+</svg>
+<span class="text-medium">
+                Perform CodeQL Analyses
+               </span>
+</div>
+<span class="f5 color-fg-muted d-none d-sm-block">
+               1m 36s
+              </span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="position-absolute bottom-0 right-0 events-none z-n1" data-target="card-skew.shine">
+</div>
+</div>
+</card-skew>
+<div class="d-flex js-build-in-trigger position-relative" data-build-in-stagger='100'>
+<div class="col-1 d-flex flex-column flex-items-center position-relative">
+<div class="home-campaign-git-line height-full position-relative z-1 js-build-in-item build-in-scale-top" style="background: linear-gradient(transparent, #33B3AE, #33B3AE, transparent);">
+</div>
+<img alt="" aria-hidden='true' class="d-none d-md-block position-absolute bottom-4 js-build-in-item build-in-scale-fade" decoding="async" height='612' loading="lazy" src="https://github.githubassets.com/assets/git-branch-security-2-f6a799957581.svg" style="left: calc(50% - 2px); height: auto; max-width: 9vw;" width='81'></img>
+</div>
+<div class="col-11 ml-2 ml-md-6">
+<div class="river-mktg js-build-in-trigger d-flex gutter gutter-spacious my-5 my-sm-7 my-md-8 position-relative flex-column-reverse flex-md-items-center flex-md-row flex-column pb-4 pb-md-7" data-build-in-stagger='100'>
+<div class="col-12 py-3 mb-2 js-build-in-item col-sm-10 col-md-6 text-left col-lg-6 build-in-slideX-right">
+<div class="pr-md-4">
+<h2 class="color-fg-default mb-3 f2-mktg color-fg-muted">
+<em>
+              GitHub Advanced Security
+             </em>
+             enables you to find and fix vulnerabilities with ease and ship secure code quickly.
+            </h2>
+<a class="link-mktg text-semibold color-fg-default py-1 f3-mktg" data-analytics-event='{"category": "Dive into GitHub Advanced Security", "action": "click to Dive into GitHub Advanced Security", "label": "ref_cta:Dive into GitHub Advanced Security;"}' href="/enterprise/advanced-security">
+             Dive into GitHub Advanced Security
+             <svg class="octicon arrow-symbol-mktg" fill="none" height='16' viewbox="0 0 16 16" width='16' xmlns="http://www.w3.org/2000/svg">
+<path d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z" fill="currentColor">
+</path>
+<path class="octicon-chevrow-stem" d="M1.75 8H11" stroke="currentColor" stroke-linecap="round" stroke-width='1.5'>
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="col-12 py-3 col-md-6 col-lg-6">
+<div class="position-relative">
+<div class="d-flex flex-column position-relative">
+<div class="js-build-in-item build-in-slideX-right border overflow-hidden rounded-2 position-relative left-6 z-1" style="max-width: 541px; margin-top: -30%">
+<img alt="" class="width-full height-auto d-block" decoding="async" height='600' loading="lazy" src="https://github.githubassets.com/assets/illu-ghas-list-84af1f1ce2b8.png" width='1084'></img>
+</div>
+<img alt="" aria-hidden='true' class="position-absolute d-none d-md-block events-none js-build-in-item build-in-fade" decoding="async" height='1000' loading="lazy" src="https://github.githubassets.com/assets/bg-glow-blue-036b8dc2d1ce.png" style="bottom: -160px; right: -220px;" width='1000'></img>
+</div>
+</div>
+</div>
+</div>
+<div class="mb-6 mb-md-12 pb-3 js-build-in-trigger">
+<div class="py-3 js-build-in-item col-sm-10 col-md-6 text-left col-lg-7 build-in-slideX-left">
+<div class="gradient-border-mktg d-inline-block z-1 position-relative px-2 lh-condensed f6-mktg" style="top: -1px">
+<span class="text-gradient-mktg text-semibold">
+             Did you know?
+            </span>
+</div>
+<h3 class="text-accent-primary mb-2 mt-3 h1-mktg text-medium">
+            7x faster
+           </h3>
+<p class="mb-3 f2-mktg text-medium col-6-max">
+            vulnerability fixes with GitHub
+            <sup>
+             1
+            </sup>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="position-relative z-1 js-build-in-trigger">
+<card-skew class="overflow-hidden rounded-3 mb-3 mb-md-5">
+<div class="feature-card-mktg d-md-flex rounded-3 color-bg-subtle border position-relative flex-justify-between z-1 height-full flex-row" data-target="card-skew.bounding">
+<div class="d-md-flex flex-column flex-1 p-5 p-sm-6 py-lg-8 pl-lg-8 pr-lg-12 col-md-6 flex-justify-between">
+<p class="f2-mktg text-medium color-fg-muted mb-4">
+<em>
+             Code scanning
+            </em>
+            is our code analysis tool that helps you remediate issues in your code.
+           </p>
+<div>
+<a class="link-mktg text-semibold color-fg-default py-1 f3-mktg" data-analytics-event='{"category": "Download the latest SAST ebook", "action": "click to Download the latest SAST ebook", "label": "ref_cta:Download the latest SAST ebook;"}' href="https://resources.github.com/security/sast/">
+             Download the latest SAST ebook
+             <svg class="octicon arrow-symbol-mktg" fill="none" height='16' viewbox="0 0 16 16" width='16' xmlns="http://www.w3.org/2000/svg">
+<path d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z" fill="currentColor">
+</path>
+<path class="octicon-chevrow-stem" d="M1.75 8H11" stroke="currentColor" stroke-linecap="round" stroke-width='1.5'>
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="overflow-hidden col-md-6 rounded-right-3">
+<picture>
+<source sizes="(max-width: 768px) 90vw, (max-width: 1280px) 50vw, 644px" srcset="https://github.githubassets.com/assets/illu-code-scanning-fc9dfb212aa3.png?width=1288&format=webpll 1288w,https://github.githubassets.com/assets/illu-code-scanning-fc9dfb212aa3.png?width=1030&format=webpll 1030w,https://github.githubassets.com/assets/illu-code-scanning-fc9dfb212aa3.png?width=772&format=webpll 772w,https://github.githubassets.com/assets/illu-code-scanning-fc9dfb212aa3.png?width=644&format=webpll 644w,https://github.githubassets.com/assets/illu-code-scanning-fc9dfb212aa3.png?width=515&format=webpll 515w,https://github.githubassets.com/assets/illu-code-scanning-fc9dfb212aa3.png?width=257&format=webpll 257w" type="image/webp"></source>
+<source sizes="(max-width: 768px) 90vw, (max-width: 1280px) 50vw, 644px" srcset="https://github.githubassets.com/assets/illu-code-scanning-fc9dfb212aa3.png 1288w,https://github.githubassets.com/assets/illu-code-scanning-fc9dfb212aa3.png?width=644 644w,https://github.githubassets.com/assets/illu-code-scanning-fc9dfb212aa3.png?width=515 515w,https://github.githubassets.com/assets/illu-code-scanning-fc9dfb212aa3.png?width=322 322w" type="image/png"></source>
+<img alt="" aria-hidden='true' class="width-full d-block height-auto js-build-in-item build-in-scale-fade" decoding="async" height='992' loading="lazy" src="https://github.githubassets.com/assets/illu-code-scanning-fc9dfb212aa3.png" width='1288'></img>
+</picture>
+</div>
+<div class="position-absolute bottom-0 right-0 events-none z-n1" data-target="card-skew.shine">
+</div>
+</div>
+</card-skew>
+</div>
+<div class="d-flex flex-column flex-md-row gutter js-build-in-trigger">
+<div class="col-md-6 d-flex">
+<card-skew class="overflow-hidden rounded-3 mb-3 mb-md-5">
+<div class="feature-card-mktg d-md-flex rounded-3 color-bg-subtle border position-relative flex-justify-between z-1 height-full flex-column" data-target="card-skew.bounding">
+<div class="d-md-flex flex-column flex-1 p-5 p-sm-6 py-lg-8 pl-lg-8 pr-lg-12 flex-justify-start">
+<p class="f2-mktg text-medium color-fg-muted mb-4">
+<em>
+              Dependabot
+             </em>
+             makes it easy to find and fix vulnerable dependencies in your supply chain.
+            </p>
+<div>
+<a class="link-mktg text-semibold color-fg-default py-1 f3-mktg" data-analytics-event='{"category": "Explore Dependabot", "action": "click to Explore Dependabot", "label": "ref_cta:Explore Dependabot;"}' href="/features/security/software-supply-chain">
+              Explore Dependabot
+              <svg class="octicon arrow-symbol-mktg" fill="none" height='16' viewbox="0 0 16 16" width='16' xmlns="http://www.w3.org/2000/svg">
+<path d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z" fill="currentColor">
+</path>
+<path class="octicon-chevrow-stem" d="M1.75 8H11" stroke="currentColor" stroke-linecap="round" stroke-width='1.5'>
+</path>
+</svg>
+</a>
+</div>
+</div>
+<div class="overflow-hidden rounded-bottom-3">
+<picture>
+<source sizes="(max-width: 768px) 90vw, (max-width: 1280px) 50vw, 604px" srcset="https://github.githubassets.com/assets/illu-dependabot-d98c73cc6724.png?width=1208&format=webpll 1208w,https://github.githubassets.com/assets/illu-dependabot-d98c73cc6724.png?width=966&format=webpll 966w,https://github.githubassets.com/assets/illu-dependabot-d98c73cc6724.png?width=724&format=webpll 724w,https://github.githubassets.com/assets/illu-dependabot-d98c73cc6724.png?width=604&format=webpll 604w,https://github.githubassets.com/assets/illu-dependabot-d98c73cc6724.png?width=483&format=webpll 483w,https://github.githubassets.com/assets/illu-dependabot-d98c73cc6724.png?width=241&format=webpll 241w" type="image/webp"></source>
+<source sizes="(max-width: 768px) 90vw, (max-width: 1280px) 50vw, 604px" srcset="https://github.githubassets.com/assets/illu-dependabot-d98c73cc6724.png 1208w,https://github.githubassets.com/assets/illu-dependabot-d98c73cc6724.png?width=604 604w,https://github.githubassets.com/assets/illu-dependabot-d98c73cc6724.png?width=483 483w,https://github.githubassets.com/assets/illu-dependabot-d98c73cc6724.png?width=302 302w" type="image/png"></source>
+<img alt="" aria-hidden='true' class="width-full d-block height-auto js-build-in-item build-in-scale-fade" decoding="async" height='764' loading="lazy" src="https://github.githubassets.com/assets/illu-dependabot-d98c73cc6724.png" width='1208'></img>
+</picture>
+</div>
+
+        ```
+        

@@ -1,0 +1,691 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. legacy-javascript => Avoid serving legacy JavaScript to modern browsers: Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. For your bundled JavaScript, adopt a modern script deployment strategy using module/nomodule feature detection to reduce the amount of code shipped to modern browsers, while retaining support for legacy browsers. [Learn how to use modern JavaScript](https://web.dev/articles/publish-modern-javascript)
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        
+<!-- -->
+<a class="skip-link btn-md btn-primary absolute z-11 -top-[100vh] focus:top-0" href="#main-content">
+   Skip to main content
+  </a>
+<div aria-live="assertive" class="global-alert-banner" id="artdeco-global-alert-container" role="alert">
+<!-- -->
+</div>
+<div id="artdeco-global-alerts-cls-offset">
+<div alert-id="urn:li:alert:10" aria-hidden='true' class="artdeco-global-alert artdeco-global-alert--NOTICE artdeco-global-alert--COOKIE_CONSENT" severity="NOTICE" type="COOKIE_CONSENT">
+<section class="artdeco-global-alert__body">
+<li-icon class="artdeco-global-alert__icon">
+<!-- -->
+<!-- -->
+<span>
+<svg height='24' version='1.1' width='24' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path d="M12,2C6.5,2,2,6.5,2,12c0,5.5,4.5,10,10,10c5.5,0,10-4.5,10-10C22,6.5,17.5,2,12,2zM12,20.2c-4.5,0-8.2-3.7-8.2-8.2S7.5,3.8,12,3.8s8.2,3.7,8.2,8.2S16.5,20.2,12,20.2zM11,10h2v8h-2V10zM11,6h2v2h-2V6z" fill="#fff">
+</path>
+</svg>
+</span>
+</li-icon>
+<div class="artdeco-global-alert__responsive-container">
+<!-- -->
+<div class="artdeco-global-alert__responsive-content-container">
+<div class="artdeco-global-alert__content">
+<p>
+         LinkedIn and 3rd parties use essential and non-essential cookies to provide, secure, analyze and improve our Services, and to show you relevant ads (including
+         <b>
+          professional and job ads
+         </b>
+         ) on and off LinkedIn. Learn more in our
+         <a href="https://www.linkedin.com/legal/cookie-policy">
+          Cookie Policy
+         </a>
+         .
+        </p>
+<p>
+         Select Accept to consent or Reject to decline non-essential cookies for this use. You can update your choices at any time in your
+         <a href="https://www.linkedin.com/mypreferences/g/guest-cookies">
+          settings
+         </a>
+         .
+        </p>
+</div>
+</div>
+<div class="artdeco-global-alert-action__wrapper">
+<button action-type="ACCEPT" action-url="" class="artdeco-global-alert-action artdeco-button artdeco-button--inverse artdeco-button--2 artdeco-button--primary" data-control-name="urn:li:control:ga-cookie.consent.accept.v4" data-tracking-control-name="urn:li:control:ga-cookie.consent.accept.v4">
+        Accept
+       </button>
+<button action-type="DENY" action-url="" class="artdeco-global-alert-action artdeco-button artdeco-button--inverse artdeco-button--2 artdeco-button--primary" data-control-name="urn:li:control:ga-cookie.consent.deny.v4" data-tracking-control-name="urn:li:control:ga-cookie.consent.deny.v4">
+        Reject
+       </button>
+</div>
+</div>
+<!-- -->
+</section>
+</div>
+</div>
+<form action="https://www.linkedin.com/uas/login-submit" class="google-auth" method="post">
+<input name="loginCsrfParam" type="hidden" value="338cfb50-7da6-419e-80a4-2b958835179f"></input>
+<!-- -->
+<input name="trk" type="hidden" value="guest_homepage-basic_google-one-tap-submit"></input>
+<code id="termsAndConditionsRendered" style="display: none">
+<!--true-->
+</code>
+<div class="google-one-tap__module hidden fixed flex flex-col items-center top-[20px] right-[20px] z-[9999]">
+<div class="relative top-2 bg-color-background-container-tint pl-2 pr-1 pt-2 pb-3 w-[375px] rounded-md shadow-2xl">
+<p class="text-md font-bold text-color-text">
+      Agree & Join LinkedIn
+     </p>
+<p class="linkedin-tc__text text-color-text-low-emphasis text-xs pb-2 !text-sm !text-color-text" data-impression-id="guest_homepage-basic_one-tap-skip-tc-text">
+      By clicking Continue to join or sign in, you agree to LinkedIn’s
+      <a data-tracking-control-name="linkedin-tc_auth-button_user-agreement" data-tracking-will-navigate='true' href="/legal/user-agreement?trk=linkedin-tc_auth-button_user-agreement" target="_blank">
+       User Agreement
+      </a>
+      ,
+      <a data-tracking-control-name="linkedin-tc_auth-button_privacy-policy" data-tracking-will-navigate='true' href="/legal/privacy-policy?trk=linkedin-tc_auth-button_privacy-policy" target="_blank">
+       Privacy Policy
+      </a>
+      , and
+      <a data-tracking-control-name="linkedin-tc_auth-button_cookie-policy" data-tracking-will-navigate='true' href="/legal/cookie-policy?trk=linkedin-tc_auth-button_cookie-policy" target="_blank">
+       Cookie Policy
+      </a>
+      .
+     </p>
+</div>
+<div data-tracking-control-name="guest_homepage-basic_google-one-tap" id="google-one-tap__container">
+</div>
+</div>
+<div class="loader loader--full-screen">
+<div class="loader__container mb-2 overflow-hidden">
+<icon class="loader__icon inline-block loader__icon--default text-color-progress-loading" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/ddi43qwelxeqjxdd45pe3fvs1" data-svg-class-name="loader__icon-svg--large fill-currentColor h-[60px] min-h-[60px] w-[60px] min-w-[60px]">
+</icon>
+</div>
+</div>
+</form>
+<script data-chunk-uuid="0b869590-04da-4cb0-ae39-eff09aa21916" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/8m736dfzskmdn6bwwqz67iiki" data-module-id="google-gsi-lib">// chunk_script_0b869590-04da-4cb0-ae39-eff09aa21916
+</script>
+<code id="googleAuthLibraryPath" style="display: none">
+<!--"https://static.licdn.com/aero-v1/sc/h/8m736dfzskmdn6bwwqz67iiki"-->
+</code>
+<code id="isLinkedInAppWebView" style="display: none">
+<!--false-->
+</code>
+<code id="isTermsAndConditionsSkipEnabledOneTap" style="display: none">
+<!--true-->
+</code>
+<code id="shouldRemoveUndefinedValues" style="display: none">
+<!--false-->
+</code>
+<form action="https://www.linkedin.com/uas/login-submit" class="microsoft-auth" method="post">
+<input name="loginCsrfParam" type="hidden" value="338cfb50-7da6-419e-80a4-2b958835179f"></input>
+<!-- -->
+<input name="trk" type="hidden" value="guest_homepage-basic_microsoft-auth-submit"></input>
+<div class="loader loader--full-screen">
+<div class="loader__container mb-2 overflow-hidden">
+<icon class="loader__icon inline-block loader__icon--default text-color-progress-loading" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/ddi43qwelxeqjxdd45pe3fvs1" data-svg-class-name="loader__icon-svg--large fill-currentColor h-[60px] min-h-[60px] w-[60px] min-w-[60px]">
+</icon>
+</div>
+</div>
+</form>
+<script data-chunk-uuid="2761b622-b2c0-4ad9-bb2a-24df741f0b75" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/fx69lqty609xpf6l4xb6bs3a" data-module-id="microsoft-auth-lib">// chunk_script_2761b622-b2c0-4ad9-bb2a-24df741f0b75
+</script>
+<code id="isMicrosoftTermsAndConditionsSkipEnabled" style="display: none">
+<!--false-->
+</code>
+<code id="microsoftAuthLibraryPath" style="display: none">
+<!--"https://static.licdn.com/aero-v1/sc/h/fx69lqty609xpf6l4xb6bs3a"-->
+</code>
+<code id="microsoftShowOneTap" style="display: none">
+<!--false-->
+</code>
+<code id="microsoftLocale" style="display: none">
+<!--"en_US"-->
+</code>
+<nav aria-label="Primary" class="nav pt-1.5 pb-2 flex items-center justify-between relative flex-nowrap babymamabear:py-1.5 babybear:flex-wrap">
+<a class="nav__logo-link link-no-visited-state z-1 mr-auto min-h-[52px] flex items-center babybear:z-0 hover:no-underline focus:no-underline active:no-underline" data-tracking-control-name="guest_homepage-basic_nav-header-logo" data-tracking-will-navigate="" href="/?trk=guest_homepage-basic_nav-header-logo">
+<span class="sr-only">
+     LinkedIn
+    </span>
+<icon class="nav-logo--inbug flex text-color-brand papabear:hidden mamabear:hidden order-1" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/4zqr0f9jf98vi2nkijyc3bex2" data-svg-class-name="h-[34px] w-[34px] babybear:h-[26px] babybear:w-[26px]">
+</icon>
+<icon class="block text-color-brand w-[102px] h-[26px] babybear:hidden order-1" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/8fkga714vy9b2wk5auqo5reeb" data-test-id="nav-logo">
+</icon>
+</a>
+<!-- -->
+<ul class="top-nav-menu flex items-center babybear:w-full babybear:justify-between babybear:pt-1 justify-start w-max pt-0 overflow-x-auto after:papamamabear:up-down-divider after:papamamabear:!h-[37px] nav__menu babybear:order-last order-3 ml-auto">
+<li class="">
+<a class="top-nav-link flex justify-center items-center min-h-[52px] hover:text-color-text visited:hover:text-color-text hover:no-underline w-8 flex-col mx-1 babybear:mx-0 text-color-text-secondary visited:text-color-text-secondary" data-tracking-control-name="guest_homepage-basic_guest_nav_menu_articles" data-tracking-will-navigate="" href="https://www.linkedin.com/pulse/topics/home/?trk=guest_homepage-basic_guest_nav_menu_articles">
+<icon class="top-nav-link__icon flex h-3 w-3 flex-shrink-0 justify-center" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/6ulnj3n2ijcmhej768y6oj1hr">
+</icon>
+<span class="top-nav-link__label-text font-sans text-xs leading-regular text-center font-regular">
+       Articles
+      </span>
+</a>
+</li>
+<li class="">
+<a class="top-nav-link flex justify-center items-center min-h-[52px] hover:text-color-text visited:hover:text-color-text hover:no-underline w-8 flex-col mx-1 babybear:mx-0 text-color-text-secondary visited:text-color-text-secondary" data-tracking-control-name="guest_homepage-basic_guest_nav_menu_people" data-tracking-will-navigate="" href="https://www.linkedin.com/pub/dir/+/+?trk=guest_homepage-basic_guest_nav_menu_people">
+<icon class="top-nav-link__icon flex h-3 w-3 flex-shrink-0 justify-center" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/7kb6sn3tm4cx918cx9a5jlb0">
+</icon>
+<span class="top-nav-link__label-text font-sans text-xs leading-regular text-center font-regular">
+       People
+      </span>
+</a>
+</li>
+<li class="">
+<a class="top-nav-link flex justify-center items-center min-h-[52px] hover:text-color-text visited:hover:text-color-text hover:no-underline w-8 flex-col mx-1 babybear:mx-0 text-color-text-secondary visited:text-color-text-secondary" data-tracking-control-name="guest_homepage-basic_guest_nav_menu_learning" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/search?trk=guest_homepage-basic_guest_nav_menu_learning">
+<icon class="top-nav-link__icon flex h-3 w-3 flex-shrink-0 justify-center" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/8wykgzgbqy0t3fnkgborvz54u">
+</icon>
+<span class="top-nav-link__label-text font-sans text-xs leading-regular text-center font-regular">
+       Learning
+      </span>
+</a>
+</li>
+<li class="">
+<a class="top-nav-link flex justify-center items-center min-h-[52px] hover:text-color-text visited:hover:text-color-text hover:no-underline w-8 flex-col mx-1 babybear:mx-0 text-color-text-secondary visited:text-color-text-secondary" data-tracking-control-name="guest_homepage-basic_guest_nav_menu_jobs" data-tracking-will-navigate="" href="https://www.linkedin.com/jobs/search?trk=guest_homepage-basic_guest_nav_menu_jobs">
+<icon class="top-nav-link__icon flex h-3 w-3 flex-shrink-0 justify-center" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/92eb1xekc34eklevj0io6x4ki">
+</icon>
+<span class="top-nav-link__label-text font-sans text-xs leading-regular text-center font-regular">
+       Jobs
+      </span>
+</a>
+</li>
+<li class="">
+<a class="top-nav-link flex justify-center items-center min-h-[52px] hover:text-color-text visited:hover:text-color-text hover:no-underline w-8 flex-col mx-1 babybear:mx-0 text-color-text-secondary visited:text-color-text-secondary" data-tracking-control-name="guest_homepage-basic_guest_nav_menu_games" data-tracking-will-navigate="" href="https://www.linkedin.com/games?trk=guest_homepage-basic_guest_nav_menu_games">
+<icon class="top-nav-link__icon flex h-3 w-3 flex-shrink-0 justify-center" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/29h8hsjuomfp50lam5ipnc3uh">
+</icon>
+<span class="top-nav-link__label-text font-sans text-xs leading-regular text-center font-regular">
+       Games
+      </span>
+</a>
+</li>
+</ul>
+<div class="nav__cta-container order-3 flex gap-x-1 justify-end min-w-[100px] flex-nowrap flex-shrink-0 babybear:flex-wrap flex-2">
+<a class="nav__button-tertiary btn-sm btn-tertiary" data-tracking-control-name="guest_homepage-basic_nav-header-join" data-tracking-will-navigate="" href="https://www.linkedin.com/signup?trk=guest_homepage-basic_nav-header-join">
+     Join now
+    </a>
+<a class="nav__button-secondary btn-sm btn-primary" data-tracking-control-name="guest_homepage-basic_nav-header-signin" data-tracking-will-navigate="" href="https://www.linkedin.com/login?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin">
+     Sign in
+    </a>
+<!-- -->
+</div>
+<!-- -->
+<!-- -->
+</nav>
+<main class="flex flex-col items-center overflow-hidden min-h-[calc(100vh-76px-50px)]" id="main-content" role="main">
+<section class="section min-h-[560px] flex-nowrap pt-[40px] babybear:flex-col babybear:min-h-[0] babybear:px-mobile-container-padding babybear:pt-[24px]" data-test-id="hero">
+<div class="self-start relative flex-shrink-0 w-[55%] pr-[42px] babybear:w-full babybear:pr-[0px]" data-test-id="hero__content">
+<h1 class="font-sans babybear:pb-[24px] font-regular leading-regular text-display-xl text-smoke-70 babybear:text-display-md babybear:text-center" data-test-id="hero__headline">
+      Welcome to your professional community
+     </h1>
+<!-- -->
+<!--400px width and 40px height made standard to match other buttons to Google limitations-->
+<!--https://developers.google.com/identity/gsi/web/reference/js-reference#width-->
+<!--Size controls height/padding. Large hits 40px. https://developers.google.com/identity/gsi/web/reference/js-reference#size-->
+<div class="w-column babybear:w-full babybear:mt-0 mt-3 max-w-[400px]">
+<div class="google-auth-button google-auth-button--without-signin-form mx-auto text-center">
+<!-- -->
+<div class="google-auth-button__placeholder">
+</div>
+<!-- -->
+</div>
+<!-- -->
+<a class="sign-in-form__sign-in-cta btn-md btn-secondary babybear:w-full block mb-3 mx-auto min-h-[40px] py-1" data-test-id="home-hero-sign-in-cta" data-tracking-client-ingraph="" data-tracking-control-name="homepage-basic_home-hero-sign-in-cta" data-tracking-will-navigate="" href="https://www.linkedin.com/login">
+       Sign in with email
+      </a>
+<code id="isTermsAndConditionsSkipEnabledAuthButton" style="display: none">
+<!--true-->
+</code>
+<p class="linkedin-tc__text text-color-text-low-emphasis text-xs pb-2 text-center" data-impression-id="linkedin-tc__button-skip-tc-text">
+       By clicking Continue to join or sign in, you agree to LinkedIn’s
+       <a data-tracking-control-name="linkedin-tc_auth-button_user-agreement" data-tracking-will-navigate='true' href="/legal/user-agreement?trk=linkedin-tc_auth-button_user-agreement" target="_blank">
+        User Agreement
+       </a>
+       ,
+       <a data-tracking-control-name="linkedin-tc_auth-button_privacy-policy" data-tracking-will-navigate='true' href="/legal/privacy-policy?trk=linkedin-tc_auth-button_privacy-policy" target="_blank">
+        Privacy Policy
+       </a>
+       , and
+       <a data-tracking-control-name="linkedin-tc_auth-button_cookie-policy" data-tracking-will-navigate='true' href="/legal/cookie-policy?trk=linkedin-tc_auth-button_cookie-policy" target="_blank">
+        Cookie Policy
+       </a>
+       .
+      </p>
+</div>
+<p class="sign-in-form__join-cta-wrapper text-center my-2 w-column babybear:w-full">
+      New to LinkedIn?
+      <a class="sign-in-form__join-cta link link-no-visited-state" data-test-id="sign-in-join-cta" data-tracking-client-ingraph='true' data-tracking-control-name="homepage-basic_sign-in-form_inline-join-cta" data-tracking-will-navigate='true' href="https://www.linkedin.com/signup">
+       Join now
+      </a>
+</p>
+</div>
+<img alt="Welcome to your professional community" class="flip-rtl block z-[-1] w-[700px] h-[560px] relative flex-shrink babybear:w-[374px] babybear:h-[214px] babybear:static" data-test-id="hero__illustration" src="https://static.licdn.com/aero-v1/sc/h/dxf91zhqd2z6b0bwg85ktm5s4"></img>
+</section>
+<!-- -->
+<!-- -->
+<section class="section py-section flex-wrap babybear:flex-col papabear:flex-nowrap explore-content-hub" data-test-id="explore-content">
+<div class="self-start mb-[24px] w-full flex-shrink-0 papabear:mr-[72px] papabear:mb-[0px] papabear:w-new-column" data-test-id="pill-list-module__cta">
+<h2 class="header">
+      Explore collaborative articles
+     </h2>
+<p class="body mt-1.5">
+      We’re unlocking community knowledge in a new way. Experts add insights directly into each article, started with the help of AI.
+     </p>
+</div>
+<div class="w-full papabear:max-w-[calc(theme('spacing.content-max-w')-theme('spacing.column')-72px)]">
+<!-- -->
+<ul class="show-more-less__list show-more-less__list--no-hidden-elems" data-impression-id="homepage-basic_explore-content_pill-list-module_etta-show-more-less_show-more-less">
+<li class="explore-content__pill">
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-control-name="homepage-basic_explore-content_topic-pill" data-tracking-will-navigate="" href="https://www.linkedin.com/pulse/topics/marketing-s2461/">
+        Marketing
+       </a>
+</li>
+<li class="explore-content__pill">
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-control-name="homepage-basic_explore-content_topic-pill" data-tracking-will-navigate="" href="https://www.linkedin.com/pulse/topics/public-administration-s3697/">
+        Public Administration
+       </a>
+</li>
+<li class="explore-content__pill">
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-control-name="homepage-basic_explore-content_topic-pill" data-tracking-will-navigate="" href="https://www.linkedin.com/pulse/topics/healthcare-s282/">
+        Healthcare
+       </a>
+</li>
+<li class="explore-content__pill">
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-control-name="homepage-basic_explore-content_topic-pill" data-tracking-will-navigate="" href="https://www.linkedin.com/pulse/topics/engineering-s166/">
+        Engineering
+       </a>
+</li>
+<li class="explore-content__pill">
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-control-name="homepage-basic_explore-content_topic-pill" data-tracking-will-navigate="" href="https://www.linkedin.com/pulse/topics/it-services-s57547/">
+        IT Services
+       </a>
+</li>
+<li class="explore-content__pill">
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-control-name="homepage-basic_explore-content_topic-pill" data-tracking-will-navigate="" href="https://www.linkedin.com/pulse/topics/sustainability-s932/">
+        Sustainability
+       </a>
+</li>
+<li class="explore-content__pill">
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-control-name="homepage-basic_explore-content_topic-pill" data-tracking-will-navigate="" href="https://www.linkedin.com/pulse/topics/business-administration-s50111/">
+        Business Administration
+       </a>
+</li>
+<li class="explore-content__pill">
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-control-name="homepage-basic_explore-content_topic-pill" data-tracking-will-navigate="" href="https://www.linkedin.com/pulse/topics/telecommunications-s314/">
+        Telecommunications
+       </a>
+</li>
+<li class="explore-content__pill">
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-control-name="homepage-basic_explore-content_topic-pill" data-tracking-will-navigate="" href="https://www.linkedin.com/pulse/topics/hr-management-s50359/">
+        HR Management
+       </a>
+</li>
+<li class="explore-content__pill">
+<a aria-label="Show all collaborative articles" class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary-emphasis" data-tracking-control-name="homepage-basic_explore-content_topic-pill" data-tracking-will-navigate="" href="https://www.linkedin.com/pulse/topics/home/">
+        Show all
+       </a>
+</li>
+</ul>
+</div>
+</section>
+<section class="section py-section flex-wrap babybear:flex-col papabear:flex-nowrap" data-test-id="search-cta">
+<div class="self-start mb-[24px] w-full flex-shrink-0 papabear:mr-[72px] papabear:mb-[0px] papabear:w-new-column" data-test-id="pill-list-module__cta">
+<h2 class="header">
+      Find the right job or internship for you
+     </h2>
+<!-- -->
+</div>
+<div class="w-full papabear:max-w-[calc(theme('spacing.content-max-w')-theme('spacing.column')-72px)]">
+<!-- -->
+<div class="show-more-less etta-show-more-less">
+<!-- -->
+<ul class="show-more-less__list show-more-less__list--hide-after-10" data-impression-id="homepage-basic_pill-list-module_etta-show-more-less_show-more-less" data-max-num-to-show='10'>
+<li>
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-client-ingraph="" data-tracking-control-name="homepage-basic_suggested-search" data-tracking-will-navigate="" href="https://www.linkedin.com/jobs/engineering-jobs-montreal-qc?trk=homepage-basic_suggested-search">
+         Engineering
+        </a>
+</li>
+<li>
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-client-ingraph="" data-tracking-control-name="homepage-basic_suggested-search" data-tracking-will-navigate="" href="https://www.linkedin.com/jobs/business-development-jobs-montreal-qc?trk=homepage-basic_suggested-search">
+         Business Development
+        </a>
+</li>
+<li>
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-client-ingraph="" data-tracking-control-name="homepage-basic_suggested-search" data-tracking-will-navigate="" href="https://www.linkedin.com/jobs/finance-jobs-montreal-qc?trk=homepage-basic_suggested-search">
+         Finance
+        </a>
+</li>
+<li>
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-client-ingraph="" data-tracking-control-name="homepage-basic_suggested-search" data-tracking-will-navigate="" href="https://www.linkedin.com/jobs/administrative-assistant-jobs-montreal-qc?trk=homepage-basic_suggested-search">
+         Administrative Assistant
+        </a>
+</li>
+<li>
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-client-ingraph="" data-tracking-control-name="homepage-basic_suggested-search" data-tracking-will-navigate="" href="https://www.linkedin.com/jobs/retail-associate-jobs-montreal-qc?trk=homepage-basic_suggested-search">
+         Retail Associate
+        </a>
+</li>
+<li>
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-client-ingraph="" data-tracking-control-name="homepage-basic_suggested-search" data-tracking-will-navigate="" href="https://www.linkedin.com/jobs/customer-service-jobs-montreal-qc?trk=homepage-basic_suggested-search">
+         Customer Service
+        </a>
+</li>
+<li>
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-client-ingraph="" data-tracking-control-name="homepage-basic_suggested-search" data-tracking-will-navigate="" href="https://www.linkedin.com/jobs/operations-jobs-montreal-qc?trk=homepage-basic_suggested-search">
+         Operations
+        </a>
+</li>
+<li>
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-client-ingraph="" data-tracking-control-name="homepage-basic_suggested-search" data-tracking-will-navigate="" href="https://www.linkedin.com/jobs/information-technology-jobs-montreal-qc?trk=homepage-basic_suggested-search">
+         Information Technology
+        </a>
+</li>
+<li>
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-client-ingraph="" data-tracking-control-name="homepage-basic_suggested-search" data-tracking-will-navigate="" href="https://www.linkedin.com/jobs/marketing-jobs-montreal-qc?trk=homepage-basic_suggested-search">
+         Marketing
+        </a>
+</li>
+<li>
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-client-ingraph="" data-tracking-control-name="homepage-basic_suggested-search" data-tracking-will-navigate="" href="https://www.linkedin.com/jobs/human-resources-jobs-montreal-qc?trk=homepage-basic_suggested-search">
+         Human Resources
+        </a>
+</li>
+<li>
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-client-ingraph="" data-tracking-control-name="homepage-basic_suggested-search" data-tracking-will-navigate="" href="https://www.linkedin.com/jobs/healthcare-services-jobs-montreal-qc?trk=homepage-basic_suggested-search">
+         Healthcare Service
+        </a>
+</li>
+<li>
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-client-ingraph="" data-tracking-control-name="homepage-basic_suggested-search" data-tracking-will-navigate="" href="https://www.linkedin.com/jobs/sales-jobs-montreal-qc?trk=homepage-basic_suggested-search">
+         Sales
+        </a>
+</li>
+<li>
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-client-ingraph="" data-tracking-control-name="homepage-basic_suggested-search" data-tracking-will-navigate="" href="https://www.linkedin.com/jobs/program-and-project-management-jobs-montreal-qc?trk=homepage-basic_suggested-search">
+         Program and Project Management
+        </a>
+</li>
+<li>
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-client-ingraph="" data-tracking-control-name="homepage-basic_suggested-search" data-tracking-will-navigate="" href="https://www.linkedin.com/jobs/accounting-jobs-montreal-qc?trk=homepage-basic_suggested-search">
+         Accounting
+        </a>
+</li>
+<li>
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-client-ingraph="" data-tracking-control-name="homepage-basic_suggested-search" data-tracking-will-navigate="" href="https://www.linkedin.com/jobs/arts-and-design-jobs-montreal-qc?trk=homepage-basic_suggested-search">
+         Arts and Design
+        </a>
+</li>
+<li>
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-client-ingraph="" data-tracking-control-name="homepage-basic_suggested-search" data-tracking-will-navigate="" href="https://www.linkedin.com/jobs/community-and-social-services-jobs-montreal-qc?trk=homepage-basic_suggested-search">
+         Community and Social Services
+        </a>
+</li>
+<li>
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-client-ingraph="" data-tracking-control-name="homepage-basic_suggested-search" data-tracking-will-navigate="" href="https://www.linkedin.com/jobs/consulting-jobs-montreal-qc?trk=homepage-basic_suggested-search">
+         Consulting
+        </a>
+</li>
+<li>
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-client-ingraph="" data-tracking-control-name="homepage-basic_suggested-search" data-tracking-will-navigate="" href="https://www.linkedin.com/jobs/education-jobs-montreal-qc?trk=homepage-basic_suggested-search">
+         Education
+        </a>
+</li>
+<li>
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-client-ingraph="" data-tracking-control-name="homepage-basic_suggested-search" data-tracking-will-navigate="" href="https://www.linkedin.com/jobs/entrepreneurship-jobs-montreal-qc?trk=homepage-basic_suggested-search">
+         Entrepreneurship
+        </a>
+</li>
+<li>
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-client-ingraph="" data-tracking-control-name="homepage-basic_suggested-search" data-tracking-will-navigate="" href="https://www.linkedin.com/jobs/legal-jobs-montreal-qc?trk=homepage-basic_suggested-search">
+         Legal
+        </a>
+</li>
+<li>
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-client-ingraph="" data-tracking-control-name="homepage-basic_suggested-search" data-tracking-will-navigate="" href="https://www.linkedin.com/jobs/media-and-communications-jobs-montreal-qc?trk=homepage-basic_suggested-search">
+         Media and Communications
+        </a>
+</li>
+<li>
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-client-ingraph="" data-tracking-control-name="homepage-basic_suggested-search" data-tracking-will-navigate="" href="https://www.linkedin.com/jobs/military-and-protective-services-jobs-montreal-qc?trk=homepage-basic_suggested-search">
+         Military and Protective Services
+        </a>
+</li>
+<li>
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-client-ingraph="" data-tracking-control-name="homepage-basic_suggested-search" data-tracking-will-navigate="" href="https://www.linkedin.com/jobs/product-management-jobs-montreal-qc?trk=homepage-basic_suggested-search">
+         Product Management
+        </a>
+</li>
+<li>
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-client-ingraph="" data-tracking-control-name="homepage-basic_suggested-search" data-tracking-will-navigate="" href="https://www.linkedin.com/jobs/purchasing-jobs-montreal-qc?trk=homepage-basic_suggested-search">
+         Purchasing
+        </a>
+</li>
+<li>
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-client-ingraph="" data-tracking-control-name="homepage-basic_suggested-search" data-tracking-will-navigate="" href="https://www.linkedin.com/jobs/quality-assurance-jobs-montreal-qc?trk=homepage-basic_suggested-search">
+         Quality Assurance
+        </a>
+</li>
+<li>
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-client-ingraph="" data-tracking-control-name="homepage-basic_suggested-search" data-tracking-will-navigate="" href="https://www.linkedin.com/jobs/real-estate-jobs-montreal-qc?trk=homepage-basic_suggested-search">
+         Real Estate
+        </a>
+</li>
+<li>
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-client-ingraph="" data-tracking-control-name="homepage-basic_suggested-search" data-tracking-will-navigate="" href="https://www.linkedin.com/jobs/research-jobs-montreal-qc?trk=homepage-basic_suggested-search">
+         Research
+        </a>
+</li>
+<li>
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-client-ingraph="" data-tracking-control-name="homepage-basic_suggested-search" data-tracking-will-navigate="" href="https://www.linkedin.com/jobs/support-jobs-montreal-qc?trk=homepage-basic_suggested-search">
+         Support
+        </a>
+</li>
+<li>
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-client-ingraph="" data-tracking-control-name="homepage-basic_suggested-search" data-tracking-will-navigate="" href="https://www.linkedin.com/jobs/administrative-jobs-montreal-qc?trk=homepage-basic_suggested-search">
+         Administrative
+        </a>
+</li>
+</ul>
+<button aria-expanded='false' aria-label="Show more Suggested Searches" class="show-more-less__button show-more-less__more-button show-more-less-button" data-tracking-control-name="homepage-basic_pill-list-module_etta-show-more-less_show_more">
+       Show more
+       <icon class="show-more-less__button--chevron show-more-less-button-icon" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/cyolgscd0imw2ldqppkrb84vo">
+</icon>
+</button>
+<button aria-expanded='false' aria-label="Show less Suggested Searches" class="show-more-less__button show-more-less__less-button show-more-less-button show-more-less__button--hide" data-tracking-control-name="homepage-basic_pill-list-module_etta-show-more-less_show_more">
+       Show less
+       <icon class="show-more-less__button--chevron show-more-less-button-icon" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/4chtt12k98xwnba1nimld2oyg">
+</icon>
+</button>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="w-full flex items-center py-[70px] after:full-color-bkg after:content-[''] flex-col after:bg-[#f1ece5] babybear:flex-col babybear:items-start babybear:py-[56px] babybear:px-mobile-container-padding" data-impression-id="homepage-basic_talent-finder-cta" data-test-id="talent-finder-cta">
+<h2 class="header !text-warm-red-70 text-center pb-4 babybear:mb-[24px]">
+      Post your job for millions of people to see
+     </h2>
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary-emphasis flex-shrink babybear:my-auto babybear:mx-[0px]" data-tracking-control-name="homepage-basic_talent-finder-cta" data-tracking-will-navigate="" href="https://www.linkedin.com/talent/post-a-job?trk=homepage-basic_talent-finder-cta">
+      Post a job
+     </a>
+</div>
+</section>
+<section class="section py-section flex-wrap babybear:flex-col papabear:flex-nowrap top-product-categories">
+<div class="self-start mb-[24px] w-full flex-shrink-0 papabear:mr-[72px] papabear:mb-[0px] papabear:w-new-column" data-test-id="pill-list-module__cta">
+<h2 class="header">
+      Discover the best software tools
+     </h2>
+<p class="body mt-1.5">
+      Connect with buyers who have first-hand experience to find the best products for you.
+     </p>
+</div>
+<div class="w-full papabear:max-w-[calc(theme('spacing.content-max-w')-theme('spacing.column')-72px)]">
+<!-- -->
+<ul class="show-more-less__list show-more-less__list--no-hidden-elems" data-impression-id="homepage-basic_discover_products_pill-list-module_etta-show-more-less_show-more-less">
+<li class="top-product-categories__pill">
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-control-name="homepage-basic_top-product-categories_topic-pill" data-tracking-will-navigate="" href="https://www.linkedin.com/products/categories/e-commerce-platforms">
+        E-Commerce Platforms
+       </a>
+</li>
+<li class="top-product-categories__pill">
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-control-name="homepage-basic_top-product-categories_topic-pill" data-tracking-will-navigate="" href="https://www.linkedin.com/products/categories/customer-relationship-management-software">
+        CRM Software
+       </a>
+</li>
+<li class="top-product-categories__pill">
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-control-name="homepage-basic_top-product-categories_topic-pill" data-tracking-will-navigate="" href="https://www.linkedin.com/products/categories/human-resources-management-systems">
+        Human Resources Management Systems
+       </a>
+</li>
+<li class="top-product-categories__pill">
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-control-name="homepage-basic_top-product-categories_topic-pill" data-tracking-will-navigate="" href="https://www.linkedin.com/products/categories/recruiting-software">
+        Recruiting Software
+       </a>
+</li>
+<li class="top-product-categories__pill">
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-control-name="homepage-basic_top-product-categories_topic-pill" data-tracking-will-navigate="" href="https://www.linkedin.com/products/categories/sales-intelligence-software">
+        Sales Intelligence Software
+       </a>
+</li>
+<li class="top-product-categories__pill">
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-control-name="homepage-basic_top-product-categories_topic-pill" data-tracking-will-navigate="" href="https://www.linkedin.com/products/categories/project-management-software">
+        Project Management Software
+       </a>
+</li>
+<li class="top-product-categories__pill">
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-control-name="homepage-basic_top-product-categories_topic-pill" data-tracking-will-navigate="" href="https://www.linkedin.com/products/categories/help-desk-software">
+        Help Desk Software
+       </a>
+</li>
+<li class="top-product-categories__pill">
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-control-name="homepage-basic_top-product-categories_topic-pill" data-tracking-will-navigate="" href="https://www.linkedin.com/products/categories/social-networking-software">
+        Social Networking Software
+       </a>
+</li>
+<li class="top-product-categories__pill">
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-control-name="homepage-basic_top-product-categories_topic-pill" data-tracking-will-navigate="" href="https://www.linkedin.com/products/categories/desktop-publishing-software">
+        Desktop Publishing Software
+       </a>
+</li>
+<li class="top-product-categories__pill">
+<a aria-label="Show full list of software and platforms" class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary-emphasis" data-tracking-control-name="homepage-basic_top-product-categories_topic-pill" data-tracking-will-navigate="" href="https://www.linkedin.com/products/home">
+        Show all
+       </a>
+</li>
+</ul>
+</div>
+</section>
+<section class="section py-section flex-wrap babybear:flex-col papabear:flex-nowrap game-hub-banner">
+<div class="self-start mb-[24px] w-full flex-shrink-0 papabear:mr-[72px] papabear:mb-[0px] papabear:w-new-column" data-test-id="pill-list-module__cta">
+<h2 class="header">
+      Keep your mind sharp with games
+     </h2>
+<p class="body mt-1.5">
+      Take a break and reconnect with your network through quick daily games.
+     </p>
+</div>
+<div class="w-full papabear:max-w-[calc(theme('spacing.content-max-w')-theme('spacing.column')-72px)]">
+<!-- -->
+<ul class="show-more-less__list show-more-less__list--no-hidden-elems" data-impression-id="homepage-basic_discover_games_pill-list-module_etta-show-more-less_show-more-less">
+<li>
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-control-name="homepage-basic_game-hub__game-pill" data-tracking-will-navigate="" href="https://www.linkedin.com/games/pinpoint">
+        Pinpoint
+       </a>
+</li>
+<li>
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-control-name="homepage-basic_game-hub__game-pill" data-tracking-will-navigate="" href="https://www.linkedin.com/games/queens">
+        Queens
+       </a>
+</li>
+<li>
+<a class="btn-md mb-1.5 mr-[6px] flex items-center w-fit float-left btn-secondary" data-tracking-control-name="homepage-basic_game-hub__game-pill" data-tracking-will-navigate="" href="https://www.linkedin.com/games/crossclimb">
+        Crossclimb
+       </a>
+</li>
+</ul>
+</div>
+</section>
+<div class="section min-h-section py-section after:full-color-bkg after:content-[''] after:bg-color-background-canvas babybear:mx-[-16px] babybear:pt-[0px]" data-nosnippet="">
+<!-- -->
+<section class="slide-list relative w-full">
+<header class="slide-list__header mb-1.5">
+<!-- -->
+</header>
+<div class="slide-list__nav">
+<div class="slide-list__nav-wrap absolute flex h-full items-center top-0 z-1 slide-list__nav-wrap--prev left-[-20px]">
+<div class="previous-slide-list__a11y-notification sr-only hidden" role="alert">
+        No more previous content
+       </div>
+<button aria-label="Previous Slide" class="slide-list__nav-button btn-sm btn-overlay cursor-pointer disabled:hidden" data-direction="prev" data-tracking-control-name="homepage-basic_testimonials_slide_list_prev_button" disabled="">
+<icon class="slide-list__nav-icon flex items-center justify-center pointer-events-none h-3 rtl:-scale-x-100 rtl:translate-x-[7px]" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/e5ka7p8s9n5r0z9p6kpmm3hig">
+</icon>
+</button>
+</div>
+</div>
+<div class="relative overflow-hidden">
+<ul class="slide-list__list items-stretch flex list-none transition-all duration-slow ease-standard">
+<li class="flex justify-between relative items-center mr-[96px] w-full babybear:flex babybear:flex-wrap-reverse babybear:mr-[16px]" data-test-id="testimonial">
+<div class="w-[564px] mr-[64px] mamabear:max-w-[50vw] babybear:w-[300px] babybear:mt-[16px] babybear:mr-[0]">
+<h2 class="header !text-warm-red-70">
+          Let the right people know you’re open to work
+         </h2>
+<p class="body my-2">
+<span>
+           With the Open To Work feature, you can privately tell recruiters or publicly share with the LinkedIn community that you are looking for new job opportunities.
+          </span>
+</p>
+</div>
+<img alt="" class="w-[450px] rounded-[50%] mamabear:max-w-[50vw] babybear:h-[300px] babybear:w-[300px] babybear:mt-[16px] babybear:mx-auto" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/dbvmk0tsk0o0hd59fi64z3own"></img>
+</li>
+<li class="flex justify-between relative items-center mr-[96px] w-full babybear:flex babybear:flex-wrap-reverse babybear:mr-[16px]" data-test-id="testimonial">
+<div class="w-[564px] mr-[64px] mamabear:max-w-[50vw] babybear:w-[300px] babybear:mt-[16px] babybear:mr-[0]">
+<h2 class="header !text-warm-red-70">
+          Conversations today could lead to opportunity tomorrow
+         </h2>
+<p class="body my-2">
+<span>
+           Sending messages to people you know is a great way to strengthen relationships as you take the next step in your career.
+          </span>
+</p>
+</div>
+<img alt="" class="w-[450px] rounded-[50%] mamabear:max-w-[50vw] babybear:h-[300px] babybear:w-[300px] babybear:mt-[16px] babybear:mx-auto" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/2r8kd5zqpi905lkzsshdlvvn5"></img>
+</li>
+<li class="flex justify-between relative items-center mr-[96px] w-full babybear:flex babybear:flex-wrap-reverse babybear:mr-[16px]" data-test-id="testimonial">
+<div class="w-[564px] mr-[64px] mamabear:max-w-[50vw] babybear:w-[300px] babybear:mt-[16px] babybear:mr-[0]">
+<h2 class="header !text-warm-red-70">
+          Stay up to date on your industry
+         </h2>
+<p class="body my-2">
+<span>
+           From live videos, to stories, to newsletters and more, LinkedIn is full of ways to stay up to date on the latest discussions in your industry.
+          </span>
+</p>
+        ```
+        

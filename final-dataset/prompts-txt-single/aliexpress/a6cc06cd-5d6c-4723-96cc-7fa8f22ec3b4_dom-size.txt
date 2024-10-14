@@ -1,0 +1,681 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. dom-size => Avoid an excessive DOM size: A large DOM will increase memory usage, cause longer [style calculations](https://developers.google.com/web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations), and produce costly [layout reflows](https://developers.google.com/speed/articles/reflow). [Learn how to avoid an excessive DOM size](https://developer.chrome.com/docs/lighthouse/performance/dom-size/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        
+<input id="isHome" type="hidden" value='true'></input>
+<div class="index-page">
+<div id="_global_header_23_" style="height: 72px"></div>
+<div class="faas-container" id="faas-container">
+<div id="root">
+<div></div>
+<div class="home--new-home--UXKZmgj" data-tticheck="main">
+<div class="group-floor" data-component-id='5543069' data-floor-name="pc2023-header-tabs">
+<div class="pc2023-header-tab--container---84XTBD" data-spc="tab" data-spm="tab">
+<div class="row-container--root--33oSY1n">
+<div class="pc2023-header-tab--tabs-main--2EOR-kL">
+<div class="pc2023-header-tab--all-categories-part--FwIOdmw"></div>
+<div class="pc2023-header-tab--all-tabs-part--1JMWNGu" data-tabs='true'>
+<a class="pc2023-header-tab--tab-item--2Hs_3sA" data-spm="3fornn" href="https://www.aliexpress.com/gcp/300000512/nnmixupdatev3?disableNav=YES&pha_manifest=ssr&_immersiveMode=true&channelLinkTag=nn_newgcp" style="color: #fd384f; font-weight: 700" target="_blank">
+                        3 from US $2.99
+                      </a>
+<a class="pc2023-header-tab--tab-item--2Hs_3sA" data-spm="choicetab" href="https://www.aliexpress.com/gcp/300000556/8eAWDEY6Zi?disableNav=YES&pha_manifest=ssr&_immersiveMode=true" style="color: ; font-weight: normal" target="_blank">
+                        Choice
+                      </a>
+<a class="pc2023-header-tab--tab-item--2Hs_3sA" data-spm="superdeal" href="https://www.aliexpress.com/gcp/300000444/6NcN22X5fS?disableNav=YES&pha_manifest=ssr&_immersiveMode=true" style="color: ; font-weight: normal" target="_blank">
+                        SuperDeals
+                      </a>
+<a class="pc2023-header-tab--tab-item--2Hs_3sA" data-spm="mall" href="https://www.aliexpress.com/gcp/300000516/AfMFTanzYN?disableNav=YES&pha_manifest=ssr&_immersiveMode=true" style="color: ; font-weight: normal" target="_blank">
+                        Plus
+                      </a>
+<a class="pc2023-header-tab--tab-item--2Hs_3sA" data-spm="new" href="https://www.aliexpress.com/gcp/300000918/kM4FZFHKGx?disableNav=YES&pha_manifest=ssr&_immersiveMode=true" style="color: ; font-weight: normal" target="_blank">
+                        New
+                      </a>
+<a class="pc2023-header-tab--tab-item--2Hs_3sA" data-spm="Topbuyer" href="https://inbusiness.aliexpress.com/app/super-buyer/want-shop/home" style="color: ; font-weight: normal" target="_blank">
+                        AliExpress Business
+                      </a>
+<a class="pc2023-header-tab--tab-item--2Hs_3sA" data-spm="wigs" href="https://www.aliexpress.com/gcp/300001426/wigs?disableNav=YES&pha_manifest=ssr&_immersiveMode=true" style="color: ; font-weight: normal" target="_blank">
+                        Wigs
+                      </a>
+<a class="pc2023-header-tab--tab-item--2Hs_3sA" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=home_%26_garden" style="font-weight: normal" target="_blank">
+                        Home & Garden
+                      </a>
+<a class="pc2023-header-tab--tab-item--2Hs_3sA" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=hair_extensions_%26_wigs" style="font-weight: normal" target="_blank">
+                        Hair Extensions & Wigs
+                      </a>
+<a class="pc2023-header-tab--tab-item--2Hs_3sA" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=men%27s_clothing" style="font-weight: normal" target="_blank">
+                        Men's Clothing
+                      </a>
+<a class="pc2023-header-tab--tab-item--2Hs_3sA" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=accessories" style="font-weight: normal" target="_blank">
+                        Accessories
+                      </a>
+<a class="pc2023-header-tab--tab-item--2Hs_3sA" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=consumer_electronics" style="font-weight: normal" target="_blank">
+                        Consumer Electronics
+                      </a>
+<a class="pc2023-header-tab--tab-item--2Hs_3sA" href="https://www.aliexpress.com/p/calp-plus/index.html?osf=category_navigate_newTab2&queryFrom=kingKong&categoryTab=home_improvement_%26_lighting" style="font-weight: normal" target="_blank">
+                        Home Improvement & Lighting
+                      </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="common-floor" data-component-id='5543082' data-floor-name="pc2023-site-info" data-spm="mindbanner">
+<div class="pc2023-site-info--wrap--3QwwL7p">
+<div class="row-container--root--33oSY1n">
+<div class="pc2023-site-info--site-main--2AaBJF1">
+<a class="pc2023-site-info--link--2B_IZhI" style="cursor: default" target="_blank">
+<img alt="" class="pc2023-site-info--site-image--kWOv6EV" fetchpriority="high" src="https://ae01.alicdn.com/kf/S0fdd691113b74eb6bab15b8eba6093252.png"></img>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="group-floor" data-component-id='5545885' data-floor-name="pc2023-old-four-grid-new-user">
+<div class="row-container--root--33oSY1n">
+<div class="pc2023-structure-4-new--min-new-block--13qMGMd pc2023-structure-4-new--grid-main--cco1uHc" id="pc2023Structure" style="
+                    margin: 0 auto;
+                    padding: 24px 0 0 0;
+                    border-top-left-radius: 0px;
+                    border-top-right-radius: 0px;
+                    background-color: #fff;
+                  ">
+<div class="pc2023-structure-4-new--left--1XNTXbe">
+<div class="common-floor pc2023-structure-4-new--left-bottom--2YcwGIy" data-component-id='5545895' data-floor-name="pc2023-new-user" data-spm="newuser">
+<a href="https://www.aliexpress.com/gcp/300000544/w5mAJSydGG?spm=a2g0o.home.newuser.1.1a6a7065qIhXeQ&disableNav=YES&pha_manifest=ssr&_immersiveMode=true&productIds=1005006743316025" target="_blank">
+<div class="vertical-small-card--vs-main--2U8DUK0" data-spm="newuser" style="background-color: #fff5ef">
+<div class="vertical-small-card--title-part--1JOEl6e">
+<span class="vertical-small-card--title--1ot37nb">
+                              Welcome Deal
+                            </span>
+<span class="vertical-small-card--sub-title--elFRbY6">
+                              Your exclusive price
+                            </span>
+</div>
+<div class="vertical-small-card--slider-part--Ntifd1L vertical-small-card--flag-none--3Cqbj0c">
+<div class="slick-slider slick-initialized" dir="ltr">
+<button class="slick-arrow slick-prev slick-prev-default" data-role="none" style="display: block" type="button">
+<!-- -->
+                                Previous
+                              </button>
+<div class="slick-list">
+<div class="slick-track" style="width: 900%; left: -100%">
+<div aria-hidden='true' class="slick-slide slick-cloned" data-index='-1' style="width: 11.11111111111111%" tabindex='-1'>
+<div>
+<a aria-hidden='true' class="base-card--card-main--2xHO1eS vertical-small-card--new-card--3eO8FSn" href="https://www.aliexpress.com/gcp/300000544/w5mAJSydGG?spm=a2g0o.home.newuser.1.1a6a7065qIhXeQ&disableNav=YES&pha_manifest=ssr&_immersiveMode=true&productIds=1005006743316025&productIds=1005006707946473&productId=1005006707946473&guideItemId=1005006707946473&widgetId=101002385160" id="baseCard" target="_blank">
+<div class="base-card--img-part--na7r0B-">
+<img alt="6 PCs Non-Slip Magnetic Cross Head Household Electric Driver Screw Set - High Hardness Hand Drill Bits for Electric Screwdrivers" src="//ae-pic-a1.aliexpress-media.com/kf/S566a273843b941ae99e2d7c59314b109v.jpg_350x350.jpg" style="
+                                              max-width: 242px;
+                                              max-height: 242px;
+                                            "></img>
+</div>
+<div class="base-card--price-part--r0nZsxB undefined" id="pricePart">
+<div class="price-group--price--yPoorLE">
+<span class="price-group--current-price--3zntRbZ" style="color: #ff0000">
+                                              C$5.84
+                                            </span>
+<span class="price-group--previous-price--1yHSc_d">
+                                              C$14.48
+                                            </span>
+</div>
+<div class="base-card--img-discount--wQIeQeC" id="imgDiscount" style="
+                                              background-image: url(//ae01.alicdn.com/kf/S78fc35f117b0418fa0e1ac4befb39eaaH/216x184.png);
+                                            ">
+<span class="base-card--discount-sub--1P581In" id="discountSub">
+                                              59
+                                            </span>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div aria-hidden='false' class="slick-slide slick-active slick-current" data-index='0' style="
+                                      outline: none;
+                                      width: 11.11111111111111%;
+                                    " tabindex='-1'>
+<div>
+<a aria-hidden='true' class="base-card--card-main--2xHO1eS vertical-small-card--new-card--3eO8FSn" href="https://www.aliexpress.com/gcp/300000544/w5mAJSydGG?spm=a2g0o.home.newuser.1.1a6a7065qIhXeQ&disableNav=YES&pha_manifest=ssr&_immersiveMode=true&productIds=1005006743316025&productIds=1005006358629381&productId=1005006358629381&guideItemId=1005006358629381&widgetId=101002385160" id="baseCard" target="_blank">
+<div class="base-card--img-part--na7r0B-">
+<img alt="TWS A6S Wireless Bluetooth Headset Earbuds Noice Cancelling Earphone Bluetooth Headphones with Mic for Huawei Xiaomi Redmi" src="//ae-pic-a1.aliexpress-media.com/kf/S0143c5bb08e549c3b29f747df0112100W.jpg_350x350.jpg" style="
+                                              max-width: 242px;
+                                              max-height: 242px;
+                                            "></img>
+</div>
+<div class="base-card--price-part--r0nZsxB undefined" id="pricePart">
+<div class="price-group--price--yPoorLE">
+<span class="price-group--current-price--3zntRbZ" style="color: #ff0000">
+                                              C$5.52
+                                            </span>
+<span class="price-group--previous-price--1yHSc_d">
+                                              C$13.84
+                                            </span>
+</div>
+<div class="base-card--img-discount--wQIeQeC" id="imgDiscount" style="
+                                              background-image: url(//ae01.alicdn.com/kf/S78fc35f117b0418fa0e1ac4befb39eaaH/216x184.png);
+                                            ">
+<span class="base-card--discount-sub--1P581In" id="discountSub">
+                                              60
+                                            </span>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div aria-hidden='true' class="slick-slide" data-index='1' style="
+                                      outline: none;
+                                      width: 11.11111111111111%;
+                                    " tabindex='-1'>
+<div>
+<a aria-hidden='true' class="base-card--card-main--2xHO1eS vertical-small-card--new-card--3eO8FSn" href="https://www.aliexpress.com/gcp/300000544/w5mAJSydGG?spm=a2g0o.home.newuser.1.1a6a7065qIhXeQ&disableNav=YES&pha_manifest=ssr&_immersiveMode=true&productIds=1005006743316025&productIds=1005005987103826&productId=1005005987103826&guideItemId=1005005987103826&widgetId=101002385160" id="baseCard" target="_blank">
+<div class="base-card--img-part--na7r0B-">
+<img alt="Professional Industrial Shears:Stainless Steel Scissors Tin Snips for Metal Sheet & PVC Pipe Cutting" src="//ae-pic-a1.aliexpress-media.com/kf/Sec985556357245ea93afcb0d7b39b7bcc.jpg_350x350.jpg" style="
+                                              max-width: 242px;
+                                              max-height: 242px;
+                                            "></img>
+</div>
+<div class="base-card--price-part--r0nZsxB undefined" id="pricePart">
+<div class="price-group--price--yPoorLE">
+<span class="price-group--current-price--3zntRbZ" style="color: #ff0000">
+                                              C$10.64
+                                            </span>
+<span class="price-group--previous-price--1yHSc_d">
+                                              C$21.28
+                                            </span>
+</div>
+<div class="base-card--img-discount--wQIeQeC" id="imgDiscount" style="
+                                              background-image: url(//ae01.alicdn.com/kf/S78fc35f117b0418fa0e1ac4befb39eaaH/216x184.png);
+                                            ">
+<span class="base-card--discount-sub--1P581In" id="discountSub">
+                                              50
+                                            </span>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div aria-hidden='true' class="slick-slide" data-index='2' style="
+                                      outline: none;
+                                      width: 11.11111111111111%;
+                                    " tabindex='-1'>
+<div>
+<a aria-hidden='true' class="base-card--card-main--2xHO1eS vertical-small-card--new-card--3eO8FSn" href="https://www.aliexpress.com/gcp/300000544/w5mAJSydGG?spm=a2g0o.home.newuser.1.1a6a7065qIhXeQ&disableNav=YES&pha_manifest=ssr&_immersiveMode=true&productIds=1005006743316025&productIds=1005006033178622&productId=1005006033178622&guideItemId=1005006033178622&widgetId=101002385160" id="baseCard" target="_blank">
+<div class="base-card--img-part--na7r0B-">
+<img alt="Booms Fishing CC1 6Pcs Aluminum Alloy Carabiner Keychain Outdoor Camping Climbing Snap Clip Lock Buckle Hook Fishing Accessories" src="//ae-pic-a1.aliexpress-media.com/kf/Sa5f1e8c682e344138e2505117cba80894.jpg_350x350.jpg" style="
+                                              max-width: 242px;
+                                              max-height: 242px;
+                                            "></img>
+</div>
+<div class="base-card--price-part--r0nZsxB undefined" id="pricePart">
+<div class="price-group--price--yPoorLE">
+<span class="price-group--current-price--3zntRbZ" style="color: #ff0000">
+                                              C$4.65
+                                            </span>
+<span class="price-group--previous-price--1yHSc_d">
+                                              C$12.09
+                                            </span>
+</div>
+<div class="base-card--img-discount--wQIeQeC" id="imgDiscount" style="
+                                              background-image: url(//ae01.alicdn.com/kf/S78fc35f117b0418fa0e1ac4befb39eaaH/216x184.png);
+                                            ">
+<span class="base-card--discount-sub--1P581In" id="discountSub">
+                                              61
+                                            </span>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div aria-hidden='true' class="slick-slide" data-index='3' style="
+                                      outline: none;
+                                      width: 11.11111111111111%;
+                                    " tabindex='-1'>
+<div>
+<a aria-hidden='true' class="base-card--card-main--2xHO1eS vertical-small-card--new-card--3eO8FSn" href="https://www.aliexpress.com/gcp/300000544/w5mAJSydGG?spm=a2g0o.home.newuser.1.1a6a7065qIhXeQ&disableNav=YES&pha_manifest=ssr&_immersiveMode=true&productIds=1005006743316025&productIds=1005006707946473&productId=1005006707946473&guideItemId=1005006707946473&widgetId=101002385160" id="baseCard" target="_blank">
+<div class="base-card--img-part--na7r0B-">
+<img alt="6 PCs Non-Slip Magnetic Cross Head Household Electric Driver Screw Set - High Hardness Hand Drill Bits for Electric Screwdrivers" src="//ae-pic-a1.aliexpress-media.com/kf/S566a273843b941ae99e2d7c59314b109v.jpg_350x350.jpg" style="
+                                              max-width: 242px;
+                                              max-height: 242px;
+                                            "></img>
+</div>
+<div class="base-card--price-part--r0nZsxB undefined" id="pricePart">
+<div class="price-group--price--yPoorLE">
+<span class="price-group--current-price--3zntRbZ" style="color: #ff0000">
+                                              C$5.84
+                                            </span>
+<span class="price-group--previous-price--1yHSc_d">
+                                              C$14.48
+                                            </span>
+</div>
+<div class="base-card--img-discount--wQIeQeC" id="imgDiscount" style="
+                                              background-image: url(//ae01.alicdn.com/kf/S78fc35f117b0418fa0e1ac4befb39eaaH/216x184.png);
+                                            ">
+<span class="base-card--discount-sub--1P581In" id="discountSub">
+                                              59
+                                            </span>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div aria-hidden='true' class="slick-slide slick-cloned" data-index='4' style="width: 11.11111111111111%" tabindex='-1'>
+<div>
+<a aria-hidden='true' class="base-card--card-main--2xHO1eS vertical-small-card--new-card--3eO8FSn" href="https://www.aliexpress.com/gcp/300000544/w5mAJSydGG?spm=a2g0o.home.newuser.1.1a6a7065qIhXeQ&disableNav=YES&pha_manifest=ssr&_immersiveMode=true&productIds=1005006743316025&productIds=1005006358629381&productId=1005006358629381&guideItemId=1005006358629381&widgetId=101002385160" id="baseCard" target="_blank">
+<div class="base-card--img-part--na7r0B-">
+<img alt="TWS A6S Wireless Bluetooth Headset Earbuds Noice Cancelling Earphone Bluetooth Headphones with Mic for Huawei Xiaomi Redmi" src="//ae-pic-a1.aliexpress-media.com/kf/S0143c5bb08e549c3b29f747df0112100W.jpg_350x350.jpg" style="
+                                              max-width: 242px;
+                                              max-height: 242px;
+                                            "></img>
+</div>
+<div class="base-card--price-part--r0nZsxB undefined" id="pricePart">
+<div class="price-group--price--yPoorLE">
+<span class="price-group--current-price--3zntRbZ" style="color: #ff0000">
+                                              C$5.52
+                                            </span>
+<span class="price-group--previous-price--1yHSc_d">
+                                              C$13.84
+                                            </span>
+</div>
+<div class="base-card--img-discount--wQIeQeC" id="imgDiscount" style="
+                                              background-image: url(//ae01.alicdn.com/kf/S78fc35f117b0418fa0e1ac4befb39eaaH/216x184.png);
+                                            ">
+<span class="base-card--discount-sub--1P581In" id="discountSub">
+                                              60
+                                            </span>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div aria-hidden='true' class="slick-slide slick-cloned" data-index='5' style="width: 11.11111111111111%" tabindex='-1'>
+<div>
+<a aria-hidden='true' class="base-card--card-main--2xHO1eS vertical-small-card--new-card--3eO8FSn" href="https://www.aliexpress.com/gcp/300000544/w5mAJSydGG?spm=a2g0o.home.newuser.1.1a6a7065qIhXeQ&disableNav=YES&pha_manifest=ssr&_immersiveMode=true&productIds=1005006743316025&productIds=1005005987103826&productId=1005005987103826&guideItemId=1005005987103826&widgetId=101002385160" id="baseCard" target="_blank">
+<div class="base-card--img-part--na7r0B-">
+<img alt="Professional Industrial Shears:Stainless Steel Scissors Tin Snips for Metal Sheet & PVC Pipe Cutting" src="//ae-pic-a1.aliexpress-media.com/kf/Sec985556357245ea93afcb0d7b39b7bcc.jpg_350x350.jpg" style="
+                                              max-width: 242px;
+                                              max-height: 242px;
+                                            "></img>
+</div>
+<div class="base-card--price-part--r0nZsxB undefined" id="pricePart">
+<div class="price-group--price--yPoorLE">
+<span class="price-group--current-price--3zntRbZ" style="color: #ff0000">
+                                              C$10.64
+                                            </span>
+<span class="price-group--previous-price--1yHSc_d">
+                                              C$21.28
+                                            </span>
+</div>
+<div class="base-card--img-discount--wQIeQeC" id="imgDiscount" style="
+                                              background-image: url(//ae01.alicdn.com/kf/S78fc35f117b0418fa0e1ac4befb39eaaH/216x184.png);
+                                            ">
+<span class="base-card--discount-sub--1P581In" id="discountSub">
+                                              50
+                                            </span>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div aria-hidden='true' class="slick-slide slick-cloned" data-index='6' style="width: 11.11111111111111%" tabindex='-1'>
+<div>
+<a aria-hidden='true' class="base-card--card-main--2xHO1eS vertical-small-card--new-card--3eO8FSn" href="https://www.aliexpress.com/gcp/300000544/w5mAJSydGG?spm=a2g0o.home.newuser.1.1a6a7065qIhXeQ&disableNav=YES&pha_manifest=ssr&_immersiveMode=true&productIds=1005006743316025&productIds=1005006033178622&productId=1005006033178622&guideItemId=1005006033178622&widgetId=101002385160" id="baseCard" target="_blank">
+<div class="base-card--img-part--na7r0B-">
+<img alt="Booms Fishing CC1 6Pcs Aluminum Alloy Carabiner Keychain Outdoor Camping Climbing Snap Clip Lock Buckle Hook Fishing Accessories" src="//ae-pic-a1.aliexpress-media.com/kf/Sa5f1e8c682e344138e2505117cba80894.jpg_350x350.jpg" style="
+                                              max-width: 242px;
+                                              max-height: 242px;
+                                            "></img>
+</div>
+<div class="base-card--price-part--r0nZsxB undefined" id="pricePart">
+<div class="price-group--price--yPoorLE">
+<span class="price-group--current-price--3zntRbZ" style="color: #ff0000">
+                                              C$4.65
+                                            </span>
+<span class="price-group--previous-price--1yHSc_d">
+                                              C$12.09
+                                            </span>
+</div>
+<div class="base-card--img-discount--wQIeQeC" id="imgDiscount" style="
+                                              background-image: url(//ae01.alicdn.com/kf/S78fc35f117b0418fa0e1ac4befb39eaaH/216x184.png);
+                                            ">
+<span class="base-card--discount-sub--1P581In" id="discountSub">
+                                              61
+                                            </span>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div aria-hidden='true' class="slick-slide slick-cloned" data-index='7' style="width: 11.11111111111111%" tabindex='-1'>
+<div>
+<a aria-hidden='true' class="base-card--card-main--2xHO1eS vertical-small-card--new-card--3eO8FSn" href="https://www.aliexpress.com/gcp/300000544/w5mAJSydGG?spm=a2g0o.home.newuser.1.1a6a7065qIhXeQ&disableNav=YES&pha_manifest=ssr&_immersiveMode=true&productIds=1005006743316025&productIds=1005006707946473&productId=1005006707946473&guideItemId=1005006707946473&widgetId=101002385160" id="baseCard" target="_blank">
+<div class="base-card--img-part--na7r0B-">
+<img alt="6 PCs Non-Slip Magnetic Cross Head Household Electric Driver Screw Set - High Hardness Hand Drill Bits for Electric Screwdrivers" src="//ae-pic-a1.aliexpress-media.com/kf/S566a273843b941ae99e2d7c59314b109v.jpg_350x350.jpg" style="
+                                              max-width: 242px;
+                                              max-height: 242px;
+                                            "></img>
+</div>
+<div class="base-card--price-part--r0nZsxB undefined" id="pricePart">
+<div class="price-group--price--yPoorLE">
+<span class="price-group--current-price--3zntRbZ" style="color: #ff0000">
+                                              C$5.84
+                                            </span>
+<span class="price-group--previous-price--1yHSc_d">
+                                              C$14.48
+                                            </span>
+</div>
+<div class="base-card--img-discount--wQIeQeC" id="imgDiscount" style="
+                                              background-image: url(//ae01.alicdn.com/kf/S78fc35f117b0418fa0e1ac4befb39eaaH/216x184.png);
+                                            ">
+<span class="base-card--discount-sub--1P581In" id="discountSub">
+                                              59
+                                            </span>
+</div>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+<button class="slick-arrow slick-next slick-next-default" data-role="none" style="display: block" type="button">
+<!-- -->
+                                Next
+                              </button>
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="common-floor pc2023-structure-4-new--main-mid--3ABqCCY" data-component-id='6249451' data-floor-name="pc2023-buy-more-save-more-vertical" data-spm="new">
+<a class="pc2023-buy-more-save-more-vertical--choice-vertical-main--3tCNBer" href="https://www.aliexpress.com/gcp/300000918/kM4FZFHKGx?disableNav=YES&pha_manifest=ssr&_immersiveMode=true" target="_blank">
+<div class="vertical-big-card--vb-main--1taSwvM" style="background-color: #f5f5f5">
+<div class="vertical-big-card--title-part--1wCqSwm">
+<div class="vertical-big-card--line-1-title--l8NACY_">
+<span class="vertical-big-card--title--T1lBfmz">
+                              New
+                            </span>
+</div>
+<div class="vertical-big-card--line-2-title--2hFjTca">
+<span class="vertical-big-card--sec-title--2QhS1b_">
+                              Launched in the last 30 days
+                            </span>
+</div>
+</div>
+<div class="vertical-big-card--row-shop-part--BJR2Yhh">
+<div class="vertical-big-card--top-part--37wdA_7">
+<a aria-hidden='true' class="base-card--card-main--2xHO1eS vertical-big-card--vb-card--2aC0txc" href="https://www.aliexpress.com/gcp/300000918/kM4FZFHKGx?disableNav=YES&pha_manifest=ssr&_immersiveMode=true&productIds=1005007450203224" id="baseCard" target="_blank">
+<div class="base-card--img-part--na7r0B-">
+<img alt="Luxury Women's Belt Leather Designer Luxury Belt Women" src="//ae-pic-a1.aliexpress-media.com/kf/S9f8872f6b1574a718ba14829398c6cecj.jpg_480x480.jpg" style="max-width: 224px; max-height: 224px"></img>
+</div>
+<div class="base-card--price-part--r0nZsxB vertical-big-card--top-price-part--3aj7CJR" id="pricePart">
+<div class="price-group--price-wrap--1KrCsCb" id="priceWrap">
+<div class="es--wrap--2p8eS4Q notranslate" style="
+                                      font-weight: bold;
+                                      color: #ff0000;
+                                      font-size: 12px;
+                                    ">
+<span class="es--char--1Qcd3D7"> C$ </span>
+<span class="es--space2--2NEE6dI"> </span>
+<span class="es--char53--1jg_1HC"> 4 </span>
+<span class="es--char53--1jg_1HC"> 8 </span>
+<span class="es--char--1Qcd3D7"> . </span>
+<span class="es--char--1Qcd3D7"> 8 </span>
+<span class="es--char--1Qcd3D7"> 7 </span>
+</div>
+</div>
+<div class="base-card--discount--3MBgk9K">
+                                  -50%
+                                </div>
+</div>
+</a>
+</div>
+<div class="vertical-big-card--bottom-part--gZz6_Fm">
+<a aria-hidden='true' class="base-card--card-main--2xHO1eS vertical-big-card--vb-card--2aC0txc" href="https://www.aliexpress.com/gcp/300000918/kM4FZFHKGx?disableNav=YES&pha_manifest=ssr&_immersiveMode=true&productIds=1005007432539146" id="baseCard" target="_blank">
+<div class="base-card--img-part--na7r0B-">
+<img alt="Kaftan Robe Femme Musulmane Black abaya women Ramadan Niqab Khimar Muslim Abaya Dubai Turkey Islam Prayer Clothes arabic dress" src="//ae-pic-a1.aliexpress-media.com/kf/Sedb94b0b7ff94d82adef02019df5175fN.jpg_480x480.jpg" style="max-width: 146px; max-height: 146px"></img>
+</div>
+<div class="base-card--price-part--r0nZsxB undefined" id="pricePart">
+<div class="price-group--price-wrap--1KrCsCb" id="priceWrap">
+<div class="es--wrap--2p8eS4Q notranslate" style="
+                                      font-weight: bold;
+                                      color: #ff0000;
+                                      font-size: 12px;
+                                    ">
+<span class="es--char--1Qcd3D7"> C$ </span>
+<span class="es--space2--2NEE6dI"> </span>
+<span class="es--char53--1jg_1HC"> 3 </span>
+<span class="es--char53--1jg_1HC"> 0 </span>
+<span class="es--char--1Qcd3D7"> . </span>
+<span class="es--char--1Qcd3D7"> 1 </span>
+<span class="es--char--1Qcd3D7"> 3 </span>
+</div>
+</div>
+</div>
+</a>
+<a aria-hidden='true' class="base-card--card-main--2xHO1eS vertical-big-card--vb-card--2aC0txc" href="https://www.aliexpress.com/gcp/300000918/kM4FZFHKGx?disableNav=YES&pha_manifest=ssr&_immersiveMode=true&productIds=1005007442894747" id="baseCard" target="_blank">
+<div class="base-card--img-part--na7r0B-">
+<img alt="Atk Kong Xsoft Esports Mouse Pad Anti Slip Pad Desktop Gaming Gears PORON CSGO Pads For 60%-80% Mechanical Keyboard For Gamer" src="//ae-pic-a1.aliexpress-media.com/kf/S8599b0ac6a7749eda3c8becb48209963B.jpg_480x480.jpg" style="max-width: 146px; max-height: 146px"></img>
+</div>
+<div class="base-card--price-part--r0nZsxB undefined" id="pricePart">
+<div class="price-group--price-wrap--1KrCsCb" id="priceWrap">
+<div class="es--wrap--2p8eS4Q notranslate" style="
+                                      font-weight: bold;
+                                      color: #ff0000;
+                                      font-size: 12px;
+                                    ">
+<span class="es--char--1Qcd3D7"> C$ </span>
+<span class="es--space2--2NEE6dI"> </span>
+<span class="es--char53--1jg_1HC"> 3 </span>
+<span class="es--char53--1jg_1HC"> 3 </span>
+<span class="es--char--1Qcd3D7"> . </span>
+<span class="es--char--1Qcd3D7"> 5 </span>
+<span class="es--char--1Qcd3D7"> 1 </span>
+</div>
+</div>
+<div class="base-card--discount--3MBgk9K">
+                                  -2%
+                                </div>
+</div>
+</a>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="pc2023-structure-4-new--main-right--hVeuj6F">
+<div class="common-floor pc2023-structure-4-new--right-top--2e4xSYV" data-component-id='5681092' data-floor-name="pc2023-nn-new-horizontal" data-spm="3fornn">
+<a class="" data-spm="3fornn" href="https://www.aliexpress.com/gcp/300000512/nnmixupdatev3?disableNav=YES&pha_manifest=ssr&_immersiveMode=true&channelLinkTag=nn_newgcp" target="_blank">
+<div class="horizontal-big-card--hb-main--2tNeula" data-spm="3fornn" style="background-color: #fffad5">
+<div class="horizontal-big-card--title-part--2-OywZZ">
+<img alt="" class="horizontal-big-card--img-title--zwOnQEF" src="https://ae01.alicdn.com/kf/S52934e7e11764a5bbc26825570471d03v/526x88.png"></img>
+<div class="horizontal-big-card--sec-title--29cVlm5">
+<img alt="" class="horizontal-big-card--choice-icon--2Kn3Iqd" src="https://ae01.alicdn.com/kf/S1887a285b60743859ac7bdbfca5e0896Z/154x64.png"></img>
+<span class="horizontal-big-card--sec-text-title--29qCT4g">
+                                Free shipping
+                              </span>
+</div>
+</div>
+<div class="horizontal-big-card--shop-part--1-QMSGc" id="shopPart">
+<a aria-hidden='true' class="base-card--card-main--2xHO1eS horizontal-big-card--new-min-card--2SOfV6U" href="https://www.aliexpress.com/gcp/300000512/nnmixupdatev3?disableNav=YES&pha_manifest=ssr&_immersiveMode=true&channelLinkTag=nn_newgcp&productIds=1005006275354469" id="baseCard" target="_blank">
+<div class="base-card--img-part--na7r0B-">
+<img alt="15Cm Furyu Arknights Figure Amiya Lappland Noodle Stopper  PVC Anime Kawaii Action Figures Collection Model Statue Kid ToyGifts" src="//ae-pic-a1.aliexpress-media.com/kf/S6cc88d7b0c674dc1907390af275ed734M.jpg_480x480.jpg" style="max-width: 184px; max-height: 184px"></img>
+</div>
+<div class="base-card--price-part--r0nZsxB undefined" id="pricePart">
+<div class="price-group--price-wrap--1KrCsCb" id="priceWrap">
+<div class="es--wrap--2p8eS4Q notranslate" style="
+                                      font-weight: bold;
+                                      color: #ff0000;
+                                      margin-right: 8px;
+                                      font-size: 12px;
+                                    ">
+<span class="es--char--1Qcd3D7"> C$ </span>
+<span class="es--space2--2NEE6dI"> </span>
+<span class="es--char53--1jg_1HC"> 6 </span>
+<span class="es--char--1Qcd3D7"> . </span>
+<span class="es--char--1Qcd3D7"> 7 </span>
+<span class="es--char--1Qcd3D7"> 3 </span>
+</div>
+<span class="price-group--after-format-previous-price--3AQ9Aho">
+                                    C$27.65
+                                  </span>
+</div>
+</div>
+</a>
+<a aria-hidden='true' class="base-card--card-main--2xHO1eS horizontal-big-card--new-min-card--2SOfV6U" href="https://www.aliexpress.com/gcp/300000512/nnmixupdatev3?disableNav=YES&pha_manifest=ssr&_immersiveMode=true&channelLinkTag=nn_newgcp&productIds=1005006207437012" id="baseCard" target="_blank">
+<div class="base-card--img-part--na7r0B-">
+<img alt="Night Safety Warning Sticker For Ninebot G30 Electric Scooter Reflective Stickers Body Wheel Hub Accessories For Xiaomi M365/Pro" src="//ae-pic-a1.aliexpress-media.com/kf/S4ab62b13d63b4d9d9cf6943f77971945g.jpg_480x480.jpg" style="max-width: 184px; max-height: 184px"></img>
+</div>
+<div class="base-card--price-part--r0nZsxB undefined" id="pricePart">
+<div class="price-group--price-wrap--1KrCsCb" id="priceWrap">
+<div class="es--wrap--2p8eS4Q notranslate" style="
+                                      font-weight: bold;
+                                      color: #ff0000;
+                                      margin-right: 8px;
+                                      font-size: 12px;
+                                    ">
+<span class="es--char--1Qcd3D7"> C$ </span>
+<span class="es--space2--2NEE6dI"> </span>
+<span class="es--char53--1jg_1HC"> 3 </span>
+<span class="es--char--1Qcd3D7"> . </span>
+<span class="es--char--1Qcd3D7"> 3 </span>
+<span class="es--char--1Qcd3D7"> 6 </span>
+</div>
+<span class="price-group--after-format-previous-price--3AQ9Aho">
+                                    C$13.02
+                                  </span>
+</div>
+</div>
+</a>
+<a aria-hidden='true' class="base-card--card-main--2xHO1eS horizontal-big-card--new-min-card--2SOfV6U" href="https://www.aliexpress.com/gcp/300000512/nnmixupdatev3?disableNav=YES&pha_manifest=ssr&_immersiveMode=true&channelLinkTag=nn_newgcp&productIds=1005006731440414" id="baseCard" target="_blank">
+<div class="base-card--img-part--na7r0B-">
+<img alt="Real 50W 6-Ports USB Quick Charger PD QC 3.0 Fast Charging Display Type-C EU UK US 1.5M Desktop Power Adapter For Iphone Samsung" src="//ae-pic-a1.aliexpress-media.com/kf/Sd81f81f726fb4063a680826d7d3410b44.jpg_480x480.jpg" style="max-width: 184px; max-height: 184px"></img>
+</div>
+<div class="base-card--price-part--r0nZsxB undefined" id="pricePart">
+<div class="price-group--price-wrap--1KrCsCb" id="priceWrap">
+<div class="es--wrap--2p8eS4Q notranslate" style="
+                                      font-weight: bold;
+                                      color: #ff0000;
+                                      margin-right: 8px;
+                                      font-size: 12px;
+                                    ">
+<span class="es--char--1Qcd3D7"> C$ </span>
+<span class="es--space2--2NEE6dI"> </span>
+<span class="es--char53--1jg_1HC"> 7 </span>
+<span class="es--char--1Qcd3D7"> . </span>
+<span class="es--char--1Qcd3D7"> 2 </span>
+<span class="es--char--1Qcd3D7"> 9 </span>
+</div>
+<span class="price-group--after-format-previous-price--3AQ9Aho">
+                                    C$23.61
+                                  </span>
+</div>
+</div>
+</a>
+<a aria-hidden='true' class="base-card--card-main--2xHO1eS horizontal-big-card--new-min-card--2SOfV6U" href="https://www.aliexpress.com/gcp/300000512/nnmixupdatev3?disableNav=YES&pha_manifest=ssr&_immersiveMode=true&channelLinkTag=nn_newgcp&productIds=1005006035357400" id="baseCard" target="_blank">
+<div class="base-card--img-part--na7r0B-">
+<img alt="Men's Quick Dry Short Sleeve Gym Running Moisture Wicking Round Neck T-Shirt Training Exercise Gym Sport Shirt Tops Lightweight" src="//ae-pic-a1.aliexpress-media.com/kf/S4c3c73827fa748dc81d7096bae07f136K.jpg_480x480.jpg" style="max-width: 184px; max-height: 184px"></img>
+</div>
+<div class="base-card--price-part--r0nZsxB undefined" id="pricePart">
+<div class="price-group--price-wrap--1KrCsCb" id="priceWrap">
+<div class="es--wrap--2p8eS4Q notranslate" style="
+                                      font-weight: bold;
+                                      color: #ff0000;
+                                      margin-right: 8px;
+                                      font-size: 12px;
+                                    ">
+<span class="es--char--1Qcd3D7"> C$ </span>
+<span class="es--space2--2NEE6dI"> </span>
+<span class="es--char53--1jg_1HC"> 6 </span>
+<span class="es--char--1Qcd3D7"> . </span>
+<span class="es--char--1Qcd3D7"> 1 </span>
+<span class="es--char--1Qcd3D7"> 7 </span>
+</div>
+<span class="price-group--after-format-previous-price--3AQ9Aho">
+                                    C$14.22
+                                  </span>
+</div>
+</div>
+</a>
+</div>
+</div>
+</a>
+</div>
+<div class="common-floor pc2023-structure-4-new--right-bottom--n7xI_9V" data-component-id='5546744' data-floor-name="pc2023-sd-horizontal-small" data-spm="superdeal">
+<a class="pc2023-sd-horizontal-small--SD-hori-small-content--2fdugwj pc2023-sd-horizontal-small--flag-none--3Ozbgkp" href="https://www.aliexpress.com/gcp/300000444/6NcN22X5fS?disableNav=YES&pha_manifest=ssr&_immersiveMode=true" target="_blank">
+<div class="horizontal-small-card--new-min-hs-main--3hXYCvY" data-spm="superdeal">
+<div class="horizontal-small-card--title-part--2NDIrvK">
+<img alt="" class="horizontal-small-card--img-title--3XXF-Vc" src="https://ae01.alicdn.com/kf/Scb6d8338a38f486bafd7ecce991c5e101/980x112.png"></img>
+<div class="horizontal-small-card--line-2-title--2M7JOnN">
+<span class="horizontal-small-card--sub-title--3S5Sb7I">
+                                Limited time offers
+                              </span>
+</div>
+</div>
+<div class="horizontal-small-card--shop-part--1P7lCz5">
+<a aria-hidden='true' class="base-card--card-main--2xHO1eS horizontal-small-card--new-hs-card--25U8_-Y" href="https://www.aliexpress.com/gcp/300000444/6NcN22X5fS?disableNav=YES&pha_manifest=ssr&_immersiveMode=true&productIds=1005006425635305" id="baseCard" target="_blank">
+<div class="base-card--img-part--na7r0B-">
+<img alt="USB LED Strip Lights RGB 5050 Led Light Bluetooth App Control Flexible LED Lamp Ribbon For Room Decor TV BackLight Diode Tape" src="//ae-pic-a1.aliexpress-media.com/kf/S9e35d808698f4fc59b10874c32dd9715z.jpg_480x480.jpg" style="max-width: 184px; max-height: 184px"></img>
+</div>
+<div class="base-card--price-part--r0nZsxB undefined" id="pricePart">
+<div class="price-group--price-wrap--1KrCsCb" id="priceWrap">
+<div class="es--wrap--2p8eS4Q notranslate" style="
+                                      font-weight: bold;
+                                      color: #ff0000;
+                                      margin-right: 8px;
+                                      font-size: 12px;
+                                    ">
+<span class="es--char--1Qcd3D7"> C$ </span>
+<span class="es--space2--2NEE6dI"> </span>
+<span class="es--char53--1jg_1HC"> 1 </span>
+<span class="es--char--1Qcd3D7"> . </span>
+<span class="es--char--1Qcd3D7"> 3 </span>
+<span class="es--char--1Qcd3D7"> 9 </span>
+</div>
+<span class="price-group--after-format-previous-price--3AQ9Aho">
+                                    C$2.79
+                                  </span>
+</div>
+<div class="base-card--img-discount--wQIeQeC" id="imgDiscount" style="
+                                    background-image: url(//ae01.alicdn.com/kf/S78fc35f117b0418fa0e1ac4befb39eaaH/216x184.png);
+                                  ">
+<span class="base-card--discount-sub--1P581In" id="discountSub">
+                                    50
+                                  </span>
+</div>
+</div>
+</a>
+
+        ```
+        

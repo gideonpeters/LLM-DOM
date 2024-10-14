@@ -1,0 +1,732 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. largest-contentful-paint => Largest Contentful Paint: Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        
+</a>
+</li>
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="/r/popular/hot/?geo_filter=ie" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                  Ireland
+                 </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="/r/popular/hot/?geo_filter=it" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                  Italy
+                 </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="/r/popular/hot/?geo_filter=jp" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                  Japan
+                 </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="/r/popular/hot/?geo_filter=my" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                  Malaysia
+                 </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="/r/popular/hot/?geo_filter=mx" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                  Mexico
+                 </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="/r/popular/hot/?geo_filter=nz" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                  New Zealand
+                 </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="/r/popular/hot/?geo_filter=ph" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                  Philippines
+                 </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="/r/popular/hot/?geo_filter=pl" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                  Poland
+                 </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="/r/popular/hot/?geo_filter=pt" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                  Portugal
+                 </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="/r/popular/hot/?geo_filter=pr" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                  Puerto Rico
+                 </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="/r/popular/hot/?geo_filter=ro" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                  Romania
+                 </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="/r/popular/hot/?geo_filter=rs" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                  Serbia
+                 </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="/r/popular/hot/?geo_filter=sg" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                  Singapore
+                 </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="/r/popular/hot/?geo_filter=es" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                  Spain
+                 </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="/r/popular/hot/?geo_filter=se" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                  Sweden
+                 </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="/r/popular/hot/?geo_filter=tw" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                  Taiwan
+                 </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="/r/popular/hot/?geo_filter=th" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                  Thailand
+                 </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="/r/popular/hot/?geo_filter=tr" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                  Turkey
+                 </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="/r/popular/hot/?geo_filter=gb" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                  United Kingdom
+                 </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+</div>
+</shreddit-sort-dropdown>
+</div>
+<shreddit-layout-event-setter cookie-domain=".reddit.com" country="CA">
+<shreddit-sort-dropdown class="nd:block nd:max-h-[32px] nd:h-[32px] nd:invisible nd:w-[54px]" header-text="View" selected-item-display-type="icon" sort-event="layout-view-change" telemetry-source="layout_switch">
+<div slot="selected-item">
+<svg fill="currentColor" height='16' icon-name="view-card-outline" rpl="" viewbox="0 0 20 20" width='16' xmlns="http://www.w3.org/2000/svg">
+<path d="M17.882 1H2.118A1.12 1.12 0 0 0 1 2.119v15.762A1.119 1.119 0 0 0 2.118 19h15.764A1.12 1.12 0 0 0 19 17.881V2.119A1.12 1.12 0 0 0 17.882 1Zm-.132 16.75H2.25v-7.138h15.5v7.138ZM2.25 9.362V2.25h15.5v7.112H2.25Z">
+</path>
+</svg>
+</div>
+<div slot="tooltip-content">
+             Change post view
+            </div>
+<div slot="dropdown-items">
+<data value="cardView">
+<li class="relative list-none mt-0" role="presentation" rpl="" rpl-selected="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary-onBackground bg-neutral-background-selected hover:bg-neutral-background-selected hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="?feedViewType=cardView" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex shrink-0 items-center justify-center h-xl w-xl text-20 leading-4">
+<svg fill="currentColor" height='16' icon-name="view-card-fill" rpl="" viewbox="0 0 20 20" width='16' xmlns="http://www.w3.org/2000/svg">
+<path d="M19 9H1V2.119A1.119 1.119 0 0 1 2.118 1h15.764A1.119 1.119 0 0 1 19 2.119V9ZM1 17.881A1.119 1.119 0 0 0 2.118 19h15.764A1.12 1.12 0 0 0 19 17.881V11H1v6.881Z">
+</path>
+</svg>
+</span>
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                   Card
+                  </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+</data>
+<data value="compactView">
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="?feedViewType=compactView" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex shrink-0 items-center justify-center h-xl w-xl text-20 leading-4">
+<svg fill="currentColor" height='16' icon-name="view-classic-outline" rpl="" viewbox="0 0 20 20" width='16' xmlns="http://www.w3.org/2000/svg">
+<path d="M17.882 2H2.118A1.118 1.118 0 0 0 1 3.116v13.768A1.118 1.118 0 0 0 2.118 18h15.764A1.118 1.118 0 0 0 19 16.884V3.116A1.118 1.118 0 0 0 17.882 2ZM2.25 3.25h15.5V7H2.25V3.25Zm15.5 13.5H2.25v-3.5h15.5v3.5Zm0-4.75H2.25V8.25h15.5V12Z">
+</path>
+</svg>
+</span>
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                   Compact
+                  </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+</data>
+</div>
+</shreddit-sort-dropdown>
+</shreddit-layout-event-setter>
+</div>
+</shreddit-async-loader>
+</div>
+<hr class="border-0 border-b-sm border-solid border-b-neutral-border-weak"></hr>
+<shreddit-media-lightbox>
+</shreddit-media-lightbox>
+<dsa-transparency-modal-provider class="nd:visible" is-desktop="">
+<faceplate-loader loading="programmatic" name="DsaTransparencyModal_rt7cKM" src="https://www.redditstatic.com/shreddit/en-US/dsa-transparency-modal-client-js-3393b391.js">
+</faceplate-loader>
+<faceplate-partial loading="programmatic" name="DsaTransparencyModal_rt7cKM" src="/svc/shreddit/dsa-transparency-modal/">
+</faceplate-partial>
+</dsa-transparency-modal-provider>
+<shreddit-feed class="nd:visible" is-feed-translatable="" navigation-session-id="9eec75f5-7d81-454e-b7e8-5a0512b420e1" reload-url="/svc/shreddit/feeds/popular-feed?distance=0&sort=HOT&navigationSessionId=9eec75f5-7d81-454e-b7e8-5a0512b420e1" virtualize="">
+<article aria-label="Cheap Foreign Labor Soars in Canada as Young Workers Are Left Jobless" class="w-full m-0">
+<!-- "data-ks-item" is used by the modqueue-keyboard-shortcuts manager to fetch the item on which to dispatch events to -->
+<shreddit-post author="Toronto-tenant-2020" author-id="t2_7apnp2pe" class="block relative cursor-pointer group bg-neutral-background focus-within:bg-neutral-background-hover hover:bg-neutral-background-hover xs:rounded-[16px] px-md py-2xs my-2xs nd:visible" comment-count='632' content-href="https://www.bnnbloomberg.ca/business/2024/08/12/cheap-foreign-labor-soars-in-canada-as-young-workers-are-left-jobless" created-timestamp="2024-08-12T14:45:14.957000+0000" data-ks-item="" domain="bnnbloomberg.ca" feedindex='0' icon="https://www.redditstatic.com/avatars/defaults/v2/avatar_default_2.png" id="t3_1eqflul" is-awardable="" is-desktop-viewport="" is-embeddable="" is-link-post="" is-slim-card="" item-state="" moderation-verdict="" pdp-target="_self" permalink="/r/canada/comments/1eqflul/cheap_foreign_labor_soars_in_canada_as_young/" post-title="Cheap Foreign Labor Soars in Canada as Young Workers Are Left Jobless" post-type="link" previous-actions-feature="" score='1844' subreddit-id="t5_2qh68" subreddit-prefixed-name="r/canada" view-context="AggregateFeed" view-type="cardView" vote-type="">
+<!-- "data-ks-id" is used by the modqueue-keyboard-shortcuts manager to track focus for the current item in the modqueue to trigger shortcuts for -->
+<a class="absolute inset-0" data-ks-id="t3_1eqflul" href="/r/canada/comments/1eqflul/cheap_foreign_labor_soars_in_canada_as_young/" slot="full-post-link" target="_self">
+<faceplate-screen-reader-content>
+            Cheap Foreign Labor Soars in Canada as Young Workers Are Left Jobless
+           </faceplate-screen-reader-content>
+</a>
+<div class="grid grid-cols-[1fr_min-content] grid-rows-[auto_auto_auto] gap-x-2xs">
+<div class="col-start-1 col-end-3 row-start-1 row-end-2">
+<span class="flex justify-between text-12 min-h-[32px] mb-2xs mt-[-4px]" slot="credit-bar">
+<span class="flex flex-wrap text-12 gap-2xs items-center min-w-0 relative">
+<span class="flex items-center gap 2xs" data-post-click-location="subreddit-link">
+<shreddit-async-loader bundlename="faceplate_hovercard" class="">
+<faceplate-hovercard aria-label="r/canada" class="nd:visible" data-id="community-hover-card" position="bottom-start">
+<a class="text-neutral-content whitespace-nowrap flex items-center h-xl a text-12 font-semibold no-visited no-underline hover:no-underline" data-testid="subreddit-name" href="/r/canada/" rpl="">
+<div class="pr-[6px]">
+<faceplate-img alt="r/canada icon" class="shreddit-subreddit-icon__icon rounded-full overflow-hidden nd:visible nd:bg-secondary-background flex items-center justify-center nd:w-lg nd:h-lg text-16" height='24' loading="lazy" src="https://styles.redditmedia.com/t5_2qh68/styles/communityIcon_fl2udvka4pw81.jpg?width=48&height=48&frame=1&auto=webp&crop=48:48,smart&s=f8a55b45d24ddf63fded99046cf1199028a140a7" style="color: #EA0027; background-color: #EA0027" width='24'>
+</faceplate-img>
+</div>
+<span>
+                   r/canada
+                  </span>
+</a>
+<div class="max-w-[360px] w-[90vw] overflow-hidden p-0 -m-[0.5rem]" slot="content">
+<div class="flex flex-col">
+<div class="px-sm pt-sm flex items-center">
+<span class="w-[48px] h-[48px] text-24 shrink-0">
+<faceplate-img alt="r/canada icon" class="shreddit-subreddit-icon__icon rounded-full overflow-hidden nd:visible nd:bg-secondary-background" height='48' loading="lazy" src="https://styles.redditmedia.com/t5_2qh68/styles/communityIcon_fl2udvka4pw81.jpg?width=96&height=96&frame=1&auto=webp&crop=96:96,smart&s=4874d52c48ad1d2329fe88756550220ccc0d2bf5" style="color: #EA0027; background-color: #EA0027" width='48'>
+</faceplate-img>
+</span>
+<span class="flex ml-xs grow-0 w-100">
+<faceplate-tracker action="click" noun="title" source="subreddit_hovercard">
+<a class="text-18 font-bold text-neutral-content-strong leading-6 a text-14 no-visited hover:underline" href="/r/canada/" rpl="">
+                       r/canada
+                      </a>
+</faceplate-tracker>
+</span>
+<faceplate-tracker action="click" class="ml-auto" noun="join_signup_cta" source="subreddit_hovercard">
+<shreddit-join-button button-type="secondary" buttonsize="x-small" name="canada" subreddit-id="t5_2qh68">
+</shreddit-join-button>
+</faceplate-tracker>
+</div>
+<p class="px-md pt-md m-0 whitespace-normal text-14 leading-5 font-normal">
+                    Welcome to Canada’s official subreddit! This is the place to engage on all things Canada. Nous parlons en anglais et en français. Please be respectful of each other when posting, and note that users new to the subreddit might experience posting limitations until they become more active and longer members of the community. Do not hesitate to message the mods if you experience any issues!
+                   </p>
+<hr class="mx-md mt-md border-neutral-border-weak"></hr>
+<div class="px-md py-md flex items-center">
+<span class="flex flex-col">
+<span class="text-14 text-neutral-content leading-5 font-semibold">
+<faceplate-number number='2766979' pretty="">
+</faceplate-number>
+</span>
+<span class="text-12 leading-4 text-neutral-content-weak">
+                      Members
+                     </span>
+</span>
+<span class="ml-xl flex flex-col" data-testid="community-hover-card:active-count">
+<span class="text-14 text-neutral-content leading-5 font-semibold">
+<faceplate-number number='1262' pretty="">
+</faceplate-number>
+</span>
+<span class="flex items-center">
+<span class="bg-kiwigreen-400 rounded-full w-xs h-xs">
+</span>
+<span class="text-12 leading-4 text-neutral-content-weak ml-2xs">
+                       Online
+                      </span>
+</span>
+</span>
+</div>
+</div>
+</div>
+</faceplate-hovercard>
+</shreddit-async-loader>
+</span>
+<shreddit-async-loader bundlename="distinguished_post_tags" class="contents">
+<shreddit-distinguished-post-tags class="nd:visible flex" post-id="t3_1eqflul">
+<span aria-label="Post distinguished by admin" class="hidden font-semibold text-12 tracking-wide distinguished-admin text-identity-admin">
+                 ADMIN
+                </span>
+<span aria-label="Post distinguished by moderator" class="hidden font-semibold text-12 tracking-wide distinguished-mod text-identity-moderator">
+                 MOD
+                </span>
+</shreddit-distinguished-post-tags>
+</shreddit-async-loader>
+<span class="inline-block my-0 created-separator text-neutral-content-weak">
+               •
+              </span>
+<faceplate-timeago class="whitespace-nowrap text-neutral-content-weak" format="short" ts="2024-08-12T14:45:14.957000+0000">
+</faceplate-timeago>
+</span>
+<span class="flex items-center pl-xs">
+<shreddit-join-button button-classes="h-[24px]" button-type="primary" buttonsize="x-small" class="relative px-2xs" data-testid="credit-bar-join-button" name="canada" prefixed-name="r/canada" subreddit-id="t5_2qh68">
+</shreddit-join-button>
+<shreddit-async-loader bundlename="shreddit_post_overflow_menu" class="relative min-w-[32px] -mr-[7px]">
+<shreddit-post-overflow-menu ama-ends-at="" ama-starts-at="" ama-state="" author-id="t2_7apnp2pe" author-name="Toronto-tenant-2020" can-update-commercial-communication-status="" comment-count='632' feed-index='0' is-desktop-viewport="" permalink="/r/canada/comments/1eqflul/cheap_foreign_labor_soars_in_canada_as_young/" post-id="t3_1eqflul" post-view-context="AggregateFeed" subreddit-id="t5_2qh68" subreddit-prefixed-name="r/canada">
+<div slot="devvit-context-actions">
+</div>
+</shreddit-post-overflow-menu>
+</shreddit-async-loader>
+</span>
+</span>
+</div>
+<div class="col-start-1 col-end-2 row-start-2 row-end-3 overflow-hidden">
+<div>
+<shreddit-content-tags class="nd:visible" post-id="t3_1eqflul">
+<div class="inline-flex content-tags gap-xs whitespace-nowrap hover:no-underline">
+</div>
+</shreddit-content-tags>
+</div>
+<div>
+<a class="block font-semibold text-neutral-content-strong m-0 visited:text-neutral-content-weak text-16 xs:text-18 mb-2xs xs:mb-xs" href="/r/canada/comments/1eqflul/cheap_foreign_labor_soars_in_canada_as_young/" id="post-title-t3_1eqflul" slot="title">
+              Cheap Foreign Labor Soars in Canada as Young Workers Are Left Jobless
+              <faceplate-perfmark name="first-post-meaningful-paint">
+</faceplate-perfmark>
+</a>
+</div>
+<div>
+<shreddit-post-flair flair-class=" relative top-[-0.25rem] xs:top-[-2px] my-2xs xs:mb-sm py-0 " post-id="t3_1eqflul" slot="post-flair">
+</shreddit-post-flair>
+</div>
+<div>
+<div class="relative truncate text-12 xs:text-14 font-semibold mb-xs">
+<a class="post-link max-w-full truncate a hover:underline" href="https://www.bnnbloomberg.ca/business/2024/08/12/cheap-foreign-labor-soars-in-canada-as-young-workers-are-left-jobless" rel="noopener nofollow ugc" rpl="" target="_blank" title="Link from r/canada - Cheap Foreign Labor Soars in Canada as Young Workers Are Left Jobless">
+               https://www.bnnbloomberg.ca/business/2024/08/12/cheap-foreign-labor-soars-in-canada-as-young-workers-are-left-jobless
+              </a>
+</div>
+</div>
+</div>
+<div class="col-start-2 col-end-3 row-start-2 row-end-3">
+<div class="relative rounded-[8px] overflow-hidden box-border border border-solid border-neutral-border-weak xs:h-[100px] xs:w-[130px] h-[88px] w-[114px] block" slot="thumbnail">
+<a aria-label="r/canada - Cheap Foreign Labor Soars in Canada as Young Workers Are Left Jobless" class="block w-100 h-100" href="https://www.bnnbloomberg.ca/business/2024/08/12/cheap-foreign-labor-soars-in-canada-as-young-workers-are-left-jobless" rel="noopener nofollow ugc" target="_blank" title="Link from r/canada - Cheap Foreign Labor Soars in Canada as Young Workers Are Left Jobless">
+<faceplate-img alt="r/canada - Cheap Foreign Labor Soars in Canada as Young Workers Are Left Jobless" class="h-full w-full object-cover" src="https://b.thumbs.redditmedia.com/yUqCJM6WcVBEHl5DGKec109e3wdCH9A5OW-eRr79GfM.jpg">
+</faceplate-img>
+</a>
+<div class="absolute inset-0 rounded-[8px] thumbnail-shadow pointer-events-none">
+<div class="absolute bottom-0 left-0 bg-media-background text-media-onbackground flex items-center justify-center m-[4px] rounded-full h-[20px] w-[20px]">
+<svg fill="currentColor" height='12' icon-name="external-fill" rpl="" viewbox="0 0 20 20" width='12' xmlns="http://www.w3.org/2000/svg">
+<path d="M15 13h2v3.35A2.653 2.653 0 0 1 14.35 19H3.65A2.653 2.653 0 0 1 1 16.35V5.653A2.656 2.656 0 0 1 3.653 3H7v2H3.653A.654.654 0 0 0 3 5.653v10.7a.65.65 0 0 0 .65.65h10.7a.65.65 0 0 0 .65-.65V13Zm3.375-12h-5.438a.625.625 0 0 0-.422 1.085L14.591 4l-6.423 6.418 1.414 1.414 6.483-6.483 1.887 1.736A.626.626 0 0 0 19 6.625v-5A.625.625 0 0 0 18.375 1Z">
+</path>
+</svg>
+</div>
+</div>
+</div>
+</div>
+</div>
+</shreddit-post>
+</article>
+<hr class="border-0 border-b-sm border-solid border-b-neutral-border-weak"></hr>
+<article aria-label="Kit Harington Agrees ‘Game of Thrones’ Ending Made ‘Mistakes’ and Felt Rushed, but ‘We Were All So F—ing Tired. We Couldn’t Have Gone on Longer’" class="w-full m-0">
+<!-- "data-ks-item" is used by the modqueue-keyboard-shortcuts manager to fetch the item on which to dispatch events to -->
+<shreddit-post author="MarvelsGrantMan136" author-id="t2_5adwlxvn" class="block relative cursor-pointer group bg-neutral-background focus-within:bg-neutral-background-hover hover:bg-neutral-background-hover xs:rounded-[16px] px-md py-2xs my-2xs nd:visible" comment-count='1838' content-href="https://variety.com/2024/tv/news/kit-harington-game-of-thrones-ending-mistakes-rushed-1236103842/" created-timestamp="2024-08-12T14:39:04.217000+0000" data-ks-item="" domain="variety.com" feedindex='1' icon="https://styles.redditmedia.com/t5_2sl45c/styles/profileIcon_snooc7671614-7413-4199-9ec5-4186d0172fc4-headshot.png?width=64&height=64&frame=1&auto=webp&crop=64:64,smart&s=ecba1ad971ca73a88d8de7e68fda095f967f4510" id="t3_1eqfg0t" is-awardable="" is-desktop-viewport="" is-embeddable="" is-link-post="" is-slim-card="" item-state="" moderation-verdict="" pdp-target="_self" permalink="/r/television/comments/1eqfg0t/kit_harington_agrees_game_of_thrones_ending_made/" post-title="Kit Harington Agrees ‘Game of Thrones’ Ending Made ‘Mistakes’ and Felt Rushed, but ‘We Were All So F—ing Tired. We Couldn’t Have Gone on Longer’" post-type="link" previous-actions-feature="" score='8777' subreddit-id="t5_2qh6e" subreddit-prefixed-name="r/television" view-context="AggregateFeed" view-type="cardView" vote-type="">
+<!-- "data-ks-id" is used by the modqueue-keyboard-shortcuts manager to track focus for the current item in the modqueue to trigger shortcuts for -->
+<a class="absolute inset-0" data-ks-id="t3_1eqfg0t" href="/r/television/comments/1eqfg0t/kit_harington_agrees_game_of_thrones_ending_made/" slot="full-post-link" target="_self">
+<faceplate-screen-reader-content>
+            Kit Harington Agrees ‘Game of Thrones’ Ending Made ‘Mistakes’ and Felt Rushed, but ‘We Were All So F—ing Tired. We Couldn’t Have Gone on Longer’
+           </faceplate-screen-reader-content>
+</a>
+<div class="grid grid-cols-[1fr_min-content] grid-rows-[auto_auto_auto] gap-x-2xs">
+<div class="col-start-1 col-end-3 row-start-1 row-end-2">
+<span class="flex justify-between text-12 min-h-[32px] mb-2xs mt-[-4px]" slot="credit-bar">
+<span class="flex flex-wrap text-12 gap-2xs items-center min-w-0 relative">
+<span class="flex items-center gap 2xs" data-post-click-location="subreddit-link">
+<shreddit-async-loader bundlename="faceplate_hovercard" class="">
+<faceplate-hovercard aria-label="r/television" class="nd:visible" data-id="community-hover-card" position="bottom-start">
+<a class="text-neutral-content whitespace-nowrap flex items-center h-xl a text-12 font-semibold no-visited no-underline hover:no-underline" data-testid="subreddit-name" href="/r/television/" rpl="">
+<div class="pr-[6px]">
+<faceplate-img alt="r/television icon" class="shreddit-subreddit-icon__icon rounded-full overflow-hidden nd:visible nd:bg-secondary-background flex items-center justify-center nd:w-lg nd:h-lg text-16" height='24' loading="lazy" src="https://styles.redditmedia.com/t5_2qh6e/styles/communityIcon_8qmcs8g0gp871.png?width=48&height=48&frame=1&auto=webp&crop=48:48,smart&s=321f319fe3c292dcb47f4e3e9d6c4f45bf1e346d" style="color: #FFFFFF; background-color: #FFFFFF" width='24'>
+</faceplate-img>
+</div>
+<span>
+                   r/television
+                  </span>
+</a>
+<div class="max-w-[360px] w-[90vw] overflow-hidden p-0 -m-[0.5rem]" slot="content">
+<div class="flex flex-col">
+<div class="px-sm pt-sm flex items-center">
+<span class="w-[48px] h-[48px] text-24 shrink-0">
+<faceplate-img alt="r/television icon" class="shreddit-subreddit-icon__icon rounded-full overflow-hidden nd:visible nd:bg-secondary-background" height='48' loading="lazy" src="https://styles.redditmedia.com/t5_2qh6e/styles/communityIcon_8qmcs8g0gp871.png?width=96&height=96&frame=1&auto=webp&crop=96:96,smart&s=55d4ed862e4677e9cc78f990a98f1b19894f1056" style="color: #FFFFFF; background-color: #FFFFFF" width='48'>
+</faceplate-img>
+</span>
+<span class="flex ml-xs grow-0 w-100">
+<faceplate-tracker action="click" noun="title" source="subreddit_hovercard">
+<a class="text-18 font-bold text-neutral-content-strong leading-6 a text-14 no-visited hover:underline" href="/r/television/" rpl="">
+                       r/television
+                      </a>
+</faceplate-tracker>
+</span>
+<faceplate-tracker action="click" class="ml-auto" noun="join_signup_cta" source="subreddit_hovercard">
+<shreddit-join-button button-type="secondary" buttonsize="x-small" name="television" subreddit-id="t5_2qh6e">
+</shreddit-join-button>
+</faceplate-tracker>
+</div>
+<p class="px-md pt-md m-0 whitespace-normal text-14 leading-5 font-normal">
+</p>
+<hr class="mx-md mt-md border-neutral-border-weak"></hr>
+<div class="px-md py-md flex items-center">
+<span class="flex flex-col">
+<span class="text-14 text-neutral-content leading-5 font-semibold">
+<faceplate-number number='17222144' pretty="">
+</faceplate-number>
+</span>
+<span class="text-12 leading-4 text-neutral-content-weak">
+                      Members
+                     </span>
+</span>
+<span class="ml-xl flex flex-col" data-testid="community-hover-card:active-count">
+<span class="text-14 text-neutral-content leading-5 font-semibold">
+<faceplate-number number='5023' pretty="">
+</faceplate-number>
+</span>
+<span class="flex items-center">
+<span class="bg-kiwigreen-400 rounded-full w-xs h-xs">
+</span>
+<span class="text-12 leading-4 text-neutral-content-weak ml-2xs">
+                       Online
+                      </span>
+</span>
+</span>
+</div>
+</div>
+</div>
+</faceplate-hovercard>
+</shreddit-async-loader>
+</span>
+<shreddit-async-loader bundlename="distinguished_post_tags" class="contents">
+<shreddit-distinguished-post-tags class="nd:visible flex" post-id="t3_1eqfg0t">
+<span aria-label="Post distinguished by admin" class="hidden font-semibold text-12 tracking-wide distinguished-admin text-identity-admin">
+                 ADMIN
+                </span>
+<span aria-label="Post distinguished by moderator" class="hidden font-semibold text-12 tracking-wide distinguished-mod text-identity-moderator">
+                 MOD
+                </span>
+</shreddit-distinguished-post-tags>
+</shreddit-async-loader>
+<span class="inline-block my-0 created-separator text-neutral-content-weak">
+               •
+              </span>
+<faceplate-timeago class="whitespace-nowrap text-neutral-content-weak" format="short" ts="2024-08-12T14:39:04.217000+0000">
+</faceplate-timeago>
+</span>
+<span class="flex items-center pl-xs">
+<shreddit-join-button button-classes="h-[24px]" button-type="primary" buttonsize="x-small" class="relative px-2xs" data-testid="credit-bar-join-button" name="television" prefixed-name="r/television" subreddit-id="t5_2qh6e">
+</shreddit-join-button>
+<shreddit-async-loader bundlename="shreddit_post_overflow_menu" class="relative min-w-[32px] -mr-[7px]">
+<shreddit-post-overflow-menu ama-ends-at="" ama-starts-at="" ama-state="" author-id="t2_5adwlxvn" author-name="MarvelsGrantMan136" can-update-commercial-communication-status="" comment-count='1838' feed-index='1' is-desktop-viewport="" permalink="/r/television/comments/1eqfg0t/kit_harington_agrees_game_of_thrones_ending_made/" post-id="t3_1eqfg0t" post-view-context="AggregateFeed" subreddit-id="t5_2qh6e" subreddit-prefixed-name="r/television">
+</shreddit-post-overflow-menu>
+</shreddit-async-loader>
+</span>
+</span>
+</div>
+<div class="col-start-1 col-end-2 row-start-2 row-end-3 overflow-hidden">
+<div>
+<shreddit-content-tags class="nd:visible" post-id="t3_1eqfg0t">
+<div class="inline-flex content-tags gap-xs whitespace-nowrap hover:no-underline">
+</div>
+</shreddit-content-tags>
+</div>
+<div>
+<a class="block font-semibold text-neutral-content-strong m-0 visited:text-neutral-content-weak text-16 xs:text-18 mb-2xs xs:mb-xs" href="/r/television/comments/1eqfg0t/kit_harington_agrees_game_of_thrones_ending_made/" id="post-title-t3_1eqfg0t" slot="title">
+              Kit Harington Agrees ‘Game of Thrones’ Ending Made ‘Mistakes’ and Felt Rushed, but ‘We Were All So F—ing Tired. We Couldn’t Have Gone on Longer’
+             </a>
+</div>
+<div>
+<shreddit-post-flair flair-class=" relative top-[-0.25rem] xs:top-[-2px] my-2xs xs:mb-sm py-0 " post-id="t3_1eqfg0t" slot="post-flair">
+</shreddit-post-flair>
+</div>
+<div>
+<div class="relative truncate text-12 xs:text-14 font-semibold mb-xs">
+<a class="post-link max-w-full truncate a hover:underline" href="https://variety.com/2024/tv/news/kit-harington-game-of-thrones-ending-mistakes-rushed-1236103842/" rel="noopener nofollow ugc" rpl="" target="_blank" title="Link from r/television - Kit Harington Agrees ‘Game of Thrones’ Ending Made ‘Mistakes’ and Felt Rushed, but ‘We Were All So F—ing Tired. We Couldn’t Have Gone on Longer’">
+               https://variety.com/2024/tv/news/kit-harington-game-of-thrones-ending-mistakes-rushed-1236103842/
+              </a>
+</div>
+</div>
+</div>
+<div class="col-start-2 col-end-3 row-start-2 row-end-3">
+<div class="relative rounded-[8px] overflow-hidden box-border border border-solid border-neutral-border-weak xs:h-[100px] xs:w-[130px] h-[88px] w-[114px] block" slot="thumbnail">
+<a aria-label="r/television - Kit Harington Agrees ‘Game of Thrones’ Ending Made ‘Mistakes’ and Felt Rushed, but ‘We Were All So F—ing Tired. We Couldn’t Have Gone on Longer’" class="block w-100 h-100" href="https://variety.com/2024/tv/news/kit-harington-game-of-thrones-ending-mistakes-rushed-1236103842/" rel="noopener nofollow ugc" target="_blank" title="Link from r/television - Kit Harington Agrees ‘Game of Thrones’ Ending Made ‘Mistakes’ and Felt Rushed, but ‘We Were All So F—ing Tired. We Couldn’t Have Gone on Longer’">
+<faceplate-img alt="r/television - Kit Harington Agrees ‘Game of Thrones’ Ending Made ‘Mistakes’ and Felt Rushed, but ‘We Were All So F—ing Tired. We Couldn’t Have Gone on Longer’" class="h-full w-full object-cover" src="https://a.thumbs.redditmedia.com/_WaynpnYlA_0wi5nOKjZEsCr2yeMPDvS3lIGkgOTPN8.jpg">
+</faceplate-img>
+</a>
+<div class="absolute inset-0 rounded-[8px] thumbnail-shadow pointer-events-none">
+<div class="absolute bottom-0 left-0 bg-media-background text-media-onbackground flex items-center justify-center m-[4px] rounded-full h-[20px] w-[20px]">
+
+        ```
+        

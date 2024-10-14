@@ -1,0 +1,168 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issues: 
+       
+        __________________
+        "
+            1. is-on-https => Does not use HTTPS: All sites should be protected with HTTPS, even ones that don't handle sensitive data. This includes avoiding [mixed content](https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content), where some resources are loaded over HTTP despite the initial request being served over HTTPS. HTTPS prevents intruders from tampering with or passively listening in on the communications between your app and your users, and is a prerequisite for HTTP/2 and many new web platform APIs. [Learn more about HTTPS](https://developer.chrome.com/docs/lighthouse/pwa/is-on-https/).
+ 
+
+            
+            2. viewport => Does not have a `<meta name="viewport">` tag with `width` or `initial-scale`: A `<meta name="viewport">` not only optimizes your app for mobile screen sizes, but also prevents [a 300 millisecond delay to user input](https://developer.chrome.com/blog/300ms-tap-delay-gone-away/). [Learn more about using the viewport meta tag](https://developer.chrome.com/docs/lighthouse/pwa/viewport/).
+ 
+
+            
+            3. first-contentful-paint => First Contentful Paint: First Contentful Paint marks the time at which the first text or image is painted. [Learn more about the First Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/).
+ 
+
+            
+            4. largest-contentful-paint => Largest Contentful Paint: Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)
+ 
+
+            
+            5. speed-index => Speed Index: Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/).
+ 
+
+            
+            6. total-blocking-time => Total Blocking Time: Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds. [Learn more about the Total Blocking Time metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/).
+ 
+
+            
+            7. max-potential-fid => Max Potential First Input Delay: The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).
+ 
+
+            
+            8. errors-in-console => Browser errors were logged to the console: Errors logged to the console indicate unresolved problems. They can come from network request failures and other browser concerns. [Learn more about this errors in console diagnostic audit](https://developer.chrome.com/docs/lighthouse/best-practices/errors-in-console/)
+ 
+
+            
+            9. interactive => Time to Interactive: Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).
+ 
+
+            
+            10. image-size-responsive => Serves images with low resolution: Image natural dimensions should be proportional to the display size and the pixel ratio to maximize image clarity. [Learn how to provide responsive images](https://web.dev/articles/serve-responsive-images).
+ 
+
+            
+            11. uses-rel-preconnect => Preconnect to required origins: Consider adding `preconnect` or `dns-prefetch` resource hints to establish early connections to important third-party origins. [Learn how to preconnect to required origins](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/).
+ 
+
+            
+            12. third-party-summary => Reduce the impact of third-party code: Third-party code can significantly impact load performance. Limit the number of redundant third-party providers and try to load third-party code after your page has primarily finished loading. [Learn how to minimize third-party impact](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript/).
+ 
+
+            
+            13. largest-contentful-paint-element => Largest Contentful Paint element: This is the largest contentful element painted within the viewport. [Learn more about the Largest Contentful Paint element](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)
+ 
+
+            
+            14. unsized-images => Image elements do not have explicit `width` and `height`: Set an explicit width and height on image elements to reduce layout shifts and improve CLS. [Learn how to set image dimensions](https://web.dev/articles/optimize-cls#images_without_dimensions)
+ 
+
+            
+            15. prioritize-lcp-image => Preload Largest Contentful Paint image: If the LCP element is dynamically added to the page, you should preload the image in order to improve LCP. [Learn more about preloading LCP elements](https://web.dev/articles/optimize-lcp#optimize_when_the_resource_is_discovered).
+ 
+
+            
+            16. image-alt => Image elements do not have `[alt]` attributes: Informative elements should aim for short, descriptive alternate text. Decorative elements can be ignored with an empty alt attribute. [Learn more about the `alt` attribute](https://dequeuniversity.com/rules/axe/4.9/image-alt).
+ 
+
+            
+            17. unused-css-rules => Reduce unused CSS: Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/).
+ 
+
+            
+            18. unused-javascript => Reduce unused JavaScript: Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).
+ 
+
+            
+            19. uses-text-compression => Enable text compression: Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more about text compression](https://developer.chrome.com/docs/lighthouse/performance/uses-text-compression/).
+ 
+
+            
+            20. legacy-javascript => Avoid serving legacy JavaScript to modern browsers: Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. For your bundled JavaScript, adopt a modern script deployment strategy using module/nomodule feature detection to reduce the amount of code shipped to modern browsers, while retaining support for legacy browsers. [Learn how to use modern JavaScript](https://web.dev/articles/publish-modern-javascript)
+ 
+
+            
+            21. font-size => Document doesn't use legible font sizes: Font sizes less than 12px are too small to be legible and require mobile visitors to “pinch to zoom” in order to read. Strive to have >60% of page text ≥12px. [Learn more about legible font sizes](https://developer.chrome.com/docs/lighthouse/seo/font-size/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issues given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta>
+<link as="script" href="https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-27-691154c7c2510bef.webpack" rel="preload"></link>
+<link as="script" href="https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-vendor-27-c663ad026f3abd51.webpack" rel="preload"></link>
+<link as="script" href="https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-common-27-f7d782a84d76b3a5.webpack" rel="preload"></link>
+<link as="script" href="https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-page-LoginPages-27-5093d9c02053cab6.webpack" rel="preload"></link>
+<link as="script" href="https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-common-LoggedOut-27-e52ae2e2f6390f40.webpack" rel="preload"></link>
+<link as="style" href="https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-main.css-28-f4ef3e8b8aa95a7d.webpack" rel="preload"></link>
+<link href="https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-main.css-28-f4ef3e8b8aa95a7d.webpack" id="ans-frontend-main-css" rel="stylesheet" type="text/css"></link>
+<link as="fetch" crossorigin="anonymous" href="https://qsbr.cf2.quoracdn.net/-4-l10n_main-30-fr-8ff1e114b66a9c16.translation.json" rel="preload"></link>
+<script data-chunk-uuid="b2e014c8-6a50-4f53-98da-99659ea9a799" type="text/javascript">// chunk_script_b2e014c8-6a50-4f53-98da-99659ea9a799
+</script>
+<script data-chunk-uuid="bba5c118-0206-493f-9483-d640e66c4454" id="entryjs_wrapper" type="text/javascript">// chunk_script_bba5c118-0206-493f-9483-d640e66c4454
+</script>
+<script data-chunk-uuid="0929eccc-c3bf-422f-ae1d-8cbf7a601a75" type="text/javascript">// chunk_script_0929eccc-c3bf-422f-ae1d-8cbf7a601a75
+</script>
+<script data-chunk-uuid="85d0a283-1545-4a1a-bc2a-5f5363342d56" type="text/javascript">// chunk_script_85d0a283-1545-4a1a-bc2a-5f5363342d56
+</script>
+<script data-chunk-uuid="0c3b5e80-958e-4e6e-999a-1a5555af2fc1" type="text/javascript">// chunk_script_0c3b5e80-958e-4e6e-999a-1a5555af2fc1
+</script>
+<script data-chunk-uuid="142d538e-cffc-4fd1-9e32-162087432539" async='1' id="entryjs" onerror="addAssetErr(this.src)" src="https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-27-691154c7c2510bef.webpack" type="text/javascript">// chunk_script_142d538e-cffc-4fd1-9e32-162087432539
+</script>
+<script data-chunk-uuid="fb212d94-ec60-4843-9227-ecb2e0b55ada" async='1' onerror="addAssetErr(this.src)" src="https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-vendor-27-c663ad026f3abd51.webpack" type="text/javascript">// chunk_script_fb212d94-ec60-4843-9227-ecb2e0b55ada
+</script>
+<script data-chunk-uuid="b7680c43-a69f-4935-969b-fb9f76a59b95" async='1' onerror="addAssetErr(this.src)" src="https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-common-27-f7d782a84d76b3a5.webpack" type="text/javascript">// chunk_script_b7680c43-a69f-4935-969b-fb9f76a59b95
+</script>
+<script data-chunk-uuid="1aae0770-a3ea-4703-9b49-558ea5a2f9ae" async='1' onerror="addAssetErr(this.src)" src="https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-page-LoginPages-27-5093d9c02053cab6.webpack" type="text/javascript">// chunk_script_1aae0770-a3ea-4703-9b49-558ea5a2f9ae
+</script>
+<script data-chunk-uuid="a1b2476b-cdd0-4ba2-b5ff-e7df8bcfe751" async='1' onerror="addAssetErr(this.src)" src="https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-common-LoggedOut-27-e52ae2e2f6390f40.webpack" type="text/javascript">// chunk_script_a1b2476b-cdd0-4ba2-b5ff-e7df8bcfe751
+</script>
+<script data-chunk-uuid="23969539-5f8b-4a1b-b56c-1d7204b782f2" type="text/javascript">// chunk_script_23969539-5f8b-4a1b-b56c-1d7204b782f2
+</script>
+<title>
+   Quora - Un lieu pour partager le savoir et mieux comprendre le monde
+  </title>
+<link href="https://qsf.cf2.quoracdn.net/-4-images.favicon-new.ico-26-07ecf7cd341b6919.ico" rel="icon"></link>
+<meta content="noarchive" name="robots"></meta>
+<meta content='136609459636' property="fb:app_id"></meta>
+<meta content="Quora" property="og:title"></meta>
+<meta content="website" property="og:type"></meta>
+<meta content="Quora" property="og:site_name"></meta>
+<meta content="https://qsf.cf2.quoracdn.net/-4-images.Illustration_fb_share_default_1280x720.png-26-7b8bc71e8107b6f5.png" property="og:image"></meta>
+<meta content="https://fr.quora.com/" property="og:url"></meta>
+<meta content="" property="og:description"></meta>
+<meta content="Quora est un endroit conçu pour apprendre et partager ses connaissances. Il s&#039;agit d&#039;une plateforme sur laquelle on peut poser ses questions et entrer en contact avec des personnes qui apportent leur contribution en partageant leurs idées uniques ..." name="description"></meta>
+<link href="https://fr.quora.com/" rel="canonical"></link>
+<meta content='255232486973' property="fb:pages"></meta>
+<meta content="light" name="twitter:widgets:theme"></meta>
+
+        ```
+        

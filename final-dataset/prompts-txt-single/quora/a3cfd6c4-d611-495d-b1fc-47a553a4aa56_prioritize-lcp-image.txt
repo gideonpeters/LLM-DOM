@@ -1,0 +1,88 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. prioritize-lcp-image => Preload Largest Contentful Paint image: If the LCP element is dynamically added to the page, you should preload the image in order to improve LCP. [Learn more about preloading LCP elements](https://web.dev/articles/optimize-lcp#optimize_when_the_resource_is_discovered).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta>
+<link as="script" href="https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-27-691154c7c2510bef.webpack" rel="preload"></link>
+<link as="script" href="https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-vendor-27-c663ad026f3abd51.webpack" rel="preload"></link>
+<link as="script" href="https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-common-27-f7d782a84d76b3a5.webpack" rel="preload"></link>
+<link as="script" href="https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-page-LoginPages-27-5093d9c02053cab6.webpack" rel="preload"></link>
+<link as="script" href="https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-common-LoggedOut-27-e52ae2e2f6390f40.webpack" rel="preload"></link>
+<link as="style" href="https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-main.css-28-f4ef3e8b8aa95a7d.webpack" rel="preload"></link>
+<link href="https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-main.css-28-f4ef3e8b8aa95a7d.webpack" id="ans-frontend-main-css" rel="stylesheet" type="text/css"></link>
+<link as="fetch" crossorigin="anonymous" href="https://qsbr.cf2.quoracdn.net/-4-l10n_main-30-fr-8ff1e114b66a9c16.translation.json" rel="preload"></link>
+<script data-chunk-uuid="a2bf8cec-39fc-4173-8efb-32c9ad6b6d0b" type="text/javascript">// chunk_script_a2bf8cec-39fc-4173-8efb-32c9ad6b6d0b
+</script>
+<script data-chunk-uuid="a63fc5ce-24b3-4001-9342-7c89e4db7f8f" id="entryjs_wrapper" type="text/javascript">// chunk_script_a63fc5ce-24b3-4001-9342-7c89e4db7f8f
+</script>
+<script data-chunk-uuid="3b2bb198-4516-4de6-9c24-16f38655fef2" type="text/javascript">// chunk_script_3b2bb198-4516-4de6-9c24-16f38655fef2
+</script>
+<script data-chunk-uuid="101d6d31-8abf-4047-87b2-49508c3b43e1" type="text/javascript">// chunk_script_101d6d31-8abf-4047-87b2-49508c3b43e1
+</script>
+<script data-chunk-uuid="9d7d9879-a120-4852-b331-25ef5e6394e6" type="text/javascript">// chunk_script_9d7d9879-a120-4852-b331-25ef5e6394e6
+</script>
+<script data-chunk-uuid="8bcf1b7e-be3d-4621-ae5d-a43a76336274" async='1' id="entryjs" onerror="addAssetErr(this.src)" src="https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-27-691154c7c2510bef.webpack" type="text/javascript">// chunk_script_8bcf1b7e-be3d-4621-ae5d-a43a76336274
+</script>
+<script data-chunk-uuid="e0431e43-16f9-4b66-8a0a-b60f85460244" async='1' onerror="addAssetErr(this.src)" src="https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-vendor-27-c663ad026f3abd51.webpack" type="text/javascript">// chunk_script_e0431e43-16f9-4b66-8a0a-b60f85460244
+</script>
+<script data-chunk-uuid="08ae2b21-d93c-478f-98fc-8536eaf2ac5b" async='1' onerror="addAssetErr(this.src)" src="https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-common-27-f7d782a84d76b3a5.webpack" type="text/javascript">// chunk_script_08ae2b21-d93c-478f-98fc-8536eaf2ac5b
+</script>
+<script data-chunk-uuid="689aee70-e80c-44e4-888c-679f630f8ca5" async='1' onerror="addAssetErr(this.src)" src="https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-page-LoginPages-27-5093d9c02053cab6.webpack" type="text/javascript">// chunk_script_689aee70-e80c-44e4-888c-679f630f8ca5
+</script>
+<script data-chunk-uuid="47200cf8-6b20-4357-8f7d-ace63c79d2ea" async='1' onerror="addAssetErr(this.src)" src="https://qsbr.cf2.quoracdn.net/-4-ans_frontend-relay-common-LoggedOut-27-e52ae2e2f6390f40.webpack" type="text/javascript">// chunk_script_47200cf8-6b20-4357-8f7d-ace63c79d2ea
+</script>
+<script data-chunk-uuid="7915e815-f5cd-4651-b46d-43c5e4759141" type="text/javascript">// chunk_script_7915e815-f5cd-4651-b46d-43c5e4759141
+</script>
+<title>
+   Quora - Un lieu pour partager le savoir et mieux comprendre le monde
+  </title>
+<link href="https://qsf.cf2.quoracdn.net/-4-images.favicon-new.ico-26-07ecf7cd341b6919.ico" rel="icon"></link>
+<meta content="noarchive" name="robots"></meta>
+<meta content='136609459636' property="fb:app_id"></meta>
+<meta content="Quora" property="og:title"></meta>
+<meta content="website" property="og:type"></meta>
+<meta content="Quora" property="og:site_name"></meta>
+<meta content="https://qsf.cf2.quoracdn.net/-4-images.Illustration_fb_share_default_1280x720.png-26-7b8bc71e8107b6f5.png" property="og:image"></meta>
+<meta content="https://fr.quora.com/" property="og:url"></meta>
+<meta content="" property="og:description"></meta>
+<meta content="Quora est un endroit conçu pour apprendre et partager ses connaissances. Il s&#039;agit d&#039;une plateforme sur laquelle on peut poser ses questions et entrer en contact avec des personnes qui apportent leur contribution en partageant leurs idées uniques ..." name="description"></meta>
+<link href="https://fr.quora.com/" rel="canonical"></link>
+<meta content='255232486973' property="fb:pages"></meta>
+<meta content="light" name="twitter:widgets:theme"></meta>
+
+        ```
+        

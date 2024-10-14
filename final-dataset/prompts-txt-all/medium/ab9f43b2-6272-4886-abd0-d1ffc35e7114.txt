@@ -1,0 +1,182 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issues: 
+       
+        __________________
+        "
+            1. is-on-https => Does not use HTTPS: All sites should be protected with HTTPS, even ones that don't handle sensitive data. This includes avoiding [mixed content](https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content), where some resources are loaded over HTTP despite the initial request being served over HTTPS. HTTPS prevents intruders from tampering with or passively listening in on the communications between your app and your users, and is a prerequisite for HTTP/2 and many new web platform APIs. [Learn more about HTTPS](https://developer.chrome.com/docs/lighthouse/pwa/is-on-https/).
+ 
+
+            
+            2. first-contentful-paint => First Contentful Paint: First Contentful Paint marks the time at which the first text or image is painted. [Learn more about the First Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/).
+ 
+
+            
+            3. speed-index => Speed Index: Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/).
+ 
+
+            
+            4. total-blocking-time => Total Blocking Time: Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds. [Learn more about the Total Blocking Time metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/).
+ 
+
+            
+            5. max-potential-fid => Max Potential First Input Delay: The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).
+ 
+
+            
+            6. errors-in-console => Browser errors were logged to the console: Errors logged to the console indicate unresolved problems. They can come from network request failures and other browser concerns. [Learn more about this errors in console diagnostic audit](https://developer.chrome.com/docs/lighthouse/best-practices/errors-in-console/)
+ 
+
+            
+            7. interactive => Time to Interactive: Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).
+ 
+
+            
+            8. third-party-cookies => Uses third-party cookies: Support for third-party cookies will be removed in a future version of Chrome. [Learn more about phasing out third-party cookies](https://developer.chrome.com/en/docs/privacy-sandbox/third-party-cookie-phase-out/).
+ 
+
+            
+            9. mainthread-work-breakdown => Minimize main-thread work: Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to minimize main-thread work](https://developer.chrome.com/docs/lighthouse/performance/mainthread-work-breakdown/)
+ 
+
+            
+            10. bootup-time => Reduce JavaScript execution time: Consider reducing the time spent parsing, compiling, and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to reduce Javascript execution time](https://developer.chrome.com/docs/lighthouse/performance/bootup-time/).
+ 
+
+            
+            11. third-party-summary => Reduce the impact of third-party code: Third-party code can significantly impact load performance. Limit the number of redundant third-party providers and try to load third-party code after your page has primarily finished loading. [Learn how to minimize third-party impact](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript/).
+ 
+
+            
+            12. color-contrast => Background and foreground colors do not have a sufficient contrast ratio.: Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.9/color-contrast).
+ 
+
+            
+            13. meta-viewport => `[user-scalable="no"]` is used in the `<meta name="viewport">` element or the `[maximum-scale]` attribute is less than 5.: Disabling zooming is problematic for users with low vision who rely on screen magnification to properly see the contents of a web page. [Learn more about the viewport meta tag](https://dequeuniversity.com/rules/axe/4.9/meta-viewport).
+ 
+
+            
+            14. uses-long-cache-ttl => Serve static assets with an efficient cache policy: A long cache lifetime can speed up repeat visits to your page. [Learn more about efficient cache policies](https://developer.chrome.com/docs/lighthouse/performance/uses-long-cache-ttl/).
+ 
+
+            
+            15. render-blocking-resources => Eliminate render-blocking resources: Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn how to eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/).
+ 
+
+            
+            16. unused-javascript => Reduce unused JavaScript: Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).
+ 
+
+            
+            17. uses-text-compression => Enable text compression: Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more about text compression](https://developer.chrome.com/docs/lighthouse/performance/uses-text-compression/).
+ 
+
+            
+            18. legacy-javascript => Avoid serving legacy JavaScript to modern browsers: Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. For your bundled JavaScript, adopt a modern script deployment strategy using module/nomodule feature detection to reduce the amount of code shipped to modern browsers, while retaining support for legacy browsers. [Learn how to use modern JavaScript](https://web.dev/articles/publish-modern-javascript)
+ 
+
+            
+            19. inspector-issues => Issues were logged in the `Issues` panel in Chrome Devtools: Issues logged to the `Issues` panel in Chrome Devtools indicate unresolved problems. They can come from network request failures, insufficient security controls, and other browser concerns. Open up the Issues panel in Chrome DevTools for more details on each issue.
+ 
+
+            
+            20. meta-description => Document does not have a meta description: Meta descriptions may be included in search results to concisely summarize page content. [Learn more about the meta description](https://developer.chrome.com/docs/lighthouse/seo/meta-description/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issues given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        
+<title data-rh='true'>
+   Medium: Read and write stories.
+  </title>
+<meta charset="utf-8" data-rh='true'></meta>
+<meta content="width=device-width,minimum-scale=1,initial-scale=1,maximum-scale=1" data-rh='true' name="viewport"></meta>
+<meta content="#000000" data-rh='true' name="theme-color"></meta>
+<meta content="Medium" data-rh='true' name="twitter:app:name:iphone"></meta>
+<meta content='828256236' data-rh='true' name="twitter:app:id:iphone"></meta>
+<meta content="Medium" data-rh='true' property="al:ios:app_name"></meta>
+<meta content='828256236' data-rh='true' property="al:ios:app_store_id"></meta>
+<meta content="com.medium.reader" data-rh='true' property="al:android:package"></meta>
+<meta content="Medium" data-rh='true' property="al:android:app_name"></meta>
+<meta content='542599432471018' data-rh='true' property="fb:app_id"></meta>
+<meta content="index,follow" data-rh='true' name="robots"></meta>
+<meta content="Medium: Read and write stories." data-rh='true' name="title"></meta>
+<meta content="On Medium, anyone can share insightful perspectives, useful knowledge, and life wisdom with the world." data-rh='true' name="description"></meta>
+<meta content="summary_large_image" data-rh='true' name="twitter:card"></meta>
+<meta content="@Medium" data-rh='true' name="twitter:creator"></meta>
+<meta content="On Medium, anyone can share insightful perspectives, useful knowledge, and life wisdom with the world." data-rh='true' name="twitter:description"></meta>
+<meta content="https://miro.medium.com/v2/4*EBuOxSGT7JZTGq0n4W8A5w.png" data-rh='true' name="twitter:image:src"></meta>
+<meta content="@Medium" data-rh='true' name="twitter:site"></meta>
+<meta content="Medium: Read and write stories." data-rh='true' name="twitter:title"></meta>
+<meta content="On Medium, anyone can share insightful perspectives, useful knowledge, and life wisdom with the world." data-rh='true' property="og:description"></meta>
+<meta content="https://miro.medium.com/v2/4*EBuOxSGT7JZTGq0n4W8A5w.png" data-rh='true' property="og:image"></meta>
+<meta content="Medium" data-rh='true' property="og:site_name"></meta>
+<meta content="Medium: Read and write stories." data-rh='true' property="og:title"></meta>
+<meta content="website" data-rh='true' property="og:type"></meta>
+<meta content="https://medium.com" data-rh='true' property="og:url"></meta>
+<link data-rh='true' href="https://miro.medium.com/v2/1*m-R_BkNf1Qjr1YbyOIJY2w.png" rel="icon"></link>
+<link data-rh='true' href="/osd.xml" rel="search" title="Medium" type="application/opensearchdescription+xml"></link>
+<link data-rh='true' href="https://miro.medium.com/v2/resize:fill:304:304/1*sHhtYhaCe2Uc3IU0IgKwIQ.png" rel="apple-touch-icon" sizes="152x152"></link>
+<link data-rh='true' href="https://miro.medium.com/v2/resize:fill:240:240/1*sHhtYhaCe2Uc3IU0IgKwIQ.png" rel="apple-touch-icon" sizes="120x120"></link>
+<link data-rh='true' href="https://miro.medium.com/v2/resize:fill:152:152/1*sHhtYhaCe2Uc3IU0IgKwIQ.png" rel="apple-touch-icon" sizes="76x76"></link>
+<link data-rh='true' href="https://miro.medium.com/v2/resize:fill:120:120/1*sHhtYhaCe2Uc3IU0IgKwIQ.png" rel="apple-touch-icon" sizes="60x60"></link>
+<link color="#171717" data-rh='true' href="https://cdn-static-1.medium.com/_/fp/icons/Medium-Avatar-500x500.svg" rel="mask-icon"></link>
+<link crossorigin="" data-rh='true' href="https://glyph.medium.com" rel="preconnect"></link>
+<link as="style" data-rh='true' href="https://glyph.medium.com/css/unbound.css" id="glyph_preload_link" rel="preload" type="text/css"></link>
+<link data-rh='true' href="https://glyph.medium.com/css/unbound.css" id="glyph_link" rel="stylesheet" type="text/css"></link>
+<link data-rh='true' href="https://medium.com" rel="canonical"></link>
+<script data-chunk-uuid="21757c39-85fd-4274-9df8-b023a6f97667" data-rh='true' type="application/ld+json">// chunk_script_21757c39-85fd-4274-9df8-b023a6f97667
+</script>
+<style data-chunk-uuid="05bf4f0b-6068-4b71-8d93-5f66e6b37f6e" data-fela-rehydration='141' data-fela-type="STATIC" type="text/css">/* chunk_style_05bf4f0b-6068-4b71-8d93-5f66e6b37f6e */
+</style>
+<style data-chunk-uuid="d227ea11-8965-4a8e-8bd0-93789f9ff637" data-fela-rehydration='141' data-fela-type="KEYFRAME" type="text/css">/* chunk_style_d227ea11-8965-4a8e-8bd0-93789f9ff637 */
+</style>
+<style data-chunk-uuid="df3144c6-f87c-495b-937a-13f8afadb696" data-fela-rehydration='141' data-fela-type="RULE" type="text/css">/* chunk_style_df3144c6-f87c-495b-937a-13f8afadb696 */
+</style>
+<style data-chunk-uuid="7a1d0450-3a4c-4ac7-9b79-7956751c5069" data-fela-rehydration='141' data-fela-type="RULE" media="all and (min-width: 1080px)" type="text/css">/* chunk_style_7a1d0450-3a4c-4ac7-9b79-7956751c5069 */
+</style>
+<style data-chunk-uuid="c8910444-6541-4df2-a9b5-7ac50f3d366a" data-fela-rehydration='141' data-fela-type="RULE" media="all and (max-width: 1079.98px)" type="text/css">/* chunk_style_c8910444-6541-4df2-a9b5-7ac50f3d366a */
+</style>
+<style data-chunk-uuid="acb9c1d7-7bb5-4b60-917c-cf6243123417" data-fela-rehydration='141' data-fela-type="RULE" media="all and (max-width: 903.98px)" type="text/css">/* chunk_style_acb9c1d7-7bb5-4b60-917c-cf6243123417 */
+</style>
+<style data-chunk-uuid="f67399fb-067a-4ac7-9b50-e3678f733b77" data-fela-rehydration='141' data-fela-type="RULE" media="all and (max-width: 727.98px)" type="text/css">/* chunk_style_f67399fb-067a-4ac7-9b50-e3678f733b77 */
+</style>
+<style data-chunk-uuid="c493df42-4a33-47b5-9cdc-40846e363005" data-fela-rehydration='141' data-fela-type="RULE" media="all and (max-width: 551.98px)" type="text/css">/* chunk_style_c493df42-4a33-47b5-9cdc-40846e363005 */
+</style>
+<style data-chunk-uuid="ea4963d5-0a2d-48c2-ba04-de9cf5f6535c" data-fela-rehydration='141' data-fela-type="RULE" media="all and (min-width: 904px) and (max-width: 1079.98px)" type="text/css">/* chunk_style_ea4963d5-0a2d-48c2-ba04-de9cf5f6535c */
+</style>
+<style data-chunk-uuid="a48c2ee5-305c-4460-86e7-7464168d62ec" data-fela-rehydration='141' data-fela-type="RULE" media="all and (min-width: 728px) and (max-width: 903.98px)" type="text/css">/* chunk_style_a48c2ee5-305c-4460-86e7-7464168d62ec */
+</style>
+<style data-chunk-uuid="460b27cb-8005-46e1-9d10-c43bc2a32bcf" data-fela-rehydration='141' data-fela-type="RULE" media="all and (min-width: 552px) and (max-width: 727.98px)" type="text/css">/* chunk_style_460b27cb-8005-46e1-9d10-c43bc2a32bcf */
+</style>
+<style data-chunk-uuid="e296b7ff-bc3b-4024-b47a-87c337a3a221" data-fela-rehydration='141' data-fela-type="RULE" media="(prefers-reduced-motion: no-preference)" type="text/css">/* chunk_style_e296b7ff-bc3b-4024-b47a-87c337a3a221 */
+</style>
+
+        ```
+        

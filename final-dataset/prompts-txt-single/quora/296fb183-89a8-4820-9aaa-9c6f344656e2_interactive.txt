@@ -1,0 +1,94 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. interactive => Time to Interactive: Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        
+<div id="staticError" style="display: none;">
+<div style="height: 100vh; display: flex; font-size: 15px;background-color: #fff; color: #282829;flex-direction: column; align-items: center; justify-content: center;font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;">
+<svg height="24px" viewbox="0 0 24 24" width="24px">
+<g fill="none" fillrule="evenodd" id="error" stroke="none" transform="translate(3.000000, 3.000000)">
+<path classname="icon_svg-fill_as_stroke" d="M9,12 C9.55228475,12 10,12.4477153 10,13 C10,13.5522847 9.55228475,14 9,14 C8.44771525,14 8,13.5522847 8,13 C8,12.4477153 8.44771525,12 9,12 Z" fill="#666666" fillrule="nonzero">
+</path>
+<path classname="icon_svg-stroke" d="M9,9.5 L9,4.5 L9,9.5 Z M9,18 C4.029,18 0,13.971 0,9 C0,4.029 4.029,0 9,0 C13.971,0 18,4.029 18,9 C18,13.971 13.971,18 9,18 Z" stroke="#666" strokelinecap="round" strokewidth='1.5'>
+</path>
+</g>
+</svg>
+<p style="text-align: center; margin-top: 8px; max-width: 60vw;margin-bottom: 16px;">
+     Un problème est survenu. Veuillez patienter et réessayer plus tard.
+    </p>
+<button onclick="location.reload();" style="padding: 8px 16px;font-size: 15px; background-color: #2E69FF; color: #fff;border: 0; border-radius: 9999em; appearance: none;cursor:pointer;-webkit-appearance: none;font-family:-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;">
+     Réessayer
+    </button>
+</div>
+</div>
+<script data-chunk-uuid="c68a35a9-2bea-4abf-a2a2-d041bc4f4930" type="text/javascript">// chunk_script_c68a35a9-2bea-4abf-a2a2-d041bc4f4930
+</script>
+<div class="" id="loader" style="height: calc(100vh - 50px);margin-top: 50px;display: flex;font-size: 15px;background-color: #fff;flex-direction: column;align-items: center;justify-content: center;font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif">
+<div style="position: fixed;top: 0;left: 0;right: 0;height: 50px;background-color: #fff;border-bottom: 1px solid rgb(222, 224, 225);box-shadow: 0 3px 6px rgba(0, 0, 0, 0.04)">
+</div>
+<style data-chunk-uuid="dec4bb34-0b9e-45c8-abf8-0cae6eb24ad8">/* chunk_style_dec4bb34-0b9e-45c8-abf8-0cae6eb24ad8 */
+</style>
+<svg fill="none" height='24' viewbox="0 0 24 24" width='24' xmlns="http://www.w3.org/2000/svg">
+<path class="icon_svg-fill_as_stroke" d="M20.7364 19.4633L18.9688 17.6952C20.2382 16.1439 21.0001 14.161 21.0001 12C21 7.02939 16.9705 3 12 3C7.02939 3 3 7.02939 3 12C3 16.9705 7.02948 20.9999 12 21C12.0114 21 12.0226 20.9996 12.0339 20.9996H20.0999C20.9016 20.9996 21.3032 20.0303 20.7364 19.4633ZM6.59998 12C6.59998 9.01765 9.01765 6.59998 12 6.59998C14.9823 6.59998 17.3999 9.01765 17.4 12C17.4 14.9823 14.9823 17.3999 12 17.3999C9.01765 17.4 6.59998 14.9823 6.59998 12Z" fill="#B92B27">
+</path>
+</svg>
+<div style="height: 3px;width: 20px;position: relative;border-radius: 1000px;margin-top: 6px;overflow: hidden;animation: entrance .15s ease-in 1s 1 both">
+<div style="position: absolute;top: 0px;bottom: 0px;left: 0px;width: 100%;background-color: rgba(0, 0, 0, 0.2);border-radius: 1000px;animation: loader-line 1.5s cubic-bezier(0.83, 0, 0.17, 1) 1s infinite both;transform-origin: left center;opacity: 0">
+</div>
+</div>
+</div>
+<script data-chunk-uuid="94e08ffd-5d7d-4f56-8987-25d3a5680305" type="text/javascript">// chunk_script_94e08ffd-5d7d-4f56-8987-25d3a5680305
+</script>
+<div id="root">
+</div>
+<noscript>
+   Veuillez activer Javascript et réactualiser la page pour continuer
+  </noscript>
+<script data-chunk-uuid="6fd42660-a885-4823-ba84-937a2205e2b8" type="text/javascript">// chunk_script_6fd42660-a885-4823-ba84-937a2205e2b8
+</script>
+<script data-chunk-uuid="07900d7a-5d66-4fde-b6f5-c3330a8f4a94" type="text/javascript">// chunk_script_07900d7a-5d66-4fde-b6f5-c3330a8f4a94
+</script>
+<script data-chunk-uuid="c236f088-a452-42c5-b784-84de1c96b189" type="text/javascript">// chunk_script_c236f088-a452-42c5-b784-84de1c96b189
+</script>
+<script data-chunk-uuid="dd57f47b-73d6-4848-b66d-e811a4942a76" type="text/javascript">// chunk_script_dd57f47b-73d6-4848-b66d-e811a4942a76
+</script>
+<script data-chunk-uuid="872e4e7a-7f59-4c3f-9fba-ff9d38f756c1" type="text/javascript">// chunk_script_872e4e7a-7f59-4c3f-9fba-ff9d38f756c1
+</script>
+<script data-chunk-uuid="78b99570-bbc0-40f2-94cb-c1e9a54fb856" type="text/javascript">// chunk_script_78b99570-bbc0-40f2-94cb-c1e9a54fb856
+</script>
+
+        ```
+        

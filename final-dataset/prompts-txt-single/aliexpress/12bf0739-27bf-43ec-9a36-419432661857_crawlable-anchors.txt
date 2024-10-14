@@ -1,0 +1,138 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. crawlable-anchors => Links are not crawlable: Search engines may use `href` attributes on links to crawl websites. Ensure that the `href` attribute of anchor elements links to an appropriate destination, so more pages of the site can be discovered. [Learn how to make links crawlable](https://support.google.com/webmasters/answer/9112205)
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        
+<meta charset="utf-8"></meta>
+<meta content="a2g0o" name="data-spm"></meta>
+<meta content="en_US" http-equiv="content-language"></meta>
+<title>
+      AliExpress - Affordable Prices on Top Brands with Free Shipping
+    </title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"></meta>
+<meta content="MAN" name="aplus-waiting"></meta>
+<meta content='0.5' name="aplus-auto-exp-visible"></meta>
+<meta content='500' name="aplus-auto-exp-duration"></meta>
+<meta content="[{'logkey':'/ae.pc_ctr.statweb_ae_ctr','tag':'li','filter':'data-exp-s','pkgSize':10,'props': ['st_page_id','ae_project_id','exp_page','exp_page_area','exp_type','exp_condition','exp_product','exp_attribute','exp_result_cnt', 'data-exp-s', 'ae_trace', 'biz_code', 'data-spm-anchor-id']},
+      {'logkey':'/ae.pc_ctr.statweb_ae_ctr','tag':'div','filter':'data-exp-s','pkgSize':10,'props': ['st_page_id','ae_project_id','exp_page','exp_page_area','exp_type','exp_condition','exp_product','exp_attribute','exp_result_cnt', 'data-exp-s', 'ae_trace', 'biz_code', 'data-spm-anchor-id']},
+      {'logkey':'/ae.pc_ctr.statweb_ae_ctr','tag':'a','filter':'data-exp-s','pkgSize':10,'props': ['st_page_id','ae_project_id','exp_page','exp_page_area','exp_type','exp_condition','exp_product','exp_attribute','exp_result_cnt', 'data-exp-s', 'ae_trace', 'biz_code', 'data-spm-anchor-id']}]" name="aplus-auto-exp"></meta>
+<meta content="[{'logkey':'/ae.pc_click.statweb_ae_click','tag':'button','filter':'data-clk','props':['st_page_id','ae_project_id','ae_page_type','ae_page_area','ae_button_type','ae_click_behavior','ae_object_type','ae_object_value', 'ae_trace', 'biz_code']},
+          {'logkey':'/ae.pc_click.statweb_ae_click','tag':'a','filter':'data-clk','props':['st_page_id','ae_project_id','ae_page_type','ae_page_area','ae_button_type','ae_click_behavior','ae_object_type','ae_object_value', 'ae_trace', 'biz_code']},
+          {'logkey':'/ae.pc_click.statweb_ae_click','tag':'div','filter':'data-clk','props':['st_page_id','ae_project_id','ae_page_type','ae_page_area','ae_button_type','ae_click_behavior','ae_object_type','ae_object_value', 'ae_trace', 'biz_code']},
+          {'logkey':'/ae.pc_click.statweb_ae_click','tag':'span','filter':'data-clk','props':['st_page_id','ae_project_id','ae_page_type','ae_page_area','ae_button_type','ae_click_behavior','ae_object_type','ae_object_value', 'ae_trace', 'biz_code']},
+          {'logkey':'/ae.pc_click.statweb_ae_click','tag':'li','filter':'data-clk','props':['st_page_id','ae_project_id','ae_page_type','ae_page_area','ae_button_type','ae_click_behavior','ae_object_type','ae_object_value', 'ae_trace', 'biz_code']},
+          {'logkey':'/ae.pc_click.statweb_ae_click','tag':'label','filter':'data-clk','props':['st_page_id','ae_project_id','ae_page_type','ae_page_area','ae_button_type','ae_click_behavior','ae_object_type','ae_object_value', 'ae_trace', 'biz_code']}]" name="aplus-auto-clk"></meta>
+<meta content="AliExpress, Online shopping, Automotive, Phones, Accessories, Computers, Electronics, Fashion, Beauty, Health, Home, Garden, Toys, Sports, Weddings,AliExpress" name="keywords"></meta>
+<meta content="Passion shouldn't cost a fortune. On AliExpress, shop online for over 111 million quality deals on Fashion, Accessories, Computer Electronics, Toys, Tools, Home Improvement, Home Appliances, Home & Garden and more!" name="description"></meta>
+<meta content="8daa66079a8aa29e-f219f934a1051f5a-ge19f8e1eaa3bf94b-e" name="google-translate-customization"></meta>
+<meta content="ycEipw03vUCqzr4lBwRQo6sv28zi0o835SYxaaPV03Y" name="google-site-verification"></meta>
+<link as="image" fetchpriority="high" href="https://ae-pic-a1.aliexpress-media.com/kf/S0fdd691113b74eb6bab15b8eba6093252.png_.webp" rel="preload"></link>
+<link as="image" fetchpriority="high" href="//ae-pic-a1.aliexpress-media.com/kf/S0143c5bb08e549c3b29f747df0112100W.jpg_350x350.jpg" rel="preload"></link>
+<link as="image" fetchpriority="high" href="https://ae-pic-a1.aliexpress-media.com/kf/S3d5120b70506416aae4d4a8e0a9742a9X/2880x837.png_.webp" rel="preload"></link>
+<link href="//g.alicdn.com" rel="preconnect dns-prefetch"></link>
+<link href="//assets.alicdn.com" rel="preconnect dns-prefetch"></link>
+<link href="//o.alicdn.com" rel="preconnect dns-prefetch"></link>
+<link href="//is.alicdn.com" rel="preconnect dns-prefetch"></link>
+<link href="//aeis.alicdn.com" rel="preconnect dns-prefetch"></link>
+<link href="//ae01.alicdn.com" rel="preconnect dns-prefetch"></link>
+<link href="//ae04.alicdn.com" rel="preconnect dns-prefetch"></link>
+<link href="//ae-pic-a1.aliexpress-media.com" rel="preconnect dns-prefetch"></link>
+<link href="//acs.aliexpress.com" rel="preconnect dns-prefetch"></link>
+<link href="//acs.aliexpress.us" rel="preconnect dns-prefetch"></link>
+<link href="//ae.mmstat.com" rel="preconnect dns-prefetch"></link>
+<link href="//time-ae.akamaized.net" rel="preconnect dns-prefetch"></link>
+<link href="//video.aliexpress-media.com" rel="preconnect dns-prefetch"></link>
+<link href="https://www.aliexpress.com" rel="canonical"></link>
+<link href="https://www.aliexpress.com" hreflang="en" rel="alternate"></link>
+<link href="https://id.aliexpress.com" hreflang="id" rel="alternate"></link>
+<link href="https://ko.aliexpress.com" hreflang="ko" rel="alternate"></link>
+<link href="https://ar.aliexpress.com" hreflang="ar" rel="alternate"></link>
+<link href="https://de.aliexpress.com" hreflang="de" rel="alternate"></link>
+<link href="https://es.aliexpress.com" hreflang="es" rel="alternate"></link>
+<link href="https://fr.aliexpress.com" hreflang="fr" rel="alternate"></link>
+<link href="https://it.aliexpress.com" hreflang="it" rel="alternate"></link>
+<link href="https://nl.aliexpress.com" hreflang="nl" rel="alternate"></link>
+<link href="https://pt.aliexpress.com" hreflang="pt" rel="alternate"></link>
+<link href="https://th.aliexpress.com" hreflang="th" rel="alternate"></link>
+<link href="https://tr.aliexpress.com" hreflang="tr" rel="alternate"></link>
+<link href="https://vi.aliexpress.com" hreflang="vi" rel="alternate"></link>
+<link href="https://he.aliexpress.com" hreflang="he" rel="alternate"></link>
+<link href="https://ja.aliexpress.com" hreflang="ja" rel="alternate"></link>
+<link href="https://pl.aliexpress.com" hreflang="pl" rel="alternate"></link>
+<meta content="7351efeba2c5d063f3b0c3f655938abe88dacec1" name="naver-site-verification"></meta>
+<meta content="AliExpress - Affordable Prices on Top Brands with Free Shipping" property="og:title"></meta>
+<meta content="site" property="og:type"></meta>
+<meta content="//www.aliexpress.com" property="og:url"></meta>
+<meta content="https://ae01.alicdn.com/kf/Sa0202ec8a96a4085962acfc27e9ffd04F/1080x1080.jpg" property="og:image"></meta>
+<meta content="AliExpress" property="og:site_name"></meta>
+<meta content="100001353684210,644984273" property="fb:admins"></meta>
+<meta content='335963307560' property="fb:page_id"></meta>
+<meta content='176044105761845' property="fb:app_id"></meta>
+<link href="//ae01.alicdn.com/images/eng/wholesale/icon/aliexpress.ico" rel="shortcut icon" type="image/x-icon"></link>
+<link href="//www.aliexpress.com/plugins/opensearch/opensearch.xml" rel="search" title="Aliexpress Shopping" type="application/opensearchdescription+xml"></link>
+<link href="android-app:https://com.alibaba.aliexpresshd/aliexpress/deeplink/home/www/en" hreflang="en" rel="alternate"></link>
+<style data-chunk-uuid="633b7903-43b5-4522-90cd-41ebbd3cef28" type="text/css">/* chunk_style_633b7903-43b5-4522-90cd-41ebbd3cef28 */
+</style>
+<style data-chunk-uuid="22195293-44ce-44b3-badc-56b37a7274c1" type="text/css">/* chunk_style_22195293-44ce-44b3-badc-56b37a7274c1 */
+</style>
+<script data-chunk-uuid="410031d8-2708-4e0e-9ea9-4af4c897cfbc">// chunk_script_410031d8-2708-4e0e-9ea9-4af4c897cfbc
+</script>
+<script data-chunk-uuid="18d90d4f-b4f7-4e92-870c-7759725456f4">// chunk_script_18d90d4f-b4f7-4e92-870c-7759725456f4
+</script>
+<!-- -->
+<script data-chunk-uuid="f1301385-fa0f-4e8e-9443-0b8802c97993">// chunk_script_f1301385-fa0f-4e8e-9443-0b8802c97993
+</script>
+<noscript> Your browser does not support JavaScript! </noscript>
+<script data-chunk-uuid="3e9c37b6-f03b-4c3f-ac7d-073e039255a8" type="application/ld+json">// chunk_script_3e9c37b6-f03b-4c3f-ac7d-073e039255a8
+</script>
+<script data-chunk-uuid="a640da50-8d8f-40e2-b3b9-03729de1d492">// chunk_script_a640da50-8d8f-40e2-b3b9-03729de1d492
+</script>
+<style data-chunk-uuid="bd8df044-533f-47c0-b0d6-570a99e66932" type="text/css">/* chunk_style_bd8df044-533f-47c0-b0d6-570a99e66932 */
+</style>
+<meta content="0e3511f481" name="Petal-Search-site-verification"></meta>
+<script data-chunk-uuid="e58cc8a3-f718-426e-b272-e9e821d9f64f">// chunk_script_e58cc8a3-f718-426e-b272-e9e821d9f64f
+</script>
+<script data-chunk-uuid="01c91a40-17b9-4157-a75e-22173216bf1e">// chunk_script_01c91a40-17b9-4157-a75e-22173216bf1e
+</script>
+<style data-chunk-uuid="ed63b865-0e5d-4ab0-baa7-72cf0bf09d58">/* chunk_style_ed63b865-0e5d-4ab0-baa7-72cf0bf09d58 */
+</style>
+<script data-chunk-uuid="08756e58-43f6-4034-8f9c-7ffe2c098261">// chunk_script_08756e58-43f6-4034-8f9c-7ffe2c098261
+</script>
+<script data-chunk-uuid="0d3cb0a5-b886-41a2-b200-e9a44ef3bb50">// chunk_script_0d3cb0a5-b886-41a2-b200-e9a44ef3bb50
+</script>
+
+        ```
+        

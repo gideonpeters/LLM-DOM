@@ -1,0 +1,417 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. unused-javascript => Reduce unused JavaScript: Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        
+<div id="appMountPoint">
+<div data-uia="loc" dir="ltr" lang="en-CA">
+<style data-chunk-uuid="a101350c-6c75-4aab-91f4-740f38ae76e9" data-emotion="default-ltr-cache k55181">/* chunk_style_a101350c-6c75-4aab-91f4-740f38ae76e9 */
+</style>
+<div class="default-ltr-cache-k55181 eoi9e9o1">
+<style data-chunk-uuid="e3a59925-47b2-4dac-ac44-3b498031d59f" data-emotion="default-ltr-cache pkc5fh">/* chunk_style_e3a59925-47b2-4dac-ac44-3b498031d59f */
+</style>
+<div class="default-ltr-cache-pkc5fh e1qiesvj0">
+<img alt="" class="concord-img vlv-creative" src="https://assets.nflxext.com/ffe/siteui/vlv3/b2c3e95b-b7b5-4bb7-a883-f4bfc7472fb7/813635c2-ab2e-416f-aca0-2fe712618ed4/CA-en-20240805-POP_SIGNUP_TWO_WEEKS-perspective_WEB_9148549a-7358-4ba2-93c6-b061d704ac8e_small.jpg" srcset="https://assets.nflxext.com/ffe/siteui/vlv3/b2c3e95b-b7b5-4bb7-a883-f4bfc7472fb7/813635c2-ab2e-416f-aca0-2fe712618ed4/CA-en-20240805-POP_SIGNUP_TWO_WEEKS-perspective_WEB_9148549a-7358-4ba2-93c6-b061d704ac8e_small.jpg 1000w, https://assets.nflxext.com/ffe/siteui/vlv3/b2c3e95b-b7b5-4bb7-a883-f4bfc7472fb7/813635c2-ab2e-416f-aca0-2fe712618ed4/CA-en-20240805-POP_SIGNUP_TWO_WEEKS-perspective_WEB_9148549a-7358-4ba2-93c6-b061d704ac8e_medium.jpg 1500w, https://assets.nflxext.com/ffe/siteui/vlv3/b2c3e95b-b7b5-4bb7-a883-f4bfc7472fb7/813635c2-ab2e-416f-aca0-2fe712618ed4/CA-en-20240805-POP_SIGNUP_TWO_WEEKS-perspective_WEB_9148549a-7358-4ba2-93c6-b061d704ac8e_large.jpg 1800w"></img>
+</div>
+<header>
+<style data-chunk-uuid="9f6ff870-0f24-48c4-a1cb-3478c6951972" data-emotion="default-ltr-cache xa9oq4">/* chunk_style_9f6ff870-0f24-48c4-a1cb-3478c6951972 */
+</style>
+<header class="default-ltr-cache-xa9oq4 e1bzn5xj0">
+<style data-chunk-uuid="7ffaabe7-16bc-43e7-9df6-da2d9dbcff65" data-emotion="default-ltr-cache 1s6nle9">/* chunk_style_7ffaabe7-16bc-43e7-9df6-da2d9dbcff65 */
+</style>
+<div class="default-ltr-cache-1s6nle9 eslj5pt1" data-layout="wrapper">
+<style data-chunk-uuid="6438f442-9741-41db-bb11-c827dcaf010c" data-emotion="default-ltr-cache 1g2lo7a">/* chunk_style_6438f442-9741-41db-bb11-c827dcaf010c */
+</style>
+<div class="default-ltr-cache-1g2lo7a eslj5pt0" data-layout="container">
+<style data-chunk-uuid="72081b64-9ba7-4be2-8886-cc07b2bfb65a" data-emotion="default-ltr-cache 35cwt6">/* chunk_style_72081b64-9ba7-4be2-8886-cc07b2bfb65a */
+</style>
+<div class="default-ltr-cache-35cwt6 ew2l6qe0" data-layout="item">
+<style data-chunk-uuid="6bbdf863-3642-4b76-93fc-6f0a17cad8c0" data-emotion="default-ltr-cache h18bb">/* chunk_style_6bbdf863-3642-4b76-93fc-6f0a17cad8c0 */
+</style>
+<style data-chunk-uuid="2083128f-7372-46c8-987e-fb7b5667b442" data-emotion="default-ltr-cache idm8p5">/* chunk_style_2083128f-7372-46c8-987e-fb7b5667b442 */
+</style>
+<a class="ev1dnif0 e1xphksk0 default-ltr-cache-idm8p5 e1ff4m3w1" href="/" role="link">
+<style data-chunk-uuid="8c42c868-9515-4d32-9868-02b92c03db0d" data-emotion="default-ltr-cache 1d568uk">/* chunk_style_8c42c868-9515-4d32-9868-02b92c03db0d */
+</style>
+<svg aria-hidden='true' class="default-ltr-cache-1d568uk ev1dnif2" role="img" version='1.1' viewbox="0 0 111 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g>
+<path d="M105.06233,14.2806261 L110.999156,30 C109.249227,29.7497422 107.500234,29.4366857 105.718437,29.1554972 L102.374168,20.4686475 L98.9371075,28.4375293 C97.2499766,28.1563408 95.5928391,28.061674 93.9057081,27.8432843 L99.9372012,14.0931671 L94.4680851,-5.68434189e-14 L99.5313525,-5.68434189e-14 L102.593495,7.87421502 L105.874965,-5.68434189e-14 L110.999156,-5.68434189e-14 L105.06233,14.2806261 Z M90.4686475,-5.68434189e-14 L85.8749649,-5.68434189e-14 L85.8749649,27.2499766 C87.3746368,27.3437061 88.9371075,27.4055675 90.4686475,27.5930265 L90.4686475,-5.68434189e-14 Z M81.9055207,26.93692 C77.7186241,26.6557316 73.5307901,26.4064111 69.250164,26.3117443 L69.250164,-5.68434189e-14 L73.9366389,-5.68434189e-14 L73.9366389,21.8745899 C76.6248008,21.9373887 79.3120255,22.1557784 81.9055207,22.2804387 L81.9055207,26.93692 Z M64.2496954,10.6561065 L64.2496954,15.3435186 L57.8442216,15.3435186 L57.8442216,25.9996251 L53.2186709,25.9996251 L53.2186709,-5.68434189e-14 L66.3436123,-5.68434189e-14 L66.3436123,4.68741213 L57.8442216,4.68741213 L57.8442216,10.6561065 L64.2496954,10.6561065 Z M45.3435186,4.68741213 L45.3435186,26.2498828 C43.7810479,26.2498828 42.1876465,26.2498828 40.6561065,26.3117443 L40.6561065,4.68741213 L35.8121661,4.68741213 L35.8121661,-5.68434189e-14 L50.2183897,-5.68434189e-14 L50.2183897,4.68741213 L45.3435186,4.68741213 Z M30.749836,15.5928391 C28.687787,15.5928391 26.2498828,15.5928391 24.4999531,15.6875059 L24.4999531,22.6562939 C27.2499766,22.4678976 30,22.2495079 32.7809542,22.1557784 L32.7809542,26.6557316 L19.812541,27.6876933 L19.812541,-5.68434189e-14 L32.7809542,-5.68434189e-14 L32.7809542,4.68741213 L24.4999531,4.68741213 L24.4999531,10.9991564 C26.3126816,10.9991564 29.0936358,10.9054269 30.749836,10.9054269 L30.749836,15.5928391 Z M4.78114163,12.9684132 L4.78114163,29.3429562 C3.09401069,29.5313525 1.59340144,29.7497422 0,30 L0,-5.68434189e-14 L4.4690224,-5.68434189e-14 L10.562377,17.0315868 L10.562377,-5.68434189e-14 L15.2497891,-5.68434189e-14 L15.2497891,28.061674 C13.5935889,28.3437998 11.906458,28.4375293 10.1246602,28.6868498 L4.78114163,12.9684132 Z">
+</path>
+</g>
+</svg>
+<style data-chunk-uuid="2b069b16-824f-4f2a-b6ea-f0bf4ec88042" data-emotion="default-ltr-cache raue2m">/* chunk_style_2b069b16-824f-4f2a-b6ea-f0bf4ec88042 */
+</style>
+<span class="default-ltr-cache-raue2m ev1dnif1">
+            Netflix
+           </span>
+</a>
+</div>
+<style data-chunk-uuid="79626a21-ba46-4d4a-8327-807b85804e62" data-emotion="default-ltr-cache 7ejomh">/* chunk_style_79626a21-ba46-4d4a-8327-807b85804e62 */
+</style>
+<div class="default-ltr-cache-7ejomh ew2l6qe0" data-layout="item">
+<div class="default-ltr-cache-1s6nle9 eslj5pt1" data-layout="wrapper">
+<style data-chunk-uuid="5f5f5336-36fe-4250-8356-af8aa6426976" data-emotion="default-ltr-cache 1s9wmgc">/* chunk_style_5f5f5336-36fe-4250-8356-af8aa6426976 */
+</style>
+<div class="default-ltr-cache-1s9wmgc eslj5pt0" data-layout="container">
+<style data-chunk-uuid="2da132ca-5733-4846-b3ce-8ce40c90fee8" data-emotion="default-ltr-cache 7ujrbr">/* chunk_style_2da132ca-5733-4846-b3ce-8ce40c90fee8 */
+</style>
+<div class="default-ltr-cache-7ujrbr ew2l6qe0" data-layout="item">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+</header>
+<style data-chunk-uuid="a003ce74-3cc1-4108-9332-87d09a71e47e" data-emotion="default-ltr-cache 8hdzfz">/* chunk_style_a003ce74-3cc1-4108-9332-87d09a71e47e */
+</style>
+<div class="default-ltr-cache-8hdzfz eoi9e9o0">
+<style data-chunk-uuid="0c16a72f-e390-412c-afab-15540a7e14a4" data-emotion="default-ltr-cache 1osrymp">/* chunk_style_0c16a72f-e390-412c-afab-15540a7e14a4 */
+</style>
+<div class="default-ltr-cache-1osrymp e1puclvk0" data-uia="login-page-container">
+<style data-chunk-uuid="ae222ad1-6fc5-4bc9-ad73-b7c2fd910889" data-emotion="default-ltr-cache 1ws1lu8">/* chunk_style_ae222ad1-6fc5-4bc9-ad73-b7c2fd910889 */
+</style>
+<header class="default-ltr-cache-1ws1lu8 e13lzdkk2">
+<style data-chunk-uuid="da90768b-8a9e-46e8-bbce-5d78eab975d7" data-emotion="default-ltr-cache 1ho9ut0">/* chunk_style_da90768b-8a9e-46e8-bbce-5d78eab975d7 */
+</style>
+<h1 class="default-ltr-cache-1ho9ut0 euy28771" data-uia="login-page-title">
+         Sign In
+        </h1>
+</header>
+<style data-chunk-uuid="a3b76d60-b979-4911-8d6b-0b1599a02586" data-emotion="default-ltr-cache budh8k">/* chunk_style_a3b76d60-b979-4911-8d6b-0b1599a02586 */
+</style>
+<style data-chunk-uuid="b458e96b-c621-4f13-8f35-cb9c449c61ad" data-emotion="default-ltr-cache 9beyap">/* chunk_style_b458e96b-c621-4f13-8f35-cb9c449c61ad */
+</style>
+<div aria-label="Sign In" class="e13lzdkk1 default-ltr-cache-9beyap">
+<style data-chunk-uuid="7403873c-9a27-4ab5-b5cd-66ca32c5f5f4" data-emotion="default-ltr-cache z5atxi">/* chunk_style_7403873c-9a27-4ab5-b5cd-66ca32c5f5f4 */
+</style>
+<div class="default-ltr-cache-z5atxi e2eu37l0">
+<style data-chunk-uuid="8bf3bfc5-8bd1-416c-8959-9e9bf2ca3123" data-emotion="default-ltr-cache ifq2yp">/* chunk_style_8bf3bfc5-8bd1-416c-8959-9e9bf2ca3123 */
+</style>
+<style data-chunk-uuid="bede3247-adcc-4ccf-82b6-18ebb00c4786" data-emotion="default-ltr-cache 155rck4">/* chunk_style_bede3247-adcc-4ccf-82b6-18ebb00c4786 */
+</style>
+<style data-chunk-uuid="e84b556e-375b-4959-922e-404a33546ee3" data-emotion="default-ltr-cache 1r5nfk1">/* chunk_style_e84b556e-375b-4959-922e-404a33546ee3 */
+</style>
+<div class="exrud7f1 etuj2l30 default-ltr-cache-1r5nfk1 ea3diy35" data-uia="login-field+container">
+<style data-chunk-uuid="6dbc6b8c-88f5-42b1-8695-644c74e5bbd2" data-emotion="default-ltr-cache v70qew">/* chunk_style_6dbc6b8c-88f5-42b1-8695-644c74e5bbd2 */
+</style>
+<label class="default-ltr-cache-v70qew ea3diy32" data-uia="login-field+label" for=":R2l3alpp:">
+           Email or mobile number
+          </label>
+<style data-chunk-uuid="0508271a-3d45-4da5-b0d3-71e14c6be737" data-emotion="default-ltr-cache fmygl2 animation-8kyet8 animation-8kyet8 animation-8kyet8 animation-14hycbg">/* chunk_style_0508271a-3d45-4da5-b0d3-71e14c6be737 */
+</style>
+<div class="default-ltr-cache-fmygl2 ea3diy34">
+<input autocomplete="email" data-uia="login-field" id=":R2l3alpp:" name="userLoginId" type="text" value=""></input>
+<style data-chunk-uuid="14a363e5-96e3-4882-8f19-5f66d5b25a42" data-emotion="default-ltr-cache emv211">/* chunk_style_14a363e5-96e3-4882-8f19-5f66d5b25a42 */
+</style>
+<div aria-hidden='true' class="default-ltr-cache-emv211 ea3diy33">
+</div>
+</div>
+</div>
+</div>
+<style data-chunk-uuid="df3196f5-af20-4077-8b08-5d3769a17cde" data-emotion="default-ltr-cache 1qtmpa">/* chunk_style_df3196f5-af20-4077-8b08-5d3769a17cde */
+</style>
+<div class="default-ltr-cache-1qtmpa e1j9l8n51">
+<style data-chunk-uuid="b010d683-b02f-477c-a033-cbefeb6a2f3b" data-emotion="default-ltr-cache 8fs96e">/* chunk_style_b010d683-b02f-477c-a033-cbefeb6a2f3b */
+</style>
+<style data-chunk-uuid="03691f8c-ef21-41ae-8d00-de8111a1e1ef" data-emotion="default-ltr-cache zev5we">/* chunk_style_03691f8c-ef21-41ae-8d00-de8111a1e1ef */
+</style>
+<style data-chunk-uuid="dc3d0fe8-1a12-4b35-9f4a-73c31dcc3bab" data-emotion="default-ltr-cache 4o4q5b">/* chunk_style_dc3d0fe8-1a12-4b35-9f4a-73c31dcc3bab */
+</style>
+<div class="e2so2tu1 default-ltr-cache-4o4q5b ea3diy35" data-uia="password-field+container">
+<label class="default-ltr-cache-v70qew ea3diy32" data-uia="password-field+label" for=":R2j5alpp:">
+           Password
+          </label>
+<div class="default-ltr-cache-fmygl2 ea3diy34">
+<input autocomplete="password" data-uia="password-field" id=":R2j5alpp:" name="password" type="password"></input>
+<div aria-hidden='true' class="default-ltr-cache-emv211 ea3diy33">
+</div>
+</div>
+</div>
+</div>
+<style data-chunk-uuid="0051ea93-49b3-408c-b70d-f094d43e089d" data-emotion="default-ltr-cache 1bx13g4">/* chunk_style_0051ea93-49b3-408c-b70d-f094d43e089d */
+</style>
+<style data-chunk-uuid="5c01349c-d0c7-4e5b-9464-9bfb5d045177" data-emotion="default-ltr-cache ttiwc1">/* chunk_style_5c01349c-d0c7-4e5b-9464-9bfb5d045177 */
+</style>
+<style data-chunk-uuid="67570bb0-970f-405f-9d2d-a00d2a7f895d" data-emotion="default-ltr-cache 62lxnw">/* chunk_style_67570bb0-970f-405f-9d2d-a00d2a7f895d */
+</style>
+<button class="e1ax5wel2 ew97par0 default-ltr-cache-62lxnw e1ff4m3w2" data-uia="login-submit-button" role="button" type="submit">
+         Sign In
+        </button>
+<style data-chunk-uuid="a7c7c156-92f7-45ff-8c6b-5eda15ff32c4" data-emotion="default-ltr-cache 1und4li">/* chunk_style_a7c7c156-92f7-45ff-8c6b-5eda15ff32c4 */
+</style>
+<p class="default-ltr-cache-1und4li euy28771">
+         OR
+        </p>
+<style data-chunk-uuid="3e42d7fa-46d2-4330-917f-32d2e7075650" data-emotion="default-ltr-cache 1lqwzgh">/* chunk_style_3e42d7fa-46d2-4330-917f-32d2e7075650 */
+</style>
+<style data-chunk-uuid="f873100e-2dc1-49ff-9ca0-dee655246e7c" data-emotion="default-ltr-cache u5ctdn">/* chunk_style_f873100e-2dc1-49ff-9ca0-dee655246e7c */
+</style>
+<style data-chunk-uuid="633223d4-8810-4416-87c4-cb4f05c3e424" data-emotion="default-ltr-cache ecqt48">/* chunk_style_633223d4-8810-4416-87c4-cb4f05c3e424 */
+</style>
+<button class="e1ax5wel2 ew97par0 default-ltr-cache-ecqt48 e1ff4m3w2" data-uia="login-toggle-button" role="button" type="button">
+         Use a Sign-In Code
+        </button>
+<style data-chunk-uuid="32c1a082-b1f0-455a-949a-a1bcf1c808b5" data-emotion="default-ltr-cache 1uewjrz">/* chunk_style_32c1a082-b1f0-455a-949a-a1bcf1c808b5 */
+</style>
+<style data-chunk-uuid="580923ae-b925-44e0-9f8b-f3a64c768aba" data-emotion="default-ltr-cache nrgemi">/* chunk_style_580923ae-b925-44e0-9f8b-f3a64c768aba */
+</style>
+<style data-chunk-uuid="84aea79f-b5bd-454e-891a-00e90c505c49" data-emotion="default-ltr-cache badynt">/* chunk_style_84aea79f-b5bd-454e-891a-00e90c505c49 */
+</style>
+<style data-chunk-uuid="692ccae2-72a6-4480-8b8a-7665585792b9" data-emotion="default-ltr-cache 14uyol1">/* chunk_style_692ccae2-72a6-4480-8b8a-7665585792b9 */
+</style>
+<a class="e1gz2xdw0 e1xphksk0 default-ltr-cache-14uyol1 e1ff4m3w1" data-uia="login-help-link" href="/LoginHelp" role="link">
+         Forgot password?
+        </a>
+</div>
+<style data-chunk-uuid="59c860b9-3a8a-43c8-be65-0c97820af4b1" data-emotion="default-ltr-cache banb1s">/* chunk_style_59c860b9-3a8a-43c8-be65-0c97820af4b1 */
+</style>
+<footer class="default-ltr-cache-banb1s e13lzdkk0">
+<style data-chunk-uuid="d799238b-fde4-4927-ba79-039ef1890ffb" data-emotion="default-ltr-cache 1r5gb7q">/* chunk_style_d799238b-fde4-4927-ba79-039ef1890ffb */
+</style>
+<div class="default-ltr-cache-1r5gb7q e182k4ex0">
+<style data-chunk-uuid="9feceb1f-c3bb-46f3-aee0-0538df8932f4" data-emotion="default-ltr-cache 1trz917">/* chunk_style_9feceb1f-c3bb-46f3-aee0-0538df8932f4 */
+</style>
+<style data-chunk-uuid="e5b216e5-7b84-4f41-82be-63a2ea96b019" data-emotion="default-ltr-cache ix6pra">/* chunk_style_e5b216e5-7b84-4f41-82be-63a2ea96b019 */
+</style>
+<div class="eo28fys1 default-ltr-cache-ix6pra ea3diy35" data-uia="remember-me-field+container">
+<div class="default-ltr-cache-fmygl2 ea3diy34">
+<input checked="" data-uia="remember-me-field" id=":Rairlpp:" name="rememberMe" type="checkbox"></input>
+<div aria-hidden='true' class="default-ltr-cache-emv211 ea3diy33">
+<svg aria-hidden='true' data-icon="CheckmarkSmall" fill="none" height='16' role="img" viewbox="0 0 16 16" width='16' xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M13.4696 3.46973L14.5303 4.53039L6.53026 12.5304C6.23737 12.8233 5.7625 12.8233 5.4696 12.5304L1.4696 8.53039L2.53026 7.46973L5.99993 10.9394L13.4696 3.46973Z" fill="currentColor" fill-rule="evenodd">
+</path>
+</svg>
+</div>
+</div>
+<label class="default-ltr-cache-v70qew ea3diy32" data-uia="remember-me-field+label" for=":Rairlpp:">
+           Remember me
+          </label>
+</div>
+</div>
+<style data-chunk-uuid="e7ea6bba-9954-4ef6-8838-bdc861d88a17" data-emotion="default-ltr-cache 1mh3ox2">/* chunk_style_e7ea6bba-9954-4ef6-8838-bdc861d88a17 */
+</style>
+<style data-chunk-uuid="d1a4e0fd-0188-44dd-9a75-d242c6ab76ba" data-emotion="default-ltr-cache 1gysl7">/* chunk_style_d1a4e0fd-0188-44dd-9a75-d242c6ab76ba */
+</style>
+<style data-chunk-uuid="453642a2-9396-43ec-b937-f258d8332d2b" data-emotion="default-ltr-cache 160ge2v">/* chunk_style_453642a2-9396-43ec-b937-f258d8332d2b */
+</style>
+<p class="ec64ufc0 default-ltr-cache-160ge2v euy28771" data-uia="login-signup-now">
+         New to Netflix?
+         <a class="" href="/" target="_self">
+          Sign up now
+         </a>
+         .
+        </p>
+<div class="recaptcha-terms-of-use" data-uia="recaptcha-terms-of-use">
+<p>
+<span>
+           This page is protected by Google reCAPTCHA to ensure you're not a bot.
+          </span>
+<button class="recaptcha-terms-of-use--link-button" data-uia="recaptcha-learn-more-button">
+           Learn more.
+          </button>
+</p>
+<div class="recaptcha-terms-of-use--disclosure" data-uia="recaptcha-disclosure">
+<span data-uia="recaptcha-disclosure-text" id="">
+           The information collected by Google reCAPTCHA is subject to the Google
+           <a data-uia="recaptcha-privacy-link" href="https://policies.google.com/privacy" id="recaptcha-privacy-link" target="_blank">
+            Privacy Policy
+           </a>
+           and
+           <a data-uia="recaptcha-tos-link" href="https://policies.google.com/terms" id="recaptcha-tos-link" target="_blank">
+            Terms of Service
+           </a>
+           , and is used for providing, maintaining, and improving the reCAPTCHA service and for general security purposes (it is not used for personalized advertising by Google).
+          </span>
+</div>
+</div>
+</footer>
+</div>
+</div>
+<style data-chunk-uuid="63ebc965-68f7-42b6-b80e-3f7bf9ac1ac2" data-emotion="default-ltr-cache 1m4t6ky">/* chunk_style_63ebc965-68f7-42b6-b80e-3f7bf9ac1ac2 */
+</style>
+<footer class="default-ltr-cache-1m4t6ky e1s9oty30">
+<style data-chunk-uuid="2bccd4db-96fd-46a1-b35b-3aa6be530c47" data-emotion="default-ltr-cache 3sf4re">/* chunk_style_2bccd4db-96fd-46a1-b35b-3aa6be530c47 */
+</style>
+<footer class="default-ltr-cache-3sf4re eyieukx5">
+<style data-chunk-uuid="10c19984-d649-40e2-a77a-f33e6b3986fc" data-emotion="default-ltr-cache z41mby">/* chunk_style_10c19984-d649-40e2-a77a-f33e6b3986fc */
+</style>
+<div class="default-ltr-cache-z41mby eslj5pt1" data-layout="wrapper">
+<style data-chunk-uuid="c352560b-5146-41e5-9a4b-5c4d5c70d8a7" data-emotion="default-ltr-cache whiv2b">/* chunk_style_c352560b-5146-41e5-9a4b-5c4d5c70d8a7 */
+</style>
+<div class="default-ltr-cache-whiv2b eslj5pt0" data-layout="container">
+<style data-chunk-uuid="27b7e478-1e9a-42e4-8ba7-7449296b316b" data-emotion="default-ltr-cache cd6tzo">/* chunk_style_27b7e478-1e9a-42e4-8ba7-7449296b316b */
+</style>
+<div class="default-ltr-cache-cd6tzo ew2l6qe0" data-layout="item">
+<style data-chunk-uuid="ad1832b4-44f1-43c9-833c-4dbf92a2326e" data-emotion="default-ltr-cache 82qlwu">/* chunk_style_ad1832b4-44f1-43c9-833c-4dbf92a2326e */
+</style>
+<div class="default-ltr-cache-82qlwu eyieukx4">
+           Questions? Call
+           <a href="tel:1-844-542-4813">
+            1-844-542-4813
+           </a>
+</div>
+</div>
+<div class="default-ltr-cache-cd6tzo ew2l6qe0" data-layout="item">
+<style data-chunk-uuid="b846f232-6678-41d3-85ef-6c289ff59316" data-emotion="default-ltr-cache 2lwb1t">/* chunk_style_b846f232-6678-41d3-85ef-6c289ff59316 */
+</style>
+<div class="default-ltr-cache-2lwb1t eyieukx3">
+<div class="default-ltr-cache-z41mby eslj5pt1" data-layout="wrapper">
+<style data-chunk-uuid="e5efadd0-3544-476b-903a-5670fdad54b6" data-emotion="default-ltr-cache l0h4p1">/* chunk_style_e5efadd0-3544-476b-903a-5670fdad54b6 */
+</style>
+<ul class="default-ltr-cache-l0h4p1 eslj5pt0" data-layout="container">
+<style data-chunk-uuid="198673b4-e99b-4ec5-bde5-52dfe66e1d1e" data-emotion="default-ltr-cache text8n">/* chunk_style_198673b4-e99b-4ec5-bde5-52dfe66e1d1e */
+</style>
+<li class="default-ltr-cache-text8n ew2l6qe0" data-layout="item">
+<style data-chunk-uuid="f2230848-010f-4a09-96fd-a7840c08ce92" data-emotion="default-ltr-cache i9ostd">/* chunk_style_f2230848-010f-4a09-96fd-a7840c08ce92 */
+</style>
+<style data-chunk-uuid="2ca829b7-78d4-4868-868c-1fd5af0c3dca" data-emotion="default-ltr-cache ncd99a">/* chunk_style_2ca829b7-78d4-4868-868c-1fd5af0c3dca */
+</style>
+<a class="e1xphksk0 default-ltr-cache-ncd99a e1ff4m3w1" data-uia="footer-link" href="https://help.netflix.com/support/412" role="link" target="_self">
+               FAQ
+              </a>
+</li>
+<li class="default-ltr-cache-text8n ew2l6qe0" data-layout="item">
+<a class="e1xphksk0 default-ltr-cache-ncd99a e1ff4m3w1" data-uia="footer-link" href="https://help.netflix.com" role="link" target="_self">
+               Help Center
+              </a>
+</li>
+<li class="default-ltr-cache-text8n ew2l6qe0" data-layout="item">
+<a class="e1xphksk0 default-ltr-cache-ncd99a e1ff4m3w1" data-uia="footer-link" href="https://netflix.shop/" role="link" target="_self">
+               Netflix Shop
+              </a>
+</li>
+<li class="default-ltr-cache-text8n ew2l6qe0" data-layout="item">
+<a class="e1xphksk0 default-ltr-cache-ncd99a e1ff4m3w1" data-uia="footer-link" href="https://help.netflix.com/legal/termsofuse" role="link" target="_self">
+               Terms of Use
+              </a>
+</li>
+<li class="default-ltr-cache-text8n ew2l6qe0" data-layout="item">
+<a class="e1xphksk0 default-ltr-cache-ncd99a e1ff4m3w1" data-uia="footer-link" href="https://help.netflix.com/legal/privacy" role="link" target="_self">
+               Privacy
+              </a>
+</li>
+<li class="default-ltr-cache-text8n ew2l6qe0" data-layout="item">
+<a class="e1xphksk0 default-ltr-cache-ncd99a e1ff4m3w1" data-uia="footer-link" href="#" role="link" target="_self">
+               Cookie Preferences
+              </a>
+</li>
+<li class="default-ltr-cache-text8n ew2l6qe0" data-layout="item">
+<a class="e1xphksk0 default-ltr-cache-ncd99a e1ff4m3w1" data-uia="footer-link" href="https://help.netflix.com/legal/corpinfo" role="link" target="_self">
+               Corporate Information
+              </a>
+</li>
+<li class="default-ltr-cache-text8n ew2l6qe0" data-layout="item">
+<a class="e1xphksk0 default-ltr-cache-ncd99a e1ff4m3w1" data-uia="footer-link-ad-choices" href="https://netflix.com/adchoices" role="link" target="_self">
+               Ad Choices
+              </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="default-ltr-cache-z41mby eslj5pt1" data-layout="wrapper">
+<style data-chunk-uuid="373fe7ea-16bf-4156-b352-3fe914ea052e" data-emotion="default-ltr-cache wd0u3e">/* chunk_style_373fe7ea-16bf-4156-b352-3fe914ea052e */
+</style>
+<div class="default-ltr-cache-wd0u3e eslj5pt0" data-layout="container">
+<style data-chunk-uuid="b5102a05-0bf9-472e-8a97-1ee44c003646" data-emotion="default-ltr-cache 1m38zg8">/* chunk_style_b5102a05-0bf9-472e-8a97-1ee44c003646 */
+</style>
+<div class="default-ltr-cache-1m38zg8 ew2l6qe0" data-layout="item">
+<style data-chunk-uuid="ec723a42-da22-4eb9-ad86-ca635c15844c" data-emotion="default-ltr-cache 1ogakd7">/* chunk_style_ec723a42-da22-4eb9-ad86-ca635c15844c */
+</style>
+<style data-chunk-uuid="f8a8d0e7-162c-4cc0-bc6e-747ea9df7e44" data-emotion="default-ltr-cache ug7bvj">/* chunk_style_f8a8d0e7-162c-4cc0-bc6e-747ea9df7e44 */
+</style>
+<style data-chunk-uuid="48188828-ca68-44a7-b78c-68b3abd96375" data-emotion="default-ltr-cache pnouz0">/* chunk_style_48188828-ca68-44a7-b78c-68b3abd96375 */
+</style>
+<div class="e1jlx6kl1 default-ltr-cache-pnouz0 ea3diy35" data-uia="language-picker+container">
+<style data-chunk-uuid="c7d64b26-f3a2-431e-9c0f-65d8e4160372" data-emotion="default-ltr-cache fsmuz3">/* chunk_style_c7d64b26-f3a2-431e-9c0f-65d8e4160372 */
+</style>
+<style data-chunk-uuid="c7e6cc1e-00f7-4715-acee-2fe65881168d" data-emotion="default-ltr-cache 1vw5kt6">/* chunk_style_c7e6cc1e-00f7-4715-acee-2fe65881168d */
+</style>
+<label class="default-ltr-cache-1vw5kt6 ea3diy32" data-uia="language-picker+label" for=":Rakqela9:">
+              Select Language
+             </label>
+<div class="default-ltr-cache-fmygl2 ea3diy34">
+<style data-chunk-uuid="05d67ef0-0d5f-4e75-bb67-d6891d42e841" data-emotion="default-ltr-cache xfvfnh">/* chunk_style_05d67ef0-0d5f-4e75-bb67-d6891d42e841 */
+</style>
+<div aria-hidden='true' class="default-ltr-cache-xfvfnh e1vkmu653" role="img">
+<svg aria-hidden='true' data-icon="LanguagesSmall" fill="none" height='16' role="img" viewbox="0 0 16 16" width='16' xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M10.7668 5.33333L10.5038 5.99715L9.33974 8.9355L8.76866 10.377L7.33333 14H9.10751L9.83505 12.0326H13.4217L14.162 14H16L12.5665 5.33333H10.8278H10.7668ZM10.6186 9.93479L10.3839 10.5632H11.1036H12.8856L11.6348 7.2136L10.6186 9.93479ZM9.52722 4.84224C9.55393 4.77481 9.58574 4.71045 9.62211 4.64954H6.41909V2H4.926V4.64954H0.540802V5.99715H4.31466C3.35062 7.79015 1.75173 9.51463 0 10.4283C0.329184 10.7138 0.811203 11.2391 1.04633 11.5931C2.55118 10.6795 3.90318 9.22912 4.926 7.57316V12.6667H6.41909V7.51606C6.81951 8.15256 7.26748 8.76169 7.7521 9.32292L8.31996 7.88955C7.80191 7.29052 7.34631 6.64699 6.9834 5.99715H9.06968L9.52722 4.84224Z" fill="currentColor" fill-rule="evenodd">
+</path>
+</svg>
+</div>
+<select data-uia="language-picker" id=":Rakqela9:" name="LanguageSelect">
+<option label="English" lang="en" selected="" value="en-CA">
+                English
+               </option>
+<option label="Français" lang="fr" value="fr-CA">
+                Français
+               </option>
+</select>
+<div aria-hidden='true' class="default-ltr-cache-emv211 ea3diy33">
+<svg aria-hidden='true' data-icon="CaretDownSmall" fill="none" height='16' role="img" viewbox="0 0 16 16" width='16' xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M11.5976 6.5C11.7461 6.5 11.8204 6.67956 11.7154 6.78457L8.23574 10.2643C8.10555 10.3945 7.89445 10.3945 7.76425 10.2643L4.28457 6.78457C4.17956 6.67956 4.25393 6.5 4.40244 6.5H11.5976Z" fill="currentColor" fill-rule="evenodd">
+</path>
+</svg>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</footer>
+</div>
+</div>
+</div>
+<script data-chunk-uuid="590cf01c-e3db-44f0-a523-e1f1b51073b3">// chunk_script_590cf01c-e3db-44f0-a523-e1f1b51073b3
+</script>
+<div>
+<script data-chunk-uuid="34f8f79a-14a9-431a-b72a-60a25da4dffa">// chunk_script_34f8f79a-14a9-431a-b72a-60a25da4dffa
+</script>
+<script data-chunk-uuid="fa2c6134-842b-461e-8541-348e2d3b161b">// chunk_script_fa2c6134-842b-461e-8541-348e2d3b161b
+</script>
+<script data-chunk-uuid="e52ed901-c5e1-4cbd-8425-8519fe7c958b" src="https://assets.nflxext.com/web/ffe/wp/./ui/login/client.e9908a16c0917b39fa99.js">// chunk_script_e52ed901-c5e1-4cbd-8425-8519fe7c958b
+</script>
+</div>
+<script data-chunk-uuid="07a1b872-ecaf-486d-98d9-e8bcd4c1e008">// chunk_script_07a1b872-ecaf-486d-98d9-e8bcd4c1e008
+</script>
+
+        ```
+        

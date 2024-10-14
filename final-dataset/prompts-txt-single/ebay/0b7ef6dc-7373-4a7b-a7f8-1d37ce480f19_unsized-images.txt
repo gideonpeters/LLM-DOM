@@ -1,0 +1,465 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. unsized-images => Image elements do not have explicit `width` and `height`: Set an explicit width and height on image elements to reduce layout shifts and improve CLS. [Learn how to set image dimensions](https://web.dev/articles/optimize-cls#images_without_dimensions)
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        <a _sp="p4375194.m1387.l3252" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Watches-Parts-Accessories/260324/bn_2408535">
+              All Watches, Parts, Accessories
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1387.l3253" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Fine-Jewelry/4196/bn_2408477">
+              Fine Jewelry
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1387.l3254" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Fashion-Jewelry/10968/bn_2408529">
+              Fashion Jewelry
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1387.l3255" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Loose-Diamonds-Gemstones/491/bn_1519324">
+              Loose Diamonds & Gemstones
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1387.l3256" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Jewelry/bn_7000259126">
+              All Jewelry
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1387.l3257" class="vl-flyout-nav__js-link" href="https://pages.ebay.com/authenticity-guarantee/ ">
+              Authenticity Guarantee
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1387.l3258" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Certified-by-Brand/bn_7121183554">
+              Certified by Brand
+             </a>
+</li>
+</ul>
+</nav>
+<nav aria-label="Top Brands" class="vl-flyout-nav__sub-cat-col">
+<h4>
+            Top Brands
+           </h4>
+<ul>
+<li>
+<a _sp="p4375194.m1387.l3259" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Rolex-Watches/31387/bn_2989578">
+              Rolex
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1387.l3260" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/OMEGA-Watches/31387/bn_3000908">
+              OMEGA
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1387.l3261" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Breitling-Watches/31387/bn_3003445">
+              Breitling
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1387.l3262" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/TAG-Heuer-Watches/31387/bn_2999599">
+              TAG Heuer
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1387.l3263" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Cartier/bn_21821851">
+              Cartier
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1387.l3264" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Van-Cleef-Arpels-Fine-Jewelry/4196/bn_2194685">
+              Van Cleef & Arpels
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1387.l3265" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Tiffany-Co/bn_21836959">
+              Tiffany & Co
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1387.l3266" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/David-Yurman/bn_21823139">
+              David Yurman
+             </a>
+</li>
+</ul>
+</nav>
+</div>
+<div class="vl-flyout-nav__rtm" data-marko-key="@rtmImages[]_8 s0-1-0-52-1-2-2">
+</div>
+</div>
+</li>
+<li class="vl-flyout-nav__js-tab vl-flyout-nav__no-sub" data-currenttabindex='9' data-hover-track="p4375194.m1388.l6435">
+<a _sp="p4375194.m1388.l3250" href="https://www.ebay.com/ebaylive">
+         eBay Live
+        </a>
+</li>
+<li class="vl-flyout-nav__js-tab" data-currenttabindex='10' data-hover-track="p4375194.m1389.l6435">
+<a _sp="p4375194.m1389.l3250" href="https://www.ebay.com/b/eBay-Refurbished/bn_7040708936">
+         Refurbished
+        </a>
+<div class="vl-flyout-nav__expander">
+<button aria-haspopup='true'>
+          Expand: Refurbished
+         </button>
+</div>
+<div class="vl-flyout-nav__flyout">
+<div class="vl-flyout-nav__sub-cats">
+<nav aria-label="Shop eBay Refurbished Electronics" class="vl-flyout-nav__sub-cat-col">
+<h4>
+            Shop eBay Refurbished Electronics
+           </h4>
+<ul>
+<li>
+<a _sp="p4375194.m1389.l3251" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Cell-Phones-Smartphones/9355/bn_320094?rt=nc&LH_ItemCondition=2000%7C2010%7C2020%7C2030">
+              Cell Phones & Smartphones
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1389.l3252" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Laptops-Netbooks/175672/bn_1648276?rt=nc&LH_ItemCondition=2000%7C2010%7C2020%7C2030">
+              Laptops
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1389.l3253" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Desktops-All-In-One-Computers/171957/bn_1643067?LH_ItemCondition=2000%7C2010%7C2020%7C2030">
+              Desktop computers
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1389.l3254" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Tablets/171485/bn_348394?LH_ItemCondition=2000|2010|2020|2030">
+              Tablets
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1389.l3255" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Smart-Watches/178893/bn_152365?LH_ItemCondition=2000%7C2010%7C2020%7C2030">
+              Smart Watches
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1389.l3256" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Headphones/112529/bn_879608?LH_ItemCondition=2000|2010|2020|2030&mag=1&rt=nc">
+              Portable Audio & Headphones
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1389.l3257" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Home-Audio-Equipment/184973/bn_115021122?LH_ItemCondition=2000">
+              Home Audio
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1389.l3258" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Computer-Monitors/80053/bn_317528?rt=nc&LH_ItemCondition=2000%7C2010%7C2020%7C2030">
+              Monitors
+             </a>
+</li>
+</ul>
+</nav>
+<nav aria-label="Shop eBay Refurbished Home" class="vl-flyout-nav__sub-cat-col">
+<h4>
+            Shop eBay Refurbished Home
+           </h4>
+<ul>
+<li>
+<a _sp="p4375194.m1389.l3259" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Vacuum-Cleaners/20614/bn_2310596?LH_ItemCondition=2000">
+              Vacuums
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1389.l3260" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Outdoor-Power-Equipment/29518/bn_2309717?LH_ItemCondition=2000">
+              Outdoor power equipment
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1389.l3261" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Power-Tools/3247/bn_2310272?LH_ItemCondition=2000">
+              Power Tools
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1389.l3262" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Small-Kitchen-Appliances/20667/bn_2311275_dmd=2&LH_ItemCondition=2000?rt=nc&LH_ItemCondition=2000">
+              Small Kitchen Appliances
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1389.l3263" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Surveillance-Smart-Home-Electronics/185067/bn_115028425?LH_ItemCondition=2000">
+              Surveillance & Smart Home
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1389.l3264" class="vl-flyout-nav__js-link" href="https://www.ebay.com/e/lifestyle/ebay-refurbished-music">
+              Musical Instruments
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1389.l3265" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Indoor-Air-Quality-Fans/185114/bn_115078326?LH_ItemCondition=2000">
+              Indoor air quality & fans
+             </a>
+</li>
+<li>
+<a _sp="p4375194.m1389.l3266" class="vl-flyout-nav__js-link" href="https://www.ebay.com/b/Ceiling-Fans/176937/bn_818516?LH_ItemCondition=2000">
+              Ceiling Fans
+             </a>
+</li>
+</ul>
+</nav>
+</div>
+<div class="vl-flyout-nav__rtm" data-marko-key="@rtmImages[]_9 s0-1-0-52-1-2-2">
+</div>
+</div>
+</li>
+<li class="vl-flyout-nav__more vl-flyout-nav__js-tab">
+<span>
+         More
+         <!--vertlandweb#s0-1-0-52-1-2-2-17-0-->
+<svg aria-hidden='true' class="svg-icon vl-flyout-nav__more-arrow icon icon--16" data-marko-key="@svg s0-1-0-52-1-2-2-17-0" focusable='false'>
+<defs data-marko-key="@defs s0-1-0-52-1-2-2-17-0">
+<symbol id="icon-chevron-down-16" viewbox="0 0 16 16">
+<path d="M8.707 12.707a1 1 0 0 1-1.414 0l-6-6a1 1 0 0 1 1.414-1.414L8 10.586l5.293-5.293a1 1 0 1 1 1.414 1.414l-6 6Z">
+</path>
+</symbol>
+</defs>
+<use href="#icon-chevron-down-16">
+</use>
+</svg>
+<!--vertlandweb/-->
+</span>
+<div class="vl-flyout-nav__expander">
+<button aria-haspopup='true'>
+          Expand: More
+         </button>
+</div>
+<div class="vl-flyout-nav__flyout">
+<a _sp="p4375194.m1379.l3250" href="https://www.ebay.com/b/Auto-Parts-and-Vehicles/6000/bn_1865334">
+          Motors
+         </a>
+<a _sp="p4375194.m1380.l3250" href="https://www.ebay.com/b/Electronics/bn_7000259124">
+          Electronics
+         </a>
+<a _sp="p4375194.m1381.l3250" href="https://www.ebay.com/b/Collectibles-Art/bn_7000259855">
+          Collectibles
+         </a>
+<a _sp="p4375194.m1382.l3250" href="https://www.ebay.com/b/Home-Garden/11700/bn_1853126">
+          Home & Garden
+         </a>
+<a _sp="p4375194.m1383.l3250" href="https://www.ebay.com/b/Clothing-Shoes-Accessories/11450/bn_1852545">
+          Fashion
+         </a>
+<a _sp="p4375194.m1384.l3250" href="https://www.ebay.com/b/Toys-Hobbies/220/bn_1865497">
+          Toys
+         </a>
+<a _sp="p4375194.m1385.l3250" href="https://www.ebay.com/b/Sporting-Goods/888/bn_1865031">
+          Sporting Goods
+         </a>
+<a _sp="p4375194.m1386.l3250" href="https://www.ebay.com/b/Business-Industrial/12576/bn_1853744">
+          Business & Industrial
+         </a>
+<a _sp="p4375194.m1387.l3250" href="https://www.ebay.com/b/Jewelry-Watches/281/bn_1865273">
+          Jewelry & Watches
+         </a>
+<a _sp="p4375194.m1388.l3250" href="https://www.ebay.com/ebaylive">
+          eBay Live
+         </a>
+<a _sp="p4375194.m1389.l3250" href="https://www.ebay.com/b/eBay-Refurbished/bn_7040708936">
+          Refurbished
+         </a>
+</div>
+</li>
+</ul>
+</div>
+<!--vertlandweb/-->
+<div class="vlp-region vlp-region__list-1-column hp-grid page-grid">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-->
+<div class="vl-module-full vl-module-full-wide vl-banner-carousel vl-atf-module-js evo evo-banners evo-carousel" data-m-id='4518' data-viewdtls='{"moduleInstance": "mi:4518|iid:3", "parentrq": "47ded1841910ab8d0e971f48fffff5b0", "trackViews": "true", "trackPerf": "false"}'>
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[1]-2-->
+<!--F#0-->
+<div>
+<!--F#p_@ebay-carousel-->
+<!--vertlandweb^s0-1-0-52-1-2-4-17[0[0]]-0[1]-2-@match-media-0-@ebay-carousel s0-1-0-52-1-2-4-17[0[0]]-0[1]-2 @ebay-carousel-->
+<div aria-roledescription="Carousel" class="carousel vl-carousel evo vl-module-full vl-module-full-wide evo-banners carousel--slides carousel__autoplay" role="group">
+<div class="carousel__container" id="s0-1-0-52-1-2-4-17[0[0]]-0[1]-2-@match-media-0-@ebay-carousel-container">
+<button aria-label="Go to previous banner" class="carousel__control carousel__control--prev" type="button">
+<svg aria-hidden='true' class="icon icon--16" focusable='false'>
+<defs>
+<symbol id="icon-chevron-left-16" viewbox="0 0 16 16">
+<path d="M3.293 8.708a1 1 0 0 1 0-1.415l6-6a1 1 0 0 1 1.414 1.414L5.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414l-6-6Z">
+</path>
+</symbol>
+</defs>
+<use href="#icon-chevron-left-16">
+</use>
+</svg>
+</button>
+<div class="carousel__viewport">
+<ul class="carousel__list" id="s0-1-0-52-1-2-4-17[0[0]]-0[1]-2-@match-media-0-@ebay-carousel-list">
+<li class="carousel__snap-point vl-carousel__item" style="width:calc(100% - 0px);margin-right:0px">
+<!--F#4[@0]-->
+<div class="tracking-wrapper" data-view='{"eventFamily": "VERTLAND", "eventAction": "VIEW", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"moduledtl": "mi:4518|iid:3", "ammiid": "1476596978871806027", "amdata": "t=0|tdt=iid:1476596978871806027,clkid:1476596978871806026|plmt=(channel:ONSITE_DWEB cnv.cfg.id:6e554464-feef-4d68-9ea0-df8a19c5eabd cnv.id:100001 iid:1476596978871806027 isUEP:1 mesg.id:5985879631059092352 message.mob.trk.id:0b99112e-9a8e-494a-a530-23792fe526c5~Y3YzTRAXq8sijKDtpKrR9pLkLduhDQC6PSPRQkvmi8y~teYmtoizaMAO9Ly54olk1W62TKB9lYT5qAfqV7bTcJg pageci:8367f410-58d9-11ef-8be2-2a95c25823a1 parentrq:47ded1841910ab8d0e971f48fffff5b0 plmt.id:100000 site.id:0)|ul=en-US|guid=47ded19a1910ab8d0e9832cfffffbdac|send.trk.id=d1b829f9-25d6-449a-83dd-356159014b8d|uc=2|cnv.trk.id=819b78b8-ffcf-41f3-8a91-ea2af6702cae|cr.id=4315520090186558681|cr.vt.id=1721942132378|mobtrkId=dd90ae9a-c381-48da-860e-557e10c812bc~sAi6hM8JmYUNHwT8OvQGeLj9jO4SeWmPj3RyScigTjh~GEmWzRtQRUPOs77AQqkA62XRBm4Xjg4MwPqdEuxnapZ", "parentrq": "47ded1841910ab8d0e971f48fffff5b0", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "audience": "general", "vlpname": "vlp_homepage", "ampid": "MADRONA"}}'>
+<div class="vl-banner vl-banner-color-block evo" data-view='{"eventFamily": "VERTLAND", "eventAction": "VIEW", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"moduledtl": "mi:4518|iid:3|li:8658|luid:1|c:1", "ammiid": "1476596978871806027", "amdata": "t=0|tdt=iid:1476596978871806027,clkid:1476596978871806026|plmt=(channel:ONSITE_DWEB cnv.cfg.id:6e554464-feef-4d68-9ea0-df8a19c5eabd cnv.id:100001 iid:1476596978871806027 isUEP:1 mesg.id:5985879631059092352 message.mob.trk.id:0b99112e-9a8e-494a-a530-23792fe526c5~Y3YzTRAXq8sijKDtpKrR9pLkLduhDQC6PSPRQkvmi8y~teYmtoizaMAO9Ly54olk1W62TKB9lYT5qAfqV7bTcJg pageci:8367f410-58d9-11ef-8be2-2a95c25823a1 parentrq:47ded1841910ab8d0e971f48fffff5b0 plmt.id:100000 site.id:0)|ul=en-US|guid=47ded19a1910ab8d0e9832cfffffbdac|send.trk.id=d1b829f9-25d6-449a-83dd-356159014b8d|uc=2|cnv.trk.id=819b78b8-ffcf-41f3-8a91-ea2af6702cae|cr.id=4315520090186558681|cr.vt.id=1721942132378|mobtrkId=dd90ae9a-c381-48da-860e-557e10c812bc~sAi6hM8JmYUNHwT8OvQGeLj9jO4SeWmPj3RyScigTjh~GEmWzRtQRUPOs77AQqkA62XRBm4Xjg4MwPqdEuxnapZ", "audience": "general", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "ampid": "MADRONA", "vlpname": "vlp_homepage"}}' style="background-color:#FFBD14">
+<div class="vl-banner-color-block__container">
+<div class="page-grid">
+<div class="vl-banner-color-block__content">
+<div class="vl-banner__text vl-banner-color-block__text">
+<div class="vl-banner-color-block__text__container">
+<div class="vl-banner__text-heading">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[1]-2-@match-media-0-@ebay-carousel-4[@0]-3[0]-1-13-->
+<div aria-label="Real heat. Under $200." style="color:#553B06">
+<!--F#f_@button-->
+<div class="vl-ellipsis-3" style="color:#553B06">
+<span style="color:#553B06">
+                        Real heat. Under $200.
+                       </span>
+</div>
+<!--F/-->
+</div>
+<!--vertlandweb/-->
+</div>
+<div class="vl-banner__text-subheading">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[1]-2-@match-media-0-@ebay-carousel-4[@0]-3[0]-1-15-->
+<!--F#f_15-->
+<!--F#f_@button-->
+<div class="vl-ellipsis-2" style="color:#553B06">
+<span style="color:#553B06">
+                       Shop ASICS, Fear of God, Aimé Leon Dore, and more.
+                      </span>
+</div>
+<!--F/-->
+<!--F/-->
+<!--vertlandweb/-->
+</div>
+</div>
+<div class="vl-cta vl-banner__cta" onfocusin="this.querySelector('.vl-cta__default').onmouseover()" onfocusout="this.querySelector('.vl-cta__default').onmouseout()" style="font-color:#553B06;background-color:#FFBD14">
+<a _sp="p4375194.m4518.l5352.c1" aria-label="Dive in" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "operationId": "4375194", "flushImmediately": false, "actionKind": "CLICK", "eventProperty": {"moduledtl": "mi:4518|iid:3|li:5352|luid:1|c:1", "ammiid": "1476596978871806027", "amdata": "t=0|tdt=iid:1476596978871806027,clkid:1476596978871806026|plmt=(channel:ONSITE_DWEB cnv.cfg.id:6e554464-feef-4d68-9ea0-df8a19c5eabd cnv.id:100001 iid:1476596978871806027 isUEP:1 mesg.id:5985879631059092352 message.mob.trk.id:0b99112e-9a8e-494a-a530-23792fe526c5~Y3YzTRAXq8sijKDtpKrR9pLkLduhDQC6PSPRQkvmi8y~teYmtoizaMAO9Ly54olk1W62TKB9lYT5qAfqV7bTcJg pageci:8367f410-58d9-11ef-8be2-2a95c25823a1 parentrq:47ded1841910ab8d0e971f48fffff5b0 plmt.id:100000 site.id:0)|ul=en-US|guid=47ded19a1910ab8d0e9832cfffffbdac|send.trk.id=d1b829f9-25d6-449a-83dd-356159014b8d|uc=2|cnv.trk.id=819b78b8-ffcf-41f3-8a91-ea2af6702cae|cr.id=4315520090186558681|cr.vt.id=1721942132378|mobtrkId=dd90ae9a-c381-48da-860e-557e10c812bc~sAi6hM8JmYUNHwT8OvQGeLj9jO4SeWmPj3RyScigTjh~GEmWzRtQRUPOs77AQqkA62XRBm4Xjg4MwPqdEuxnapZ", "audience": "general", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "vlpname": "vlp_homepage", "ampid": "MADRONA"}}' href="https://www.ebay.com/e/fashion/bts-sneakers-streetwear-under-200?_trkparms=pageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Cparentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Ciid%3A3%7Cvlpname%3Avlp_homepage">
+<div class="vl-cta__text-only" style="color:#553B06">
+                      Dive in
+                      <!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[1]-2-@match-media-0-@ebay-carousel-4[@0]-3[0]-1-16-1-1-3-1-0-0-->
+<svg aria-hidden='true' class="vl-cta-arrow icon icon--24" data-marko-key="@svg s0-1-0-52-1-2-4-17[0[0]]-0[1]-2-@match-media-0-@ebay-carousel-4[@0]-3[0]-1-16-1-1-3-1-0-0" focusable='false' style="fill:currentColor">
+<defs data-marko-key="@defs s0-1-0-52-1-2-4-17[0[0]]-0[1]-2-@match-media-0-@ebay-carousel-4[@0]-3[0]-1-16-1-1-3-1-0-0">
+<symbol id="icon-arrow-right-24" viewbox="0 0 24 24">
+<path d="m21.71 11.29-8-8a1.004 1.004 0 0 0-1.42 1.42l6.3 6.29H3a1 1 0 0 0 0 2h15.59l-6.3 6.29a1.001 1.001 0 0 0 0 1.42 1.001 1.001 0 0 0 1.42 0l8-8a1.001 1.001 0 0 0 0-1.42Z">
+</path>
+</symbol>
+</defs>
+<use href="#icon-arrow-right-24">
+</use>
+</svg>
+<!--vertlandweb/-->
+</div>
+<div class="vl-cta__default evo" onmouseout="this.style.background='#553B06'; this.style.color='#FFBD14'; this.style['border-color']='#553B06';" onmouseover="this.style.background='#523906'; this.style.color='#f5b513';" style="background-color: #553B06; color: #FFBD14; border-color: #553B06">
+                      Dive in
+                      <!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[1]-2-@match-media-0-@ebay-carousel-4[@0]-3[0]-1-16-1-1-5-1-0-0-->
+<svg aria-hidden='true' class="vl-cta-arrow icon icon--24" data-marko-key="@svg s0-1-0-52-1-2-4-17[0[0]]-0[1]-2-@match-media-0-@ebay-carousel-4[@0]-3[0]-1-16-1-1-5-1-0-0" focusable='false' style="fill:currentColor">
+<use href="#icon-arrow-right-24">
+</use>
+</svg>
+<!--vertlandweb/-->
+</div>
+</a>
+</div>
+</div>
+</div>
+<a _sp="p4375194.m4518.l5350.c1" class="vl-banner-color-block__image-link" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "operationId": "4375194", "flushImmediately": false, "actionKind": "CLICK", "eventProperty": {"moduledtl": "mi:4518|iid:3|li:5350|luid:1|c:1", "ammiid": "1476596978871806027", "amdata": "t=0|tdt=iid:1476596978871806027,clkid:1476596978871806026|plmt=(channel:ONSITE_DWEB cnv.cfg.id:6e554464-feef-4d68-9ea0-df8a19c5eabd cnv.id:100001 iid:1476596978871806027 isUEP:1 mesg.id:5985879631059092352 message.mob.trk.id:0b99112e-9a8e-494a-a530-23792fe526c5~Y3YzTRAXq8sijKDtpKrR9pLkLduhDQC6PSPRQkvmi8y~teYmtoizaMAO9Ly54olk1W62TKB9lYT5qAfqV7bTcJg pageci:8367f410-58d9-11ef-8be2-2a95c25823a1 parentrq:47ded1841910ab8d0e971f48fffff5b0 plmt.id:100000 site.id:0)|ul=en-US|guid=47ded19a1910ab8d0e9832cfffffbdac|send.trk.id=d1b829f9-25d6-449a-83dd-356159014b8d|uc=2|cnv.trk.id=819b78b8-ffcf-41f3-8a91-ea2af6702cae|cr.id=4315520090186558681|cr.vt.id=1721942132378|mobtrkId=dd90ae9a-c381-48da-860e-557e10c812bc~sAi6hM8JmYUNHwT8OvQGeLj9jO4SeWmPj3RyScigTjh~GEmWzRtQRUPOs77AQqkA62XRBm4Xjg4MwPqdEuxnapZ", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "audience": "general", "ampid": "MADRONA", "vlpname": "vlp_homepage"}}' href="https://www.ebay.com/e/fashion/bts-sneakers-streetwear-under-200?_trkparms=pageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Cparentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Ciid%3A3%7Cvlpname%3Avlp_homepage">
+<div class="vl-image vl-image-js js-only vl-banner-color-block__image vl-image__fill" data-size='920' data-src="https://i.ebayimg.com/images/g/pMAAAOSwdmFmosH8/s-l960.png">
+<div class="vl-image__background" style="background-color:#FFBD14">
+</div>
+<img alt="An 'Olive Oil Dark Brown' Asics x Andersson Bell Gel-Sonoma 15-50 sneaker and a 'Desert Taupe' Fear of God Essentials Hoodie against a yellow-orange background." onerror="window.addtoLazyLoad({el: this, fit: true})" onload="window.addtoLazyLoad({el: this, fit: true})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-banner-color-block__image" style="background-image: url('${src}')">
+<img alt="An 'Olive Oil Dark Brown' Asics x Andersson Bell Gel-Sonoma 15-50 sneaker and a 'Desert Taupe' Fear of God Essentials Hoodie against a yellow-orange background." src="https://i.ebayimg.com/images/g/pMAAAOSwdmFmosH8/s-l960.png"></img>
+</div>
+</noscript>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!--F/-->
+</li>
+<li class="carousel__snap-point vl-carousel__item" style="width:calc(100% - 0px);margin-right:0px">
+<!--F#4[@1]-->
+<div class="tracking-wrapper" data-view='{"eventFamily": "VERTLAND", "eventAction": "VIEW", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"moduledtl": "mi:4518|iid:4", "ammiid": "1476596978871806025", "amdata": "t=0|tdt=iid:1476596978871806025,clkid:1476596978871806024|plmt=(channel:ONSITE_DWEB cnv.cfg.id:6e554464-feef-4d68-9ea0-df8a19c5eabd cnv.id:100001 iid:1476596978871806025 isUEP:1 mesg.id:3906880583759035246 message.mob.trk.id:0b99112e-9a8e-494a-a530-23792fe526c5~Y3YzTRAXq8sijKDtpKrR9pLkLduhDQC6PSPRQkvmi8y~ZbvCdp8uzzndX8DVzfQaI6GUwEOcAmSKIus6rzsyT0v pageci:8367f410-58d9-11ef-8be2-2a95c25823a1 parentrq:47ded1841910ab8d0e971f48fffff5b0 plmt.id:100001 site.id:0)|ul=en-US|guid=47ded19a1910ab8d0e9832cfffffbdac|send.trk.id=cc07cf54-e673-4dcd-9592-1baeaa1a4262|uc=2|cnv.trk.id=819b78b8-ffcf-41f3-8a91-ea2af6702cae|cr.id=1913463651535182718|cr.vt.id=1721838547724|mobtrkId=cd3d95ff-a17b-4f11-a938-afa363f30886~XsfizIO1oWymE4D2t9losEaMcDHyj3PqDHL6OJ9JCEH~67AhibczvObPqqPjXryhZhRLYQncy0J96hqjyuk8Qpu", "parentrq": "47ded1841910ab8d0e971f48fffff5b0", "audience": "general", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "vlpname": "vlp_homepage", "ampid": "MADRONA"}}'>
+<div class="vl-banner vl-banner-full-bleed evo" data-view='{"eventFamily": "VERTLAND", "eventAction": "VIEW", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"moduledtl": "mi:4518|iid:4|li:8658|luid:1|c:1", "ammiid": "1476596978871806025", "amdata": "t=0|tdt=iid:1476596978871806025,clkid:1476596978871806024|plmt=(channel:ONSITE_DWEB cnv.cfg.id:6e554464-feef-4d68-9ea0-df8a19c5eabd cnv.id:100001 iid:1476596978871806025 isUEP:1 mesg.id:3906880583759035246 message.mob.trk.id:0b99112e-9a8e-494a-a530-23792fe526c5~Y3YzTRAXq8sijKDtpKrR9pLkLduhDQC6PSPRQkvmi8y~ZbvCdp8uzzndX8DVzfQaI6GUwEOcAmSKIus6rzsyT0v pageci:8367f410-58d9-11ef-8be2-2a95c25823a1 parentrq:47ded1841910ab8d0e971f48fffff5b0 plmt.id:100001 site.id:0)|ul=en-US|guid=47ded19a1910ab8d0e9832cfffffbdac|send.trk.id=cc07cf54-e673-4dcd-9592-1baeaa1a4262|uc=2|cnv.trk.id=819b78b8-ffcf-41f3-8a91-ea2af6702cae|cr.id=1913463651535182718|cr.vt.id=1721838547724|mobtrkId=cd3d95ff-a17b-4f11-a938-afa363f30886~XsfizIO1oWymE4D2t9losEaMcDHyj3PqDHL6OJ9JCEH~67AhibczvObPqqPjXryhZhRLYQncy0J96hqjyuk8Qpu", "audience": "general", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "ampid": "MADRONA", "vlpname": "vlp_homepage"}}'>
+<div class="vl-banner-full-bleed__container focus-inset page-grid" style="background-color:#191919">
+<div class="vl-banner-full-bleed__image-container">
+<div class="vl-image vl-image-js js-only vl-banner-full-bleed__image vl-image__fill" data-size='1600' data-src="https://i.ebayimg.com/images/g/VqAAAOSwutRmoTTq/s-l1600.jpg">
+<div class="vl-image__background" style="background-color:#191919">
+</div>
+<img alt="" onerror="window.addtoLazyLoad({el: this, fit: true})" onload="window.addtoLazyLoad({el: this, fit: true})" role="presentation" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-banner-full-bleed__image" style="background-image: url('${src}')">
+<img alt="" role="presentation" src="https://i.ebayimg.com/images/g/VqAAAOSwutRmoTTq/s-l1600.jpg"></img>
+</div>
+</noscript>
+<a _sp="p4375194.m4518.l5351.c1" aria-label="A stylish woman with short curly hair and orange-tinted sunglasses smiles while looking at her yellow smartphone, standing next to a skyscraper." class="vl-banner-full-bleed__link" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "operationId": "4375194", "flushImmediately": false, "actionKind": "CLICK", "eventProperty": {"moduledtl": "mi:4518|iid:4|li:5351|luid:1|c:1", "ammiid": "1476596978871806025", "amdata": "t=0|tdt=iid:1476596978871806025,clkid:1476596978871806024|plmt=(channel:ONSITE_DWEB cnv.cfg.id:6e554464-feef-4d68-9ea0-df8a19c5eabd cnv.id:100001 iid:1476596978871806025 isUEP:1 mesg.id:3906880583759035246 message.mob.trk.id:0b99112e-9a8e-494a-a530-23792fe526c5~Y3YzTRAXq8sijKDtpKrR9pLkLduhDQC6PSPRQkvmi8y~ZbvCdp8uzzndX8DVzfQaI6GUwEOcAmSKIus6rzsyT0v pageci:8367f410-58d9-11ef-8be2-2a95c25823a1 parentrq:47ded1841910ab8d0e971f48fffff5b0 plmt.id:100001 site.id:0)|ul=en-US|guid=47ded19a1910ab8d0e9832cfffffbdac|send.trk.id=cc07cf54-e673-4dcd-9592-1baeaa1a4262|uc=2|cnv.trk.id=819b78b8-ffcf-41f3-8a91-ea2af6702cae|cr.id=1913463651535182718|cr.vt.id=1721838547724|mobtrkId=cd3d95ff-a17b-4f11-a938-afa363f30886~XsfizIO1oWymE4D2t9losEaMcDHyj3PqDHL6OJ9JCEH~67AhibczvObPqqPjXryhZhRLYQncy0J96hqjyuk8Qpu", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "audience": "general", "vlpname": "vlp_homepage", "ampid": "MADRONA"}}' href="https://signin.ebay.com/SignIn?_trkparms=pageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Cparentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Ciid%3A4%7Cvlpname%3Avlp_homepage">
+</a>
+</div>
+<div class="vl-banner-full-bleed__wrapper">
+<div class="vl-banner-full-bleed__content">
+<div class="vl-banner__text vl-banner-full-bleed__text">
+<div class="vl-banner-full-bleed_radial-gradient">
+</div>
+<div class="vl-banner__text-heading">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[1]-2-@match-media-0-@ebay-carousel-4[@1]-3[1]-1-16-->
+<div aria-label="Get more with an eBay account" style="color:#ffffff">
+<!--F#f_@button-->
+<div class="vl-ellipsis-3" style="color:#ffffff">
+<span style="color:#ffffff">
+                       Get more with an eBay account
+                      </span>
+</div>
+<!--F/-->
+</div>
+<!--vertlandweb/-->
+</div>
+<div class="vl-banner__text-subheading">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[1]-2-@match-media-0-@ebay-carousel-4[@1]-3[1]-1-18-->
+<!--F#f_15-->
+<!--F#f_@button-->
+<div class="vl-ellipsis-2" style="color:#ffffff">
+<span style="color:#ffffff">
+                      Enjoy exclusive benefits—deals, app-only coupons, and more.
+                     </span>
+</div>
+<!--F/-->
+<!--F/-->
+<!--vertlandweb/-->
+</div>
+<div class="vl-cta vl-banner__cta" onfocusin="this.querySelector('.vl-cta__default').onmouseover()" onfocusout="this.querySelector('.vl-cta__default').onmouseout()" style="font-color:#ffffff">
+<a _sp="p4375194.m4518.l5352.c1" aria-label="Sign in" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "operationId": "4375194", "flushImmediately": false, "actionKind": "CLICK", "eventProperty": {"moduledtl": "mi:4518|iid:4|li:5352|luid:1|c:1", "ammiid": "1476596978871806025", "amdata": "t=0|tdt=iid:1476596978871806025,clkid:1476596978871806024|plmt=(channel:ONSITE_DWEB cnv.cfg.id:6e554464-feef-4d68-9ea0-df8a19c5eabd cnv.id:100001 iid:1476596978871806025 isUEP:1 mesg.id:3906880583759035246 message.mob.trk.id:0b99112e-9a8e-494a-a530-23792fe526c5~Y3YzTRAXq8sijKDtpKrR9pLkLduhDQC6PSPRQkvmi8y~ZbvCdp8uzzndX8DVzfQaI6GUwEOcAmSKIus6rzsyT0v pageci:8367f410-58d9-11ef-8be2-2a95c25823a1 parentrq:47ded1841910ab8d0e971f48fffff5b0 plmt.id:100001 site.id:0)|ul=en-US|guid=47ded19a1910ab8d0e9832cfffffbdac|send.trk.id=cc07cf54-e673-4dcd-9592-1baeaa1a4262|uc=2|cnv.trk.id=819b78b8-ffcf-41f3-8a91-ea2af6702cae|cr.id=1913463651535182718|cr.vt.id=1721838547724|mobtrkId=cd3d95ff-a17b-4f11-a938-afa363f30886~XsfizIO1oWymE4D2t9losEaMcDHyj3PqDHL6OJ9JCEH~67AhibczvObPqqPjXryhZhRLYQncy0J96hqjyuk8Qpu", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "audience": "general", "vlpname": "vlp_homepage", "ampid": "MADRONA"}}' href="https://signin.ebay.com/SignIn?_trkparms=pageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Cparentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Ciid%3A4%7Cvlpname%3Avlp_homepage">
+<div class="vl-cta__text-only" style="color:#ffffff">
+                      Sign in
+                      
+        ```
+        

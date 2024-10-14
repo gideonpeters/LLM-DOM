@@ -1,0 +1,629 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. total-blocking-time => Total Blocking Time: Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds. [Learn more about the Total Blocking Time metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        <faceplate-tracker action="click" class="mr-md rounded-[16px] overflow-hidden inline-flex list-none shrink-0" data-faceplate-tracking-context='{"action_info": {"position": 0}, "search": {"query": "\"Rachael Lillis\"", "query_id": "7bb7e0c5-7269-4a82-806d-2ab419dd80d7"}}' noun="trending" source="search">
+<faceplate-tracker action="view" loading-modifier="always" noun="trending" source="search">
+<li class="m-0">
+<a class="block hover:no-underline relative w-[280px]" href="/search/?q=%22Rachael+Lillis%22&type=link&source=trending&cId=3196a589-2ffa-4414-9396-516314ceb6e5&iId=791d94ce-f769-4b37-91c5-1d21b64ca6a3">
+<img alt="r/movies - Rachael Lillis, the Voice of Pokemon's Misty and Jessie, Dies at 46" class="absolute h-100 w-100 pointer-events-none object-cover m-0" loading="lazy" sizes="280px" src="https://external-preview.redd.it/rachael-lillis-the-voice-of-pokemons-misty-and-jessie-dies-v0-gP7ltQ3icj1vXNdc1cUO77rVRvhm5QNYU-PY1F48tMo.jpg?width=320&crop=smart&auto=webp&s=cf497cdb1a59c7d4c19022f0c21078941dfdf9d3" srcset="https://external-preview.redd.it/rachael-lillis-the-voice-of-pokemons-misty-and-jessie-dies-v0-gP7ltQ3icj1vXNdc1cUO77rVRvhm5QNYU-PY1F48tMo.jpg?width=320&crop=smart&auto=webp&s=cf497cdb1a59c7d4c19022f0c21078941dfdf9d3 320w, https://external-preview.redd.it/rachael-lillis-the-voice-of-pokemons-misty-and-jessie-dies-v0-gP7ltQ3icj1vXNdc1cUO77rVRvhm5QNYU-PY1F48tMo.jpg?width=640&crop=smart&auto=webp&s=923cab5ac0680ff908318a1257ba394e7ca52a13 640w, https://external-preview.redd.it/rachael-lillis-the-voice-of-pokemons-misty-and-jessie-dies-v0-gP7ltQ3icj1vXNdc1cUO77rVRvhm5QNYU-PY1F48tMo.jpg?width=1080&crop=smart&auto=webp&s=50a64d844a077085c0b3ee1a538fd86305787e9c 1080w, https://external-preview.redd.it/rachael-lillis-the-voice-of-pokemons-misty-and-jessie-dies-v0-gP7ltQ3icj1vXNdc1cUO77rVRvhm5QNYU-PY1F48tMo.jpg?auto=webp&s=5fbdb7da5d6f71635ae7873300fcbedc46613ecf 1200w"></img>
+<div class="h-[210px] relative rounded-[16px] flex flex-col justify-end overflow-hidden carousel-item-cover">
+<div class="h-[185px] flex flex-col justify-end px-sm pb-xs" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.54) 60%, rgba(0, 0, 0, 0.6) 100%);">
+<h2 class="truncate font-bold text-primary-onBackground text-18 m-0">
+                Pokémon voice actress dead
+               </h2>
+<p class="truncate text-primary-onBackground text-14 mt-2xs mb-xs">
+                Rachael Lillis, the Voice of Pokemon's Misty and Jessie, Dies at 46
+               </p>
+<div class="flex items-center text-12 text-primary-onBackground">
+<span class="leading-none w-[24px] h-[24px]">
+<faceplate-img alt="r/movies icon" class="shreddit-subreddit-icon__icon rounded-full overflow-hidden nd:visible nd:bg-secondary-background" height='24' loading="lazy" src="https://styles.redditmedia.com/t5_2qh3s/styles/communityIcon_ctrxr9h6lmbb1.jpg?width=48&height=48&frame=1&auto=webp&crop=48:48,smart&s=09f92a46bed21ac2413e6df355c21fca398507c9" style="color: #FFB000; background-color: #FFB000" width='24'>
+</faceplate-img>
+</span>
+<span class="font-bold mr-2xs ml-xs truncate">
+                 r/movies
+                </span>
+<span class="text-coolgray-350 whitespace-nowrap">
+                 and more
+                </span>
+</div>
+</div>
+</div>
+</a>
+</li>
+</faceplate-tracker>
+</faceplate-tracker>
+<faceplate-tracker action="click" class="mr-md rounded-[16px] overflow-hidden inline-flex list-none shrink-0" data-faceplate-tracking-context='{"action_info": {"position": 1}, "search": {"query": "\"Tom Cruise\"", "query_id": "9f5da4e5-89c3-489d-9ea3-3f27bb8c1404"}}' noun="trending" source="search">
+<faceplate-tracker action="view" loading-modifier="always" noun="trending" source="search">
+<li class="m-0">
+<a class="block hover:no-underline relative w-[280px]" href="/search/?q=%22Tom+Cruise%22&type=link&source=trending&cId=3196a589-2ffa-4414-9396-516314ceb6e5&iId=bdbec998-240f-40fa-b784-d6a478014aa6">
+<img alt="r/nextfuckinglevel - Tom cruise hands off Paris Olympics to Los Angeles in mission impossible style " class="absolute h-100 w-100 pointer-events-none object-cover m-0" loading="lazy" sizes="280px" src="https://external-preview.redd.it/tom-cruise-hands-off-paris-olympics-to-los-angeles-in-v0-eGtmamd6azBnNmlkMcNJKTPdRW6G0lbNlPeAzFy7bsaL9wO2g1B-9ww2LZM5.png?width=320&crop=smart&format=pjpg&auto=webp&s=75c594b5a68df03114b9afb4d9b086e15596c0b0" srcset="https://external-preview.redd.it/tom-cruise-hands-off-paris-olympics-to-los-angeles-in-v0-eGtmamd6azBnNmlkMcNJKTPdRW6G0lbNlPeAzFy7bsaL9wO2g1B-9ww2LZM5.png?width=320&crop=smart&format=pjpg&auto=webp&s=75c594b5a68df03114b9afb4d9b086e15596c0b0 320w, https://external-preview.redd.it/tom-cruise-hands-off-paris-olympics-to-los-angeles-in-v0-eGtmamd6azBnNmlkMcNJKTPdRW6G0lbNlPeAzFy7bsaL9wO2g1B-9ww2LZM5.png?width=640&crop=smart&format=pjpg&auto=webp&s=e776a2c07637129ae16359738e6a5bdc0491eaa0 640w, https://external-preview.redd.it/tom-cruise-hands-off-paris-olympics-to-los-angeles-in-v0-eGtmamd6azBnNmlkMcNJKTPdRW6G0lbNlPeAzFy7bsaL9wO2g1B-9ww2LZM5.png?width=1080&crop=smart&format=pjpg&auto=webp&s=680f263d13fa4a5bdda1fff38ce582bda771d52e 1080w, https://external-preview.redd.it/tom-cruise-hands-off-paris-olympics-to-los-angeles-in-v0-eGtmamd6azBnNmlkMcNJKTPdRW6G0lbNlPeAzFy7bsaL9wO2g1B-9ww2LZM5.png?format=pjpg&auto=webp&s=5d4aa0ce22622d4004c8134a96995ad37c8e9834 1920w"></img>
+<div class="h-[210px] relative rounded-[16px] flex flex-col justify-end overflow-hidden carousel-item-cover">
+<div class="h-[185px] flex flex-col justify-end px-sm pb-xs" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.54) 60%, rgba(0, 0, 0, 0.6) 100%);">
+<h2 class="truncate font-bold text-primary-onBackground text-18 m-0">
+                Tom Cruise at Olympics
+               </h2>
+<p class="truncate text-primary-onBackground text-14 mt-2xs mb-xs">
+                Tom cruise hands off Paris Olympics to Los Angeles in mission impossible style
+               </p>
+<div class="flex items-center text-12 text-primary-onBackground">
+<span class="leading-none w-[24px] h-[24px]">
+<faceplate-img alt="r/nextfuckinglevel icon" class="shreddit-subreddit-icon__icon rounded-full overflow-hidden nd:visible nd:bg-secondary-background" height='24' loading="lazy" src="https://styles.redditmedia.com/t5_m0bnr/styles/communityIcon_qanlm185crr71.png?width=48&height=48&frame=1&auto=webp&crop=48:48,smart&s=c99daaeafbf2a2889d3fd34a00e4078e947f4e28" style="color: #F54504; background-color: #F54504" width='24'>
+</faceplate-img>
+</span>
+<span class="font-bold mr-2xs ml-xs truncate">
+                 r/nextfuckinglevel
+                </span>
+<span class="text-coolgray-350 whitespace-nowrap">
+                 and more
+                </span>
+</div>
+</div>
+</div>
+</a>
+</li>
+</faceplate-tracker>
+</faceplate-tracker>
+<faceplate-tracker action="click" class="mr-md rounded-[16px] overflow-hidden inline-flex list-none shrink-0" data-faceplate-tracking-context='{"action_info": {"position": 2}, "search": {"query": "Halloween AND (\"John Carpenter\" OR \"Evil Dead\")", "query_id": "0c22787c-0d3e-410b-bfe1-3ecaa25cac6c"}}' noun="trending" source="search">
+<faceplate-tracker action="view" loading-modifier="always" noun="trending" source="search">
+<li class="m-0">
+<a class="block hover:no-underline relative w-[280px]" href="/search/?q=Halloween+AND+%28%22John+Carpenter%22+OR+%22Evil+Dead%22%29&type=link&source=trending&cId=3196a589-2ffa-4414-9396-516314ceb6e5&iId=c30f129a-3c87-4b57-a0f7-4859c5be56b6">
+<img alt="r/horror - Halloween Is Getting Its Own Unreal Engine 5 Game With John Carpenter 'Intimately Involved' - IGN" class="absolute h-100 w-100 pointer-events-none object-cover m-0" loading="lazy" sizes="280px" src="https://external-preview.redd.it/halloween-is-getting-its-own-unreal-engine-5-game-with-john-v0-aYOIzZz3GG1Ir2WdhZPeQBulcuD6R7QJLrlO7g19FGU.jpg?width=320&crop=smart&auto=webp&s=e1a2875cac1bcf5383265427138d567b6a20a9bd" srcset="https://external-preview.redd.it/halloween-is-getting-its-own-unreal-engine-5-game-with-john-v0-aYOIzZz3GG1Ir2WdhZPeQBulcuD6R7QJLrlO7g19FGU.jpg?width=320&crop=smart&auto=webp&s=e1a2875cac1bcf5383265427138d567b6a20a9bd 320w, https://external-preview.redd.it/halloween-is-getting-its-own-unreal-engine-5-game-with-john-v0-aYOIzZz3GG1Ir2WdhZPeQBulcuD6R7QJLrlO7g19FGU.jpg?width=640&crop=smart&auto=webp&s=08c7942ccd59cf58d53297b14128506a32c45a8b 640w, https://external-preview.redd.it/halloween-is-getting-its-own-unreal-engine-5-game-with-john-v0-aYOIzZz3GG1Ir2WdhZPeQBulcuD6R7QJLrlO7g19FGU.jpg?width=1080&crop=smart&auto=webp&s=5224f06928fefe347acefac670c4feaf1e885eda 1080w, https://external-preview.redd.it/halloween-is-getting-its-own-unreal-engine-5-game-with-john-v0-aYOIzZz3GG1Ir2WdhZPeQBulcuD6R7QJLrlO7g19FGU.jpg?auto=webp&s=5e253d5e75d155db24e5cde39494fc50c1c00e0e 1280w"></img>
+<div class="h-[210px] relative rounded-[16px] flex flex-col justify-end overflow-hidden carousel-item-cover">
+<div class="h-[185px] flex flex-col justify-end px-sm pb-xs" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.54) 60%, rgba(0, 0, 0, 0.6) 100%);">
+<h2 class="truncate font-bold text-primary-onBackground text-18 m-0">
+                Halloween games
+               </h2>
+<p class="truncate text-primary-onBackground text-14 mt-2xs mb-xs">
+                Halloween Is Getting Its Own Unreal Engine 5 Game With John Carpenter 'Intimately Involved' - IGN
+               </p>
+<div class="flex items-center text-12 text-primary-onBackground">
+<span class="leading-none w-[24px] h-[24px]">
+<faceplate-img alt="r/horror icon" class="shreddit-subreddit-icon__icon rounded-full overflow-hidden nd:visible nd:bg-secondary-background" height='24' loading="lazy" src="https://styles.redditmedia.com/t5_2qh9x/styles/communityIcon_h4mubh2bz0e71.png?width=48&height=48&frame=1&auto=webp&crop=48:48,smart&s=083cd92ca04f765595daa05223cb0e6d94e88e19" style="color: #373C3F; background-color: #373C3F" width='24'>
+</faceplate-img>
+</span>
+<span class="font-bold mr-2xs ml-xs truncate">
+                 r/horror
+                </span>
+<span class="text-coolgray-350 whitespace-nowrap">
+                 and more
+                </span>
+</div>
+</div>
+</div>
+</a>
+</li>
+</faceplate-tracker>
+</faceplate-tracker>
+<faceplate-tracker action="click" class="mr-md rounded-[16px] overflow-hidden inline-flex list-none shrink-0" data-faceplate-tracking-context='{"action_info": {"position": 3}, "search": {"query": "\"Kit Harington\"", "query_id": "4f9b1013-abe4-486f-934d-1a09dc219ce6"}}' noun="trending" source="search">
+<faceplate-tracker action="view" loading-modifier="always" noun="trending" source="search">
+<li class="m-0">
+<a class="block hover:no-underline relative w-[280px]" href="/search/?q=%22Kit+Harington%22&type=link&source=trending&cId=3196a589-2ffa-4414-9396-516314ceb6e5&iId=031051e3-8928-4e2f-a9c7-23b1b46221f1">
+<img alt="r/television - Kit Harington Agrees ‘Game of Thrones’ Ending Made ‘Mistakes’ and Felt Rushed, but ‘We Were All So F—ing Tired. We Couldn’t Have Gone on Longer’" class="absolute h-100 w-100 pointer-events-none object-cover m-0" loading="lazy" sizes="280px" src="https://external-preview.redd.it/kit-harington-agrees-game-of-thrones-ending-made-mistakes-v0-FSskGu7zgpRhWTtAFOmdAbn9uNf_d455IRDWfXQNztc.jpg?width=320&crop=smart&auto=webp&s=77ba61278f27eaf0b348addab38a2367a9f6d1e9" srcset="https://external-preview.redd.it/kit-harington-agrees-game-of-thrones-ending-made-mistakes-v0-FSskGu7zgpRhWTtAFOmdAbn9uNf_d455IRDWfXQNztc.jpg?width=320&crop=smart&auto=webp&s=77ba61278f27eaf0b348addab38a2367a9f6d1e9 320w, https://external-preview.redd.it/kit-harington-agrees-game-of-thrones-ending-made-mistakes-v0-FSskGu7zgpRhWTtAFOmdAbn9uNf_d455IRDWfXQNztc.jpg?width=640&crop=smart&auto=webp&s=09d182435f45411f4682f7997b246c59ac7116f4 640w, https://external-preview.redd.it/kit-harington-agrees-game-of-thrones-ending-made-mistakes-v0-FSskGu7zgpRhWTtAFOmdAbn9uNf_d455IRDWfXQNztc.jpg?auto=webp&s=fea0634ec076a366fed0b533a44170dc8ec73f9b 1000w"></img>
+<div class="h-[210px] relative rounded-[16px] flex flex-col justify-end overflow-hidden carousel-item-cover">
+<div class="h-[185px] flex flex-col justify-end px-sm pb-xs" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.54) 60%, rgba(0, 0, 0, 0.6) 100%);">
+<h2 class="truncate font-bold text-primary-onBackground text-18 m-0">
+                Harington on GOT ending
+               </h2>
+<p class="truncate text-primary-onBackground text-14 mt-2xs mb-xs">
+                Kit Harington Agrees ‘Game of Thrones’ Ending Made ‘Mistakes’ and Felt Rushed, but ‘We Were All So F—ing Tired. We Couldn’t Have Gone on Longer’
+               </p>
+<div class="flex items-center text-12 text-primary-onBackground">
+<span class="leading-none w-[24px] h-[24px]">
+<faceplate-img alt="r/television icon" class="shreddit-subreddit-icon__icon rounded-full overflow-hidden nd:visible nd:bg-secondary-background" height='24' loading="lazy" src="https://styles.redditmedia.com/t5_2qh6e/styles/communityIcon_8qmcs8g0gp871.png?width=48&height=48&frame=1&auto=webp&crop=48:48,smart&s=321f319fe3c292dcb47f4e3e9d6c4f45bf1e346d" style="color: #FFFFFF; background-color: #FFFFFF" width='24'>
+</faceplate-img>
+</span>
+<span class="font-bold mr-2xs ml-xs truncate">
+                 r/television
+                </span>
+<span class="text-coolgray-350 whitespace-nowrap">
+                 and more
+                </span>
+</div>
+</div>
+</div>
+</a>
+</li>
+</faceplate-tracker>
+</faceplate-tracker>
+<faceplate-tracker action="click" class="mr-md rounded-[16px] overflow-hidden inline-flex list-none shrink-0" data-faceplate-tracking-context='{"action_info": {"position": 4}, "search": {"query": "\"Joost Klein\"", "query_id": "3834784c-a699-4507-a24f-458746997486"}}' noun="trending" source="search">
+<faceplate-tracker action="view" loading-modifier="always" noun="trending" source="search">
+<li class="m-0">
+<a class="block hover:no-underline relative w-[280px]" href="/search/?q=%22Joost+Klein%22&type=link&source=trending&cId=3196a589-2ffa-4414-9396-516314ceb6e5&iId=9aa532a2-5e07-46fb-b945-d6485f8e2b12">
+<img alt="r/europe - Case dropped against Joost Klein over Eurovision incident." class="absolute h-100 w-100 pointer-events-none object-cover m-0" loading="lazy" sizes="280px" src="https://external-preview.redd.it/case-dropped-against-joost-klein-over-eurovision-incident-v0-ZeJ7pHN8XMyHBTz5sbm6JdHD2nTN-7cyxE-rsG2Q1vE.jpg?width=320&crop=smart&auto=webp&s=26f21a9b868bc07dd38b0b176258e2058d7faa9d" srcset="https://external-preview.redd.it/case-dropped-against-joost-klein-over-eurovision-incident-v0-ZeJ7pHN8XMyHBTz5sbm6JdHD2nTN-7cyxE-rsG2Q1vE.jpg?width=320&crop=smart&auto=webp&s=26f21a9b868bc07dd38b0b176258e2058d7faa9d 320w, https://external-preview.redd.it/case-dropped-against-joost-klein-over-eurovision-incident-v0-ZeJ7pHN8XMyHBTz5sbm6JdHD2nTN-7cyxE-rsG2Q1vE.jpg?width=640&crop=smart&auto=webp&s=e58f285bc1814cd791a3fdab4f56e13dd89c9c89 640w, https://external-preview.redd.it/case-dropped-against-joost-klein-over-eurovision-incident-v0-ZeJ7pHN8XMyHBTz5sbm6JdHD2nTN-7cyxE-rsG2Q1vE.jpg?auto=webp&s=917cf627190917f2dee5eaa2e97b0c75618d40d6 837w"></img>
+<div class="h-[210px] relative rounded-[16px] flex flex-col justify-end overflow-hidden carousel-item-cover">
+<div class="h-[185px] flex flex-col justify-end px-sm pb-xs" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.54) 60%, rgba(0, 0, 0, 0.6) 100%);">
+<h2 class="truncate font-bold text-primary-onBackground text-18 m-0">
+                Joost Klein charges dropped
+               </h2>
+<p class="truncate text-primary-onBackground text-14 mt-2xs mb-xs">
+                Case dropped against Joost Klein over Eurovision incident.
+               </p>
+<div class="flex items-center text-12 text-primary-onBackground">
+<span class="leading-none w-[24px] h-[24px]">
+<faceplate-img alt="r/europe icon" class="shreddit-subreddit-icon__icon rounded-full overflow-hidden nd:visible nd:bg-secondary-background" height='24' loading="lazy" src="https://styles.redditmedia.com/t5_2qh4j/styles/communityIcon_jxbrkfsppv481.png?width=48&height=48&frame=1&auto=webp&crop=48:48,smart&s=cc16b00eea3068be4d4e7d2eb0beae6145cab248" style="color: #003399; background-color: #003399" width='24'>
+</faceplate-img>
+</span>
+<span class="font-bold mr-2xs ml-xs truncate">
+                 r/europe
+                </span>
+<span class="text-coolgray-350 whitespace-nowrap">
+                 and more
+                </span>
+</div>
+</div>
+</div>
+</a>
+</li>
+</faceplate-tracker>
+</faceplate-tracker>
+<faceplate-tracker action="click" class="mr-md rounded-[16px] overflow-hidden inline-flex list-none shrink-0" data-faceplate-tracking-context='{"action_info": {"position": 5}, "search": {"query": "(Greece OR Athens) AND wildfire", "query_id": "f59e33b1-1039-43ae-b173-aa95eb28b365"}}' noun="trending" source="search">
+<faceplate-tracker action="view" loading-modifier="always" noun="trending" source="search">
+<li class="m-0">
+<a class="block hover:no-underline relative w-[280px]" href="/search/?q=%28Greece+OR+Athens%29+AND+wildfire&type=link&source=trending&cId=3196a589-2ffa-4414-9396-516314ceb6e5&iId=b9374f28-02e3-4d5a-af4c-2afc5933dac1">
+<img alt="r/europe - Greece orders evacuations near Athens as wildfires rage" class="absolute h-100 w-100 pointer-events-none object-cover m-0" loading="lazy" sizes="280px" src="https://external-preview.redd.it/greece-orders-evacuations-near-athens-as-wildfires-rage-v0-0xj1CkmXhS36w5_otVGg850mcgHndJP21JXod60g8e0.jpg?width=320&crop=smart&auto=webp&s=7dbe11baf8e6f7740ee25a4802c85d9d2a1a1e35" srcset="https://external-preview.redd.it/greece-orders-evacuations-near-athens-as-wildfires-rage-v0-0xj1CkmXhS36w5_otVGg850mcgHndJP21JXod60g8e0.jpg?width=320&crop=smart&auto=webp&s=7dbe11baf8e6f7740ee25a4802c85d9d2a1a1e35 320w, https://external-preview.redd.it/greece-orders-evacuations-near-athens-as-wildfires-rage-v0-0xj1CkmXhS36w5_otVGg850mcgHndJP21JXod60g8e0.jpg?width=640&crop=smart&auto=webp&s=88a82b181e4d54d121e07037d9f7f13eeffea1e8 640w, https://external-preview.redd.it/greece-orders-evacuations-near-athens-as-wildfires-rage-v0-0xj1CkmXhS36w5_otVGg850mcgHndJP21JXod60g8e0.jpg?auto=webp&s=76af6b85d3227c5ff1736c1beb459b4901612cae 1024w"></img>
+<div class="h-[210px] relative rounded-[16px] flex flex-col justify-end overflow-hidden carousel-item-cover">
+<div class="h-[185px] flex flex-col justify-end px-sm pb-xs" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.54) 60%, rgba(0, 0, 0, 0.6) 100%);">
+<h2 class="truncate font-bold text-primary-onBackground text-18 m-0">
+                Greece wildfires
+               </h2>
+<p class="truncate text-primary-onBackground text-14 mt-2xs mb-xs">
+                Greece orders evacuations near Athens as wildfires rage
+               </p>
+<div class="flex items-center text-12 text-primary-onBackground">
+<span class="leading-none w-[24px] h-[24px]">
+<faceplate-img alt="r/europe icon" class="shreddit-subreddit-icon__icon rounded-full overflow-hidden nd:visible nd:bg-secondary-background" height='24' loading="lazy" src="https://styles.redditmedia.com/t5_2qh4j/styles/communityIcon_jxbrkfsppv481.png?width=48&height=48&frame=1&auto=webp&crop=48:48,smart&s=cc16b00eea3068be4d4e7d2eb0beae6145cab248" style="color: #003399; background-color: #003399" width='24'>
+</faceplate-img>
+</span>
+<span class="font-bold mr-2xs ml-xs truncate">
+                 r/europe
+                </span>
+<span class="text-coolgray-350 whitespace-nowrap">
+                 and more
+                </span>
+</div>
+</div>
+</div>
+</a>
+</li>
+</faceplate-tracker>
+</faceplate-tracker>
+</shreddit-gallery-carousel>
+</search-dynamic-id-cache-controller>
+</div>
+</div>
+<shreddit-async-loader bundlename="navigation_links">
+<reddit-skip-to-sidebar>
+</reddit-skip-to-sidebar>
+</shreddit-async-loader>
+<div class="main-container flex gap-md w-full pb-xl">
+<main class="main w-full flex-grid--main-container-card right-sidebar-s" id="main-content">
+<div class="my-xs mx-2xs">
+<shreddit-async-loader bundlename="shreddit_sort_dropdown">
+<div class="flex h-[32px]">
+<div class="flex items-center">
+<shreddit-sort-dropdown class="nd:max-h-[32px] nd:h-[32px] nd:w-[54px] nd:invisible" header-text="Sort by" telemetry-source="sort_switch">
+<div slot="selected-item">
+             Hot
+            </div>
+<div slot="tooltip-content">
+             Open sort options
+            </div>
+<div slot="dropdown-items">
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="/r/popular/best/" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                  Best
+                 </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0" role="presentation" rpl="" rpl-selected="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary-onBackground bg-neutral-background-selected hover:bg-neutral-background-selected hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="/r/popular/hot/" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                  Hot
+                 </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="/r/popular/new/" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                  New
+                 </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="/r/popular/top/" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                  Top
+                 </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="/r/popular/rising/" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                  Rising
+                 </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+</div>
+</shreddit-sort-dropdown>
+<shreddit-sort-dropdown header-text="Sort by">
+<div slot="selected-item">
+             Canada
+            </div>
+<div slot="tooltip-content">
+             Open sort options
+            </div>
+<div slot="dropdown-items">
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="/r/popular/hot/?geo_filter=global" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                  Everywhere
+                 </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="/r/popular/hot/?geo_filter=us" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                  United States
+                 </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="/r/popular/hot/?geo_filter=ar" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                  Argentina
+                 </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="/r/popular/hot/?geo_filter=au" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                  Australia
+                 </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="/r/popular/hot/?geo_filter=bg" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                  Bulgaria
+                 </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0" role="presentation" rpl="" rpl-selected="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary-onBackground bg-neutral-background-selected hover:bg-neutral-background-selected hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="/r/popular/hot/?geo_filter=ca" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                  Canada
+                 </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="/r/popular/hot/?geo_filter=cl" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                  Chile
+                 </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="/r/popular/hot/?geo_filter=co" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                  Colombia
+                 </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="/r/popular/hot/?geo_filter=hr" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                  Croatia
+                 </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="/r/popular/hot/?geo_filter=cz" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                  Czech Republic
+                 </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="/r/popular/hot/?geo_filter=fi" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                  Finland
+                 </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="/r/popular/hot/?geo_filter=fr" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                  France
+                 </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="/r/popular/hot/?geo_filter=de" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                  Germany
+                 </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="/r/popular/hot/?geo_filter=gr" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                  Greece
+                 </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="/r/popular/hot/?geo_filter=hu" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                  Hungary
+                 </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="/r/popular/hot/?geo_filter=is" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                  Iceland
+                 </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-xs -outline-offset-1 no-underline" href="/r/popular/hot/?geo_filter=in" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                  India
+                 </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+        ```
+        

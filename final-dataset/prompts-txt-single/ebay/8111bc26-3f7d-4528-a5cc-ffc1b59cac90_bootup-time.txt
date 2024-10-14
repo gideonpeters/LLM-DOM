@@ -1,0 +1,427 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. bootup-time => Reduce JavaScript execution time: Consider reducing the time spent parsing, compiling, and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to reduce Javascript execution time](https://developer.chrome.com/docs/lighthouse/performance/bootup-time/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        <!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[6]-1-@seeall-14-1-22-12-0-0-->
+<svg aria-hidden='true' class="vl-cta-arrow vl-card-header__large-arrow icon icon--24" data-marko-key="@svg s0-1-0-52-1-2-4-17[0[0]]-0[6]-1-@seeall-14-1-22-12-0-0" focusable='false'>
+<use href="#icon-arrow-right-24">
+</use>
+</svg>
+<!--vertlandweb/-->
+<!--F/-->
+<!--F/-->
+</a>
+<!--vertlandweb/-->
+</div>
+</div>
+</div>
+<ul class="vl-popular-destinations-elements">
+<li class="vl-popular-destinations-element">
+<a _sp="p4375194.m4776.l8874.c1" class="vl-popular-destinations-link" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "audience": "general", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "moduledtl": "mi:4776|c:1|iid:1|li:8874", "vlpname": "vlp_homepage"}}' href="https://www.ebay.com/e/fashion/jordan-4-paris-olympics-wet-cement">
+<div class="vl-popular-destinations-image-spacer">
+<div class="vl-image vl-image-js js-only vl-popular-destinations-image vl-image__fill" data-size='200' data-src="https://i.ebayimg.com/images/g/F~sAAOSwytRmrCpL/s-l200.jpg">
+<div class="vl-image__background">
+</div>
+<img alt="" onerror="window.addtoLazyLoad({el: this, fit: true})" onload="window.addtoLazyLoad({el: this, fit: true})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-popular-destinations-image" style="background-image: url('${src}')">
+<img alt="" src="https://i.ebayimg.com/images/g/F~sAAOSwytRmrCpL/s-l200.jpg"></img>
+</div>
+</noscript>
+</div>
+<h3 class="vl-popular-destinations-name">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[6]-8[0]-->
+<!--F#f_15-->
+<!--F#f_@button-->
+<!--F#f_18-->
+           Jordan 4 Paris Olympics Wet Cement
+           <!--F/-->
+<!--F/-->
+<!--F/-->
+<!--vertlandweb/-->
+</h3>
+</a>
+</li>
+<li class="vl-popular-destinations-element">
+<a _sp="p4375194.m4776.l8874.c2" class="vl-popular-destinations-link" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "audience": "general", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "moduledtl": "mi:4776|c:2|iid:1|li:8874", "vlpname": "vlp_homepage"}}' href="https://www.ebay.com/e/fashion/jordan-4-retro-white-thunder">
+<div class="vl-popular-destinations-image-spacer">
+<div class="vl-image vl-image-js js-only vl-popular-destinations-image vl-image__fill" data-size='200' data-src="https://i.ebayimg.com/images/g/WAYAAOSwZm5mrCpZ/s-l200.jpg">
+<div class="vl-image__background">
+</div>
+<img alt="" onerror="window.addtoLazyLoad({el: this, fit: true})" onload="window.addtoLazyLoad({el: this, fit: true})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-popular-destinations-image" style="background-image: url('${src}')">
+<img alt="" src="https://i.ebayimg.com/images/g/WAYAAOSwZm5mrCpZ/s-l200.jpg"></img>
+</div>
+</noscript>
+</div>
+<h3 class="vl-popular-destinations-name">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[6]-8[1]-->
+<!--F#f_15-->
+<!--F#f_@button-->
+<!--F#f_18-->
+           Jordan 4 Retro White Thunder
+           <!--F/-->
+<!--F/-->
+<!--F/-->
+<!--vertlandweb/-->
+</h3>
+</a>
+</li>
+<li class="vl-popular-destinations-element">
+<a _sp="p4375194.m4776.l8874.c3" class="vl-popular-destinations-link" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "audience": "general", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "moduledtl": "mi:4776|c:3|iid:1|li:8874", "vlpname": "vlp_homepage"}}' href="https://www.ebay.com/b/Jordan-4-Retro-2024-Military-Blue/15709/bn_7121776184">
+<div class="vl-popular-destinations-image-spacer">
+<div class="vl-image vl-image-js js-only vl-popular-destinations-image vl-image__fill" data-size='200' data-src="https://i.ebayimg.com/images/g/414AAOSwimBl8KLf/s-l200.jpg">
+<div class="vl-image__background">
+</div>
+<img alt="" onerror="window.addtoLazyLoad({el: this, fit: true})" onload="window.addtoLazyLoad({el: this, fit: true})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-popular-destinations-image" style="background-image: url('${src}')">
+<img alt="" src="https://i.ebayimg.com/images/g/414AAOSwimBl8KLf/s-l200.jpg"></img>
+</div>
+</noscript>
+</div>
+<h3 class="vl-popular-destinations-name">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[6]-8[2]-->
+<!--F#f_15-->
+<!--F#f_@button-->
+<!--F#f_18-->
+           Jordan 4 Retro Military Blue 2024
+           <!--F/-->
+<!--F/-->
+<!--F/-->
+<!--vertlandweb/-->
+</h3>
+</a>
+</li>
+<li class="vl-popular-destinations-element">
+<a _sp="p4375194.m4776.l8874.c4" class="vl-popular-destinations-link" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "audience": "general", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "moduledtl": "mi:4776|c:4|iid:1|li:8874", "vlpname": "vlp_homepage"}}' href="https://www.ebay.com/b/Jordan-4-Retro-Bred-Reimagined/15709/bn_7121576159">
+<div class="vl-popular-destinations-image-spacer">
+<div class="vl-image vl-image-js js-only vl-popular-destinations-image vl-image__fill" data-size='200' data-src="https://i.ebayimg.com/images/g/fwkAAOSwvzdluEg3/s-l200.jpg">
+<div class="vl-image__background">
+</div>
+<img alt="" onerror="window.addtoLazyLoad({el: this, fit: true})" onload="window.addtoLazyLoad({el: this, fit: true})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-popular-destinations-image" style="background-image: url('${src}')">
+<img alt="" src="https://i.ebayimg.com/images/g/fwkAAOSwvzdluEg3/s-l200.jpg"></img>
+</div>
+</noscript>
+</div>
+<h3 class="vl-popular-destinations-name">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[6]-8[3]-->
+<!--F#f_15-->
+<!--F#f_@button-->
+<!--F#f_18-->
+           Jordan 4 Bred Reimagined
+           <!--F/-->
+<!--F/-->
+<!--F/-->
+<!--vertlandweb/-->
+</h3>
+</a>
+</li>
+<li class="vl-popular-destinations-element">
+<a _sp="p4375194.m4776.l8874.c5" class="vl-popular-destinations-link" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "audience": "general", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "moduledtl": "mi:4776|c:5|iid:1|li:8874", "vlpname": "vlp_homepage"}}' href="https://www.ebay.com/b/Jordan-4-Retro-Oxidized-Green/15709/bn_7121838680">
+<div class="vl-popular-destinations-image-spacer">
+<div class="vl-image vl-image-js js-only vl-popular-destinations-image vl-image__fill" data-size='200' data-src="https://i.ebayimg.com/images/g/uFcAAOSwgipmaJG2/s-l200.jpg">
+<div class="vl-image__background">
+</div>
+<img alt="" onerror="window.addtoLazyLoad({el: this, fit: true})" onload="window.addtoLazyLoad({el: this, fit: true})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-popular-destinations-image" style="background-image: url('${src}')">
+<img alt="" src="https://i.ebayimg.com/images/g/uFcAAOSwgipmaJG2/s-l200.jpg"></img>
+</div>
+</noscript>
+</div>
+<h3 class="vl-popular-destinations-name">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[6]-8[4]-->
+<!--F#f_15-->
+<!--F#f_@button-->
+<!--F#f_18-->
+           Jordan 4 Retro Oxidized Green
+           <!--F/-->
+<!--F/-->
+<!--F/-->
+<!--vertlandweb/-->
+</h3>
+</a>
+</li>
+<li class="vl-popular-destinations-element">
+<a _sp="p4375194.m4776.l8874.c6" class="vl-popular-destinations-link" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "audience": "general", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "moduledtl": "mi:4776|c:6|iid:1|li:8874", "vlpname": "vlp_homepage"}}' href="https://www.ebay.com/b/Jordan-4-Retro-Military-Black/15709/bn_7118141158">
+<div class="vl-popular-destinations-image-spacer">
+<div class="vl-image vl-image-js js-only vl-popular-destinations-image vl-image__fill" data-size='200' data-src="https://i.ebayimg.com/images/g/xYwAAOSwEfhjDqP7/s-l200.jpg">
+<div class="vl-image__background">
+</div>
+<img alt="" onerror="window.addtoLazyLoad({el: this, fit: true})" onload="window.addtoLazyLoad({el: this, fit: true})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-popular-destinations-image" style="background-image: url('${src}')">
+<img alt="" src="https://i.ebayimg.com/images/g/xYwAAOSwEfhjDqP7/s-l200.jpg"></img>
+</div>
+</noscript>
+</div>
+<h3 class="vl-popular-destinations-name">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[6]-8[5]-->
+<!--F#f_15-->
+<!--F#f_@button-->
+<!--F#f_18-->
+           Jordan 4 Retro Military Black
+           <!--F/-->
+<!--F/-->
+<!--F/-->
+<!--vertlandweb/-->
+</h3>
+</a>
+</li>
+<li class="vl-popular-destinations-element">
+<a _sp="p4375194.m4776.l8874.c7" class="vl-popular-destinations-link" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "audience": "general", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "moduledtl": "mi:4776|c:7|iid:1|li:8874", "vlpname": "vlp_homepage"}}' href="https://www.ebay.com/b/Jordan-4-Retro-Mid-Black-Cat/15709/bn_7117645381">
+<div class="vl-popular-destinations-image-spacer">
+<div class="vl-image vl-image-js js-only vl-popular-destinations-image vl-image__fill" data-size='200' data-src="https://i.ebayimg.com/images/g/pNoAAOSwLTpj3UhX/s-l200.jpg">
+<div class="vl-image__background">
+</div>
+<img alt="" onerror="window.addtoLazyLoad({el: this, fit: true})" onload="window.addtoLazyLoad({el: this, fit: true})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-popular-destinations-image" style="background-image: url('${src}')">
+<img alt="" src="https://i.ebayimg.com/images/g/pNoAAOSwLTpj3UhX/s-l200.jpg"></img>
+</div>
+</noscript>
+</div>
+<h3 class="vl-popular-destinations-name">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[6]-8[6]-->
+<!--F#f_15-->
+<!--F#f_@button-->
+<!--F#f_18-->
+           Jordan 4 Retro Black Cat
+           <!--F/-->
+<!--F/-->
+<!--F/-->
+<!--vertlandweb/-->
+</h3>
+</a>
+</li>
+</ul>
+</div>
+<div class="vl-module vl-item-card-list-dic vl-atf-module-js ITEM_CARD_CAROUSEL_DIC_V2 vl-item-card-list-dic-dsa" data-m-id='166540' data-view='{"eventFamily": "VERTLAND", "eventAction": "VIEW", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "audience": "general", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "moduledtl": "mi:166540|iid:1", "vlpname": "vlp_homepage"}}' data-viewdtls='{"moduleInstance": "mi:166540|iid:1", "parentrq": "47ded1841910ab8d0e971f48fffff5b0", "trackViews": "true", "trackPerf": "false"}' data-viewport='{"trackableId": "01J53XXMJ4ZNVWVDQ7GK8C9ZWK"}'>
+<div class="vl-card-header">
+<div class="vl-card-header__header-container clearfix">
+<div class="vl-card-header__title">
+<h2 class="vl-card-header__headline">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[7]-1-@title-->
+<!--F#f_15-->
+<!--F#f_@button-->
+<!--F#f_18-->
+           Trending in Refurbished
+           <!--F/-->
+<!--F/-->
+<!--F/-->
+<!--vertlandweb/-->
+</h2>
+</div>
+</div>
+</div>
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[7]-2-->
+<!--F#0-->
+<div>
+<!--F#p_@ebay-carousel-->
+<div aria-roledescription="Carousel" class="carousel vl-carousel evo vl-module-full vl-module-full-wide carousel--slides carousel--peek" role="group">
+<div class="carousel__container carousel__container--controls-disabled" id="s0-1-0-52-1-2-4-17[0[0]]-0[7]-2-@match-media-0-@ebay-carousel-container">
+<button aria-disabled='true' aria-label="Go to the previous slide, Trending in Refurbished - Carousel" class="carousel__control carousel__control--prev" type="button">
+<svg aria-hidden='true' class="icon icon--16" focusable='false'>
+<use href="#icon-chevron-left-16">
+</use>
+</svg>
+</button>
+<div class="carousel__viewport">
+<ul class="carousel__list" id="s0-1-0-52-1-2-4-17[0[0]]-0[7]-2-@match-media-0-@ebay-carousel-list">
+<li class="carousel__snap-point vl-carousel__item" style="width:calc(18.51851851851852% - 13.037037037037038px);margin-right:16px">
+<!--F#4[@0]-->
+<div class="vlp-merch-item-card-container" data-interactions='[{"actionKind": "CLICK", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KMlRBSDVNUzFEVEZBRDhLM1A0MDFKNTNYWE1KNFpOVldWRFE3R0s4QzlaV0sACDM5NDkKQ0xJQ0sA"}]' data-viewport='{"trackableId": "01J53XXMJ2TAH5MS1DTFAD8K3P"}'>
+<a _sp="p4375194.m166540.l3949.c1" class="vlp-merch-item-tile" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "operationId": "4375194", "flushImmediately": false, "actionKind": "CLICK", "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "145639884571", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121456%26meid%3D6a7fb08f1b6d4435bc7d8be17df4e610%26pid%3D102177%26rk%3D1%26rkt%3D10%26mehot%3Dpp%26b%3D1%26itm%3D145639884571%26pmt%3D1%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3DEdifier%26tu%3D01J53XXMJ2TAH5MS1DTFAD8K3P", "ampid": "MERCH_CLK", "rank": "1", "ammiid": "6a7fb08f1b6d4435bc7d8be17df4e610", "moduledtl": "mi:166540|iid:1|li:3949|luid:1|c:1", "vlpname": "vlp_homepage", "trackableId": "01J53XXMJ2TAH5MS1DTFAD8K3P", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KMlRBSDVNUzFEVEZBRDhLM1A0MDFKNTNYWE1KNFpOVldWRFE3R0s4QzlaV0sACDM5NDkKQ0xJQ0sA", "audience": "general"}}' data-track='[{"operationId": "4375194", "flushImmediately": false, "actionKind": "NAV", "eventProperty": {"trkp": "parentrq:47ded1841910ab8d0e971f48fffff5b0|pageci:8367f410-58d9-11ef-8be2-2a95c25823a1|iid:1|vlpname:vlp_homepage", "sid": "p4375194.m166540.l3949.c1", "audience": "general"}}, {"eventFamily": "VERTLAND", "eventAction": "ACTN", "operationId": "4375194", "flushImmediately": false, "actionKind": "CLICK", "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "145639884571", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121456%26meid%3D6a7fb08f1b6d4435bc7d8be17df4e610%26pid%3D102177%26rk%3D1%26rkt%3D10%26mehot%3Dpp%26b%3D1%26itm%3D145639884571%26pmt%3D1%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3DEdifier%26tu%3D01J53XXMJ2TAH5MS1DTFAD8K3P", "ampid": "MERCH_CLK", "rank": "1", "ammiid": "6a7fb08f1b6d4435bc7d8be17df4e610", "moduledtl": "mi:166540|iid:1|li:3949|luid:1|c:1", "vlpname": "vlp_homepage", "trackableId": "01J53XXMJ2TAH5MS1DTFAD8K3P", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KMlRBSDVNUzFEVEZBRDhLM1A0MDFKNTNYWE1KNFpOVldWRFE3R0s4QzlaV0sACDM5NDkKQ0xJQ0sA", "audience": "general"}}]' href="https://www.ebay.com/itm/145639884571?_trkparms=amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121456%26meid%3D6a7fb08f1b6d4435bc7d8be17df4e610%26pid%3D102177%26rk%3D1%26rkt%3D1%26b%3D1%26itm%3D145639884571%26pmt%3D1%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3DEdifier&_trksid=p4375194.c102177.m166540&_trkparms=parentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Cpageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Ciid%3A1%7Cvlpname%3Avlp_homepage" target="_blank">
+<div class="vlp-merch-content-wrap">
+<div class="vlp-merch-image-wrap-dweb">
+<div class="vlp-merch-image-frame" style=" ">
+<div class="vl-image-js js-only">
+<img alt="Edifier R1280T Bookshelf Speakers Studio Monitor Speaker - Certified Refurbished" class="vlp-merch-item-image" crossorigin="anonymous" data-high-res-size='500' data-item-card='true' data-size='300' data-src="https://i.ebayimg.com/thumbs/images/g/lnIAAOSwOY1l4WlM/s-l500.jpg" onerror="window.addtoLazyLoad({el: this, fit: false})" onload="window.addtoLazyLoad({el: this, fit: false})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-image__no-fill">
+<img alt="Edifier R1280T Bookshelf Speakers Studio Monitor Speaker - Certified Refurbished" src="https://i.ebayimg.com/thumbs/images/g/lnIAAOSwOY1l4WlM/s-l500.jpg"></img>
+</div>
+</noscript>
+</div>
+</div>
+<div class="vlp-merch-item-info">
+<h3 class="vlp-merch-item-title vlp-merch-item-title-dweb vlp-merch-item-title-margin">
+                  Edifier R1280T Bookshelf Speakers Studio Monitor Speaker - Certified Refurbished
+                 </h3>
+<div class="vlp-merch-sub-group">
+<div class="vlp-merch-price">
+<span role="text">
+                    $79.99
+                   </span>
+<span class="vlp-merch-additional-price">
+<span aria-label="previous price $119.99" class="sh-strikethrough" role="text">
+                     $119.99
+                    </span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</a>
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[7]-2-@match-media-0-@ebay-carousel-4[@0]-3[0]-43-->
+<div class="vlp-merch-add-to-watchlist-btn">
+<button aria-label="Add Edifier R1280T Bookshelf Speakers Studio Monitor Speaker - Certified Refurbished to your watch list" class="btn btn--tertiary" type="button">
+<svg aria-hidden='true' class="vlp-merch-watch-unselected icon icon--16" focusable='false'>
+<use xlink:href="#hp-icon-save-16">
+</use>
+</svg>
+</button>
+</div>
+<!--vertlandweb/-->
+</div>
+<!--F/-->
+</li>
+<li class="vl-carousel__item" style="width:calc(18.51851851851852% - 13.037037037037038px);margin-right:16px">
+<!--F#4[@1]-->
+<div class="vlp-merch-item-card-container" data-interactions='[{"actionKind": "CLICK", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KMjdFOEFTSldUNlJNM1k2WFY0MDFKNTNYWE1KNFpOVldWRFE3R0s4QzlaV0sACDM5NDkKQ0xJQ0sA"}]' data-viewport='{"trackableId": "01J53XXMJ27E8ASJWT6RM3Y6XV"}'>
+<a _sp="p4375194.m166540.l3949.c2" class="vlp-merch-item-tile" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "operationId": "4375194", "flushImmediately": false, "actionKind": "CLICK", "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "384750422424", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121456%26meid%3D6a7fb08f1b6d4435bc7d8be17df4e610%26pid%3D102177%26rk%3D2%26rkt%3D10%26mehot%3Dpp%26b%3D1%26itm%3D384750422424%26pmt%3D1%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3Dsoundcore%26tu%3D01J53XXMJ27E8ASJWT6RM3Y6XV", "ampid": "MERCH_CLK", "rank": "2", "ammiid": "6a7fb08f1b6d4435bc7d8be17df4e610", "moduledtl": "mi:166540|iid:1|li:3949|luid:2|c:2", "vlpname": "vlp_homepage", "trackableId": "01J53XXMJ27E8ASJWT6RM3Y6XV", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KMjdFOEFTSldUNlJNM1k2WFY0MDFKNTNYWE1KNFpOVldWRFE3R0s4QzlaV0sACDM5NDkKQ0xJQ0sA", "audience": "general"}}' data-track='[{"operationId": "4375194", "flushImmediately": false, "actionKind": "NAV", "eventProperty": {"trkp": "parentrq:47ded1841910ab8d0e971f48fffff5b0|pageci:8367f410-58d9-11ef-8be2-2a95c25823a1|iid:1|vlpname:vlp_homepage", "sid": "p4375194.m166540.l3949.c2", "audience": "general"}}, {"eventFamily": "VERTLAND", "eventAction": "ACTN", "operationId": "4375194", "flushImmediately": false, "actionKind": "CLICK", "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "384750422424", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121456%26meid%3D6a7fb08f1b6d4435bc7d8be17df4e610%26pid%3D102177%26rk%3D2%26rkt%3D10%26mehot%3Dpp%26b%3D1%26itm%3D384750422424%26pmt%3D1%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3Dsoundcore%26tu%3D01J53XXMJ27E8ASJWT6RM3Y6XV", "ampid": "MERCH_CLK", "rank": "2", "ammiid": "6a7fb08f1b6d4435bc7d8be17df4e610", "moduledtl": "mi:166540|iid:1|li:3949|luid:2|c:2", "vlpname": "vlp_homepage", "trackableId": "01J53XXMJ27E8ASJWT6RM3Y6XV", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KMjdFOEFTSldUNlJNM1k2WFY0MDFKNTNYWE1KNFpOVldWRFE3R0s4QzlaV0sACDM5NDkKQ0xJQ0sA", "audience": "general"}}]' href="https://www.ebay.com/itm/384750422424?_trkparms=amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121456%26meid%3D6a7fb08f1b6d4435bc7d8be17df4e610%26pid%3D102177%26rk%3D1%26rkt%3D1%26b%3D1%26itm%3D384750422424%26pmt%3D1%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3Dsoundcore&_trksid=p4375194.c102177.m166540&_trkparms=parentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Cpageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Ciid%3A1%7Cvlpname%3Avlp_homepage" target="_blank">
+<div class="vlp-merch-content-wrap">
+<div class="vlp-merch-image-wrap-dweb">
+<div class="vlp-merch-image-frame" style=" ">
+<div class="vl-image-js js-only">
+<img alt="Soundcore Space A40 SE True Wireless Earbuds Adaptive Noise Cancelling Hi-Res" class="vlp-merch-item-image" crossorigin="anonymous" data-high-res-size='500' data-item-card='true' data-size='300' data-src="https://i.ebayimg.com/thumbs/images/g/m5kAAOSwa99kj8MA/s-l500.jpg" onerror="window.addtoLazyLoad({el: this, fit: false})" onload="window.addtoLazyLoad({el: this, fit: false})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-image__no-fill">
+<img alt="Soundcore Space A40 SE True Wireless Earbuds Adaptive Noise Cancelling Hi-Res" src="https://i.ebayimg.com/thumbs/images/g/m5kAAOSwa99kj8MA/s-l500.jpg"></img>
+</div>
+</noscript>
+</div>
+</div>
+<div class="vlp-merch-item-info">
+<h3 class="vlp-merch-item-title vlp-merch-item-title-dweb vlp-merch-item-title-margin">
+                  Soundcore Space A40 SE True Wireless Earbuds Adaptive Noise Cancelling Hi-Res
+                 </h3>
+<div class="vlp-merch-sub-group">
+<div class="vlp-merch-price">
+<span role="text">
+                    $42.99
+                   </span>
+<span class="vlp-merch-additional-price">
+<span aria-label="previous price $99.99" class="sh-strikethrough" role="text">
+                     $99.99
+                    </span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</a>
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[7]-2-@match-media-0-@ebay-carousel-4[@1]-3[1]-43-->
+<div class="vlp-merch-add-to-watchlist-btn">
+<button aria-label="Add Soundcore Space A40 SE True Wireless Earbuds Adaptive Noise Cancelling Hi-Res to your watch list" class="btn btn--tertiary" type="button">
+<svg aria-hidden='true' class="vlp-merch-watch-unselected icon icon--16" focusable='false'>
+<use xlink:href="#hp-icon-save-16">
+</use>
+</svg>
+</button>
+</div>
+<!--vertlandweb/-->
+</div>
+<!--F/-->
+</li>
+<li class="vl-carousel__item" style="width:calc(18.51851851851852% - 13.037037037037038px);margin-right:16px">
+<!--F#4[@2]-->
+<div class="vlp-merch-item-card-container" data-interactions='[{"actionKind": "CLICK", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KMlM2OFo3SzUxMzdWMkUzMkI0MDFKNTNYWE1KNFpOVldWRFE3R0s4QzlaV0sACDM5NDkKQ0xJQ0sA"}]' data-viewport='{"trackableId": "01J53XXMJ2S68Z7K5137V2E32B"}'>
+<a _sp="p4375194.m166540.l3949.c3" class="vlp-merch-item-tile" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "operationId": "4375194", "flushImmediately": false, "actionKind": "CLICK", "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "375054536411", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121456%26meid%3D6a7fb08f1b6d4435bc7d8be17df4e610%26pid%3D102177%26rk%3D3%26rkt%3D10%26mehot%3Dpp%26b%3D1%26itm%3D375054536411%26pmt%3D1%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3DHP%26tu%3D01J53XXMJ2S68Z7K5137V2E32B", "ampid": "MERCH_CLK", "rank": "3", "ammiid": "6a7fb08f1b6d4435bc7d8be17df4e610", "moduledtl": "mi:166540|iid:1|li:3949|luid:3|c:3", "vlpname": "vlp_homepage", "trackableId": "01J53XXMJ2S68Z7K5137V2E32B", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KMlM2OFo3SzUxMzdWMkUzMkI0MDFKNTNYWE1KNFpOVldWRFE3R0s4QzlaV0sACDM5NDkKQ0xJQ0sA", "audience": "general"}}' data-track='[{"operationId": "4375194", "flushImmediately": false, "actionKind": "NAV", "eventProperty": {"trkp": "parentrq:47ded1841910ab8d0e971f48fffff5b0|pageci:8367f410-58d9-11ef-8be2-2a95c25823a1|iid:1|vlpname:vlp_homepage", "sid": "p4375194.m166540.l3949.c3", "audience": "general"}}, {"eventFamily": "VERTLAND", "eventAction": "ACTN", "operationId": "4375194", "flushImmediately": false, "actionKind": "CLICK", "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "375054536411", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121456%26meid%3D6a7fb08f1b6d4435bc7d8be17df4e610%26pid%3D102177%26rk%3D3%26rkt%3D10%26mehot%3Dpp%26b%3D1%26itm%3D375054536411%26pmt%3D1%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3DHP%26tu%3D01J53XXMJ2S68Z7K5137V2E32B", "ampid": "MERCH_CLK", "rank": "3", "ammiid": "6a7fb08f1b6d4435bc7d8be17df4e610", "moduledtl": "mi:166540|iid:1|li:3949|luid:3|c:3", "vlpname": "vlp_homepage", "trackableId": "01J53XXMJ2S68Z7K5137V2E32B", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KMlM2OFo3SzUxMzdWMkUzMkI0MDFKNTNYWE1KNFpOVldWRFE3R0s4QzlaV0sACDM5NDkKQ0xJQ0sA", "audience": "general"}}]' href="https://www.ebay.com/itm/375054536411?_trkparms=amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121456%26meid%3D6a7fb08f1b6d4435bc7d8be17df4e610%26pid%3D102177%26rk%3D1%26rkt%3D1%26b%3D1%26itm%3D375054536411%26pmt%3D1%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3DHP&_trksid=p4375194.c102177.m166540&_trkparms=parentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Cpageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Ciid%3A1%7Cvlpname%3Avlp_homepage" target="_blank">
+<div class="vlp-merch-content-wrap">
+<div class="vlp-merch-image-wrap-dweb">
+<div class="vlp-merch-image-frame" style=" ">
+<div class="vl-image-js js-only">
+<img alt="2023 HP 17-cn3053cl 17.3" IPS FHD Laptop Intel Core i5-1335U 12GB 512GB SSD W11" class="vlp-merch-item-image" crossorigin="anonymous" data-high-res-size='500' data-item-card='true' data-size='300' data-src="https://i.ebayimg.com/thumbs/images/g/490AAOSwcxZmUPAU/s-l500.jpg" onerror="window.addtoLazyLoad({el: this, fit: false})" onload="window.addtoLazyLoad({el: this, fit: false})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-image__no-fill">
+<img alt="2023 HP 17-cn3053cl 17.3" IPS FHD Laptop Intel Core i5-1335U 12GB 512GB SSD W11" src="https://i.ebayimg.com/thumbs/images/g/490AAOSwcxZmUPAU/s-l500.jpg"></img>
+</div>
+</noscript>
+</div>
+</div>
+<div class="vlp-merch-item-info">
+<h3 class="vlp-merch-item-title vlp-merch-item-title-dweb vlp-merch-item-title-margin">
+                  2023 HP 17-cn3053cl 17.3" IPS FHD Laptop Intel Core i5-1335U 12GB 512GB SSD W11
+                 </h3>
+<div class="vlp-merch-sub-group">
+<div class="vlp-merch-price">
+<span role="text">
+                    $369.00
+                   </span>
+<span class="vlp-merch-additional-price">
+<span aria-label="previous price $799.99" class="sh-strikethrough" role="text">
+                     $799.99
+                    </span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</a>
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[7]-2-@match-media-0-@ebay-carousel-4[@2]-3[2]-43-->
+<div class="vlp-merch-add-to-watchlist-btn">
+<button aria-label="Add 2023 HP 17-cn3053cl 17.3" IPS FHD Laptop Intel Core i5-1335U 12GB 512GB SSD W11 to your watch list" class="btn btn--tertiary" type="button">
+<svg aria-hidden='true' class="vlp-merch-watch-unselected icon icon--16" focusable='false'>
+<use xlink:href="#hp-icon-save-16">
+</use>
+</svg>
+</button>
+</div>
+<!--vertlandweb/-->
+</div>
+<!--F/-->
+</li>
+<li class="vl-carousel__item" style="width:calc(18.51851851851852% - 13.037037037037038px);margin-right:16px">
+<!--F#4[@3]-->
+<div class="vlp-merch-item-card-container" data-interactions='[{"actionKind": "CLICK", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KM1BSQzA0NjNYVEVRUE05NDc0MDFKNTNYWE1KNFpOVldWRFE3R0s4QzlaV0sACDM5NDkKQ0xJQ0sA"}]' data-viewport='{"trackableId": "01J53XXMJ3PRC0463XTEQPM947"}'>
+
+        ```
+        

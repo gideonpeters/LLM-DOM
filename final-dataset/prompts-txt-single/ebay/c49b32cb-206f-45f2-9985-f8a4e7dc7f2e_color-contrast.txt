@@ -1,0 +1,280 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. color-contrast => Background and foreground colors do not have a sufficient contrast ratio.: Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.9/color-contrast).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        <a _sp="p4375194.m166540.l3949.c4" class="vlp-merch-item-tile" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "operationId": "4375194", "flushImmediately": false, "actionKind": "CLICK", "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "375568864944", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121456%26meid%3D6a7fb08f1b6d4435bc7d8be17df4e610%26pid%3D102177%26rk%3D4%26rkt%3D10%26mehot%3Dnone%26b%3D1%26itm%3D375568864944%26pmt%3D1%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3DHP%26tu%3D01J53XXMJ3PRC0463XTEQPM947", "ampid": "MERCH_CLK", "rank": "4", "ammiid": "6a7fb08f1b6d4435bc7d8be17df4e610", "moduledtl": "mi:166540|iid:1|li:3949|luid:4|c:4", "vlpname": "vlp_homepage", "trackableId": "01J53XXMJ3PRC0463XTEQPM947", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KM1BSQzA0NjNYVEVRUE05NDc0MDFKNTNYWE1KNFpOVldWRFE3R0s4QzlaV0sACDM5NDkKQ0xJQ0sA", "audience": "general"}}' data-track='[{"operationId": "4375194", "flushImmediately": false, "actionKind": "NAV", "eventProperty": {"trkp": "parentrq:47ded1841910ab8d0e971f48fffff5b0|pageci:8367f410-58d9-11ef-8be2-2a95c25823a1|iid:1|vlpname:vlp_homepage", "sid": "p4375194.m166540.l3949.c4", "audience": "general"}}, {"eventFamily": "VERTLAND", "eventAction": "ACTN", "operationId": "4375194", "flushImmediately": false, "actionKind": "CLICK", "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "375568864944", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121456%26meid%3D6a7fb08f1b6d4435bc7d8be17df4e610%26pid%3D102177%26rk%3D4%26rkt%3D10%26mehot%3Dnone%26b%3D1%26itm%3D375568864944%26pmt%3D1%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3DHP%26tu%3D01J53XXMJ3PRC0463XTEQPM947", "ampid": "MERCH_CLK", "rank": "4", "ammiid": "6a7fb08f1b6d4435bc7d8be17df4e610", "moduledtl": "mi:166540|iid:1|li:3949|luid:4|c:4", "vlpname": "vlp_homepage", "trackableId": "01J53XXMJ3PRC0463XTEQPM947", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KM1BSQzA0NjNYVEVRUE05NDc0MDFKNTNYWE1KNFpOVldWRFE3R0s4QzlaV0sACDM5NDkKQ0xJQ0sA", "audience": "general"}}]' href="https://www.ebay.com/itm/375568864944?_trkparms=amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121456%26meid%3D6a7fb08f1b6d4435bc7d8be17df4e610%26pid%3D102177%26rk%3D1%26rkt%3D1%26b%3D1%26itm%3D375568864944%26pmt%3D1%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3DHP&_trksid=p4375194.c102177.m166540&_trkparms=parentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Cpageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Ciid%3A1%7Cvlpname%3Avlp_homepage" target="_blank">
+<div class="vlp-merch-content-wrap">
+<div class="vlp-merch-image-wrap-dweb">
+<div class="vlp-merch-image-frame" style=" ">
+<div class="vl-image-js js-only">
+<img alt="HP Victus 15L TG02-0346ST Intel i5-12400 RTX 3050 8GB RAM 256GB SSD 1TB HDD W11H" class="vlp-merch-item-image" crossorigin="anonymous" data-high-res-size='500' data-item-card='true' data-size='300' data-src="https://i.ebayimg.com/thumbs/images/g/F6YAAOSwgjhmrCWG/s-l500.jpg" onerror="window.addtoLazyLoad({el: this, fit: false})" onload="window.addtoLazyLoad({el: this, fit: false})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-image__no-fill">
+<img alt="HP Victus 15L TG02-0346ST Intel i5-12400 RTX 3050 8GB RAM 256GB SSD 1TB HDD W11H" src="https://i.ebayimg.com/thumbs/images/g/F6YAAOSwgjhmrCWG/s-l500.jpg"></img>
+</div>
+</noscript>
+</div>
+</div>
+<div class="vlp-merch-item-info">
+<h3 class="vlp-merch-item-title vlp-merch-item-title-dweb vlp-merch-item-title-margin">
+                  HP Victus 15L TG02-0346ST Intel i5-12400 RTX 3050 8GB RAM 256GB SSD 1TB HDD W11H
+                 </h3>
+<div class="vlp-merch-sub-group">
+<div class="vlp-merch-price">
+<span role="text">
+                    $449.99
+                   </span>
+<span class="vlp-merch-additional-price">
+<span aria-label="previous price $759.99" class="sh-strikethrough" role="text">
+                     $759.99
+                    </span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</a>
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[7]-2-@match-media-0-@ebay-carousel-4[@3]-3[3]-43-->
+<div class="vlp-merch-add-to-watchlist-btn">
+<button aria-label="Add HP Victus 15L TG02-0346ST Intel i5-12400 RTX 3050 8GB RAM 256GB SSD 1TB HDD W11H to your watch list" class="btn btn--tertiary" type="button">
+<svg aria-hidden='true' class="vlp-merch-watch-unselected icon icon--16" focusable='false'>
+<use xlink:href="#hp-icon-save-16">
+</use>
+</svg>
+</button>
+</div>
+<!--vertlandweb/-->
+</div>
+<!--F/-->
+</li>
+<li class="vl-carousel__item" style="width:calc(18.51851851851852% - 13.037037037037038px);margin-right:16px">
+<!--F#4[@4]-->
+<div class="vlp-merch-item-card-container" data-interactions='[{"actionKind": "CLICK", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KM1pFNTRKSlJZOUJORk1GTUg0MDFKNTNYWE1KNFpOVldWRFE3R0s4QzlaV0sACDM5NDkKQ0xJQ0sA"}]' data-viewport='{"trackableId": "01J53XXMJ3ZE54JJRY9BNFMFMH"}'>
+<a _sp="p4375194.m166540.l3949.c5" class="vlp-merch-item-tile" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "operationId": "4375194", "flushImmediately": false, "actionKind": "CLICK", "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "166889649506", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121456%26meid%3D6a7fb08f1b6d4435bc7d8be17df4e610%26pid%3D102177%26rk%3D5%26rkt%3D10%26mehot%3Dnone%26b%3D1%26itm%3D166889649506%26pmt%3D1%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3DHP%26tu%3D01J53XXMJ3ZE54JJRY9BNFMFMH", "ampid": "MERCH_CLK", "rank": "5", "ammiid": "6a7fb08f1b6d4435bc7d8be17df4e610", "moduledtl": "mi:166540|iid:1|li:3949|luid:5|c:5", "vlpname": "vlp_homepage", "trackableId": "01J53XXMJ3ZE54JJRY9BNFMFMH", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KM1pFNTRKSlJZOUJORk1GTUg0MDFKNTNYWE1KNFpOVldWRFE3R0s4QzlaV0sACDM5NDkKQ0xJQ0sA", "audience": "general"}}' data-track='[{"operationId": "4375194", "flushImmediately": false, "actionKind": "NAV", "eventProperty": {"trkp": "parentrq:47ded1841910ab8d0e971f48fffff5b0|pageci:8367f410-58d9-11ef-8be2-2a95c25823a1|iid:1|vlpname:vlp_homepage", "sid": "p4375194.m166540.l3949.c5", "audience": "general"}}, {"eventFamily": "VERTLAND", "eventAction": "ACTN", "operationId": "4375194", "flushImmediately": false, "actionKind": "CLICK", "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "166889649506", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121456%26meid%3D6a7fb08f1b6d4435bc7d8be17df4e610%26pid%3D102177%26rk%3D5%26rkt%3D10%26mehot%3Dnone%26b%3D1%26itm%3D166889649506%26pmt%3D1%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3DHP%26tu%3D01J53XXMJ3ZE54JJRY9BNFMFMH", "ampid": "MERCH_CLK", "rank": "5", "ammiid": "6a7fb08f1b6d4435bc7d8be17df4e610", "moduledtl": "mi:166540|iid:1|li:3949|luid:5|c:5", "vlpname": "vlp_homepage", "trackableId": "01J53XXMJ3ZE54JJRY9BNFMFMH", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KM1pFNTRKSlJZOUJORk1GTUg0MDFKNTNYWE1KNFpOVldWRFE3R0s4QzlaV0sACDM5NDkKQ0xJQ0sA", "audience": "general"}}]' href="https://www.ebay.com/itm/166889649506?_trkparms=amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121456%26meid%3D6a7fb08f1b6d4435bc7d8be17df4e610%26pid%3D102177%26rk%3D1%26rkt%3D1%26b%3D1%26itm%3D166889649506%26pmt%3D1%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3DHP&_trksid=p4375194.c102177.m166540&_trkparms=parentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Cpageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Ciid%3A1%7Cvlpname%3Avlp_homepage" target="_blank">
+<div class="vlp-merch-content-wrap">
+<div class="vlp-merch-image-wrap-dweb">
+<div class="vlp-merch-image-frame" style=" ">
+<div class="vl-image-js js-only">
+<img alt="HP Pavilion TG01-2260xt Intel i5-11400 2.6 GHz GTX 1650 8GB DDR4 256GB SSD W11H" class="vlp-merch-item-image" crossorigin="anonymous" data-high-res-size='500' data-item-card='true' data-size='300' data-src="https://i.ebayimg.com/thumbs/images/g/GKQAAOSweB1mpWrx/s-l500.jpg" onerror="window.addtoLazyLoad({el: this, fit: false})" onload="window.addtoLazyLoad({el: this, fit: false})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-image__no-fill">
+<img alt="HP Pavilion TG01-2260xt Intel i5-11400 2.6 GHz GTX 1650 8GB DDR4 256GB SSD W11H" src="https://i.ebayimg.com/thumbs/images/g/GKQAAOSweB1mpWrx/s-l500.jpg"></img>
+</div>
+</noscript>
+</div>
+</div>
+<div class="vlp-merch-item-info">
+<h3 class="vlp-merch-item-title vlp-merch-item-title-dweb vlp-merch-item-title-margin">
+                  HP Pavilion TG01-2260xt Intel i5-11400 2.6 GHz GTX 1650 8GB DDR4 256GB SSD W11H
+                 </h3>
+<div class="vlp-merch-sub-group">
+<div class="vlp-merch-price">
+<span role="text">
+                    $334.00
+                   </span>
+<span class="vlp-merch-additional-price">
+<span aria-label="previous price $769.99" class="sh-strikethrough" role="text">
+                     $769.99
+                    </span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</a>
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[7]-2-@match-media-0-@ebay-carousel-4[@4]-3[4]-43-->
+<div class="vlp-merch-add-to-watchlist-btn">
+<button aria-label="Add HP Pavilion TG01-2260xt Intel i5-11400 2.6 GHz GTX 1650 8GB DDR4 256GB SSD W11H to your watch list" class="btn btn--tertiary" type="button">
+<svg aria-hidden='true' class="vlp-merch-watch-unselected icon icon--16" focusable='false'>
+<use xlink:href="#hp-icon-save-16">
+</use>
+</svg>
+</button>
+</div>
+<!--vertlandweb/-->
+</div>
+<!--F/-->
+</li>
+<li class="carousel__snap-point vl-carousel__item" style="width:calc(18.51851851851852% - 13.037037037037038px);margin-right:16px">
+<!--F#4[@5]-->
+<div class="vlp-merch-item-card-container" data-interactions='[{"actionKind": "CLICK", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KM0IzU0M2NVhQMFg0R05FREM0MDFKNTNYWE1KNFpOVldWRFE3R0s4QzlaV0sACDM5NDkKQ0xJQ0sA"}]' data-viewport='{"trackableId": "01J53XXMJ3B3SC65XP0X4GNEDC"}'>
+<a _sp="p4375194.m166540.l3949.c6" class="vlp-merch-item-tile" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "operationId": "4375194", "flushImmediately": false, "actionKind": "CLICK", "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "385826294303", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121456%26meid%3D6a7fb08f1b6d4435bc7d8be17df4e610%26pid%3D102177%26rk%3D6%26rkt%3D10%26mehot%3Dpp%26b%3D1%26itm%3D385826294303%26pmt%3D1%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3Dsoundcore%26tu%3D01J53XXMJ3B3SC65XP0X4GNEDC", "ampid": "MERCH_CLK", "rank": "6", "ammiid": "6a7fb08f1b6d4435bc7d8be17df4e610", "moduledtl": "mi:166540|iid:1|li:3949|luid:6|c:6", "vlpname": "vlp_homepage", "trackableId": "01J53XXMJ3B3SC65XP0X4GNEDC", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KM0IzU0M2NVhQMFg0R05FREM0MDFKNTNYWE1KNFpOVldWRFE3R0s4QzlaV0sACDM5NDkKQ0xJQ0sA", "audience": "general"}}' data-track='[{"operationId": "4375194", "flushImmediately": false, "actionKind": "NAV", "eventProperty": {"trkp": "parentrq:47ded1841910ab8d0e971f48fffff5b0|pageci:8367f410-58d9-11ef-8be2-2a95c25823a1|iid:1|vlpname:vlp_homepage", "sid": "p4375194.m166540.l3949.c6", "audience": "general"}}, {"eventFamily": "VERTLAND", "eventAction": "ACTN", "operationId": "4375194", "flushImmediately": false, "actionKind": "CLICK", "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "385826294303", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121456%26meid%3D6a7fb08f1b6d4435bc7d8be17df4e610%26pid%3D102177%26rk%3D6%26rkt%3D10%26mehot%3Dpp%26b%3D1%26itm%3D385826294303%26pmt%3D1%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3Dsoundcore%26tu%3D01J53XXMJ3B3SC65XP0X4GNEDC", "ampid": "MERCH_CLK", "rank": "6", "ammiid": "6a7fb08f1b6d4435bc7d8be17df4e610", "moduledtl": "mi:166540|iid:1|li:3949|luid:6|c:6", "vlpname": "vlp_homepage", "trackableId": "01J53XXMJ3B3SC65XP0X4GNEDC", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KM0IzU0M2NVhQMFg0R05FREM0MDFKNTNYWE1KNFpOVldWRFE3R0s4QzlaV0sACDM5NDkKQ0xJQ0sA", "audience": "general"}}]' href="https://www.ebay.com/itm/385826294303?_trkparms=amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121456%26meid%3D6a7fb08f1b6d4435bc7d8be17df4e610%26pid%3D102177%26rk%3D1%26rkt%3D1%26b%3D1%26itm%3D385826294303%26pmt%3D1%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3Dsoundcore&_trksid=p4375194.c102177.m166540&_trkparms=parentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Cpageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Ciid%3A1%7Cvlpname%3Avlp_homepage" target="_blank">
+<div class="vlp-merch-content-wrap">
+<div class="vlp-merch-image-wrap-dweb">
+<div class="vlp-merch-image-frame" style=" ">
+<div class="vl-image-js js-only">
+<img alt="Soundcore Space A40 Wireless Earbuds Auto-Adjustable Active Noise Cancelling" class="vlp-merch-item-image" crossorigin="anonymous" data-high-res-size='500' data-item-card='true' data-size='300' data-src="https://i.ebayimg.com/thumbs/images/g/eUcAAOSwDPJmrFq1/s-l500.jpg" onerror="window.addtoLazyLoad({el: this, fit: false})" onload="window.addtoLazyLoad({el: this, fit: false})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-image__no-fill">
+<img alt="Soundcore Space A40 Wireless Earbuds Auto-Adjustable Active Noise Cancelling" src="https://i.ebayimg.com/thumbs/images/g/eUcAAOSwDPJmrFq1/s-l500.jpg"></img>
+</div>
+</noscript>
+</div>
+</div>
+<div class="vlp-merch-item-info">
+<h3 class="vlp-merch-item-title vlp-merch-item-title-dweb vlp-merch-item-title-margin">
+                  Soundcore Space A40 Wireless Earbuds Auto-Adjustable Active Noise Cancelling
+                 </h3>
+<div class="vlp-merch-sub-group">
+<div class="vlp-merch-price">
+<span role="text">
+                    $37.99
+                   </span>
+<span class="vlp-merch-additional-price">
+<span aria-label="previous price $44.99" class="sh-strikethrough" role="text">
+                     $44.99
+                    </span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</a>
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[7]-2-@match-media-0-@ebay-carousel-4[@5]-3[5]-43-->
+<div class="vlp-merch-add-to-watchlist-btn">
+<button aria-label="Add Soundcore Space A40 Wireless Earbuds Auto-Adjustable Active Noise Cancelling to your watch list" class="btn btn--tertiary" type="button">
+<svg aria-hidden='true' class="vlp-merch-watch-unselected icon icon--16" focusable='false'>
+<use xlink:href="#hp-icon-save-16">
+</use>
+</svg>
+</button>
+</div>
+<!--vertlandweb/-->
+</div>
+<!--F/-->
+</li>
+<li class="vl-carousel__item" style="width:calc(18.51851851851852% - 13.037037037037038px);margin-right:16px">
+<!--F#4[@6]-->
+<div class="vlp-merch-item-card-container" data-interactions='[{"actionKind": "CLICK", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KM01ZTTg1NlM1NFdNQUE0M1Y0MDFKNTNYWE1KNFpOVldWRFE3R0s4QzlaV0sACDM5NDkKQ0xJQ0sA"}]' data-viewport='{"trackableId": "01J53XXMJ3MYM856S54WMAA43V"}'>
+<a _sp="p4375194.m166540.l3949.c7" class="vlp-merch-item-tile" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "operationId": "4375194", "flushImmediately": false, "actionKind": "CLICK", "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "186399597422", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121456%26meid%3D6a7fb08f1b6d4435bc7d8be17df4e610%26pid%3D102177%26rk%3D7%26rkt%3D10%26mehot%3Dpp%26b%3D1%26itm%3D186399597422%26pmt%3D1%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3DDreame%26tu%3D01J53XXMJ3MYM856S54WMAA43V", "ampid": "MERCH_CLK", "rank": "7", "ammiid": "6a7fb08f1b6d4435bc7d8be17df4e610", "moduledtl": "mi:166540|iid:1|li:3949|luid:7|c:7", "vlpname": "vlp_homepage", "trackableId": "01J53XXMJ3MYM856S54WMAA43V", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KM01ZTTg1NlM1NFdNQUE0M1Y0MDFKNTNYWE1KNFpOVldWRFE3R0s4QzlaV0sACDM5NDkKQ0xJQ0sA", "audience": "general"}}' data-track='[{"operationId": "4375194", "flushImmediately": false, "actionKind": "NAV", "eventProperty": {"trkp": "parentrq:47ded1841910ab8d0e971f48fffff5b0|pageci:8367f410-58d9-11ef-8be2-2a95c25823a1|iid:1|vlpname:vlp_homepage", "sid": "p4375194.m166540.l3949.c7", "audience": "general"}}, {"eventFamily": "VERTLAND", "eventAction": "ACTN", "operationId": "4375194", "flushImmediately": false, "actionKind": "CLICK", "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "186399597422", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121456%26meid%3D6a7fb08f1b6d4435bc7d8be17df4e610%26pid%3D102177%26rk%3D7%26rkt%3D10%26mehot%3Dpp%26b%3D1%26itm%3D186399597422%26pmt%3D1%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3DDreame%26tu%3D01J53XXMJ3MYM856S54WMAA43V", "ampid": "MERCH_CLK", "rank": "7", "ammiid": "6a7fb08f1b6d4435bc7d8be17df4e610", "moduledtl": "mi:166540|iid:1|li:3949|luid:7|c:7", "vlpname": "vlp_homepage", "trackableId": "01J53XXMJ3MYM856S54WMAA43V", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KM01ZTTg1NlM1NFdNQUE0M1Y0MDFKNTNYWE1KNFpOVldWRFE3R0s4QzlaV0sACDM5NDkKQ0xJQ0sA", "audience": "general"}}]' href="https://www.ebay.com/itm/186399597422?_trkparms=amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121456%26meid%3D6a7fb08f1b6d4435bc7d8be17df4e610%26pid%3D102177%26rk%3D1%26rkt%3D1%26b%3D1%26itm%3D186399597422%26pmt%3D1%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3DDreame&_trksid=p4375194.c102177.m166540&_trkparms=parentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Cpageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Ciid%3A1%7Cvlpname%3Avlp_homepage" target="_blank">
+<div class="vlp-merch-content-wrap">
+<div class="vlp-merch-image-wrap-dweb">
+<div class="vlp-merch-image-frame" style=" ">
+<div class="vl-image-js js-only">
+<img alt="Dreame D10s Plus Robot Vacuum and Mop Combo Self-Emptying 5000Pa Suction Power" class="vlp-merch-item-image" crossorigin="anonymous" data-high-res-size='500' data-item-card='true' data-size='300' data-src="https://i.ebayimg.com/thumbs/images/g/jMYAAOSwnz5mIXdK/s-l500.jpg" onerror="window.addtoLazyLoad({el: this, fit: false})" onload="window.addtoLazyLoad({el: this, fit: false})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-image__no-fill">
+<img alt="Dreame D10s Plus Robot Vacuum and Mop Combo Self-Emptying 5000Pa Suction Power" src="https://i.ebayimg.com/thumbs/images/g/jMYAAOSwnz5mIXdK/s-l500.jpg"></img>
+</div>
+</noscript>
+</div>
+</div>
+<div class="vlp-merch-item-info">
+<h3 class="vlp-merch-item-title vlp-merch-item-title-dweb vlp-merch-item-title-margin">
+                  Dreame D10s Plus Robot Vacuum and Mop Combo Self-Emptying 5000Pa Suction Power
+                 </h3>
+<div class="vlp-merch-sub-group">
+<div class="vlp-merch-price">
+<span role="text">
+                    $299.00
+                   </span>
+</div>
+</div>
+</div>
+</div>
+</a>
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[7]-2-@match-media-0-@ebay-carousel-4[@6]-3[6]-43-->
+<div class="vlp-merch-add-to-watchlist-btn">
+<button aria-label="Add Dreame D10s Plus Robot Vacuum and Mop Combo Self-Emptying 5000Pa Suction Power to your watch list" class="btn btn--tertiary" type="button">
+<svg aria-hidden='true' class="vlp-merch-watch-unselected icon icon--16" focusable='false'>
+<use xlink:href="#hp-icon-save-16">
+</use>
+</svg>
+</button>
+</div>
+<!--vertlandweb/-->
+</div>
+<!--F/-->
+</li>
+<li class="vl-carousel__item" style="width:calc(18.51851851851852% - 13.037037037037038px);margin-right:16px">
+<!--F#4[@7]-->
+<div class="vlp-merch-item-card-container" data-interactions='[{"actionKind": "CLICK", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KMzU4MjlSMFBSRk00RlBGUEE0MDFKNTNYWE1KNFpOVldWRFE3R0s4QzlaV0sACDM5NDkKQ0xJQ0sA"}]' data-viewport='{"trackableId": "01J53XXMJ35829R0PRFM4FPFPA"}'>
+<a _sp="p4375194.m166540.l3949.c8" class="vlp-merch-item-tile" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "operationId": "4375194", "flushImmediately": false, "actionKind": "CLICK", "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "204890922231", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121456%26meid%3D6a7fb08f1b6d4435bc7d8be17df4e610%26pid%3D102177%26rk%3D8%26rkt%3D10%26mehot%3Dnone%26b%3D1%26itm%3D204890922231%26pmt%3D1%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3DOlympus%26tu%3D01J53XXMJ35829R0PRFM4FPFPA", "ampid": "MERCH_CLK", "rank": "8", "ammiid": "6a7fb08f1b6d4435bc7d8be17df4e610", "moduledtl": "mi:166540|iid:1|li:3949|luid:8|c:8", "vlpname": "vlp_homepage", "trackableId": "01J53XXMJ35829R0PRFM4FPFPA", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KMzU4MjlSMFBSRk00RlBGUEE0MDFKNTNYWE1KNFpOVldWRFE3R0s4QzlaV0sACDM5NDkKQ0xJQ0sA", "audience": "general"}}' data-track='[{"operationId": "4375194", "flushImmediately": false, "actionKind": "NAV", "eventProperty": {"trkp": "parentrq:47ded1841910ab8d0e971f48fffff5b0|pageci:8367f410-58d9-11ef-8be2-2a95c25823a1|iid:1|vlpname:vlp_homepage", "sid": "p4375194.m166540.l3949.c8", "audience": "general"}}, {"eventFamily": "VERTLAND", "eventAction": "ACTN", "operationId": "4375194", "flushImmediately": false, "actionKind": "CLICK", "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "204890922231", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121456%26meid%3D6a7fb08f1b6d4435bc7d8be17df4e610%26pid%3D102177%26rk%3D8%26rkt%3D10%26mehot%3Dnone%26b%3D1%26itm%3D204890922231%26pmt%3D1%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3DOlympus%26tu%3D01J53XXMJ35829R0PRFM4FPFPA", "ampid": "MERCH_CLK", "rank": "8", "ammiid": "6a7fb08f1b6d4435bc7d8be17df4e610", "moduledtl": "mi:166540|iid:1|li:3949|luid:8|c:8", "vlpname": "vlp_homepage", "trackableId": "01J53XXMJ35829R0PRFM4FPFPA", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KMzU4MjlSMFBSRk00RlBGUEE0MDFKNTNYWE1KNFpOVldWRFE3R0s4QzlaV0sACDM5NDkKQ0xJQ0sA", "audience": "general"}}]' href="https://www.ebay.com/itm/204890922231?_trkparms=amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121456%26meid%3D6a7fb08f1b6d4435bc7d8be17df4e610%26pid%3D102177%26rk%3D1%26rkt%3D1%26b%3D1%26itm%3D204890922231%26pmt%3D1%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3DOlympus&_trksid=p4375194.c102177.m166540&_trkparms=parentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Cpageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Ciid%3A1%7Cvlpname%3Avlp_homepage" target="_blank">
+<div class="vlp-merch-content-wrap">
+<div class="vlp-merch-image-wrap-dweb">
+<div class="vlp-merch-image-frame" style=" ">
+<div class="vl-image-js js-only">
+<img alt="Olympus OM-D E-M10 Mark IIIs Mirrorless Camera w/14-42mm II R Lens (Black)" class="vlp-merch-item-image" crossorigin="anonymous" data-high-res-size='500' data-item-card='true' data-size='300' data-src="https://i.ebayimg.com/thumbs/images/g/5Z4AAOSwfjRlz5gV/s-l500.jpg" onerror="window.addtoLazyLoad({el: this, fit: false})" onload="window.addtoLazyLoad({el: this, fit: false})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-image__no-fill">
+<img alt="Olympus OM-D E-M10 Mark IIIs Mirrorless Camera w/14-42mm II R Lens (Black)" src="https://i.ebayimg.com/thumbs/images/g/5Z4AAOSwfjRlz5gV/s-l500.jpg"></img>
+</div>
+</noscript>
+</div>
+</div>
+<div class="vlp-merch-item-info">
+<h3 class="vlp-merch-item-title vlp-merch-item-title-dweb vlp-merch-item-title-margin">
+                  Olympus OM-D E-M10 Mark IIIs Mirrorless Camera w/14-42mm II R Lens (Black)
+                 </h3>
+<div class="vlp-merch-sub-group">
+<div class="vlp-merch-price">
+<span role="text">
+                    $435.00
+                   </span>
+<span class="vlp-merch-additional-price">
+<span aria-label="previous price $719.00" class="sh-strikethrough" role="text">
+                     $719.00
+                    </span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</a>
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[7]-2-@match-media-0-@ebay-carousel-4[@7]-3[7]-43-->
+<div class="vlp-merch-add-to-watchlist-btn">
+<button aria-label="Add Olympus OM-D E-M10 Mark IIIs Mirrorless Camera w/14-42mm II R Lens (Black) to your watch list" class="btn btn--tertiary" type="button">
+<svg aria-hidden='true' class="vlp-merch-watch-unselected icon icon--16" focusable='false'>
+<use xlink:href="#hp-icon-save-16">
+</use>
+</svg>
+</button>
+</div>
+<!--vertlandweb/-->
+</div>
+<!--F/-->
+</li>
+<li class="vl-carousel__item" style="width:calc(18.51851851851852% - 13.037037037037038px);margin-right:16px">
+<!--F#4[@8]-->
+<div class="vlp-merch-item-card-container" data-interactions='[{"actionKind": "CLICK", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KNFk2WEJUQUJaUjQzWTBIMkc0MDFKNTNYWE1KNFpOVldWRFE3R0s4QzlaV0sACDM5NDkKQ0xJQ0sA"}]' data-viewport='{"trackableId": "01J53XXMJ4Y6XBTABZR43Y0H2G"}'>
+
+        ```
+        

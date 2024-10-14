@@ -1,0 +1,77 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. unminified-javascript => Minify JavaScript: Minifying JavaScript files can reduce payload sizes and script parse time. [Learn how to minify JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unminified-javascript/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta>
+<meta charset="utf-8"></meta>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"></meta>
+<meta content="Aob+++752GiUzm1RNSIkM9TINnQDxTlxz02v8hFJK/uGO2hmXnJqH8c/ZpI05b2nLsHDhGO3Ce2zXJUFQmO7jA4AAAB1eyJvcmlnaW4iOiJodHRwczovL25ldGZsaXguY29tOjQ0MyIsImZlYXR1cmUiOiJFbmNyeXB0ZWRNZWRpYUhkY3BQb2xpY3lDaGVjayIsImV4cGlyeSI6MTU0MzI0MzQyNCwiaXNTdWJkb21haW4iOnRydWV9" data-expires="2018-11-26" data-feature="EME Extension - Policy Check" http-equiv="origin-trial"></meta>
+<meta content="Avmn/LBDmMaBYzfLDTgViRmGZnwcz/LsvceSBBKvevKOrStLHjbpZK3zFjSRuw3ampe7aV2MzJO7//lZ9Nm82hQAAABpeyJvcmlnaW4iOiJodHRwczovL25ldGZsaXguY29tOjQ0MyIsImlzU3ViZG9tYWluIjp0cnVlLCJmZWF0dXJlIjoiV2ViQXBwTG9jYWxGb2xkZXIiLCJleHBpcnkiOjE3MjU0OTQzOTl9" data-expires="2024-09-04" data-feature="LocalFolder" http-equiv="origin-trial"></meta>
+<title>
+   Netflix
+  </title>
+<link as="script" href="https://assets.nflxext.com/web/ffe/wp/./ui/login/client.e9908a16c0917b39fa99.js" rel="preload"></link>
+<script data-chunk-uuid="3d9af06f-1a14-4789-9234-ec44e1e731f2" type="text/javascript">// chunk_script_3d9af06f-1a14-4789-9234-ec44e1e731f2
+</script>
+<script data-chunk-uuid="a3c28ca4-b856-469a-8e4d-49b36b1ccf8f" charset="UTF-8" data-document-language='true' data-domain-script="87b6a5c0-0104-4e96-a291-092c11350111" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript">// chunk_script_a3c28ca4-b856-469a-8e4d-49b36b1ccf8f
+</script>
+<script data-chunk-uuid="00f29168-d127-45b6-b74b-3014bdbb4358" type="text/javascript">// chunk_script_00f29168-d127-45b6-b74b-3014bdbb4358
+</script>
+<meta content="watch movies, movies online, watch TV, TV online, TV shows online, watch TV shows, stream movies, stream tv, instant streaming, watch online, movies, watch movies Canada, watch TV online, no download, full length movies" name="keywords"></meta>
+<meta content="Watch Netflix movies & TV shows online or stream right to your smart TV, game console, PC, Mac, mobile, tablet and more." name="description"></meta>
+<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" name="viewport"></meta>
+<meta content="yes" name="apple-mobile-web-app-capable"></meta>
+<meta content="black" name="apple-mobile-web-app-status-bar-style"></meta>
+<meta content="telephone=no" name="format-detection"></meta>
+<meta content="https://assets.nflxext.com/en_us/layout/ecweb/netflix-app-icon_152.jpg" name="apple-touch-icon"></meta>
+<link data-uia="botLink" href="https://assets.nflxext.com/web/ffe/wp/js/login/base.29784261571369c943e5.css" rel="stylesheet" type="text/css"></link>
+<link href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2023.ico" rel="shortcut icon"></link>
+<link href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.png" rel="apple-touch-icon"></link>
+<meta content="Watch Netflix movies & TV shows online or stream right to your smart TV, game console, PC, Mac, mobile, tablet and more." property="og:description"></meta>
+<meta content="nflx://www.netflix.com/login?nextpage=https%3A%2F%2Fwww.netflix.com%2Fbrowse&locale=en-CA" property="al:ios:url"></meta>
+<meta content='363590051' property="al:ios:app_store_id"></meta>
+<meta content="Netflix" property="al:ios:app_name"></meta>
+<meta content="nflx://www.netflix.com/login?nextpage=https%3A%2F%2Fwww.netflix.com%2Fbrowse&locale=en-CA" property="al:android:url"></meta>
+<meta content="com.netflix.mediaclient" property="al:android:package"></meta>
+<meta content="Netflix" property="al:android:app_name"></meta>
+<meta content="summary_large_image" name="twitter:card"></meta>
+<meta content="@netflix" name="twitter:site"></meta>
+<script data-chunk-uuid="909f1c90-d4ed-4c07-83cc-690a9788be7e">// chunk_script_909f1c90-d4ed-4c07-83cc-690a9788be7e
+</script>
+
+        ```
+        

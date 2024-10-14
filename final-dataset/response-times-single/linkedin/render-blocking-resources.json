@@ -1,0 +1,62 @@
+[
+    {
+        "prompt_uuid": "0a50eca0-6242-4eba-be19-63d6a68e5860",
+        "dom_name": "linkedin",
+        "prompt_token_size": 2884,
+        "duration": 23.705671072006226,
+        "mode": "single",
+        "audit_key": "render-blocking-resources",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 0,
+            "upload_speed": 0,
+            "ping": 0,
+            "error": "module 'speedtest' has no attribute 'Speedtest'"
+        }
+    },
+    {
+        "prompt_uuid": "37d395c7-938b-4a14-a7af-e1185775a586",
+        "dom_name": "linkedin",
+        "prompt_token_size": 11950,
+        "duration": 3.358006000518799,
+        "mode": "single",
+        "audit_key": "render-blocking-resources",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 0,
+            "upload_speed": 0,
+            "ping": 0,
+            "error": "module 'speedtest' has no attribute 'Speedtest'"
+        }
+    },
+    {
+        "prompt_uuid": "8ae35e03-a2aa-40fe-a814-091035761977",
+        "dom_name": "linkedin",
+        "prompt_token_size": 11936,
+        "duration": 7.795344829559326,
+        "mode": "single",
+        "audit_key": "render-blocking-resources",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 0,
+            "upload_speed": 0,
+            "ping": 0,
+            "error": "module 'speedtest' has no attribute 'Speedtest'"
+        }
+    },
+    {
+        "prompt_uuid": "8acb3524-5de2-435c-baa1-ff0f68e6635b",
+        "dom_name": "linkedin",
+        "prompt_token_size": 6446,
+        "duration": 68.14599299430847,
+        "mode": "single",
+        "audit_key": "render-blocking-resources",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 0,
+            "upload_speed": 0,
+            "ping": 0,
+            "error": "module 'speedtest' has no attribute 'Speedtest'"
+        }
+    }
+]

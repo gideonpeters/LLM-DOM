@@ -1,0 +1,32 @@
+[
+    {
+        "prompt_uuid": "77e0b178-11c3-4b21-bf05-77641c361bb9",
+        "dom_name": "netflix",
+        "prompt_token_size": 1835,
+        "duration": 14.082380056381226,
+        "mode": "single",
+        "audit_key": "speed-index",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 0,
+            "upload_speed": 0,
+            "ping": 0,
+            "error": "module 'speedtest' has no attribute 'Speedtest'"
+        }
+    },
+    {
+        "prompt_uuid": "339b2083-d142-4a1a-880c-beb54969428e",
+        "dom_name": "netflix",
+        "prompt_token_size": 11203,
+        "duration": 136.64595818519592,
+        "mode": "single",
+        "audit_key": "speed-index",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 0,
+            "upload_speed": 0,
+            "ping": 0,
+            "error": "module 'speedtest' has no attribute 'Speedtest'"
+        }
+    }
+]

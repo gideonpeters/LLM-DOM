@@ -1,0 +1,155 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. legacy-javascript => Avoid serving legacy JavaScript to modern browsers: Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. For your bundled JavaScript, adopt a modern script deployment strategy using module/nomodule feature detection to reduce the amount of code shipped to modern browsers, while retaining support for legacy browsers. [Learn how to use modern JavaScript](https://web.dev/articles/publish-modern-javascript)
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        
+<meta charset="utf-8"></meta>
+<meta content="AobcHP0Riuw7qx+GcJ79jLXxzvz+vbYglMh02KHK8du7LYn9e2JLytVX5ABrS3PMoEeAZ5HxTvNW05uVVfni5gEAAAByeyJvcmlnaW4iOiJodHRwczovL3BpbnRlcmVzdC5jb206NDQzIiwiZmVhdHVyZSI6IkxvbmdBbmltYXRpb25GcmFtZVRpbWluZyIsImV4cGlyeSI6MTcxNjk0MDc5OSwiaXNTdWJkb21haW4iOnRydWV9" http-equiv="origin-trial"></meta>
+<meta content="width=device-width, initial-scale=1" id="viewport" name="viewport"></meta>
+<meta content="default-src 'self' blob: s.pinimg.com; font-src 'self' s.pinimg.com data: fonts.googleapis.com fonts.gstatic.com use.typekit.net; style-src 'self' blob: 'unsafe-inline' data: *.pinimg.com *.pinterest.com accounts.google.com fonts.googleapis.com; img-src blob: data: *; base-uri 'none'; connect-src 'self' blob: *.pinimg.com *.pinterest.com accounts.google.com *.facebook.com www.googleapis.com *.dropboxapi.com pinterest-media-upload.s3.amazonaws.com pinterest-media-upload.s3.us-east-1.amazonaws.com pinterest-media-upload.s3-accelerate.amazonaws.com pinterest-media-upload.s3-accelerate.us-east-1.amazonaws.com *.cedexis.com *.cedexis-radar.net *.tvpixel.com api.pinadmin.com *.live-video.net https://*.daily.co https://*.pluot.blue wss://*.wss.daily.co; form-action 'self'; frame-src 'self' *.pinimg.com *.pinterest.com *.google.com *.facebook.com www.recaptcha.net pinterest-sim-toontown.s3.amazonaws.com pinterest-sim-toontown.s3.us-east-1.amazonaws.com *.pinterdev.com content.googleapis.com *.youtube.com *.youtube-nocookie.com *.ytimg.com player.vimeo.com calendly.com vine.co bid.g.doubleclick.net *.fls.doubleclick.net servedby.flashtalking.com pinterest-uk.admo.tv pinterest-uk-web.admo.tv fbrpc://call *.linkedin.com px.ads.linkedin.com; media-src 'self' blob: data: *.pinimg.com *.live-video.net; object-src 'self'; script-src 'self' blob: 'unsafe-inline' *.pinimg.com *.pinterest.com 'report-sample' *.google.com connect.facebook.net *.google-analytics.com *.facebook.com *.googleadservices.com *.doubleclick.net *.googletagmanager.com radar.cedexis.com *.cedexis-test.com www.gstatic.com/recaptcha/ www.gstatic.cn/recaptcha/ www.recaptcha.net 'wasm-unsafe-eval'; worker-src 'self' blob: 'unsafe-inline'" http-equiv="Content-Security-Policy" id="csp"></meta>
+<script data-chunk-uuid="5a6b95c7-001a-4dc4-915a-82c03ab29d04" nonce="5388616ec99bf7ccb730a362d1d4de65">// chunk_script_5a6b95c7-001a-4dc4-915a-82c03ab29d04
+</script>
+<meta content="on" http-equiv="x-dns-prefetch-control"></meta>
+<script data-chunk-uuid="0c08895c-514e-423a-8d29-b511de6f250e" crossorigin="anonymous" defer="" fetchpriority="high" nonce="5388616ec99bf7ccb730a362d1d4de65" src="https://s.pinimg.com/webapp/runtime-f92a324b79987c17.js">// chunk_script_0c08895c-514e-423a-8d29-b511de6f250e
+</script>
+<script data-chunk-uuid="169eb246-321e-4965-a315-f994b4de6dde" crossorigin="anonymous" defer="" fetchpriority="high" nonce="5388616ec99bf7ccb730a362d1d4de65" src="https://s.pinimg.com/webapp/polyfills-cddd18e3f27e8ad6.js">// chunk_script_169eb246-321e-4965-a315-f994b4de6dde
+</script>
+<script data-chunk-uuid="133613a3-d602-4384-982e-09d1c3e83e0a" crossorigin="anonymous" defer="" fetchpriority="high" nonce="5388616ec99bf7ccb730a362d1d4de65" src="https://s.pinimg.com/webapp/9176-a64e026c485d060a.js">// chunk_script_133613a3-d602-4384-982e-09d1c3e83e0a
+</script>
+<script data-chunk-uuid="829e36ba-7dd9-4324-b6e8-03ed0ff39c55" crossorigin="anonymous" defer="" fetchpriority="high" nonce="5388616ec99bf7ccb730a362d1d4de65" src="https://s.pinimg.com/webapp/98359-59e3970cdb047dc3.js">// chunk_script_829e36ba-7dd9-4324-b6e8-03ed0ff39c55
+</script>
+<script data-chunk-uuid="8f7dff13-c5c3-49d8-8cbc-55c72bc76d83" crossorigin="anonymous" defer="" fetchpriority="high" nonce="5388616ec99bf7ccb730a362d1d4de65" src="https://s.pinimg.com/webapp/81755-3ee269d8623a376e.js">// chunk_script_8f7dff13-c5c3-49d8-8cbc-55c72bc76d83
+</script>
+<script data-chunk-uuid="f37ff85a-da30-4f82-a092-fb1fa59155e2" crossorigin="anonymous" defer="" fetchpriority="high" nonce="5388616ec99bf7ccb730a362d1d4de65" src="https://s.pinimg.com/webapp/locale-en_US-lite-js-4dc66311cec029ee.js">// chunk_script_f37ff85a-da30-4f82-a092-fb1fa59155e2
+</script>
+<script data-chunk-uuid="85154512-00f4-4134-adec-99c589fed033" crossorigin="anonymous" defer="" fetchpriority="high" nonce="5388616ec99bf7ccb730a362d1d4de65" src="https://s.pinimg.com/webapp/vendor-react-e427bb9bb368a7f8.js">// chunk_script_85154512-00f4-4134-adec-99c589fed033
+</script>
+<script data-chunk-uuid="859f0acb-11fb-4a6f-a569-e315a04fe696" crossorigin="anonymous" defer="" fetchpriority="high" nonce="5388616ec99bf7ccb730a362d1d4de65" src="https://s.pinimg.com/webapp/84404-ea7d057ead6f183e.js">// chunk_script_859f0acb-11fb-4a6f-a569-e315a04fe696
+</script>
+<script data-chunk-uuid="0be707c1-e34f-41cc-8971-213b338dab4b" crossorigin="anonymous" defer="" fetchpriority="high" nonce="5388616ec99bf7ccb730a362d1d4de65" src="https://s.pinimg.com/webapp/24797-97800fc18fddfe06.js">// chunk_script_0be707c1-e34f-41cc-8971-213b338dab4b
+</script>
+<script data-chunk-uuid="82bdb5cb-8ad1-4447-9a1a-84f014f5b021" crossorigin="anonymous" defer="" fetchpriority="high" nonce="5388616ec99bf7ccb730a362d1d4de65" src="https://s.pinimg.com/webapp/79968-1eae4d1dc1ecdb27.js">// chunk_script_82bdb5cb-8ad1-4447-9a1a-84f014f5b021
+</script>
+<script data-chunk-uuid="13461fe9-59fb-4654-acd9-86dda17ae9ca" crossorigin="anonymous" defer="" fetchpriority="high" nonce="5388616ec99bf7ccb730a362d1d4de65" src="https://s.pinimg.com/webapp/82741-14c62f1f060cfce4.js">// chunk_script_13461fe9-59fb-4654-acd9-86dda17ae9ca
+</script>
+<script data-chunk-uuid="2205d92d-25b6-4df3-a45b-2bf7c078e9eb" crossorigin="anonymous" defer="" fetchpriority="high" nonce="5388616ec99bf7ccb730a362d1d4de65" src="https://s.pinimg.com/webapp/44801-6b3a9e6e4cfa7d11.js">// chunk_script_2205d92d-25b6-4df3-a45b-2bf7c078e9eb
+</script>
+<script data-chunk-uuid="e76bbfac-5bf2-4d8a-a325-f7790eeb1dea" crossorigin="anonymous" defer="" fetchpriority="high" nonce="5388616ec99bf7ccb730a362d1d4de65" src="https://s.pinimg.com/webapp/11930-4c9343d61a1d49cc.js">// chunk_script_e76bbfac-5bf2-4d8a-a325-f7790eeb1dea
+</script>
+<script data-chunk-uuid="7049e378-9370-40c8-9083-259955dc4376" crossorigin="anonymous" defer="" fetchpriority="high" nonce="5388616ec99bf7ccb730a362d1d4de65" src="https://s.pinimg.com/webapp/44940-957e664afb7a49c5.js">// chunk_script_7049e378-9370-40c8-9083-259955dc4376
+</script>
+<script data-chunk-uuid="0dee8dfe-0913-447c-813f-b32afaf18846" crossorigin="anonymous" defer="" fetchpriority="high" nonce="5388616ec99bf7ccb730a362d1d4de65" src="https://s.pinimg.com/webapp/7336-beb88ce1ef4157e7.js">// chunk_script_0dee8dfe-0913-447c-813f-b32afaf18846
+</script>
+<script data-chunk-uuid="4b59bbd5-6048-4ce1-a326-1f303dce7d78" crossorigin="anonymous" defer="" fetchpriority="high" nonce="5388616ec99bf7ccb730a362d1d4de65" src="https://s.pinimg.com/webapp/85224-c19c42d5186b5048.js">// chunk_script_4b59bbd5-6048-4ce1-a326-1f303dce7d78
+</script>
+<script data-chunk-uuid="10b82d84-3651-445c-be5c-6ecd92d5ab27" crossorigin="anonymous" defer="" fetchpriority="high" nonce="5388616ec99bf7ccb730a362d1d4de65" src="https://s.pinimg.com/webapp/33731-c46c675f4b5754c0.js">// chunk_script_10b82d84-3651-445c-be5c-6ecd92d5ab27
+</script>
+<script data-chunk-uuid="22a949a0-9314-469b-bfb0-311b74f65217" crossorigin="anonymous" defer="" fetchpriority="high" nonce="5388616ec99bf7ccb730a362d1d4de65" src="https://s.pinimg.com/webapp/99648-bb77240a4c2666c6.js">// chunk_script_22a949a0-9314-469b-bfb0-311b74f65217
+</script>
+<script data-chunk-uuid="8a009a79-ff24-4641-9401-30969ee4ed45" crossorigin="anonymous" defer="" fetchpriority="high" nonce="5388616ec99bf7ccb730a362d1d4de65" src="https://s.pinimg.com/webapp/7582-db8bd2d4b239fccf.js">// chunk_script_8a009a79-ff24-4641-9401-30969ee4ed45
+</script>
+<script data-chunk-uuid="f0671c70-646e-48de-a90e-b122e4139585" crossorigin="anonymous" defer="" fetchpriority="high" nonce="5388616ec99bf7ccb730a362d1d4de65" src="https://s.pinimg.com/webapp/59959-1e610089342e7300.js">// chunk_script_f0671c70-646e-48de-a90e-b122e4139585
+</script>
+<script data-chunk-uuid="a91259f1-785b-47a8-be80-3712eda10c6e" crossorigin="anonymous" defer="" fetchpriority="high" nonce="5388616ec99bf7ccb730a362d1d4de65" src="https://s.pinimg.com/webapp/24793-fa069f347e2e9a75.js">// chunk_script_a91259f1-785b-47a8-be80-3712eda10c6e
+</script>
+<script data-chunk-uuid="0195c342-344a-4dd3-b5f3-54fd0defdf68" crossorigin="anonymous" defer="" fetchpriority="high" nonce="5388616ec99bf7ccb730a362d1d4de65" src="https://s.pinimg.com/webapp/www/ideas-fa6294d3d73bf81a.js">// chunk_script_0195c342-344a-4dd3-b5f3-54fd0defdf68
+</script>
+<script data-chunk-uuid="9970d881-d8dd-4897-b3da-a9ed80cc6515" crossorigin="anonymous" defer="" fetchpriority="high" nonce="5388616ec99bf7ccb730a362d1d4de65" src="https://s.pinimg.com/webapp/61013-2556e02cde326df3.js">// chunk_script_9970d881-d8dd-4897-b3da-a9ed80cc6515
+</script>
+<script data-chunk-uuid="0fbb9ed4-b316-458c-a358-aab7254fbfaa" crossorigin="anonymous" defer="" fetchpriority="high" nonce="5388616ec99bf7ccb730a362d1d4de65" src="https://s.pinimg.com/webapp/2909-bd4b91a47c2c59ce.js">// chunk_script_0fbb9ed4-b316-458c-a358-aab7254fbfaa
+</script>
+<script data-chunk-uuid="bd627c08-02c0-4a73-b5cd-93968c0b7b95" crossorigin="anonymous" defer="" fetchpriority="high" nonce="5388616ec99bf7ccb730a362d1d4de65" src="https://s.pinimg.com/webapp/63696-a0fa8d20ecc5a2e9.js">// chunk_script_bd627c08-02c0-4a73-b5cd-93968c0b7b95
+</script>
+<script data-chunk-uuid="0ea44507-ffcd-43f3-a1a5-dd362d621c1b" crossorigin="anonymous" defer="" fetchpriority="high" nonce="5388616ec99bf7ccb730a362d1d4de65" src="https://s.pinimg.com/webapp/88673-befd76cb0d5c9402.js">// chunk_script_0ea44507-ffcd-43f3-a1a5-dd362d621c1b
+</script>
+<script data-chunk-uuid="34496a37-678e-4cf3-bd02-366ba578f628" crossorigin="anonymous" defer="" fetchpriority="high" nonce="5388616ec99bf7ccb730a362d1d4de65" src="https://s.pinimg.com/webapp/87349-f3c59bb830dbcff5.js">// chunk_script_34496a37-678e-4cf3-bd02-366ba578f628
+</script>
+<script data-chunk-uuid="c432b8b7-1dca-451d-b268-8a95ddb0b74c" crossorigin="anonymous" defer="" fetchpriority="high" nonce="5388616ec99bf7ccb730a362d1d4de65" src="https://s.pinimg.com/webapp/91276-539723e0ff493e4b.js">// chunk_script_c432b8b7-1dca-451d-b268-8a95ddb0b74c
+</script>
+<script data-chunk-uuid="13cc1eb6-0a4a-4c47-a6fa-9157bb04057a" crossorigin="anonymous" defer="" fetchpriority="high" nonce="5388616ec99bf7ccb730a362d1d4de65" src="https://s.pinimg.com/webapp/73634-85789020295377f8.js">// chunk_script_13cc1eb6-0a4a-4c47-a6fa-9157bb04057a
+</script>
+<script data-chunk-uuid="1c2d5dca-16fb-4091-9201-2fc722db712a" crossorigin="anonymous" defer="" fetchpriority="high" nonce="5388616ec99bf7ccb730a362d1d4de65" src="https://s.pinimg.com/webapp/65404-b6e6af4fe1043c2d.js">// chunk_script_1c2d5dca-16fb-4091-9201-2fc722db712a
+</script>
+<script data-chunk-uuid="b2215585-37fb-457f-b7dd-53812b354838" crossorigin="anonymous" defer="" fetchpriority="high" nonce="5388616ec99bf7ccb730a362d1d4de65" src="https://s.pinimg.com/webapp/77005-2b629b51fd1006f4.js">// chunk_script_b2215585-37fb-457f-b7dd-53812b354838
+</script>
+<script data-chunk-uuid="d3fd364f-05f3-46b7-b36d-2f5ef271e179" crossorigin="anonymous" defer="" fetchpriority="high" nonce="5388616ec99bf7ccb730a362d1d4de65" src="https://s.pinimg.com/webapp/71566-ed11864aa0ae4d3b.js">// chunk_script_d3fd364f-05f3-46b7-b36d-2f5ef271e179
+</script>
+<script data-chunk-uuid="db08350f-04a9-4093-a019-f61c0883d55c" crossorigin="anonymous" defer="" fetchpriority="high" nonce="5388616ec99bf7ccb730a362d1d4de65" src="https://s.pinimg.com/webapp/2826-8e30a2239366c5fb.js">// chunk_script_db08350f-04a9-4093-a019-f61c0883d55c
+</script>
+<script data-chunk-uuid="5bcca13e-e989-44df-a1ed-3d4c25474b22" crossorigin="anonymous" defer="" fetchpriority="high" nonce="5388616ec99bf7ccb730a362d1d4de65" src="https://s.pinimg.com/webapp/70808-83d9432aaf5aa312.js">// chunk_script_5bcca13e-e989-44df-a1ed-3d4c25474b22
+</script>
+<script data-chunk-uuid="fcf994e3-ec81-4773-acfd-df95556f0e1f" crossorigin="anonymous" defer="" fetchpriority="high" nonce="5388616ec99bf7ccb730a362d1d4de65" src="https://s.pinimg.com/webapp/81936-968d4bb4e7dea3a7.js">// chunk_script_fcf994e3-ec81-4773-acfd-df95556f0e1f
+</script>
+<script data-chunk-uuid="780ca796-bcbc-4734-9c4e-cf22263934a3" crossorigin="anonymous" defer="" fetchpriority="high" nonce="5388616ec99bf7ccb730a362d1d4de65" src="https://s.pinimg.com/webapp/21876-c1dbc23c6795674d.js">// chunk_script_780ca796-bcbc-4734-9c4e-cf22263934a3
+</script>
+<script data-chunk-uuid="c38cd493-2160-49ba-ab6c-3c2796466914" crossorigin="anonymous" defer="" fetchpriority="high" nonce="5388616ec99bf7ccb730a362d1d4de65" src="https://s.pinimg.com/webapp/5201-5819760fef972095.js">// chunk_script_c38cd493-2160-49ba-ab6c-3c2796466914
+</script>
+<script data-chunk-uuid="f7038fab-5631-4975-9c0e-bd8ba25e772a" crossorigin="anonymous" defer="" fetchpriority="high" nonce="5388616ec99bf7ccb730a362d1d4de65" src="https://s.pinimg.com/webapp/www/_client-5075f467c2c8e757.js">// chunk_script_f7038fab-5631-4975-9c0e-bd8ba25e772a
+</script>
+<script data-chunk-uuid="6d676cb7-cb01-4d0d-ba84-3fa5ebe675e0" crossorigin="anonymous" defer="" fetchpriority="high" nonce="5388616ec99bf7ccb730a362d1d4de65" src="https://s.pinimg.com/webapp/66755-9d17549aa9f61876.js">// chunk_script_6d676cb7-cb01-4d0d-ba84-3fa5ebe675e0
+</script>
+<script data-chunk-uuid="d9754712-5a78-46e6-8fd3-81a0b6b3f912" crossorigin="anonymous" defer="" fetchpriority="high" nonce="5388616ec99bf7ccb730a362d1d4de65" src="https://s.pinimg.com/webapp/28372-5e897cbd5719bf02.js">// chunk_script_d9754712-5a78-46e6-8fd3-81a0b6b3f912
+</script>
+<script data-chunk-uuid="80e759b9-a938-439e-a00c-e837430506e5" crossorigin="anonymous" defer="" fetchpriority="high" nonce="5388616ec99bf7ccb730a362d1d4de65" src="https://s.pinimg.com/webapp/DefaultPinRep-8ca341349d9c915e.js">// chunk_script_80e759b9-a938-439e-a00c-e837430506e5
+</script>
+<style data-chunk-uuid="2b062a86-de1b-438f-944d-2f9ff8428aee" id="gestalt">/* chunk_style_2b062a86-de1b-438f-944d-2f9ff8428aee */
+</style>
+<link href="https://s.pinimg.com/webapp/logo_transparent_144x144-3da7a67b.png" rel="apple-touch-icon"></link>
+<link color="var(--color-red-pushpin-450)" href="https://s.pinimg.com/webapp/pinterest_favicon-70db4fa7.svg" rel="mask-icon" sizes="any"></link>
+<link href="https://s.pinimg.com/webapp/favicon_48x48-7470a30d.png" rel="icon"></link>
+<link href="https://chrome.google.com/webstore/detail/gpdjojdkbbmdfjfahjcgigfpmkopogic" rel="chrome-webstore-item"></link>
+<style data-chunk-uuid="3ef3f61a-763c-4c51-af32-2f4c34f30d9d" id="recaptcha">/* chunk_style_3ef3f61a-763c-4c51-af32-2f4c34f30d9d */
+</style>
+<link href="/opensearch.xml" rel="search" title="Pinterest" type="application/opensearchdescription+xml"></link>
+<link href="/manifest.json" rel="manifest"></link>
+<meta content="Pinterest" name="application-name"></meta>
+<meta content="#ffffff" name="msapplication-TileColor"></meta>
+<meta content="https://s.pinimg.com/webapp/logo_transparent_144x144-3da7a67b.png" name="msapplication-TileImage"></meta>
+<meta content="origin" name="referrer"></meta>
+<meta content='274266067164' property="fb:app_id"></meta>
+<meta content="Pinterest" property="og:site_name"></meta>
+<title>
+   Explore the best of Pinterest
+  </title>
+<meta content="Discover recipes, home ideas, style inspiration and other ideas to try." data-app='true' name="description" property="description"></meta>
+<meta content="Discover recipes, home ideas, style inspiration and other ideas to try." data-app='true' name="og:description" property="og:description"></meta>
+<meta content="https://s.pinimg.com/images/default_open_graph_1200.png" data-app='true' name="og:image" property="og:image"></meta>
+<meta content="Explore the best of Pinterest" data-app='true' name="og:title" property="og:title"></meta>
+<meta content="website" data-app='true' name="og:type" property="og:type"></meta>
+<meta content="https://www.pinterest.com/ideas/" data-app='true' name="og:url" property="og:url"></meta>
+
+        ```
+        

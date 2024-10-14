@@ -1,0 +1,153 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. aria-hidden-focus => `[aria-hidden="true"]` elements contain focusable descendents: Focusable descendents within an `[aria-hidden="true"]` element prevent those interactive elements from being available to users of assistive technologies like screen readers. [Learn how `aria-hidden` affects focusable elements](https://dequeuniversity.com/rules/axe/4.9/aria-hidden-focus).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        
+<meta charset="utf-8"></meta>
+<meta content="en-CA" name="locale"></meta>
+<meta content="notranslate" name="google"></meta>
+<meta content="authenticity_token" id="csrf-param-meta-tag" name="csrf-param"></meta>
+<meta content="" id="csrf-token-meta-tag" name="csrf-token"></meta>
+<meta content="" id="english-canonical-url"></meta>
+<meta content="on" name="twitter:widgets:csp"></meta>
+<meta content="yes" name="mobile-web-app-capable"></meta>
+<meta content="yes" name="apple-mobile-web-app-capable"></meta>
+<meta content="Airbnb" name="application-name"></meta>
+<meta content="Airbnb" name="apple-mobile-web-app-title"></meta>
+<meta content="#ffffff" name="theme-color"></meta>
+<meta content="#ffffff" name="msapplication-navbutton-color"></meta>
+<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"></meta>
+<meta content="/?utm_source=homescreen" name="msapplication-starturl"></meta>
+<link crossorigin="anonymous" href="https://a0.muscache.com/airbnb/static/packages/web/common/frontend/core-guest-loop/apps/core-guest-spa/client.014acaf867.css" media="all" rel="stylesheet" type="text/css"></link>
+<script crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/frontend/hyperloop-browser/metroRequire.f041c10b23.js"></script>
+<script crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/frontend/hyperloop-browser/shims_post_modules.3a508a05ae.js"></script>
+<script crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/en-CA/frontend/airmetro/browser/asyncRequire.931f2ce3c6.js"></script>
+<script crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/frontend/hyperloop-browser/coreV2.2517bd5b12.js"></script>
+<script crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/f29e.66fc6bd74f.js"></script>
+<script crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/frontend/core-guest-loop/routeHandler.3fb3d8a56e.js"></script>
+<script crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/en-CA/3af3.8f718fc83c.js"></script>
+<script crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/31c5.cd5006b406.js"></script>
+<script crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/5807.fcdb56d3cc.js"></script>
+<script crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/a8e1.67d243b5f8.js"></script>
+<script crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/frontend/moment-more-formats/src/locale/en-ca.cbdc6c7fc4.js"></script>
+<script crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/frontend/core-guest-loop/apps/core-guest-spa/initializer.189b558447.js"></script>
+<script crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/frontend/guest-header/query/HeaderQuery.prepare.ed6fcb10c6.js"></script>
+<script crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/9024.eee6159c60.js"></script>
+<script crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/75d4.0ca0aa9a05.js"></script>
+<script crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/frontend/niobe/minimalist/index.8735093809.js"></script>
+<script crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/en-CA/7feb.74fbcbd7ad.js"></script>
+<script crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/en-CA/9ff5.22a5f9f54b.js"></script>
+<script crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/en-CA/ca89.cb3f3f0eb3.js"></script>
+<script crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/ccf1.64d4608ad1.js"></script>
+<script crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/ab12.92369a5132.js"></script>
+<script crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/frontend/stays-search/routes/StaysSearchRoute/StaysSearchRoute.73ec66b7b3.js"></script>
+<script crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/frontend/stays-search/routes/StaysSearchRoute/StaysSearchRoute.prepare.52f11a7018.js"></script>
+<script crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/f4c9.fac2c7f552.js"></script>
+<script crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/1742.dec90c42cb.js"></script>
+<script crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/2111.73041a4254.js"></script>
+<script crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/92d4.f248e80107.js"></script>
+<script crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/85ed.0673d5cab7.js"></script>
+<script crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/en-CA/2953.6f915e37cf.js"></script>
+<script crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/676e.59c15edae4.js"></script>
+<script crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/22f4.4d35ad6da8.js"></script>
+<script crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/322b.cb5041703b.js"></script>
+<script crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/common/08da.0499dd44bb.js"></script>
+<script crossorigin="anonymous" defer="" src="https://a0.muscache.com/airbnb/static/packages/web/en-CA/frontend/core-guest-loop/apps/core-guest-spa/client.470a5d2665.js"></script>
+<script data-chunk-uuid="0d084998-cac1-449e-86e1-7ae50dfc0987">// chunk_script_0d084998-cac1-449e-86e1-7ae50dfc0987
+</script>
+<script data-chunk-uuid="1932bc29-cd9e-4e03-82c2-445c0ea958e8">// chunk_script_1932bc29-cd9e-4e03-82c2-445c0ea958e8
+</script>
+<script data-chunk-uuid="5270dc78-4427-4839-b11e-6973c91a1288">// chunk_script_5270dc78-4427-4839-b11e-6973c91a1288
+</script>
+<script data-chunk-uuid="f58f196a-b158-4fa4-96fe-d4a9c54b5954">// chunk_script_f58f196a-b158-4fa4-96fe-d4a9c54b5954
+</script>
+<script data-chunk-uuid="48fd7836-04ac-4b6f-978b-ae514efa40b1">// chunk_script_48fd7836-04ac-4b6f-978b-ae514efa40b1
+</script>
+<link href="/opensearch.xml" rel="search" title="Airbnb" type="application/opensearchdescription+xml"></link>
+<link href="https://a0.muscache.com/airbnb/static/icons/apple-touch-icon-76x76-3b313d93b1b5823293524b9764352ac9.png" rel="apple-touch-icon"></link>
+<link href="https://a0.muscache.com/airbnb/static/icons/apple-touch-icon-76x76-3b313d93b1b5823293524b9764352ac9.png" rel="apple-touch-icon" sizes="76x76"></link>
+<link href="https://a0.muscache.com/airbnb/static/icons/apple-touch-icon-120x120-52b1adb4fe3a8f825fc4b143de12ea4b.png" rel="apple-touch-icon" sizes="120x120"></link>
+<link href="https://a0.muscache.com/airbnb/static/icons/apple-touch-icon-152x152-7b7c6444b63d8b6ebad9dae7169e5ed6.png" rel="apple-touch-icon" sizes="152x152"></link>
+<link href="https://a0.muscache.com/airbnb/static/icons/apple-touch-icon-180x180-bcbe0e3960cd084eb8eaf1353cf3c730.png" rel="apple-touch-icon" sizes="180x180"></link>
+<link href="https://a0.muscache.com/airbnb/static/icons/android-icon-192x192-c0465f9f0380893768972a31a614b670.png" rel="icon" sizes="192x192"></link>
+<link href="https://a0.muscache.com/airbnb/static/logotype_favicon-21cc8e6c6a2cca43f061d2dcabdf6e58.ico" rel="shortcut icon" sizes="76x76" type="image/x-icon"></link>
+<link color="#FF5A5F" href="https://a0.muscache.com/airbnb/static/icons/airbnb-0611901eac33ccfa5e93d793a2e21f09.svg" rel="mask-icon"></link>
+<style data-chunk-uuid="958b7033-34aa-4e41-a0d3-dc6a3d8e8142" data-css-var-overrides='true' id="cssVarOverrides" type="text/css">/* chunk_style_958b7033-34aa-4e41-a0d3-dc6a3d8e8142 */
+</style>
+<link crossorigin="anonymous" href="https://a0.muscache.com/airbnb/static/packages/dls/dls-lite_cereal-47d27fa833e062fe3413637eb751001f.css" media="all" rel="stylesheet" type="text/css"></link>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"></meta>
+<style data-chunk-uuid="877ccdc8-24a7-4370-906d-5dd2f3231684" data-aphrodite='true' id="aphrodite" type="text/css">/* chunk_style_877ccdc8-24a7-4370-906d-5dd2f3231684 */
+</style>
+<style data-chunk-uuid="e96863bf-5ee7-4810-84bc-20a2e73efbd8" data-linaria-css-reset='true' id="linariaCssReset" type="text/css">/* chunk_style_e96863bf-5ee7-4810-84bc-20a2e73efbd8 */
+</style>
+<meta content='138566025676' property="fb:app_id"></meta>
+<meta content="Airbnb" property="og:site_name"></meta>
+<meta content="en_US" property="og:locale"></meta>
+<meta content="https://www.airbnb.ca/s/Italy/homes" property="og:url"></meta>
+<meta content="Italy Sublets, Short Term Rentals & Rooms for Rent - Airbnb Italy" property="og:title"></meta>
+<meta content="Monthly sublets in Italy from $687 CAD/month. Find unique places to stay with local hosts in 191 countries. Belong anywhere with Airbnb." property="og:description"></meta>
+<meta content="website" property="og:type"></meta>
+<meta content="https://a0.muscache.com/im/pictures/fe7217ff-0b24-438d-880d-b94722c75bf5.jpg" property="og:image"></meta>
+<link href="airbnb://d/search" rel="alternate"></link>
+<meta content="noindex, nofollow" name="robots"></meta>
+<meta content="Aug. 12, 2024 - Monthly sublets in Italy from $687 CAD/month. Find unique places to stay with local hosts in 191 countries. Belong anywhere with Airbnb." name="description"></meta>
+<title>
+      Italy Sublets, Short Term Rentals & Rooms for Rent - Airbnb Italy
+    </title>
+<link href="/manifest.json" rel="manifest"></link>
+<meta content="summary_large_image" name="twitter:card"></meta>
+<meta content="Italy Sublets, Short Term Rentals & Rooms for Rent - Airbnb Italy" name="twitter:title"></meta>
+<meta content="@airbnb" name="twitter:site"></meta>
+<meta content="Airbnb" name="twitter:app:name:iphone"></meta>
+<meta content="Airbnb" name="twitter:app:name:ipad"></meta>
+<meta content="Airbnb" name="twitter:app:name:googleplay"></meta>
+<meta content='401626263' name="twitter:app:id:iphone"></meta>
+<meta content='401626263' name="twitter:app:id:ipad"></meta>
+<meta content="com.airbnb.android" name="twitter:app:id:googleplay"></meta>
+<meta content="https://www.airbnb.ca/s/Italy/homes" name="twitter:url"></meta>
+<meta content="airbnb://d/search" name="twitter:app:url:iphone"></meta>
+<meta content="airbnb://d/search" name="twitter:app:url:ipad"></meta>
+<meta content="airbnb://d/search" name="twitter:app:url:googleplay"></meta>
+<meta content="Monthly sublets in Italy from $687 CAD/month. Find unique places to stay with local hosts in 191 countries. Belong anywhere with Airbnb." name="twitter:description"></meta>
+<script data-chunk-uuid="ffa94c83-e3c8-4f41-b82a-c42770c6010a" data-apollo-state='true' id="data-apollo-state" type="application/json">// chunk_script_ffa94c83-e3c8-4f41-b82a-c42770c6010a
+</script>
+<script data-chunk-uuid="3791687d-4dfc-4ff0-8c30-1da71c2c6880" data-flagger_cdn_experiments='true' id="data-flagger_cdn_experiments" type="application/json">// chunk_script_3791687d-4dfc-4ff0-8c30-1da71c2c6880
+</script>
+<script data-chunk-uuid="e3110f2b-4882-4677-ba08-690cd47bc446" id="aphrodite-classes" type="application/json">// chunk_script_e3110f2b-4882-4677-ba08-690cd47bc446
+</script>
+
+        ```
+        

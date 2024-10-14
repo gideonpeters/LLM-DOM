@@ -1,0 +1,782 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. lcp-lazy-loaded => Largest Contentful Paint image was lazily loaded: Above-the-fold images that are lazily loaded render later in the page lifecycle, which can delay the largest contentful paint. [Learn more about optimal lazy loading](https://web.dev/articles/lcp-lazy-loading).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        <faceplate-text-input autocomplete="off" class="text-center" helper-text-placeholder=" " name="appOtp" type="tel">
+<span slot="label">
+                 Verification code
+                </span>
+</faceplate-text-input>
+</fieldset>
+<div class="mt-md text-14">
+               Lost access to your authenticator?
+               <a class="otp-type text-[color:var(--color-a-default)] no-underline no-visited" href="#">
+                Use a backup code
+               </a>
+</div>
+<span id="otp-app-recaptcha-checkbox-container">
+</span>
+</div>
+<div class="w-100" slot="primaryButton">
+<faceplate-tracker action="click" data-faceplate-tracking-context='{"popup": {"button_text": "check_otp_app"}}' noun="login" source="onboarding">
+<button class="check-app-code w-100 button-large px-[var(--rem14)] button-brand items-center justify-center button inline-flex" rpl="" type="button">
+<span class="flex items-center justify-center">
+<span class="flex items-center gap-xs">
+                  Check code
+                 </span>
+</span>
+</button>
+</faceplate-tracker>
+</div>
+</auth-flow-modal>
+</faceplate-form>
+<faceplate-form action="/svc/shreddit/account/login/otp" id="login-backup-otp" method="POST" slot="login_otp_backup" validation-trigger="change">
+<auth-flow-modal class="shadow-sm" pagename="login_otp_backup">
+<faceplate-tracker action="back" noun="login_otp_backup" slot="backButton" source="onboarding">
+<button aria-label="Back" class="button-medium px-[var(--rem8)] button-plain icon items-center justify-center button inline-flex" rpl="" type="button">
+<span class="flex items-center justify-center">
+<span class="flex">
+<svg fill="currentColor" height='20' icon-name="back-outline" rpl="" viewbox="0 0 20 20" width='20' xmlns="http://www.w3.org/2000/svg">
+<path d="M19 9.375H2.51l7.932-7.933-.884-.884-9 9a.625.625 0 0 0 0 .884l9 9 .884-.884-7.933-7.933H19v-1.25Z">
+</path>
+</svg>
+</span>
+</span>
+<faceplate-screen-reader-content>
+                back
+               </faceplate-screen-reader-content>
+</button>
+</faceplate-tracker>
+<div class="font-sans bg-ui-modalbackground pb-[env(safe-area-inset-bottom)]">
+<h1 class="text-24 mt-0 mb-xs font-bold text-neutral-content-strong">
+               Enter a 6-digit backup code
+              </h1>
+<p class="text-14 my-xs">
+               You’ve set up two-factor authentication for this account.
+              </p>
+<fieldset class="relative mt-0 mb-0 ml-0 mr-0 p-0 border-0 flex flex-col flex-grow">
+<faceplate-text-input autocomplete="off" class="text-center" helper-text-placeholder=" " name="backupOtp">
+<span slot="label">
+                 Backup code
+                </span>
+</faceplate-text-input>
+</fieldset>
+<div class="mt-md text-14">
+               Don’t have access to your backup code?
+               <a class="otp-type text-[color:var(--color-a-default)] no-underline no-visited" href="#">
+                Use a code from an authenticator app
+               </a>
+</div>
+<span id="otp-backup-recaptcha-checkbox-container">
+</span>
+</div>
+<div class="w-100" slot="primaryButton">
+<faceplate-tracker action="click" data-faceplate-tracking-context='{"popup": {"button_text": "check_otp_backup"}}' noun="login" source="onboarding">
+<button class="check-backup-code w-100 button-large px-[var(--rem14)] button-brand items-center justify-center button inline-flex" rpl="" type="button">
+<span class="flex items-center justify-center">
+<span class="flex items-center gap-xs">
+                  Check code
+                 </span>
+</span>
+</button>
+</faceplate-tracker>
+</div>
+</auth-flow-modal>
+</faceplate-form>
+</faceplate-tabpanel>
+</auth-flow-login>
+</shreddit-async-loader>
+</template>
+<template slot="register-email-only">
+<shreddit-async-loader bundlename="auth_flow_register">
+<auth-flow-register device-type="desktop">
+<faceplate-form action="/svc/shreddit/account/register" id="register" validation-trigger="change">
+<faceplate-tabpanel pageindex='1' pagenames="register_email,register_username_and_password">
+<auth-flow-modal class="shadow-sm" pagename="register_email" slot="register_email">
+<faceplate-tracker action="dismiss" noun="register_email" slot="closeButton" source="onboarding">
+<button aria-label="Close" class="button-small px-[var(--rem6)] button-secondary icon items-center justify-center button inline-flex" rpl="" type="button">
+<span class="flex items-center justify-center">
+<span class="flex">
+<svg fill="currentColor" height='16' icon-name="close-outline" rpl="" viewbox="0 0 20 20" width='16' xmlns="http://www.w3.org/2000/svg">
+<path d="m18.442 2.442-.884-.884L10 9.116 2.442 1.558l-.884.884L9.116 10l-7.558 7.558.884.884L10 10.884l7.558 7.558.884-.884L10.884 10l7.558-7.558Z">
+</path>
+</svg>
+</span>
+</span>
+<faceplate-screen-reader-content>
+                close
+               </faceplate-screen-reader-content>
+</button>
+</faceplate-tracker>
+<div class="font-sans bg-ui-modalbackground pb-[env(safe-area-inset-bottom)]">
+<h1 class="text-24 mt-0 mb-xs font-bold text-neutral-content-strong">
+               Sign Up
+              </h1>
+<p class="text-14 my-xs">
+               By continuing, you agree to our
+               <a class="text-[color:var(--color-a-default)] no-underline" href="https://www.redditinc.com/policies/user-agreement" target="_blank">
+                User Agreement
+               </a>
+               and acknowledge that you understand the
+               <a class="text-[color:var(--color-a-default)] no-underline" href="https://www.redditinc.com/policies/privacy-policy" target="_blank">
+                Privacy Policy
+               </a>
+               .
+              </p>
+<label class="block mt-md text-14">
+<input name="emailPermission" type="checkbox"></input>
+               I agree to get emails about cool stuff on Reddit
+              </label>
+<div class="min-h-[100px] mt-md">
+<fieldset class="relative mt-0 mb-0 ml-0 mr-0 p-0 border-0 flex flex-col flex-grow">
+<auth-text-input autocomplete="email" helper-text-placeholder=" " id="register-email" name="email" required="" type="email">
+<span slot="label">
+                  Email
+                 </span>
+<slot name="register-email" slot="register-email">
+</slot>
+</auth-text-input>
+</fieldset>
+</div>
+<div class="text-14">
+               Already a redditor?
+               <auth-flow-link has-regular-font="" hide-underline="" large-text="" step="login">
+                Log In
+               </auth-flow-link>
+</div>
+<textarea class="hidden" name="gRecaptchaResponse"></textarea>
+</div>
+<div class="w-100" slot="primaryButton">
+<faceplate-tracker action="click" data-faceplate-tracking-context='{"popup": {"button_text": "continue"}}' noun="register" source="onboarding">
+<button class="continue w-100 button-large px-[var(--rem14)] button-brand items-center justify-center button inline-flex" disabled="" rpl="" type="button">
+<span class="flex items-center justify-center">
+<span class="flex items-center gap-xs">
+                  Continue
+                 </span>
+</span>
+</button>
+</faceplate-tracker>
+</div>
+</auth-flow-modal>
+<auth-flow-modal class="shadow-sm" pagename="register_username_and_password" slot="register_username_and_password">
+<faceplate-tracker action="back" noun="register_username_and_password" slot="backButton" source="onboarding">
+<button aria-label="Back" class="button-medium px-[var(--rem8)] button-plain icon items-center justify-center button inline-flex" rpl="" type="button">
+<span class="flex items-center justify-center">
+<span class="flex">
+<svg fill="currentColor" height='20' icon-name="back-outline" rpl="" viewbox="0 0 20 20" width='20' xmlns="http://www.w3.org/2000/svg">
+<path d="M19 9.375H2.51l7.932-7.933-.884-.884-9 9a.625.625 0 0 0 0 .884l9 9 .884-.884-7.933-7.933H19v-1.25Z">
+</path>
+</svg>
+</span>
+</span>
+<faceplate-screen-reader-content>
+                back
+               </faceplate-screen-reader-content>
+</button>
+</faceplate-tracker>
+<div class="font-sans bg-ui-modalbackground pb-[env(safe-area-inset-bottom)]">
+<h1 class="text-24 mt-0 mb-xs font-bold text-neutral-content-strong">
+               Create your username and password
+              </h1>
+<p class="text-14 my-xs">
+               Reddit is anonymous, so your username is what you’ll go by here. Choose wisely—because once you get a name, you can’t change it.
+              </p>
+<div class="mt-lg mb-xs">
+<fieldset class="relative mt-0 mb-0 ml-0 mr-0 p-0 border-0 flex flex-col flex-grow">
+<auth-text-input autocomplete="username" helper-text-placeholder=" " id="register-username" maxlength='20' minlength='3' name="username" type="text">
+<span slot="label">
+                  Username
+                 </span>
+<span slot="trailingIconButton">
+<button class="suggest-username button-large px-[var(--rem12)] button-plain icon items-center justify-center button inline-flex" rpl="" type="button">
+<span class="flex items-center justify-center">
+<span class="flex">
+<svg fill="currentColor" height='20' icon-name="rotate-fill" rpl="" viewbox="0 0 20 20" width='20' xmlns="http://www.w3.org/2000/svg">
+<path d="M14.2 15.376a1 1 0 0 1 0 1.25l-2.4 2.999a1 1 0 0 1-1.112.318 1 1 0 0 1-.673-.943v-2H7.8A5.8 5.8 0 0 1 2 11.206V9.001h2v2.205a3.8 3.8 0 0 0 3.8 3.795h2.22v-2a1 1 0 0 1 1.781-.625l2.399 3ZM12.205 3.002h-2.22v-2A1 1 0 0 0 8.2.38l-2.4 3a1 1 0 0 0 0 1.25l2.4 3a1 1 0 0 0 1.116.315 1 1 0 0 0 .669-.943v-2h2.22A3.8 3.8 0 0 1 16 8.802v2.2h2v-2.2a5.8 5.8 0 0 0-5.795-5.8Z">
+</path>
+</svg>
+</span>
+</span>
+</button>
+</span>
+<slot name="register-username" slot="register-username">
+</slot>
+</auth-text-input>
+</fieldset>
+</div>
+<fieldset class="relative mt-0 mb-0 ml-0 mr-0 p-0 border-0 flex flex-col flex-grow">
+<auth-text-input autocomplete="new-password" class="mb-md" helper-text-placeholder=" " id="register-password" minlength='8' name="password" type="password">
+<span slot="label">
+                 Password
+                </span>
+<slot name="register-password" slot="register-password">
+</slot>
+</auth-text-input>
+</fieldset>
+<slot name="recaptcha">
+</slot>
+</div>
+<div class="w-100" slot="primaryButton">
+<faceplate-tracker action="click" data-faceplate-tracking-context='{"popup": {"button_text": "create"}}' noun="register" source="onboarding">
+<button class="create w-100 button-large px-[var(--rem14)] button-brand items-center justify-center button inline-flex" disabled="" rpl="" type="submit">
+<span class="flex items-center justify-center">
+<span class="flex items-center gap-xs">
+                  Continue
+                 </span>
+</span>
+</button>
+</faceplate-tracker>
+</div>
+</auth-flow-modal>
+</faceplate-tabpanel>
+</faceplate-form>
+</auth-flow-register>
+</shreddit-async-loader>
+</template>
+<template slot="register">
+<shreddit-async-loader bundlename="auth_flow_register">
+<auth-flow-register device-type="desktop">
+<faceplate-form action="/svc/shreddit/account/register" id="register" validation-trigger="change">
+<faceplate-tabpanel pageindex='1' pagenames="register_email,register_username_and_password">
+<auth-flow-modal class="shadow-sm" pagename="register_email" slot="register_email">
+<faceplate-tracker action="dismiss" noun="register_email" slot="closeButton" source="onboarding">
+<button aria-label="Close" class="button-small px-[var(--rem6)] button-secondary icon items-center justify-center button inline-flex" rpl="" type="button">
+<span class="flex items-center justify-center">
+<span class="flex">
+<svg fill="currentColor" height='16' icon-name="close-outline" rpl="" viewbox="0 0 20 20" width='16' xmlns="http://www.w3.org/2000/svg">
+<path d="m18.442 2.442-.884-.884L10 9.116 2.442 1.558l-.884.884L9.116 10l-7.558 7.558.884.884L10 10.884l7.558 7.558.884-.884L10.884 10l7.558-7.558Z">
+</path>
+</svg>
+</span>
+</span>
+<faceplate-screen-reader-content>
+                close
+               </faceplate-screen-reader-content>
+</button>
+</faceplate-tracker>
+<div class="font-sans bg-ui-modalbackground pb-[env(safe-area-inset-bottom)]">
+<h1 class="text-24 mt-0 mb-xs font-bold text-neutral-content-strong">
+               Sign Up
+              </h1>
+<p class="text-14 my-xs">
+               By continuing, you agree to our
+               <a class="text-[color:var(--color-a-default)] no-underline" href="https://www.redditinc.com/policies/user-agreement" target="_blank">
+                User Agreement
+               </a>
+               and acknowledge that you understand the
+               <a class="text-[color:var(--color-a-default)] no-underline" href="https://www.redditinc.com/policies/privacy-policy" target="_blank">
+                Privacy Policy
+               </a>
+               .
+              </p>
+<label class="block mt-md text-14">
+<input name="emailPermission" type="checkbox"></input>
+               I agree to get emails about cool stuff on Reddit
+              </label>
+<div class="mt-md text-center w-100 box-border">
+<auth-flow-link class="mb-xs block" full-width="" has-regular-font="" hide-underline="" step="phone_auth">
+<faceplate-tracker action="click" class="visible" data-faceplate-tracking-context='{"action_info": {"type": "phone_auth"}}' noun="signup" source="onboarding">
+<div class="bg-white border-[#dadce0] rounded-[20px] border-sm border-solid px-sm h-[40px] text-center">
+<div class="text-[#131313] font-sans flex flex-nowrap flex-row h-100 items-center justify-between">
+<svg fill="currentColor" height='20' icon-name="phone-outline" rpl="" viewbox="0 0 20 20" width='20' xmlns="http://www.w3.org/2000/svg">
+<path d="M15.368 0H4.625A1.627 1.627 0 0 0 3 1.625v16.743A1.634 1.634 0 0 0 4.632 20h10.736A1.633 1.633 0 0 0 17 18.368V1.632A1.634 1.634 0 0 0 15.368 0ZM4.625 1.25h10.743a.382.382 0 0 1 .382.382V15.75H4.25V1.625a.375.375 0 0 1 .375-.375Zm10.743 17.5H4.632a.382.382 0 0 1-.382-.382V17h11.5v1.368a.382.382 0 0 1-.382.382Zm-3.413-14.5H8V3h3.955v1.25Z">
+</path>
+</svg>
+<span class="flex-grow text-14 overflow-hidden overflow-ellipsis align-top">
+                    Continue with phone number
+                   </span>
+</div>
+</div>
+</faceplate-tracker>
+</auth-flow-link>
+<auth-flow-sso-buttons auth-flow="register" captcha-action="login_with_external_identity" captcha-method="execute" locale="en-US" render-string="6LcZL1spAAAAAIzQl_DXGakd-J2uwjnfZas9G-Rj" site-key="6LcZL1spAAAAAIzQl_DXGakd-J2uwjnfZas9G-Rj">
+</auth-flow-sso-buttons>
+</div>
+<div class="flex items-center my-md">
+<hr class="h-px grow bg-neutral-content-disabled border-none m-0"></hr>
+<span class="text-12 text-neutral-content-weak px-md">
+                OR
+               </span>
+<hr class="h-px grow bg-neutral-content-disabled border-none m-0"></hr>
+</div>
+<div class="min-h-[100px]">
+<fieldset class="relative mt-0 mb-0 ml-0 mr-0 p-0 border-0 flex flex-col flex-grow">
+<auth-text-input autocomplete="email" helper-text-placeholder=" " id="register-email" name="email" required="" type="email">
+<span slot="label">
+                  Email
+                 </span>
+<slot name="register-email" slot="register-email">
+</slot>
+</auth-text-input>
+</fieldset>
+</div>
+<div class="text-14">
+               Already a redditor?
+               <auth-flow-link has-regular-font="" hide-underline="" large-text="" step="login">
+                Log In
+               </auth-flow-link>
+</div>
+<textarea class="hidden" name="gRecaptchaResponse"></textarea>
+</div>
+<div class="w-100" slot="primaryButton">
+<faceplate-tracker action="click" data-faceplate-tracking-context='{"popup": {"button_text": "continue"}}' noun="register" source="onboarding">
+<button class="continue w-100 button-large px-[var(--rem14)] button-brand items-center justify-center button inline-flex" disabled="" rpl="" type="button">
+<span class="flex items-center justify-center">
+<span class="flex items-center gap-xs">
+                  Continue
+                 </span>
+</span>
+</button>
+</faceplate-tracker>
+</div>
+</auth-flow-modal>
+<auth-flow-modal class="shadow-sm" pagename="register_username_and_password" slot="register_username_and_password">
+<faceplate-tracker action="back" noun="register_username_and_password" slot="backButton" source="onboarding">
+<button aria-label="Back" class="button-medium px-[var(--rem8)] button-plain icon items-center justify-center button inline-flex" rpl="" type="button">
+<span class="flex items-center justify-center">
+<span class="flex">
+<svg fill="currentColor" height='20' icon-name="back-outline" rpl="" viewbox="0 0 20 20" width='20' xmlns="http://www.w3.org/2000/svg">
+<path d="M19 9.375H2.51l7.932-7.933-.884-.884-9 9a.625.625 0 0 0 0 .884l9 9 .884-.884-7.933-7.933H19v-1.25Z">
+</path>
+</svg>
+</span>
+</span>
+<faceplate-screen-reader-content>
+                back
+               </faceplate-screen-reader-content>
+</button>
+</faceplate-tracker>
+<div class="font-sans bg-ui-modalbackground pb-[env(safe-area-inset-bottom)]">
+<h1 class="text-24 mt-0 mb-xs font-bold text-neutral-content-strong">
+               Create your username and password
+              </h1>
+<p class="text-14 my-xs">
+               Reddit is anonymous, so your username is what you’ll go by here. Choose wisely—because once you get a name, you can’t change it.
+              </p>
+<div class="mt-lg mb-xs">
+<fieldset class="relative mt-0 mb-0 ml-0 mr-0 p-0 border-0 flex flex-col flex-grow">
+<auth-text-input autocomplete="username" helper-text-placeholder=" " id="register-username" maxlength='20' minlength='3' name="username" type="text">
+<span slot="label">
+                  Username
+                 </span>
+<span slot="trailingIconButton">
+<button class="suggest-username button-large px-[var(--rem12)] button-plain icon items-center justify-center button inline-flex" rpl="" type="button">
+<span class="flex items-center justify-center">
+<span class="flex">
+<svg fill="currentColor" height='20' icon-name="rotate-fill" rpl="" viewbox="0 0 20 20" width='20' xmlns="http://www.w3.org/2000/svg">
+<path d="M14.2 15.376a1 1 0 0 1 0 1.25l-2.4 2.999a1 1 0 0 1-1.112.318 1 1 0 0 1-.673-.943v-2H7.8A5.8 5.8 0 0 1 2 11.206V9.001h2v2.205a3.8 3.8 0 0 0 3.8 3.795h2.22v-2a1 1 0 0 1 1.781-.625l2.399 3ZM12.205 3.002h-2.22v-2A1 1 0 0 0 8.2.38l-2.4 3a1 1 0 0 0 0 1.25l2.4 3a1 1 0 0 0 1.116.315 1 1 0 0 0 .669-.943v-2h2.22A3.8 3.8 0 0 1 16 8.802v2.2h2v-2.2a5.8 5.8 0 0 0-5.795-5.8Z">
+</path>
+</svg>
+</span>
+</span>
+</button>
+</span>
+<slot name="register-username" slot="register-username">
+</slot>
+</auth-text-input>
+</fieldset>
+</div>
+<fieldset class="relative mt-0 mb-0 ml-0 mr-0 p-0 border-0 flex flex-col flex-grow">
+<auth-text-input autocomplete="new-password" class="mb-md" helper-text-placeholder=" " id="register-password" minlength='8' name="password" type="password">
+<span slot="label">
+                 Password
+                </span>
+<slot name="register-password" slot="register-password">
+</slot>
+</auth-text-input>
+</fieldset>
+<slot name="recaptcha">
+</slot>
+</div>
+<div class="w-100" slot="primaryButton">
+<faceplate-tracker action="click" data-faceplate-tracking-context='{"popup": {"button_text": "create"}}' noun="register" source="onboarding">
+<button class="create w-100 button-large px-[var(--rem14)] button-brand items-center justify-center button inline-flex" disabled="" rpl="" type="submit">
+<span class="flex items-center justify-center">
+<span class="flex items-center gap-xs">
+                  Continue
+                 </span>
+</span>
+</button>
+</faceplate-tracker>
+</div>
+</auth-flow-modal>
+</faceplate-tabpanel>
+</faceplate-form>
+</auth-flow-register>
+</shreddit-async-loader>
+</template>
+<template slot="password">
+<shreddit-async-loader bundlename="auth_flow_password_recovery">
+<auth-flow-password-recovery>
+<faceplate-form action="/svc/shreddit/account/password_reset_initialize" enctype="application/json" method="POST">
+<faceplate-tabpanel pagenames="reset_password,check_inbox">
+<auth-flow-modal class="shadow-sm" pagename="reset_password" slot="reset_password">
+<faceplate-tracker action="click" noun="dismiss" slot="closeButton" source="reset_password">
+<button aria-label="Close" class="button-small px-[var(--rem6)] button-secondary icon items-center justify-center button inline-flex" rpl="" type="button">
+<span class="flex items-center justify-center">
+<span class="flex">
+<svg fill="currentColor" height='16' icon-name="close-outline" rpl="" viewbox="0 0 20 20" width='16' xmlns="http://www.w3.org/2000/svg">
+<path d="m18.442 2.442-.884-.884L10 9.116 2.442 1.558l-.884.884L9.116 10l-7.558 7.558.884.884L10 10.884l7.558 7.558.884-.884L10.884 10l7.558-7.558Z">
+</path>
+</svg>
+</span>
+</span>
+<faceplate-screen-reader-content>
+                close
+               </faceplate-screen-reader-content>
+</button>
+</faceplate-tracker>
+<faceplate-tracker action="click" noun="back" slot="backButton" source="reset_password">
+<button aria-label="Back" class="button-medium px-[var(--rem8)] button-plain icon items-center justify-center button inline-flex" rpl="" type="button">
+<span class="flex items-center justify-center">
+<span class="flex">
+<svg fill="currentColor" height='20' icon-name="back-outline" rpl="" viewbox="0 0 20 20" width='20' xmlns="http://www.w3.org/2000/svg">
+<path d="M19 9.375H2.51l7.932-7.933-.884-.884-9 9a.625.625 0 0 0 0 .884l9 9 .884-.884-7.933-7.933H19v-1.25Z">
+</path>
+</svg>
+</span>
+</span>
+<faceplate-screen-reader-content>
+                back
+               </faceplate-screen-reader-content>
+</button>
+</faceplate-tracker>
+<div class="font-sans bg-ui-modalbackground pb-[env(safe-area-inset-bottom)]">
+<h1 class="text-24 mt-0 mb-xs font-bold text-neutral-content-strong">
+               Reset your password
+              </h1>
+<p class="text-14 my-xs">
+               Enter your email address or username and we’ll send you a link to reset your password
+              </p>
+<div class="mt-lg">
+<fieldset class="relative mt-0 mb-0 ml-0 mr-0 p-0 border-0 flex flex-col flex-grow">
+<faceplate-text-input autocomplete="username" helper-text-placeholder=" " id="auth-password-recovery-input" name="identifier" required="" type="text">
+<span slot="label">
+                  Email or username
+                 </span>
+</faceplate-text-input>
+</fieldset>
+<p class="text-14 mt-sm">
+<faceplate-tracker action="click" noun="help" source="reset_password">
+<a class="no-underline text-primary" href="https://reddithelp.com/hc/sections/360008917491-Account-Security" target="_blank">
+                  Need help?
+                 </a>
+</faceplate-tracker>
+</p>
+</div>
+</div>
+<div class="w-100" slot="primaryButton">
+<faceplate-tracker action="click" data-faceplate-tracking-context='{"popup": {"button_text": "reset password"}}' noun="request_password_reset_email" source="reset_password">
+<button class="w-100 button-large px-[var(--rem14)] button-brand items-center justify-center button inline-flex" disabled="" id="auth-password-recovery-primary-cta" rpl="" type="submit">
+<span class="flex items-center justify-center">
+<span class="flex items-center gap-xs">
+                  Reset password
+                 </span>
+</span>
+</button>
+</faceplate-tracker>
+</div>
+</auth-flow-modal>
+<auth-flow-modal class="shadow-sm" pagename="check_inbox" slot="check_inbox">
+<faceplate-tracker action="click" noun="dismiss" slot="closeButton" source="check_inbox">
+<button aria-label="Close" class="button-small px-[var(--rem6)] button-secondary icon items-center justify-center button inline-flex" rpl="" type="button">
+<span class="flex items-center justify-center">
+<span class="flex">
+<svg fill="currentColor" height='16' icon-name="close-outline" rpl="" viewbox="0 0 20 20" width='16' xmlns="http://www.w3.org/2000/svg">
+<path d="m18.442 2.442-.884-.884L10 9.116 2.442 1.558l-.884.884L9.116 10l-7.558 7.558.884.884L10 10.884l7.558 7.558.884-.884L10.884 10l7.558-7.558Z">
+</path>
+</svg>
+</span>
+</span>
+<faceplate-screen-reader-content>
+                close
+               </faceplate-screen-reader-content>
+</button>
+</faceplate-tracker>
+<faceplate-tracker action="click" noun="back" slot="backButton" source="check_inbox">
+<button aria-label="Back" class="button-medium px-[var(--rem8)] button-plain icon items-center justify-center button inline-flex" rpl="" type="button">
+<span class="flex items-center justify-center">
+<span class="flex">
+<svg fill="currentColor" height='20' icon-name="back-outline" rpl="" viewbox="0 0 20 20" width='20' xmlns="http://www.w3.org/2000/svg">
+<path d="M19 9.375H2.51l7.932-7.933-.884-.884-9 9a.625.625 0 0 0 0 .884l9 9 .884-.884-7.933-7.933H19v-1.25Z">
+</path>
+</svg>
+</span>
+</span>
+<faceplate-screen-reader-content>
+                back
+               </faceplate-screen-reader-content>
+</button>
+</faceplate-tracker>
+<div class="font-sans bg-ui-modalbackground pb-[env(safe-area-inset-bottom)]">
+<h1 class="text-24 mt-0 mb-xs font-bold text-neutral-content-strong">
+               Check your inbox
+              </h1>
+<p class="text-14 my-xs">
+               An email with a link to reset your password was sent to the email address associated with your account
+              </p>
+<div class="mt-2xl flex justify-center lg:justify-start">
+<faceplate-img class="w-[120px]" src="https://www.redditstatic.com/shreddit/assets/thinking-snoo.png">
+</faceplate-img>
+</div>
+</div>
+<div class="w-100 flex justify-center items-baseline font-sans text-14" slot="primaryButton">
+<span>
+               Didn't get an email?
+              </span>
+<faceplate-tracker action="click" noun="resend" source="check_inbox">
+<button class="bg-transparent underline disabled:no-underline pl-xs button-large px-[var(--rem14)] button-plain items-center justify-center button inline-flex" id="auth-password-recovery-resend-email-cta" rpl="" type="submit">
+<span class="flex items-center justify-center">
+<span class="flex items-center gap-xs">
+                  Resend
+                 </span>
+</span>
+</button>
+</faceplate-tracker>
+</div>
+</auth-flow-modal>
+</faceplate-tabpanel>
+</faceplate-form>
+</auth-flow-password-recovery>
+</shreddit-async-loader>
+</template>
+<template slot="passwordrecovery">
+<shreddit-async-loader bundlename="auth_flow_password_reset">
+<auth-flow-password-reset>
+<faceplate-form action="/svc/shreddit/account/password_reset" enctype="application/json" method="POST">
+<faceplate-tabpanel pagenames="account_selector,enter_new_password">
+<auth-flow-modal class="shadow-sm" pagename="account_selector" slot="account_selector">
+<faceplate-tracker action="click" noun="dismiss" slot="closeButton" source="account_selector">
+<button aria-label="Close" class="button-small px-[var(--rem6)] button-secondary icon items-center justify-center button inline-flex" rpl="" type="button">
+<span class="flex items-center justify-center">
+<span class="flex">
+<svg fill="currentColor" height='16' icon-name="close-outline" rpl="" viewbox="0 0 20 20" width='16' xmlns="http://www.w3.org/2000/svg">
+<path d="m18.442 2.442-.884-.884L10 9.116 2.442 1.558l-.884.884L9.116 10l-7.558 7.558.884.884L10 10.884l7.558 7.558.884-.884L10.884 10l7.558-7.558Z">
+</path>
+</svg>
+</span>
+</span>
+<faceplate-screen-reader-content>
+                close
+               </faceplate-screen-reader-content>
+</button>
+</faceplate-tracker>
+<div class="font-sans bg-ui-modalbackground pb-[env(safe-area-inset-bottom)]">
+<h1 class="text-24 mt-0 mb-xs font-bold text-neutral-content-strong">
+               Choose a Reddit account to continue
+              </h1>
+<faceplate-partial id="account-selection" loading="programmatic" method="POST" render-mode="append" src="/svc/shreddit/account/password_reset_accounts">
+<input name="token_id" type="hidden"></input>
+</faceplate-partial>
+</div>
+</auth-flow-modal>
+<auth-flow-modal class="shadow-sm" pagename="enter_new_password" slot="enter_new_password">
+<faceplate-tracker action="click" noun="back" slot="backButton" source="enter_new_password">
+<button aria-label="Back" class="button-medium px-[var(--rem8)] button-plain icon items-center justify-center button inline-flex" rpl="" type="button">
+<span class="flex items-center justify-center">
+<span class="flex">
+<svg fill="currentColor" height='20' icon-name="back-outline" rpl="" viewbox="0 0 20 20" width='20' xmlns="http://www.w3.org/2000/svg">
+<path d="M19 9.375H2.51l7.932-7.933-.884-.884-9 9a.625.625 0 0 0 0 .884l9 9 .884-.884-7.933-7.933H19v-1.25Z">
+</path>
+</svg>
+</span>
+</span>
+<faceplate-screen-reader-content>
+                back
+               </faceplate-screen-reader-content>
+</button>
+</faceplate-tracker>
+<faceplate-tracker action="click" noun="dismiss" slot="closeButton" source="enter_new_password">
+<button aria-label="Close" class="button-small px-[var(--rem6)] button-secondary icon items-center justify-center button inline-flex" rpl="" type="button">
+<span class="flex items-center justify-center">
+<span class="flex">
+<svg fill="currentColor" height='16' icon-name="close-outline" rpl="" viewbox="0 0 20 20" width='16' xmlns="http://www.w3.org/2000/svg">
+<path d="m18.442 2.442-.884-.884L10 9.116 2.442 1.558l-.884.884L9.116 10l-7.558 7.558.884.884L10 10.884l7.558 7.558.884-.884L10.884 10l7.558-7.558Z">
+</path>
+</svg>
+</span>
+</span>
+<faceplate-screen-reader-content>
+                close
+               </faceplate-screen-reader-content>
+</button>
+</faceplate-tracker>
+<div class="font-sans bg-ui-modalbackground pb-[env(safe-area-inset-bottom)]">
+<h1 class="text-24 mt-0 mb-xs font-bold text-neutral-content-strong">
+               Reset your password
+              </h1>
+<fieldset class="relative mt-0 mb-0 ml-0 mr-0 p-0 border-0 flex flex-col flex-grow">
+<auth-text-input autocomplete="new-password" class="mt-md" helper-text-placeholder=" " id="password-reset-password" minlength='8' name="password" required="" type="password">
+<span slot="label">
+                 New password
+                </span>
+<slot name="password-reset-password" slot="password-reset-password">
+</slot>
+</auth-text-input>
+</fieldset>
+<fieldset class="relative mt-0 mb-0 ml-0 mr-0 p-0 border-0 flex flex-col flex-grow">
+<auth-text-input autocomplete="new-password" class="mt-sm" helper-text-placeholder=" " id="password-reset-password-confirm" minlength='8' name="password_repeat" required="" type="password">
+<span slot="label">
+                 Confirm new password
+                </span>
+<slot name="password-reset-password-confirm" slot="password-reset-password-confirm">
+</slot>
+</auth-text-input>
+</fieldset>
+</div>
+<div class="w-100" slot="primaryButton">
+<div class="font-sans text-12 my-lg text-neutral-content-weak text-center">
+               Resetting your password will log you out on all devices.
+              </div>
+<faceplate-tracker action="click" noun="continue" source="enter_new_password">
+<button class="w-100 button-large px-[var(--rem14)] button-brand items-center justify-center button inline-flex" disabled="" id="auth-password-reset-primary-cta" rpl="" type="submit">
+<span class="flex items-center justify-center">
+<span class="flex items-center gap-xs">
+                  Continue
+                 </span>
+</span>
+</button>
+</faceplate-tracker>
+</div>
+</auth-flow-modal>
+</faceplate-tabpanel>
+</faceplate-form>
+</auth-flow-password-reset>
+</shreddit-async-loader>
+</template>
+<template slot="phone_auth">
+<shreddit-async-loader bundlename="auth_flow_phone_auth">
+<faceplate-partial src="/svc/shreddit/account/phone-auth?">
+<auth-flow-modal pagename="phone_auth-loading">
+</auth-flow-modal>
+</faceplate-partial>
+</shreddit-async-loader>
+</template>
+<template slot="onboarding">
+<shreddit-async-loader bundlename="onboarding_flow">
+<faceplate-partial src="/svc/shreddit/onboarding-flow">
+<auth-flow-modal class="shadow-sm">
+</auth-flow-modal>
+</faceplate-partial>
+</shreddit-async-loader>
+</template>
+<slot name="recaptcha" slot="recaptcha">
+</slot>
+<slot name="login-username" slot="login-username">
+</slot>
+<slot name="login-password" slot="login-password">
+</slot>
+<slot name="register-username" slot="register-username">
+</slot>
+<slot name="register-password" slot="register-password">
+</slot>
+<slot name="register-email" slot="register-email">
+</slot>
+<slot name="password-reset-password" slot="password-reset-password">
+</slot>
+<slot name="password-reset-password-confirm" slot="password-reset-password-confirm">
+</slot>
+</shreddit-slotter>
+</div>
+</auth-flow-google-one-tap-shell>
+</shreddit-async-loader>
+<shreddit-overlay-display class="theme-beta">
+<template slot="auth-flow">
+<shreddit-signup-drawer subredditid="" subredditname="">
+<slot name="recaptcha" slot="recaptcha">
+</slot>
+<slot name="login-username" slot="login-username">
+</slot>
+<slot name="login-password" slot="login-password">
+</slot>
+<slot name="register-username" slot="register-username">
+</slot>
+<slot name="register-password" slot="register-password">
+</slot>
+<slot name="register-email" slot="register-email">
+</slot>
+<slot name="password-reset-password" slot="password-reset-password">
+</slot>
+<slot name="password-reset-password-confirm" slot="password-reset-password-confirm">
+</slot>
+</shreddit-signup-drawer>
+</template>
+<div class="recaptcha" data-site-key="6LeTnxkTAAAAAN9QEuDZRpn90WwKk_R1TRW_g-JC" slot="recaptcha">
+</div>
+<span class="w-100 h-100" id="register-username-container" slot="register-username">
+</span>
+<span class="w-100 h-100" id="register-password-container" slot="register-password">
+</span>
+<span class="w-100 h-100" id="register-email-container" slot="register-email">
+</span>
+<span class="w-100 h-100" id="login-username-container" slot="login-username">
+</span>
+<span class="w-100 h-100" id="login-password-container" slot="login-password">
+</span>
+<span class="w-100 h-100" id="password-reset-password-container" slot="password-reset-password">
+</span>
+<span class="w-100 h-100" id="password-reset-password-confirm-container" slot="password-reset-password-confirm">
+</span>
+</shreddit-overlay-display>
+<form action="/svc/shreddit/account/login" aria-hidden='true' class="h-px w-px overflow-hidden fixed -left-100 -bottom-100 whitespace-nowrap opacity-0 pointer-events-none" id="login-overlay" method="post" tabindex='-1'>
+<input autocomplete="username" id="light-username-field" name="username-field" type="text"></input>
+<input autocomplete="current-password" id="light-password-field" name="password-field" type="password"></input>
+</form>
+<!-- routable page end -->
+<faceplate-perfmetric-collector endpoint="/svc/shreddit/perfMetrics">
+<data value="first-contentful-paint">
+</data>
+<data value="time-to-first-byte">
+</data>
+<data value="largest-contentful-paint">
+</data>
+<data value="cumulative-layout-shift">
+</data>
+</faceplate-perfmetric-collector>
+<shreddit-navtimings-collector endpoint="/svc/shreddit/perfMetrics">
+</shreddit-navtimings-collector>
+</shreddit-app>
+<script data-chunk-uuid="914e27ad-98e8-4caf-a89a-340212e3cb37" data-src="https://www.google.com/recaptcha/enterprise.js?onload=grecaptchaOnLoad&render=explicit" id="recaptcha-script" nonce="ZlzM3mmoFx/GdrPsZCx41A==">// chunk_script_914e27ad-98e8-4caf-a89a-340212e3cb37
+</script>
+<script data-chunk-uuid="f259728f-7389-421a-ba1b-6fd4e5626baf" data-src="https://accounts.google.com/gsi/client" id="googleid-signin-script" nonce="ZlzM3mmoFx/GdrPsZCx41A==">// chunk_script_f259728f-7389-421a-ba1b-6fd4e5626baf
+</script>
+<script data-chunk-uuid="c5612f25-81b5-40dc-a9ec-a8a43e6a7465" data-src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js" id="appleid-signin-script" nonce="ZlzM3mmoFx/GdrPsZCx41A==">// chunk_script_c5612f25-81b5-40dc-a9ec-a8a43e6a7465
+</script>
+<navigation-indicator class="fixed top-0 w-100 z-50">
+</navigation-indicator>
+
+        ```
+        

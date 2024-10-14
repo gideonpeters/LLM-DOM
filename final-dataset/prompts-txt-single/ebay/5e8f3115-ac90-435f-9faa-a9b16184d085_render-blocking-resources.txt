@@ -1,0 +1,311 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. render-blocking-resources => Eliminate render-blocking resources: Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn how to eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        <a _sp="p4375194.m166539.l3949.c6" class="vlp-merch-item-tile" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "operationId": "4375194", "flushImmediately": false, "actionKind": "CLICK", "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "296617583858", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121338%26meid%3D18e4ac83c5604a839982799518785028%26pid%3D102176%26rk%3D6%26rkt%3D10%26mehot%3Dpp%26b%3D1%26itm%3D296617583858%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3DRolex%26tu%3D01J53XXMJ5YSVKD1DVGC23RCJN", "ampid": "MERCH_CLK", "rank": "6", "ammiid": "18e4ac83c5604a839982799518785028", "moduledtl": "mi:166539|iid:1|li:3949|luid:6|c:6", "vlpname": "vlp_homepage", "trackableId": "01J53XXMJ5YSVKD1DVGC23RCJN", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KNVlTVktEMURWR0MyM1JDSk40MDFKNTNYWE1KNk5aU0ZIRFo1Nk1ZWjQ4SjMACDM5NDkKQ0xJQ0sA", "audience": "general"}}' data-track='[{"operationId": "4375194", "flushImmediately": false, "actionKind": "NAV", "eventProperty": {"trkp": "parentrq:47ded1841910ab8d0e971f48fffff5b0|pageci:8367f410-58d9-11ef-8be2-2a95c25823a1|iid:1|vlpname:vlp_homepage", "sid": "p4375194.m166539.l3949.c6", "audience": "general"}}, {"eventFamily": "VERTLAND", "eventAction": "ACTN", "operationId": "4375194", "flushImmediately": false, "actionKind": "CLICK", "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "296617583858", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121338%26meid%3D18e4ac83c5604a839982799518785028%26pid%3D102176%26rk%3D6%26rkt%3D10%26mehot%3Dpp%26b%3D1%26itm%3D296617583858%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3DRolex%26tu%3D01J53XXMJ5YSVKD1DVGC23RCJN", "ampid": "MERCH_CLK", "rank": "6", "ammiid": "18e4ac83c5604a839982799518785028", "moduledtl": "mi:166539|iid:1|li:3949|luid:6|c:6", "vlpname": "vlp_homepage", "trackableId": "01J53XXMJ5YSVKD1DVGC23RCJN", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KNVlTVktEMURWR0MyM1JDSk40MDFKNTNYWE1KNk5aU0ZIRFo1Nk1ZWjQ4SjMACDM5NDkKQ0xJQ0sA", "audience": "general"}}]' href="https://www.ebay.com/itm/296617583858?_trkparms=amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121338%26meid%3D18e4ac83c5604a839982799518785028%26pid%3D102176%26rk%3D1%26rkt%3D1%26b%3D1%26itm%3D296617583858%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3DRolex&_trksid=p4375194.c102176.m166539&_trkparms=parentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Cpageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Ciid%3A1%7Cvlpname%3Avlp_homepage" target="_blank">
+<div class="vlp-merch-content-wrap">
+<div class="vlp-merch-image-wrap-dweb">
+<div class="vlp-merch-image-frame" style=" ">
+<div class="vl-image-js js-only">
+<img alt="Rolex 6917 Lady President 18K gold Date Just 26mm automatic watch 1978" class="vlp-merch-item-image" crossorigin="anonymous" data-high-res-size='500' data-item-card='true' data-size='300' data-src="https://i.ebayimg.com/thumbs/images/g/-X0AAOSwbgNms4VY/s-l500.jpg" onerror="window.addtoLazyLoad({el: this, fit: false})" onload="window.addtoLazyLoad({el: this, fit: false})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-image__no-fill">
+<img alt="Rolex 6917 Lady President 18K gold Date Just 26mm automatic watch 1978" src="https://i.ebayimg.com/thumbs/images/g/-X0AAOSwbgNms4VY/s-l500.jpg"></img>
+</div>
+</noscript>
+</div>
+</div>
+<div class="vlp-merch-item-info">
+<h3 class="vlp-merch-item-title vlp-merch-item-title-dweb vlp-merch-item-title-margin">
+                  Rolex 6917 Lady President 18K gold Date Just 26mm automatic watch 1978
+                 </h3>
+<div class="vlp-merch-sub-group">
+<div class="vlp-merch-price">
+<span role="text">
+                    $3,450.00
+                   </span>
+</div>
+</div>
+</div>
+</div>
+</a>
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[5]-2-@match-media-0-@ebay-carousel-4[@5]-3[5]-43-->
+<div class="vlp-merch-add-to-watchlist-btn">
+<button aria-label="Add Rolex 6917 Lady President 18K gold Date Just 26mm automatic watch 1978 to your watch list" class="btn btn--tertiary" type="button">
+<svg aria-hidden='true' class="vlp-merch-watch-unselected icon icon--16" focusable='false'>
+<use xlink:href="#hp-icon-save-16">
+</use>
+</svg>
+</button>
+</div>
+<!--vertlandweb/-->
+</div>
+<!--F/-->
+</li>
+<li class="vl-carousel__item" style="width:calc(18.51851851851852% - 13.037037037037038px);margin-right:16px">
+<!--F#4[@6]-->
+<div class="vlp-merch-item-card-container" data-interactions='[{"actionKind": "CLICK", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KNVkzU0I5NTBGRDEwRjREWEU0MDFKNTNYWE1KNk5aU0ZIRFo1Nk1ZWjQ4SjMACDM5NDkKQ0xJQ0sA"}]' data-viewport='{"trackableId": "01J53XXMJ5Y3SB950FD10F4DXE"}'>
+<a _sp="p4375194.m166539.l3949.c7" class="vlp-merch-item-tile" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "operationId": "4375194", "flushImmediately": false, "actionKind": "CLICK", "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "176496216566", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121338%26meid%3D18e4ac83c5604a839982799518785028%26pid%3D102176%26rk%3D7%26rkt%3D10%26mehot%3Dpp%26b%3D1%26itm%3D176496216566%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3DRolex%26tu%3D01J53XXMJ5Y3SB950FD10F4DXE", "ampid": "MERCH_CLK", "rank": "7", "ammiid": "18e4ac83c5604a839982799518785028", "moduledtl": "mi:166539|iid:1|li:3949|luid:7|c:7", "vlpname": "vlp_homepage", "trackableId": "01J53XXMJ5Y3SB950FD10F4DXE", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KNVkzU0I5NTBGRDEwRjREWEU0MDFKNTNYWE1KNk5aU0ZIRFo1Nk1ZWjQ4SjMACDM5NDkKQ0xJQ0sA", "audience": "general"}}' data-track='[{"operationId": "4375194", "flushImmediately": false, "actionKind": "NAV", "eventProperty": {"trkp": "parentrq:47ded1841910ab8d0e971f48fffff5b0|pageci:8367f410-58d9-11ef-8be2-2a95c25823a1|iid:1|vlpname:vlp_homepage", "sid": "p4375194.m166539.l3949.c7", "audience": "general"}}, {"eventFamily": "VERTLAND", "eventAction": "ACTN", "operationId": "4375194", "flushImmediately": false, "actionKind": "CLICK", "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "176496216566", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121338%26meid%3D18e4ac83c5604a839982799518785028%26pid%3D102176%26rk%3D7%26rkt%3D10%26mehot%3Dpp%26b%3D1%26itm%3D176496216566%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3DRolex%26tu%3D01J53XXMJ5Y3SB950FD10F4DXE", "ampid": "MERCH_CLK", "rank": "7", "ammiid": "18e4ac83c5604a839982799518785028", "moduledtl": "mi:166539|iid:1|li:3949|luid:7|c:7", "vlpname": "vlp_homepage", "trackableId": "01J53XXMJ5Y3SB950FD10F4DXE", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KNVkzU0I5NTBGRDEwRjREWEU0MDFKNTNYWE1KNk5aU0ZIRFo1Nk1ZWjQ4SjMACDM5NDkKQ0xJQ0sA", "audience": "general"}}]' href="https://www.ebay.com/itm/176496216566?_trkparms=amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121338%26meid%3D18e4ac83c5604a839982799518785028%26pid%3D102176%26rk%3D1%26rkt%3D1%26b%3D1%26itm%3D176496216566%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3DRolex&_trksid=p4375194.c102176.m166539&_trkparms=parentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Cpageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Ciid%3A1%7Cvlpname%3Avlp_homepage" target="_blank">
+<div class="vlp-merch-content-wrap">
+<div class="vlp-merch-image-wrap-dweb">
+<div class="vlp-merch-image-frame" style=" ">
+<div class="vl-image-js js-only">
+<img alt="ROLEX MENS EXPLORER II 16570 GMT DATE 40MM STAINLESS STEEL BLACK WATCH" class="vlp-merch-item-image" crossorigin="anonymous" data-high-res-size='500' data-item-card='true' data-size='300' data-src="https://i.ebayimg.com/thumbs/images/g/ZogAAOSwYDtmseXd/s-l500.jpg" onerror="window.addtoLazyLoad({el: this, fit: false})" onload="window.addtoLazyLoad({el: this, fit: false})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-image__no-fill">
+<img alt="ROLEX MENS EXPLORER II 16570 GMT DATE 40MM STAINLESS STEEL BLACK WATCH" src="https://i.ebayimg.com/thumbs/images/g/ZogAAOSwYDtmseXd/s-l500.jpg"></img>
+</div>
+</noscript>
+</div>
+</div>
+<div class="vlp-merch-item-info">
+<h3 class="vlp-merch-item-title vlp-merch-item-title-dweb vlp-merch-item-title-margin">
+                  ROLEX MENS EXPLORER II 16570 GMT DATE 40MM STAINLESS STEEL BLACK WATCH
+                 </h3>
+<div class="vlp-merch-sub-group">
+<div class="vlp-merch-price">
+<span role="text">
+                    $6,590.00
+                   </span>
+<span class="vlp-merch-additional-price">
+<span aria-label="previous price $7,090.00" class="sh-strikethrough" role="text">
+                     $7,090.00
+                    </span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</a>
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[5]-2-@match-media-0-@ebay-carousel-4[@6]-3[6]-43-->
+<div class="vlp-merch-add-to-watchlist-btn">
+<button aria-label="Add ROLEX MENS EXPLORER II 16570 GMT DATE 40MM STAINLESS STEEL BLACK WATCH to your watch list" class="btn btn--tertiary" type="button">
+<svg aria-hidden='true' class="vlp-merch-watch-unselected icon icon--16" focusable='false'>
+<use xlink:href="#hp-icon-save-16">
+</use>
+</svg>
+</button>
+</div>
+<!--vertlandweb/-->
+</div>
+<!--F/-->
+</li>
+<li class="vl-carousel__item" style="width:calc(18.51851851851852% - 13.037037037037038px);margin-right:16px">
+<!--F#4[@7]-->
+<div class="vlp-merch-item-card-container" data-interactions='[{"actionKind": "CLICK", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KNVYzM1kzMU1NRTdRUk5UVFM0MDFKNTNYWE1KNk5aU0ZIRFo1Nk1ZWjQ4SjMACDM5NDkKQ0xJQ0sA"}]' data-viewport='{"trackableId": "01J53XXMJ5V33Y31MME7QRNTTS"}'>
+<a _sp="p4375194.m166539.l3949.c8" class="vlp-merch-item-tile" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "operationId": "4375194", "flushImmediately": false, "actionKind": "CLICK", "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "256597240838", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121338%26meid%3D18e4ac83c5604a839982799518785028%26pid%3D102176%26rk%3D8%26rkt%3D10%26mehot%3Dpp%26b%3D1%26itm%3D256597240838%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3DRolex%26tu%3D01J53XXMJ5V33Y31MME7QRNTTS", "ampid": "MERCH_CLK", "rank": "8", "ammiid": "18e4ac83c5604a839982799518785028", "moduledtl": "mi:166539|iid:1|li:3949|luid:8|c:8", "vlpname": "vlp_homepage", "trackableId": "01J53XXMJ5V33Y31MME7QRNTTS", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KNVYzM1kzMU1NRTdRUk5UVFM0MDFKNTNYWE1KNk5aU0ZIRFo1Nk1ZWjQ4SjMACDM5NDkKQ0xJQ0sA", "audience": "general"}}' data-track='[{"operationId": "4375194", "flushImmediately": false, "actionKind": "NAV", "eventProperty": {"trkp": "parentrq:47ded1841910ab8d0e971f48fffff5b0|pageci:8367f410-58d9-11ef-8be2-2a95c25823a1|iid:1|vlpname:vlp_homepage", "sid": "p4375194.m166539.l3949.c8", "audience": "general"}}, {"eventFamily": "VERTLAND", "eventAction": "ACTN", "operationId": "4375194", "flushImmediately": false, "actionKind": "CLICK", "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "256597240838", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121338%26meid%3D18e4ac83c5604a839982799518785028%26pid%3D102176%26rk%3D8%26rkt%3D10%26mehot%3Dpp%26b%3D1%26itm%3D256597240838%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3DRolex%26tu%3D01J53XXMJ5V33Y31MME7QRNTTS", "ampid": "MERCH_CLK", "rank": "8", "ammiid": "18e4ac83c5604a839982799518785028", "moduledtl": "mi:166539|iid:1|li:3949|luid:8|c:8", "vlpname": "vlp_homepage", "trackableId": "01J53XXMJ5V33Y31MME7QRNTTS", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KNVYzM1kzMU1NRTdRUk5UVFM0MDFKNTNYWE1KNk5aU0ZIRFo1Nk1ZWjQ4SjMACDM5NDkKQ0xJQ0sA", "audience": "general"}}]' href="https://www.ebay.com/itm/256597240838?_trkparms=amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121338%26meid%3D18e4ac83c5604a839982799518785028%26pid%3D102176%26rk%3D1%26rkt%3D1%26b%3D1%26itm%3D256597240838%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3DRolex&_trksid=p4375194.c102176.m166539&_trkparms=parentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Cpageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Ciid%3A1%7Cvlpname%3Avlp_homepage" target="_blank">
+<div class="vlp-merch-content-wrap">
+<div class="vlp-merch-image-wrap-dweb">
+<div class="vlp-merch-image-frame" style=" ">
+<div class="vl-image-js js-only">
+<img alt="Rolex Oyster Perpetual Datejust Ref. 16030 Silver Sunburst Dial 36mm #W90177-1" class="vlp-merch-item-image" crossorigin="anonymous" data-high-res-size='500' data-item-card='true' data-size='300' data-src="https://i.ebayimg.com/thumbs/images/g/G08AAOSweTNmtTTg/s-l500.jpg" onerror="window.addtoLazyLoad({el: this, fit: false})" onload="window.addtoLazyLoad({el: this, fit: false})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-image__no-fill">
+<img alt="Rolex Oyster Perpetual Datejust Ref. 16030 Silver Sunburst Dial 36mm #W90177-1" src="https://i.ebayimg.com/thumbs/images/g/G08AAOSweTNmtTTg/s-l500.jpg"></img>
+</div>
+</noscript>
+</div>
+</div>
+<div class="vlp-merch-item-info">
+<h3 class="vlp-merch-item-title vlp-merch-item-title-dweb vlp-merch-item-title-margin">
+                  Rolex Oyster Perpetual Datejust Ref. 16030 Silver Sunburst Dial 36mm #W90177-1
+                 </h3>
+<div class="vlp-merch-sub-group">
+<div class="vlp-merch-price">
+<span role="text">
+                    $2,225.00
+                   </span>
+</div>
+</div>
+</div>
+</div>
+</a>
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[5]-2-@match-media-0-@ebay-carousel-4[@7]-3[7]-43-->
+<div class="vlp-merch-add-to-watchlist-btn">
+<button aria-label="Add Rolex Oyster Perpetual Datejust Ref. 16030 Silver Sunburst Dial 36mm #W90177-1 to your watch list" class="btn btn--tertiary" type="button">
+<svg aria-hidden='true' class="vlp-merch-watch-unselected icon icon--16" focusable='false'>
+<use xlink:href="#hp-icon-save-16">
+</use>
+</svg>
+</button>
+</div>
+<!--vertlandweb/-->
+</div>
+<!--F/-->
+</li>
+<li class="vl-carousel__item" style="width:calc(18.51851851851852% - 13.037037037037038px);margin-right:16px">
+<!--F#4[@8]-->
+<div class="vlp-merch-item-card-container" data-interactions='[{"actionKind": "CLICK", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KNjdRQkJBMVlSN1RHNFY2ODk0MDFKNTNYWE1KNk5aU0ZIRFo1Nk1ZWjQ4SjMACDM5NDkKQ0xJQ0sA"}]' data-viewport='{"trackableId": "01J53XXMJ67QBBA1YR7TG4V689"}'>
+<a _sp="p4375194.m166539.l3949.c9" class="vlp-merch-item-tile" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "operationId": "4375194", "flushImmediately": false, "actionKind": "CLICK", "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "235687013390", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121338%26meid%3D18e4ac83c5604a839982799518785028%26pid%3D102176%26rk%3D9%26rkt%3D10%26mehot%3Dpp%26b%3D1%26itm%3D235687013390%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3DRolex%26tu%3D01J53XXMJ67QBBA1YR7TG4V689", "ampid": "MERCH_CLK", "rank": "9", "ammiid": "18e4ac83c5604a839982799518785028", "moduledtl": "mi:166539|iid:1|li:3949|luid:9|c:9", "vlpname": "vlp_homepage", "trackableId": "01J53XXMJ67QBBA1YR7TG4V689", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KNjdRQkJBMVlSN1RHNFY2ODk0MDFKNTNYWE1KNk5aU0ZIRFo1Nk1ZWjQ4SjMACDM5NDkKQ0xJQ0sA", "audience": "general"}}' data-track='[{"operationId": "4375194", "flushImmediately": false, "actionKind": "NAV", "eventProperty": {"trkp": "parentrq:47ded1841910ab8d0e971f48fffff5b0|pageci:8367f410-58d9-11ef-8be2-2a95c25823a1|iid:1|vlpname:vlp_homepage", "sid": "p4375194.m166539.l3949.c9", "audience": "general"}}, {"eventFamily": "VERTLAND", "eventAction": "ACTN", "operationId": "4375194", "flushImmediately": false, "actionKind": "CLICK", "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "235687013390", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121338%26meid%3D18e4ac83c5604a839982799518785028%26pid%3D102176%26rk%3D9%26rkt%3D10%26mehot%3Dpp%26b%3D1%26itm%3D235687013390%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3DRolex%26tu%3D01J53XXMJ67QBBA1YR7TG4V689", "ampid": "MERCH_CLK", "rank": "9", "ammiid": "18e4ac83c5604a839982799518785028", "moduledtl": "mi:166539|iid:1|li:3949|luid:9|c:9", "vlpname": "vlp_homepage", "trackableId": "01J53XXMJ67QBBA1YR7TG4V689", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KNjdRQkJBMVlSN1RHNFY2ODk0MDFKNTNYWE1KNk5aU0ZIRFo1Nk1ZWjQ4SjMACDM5NDkKQ0xJQ0sA", "audience": "general"}}]' href="https://www.ebay.com/itm/235687013390?_trkparms=amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121338%26meid%3D18e4ac83c5604a839982799518785028%26pid%3D102176%26rk%3D1%26rkt%3D1%26b%3D1%26itm%3D235687013390%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3DRolex&_trksid=p4375194.c102176.m166539&_trkparms=parentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Cpageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Ciid%3A1%7Cvlpname%3Avlp_homepage" target="_blank">
+<div class="vlp-merch-content-wrap">
+<div class="vlp-merch-image-wrap-dweb">
+<div class="vlp-merch-image-frame" style=" ">
+<div class="vl-image-js js-only">
+<img alt="Rolex Oyster Perpetual Datejust Ref. 16030 Silver Tapestry Dial 36mm #W108890-1" class="vlp-merch-item-image" crossorigin="anonymous" data-high-res-size='500' data-item-card='true' data-size='300' data-src="https://i.ebayimg.com/thumbs/images/g/gwYAAOSwD4Rms-iE/s-l500.jpg" onerror="window.addtoLazyLoad({el: this, fit: false})" onload="window.addtoLazyLoad({el: this, fit: false})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-image__no-fill">
+<img alt="Rolex Oyster Perpetual Datejust Ref. 16030 Silver Tapestry Dial 36mm #W108890-1" src="https://i.ebayimg.com/thumbs/images/g/gwYAAOSwD4Rms-iE/s-l500.jpg"></img>
+</div>
+</noscript>
+</div>
+</div>
+<div class="vlp-merch-item-info">
+<h3 class="vlp-merch-item-title vlp-merch-item-title-dweb vlp-merch-item-title-margin">
+                  Rolex Oyster Perpetual Datejust Ref. 16030 Silver Tapestry Dial 36mm #W108890-1
+                 </h3>
+<div class="vlp-merch-sub-group">
+<div class="vlp-merch-price">
+<span role="text">
+                    $2,275.00
+                   </span>
+</div>
+</div>
+</div>
+</div>
+</a>
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[5]-2-@match-media-0-@ebay-carousel-4[@8]-3[8]-43-->
+<div class="vlp-merch-add-to-watchlist-btn">
+<button aria-label="Add Rolex Oyster Perpetual Datejust Ref. 16030 Silver Tapestry Dial 36mm #W108890-1 to your watch list" class="btn btn--tertiary" type="button">
+<svg aria-hidden='true' class="vlp-merch-watch-unselected icon icon--16" focusable='false'>
+<use xlink:href="#hp-icon-save-16">
+</use>
+</svg>
+</button>
+</div>
+<!--vertlandweb/-->
+</div>
+<!--F/-->
+</li>
+<li class="vl-carousel__item" style="width:calc(18.51851851851852% - 13.037037037037038px)">
+<!--F#4[@9]-->
+<div class="vlp-merch-item-card-container" data-interactions='[{"actionKind": "CLICK", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KNlBDWlQ2VjFTTkJRRlJQWVc0MDFKNTNYWE1KNk5aU0ZIRFo1Nk1ZWjQ4SjMACDM5NDkKQ0xJQ0sA"}]' data-viewport='{"trackableId": "01J53XXMJ6PCZT6V1SNBQFRPYW"}'>
+<a _sp="p4375194.m166539.l3949.c10" class="vlp-merch-item-tile" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "operationId": "4375194", "flushImmediately": false, "actionKind": "CLICK", "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "275477843857", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121338%26meid%3D18e4ac83c5604a839982799518785028%26pid%3D102176%26rk%3D10%26rkt%3D10%26mehot%3Dpp%26b%3D1%26itm%3D275477843857%26pmt%3D1%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3DCartier%26tu%3D01J53XXMJ6PCZT6V1SNBQFRPYW", "ampid": "MERCH_CLK", "rank": "10", "ammiid": "18e4ac83c5604a839982799518785028", "moduledtl": "mi:166539|iid:1|li:3949|luid:10|c:10", "vlpname": "vlp_homepage", "trackableId": "01J53XXMJ6PCZT6V1SNBQFRPYW", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KNlBDWlQ2VjFTTkJRRlJQWVc0MDFKNTNYWE1KNk5aU0ZIRFo1Nk1ZWjQ4SjMACDM5NDkKQ0xJQ0sA", "audience": "general"}}' data-track='[{"operationId": "4375194", "flushImmediately": false, "actionKind": "NAV", "eventProperty": {"trkp": "parentrq:47ded1841910ab8d0e971f48fffff5b0|pageci:8367f410-58d9-11ef-8be2-2a95c25823a1|iid:1|vlpname:vlp_homepage", "sid": "p4375194.m166539.l3949.c10", "audience": "general"}}, {"eventFamily": "VERTLAND", "eventAction": "ACTN", "operationId": "4375194", "flushImmediately": false, "actionKind": "CLICK", "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "275477843857", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121338%26meid%3D18e4ac83c5604a839982799518785028%26pid%3D102176%26rk%3D10%26rkt%3D10%26mehot%3Dpp%26b%3D1%26itm%3D275477843857%26pmt%3D1%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3DCartier%26tu%3D01J53XXMJ6PCZT6V1SNBQFRPYW", "ampid": "MERCH_CLK", "rank": "10", "ammiid": "18e4ac83c5604a839982799518785028", "moduledtl": "mi:166539|iid:1|li:3949|luid:10|c:10", "vlpname": "vlp_homepage", "trackableId": "01J53XXMJ6PCZT6V1SNBQFRPYW", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1KNlBDWlQ2VjFTTkJRRlJQWVc0MDFKNTNYWE1KNk5aU0ZIRFo1Nk1ZWjQ4SjMACDM5NDkKQ0xJQ0sA", "audience": "general"}}]' href="https://www.ebay.com/itm/275477843857?_trkparms=amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20240603121338%26meid%3D18e4ac83c5604a839982799518785028%26pid%3D102176%26rk%3D1%26rkt%3D1%26b%3D1%26itm%3D275477843857%26pmt%3D1%26noa%3D1%26pg%3D4375194%26algv%3DNoSignalMostWatched%26brand%3DCartier&_trksid=p4375194.c102176.m166539&_trkparms=parentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Cpageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Ciid%3A1%7Cvlpname%3Avlp_homepage" target="_blank">
+<div class="vlp-merch-content-wrap">
+<div class="vlp-merch-image-wrap-dweb">
+<div class="vlp-merch-image-frame" style=" ">
+<div class="vl-image-js js-only">
+<img alt="Cartier Ballon Bleu de Cartier Automatic 42mm Gold Mens Bracelet Watch WE9009Z3" class="vlp-merch-item-image" crossorigin="anonymous" data-high-res-size='500' data-item-card='true' data-size='300' data-src="https://i.ebayimg.com/thumbs/images/g/IWQAAOSw9phmhsXl/s-l500.jpg" onerror="window.addtoLazyLoad({el: this, fit: false})" onload="window.addtoLazyLoad({el: this, fit: false})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-image__no-fill">
+<img alt="Cartier Ballon Bleu de Cartier Automatic 42mm Gold Mens Bracelet Watch WE9009Z3" src="https://i.ebayimg.com/thumbs/images/g/IWQAAOSw9phmhsXl/s-l500.jpg"></img>
+</div>
+</noscript>
+</div>
+</div>
+<div class="vlp-merch-item-info">
+<h3 class="vlp-merch-item-title vlp-merch-item-title-dweb vlp-merch-item-title-margin">
+                  Cartier Ballon Bleu de Cartier Automatic 42mm Gold Mens Bracelet Watch WE9009Z3
+                 </h3>
+<div class="vlp-merch-sub-group">
+<div class="vlp-merch-price">
+<span role="text">
+                    $28,450.00
+                   </span>
+<span class="vlp-merch-additional-price">
+<span aria-label="previous price $66,500.00" class="sh-strikethrough" role="text">
+                     $66,500.00
+                    </span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</a>
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[5]-2-@match-media-0-@ebay-carousel-4[@9]-3[9]-43-->
+<div class="vlp-merch-add-to-watchlist-btn">
+<button aria-label="Add Cartier Ballon Bleu de Cartier Automatic 42mm Gold Mens Bracelet Watch WE9009Z3 to your watch list" class="btn btn--tertiary" type="button">
+<svg aria-hidden='true' class="vlp-merch-watch-unselected icon icon--16" focusable='false'>
+<use xlink:href="#hp-icon-save-16">
+</use>
+</svg>
+</button>
+</div>
+<!--vertlandweb/-->
+</div>
+<!--F/-->
+</li>
+</ul>
+</div>
+<button aria-disabled='true' aria-label="Go to the next slide, Trending in Watches - Carousel" class="carousel__control carousel__control--next" id="s0-1-0-52-1-2-4-17[0[0]]-0[5]-2-@match-media-0-@ebay-carousel-next" type="button">
+<svg aria-hidden='true' class="icon icon--16" focusable='false'>
+<use href="#icon-chevron-right-16">
+</use>
+</svg>
+</button>
+</div>
+</div>
+<!--F/-->
+</div>
+<!--F/-->
+<!--vertlandweb/-->
+</div>
+<div class="vl-module vl-popular-destinations off-card vl-atf-module-js" data-m-id='4776' data-view='{"eventFamily": "VERTLAND", "eventAction": "VIEW", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "audience": "general", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "moduledtl": "mi:4776|iid:1", "vlpname": "vlp_homepage"}}' data-viewdtls='{"moduleInstance": "mi:4776|iid:1", "parentrq": "47ded1841910ab8d0e971f48fffff5b0", "trackViews": "true", "trackPerf": "false"}'>
+<div class="vl-card-header">
+<div class="vl-card-header__header-container clearfix">
+<div class="vl-card-header__title">
+<h2 class="vl-card-header__headline">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[6]-1-@title-->
+<a _sp="p4375194.m4776.l9803" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "audience": "general", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "moduledtl": "mi:4776|iid:1|li:9803", "vlpname": "vlp_homepage"}}' href="https://www.ebay.com/b/Collectible-Sneakers/bn_7000259435?_trkparms=parentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Cpageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Ciid%3A1%7Cmi%3A4776%7Cli%3A9803">
+<!--F#f_15-->
+<!--F#f_@button-->
+<!--F#f_18-->
+            Score these trending kicks
+            <!--F/-->
+<!--F/-->
+<!--F/-->
+</a>
+<!--vertlandweb/-->
+</h2>
+</div>
+<div class="vl-card-header__seeall">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[6]-1-@seeall-->
+<a _sp="p4375194.m4776.l8342" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "audience": "general", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "moduledtl": "mi:4776|iid:1|li:8342", "vlpname": "vlp_homepage"}}' href="https://www.ebay.com/b/Collectible-Sneakers/bn_7000259435?_trkparms=parentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Cpageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Ciid%3A1%7Cmi%3A4776%7Cli%3A8342">
+<!--F#f_15-->
+<!--F#f_@button-->
+<!--F#f_18-->
+           See all
+           <!--F/-->
+<span class="clipped">
+            Score these trending kicks
+           </span>
+
+        ```
+        

@@ -1,0 +1,315 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. cumulative-layout-shift => Cumulative Layout Shift: Cumulative Layout Shift measures the movement of visible elements within the viewport. [Learn more about the Cumulative Layout Shift metric](https://web.dev/articles/cls).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        <a _sp="p4375194.m150506.l3949.c7" class="vlp-merch-item-tile" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "400880988940", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D7%26rkt%3D15%26b%3D1%26itm%3D400880988940%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2%26tu%3D01J53XXMGA4TW6RH53ARH9Q1KC", "ampid": "MERCH_CLK", "rank": "7", "ammiid": "9b67e495ee03423a850814347ea1b046", "moduledtl": "mi:150506|iid:1|li:3949|luid:7|c:7", "vlpname": "vlp_homepage", "trackableId": "01J53XXMGA4TW6RH53ARH9Q1KC", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1HQTRUVzZSSDUzQVJIOVExS0M0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA", "audience": "general"}}' data-track='[{"actionKind": "NAV", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"trkp": "parentrq:47ded1841910ab8d0e971f48fffff5b0|pageci:8367f410-58d9-11ef-8be2-2a95c25823a1|iid:1|vlpname:vlp_homepage", "sid": "p4375194.m150506.l3949.c7", "audience": "general"}}, {"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "400880988940", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D7%26rkt%3D15%26b%3D1%26itm%3D400880988940%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2%26tu%3D01J53XXMGA4TW6RH53ARH9Q1KC", "ampid": "MERCH_CLK", "rank": "7", "ammiid": "9b67e495ee03423a850814347ea1b046", "moduledtl": "mi:150506|iid:1|li:3949|luid:7|c:7", "vlpname": "vlp_homepage", "trackableId": "01J53XXMGA4TW6RH53ARH9Q1KC", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1HQTRUVzZSSDUzQVJIOVExS0M0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA", "audience": "general"}}]' href="https://www.ebay.com/itm/400880988940?_trkparms=amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D1%26rkt%3D1%26b%3D1%26itm%3D400880988940%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2&_trksid=p4375194.c101910.m150506&_trkparms=parentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Cpageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Ciid%3A1%7Cvlpname%3Avlp_homepage" target="_blank">
+<div class="vlp-merch-content-wrap">
+<div class="vlp-merch-image-wrap-dweb">
+<div class="vlp-merch-image-frame" style=" ">
+<div class="vl-image-js js-only">
+<img alt="mini cologne Versace Eros for Men Brand New In Box" class="vlp-merch-item-image" crossorigin="anonymous" data-high-res-size='500' data-item-card='true' data-size='300' data-src="https://i.ebayimg.com/thumbs/images/g/sZ0AAOSw8BZkwwpt/s-l500.jpg" onerror="window.addtoLazyLoad({el: this, fit: false})" onload="window.addtoLazyLoad({el: this, fit: false})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-image__no-fill">
+<img alt="mini cologne Versace Eros for Men Brand New In Box" src="https://i.ebayimg.com/thumbs/images/g/sZ0AAOSw8BZkwwpt/s-l500.jpg"></img>
+</div>
+</noscript>
+</div>
+</div>
+<div class="vlp-merch-item-info">
+<h3 class="vlp-merch-item-title vlp-merch-item-title-dweb vlp-merch-item-title-margin">
+             mini cologne Versace Eros for Men Brand New In Box
+            </h3>
+<div class="vlp-merch-sub-group">
+<div class="vlp-merch-price">
+<span role="text">
+               $9.39
+              </span>
+<span class="vlp-merch-additional-price">
+<span aria-label="previous price $20.00" class="sh-strikethrough" role="text">
+                $20.00
+               </span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</a>
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[9]-6[6]-43-->
+<div class="vlp-merch-add-to-watchlist-btn">
+<button aria-label="Add mini cologne Versace Eros for Men Brand New In Box to your watch list" class="btn btn--tertiary" type="button">
+<svg aria-hidden='true' class="vlp-merch-watch-unselected icon icon--16" focusable='false'>
+<use xlink:href="#hp-icon-save-16">
+</use>
+</svg>
+</button>
+</div>
+<!--vertlandweb/-->
+</div>
+<div class="vlp-merch-item-card-container" data-interactions='[{"actionKind": "CLICK", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1HQlZQODBYN1pGTVBEMDc1UVI0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA"}]' data-viewport='{"trackableId": "01J53XXMGBVP80X7ZFMPD075QR"}'>
+<a _sp="p4375194.m150506.l3949.c8" class="vlp-merch-item-tile" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "355169345340", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D8%26rkt%3D15%26b%3D1%26itm%3D355169345340%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2%26tu%3D01J53XXMGBVP80X7ZFMPD075QR", "ampid": "MERCH_CLK", "rank": "8", "ammiid": "9b67e495ee03423a850814347ea1b046", "moduledtl": "mi:150506|iid:1|li:3949|luid:8|c:8", "vlpname": "vlp_homepage", "trackableId": "01J53XXMGBVP80X7ZFMPD075QR", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1HQlZQODBYN1pGTVBEMDc1UVI0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA", "audience": "general"}}' data-track='[{"actionKind": "NAV", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"trkp": "parentrq:47ded1841910ab8d0e971f48fffff5b0|pageci:8367f410-58d9-11ef-8be2-2a95c25823a1|iid:1|vlpname:vlp_homepage", "sid": "p4375194.m150506.l3949.c8", "audience": "general"}}, {"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "355169345340", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D8%26rkt%3D15%26b%3D1%26itm%3D355169345340%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2%26tu%3D01J53XXMGBVP80X7ZFMPD075QR", "ampid": "MERCH_CLK", "rank": "8", "ammiid": "9b67e495ee03423a850814347ea1b046", "moduledtl": "mi:150506|iid:1|li:3949|luid:8|c:8", "vlpname": "vlp_homepage", "trackableId": "01J53XXMGBVP80X7ZFMPD075QR", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1HQlZQODBYN1pGTVBEMDc1UVI0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA", "audience": "general"}}]' href="https://www.ebay.com/itm/355169345340?_trkparms=amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D1%26rkt%3D1%26b%3D1%26itm%3D355169345340%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2&_trksid=p4375194.c101910.m150506&_trkparms=parentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Cpageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Ciid%3A1%7Cvlpname%3Avlp_homepage" target="_blank">
+<div class="vlp-merch-content-wrap">
+<div class="vlp-merch-image-wrap-dweb">
+<div class="vlp-merch-image-frame" style=" ">
+<div class="vl-image-js js-only">
+<img alt="【Refurbished】Creality Ender 3 Max Neo 3D Printer CR Touch Leveling Dual Z-Axis" class="vlp-merch-item-image" crossorigin="anonymous" data-high-res-size='500' data-item-card='true' data-size='300' data-src="https://i.ebayimg.com/thumbs/images/g/XT0AAOSwf7lmujMg/s-l500.jpg" onerror="window.addtoLazyLoad({el: this, fit: false})" onload="window.addtoLazyLoad({el: this, fit: false})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-image__no-fill">
+<img alt="【Refurbished】Creality Ender 3 Max Neo 3D Printer CR Touch Leveling Dual Z-Axis" src="https://i.ebayimg.com/thumbs/images/g/XT0AAOSwf7lmujMg/s-l500.jpg"></img>
+</div>
+</noscript>
+</div>
+</div>
+<div class="vlp-merch-item-info">
+<h3 class="vlp-merch-item-title vlp-merch-item-title-dweb vlp-merch-item-title-margin">
+             【Refurbished】Creality Ender 3 Max Neo 3D Printer CR Touch Leveling Dual Z-Axis
+            </h3>
+<div class="vlp-merch-sub-group">
+<div class="vlp-merch-price">
+<span role="text">
+               $122.00
+              </span>
+</div>
+</div>
+</div>
+</div>
+</a>
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[9]-6[7]-43-->
+<div class="vlp-merch-add-to-watchlist-btn">
+<button aria-label="Add 【Refurbished】Creality Ender 3 Max Neo 3D Printer CR Touch Leveling Dual Z-Axis to your watch list" class="btn btn--tertiary" type="button">
+<svg aria-hidden='true' class="vlp-merch-watch-unselected icon icon--16" focusable='false'>
+<use xlink:href="#hp-icon-save-16">
+</use>
+</svg>
+</button>
+</div>
+<!--vertlandweb/-->
+</div>
+</div>
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[9]-7-->
+<!--F#0-->
+<div>
+<!--F#p_@ebay-carousel-->
+<div aria-roledescription="Carousel" class="carousel vl-carousel vl-card-list-with-header-card__carousel evo vl-module-full vl-module-full-wide carousel--slides carousel--peek" role="group">
+<div class="carousel__container carousel__container--controls-disabled" id="s0-1-0-52-1-2-4-17[0[0]]-0[9]-7-@match-media-0-@ebay-carousel-container">
+<button aria-disabled='true' aria-label="Go to the previous slide, Today's Deals - Carousel" class="carousel__control carousel__control--prev" type="button">
+<svg aria-hidden='true' class="icon icon--16" focusable='false'>
+<use href="#icon-chevron-left-16">
+</use>
+</svg>
+</button>
+<div class="carousel__viewport">
+<ul class="carousel__list" id="s0-1-0-52-1-2-4-17[0[0]]-0[9]-7-@match-media-0-@ebay-carousel-list">
+<li class="carousel__snap-point vl-carousel__item vl-card-list-with-header-card__header-card" style="width:calc(25.974025974025974% - 11.844155844155845px);margin-right:16px">
+<!--F#4[@0]-->
+<div class="vl-text-banner square evo" style="background-color:var(--color-foreground-primary)">
+<h2 class="vl-text-banner__headline">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[9]-7-@match-media-0-@ebay-carousel-4[@0]-8-1-6-->
+<a _sp="p4375194.m150506.l9803" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "moduledtl": "mi:150506|iid:1|li:9803", "vlpname": "vlp_homepage", "audience": "general"}}' href="https://www.ebay.com/deals?_trkparms=parentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Cpageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Ciid%3A1%7Cvlpname%3Avlp_homepage" style="color:var(--color-background-primary)">
+<!--F#f_15-->
+<!--F#f_@button-->
+<div class="vl-ellipsis-2" style="color:var(--color-background-primary)">
+<span style="color:var(--color-background-primary)">
+                  Today's Deals
+                 </span>
+</div>
+<!--F/-->
+<!--F/-->
+</a>
+<!--vertlandweb/-->
+</h2>
+<div class="vl-text-banner__subheadline">
+<!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[9]-7-@match-media-0-@ebay-carousel-4[@0]-8-1-8-->
+<div aria-label="All With Free Shipping" style="color:var(--color-background-primary)">
+<!--F#f_@button-->
+<div class="vl-ellipsis-2" style="color:var(--color-background-primary)">
+<span style="color:var(--color-background-primary)">
+                  All With Free Shipping
+                 </span>
+</div>
+<!--F/-->
+</div>
+<!--vertlandweb/-->
+</div>
+<div class="vl-cta vl-text-banner__cta" onfocusin="this.querySelector('.vl-cta__default').onmouseover()" onfocusout="this.querySelector('.vl-cta__default').onmouseout()" style="font-color:var(--color-background-primary);background-color:var(--color-foreground-primary)">
+<a _sp="p4375194.m150506.l8342" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "moduledtl": "mi:150506|iid:1|li:8342", "vlpname": "vlp_homepage", "audience": "general"}}' href="https://www.ebay.com/deals?_trkparms=parentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Cpageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Ciid%3A1%7Cvlpname%3Avlp_homepage">
+<div class="vl-cta__text-only" style="color:var(--color-background-primary)">
+                 Shop now
+                 <!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[9]-7-@match-media-0-@ebay-carousel-4[@0]-8-1-9-1-1-3-1-0-0-->
+<svg aria-hidden='true' class="vl-cta-arrow vl-text-banner__cta-arrow icon icon--24" data-marko-key="@svg s0-1-0-52-1-2-4-17[0[0]]-0[9]-7-@match-media-0-@ebay-carousel-4[@0]-8-1-9-1-1-3-1-0-0" focusable='false' style="fill:currentColor">
+<use href="#icon-arrow-right-24">
+</use>
+</svg>
+<!--vertlandweb/-->
+</div>
+<div class="vl-cta__default evo" onmouseout="this.style.background='var(--color-background-primary)'; this.style.color='var(--color-foreground-primary)'; this.style['border-color']='var(--color-background-primary)';" onmouseover="this.style.background='null'; this.style.color='null';" style="background-color: var(--color-background-primary); color: var(--color-foreground-primary); border-color: var(--color-background-primary)">
+                 Shop now
+                 <!--vertlandweb#s0-1-0-52-1-2-4-17[0[0]]-0[9]-7-@match-media-0-@ebay-carousel-4[@0]-8-1-9-1-1-5-1-0-0-->
+<svg aria-hidden='true' class="vl-cta-arrow vl-text-banner__cta-arrow icon icon--24" data-marko-key="@svg s0-1-0-52-1-2-4-17[0[0]]-0[9]-7-@match-media-0-@ebay-carousel-4[@0]-8-1-9-1-1-5-1-0-0" focusable='false' style="fill:currentColor">
+<use href="#icon-arrow-right-24">
+</use>
+</svg>
+<!--vertlandweb/-->
+</div>
+</a>
+</div>
+</div>
+<!--F/-->
+</li>
+<li class="vl-carousel__item" style="width:calc(25.974025974025974% - 11.844155844155845px);margin-right:16px">
+<!--F#4[@1]-->
+<div class="vlp-merch-item-card-container" data-interactions='[{"actionKind": "CLICK", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1HODJYOEg1NVozWjFOSlJXQVM0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA"}]' data-viewport='{"trackableId": "01J53XXMG82X8H55Z3Z1NJRWAS"}'>
+<a _sp="p4375194.m150506.l3949.c1" class="vlp-merch-item-tile" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "354393355064", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D1%26rkt%3D15%26b%3D1%26itm%3D354393355064%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2%26tu%3D01J53XXMG82X8H55Z3Z1NJRWAS", "ampid": "MERCH_CLK", "rank": "1", "ammiid": "9b67e495ee03423a850814347ea1b046", "moduledtl": "mi:150506|iid:1|li:3949|luid:1|c:1", "vlpname": "vlp_homepage", "trackableId": "01J53XXMG82X8H55Z3Z1NJRWAS", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1HODJYOEg1NVozWjFOSlJXQVM0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA", "audience": "general"}}' data-track='[{"actionKind": "NAV", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"trkp": "parentrq:47ded1841910ab8d0e971f48fffff5b0|pageci:8367f410-58d9-11ef-8be2-2a95c25823a1|iid:1|vlpname:vlp_homepage", "sid": "p4375194.m150506.l3949.c1", "audience": "general"}}, {"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "354393355064", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D1%26rkt%3D15%26b%3D1%26itm%3D354393355064%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2%26tu%3D01J53XXMG82X8H55Z3Z1NJRWAS", "ampid": "MERCH_CLK", "rank": "1", "ammiid": "9b67e495ee03423a850814347ea1b046", "moduledtl": "mi:150506|iid:1|li:3949|luid:1|c:1", "vlpname": "vlp_homepage", "trackableId": "01J53XXMG82X8H55Z3Z1NJRWAS", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1HODJYOEg1NVozWjFOSlJXQVM0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA", "audience": "general"}}]' href="https://www.ebay.com/itm/354393355064?_trkparms=amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D1%26rkt%3D1%26b%3D1%26itm%3D354393355064%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2&_trksid=p4375194.c101910.m150506&_trkparms=parentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Cpageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Ciid%3A1%7Cvlpname%3Avlp_homepage" target="_blank">
+<div class="vlp-merch-content-wrap">
+<div class="vlp-merch-image-wrap-dweb">
+<div class="vlp-merch-image-frame" style=" ">
+<div class="vl-image-js js-only">
+<img alt="Apple iPhone 13 A2482 128GB Network Unlocked Very Good Condition" class="vlp-merch-item-image" crossorigin="anonymous" data-high-res-size='500' data-item-card='true' data-size='300' data-src="https://i.ebayimg.com/thumbs/images/g/DDcAAOSwEjhjcrCI/s-l500.jpg" onerror="window.addtoLazyLoad({el: this, fit: false})" onload="window.addtoLazyLoad({el: this, fit: false})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-image__no-fill">
+<img alt="Apple iPhone 13 A2482 128GB Network Unlocked Very Good Condition" src="https://i.ebayimg.com/thumbs/images/g/DDcAAOSwEjhjcrCI/s-l500.jpg"></img>
+</div>
+</noscript>
+</div>
+</div>
+<div class="vlp-merch-item-info">
+<h3 class="vlp-merch-item-title vlp-merch-item-title-dweb vlp-merch-item-title-margin">
+                  Apple iPhone 13 A2482 128GB Network Unlocked Very Good Condition
+                 </h3>
+<div class="vlp-merch-sub-group">
+<div class="vlp-merch-price">
+<span role="text">
+                    $374.99
+                   </span>
+<span class="vlp-merch-additional-price">
+<span aria-label="previous price $599.00" class="sh-strikethrough" role="text">
+                     $599.00
+                    </span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<!--F/-->
+</li>
+<li class="vl-carousel__item" style="width:calc(25.974025974025974% - 11.844155844155845px);margin-right:16px">
+<!--F#4[@2]-->
+<div class="vlp-merch-item-card-container" data-interactions='[{"actionKind": "CLICK", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1HOUtQNTMwSFRKRVI0MUdZRFc0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA"}]' data-viewport='{"trackableId": "01J53XXMG9KP530HTJER41GYDW"}'>
+<a _sp="p4375194.m150506.l3949.c2" class="vlp-merch-item-tile" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "186474086505", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D2%26rkt%3D15%26b%3D1%26itm%3D186474086505%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2%26tu%3D01J53XXMG9KP530HTJER41GYDW", "ampid": "MERCH_CLK", "rank": "2", "ammiid": "9b67e495ee03423a850814347ea1b046", "moduledtl": "mi:150506|iid:1|li:3949|luid:2|c:2", "vlpname": "vlp_homepage", "trackableId": "01J53XXMG9KP530HTJER41GYDW", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1HOUtQNTMwSFRKRVI0MUdZRFc0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA", "audience": "general"}}' data-track='[{"actionKind": "NAV", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"trkp": "parentrq:47ded1841910ab8d0e971f48fffff5b0|pageci:8367f410-58d9-11ef-8be2-2a95c25823a1|iid:1|vlpname:vlp_homepage", "sid": "p4375194.m150506.l3949.c2", "audience": "general"}}, {"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "186474086505", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D2%26rkt%3D15%26b%3D1%26itm%3D186474086505%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2%26tu%3D01J53XXMG9KP530HTJER41GYDW", "ampid": "MERCH_CLK", "rank": "2", "ammiid": "9b67e495ee03423a850814347ea1b046", "moduledtl": "mi:150506|iid:1|li:3949|luid:2|c:2", "vlpname": "vlp_homepage", "trackableId": "01J53XXMG9KP530HTJER41GYDW", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1HOUtQNTMwSFRKRVI0MUdZRFc0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA", "audience": "general"}}]' href="https://www.ebay.com/itm/186474086505?_trkparms=amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D1%26rkt%3D1%26b%3D1%26itm%3D186474086505%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2&_trksid=p4375194.c101910.m150506&_trkparms=parentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Cpageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Ciid%3A1%7Cvlpname%3Avlp_homepage" target="_blank">
+<div class="vlp-merch-content-wrap">
+<div class="vlp-merch-image-wrap-dweb">
+<div class="vlp-merch-image-frame" style=" ">
+<div class="vl-image-js js-only">
+<img alt="Speedo Men's Surf Strider Surf Knit Aqua Water Shoes Breathable" class="vlp-merch-item-image" crossorigin="anonymous" data-high-res-size='500' data-item-card='true' data-size='300' data-src="https://i.ebayimg.com/thumbs/images/g/lnEAAOSw-EFmXde~/s-l500.jpg" onerror="window.addtoLazyLoad({el: this, fit: false})" onload="window.addtoLazyLoad({el: this, fit: false})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-image__no-fill">
+<img alt="Speedo Men's Surf Strider Surf Knit Aqua Water Shoes Breathable" src="https://i.ebayimg.com/thumbs/images/g/lnEAAOSw-EFmXde~/s-l500.jpg"></img>
+</div>
+</noscript>
+</div>
+</div>
+<div class="vlp-merch-item-info">
+<h3 class="vlp-merch-item-title vlp-merch-item-title-dweb vlp-merch-item-title-margin">
+                  Speedo Men's Surf Strider Surf Knit Aqua Water Shoes Breathable
+                 </h3>
+<div class="vlp-merch-sub-group">
+<div class="vlp-merch-price">
+<span role="text">
+                    $8.83
+                   </span>
+<span class="vlp-merch-additional-price">
+<span aria-label="previous price $34.99" class="sh-strikethrough" role="text">
+                     $34.99
+                    </span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<!--F/-->
+</li>
+<li class="carousel__snap-point vl-carousel__item" style="width:calc(25.974025974025974% - 11.844155844155845px);margin-right:16px">
+<!--F#4[@3]-->
+<div class="vlp-merch-item-card-container" data-interactions='[{"actionKind": "CLICK", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1HOUpITkhYMVJKRjQyRzNHNjE0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA"}]' data-viewport='{"trackableId": "01J53XXMG9JHNHX1RJF42G3G61"}'>
+<a _sp="p4375194.m150506.l3949.c3" class="vlp-merch-item-tile" data-click='{"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "276117937329", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D3%26rkt%3D15%26b%3D1%26itm%3D276117937329%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2%26tu%3D01J53XXMG9JHNHX1RJF42G3G61", "ampid": "MERCH_CLK", "rank": "3", "ammiid": "9b67e495ee03423a850814347ea1b046", "moduledtl": "mi:150506|iid:1|li:3949|luid:3|c:3", "vlpname": "vlp_homepage", "trackableId": "01J53XXMG9JHNHX1RJF42G3G61", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1HOUpITkhYMVJKRjQyRzNHNjE0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA", "audience": "general"}}' data-track='[{"actionKind": "NAV", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"trkp": "parentrq:47ded1841910ab8d0e971f48fffff5b0|pageci:8367f410-58d9-11ef-8be2-2a95c25823a1|iid:1|vlpname:vlp_homepage", "sid": "p4375194.m150506.l3949.c3", "audience": "general"}}, {"eventFamily": "VERTLAND", "eventAction": "ACTN", "actionKind": "CLICK", "operationId": "4375194", "flushImmediately": false, "eventProperty": {"parentrq": "47ded1841910ab8d0e971f48fffff5b0", "itm": "276117937329", "pageci": "8367f410-58d9-11ef-8be2-2a95c25823a1", "amdata": "amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D3%26rkt%3D15%26b%3D1%26itm%3D276117937329%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2%26tu%3D01J53XXMG9JHNHX1RJF42G3G61", "ampid": "MERCH_CLK", "rank": "3", "ammiid": "9b67e495ee03423a850814347ea1b046", "moduledtl": "mi:150506|iid:1|li:3949|luid:3|c:3", "vlpname": "vlp_homepage", "trackableId": "01J53XXMG9JHNHX1RJF42G3G61", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1HOUpITkhYMVJKRjQyRzNHNjE0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA", "audience": "general"}}]' href="https://www.ebay.com/itm/276117937329?_trkparms=amclksrc%3DITM%26aid%3D777008%26algo%3DPERSONAL.TOPIC%26ao%3D1%26asc%3D20231108131718%26meid%3D9b67e495ee03423a850814347ea1b046%26pid%3D101910%26rk%3D1%26rkt%3D1%26b%3D1%26itm%3D276117937329%26pmt%3D0%26noa%3D1%26pg%3D4375194%26algv%3DFeaturedDealsV2&_trksid=p4375194.c101910.m150506&_trkparms=parentrq%3A47ded1841910ab8d0e971f48fffff5b0%7Cpageci%3A8367f410-58d9-11ef-8be2-2a95c25823a1%7Ciid%3A1%7Cvlpname%3Avlp_homepage" target="_blank">
+<div class="vlp-merch-content-wrap">
+<div class="vlp-merch-image-wrap-dweb">
+<div class="vlp-merch-image-frame" style=" ">
+<div class="vl-image-js js-only">
+<img alt="Dyson Airwrap™ Multi-styler Complete Long" class="vlp-merch-item-image" crossorigin="anonymous" data-high-res-size='500' data-item-card='true' data-size='300' data-src="https://i.ebayimg.com/thumbs/images/g/7EUAAOSwYdRmfX9i/s-l500.jpg" onerror="window.addtoLazyLoad({el: this, fit: false})" onload="window.addtoLazyLoad({el: this, fit: false})" src="//ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"></img>
+</div>
+<noscript aria-hidden='false'>
+<div class="vl-image vl-image__no-fill">
+<img alt="Dyson Airwrap™ Multi-styler Complete Long" src="https://i.ebayimg.com/thumbs/images/g/7EUAAOSwYdRmfX9i/s-l500.jpg"></img>
+</div>
+</noscript>
+</div>
+</div>
+<div class="vlp-merch-item-info">
+<h3 class="vlp-merch-item-title vlp-merch-item-title-dweb vlp-merch-item-title-margin">
+                  Dyson Airwrap™ Multi-styler Complete Long
+                 </h3>
+<div class="vlp-merch-sub-group">
+<div class="vlp-merch-price">
+<span role="text">
+                    $349.99
+                   </span>
+<span class="vlp-merch-additional-price">
+<span aria-label="previous price $599.99" class="sh-strikethrough" role="text">
+                     $599.99
+                    </span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<!--F/-->
+</li>
+<li class="vl-carousel__item" style="width:calc(25.974025974025974% - 11.844155844155845px);margin-right:16px">
+<!--F#4[@4]-->
+<div class="vlp-merch-item-card-container" data-interactions='[{"actionKind": "CLICK", "interaction": "wwEHJYB2WXwZRgQ0MDFKNTNYWE1HOTdWUlExR0tZQ1ZIN0pDUFY0MDFKNTNYWE1HRVpHM1RTVkNOU0tHWDBIUTIACDM5NDkKQ0xJQ0sA"}]' data-viewport='{"trackableId": "01J53XXMG97VRQ1GKYCVH7JCPV"}'>
+
+        ```
+        

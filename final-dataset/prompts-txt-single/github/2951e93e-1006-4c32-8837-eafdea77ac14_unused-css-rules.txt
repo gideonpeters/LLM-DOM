@@ -1,0 +1,237 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. unused-css-rules => Reduce unused CSS: Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        
+<meta charset="utf-8"></meta>
+<link href="https://github.githubassets.com" rel="dns-prefetch"></link>
+<link href="https://avatars.githubusercontent.com" rel="dns-prefetch"></link>
+<link href="https://github-cloud.s3.amazonaws.com" rel="dns-prefetch"></link>
+<link href="https://user-images.githubusercontent.com/" rel="dns-prefetch"></link>
+<link crossorigin="" href="https://github.githubassets.com" rel="preconnect"></link>
+<link href="https://avatars.githubusercontent.com" rel="preconnect"></link>
+<link crossorigin="anonymous" href="https://github.githubassets.com/assets/light-efd2f2257c96.css" media="all" rel="stylesheet"></link>
+<link crossorigin="anonymous" href="https://github.githubassets.com/assets/dark-6b1e37da2254.css" media="all" rel="stylesheet"></link>
+<link crossorigin="anonymous" data-color-theme="light" data-href="https://github.githubassets.com/assets/light-efd2f2257c96.css" media="all" rel="stylesheet"></link>
+<link crossorigin="anonymous" data-color-theme="dark" data-href="https://github.githubassets.com/assets/dark-6b1e37da2254.css" media="all" rel="stylesheet"></link>
+<link crossorigin="anonymous" data-color-theme="dark_dimmed" data-href="https://github.githubassets.com/assets/dark_dimmed-aa16bfa90fb8.css" media="all" rel="stylesheet"></link>
+<link crossorigin="anonymous" data-color-theme="dark_high_contrast" data-href="https://github.githubassets.com/assets/dark_high_contrast-f4daad25d8cf.css" media="all" rel="stylesheet"></link>
+<link crossorigin="anonymous" data-color-theme="dark_colorblind" data-href="https://github.githubassets.com/assets/dark_colorblind-a4629b2e906b.css" media="all" rel="stylesheet">
+<link crossorigin="anonymous" data-color-theme="light_colorblind" data-href="https://github.githubassets.com/assets/light_colorblind-afcc3a6a38dd.css" media="all" rel="stylesheet">
+<link crossorigin="anonymous" data-color-theme="light_high_contrast" data-href="https://github.githubassets.com/assets/light_high_contrast-79bca7145393.css" media="all" rel="stylesheet">
+<link crossorigin="anonymous" data-color-theme="light_tritanopia" data-href="https://github.githubassets.com/assets/light_tritanopia-fe4137b54b26.css" media="all" rel="stylesheet">
+<link crossorigin="anonymous" data-color-theme="dark_tritanopia" data-href="https://github.githubassets.com/assets/dark_tritanopia-1911f0cf0db4.css" media="all" rel="stylesheet">
+<link crossorigin="anonymous" href="https://github.githubassets.com/assets/primer-primitives-8500c2c7ce5f.css" media="all" rel="stylesheet">
+<link crossorigin="anonymous" href="https://github.githubassets.com/assets/primer-bbda46ca867f.css" media="all" rel="stylesheet"></link>
+<link crossorigin="anonymous" href="https://github.githubassets.com/assets/global-6f01bc73955b.css" media="all" rel="stylesheet"></link>
+<link crossorigin="anonymous" href="https://github.githubassets.com/assets/github-cf4e90581e80.css" media="all" rel="stylesheet"></link>
+<link crossorigin="anonymous" href="https://github.githubassets.com/assets/experiments-d9e399ccf9fe.css" media="all" rel="stylesheet"></link>
+<link crossorigin="anonymous" href="https://github.githubassets.com/assets/dashboard-f1914fde0409.css" media="all" rel="stylesheet"></link>
+<link crossorigin="anonymous" href="https://github.githubassets.com/assets/discussions-b90563556d3b.css" media="all" rel="stylesheet"></link>
+<link crossorigin="anonymous" href="https://github.githubassets.com/assets/site-428f46b93a39.css" media="all" rel="stylesheet"></link>
+<link crossorigin="anonymous" href="https://github.githubassets.com/assets/home-f57bcc4383d0.css" media="all" rel="stylesheet"></link>
+<script data-chunk-uuid="79e8f43d-dd75-4add-8bde-9c04909ed42e" id="client-env" type="application/json">// chunk_script_79e8f43d-dd75-4add-8bde-9c04909ed42e
+</script>
+<script data-chunk-uuid="486b105b-5c8f-4f5d-9023-255186bde6d8" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/wp-runtime-0838a1951526.js" type="application/javascript">// chunk_script_486b105b-5c8f-4f5d-9023-255186bde6d8
+</script>
+<script data-chunk-uuid="5f07f9d9-0764-42ec-be83-14c84f608c6b" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/vendors-node_modules_dompurify_dist_purify_js-89a69c248502.js" type="application/javascript">// chunk_script_5f07f9d9-0764-42ec-be83-14c84f608c6b
+</script>
+<script data-chunk-uuid="1993a40a-6ae8-4941-86a0-7f2fba50a505" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/vendors-node_modules_oddbird_popover-polyfill_dist_popover_js-56729c905fe2.js" type="application/javascript">// chunk_script_1993a40a-6ae8-4941-86a0-7f2fba50a505
+</script>
+<script data-chunk-uuid="8d911575-b20f-413d-b327-6d6e32f909d7" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/vendors-node_modules_github_mini-throttle_dist_index_js-node_modules_smoothscroll-polyfill_di-75db2e-686488490524.js" type="application/javascript">// chunk_script_8d911575-b20f-413d-b327-6d6e32f909d7
+</script>
+<script data-chunk-uuid="34f2352f-4398-496f-96ef-80d9c00da20d" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/environment-cd098098ff2e.js" type="application/javascript">// chunk_script_34f2352f-4398-496f-96ef-80d9c00da20d
+</script>
+<script data-chunk-uuid="1e3d3139-0e7f-4845-a79f-6bf2b3bf3731" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/vendors-node_modules_github_selector-observer_dist_index_esm_js-f690fd9ae3d5.js" type="application/javascript">// chunk_script_1e3d3139-0e7f-4845-a79f-6bf2b3bf3731
+</script>
+<script data-chunk-uuid="814a8ebf-9710-43d9-a168-4dc47ebf0c7e" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/vendors-node_modules_primer_behaviors_dist_esm_focus-zone_js-c9086a4fb62b.js" type="application/javascript">// chunk_script_814a8ebf-9710-43d9-a168-4dc47ebf0c7e
+</script>
+<script data-chunk-uuid="a0238e82-4d66-4d73-a1a6-0d7e690a31f4" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/vendors-node_modules_github_relative-time-element_dist_index_js-f9b958f5f2df.js" type="application/javascript">// chunk_script_a0238e82-4d66-4d73-a1a6-0d7e690a31f4
+</script>
+<script data-chunk-uuid="d5252a8c-cc04-4c07-801f-720efe1d2cf6" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/vendors-node_modules_primer_behaviors_dist_esm_anchored-position_js-node_modules_github_combo-aea225-dcf5851b6d7d.js" type="application/javascript">// chunk_script_d5252a8c-cc04-4c07-801f-720efe1d2cf6
+</script>
+<script data-chunk-uuid="d853e5c1-9458-4f34-8612-2f7521223edf" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/vendors-node_modules_github_text-expander-element_dist_index_js-cd48220d74d5.js" type="application/javascript">// chunk_script_d853e5c1-9458-4f34-8612-2f7521223edf
+</script>
+<script data-chunk-uuid="22f2b328-4aff-4c1e-bb8f-e6729d24fc4b" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/vendors-node_modules_github_auto-complete-element_dist_index_js-node_modules_github_details-d-ed9a97-841122a1e9d4.js" type="application/javascript">// chunk_script_22f2b328-4aff-4c1e-bb8f-e6729d24fc4b
+</script>
+<script data-chunk-uuid="876d23e8-9464-4e91-8221-1c9f7d4271e1" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/vendors-node_modules_github_mini-throttle_dist_index_js-node_modules_delegated-events_dist_in-3efda3-701acb69193f.js" type="application/javascript">// chunk_script_876d23e8-9464-4e91-8221-1c9f7d4271e1
+</script>
+<script data-chunk-uuid="f864c84a-2d83-4edc-94c0-81b08e994439" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/vendors-node_modules_github_filter-input-element_dist_index_js-node_modules_github_remote-inp-b7d8f4-2355048ff048.js" type="application/javascript">// chunk_script_f864c84a-2d83-4edc-94c0-81b08e994439
+</script>
+<script data-chunk-uuid="e1e84a89-df91-40fd-a7f1-c5c0f7d9fe33" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/vendors-node_modules_github_catalyst_lib_index_js-node_modules_github_clipboard-copy-element_-782ca5-54763cd55b96.js" type="application/javascript">// chunk_script_e1e84a89-df91-40fd-a7f1-c5c0f7d9fe33
+</script>
+<script data-chunk-uuid="61954000-fdae-4da0-9085-bfb17f4ec97d" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/vendors-node_modules_github_file-attachment-element_dist_index_js-node_modules_primer_view-co-3959a9-5779869d7165.js" type="application/javascript">// chunk_script_61954000-fdae-4da0-9085-bfb17f4ec97d
+</script>
+<script data-chunk-uuid="70a00c11-e580-4772-b487-5b581a0c6907" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/app_assets_modules_github_onfocus_ts-ui_packages_trusted-types-policies_policy_ts-ui_packages-6fe316-9d50d6f10c3d.js" type="application/javascript">// chunk_script_70a00c11-e580-4772-b487-5b581a0c6907
+</script>
+<script data-chunk-uuid="3e72518c-9765-4b4d-a3f6-0871ec57a4bf" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/github-elements-b5a402753026.js" type="application/javascript">// chunk_script_3e72518c-9765-4b4d-a3f6-0871ec57a4bf
+</script>
+<script data-chunk-uuid="3eb69941-43df-4ecc-b41c-eac79618aa68" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/element-registry-6b3f0dc435d0.js" type="application/javascript">// chunk_script_3eb69941-43df-4ecc-b41c-eac79618aa68
+</script>
+<script data-chunk-uuid="2f45ef52-d286-4bb8-a0c6-7ca2903938da" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/vendors-node_modules_github_catalyst_lib_index_js-node_modules_github_hydro-analytics-client_-7901e7-dc88587c14ed.js" type="application/javascript">// chunk_script_2f45ef52-d286-4bb8-a0c6-7ca2903938da
+</script>
+<script data-chunk-uuid="766be006-4eed-46bb-b843-bdefb7ac6f54" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/vendors-node_modules_braintree_browser-detection_dist_browser-detection_js-node_modules_stack-68835d-a18220f1db8d.js" type="application/javascript">// chunk_script_766be006-4eed-46bb-b843-bdefb7ac6f54
+</script>
+<script data-chunk-uuid="3a7ea0a2-908e-49e4-bd4d-d41dcb1c4834" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/vendors-node_modules_lit-html_lit-html_js-ce7225a304c5.js" type="application/javascript">// chunk_script_3a7ea0a2-908e-49e4-bd4d-d41dcb1c4834
+</script>
+<script data-chunk-uuid="eb08c169-f93d-4b6b-9021-e0441f813e48" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/vendors-node_modules_github_mini-throttle_dist_index_js-node_modules_morphdom_dist_morphdom-e-7c534c-f8a5485c982a.js" type="application/javascript">// chunk_script_eb08c169-f93d-4b6b-9021-e0441f813e48
+</script>
+<script data-chunk-uuid="debcba17-0821-4983-9a70-6b07e06689ae" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/vendors-node_modules_github_turbo_dist_turbo_es2017-esm_js-858e043fcf76.js" type="application/javascript">// chunk_script_debcba17-0821-4983-9a70-6b07e06689ae
+</script>
+<script data-chunk-uuid="9d5f6016-24d7-4cdb-a68d-c65bb3cf3340" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/vendors-node_modules_github_remote-form_dist_index_js-node_modules_delegated-events_dist_inde-893f9f-6cf3320416b8.js" type="application/javascript">// chunk_script_9d5f6016-24d7-4cdb-a68d-c65bb3cf3340
+</script>
+<script data-chunk-uuid="004cf3c5-f208-482d-b731-005478a3f299" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/vendors-node_modules_scroll-anchoring_dist_scroll-anchoring_esm_js-node_modules_github_hotkey-1a1d91-fa9f29a8514b.js" type="application/javascript">// chunk_script_004cf3c5-f208-482d-b731-005478a3f299
+</script>
+<script data-chunk-uuid="d0a7b2fc-275b-4569-8079-18646d8ddc18" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/vendors-node_modules_color-convert_index_js-0e07cc183eed.js" type="application/javascript">// chunk_script_d0a7b2fc-275b-4569-8079-18646d8ddc18
+</script>
+<script data-chunk-uuid="ddba6ec4-33b9-4b7d-8a71-00f4ff013888" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/vendors-node_modules_primer_behaviors_dist_esm_dimensions_js-node_modules_github_jtml_lib_index_js-53b423ede32a.js" type="application/javascript">// chunk_script_ddba6ec4-33b9-4b7d-8a71-00f4ff013888
+</script>
+<script data-chunk-uuid="a56d913e-0c08-4e5a-ae54-9f35e4414115" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/vendors-node_modules_github_session-resume_dist_index_js-node_modules_primer_behaviors_dist_e-da6ec6-5de3eedc1320.js" type="application/javascript">// chunk_script_a56d913e-0c08-4e5a-ae54-9f35e4414115
+</script>
+<script data-chunk-uuid="4f17c150-8a4c-4568-a87b-998100b714df" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/vendors-node_modules_github_quote-selection_dist_index_js-node_modules_github_textarea-autosi-9e0349-ab4976fc78a6.js" type="application/javascript">// chunk_script_4f17c150-8a4c-4568-a87b-998100b714df
+</script>
+<script data-chunk-uuid="4a1924f5-bb79-4411-a4e0-6db330bee401" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/ui_packages_updatable-content_updatable-content_ts-e15463ecf7e6.js" type="application/javascript">// chunk_script_4a1924f5-bb79-4411-a4e0-6db330bee401
+</script>
+<script data-chunk-uuid="b2daf354-005d-4d82-a2d8-69c97b0548b7" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/app_assets_modules_github_behaviors_task-list_ts-app_assets_modules_github_onfocus_ts-app_ass-421cec-f0e1d31bff9a.js" type="application/javascript">// chunk_script_b2daf354-005d-4d82-a2d8-69c97b0548b7
+</script>
+<script data-chunk-uuid="fecd1155-2d11-441a-a224-6617bd63595a" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/app_assets_modules_github_sticky-scroll-into-view_ts-112600808cf9.js" type="application/javascript">// chunk_script_fecd1155-2d11-441a-a224-6617bd63595a
+</script>
+<script data-chunk-uuid="e98acb6f-175b-425e-958e-d7621039d401" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/app_assets_modules_github_behaviors_ajax-error_ts-app_assets_modules_github_behaviors_include-467754-8b1a4442f9b3.js" type="application/javascript">// chunk_script_e98acb6f-175b-425e-958e-d7621039d401
+</script>
+<script data-chunk-uuid="f996d845-5105-4170-a3e3-53672a354f06" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/app_assets_modules_github_behaviors_commenting_edit_ts-app_assets_modules_github_behaviors_ht-83c235-4accd4baf37d.js" type="application/javascript">// chunk_script_f996d845-5105-4170-a3e3-53672a354f06
+</script>
+<script data-chunk-uuid="7c376875-adc6-4cac-8dad-812f6d7aabb6" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/app_assets_modules_github_blob-anchor_ts-app_assets_modules_github_filter-sort_ts-app_assets_-6deafe-fc95155e233a.js" type="application/javascript">// chunk_script_7c376875-adc6-4cac-8dad-812f6d7aabb6
+</script>
+<script data-chunk-uuid="95bc8772-a041-40e3-a2d4-c425030319d0" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/behaviors-d0c6b90f51b9.js" type="application/javascript">// chunk_script_95bc8772-a041-40e3-a2d4-c425030319d0
+</script>
+<script data-chunk-uuid="ede25341-494a-464c-8bca-87a4e30c905e" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/vendors-node_modules_delegated-events_dist_index_js-node_modules_github_catalyst_lib_index_js-06ff531-bf7e5a3732fd.js" type="application/javascript">// chunk_script_ede25341-494a-464c-8bca-87a4e30c905e
+</script>
+<script data-chunk-uuid="329a03f4-0fa8-4dd6-bbe7-c8971c6685e4" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/notifications-global-3ddac678adaf.js" type="application/javascript">// chunk_script_329a03f4-0fa8-4dd6-bbe7-c8971c6685e4
+</script>
+<script data-chunk-uuid="1694a2d2-dadb-4bbc-b5d7-154fd262c450" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/vendors-node_modules_github_mini-throttle_dist_index_js-node_modules_delegated-events_dist_in-bae876-2d72fcaac66d.js" type="application/javascript">// chunk_script_1694a2d2-dadb-4bbc-b5d7-154fd262c450
+</script>
+<script data-chunk-uuid="71ad8fe0-6fff-46f7-a792-369af8ed8e70" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/marketing-74fb047ac97a.js" type="application/javascript">// chunk_script_71ad8fe0-6fff-46f7-a792-369af8ed8e70
+</script>
+<script data-chunk-uuid="ef912fa6-721a-474b-9634-4bd824b0c4e2" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/home-fa7c9cc8a53c.js" type="application/javascript">// chunk_script_ef912fa6-721a-474b-9634-4bd824b0c4e2
+</script>
+<script data-chunk-uuid="1e00ba9d-c562-4e74-817f-e8080bd98c68" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/marketing-experiments-dc2226da9084.js" type="application/javascript">// chunk_script_1e00ba9d-c562-4e74-817f-e8080bd98c68
+</script>
+<script data-chunk-uuid="23c43bc6-da77-49f3-a32e-761ce4f39ab9" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/vendors-node_modules_github_webgl-globe_dist_js_main_js-7ace716f3606.js" type="application/javascript">// chunk_script_23c43bc6-da77-49f3-a32e-761ce4f39ab9
+</script>
+<script data-chunk-uuid="2262366c-f9f5-416e-9eec-0e45811add2a" crossorigin="anonymous" defer="defer" src="https://github.githubassets.com/assets/webgl-globe-b8ac95da6496.js" type="application/javascript">// chunk_script_2262366c-f9f5-416e-9eec-0e45811add2a
+</script>
+<title>
+         GitHub: Let’s build from here · GitHub
+        </title>
+<meta content="/" data-turbo-transient="" name="route-pattern"></meta>
+<meta content="dashboard" data-turbo-transient="" name="route-controller"></meta>
+<meta content="index" data-turbo-transient="" name="route-action"></meta>
+<meta content="40dc28bd654b20f337468a532ff456ed5863889cfbb4e982b793597321d48d3f" name="current-catalog-service-hash"></meta>
+<meta content="CBCB:25A130:1ADB5B3:25F0741:66BA55BB" data-pjax-transient='true' name="request-id"></meta>
+<meta content="6632f573e28c877f6fa59394a85b8c2d801edf50140abc22fa5c1d570ff73824" data-pjax-transient='true' name="html-safe-nonce"></meta>
+<meta content="eyJyZWZlcnJlciI6IiIsInJlcXVlc3RfaWQiOiJDQkNCOjI1QTEzMDoxQURCNUIzOjI1RjA3NDE6NjZCQTU1QkIiLCJ2aXNpdG9yX2lkIjoiNzk5NDE5NTY2NTk2MzYwMzM4NyIsInJlZ2lvbl9lZGdlIjoiaWFkIiwicmVnaW9uX3JlbmRlciI6ImlhZCJ9" data-pjax-transient='true' name="visitor-payload"></meta>
+<meta content="69b36ac203d4b66825969eda6caa4f1055d24b95267bbc05ca910614bcb60e6c" data-pjax-transient='true' name="visitor-hmac"></meta>
+<meta content="GitHub" name="page-subject">
+<meta content="dashboards,copilot" data-turbo-transient='true' name="github-keyboard-shortcuts"></meta>
+<meta data-turbo-transient="" name="selected-link" value="/">
+<link href="https://github.githubassets.com/" rel="assets"></link>
+<meta content="Apib7-x98H0j5cPqHWwSMm6dNU4GmODRoqxLiDzdx9I" name="google-site-verification">
+<meta content="https://collector.github.com/github/collect" name="octolytics-url"></meta>
+<meta content="" name="user-login">
+<meta content="width=device-width" name="viewport">
+<meta content="GitHub is where over 100 million developers shape the future of software, together. Contribute to the open source community, manage your Git repositories, review code like a pro, track bugs and features, power your CI/CD and DevOps workflows, and secure code before you commit it." name="description">
+<link href="/opensearch.xml" rel="search" title="GitHub" type="application/opensearchdescription+xml"></link>
+<link href="https://github.com/fluidicon.png" rel="fluid-icon" title="GitHub"></link>
+<meta content='1401488693436528' property="fb:app_id"></meta>
+<meta content="app-id=1477376905, app-argument=https://github.com/" name="apple-itunes-app"></meta>
+<meta content="https://github.githubassets.com/assets/campaign-social-031d6161fa10.png" name="twitter:image:src"></meta>
+<meta content="@github" name="twitter:site"></meta>
+<meta content="summary_large_image" name="twitter:card"></meta>
+<meta content="GitHub: Let’s build from here" name="twitter:title"></meta>
+<meta content="GitHub is where over 100 million developers shape the future of software, together. Contribute to the open source community, manage your Git repositories, review code like a pro, track bugs and fea..." name="twitter:description"></meta>
+<meta content="https://github.githubassets.com/assets/campaign-social-031d6161fa10.png" property="og:image">
+<meta content="GitHub is where over 100 million developers shape the future of software, together. Contribute to the open source community, manage your Git repositories, review code like a pro, track bugs and fea..." property="og:image:alt">
+<meta content="GitHub" property="og:site_name">
+<meta content="object" property="og:type">
+<meta content="GitHub: Let’s build from here" property="og:title">
+<meta content="https://github.com/" property="og:url">
+<meta content="GitHub is where over 100 million developers shape the future of software, together. Contribute to the open source community, manage your Git repositories, review code like a pro, track bugs and fea..." property="og:description"></meta>
+<meta content="github.com" name="hostname"></meta>
+<meta content="github.com" name="expected-hostname"></meta>
+<meta content="20cbe3f6caa7a58cd72077ff456987d2b2d17c851bedfc01acaa93fdaf308b9f" data-turbo-track="reload" http-equiv="x-pjax-version"></meta>
+<meta content="bb8c8167546340ddf3867e4f4354fe91c49ff26f3e01be5de23f707e9fb2b448" data-turbo-track="reload" http-equiv="x-pjax-csp-version"></meta>
+<meta content="2d21d1d7fc96c63650d487b78819572219a98df9016097e18aa73b19581cb3bc" data-turbo-track="reload" http-equiv="x-pjax-css-version"></meta>
+<meta content="70f7ba706b34adc3fe9d1e5ab9bf6433afa8be779bcf0871ac4dc1f756107226" data-turbo-track="reload" http-equiv="x-pjax-js-version"></meta>
+<meta content="no-preview" data-turbo-transient="" name="turbo-cache-control"></meta>
+<meta content="image/png" property="og:image:type"></meta>
+<meta content='1200' property="og:image:width"></meta>
+<meta content='630' property="og:image:height"></meta>
+<link href="https://hachyderm.io/@github" rel="me"></link>
+<link crossorigin="anonymous" href="https://github.githubassets.com/assets/home-f57bcc4383d0.css" media="all" rel="stylesheet"></link>
+<link as="font" crossorigin="" href="https://github.githubassets.com/assets/mona-sans-d1bf285e9b9b.woff2" rel="preload" type="font/woff2">
+<meta content='true' name="is_logged_out_page"></meta>
+<link data-turbo-transient="" href="https://github.com" rel="canonical"></link>
+<meta content="logged-out env-production page-responsive header-overlay home-campaign" name="turbo-body-classes"></meta>
+<meta content="https://api.github.com/_private/browser/stats" name="browser-stats-url"></meta>
+<meta content="https://api.github.com/_private/browser/errors" name="browser-errors-url"></meta>
+<link color="#000000" href="https://github.githubassets.com/assets/pinned-octocat-093da3e6fa40.svg" rel="mask-icon"></link>
+<link class="js-site-favicon" href="https://github.githubassets.com/favicons/favicon.png" rel="alternate icon" type="image/png"></link>
+<link class="js-site-favicon" href="https://github.githubassets.com/favicons/favicon.svg" rel="icon" type="image/svg+xml"></link>
+<meta content="#1e2327" name="theme-color"></meta>
+<meta content="light dark" name="color-scheme"></meta>
+<link crossorigin="use-credentials" href="/manifest.json" rel="manifest"></link>
+</link>
+</meta>
+</meta>
+</meta>
+</meta>
+</meta>
+</meta>
+</meta>
+</meta>
+</meta>
+</meta>
+</meta>
+</meta>
+</link>
+</link>
+</link>
+</link>
+</link>
+</link>
+
+        ```
+        

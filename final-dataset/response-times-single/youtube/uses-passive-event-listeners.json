@@ -1,0 +1,47 @@
+[
+    {
+        "prompt_uuid": "18994125-f884-48f9-99b8-8add96095964",
+        "dom_name": "youtube",
+        "prompt_token_size": 4156,
+        "duration": 53.37922811508179,
+        "mode": "single",
+        "audit_key": "uses-passive-event-listeners",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 0,
+            "upload_speed": 0,
+            "ping": 0,
+            "error": "module 'speedtest' has no attribute 'Speedtest'"
+        }
+    },
+    {
+        "prompt_uuid": "f20af50a-43f6-49b1-92fb-5fcba87dd0d5",
+        "dom_name": "youtube",
+        "prompt_token_size": 11824,
+        "duration": 602.6917109489441,
+        "mode": "single",
+        "audit_key": "uses-passive-event-listeners",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 0,
+            "upload_speed": 0,
+            "ping": 0,
+            "error": "module 'speedtest' has no attribute 'Speedtest'"
+        }
+    },
+    {
+        "prompt_uuid": "4ce1757a-b5dc-4f7c-ae88-f1a06bec78dc",
+        "dom_name": "youtube",
+        "prompt_token_size": 947,
+        "duration": 6.458168029785156,
+        "mode": "single",
+        "audit_key": "uses-passive-event-listeners",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 0,
+            "upload_speed": 0,
+            "ping": 0,
+            "error": "module 'speedtest' has no attribute 'Speedtest'"
+        }
+    }
+]

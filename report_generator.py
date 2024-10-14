@@ -13,6 +13,9 @@ lh_report_original_dir ="lh-reports/original"
 lh_report_llm_dir ="lh-reports/llm-modified"
 lh_report_production_dir ="lh-reports/production"
 
+new_modified_dir = "modified-doms/xDOM-00001-single/single"
+modified_reports_dir = "lh-reports/new-modified"
+
 port = 8000
 
 # Configure logging
@@ -57,7 +60,8 @@ def generate_lighthouse_reports(report_dir, output_dir=output_original_dir):
     results = {}
     
     current_formatted_datetime = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    result_path = f"{report_dir}/full/{current_formatted_datetime}"
+    # result_path = f"{report_dir}/full/{current_formatted_datetime}"
+    result_path = f"{report_dir}"
 
     # Ensure the result_path and raw_result_path directories exists
     os.makedirs(result_path, exist_ok=True)
@@ -133,10 +137,11 @@ def generate_lh_production_reports():
 
     return results
 
-# def main():
-#     generate_lighthouse_reports(lh_report_original_dir)
-#     # generate_lighthouse_reports(lh_report_llm_dir)
-#     # generate_lh_production_reports()
+def main():
+    # generate_lighthouse_reports(lh_report_original_dir)
+    # generate_lighthouse_reports(lh_report_llm_dir)
+    generate_lighthouse_reports(output_dir=new_modified_dir, report_dir=modified_reports_dir)
+    # generate_lh_production_reports()
     
-# if __name__ == "__main__":
-#     main()
+if __name__ == "__main__":
+    main()

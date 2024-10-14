@@ -1,0 +1,727 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. unused-css-rules => Reduce unused CSS: Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        <span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+<svg fill="currentColor" height='20' icon-name="caret-down-outline" rpl="" viewbox="0 0 20 20" width='20' xmlns="http://www.w3.org/2000/svg">
+<path d="M10 13.125a.624.624 0 0 1-.442-.183l-5-5 .884-.884L10 11.616l4.558-4.558.884.884-5 5a.624.624 0 0 1-.442.183Z">
+</path>
+</svg>
+</span>
+</span>
+</div>
+</li>
+</faceplate-tracker>
+</summary>
+<faceplate-auto-height-animator class="block" open="">
+<div faceplate-auto-height-animator-content="" id="TOPICS" style="">
+<faceplate-expandable-section-helper rpl="">
+<details class="p-0 m-0 bg-transparent border-none rounded-none">
+<summary aria-controls="Internet Culture (Viral)" aria-expanded='false' class="font-normal">
+<left-nav-topic-tracker class="nd:visible" noun="topic_menu" topic="internet_culture_Viral">
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<div class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 bg-transparent s:rounded-[8px]" style="padding-right: 16px" tabindex='-1'>
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex shrink-0 items-center justify-center h-xl w-xl text-20 leading-4">
+<svg fill="currentColor" height='20' icon-name="topic-funny-outline" rpl="" viewbox="0 0 20 20" width='20' xmlns="http://www.w3.org/2000/svg">
+<path d="M7.678 5.875h-1.25V5.25a1.875 1.875 0 0 0-3.75 0v.625h-1.25V5.25a3.125 3.125 0 1 1 6.25 0v.625Z">
+</path>
+<path d="M18.678 5.875h-1.25V5.25a1.875 1.875 0 1 0-3.75 0v.625h-1.25V5.25a3.125 3.125 0 0 1 6.25 0v.625Z">
+</path>
+<path d="M10.053 17.875A8.635 8.635 0 0 1 1.428 9.25a.625.625 0 0 1 .625-.625h16a.625.625 0 0 1 .625.625 8.635 8.635 0 0 1-8.625 8.625Zm-7.348-8a7.375 7.375 0 0 0 14.7 0h-14.7Z">
+</path>
+</svg>
+</span>
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+<span class="">
+                     Internet Culture (Viral)
+                    </span>
+</span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+<svg fill="currentColor" height='20' icon-name="caret-down-outline" rpl="" viewbox="0 0 20 20" width='20' xmlns="http://www.w3.org/2000/svg">
+<path d="M10 13.125a.624.624 0 0 1-.442-.183l-5-5 .884-.884L10 11.616l4.558-4.558.884.884-5 5a.624.624 0 0 1-.442.183Z">
+</path>
+</svg>
+</span>
+</span>
+</div>
+</li>
+</left-nav-topic-tracker>
+</summary>
+<faceplate-auto-height-animator class="block">
+<div faceplate-auto-height-animator-content="" id="Internet Culture (Viral)" style="border-left: 1px solid var(--color-neutral-border-weak); margin-left: 28px;">
+<ul class="m-0 p-0">
+<left-nav-topic-tracker class="nd:visible" noun="topic_item" topic="amazing">
+<li class="relative list-none mt-0 s:rounded-r-[8px] border-solid border-transparent border-0 border-l-sm -ml-px hover:border-l-neutral-border" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 s:rounded-r-[8px] bg-transparent no-underline" href="https://reddit.com/t/amazing/" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                      Amazing
+                     </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+</left-nav-topic-tracker>
+<left-nav-topic-tracker class="nd:visible" noun="topic_item" topic="animals_and_pets">
+<li class="relative list-none mt-0 s:rounded-r-[8px] border-solid border-transparent border-0 border-l-sm -ml-px hover:border-l-neutral-border" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 s:rounded-r-[8px] bg-transparent no-underline" href="https://reddit.com/t/animals_and_pets/" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                      Animals & Pets
+                     </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+</left-nav-topic-tracker>
+<left-nav-topic-tracker class="nd:visible" noun="topic_item" topic="cringe_and_facepalm">
+<li class="relative list-none mt-0 s:rounded-r-[8px] border-solid border-transparent border-0 border-l-sm -ml-px hover:border-l-neutral-border" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 s:rounded-r-[8px] bg-transparent no-underline" href="https://reddit.com/t/cringe_and_facepalm/" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                      Cringe & Facepalm
+                     </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+</left-nav-topic-tracker>
+<left-nav-topic-tracker class="nd:visible" noun="topic_item" topic="funny">
+<li class="relative list-none mt-0 s:rounded-r-[8px] border-solid border-transparent border-0 border-l-sm -ml-px hover:border-l-neutral-border" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 s:rounded-r-[8px] bg-transparent no-underline" href="https://reddit.com/t/funny/" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                      Funny
+                     </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+</left-nav-topic-tracker>
+<left-nav-topic-tracker class="nd:visible" noun="topic_item" topic="interesting">
+<li class="relative list-none mt-0 s:rounded-r-[8px] border-solid border-transparent border-0 border-l-sm -ml-px hover:border-l-neutral-border" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 s:rounded-r-[8px] bg-transparent no-underline" href="https://reddit.com/t/interesting/" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                      Interesting
+                     </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+</left-nav-topic-tracker>
+<left-nav-topic-tracker class="nd:visible" noun="topic_item" topic="memes">
+<li class="relative list-none mt-0 s:rounded-r-[8px] border-solid border-transparent border-0 border-l-sm -ml-px hover:border-l-neutral-border" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 s:rounded-r-[8px] bg-transparent no-underline" href="https://reddit.com/t/memes/" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                      Memes
+                     </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+</left-nav-topic-tracker>
+<left-nav-topic-tracker class="nd:visible" noun="topic_item" topic="oddly_satisfying">
+<li class="relative list-none mt-0 s:rounded-r-[8px] border-solid border-transparent border-0 border-l-sm -ml-px hover:border-l-neutral-border" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 s:rounded-r-[8px] bg-transparent no-underline" href="https://reddit.com/t/oddly_satisfying/" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                      Oddly Satisfying
+                     </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+</left-nav-topic-tracker>
+<left-nav-topic-tracker class="nd:visible" noun="topic_item" topic="reddit_meta">
+<li class="relative list-none mt-0 s:rounded-r-[8px] border-solid border-transparent border-0 border-l-sm -ml-px hover:border-l-neutral-border" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 s:rounded-r-[8px] bg-transparent no-underline" href="https://reddit.com/t/reddit_meta/" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                      Reddit Meta
+                     </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+</left-nav-topic-tracker>
+<left-nav-topic-tracker class="nd:visible" noun="topic_item" topic="wholesome_and_heartwarming">
+<li class="relative list-none mt-0 s:rounded-r-[8px] border-solid border-transparent border-0 border-l-sm -ml-px hover:border-l-neutral-border" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 s:rounded-r-[8px] bg-transparent no-underline" href="https://reddit.com/t/wholesome_and_heartwarming/" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                      Wholesome & Heartwarming
+                     </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+</left-nav-topic-tracker>
+</ul>
+</div>
+</faceplate-auto-height-animator>
+</details>
+</faceplate-expandable-section-helper>
+<faceplate-expandable-section-helper rpl="">
+<details class="p-0 m-0 bg-transparent border-none rounded-none">
+<summary aria-controls="Games" aria-expanded='false' class="font-normal">
+<left-nav-topic-tracker class="nd:visible" noun="topic_menu" topic="games">
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<div class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 bg-transparent s:rounded-[8px]" style="padding-right: 16px" tabindex='-1'>
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex shrink-0 items-center justify-center h-xl w-xl text-20 leading-4">
+<svg fill="currentColor" height='20' icon-name="topic-videogaming-outline" rpl="" viewbox="0 0 20 20" width='20' xmlns="http://www.w3.org/2000/svg">
+<path d="M19.929 14.17 18.277 6.6a4.631 4.631 0 0 0-4.52-3.6H5.702a4.623 4.623 0 0 0-4.58 3.908L.034 14.387a3.134 3.134 0 0 0 .735 2.5 3.227 3.227 0 0 0 5.553-1.284l.39-1.635h5.794l.39 1.635A3.2 3.2 0 0 0 16.01 18h.782a3.211 3.211 0 0 0 3.123-2.444c.109-.455.114-.929.015-1.386Zm-1.6 1.85a1.964 1.964 0 0 1-1.54.73h-.781a1.947 1.947 0 0 1-1.9-1.453l-.63-2.476H5.74L5.11 15.3a1.947 1.947 0 0 1-1.9 1.453 1.974 1.974 0 0 1-1.5-.678 1.862 1.862 0 0 1-.443-1.506l1.09-7.481A3.366 3.366 0 0 1 5.7 4.25h8.062a3.373 3.373 0 0 1 3.3 2.614l1.65 7.573a1.877 1.877 0 0 1-.383 1.583h-.001Z">
+</path>
+<path d="M6.256 6.212h-1.25v1.776h-1.73v1.25h1.73v1.622h1.25V9.238h1.73v-1.25h-1.73V6.212Z">
+</path>
+<path d="M11.82 8.81a1 1 0 1 0 1.71.71 1.001 1.001 0 0 0-.3-.71 1.034 1.034 0 0 0-1.41 0Z">
+</path>
+<path d="M15.23 6.85a.875.875 0 0 0-.32-.22c-.246-.1-.522-.1-.77 0a.875.875 0 0 0-.32.22.975.975 0 0 0 0 1.41 1 1 0 0 0 1.41 0 1.03 1.03 0 0 0 .22-1.09.877.877 0 0 0-.22-.32Z">
+</path>
+</svg>
+</span>
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+<span class="">
+                     Games
+                    </span>
+</span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+<svg fill="currentColor" height='20' icon-name="caret-down-outline" rpl="" viewbox="0 0 20 20" width='20' xmlns="http://www.w3.org/2000/svg">
+<path d="M10 13.125a.624.624 0 0 1-.442-.183l-5-5 .884-.884L10 11.616l4.558-4.558.884.884-5 5a.624.624 0 0 1-.442.183Z">
+</path>
+</svg>
+</span>
+</span>
+</div>
+</li>
+</left-nav-topic-tracker>
+</summary>
+<faceplate-auto-height-animator class="block">
+<div faceplate-auto-height-animator-content="" id="Games" style="border-left: 1px solid var(--color-neutral-border-weak); margin-left: 28px;">
+<ul class="m-0 p-0">
+<left-nav-topic-tracker class="nd:visible" noun="topic_item" topic="action_games">
+<li class="relative list-none mt-0 s:rounded-r-[8px] border-solid border-transparent border-0 border-l-sm -ml-px hover:border-l-neutral-border" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 s:rounded-r-[8px] bg-transparent no-underline" href="https://reddit.com/t/action_games/" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                      Action Games
+                     </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+</left-nav-topic-tracker>
+<left-nav-topic-tracker class="nd:visible" noun="topic_item" topic="adventure_games">
+<li class="relative list-none mt-0 s:rounded-r-[8px] border-solid border-transparent border-0 border-l-sm -ml-px hover:border-l-neutral-border" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 s:rounded-r-[8px] bg-transparent no-underline" href="https://reddit.com/t/adventure_games/" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                      Adventure Games
+                     </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+</left-nav-topic-tracker>
+<left-nav-topic-tracker class="nd:visible" noun="topic_item" topic="esports">
+<li class="relative list-none mt-0 s:rounded-r-[8px] border-solid border-transparent border-0 border-l-sm -ml-px hover:border-l-neutral-border" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 s:rounded-r-[8px] bg-transparent no-underline" href="https://reddit.com/t/esports/" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                      Esports
+                     </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+</left-nav-topic-tracker>
+<left-nav-topic-tracker class="nd:visible" noun="topic_item" topic="gaming_consoles_and_gear">
+<li class="relative list-none mt-0 s:rounded-r-[8px] border-solid border-transparent border-0 border-l-sm -ml-px hover:border-l-neutral-border" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 s:rounded-r-[8px] bg-transparent no-underline" href="https://reddit.com/t/gaming_consoles_and_gear/" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                      Gaming Consoles & Gear
+                     </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+</left-nav-topic-tracker>
+<left-nav-topic-tracker class="nd:visible" noun="topic_item" topic="gaming_news_and_discussion">
+<li class="relative list-none mt-0 s:rounded-r-[8px] border-solid border-transparent border-0 border-l-sm -ml-px hover:border-l-neutral-border" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 s:rounded-r-[8px] bg-transparent no-underline" href="https://reddit.com/t/gaming_news_and_discussion/" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                      Gaming News & Discussion
+                     </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+</left-nav-topic-tracker>
+<left-nav-topic-tracker class="nd:visible" noun="topic_item" topic="mobile_games">
+<li class="relative list-none mt-0 s:rounded-r-[8px] border-solid border-transparent border-0 border-l-sm -ml-px hover:border-l-neutral-border" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 s:rounded-r-[8px] bg-transparent no-underline" href="https://reddit.com/t/mobile_games/" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                      Mobile Games
+                     </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+</left-nav-topic-tracker>
+<left-nav-topic-tracker class="nd:visible" noun="topic_item" topic="other_games">
+<li class="relative list-none mt-0 s:rounded-r-[8px] border-solid border-transparent border-0 border-l-sm -ml-px hover:border-l-neutral-border" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 s:rounded-r-[8px] bg-transparent no-underline" href="https://reddit.com/t/other_games/" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                      Other Games
+                     </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+</left-nav-topic-tracker>
+<left-nav-topic-tracker class="nd:visible" noun="topic_item" topic="role_playing_games">
+<li class="relative list-none mt-0 s:rounded-r-[8px] border-solid border-transparent border-0 border-l-sm -ml-px hover:border-l-neutral-border" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 s:rounded-r-[8px] bg-transparent no-underline" href="https://reddit.com/t/role_playing_games/" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                      Role-Playing Games
+                     </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+</left-nav-topic-tracker>
+<left-nav-topic-tracker class="nd:visible" noun="topic_item" topic="simulation_games">
+<li class="relative list-none mt-0 s:rounded-r-[8px] border-solid border-transparent border-0 border-l-sm -ml-px hover:border-l-neutral-border" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 s:rounded-r-[8px] bg-transparent no-underline" href="https://reddit.com/t/simulation_games/" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                      Simulation Games
+                     </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+</left-nav-topic-tracker>
+<left-nav-topic-tracker class="nd:visible" noun="topic_item" topic="sports_and_racing_games">
+<li class="relative list-none mt-0 s:rounded-r-[8px] border-solid border-transparent border-0 border-l-sm -ml-px hover:border-l-neutral-border" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 s:rounded-r-[8px] bg-transparent no-underline" href="https://reddit.com/t/sports_and_racing_games/" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                      Sports & Racing Games
+                     </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+</left-nav-topic-tracker>
+<left-nav-topic-tracker class="nd:visible" noun="topic_item" topic="strategy_games">
+<li class="relative list-none mt-0 s:rounded-r-[8px] border-solid border-transparent border-0 border-l-sm -ml-px hover:border-l-neutral-border" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 s:rounded-r-[8px] bg-transparent no-underline" href="https://reddit.com/t/strategy_games/" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                      Strategy Games
+                     </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+</left-nav-topic-tracker>
+<left-nav-topic-tracker class="nd:visible" noun="topic_item" topic="tabletop_games">
+<li class="relative list-none mt-0 s:rounded-r-[8px] border-solid border-transparent border-0 border-l-sm -ml-px hover:border-l-neutral-border" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 s:rounded-r-[8px] bg-transparent no-underline" href="https://reddit.com/t/tabletop_games/" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                      Tabletop Games
+                     </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+</left-nav-topic-tracker>
+</ul>
+</div>
+</faceplate-auto-height-animator>
+</details>
+</faceplate-expandable-section-helper>
+<faceplate-expandable-section-helper rpl="">
+<details class="p-0 m-0 bg-transparent border-none rounded-none">
+<summary aria-controls="Q&As" aria-expanded='false' class="font-normal">
+<left-nav-topic-tracker class="nd:visible" noun="topic_menu" topic="q_and_as">
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<div class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 bg-transparent s:rounded-[8px]" style="padding-right: 16px" tabindex='-1'>
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex shrink-0 items-center justify-center h-xl w-xl text-20 leading-4">
+<svg fill="currentColor" height='20' icon-name="topic-help-outline" rpl="" viewbox="0 0 20 20" width='20' xmlns="http://www.w3.org/2000/svg">
+<path d="M9.45 13.95a1.033 1.033 0 0 1-.71-.29 1.014 1.014 0 0 1 0-1.42 1.033 1.033 0 0 1 1.409 0 1 1 0 0 1-.699 1.71Zm.689-9.9A4.987 4.987 0 0 0 7.111 5a.853.853 0 0 0-.1 1.313l.065.061a.832.832 0 0 0 1.085.026 2.987 2.987 0 0 1 1.752-.658c.8 0 1.245.371 1.245.9 0 .649-.331.94-1.059 1.351a2.772 2.772 0 0 0-1.333 1.481c-.058.14-.089.288-.093.439 0 .252.099.494.276.673a.89.89 0 0 0 .665.266.913.913 0 0 0 .661-.265.925.925 0 0 0 .227-.422c0-.006.046-.261.046-.267.095-.479.365-.733 1.141-1.134a2.452 2.452 0 0 0 1.562-2.29c-.001-1.405-1.1-2.424-3.112-2.424ZM13.376 16h2A4.626 4.626 0 0 0 20 11.379V5.621A4.626 4.626 0 0 0 15.379 1H4.621A4.626 4.626 0 0 0 0 5.621v5.758A4.626 4.626 0 0 0 4.621 16H7.5v-1.25H4.621a3.375 3.375 0 0 1-3.371-3.371V5.621A3.375 3.375 0 0 1 4.621 2.25h10.758a3.375 3.375 0 0 1 3.371 3.371v5.758a3.376 3.376 0 0 1-3.371 3.371h-2.5l-3.763 3.607.866.9L13.376 16Z">
+</path>
+</svg>
+</span>
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+<span class="">
+                     Q&As
+                    </span>
+</span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+<svg fill="currentColor" height='20' icon-name="caret-down-outline" rpl="" viewbox="0 0 20 20" width='20' xmlns="http://www.w3.org/2000/svg">
+<path d="M10 13.125a.624.624 0 0 1-.442-.183l-5-5 .884-.884L10 11.616l4.558-4.558.884.884-5 5a.624.624 0 0 1-.442.183Z">
+</path>
+</svg>
+</span>
+</span>
+</div>
+</li>
+</left-nav-topic-tracker>
+</summary>
+<faceplate-auto-height-animator class="block">
+<div faceplate-auto-height-animator-content="" id="Q&As" style="border-left: 1px solid var(--color-neutral-border-weak); margin-left: 28px;">
+<ul class="m-0 p-0">
+<left-nav-topic-tracker class="nd:visible" noun="topic_item" topic="q_and_as">
+<li class="relative list-none mt-0 s:rounded-r-[8px] border-solid border-transparent border-0 border-l-sm -ml-px hover:border-l-neutral-border" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 s:rounded-r-[8px] bg-transparent no-underline" href="https://reddit.com/t/q_and_as/" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                      Q&As
+                     </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+</left-nav-topic-tracker>
+<left-nav-topic-tracker class="nd:visible" noun="topic_item" topic="stories_and_confessions">
+<li class="relative list-none mt-0 s:rounded-r-[8px] border-solid border-transparent border-0 border-l-sm -ml-px hover:border-l-neutral-border" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 s:rounded-r-[8px] bg-transparent no-underline" href="https://reddit.com/t/stories_and_confessions/" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                      Stories & Confessions
+                     </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+</left-nav-topic-tracker>
+</ul>
+</div>
+</faceplate-auto-height-animator>
+</details>
+</faceplate-expandable-section-helper>
+<faceplate-expandable-section-helper rpl="">
+<details class="p-0 m-0 bg-transparent border-none rounded-none">
+<summary aria-controls="Technology" aria-expanded='false' class="font-normal">
+<left-nav-topic-tracker class="nd:visible" noun="topic_menu" topic="technology">
+<li class="relative list-none mt-0" role="presentation" rpl="">
+<div class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 bg-transparent s:rounded-[8px]" style="padding-right: 16px" tabindex='-1'>
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex shrink-0 items-center justify-center h-xl w-xl text-20 leading-4">
+<svg fill="currentColor" height='20' icon-name="topic-technology-outline" rpl="" viewbox="0 0 20 20" width='20' xmlns="http://www.w3.org/2000/svg">
+<path d="M11.875 7h-3.75A1.127 1.127 0 0 0 7 8.125v3.75A1.127 1.127 0 0 0 8.125 13h3.75A1.127 1.127 0 0 0 13 11.875v-3.75A1.127 1.127 0 0 0 11.875 7Zm-.125 4.75h-3.5v-3.5h3.5v3.5Z">
+</path>
+<path d="M19 7.625v-1.25h-2v-1.75A1.627 1.627 0 0 0 15.375 3h-1.75V1h-1.25v2h-1.75V1h-1.25v2h-1.75V1h-1.25v2h-1.75A1.627 1.627 0 0 0 3 4.625v1.75H1v1.25h2v1.75H1v1.25h2v1.75H1v1.25h2v1.75A1.627 1.627 0 0 0 4.625 17h1.75v2h1.25v-2h1.75v2h1.25v-2h1.75v2h1.25v-2h1.75A1.627 1.627 0 0 0 17 15.375v-1.75h2v-1.25h-2v-1.75h2v-1.25h-2v-1.75h2Zm-3.25 7.75a.375.375 0 0 1-.375.375H4.625a.375.375 0 0 1-.375-.375V4.625a.375.375 0 0 1 .375-.375h10.75a.375.375 0 0 1 .375.375v10.75Z">
+</path>
+</svg>
+</span>
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+<span class="">
+                     Technology
+                    </span>
+</span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+<svg fill="currentColor" height='20' icon-name="caret-down-outline" rpl="" viewbox="0 0 20 20" width='20' xmlns="http://www.w3.org/2000/svg">
+<path d="M10 13.125a.624.624 0 0 1-.442-.183l-5-5 .884-.884L10 11.616l4.558-4.558.884.884-5 5a.624.624 0 0 1-.442.183Z">
+</path>
+</svg>
+</span>
+</span>
+</div>
+</li>
+</left-nav-topic-tracker>
+</summary>
+<faceplate-auto-height-animator class="block">
+<div faceplate-auto-height-animator-content="" id="Technology" style="border-left: 1px solid var(--color-neutral-border-weak); margin-left: 28px;">
+<ul class="m-0 p-0">
+<left-nav-topic-tracker class="nd:visible" noun="topic_item" topic="3d_printing">
+<li class="relative list-none mt-0 s:rounded-r-[8px] border-solid border-transparent border-0 border-l-sm -ml-px hover:border-l-neutral-border" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 s:rounded-r-[8px] bg-transparent no-underline" href="https://reddit.com/t/3d_printing/" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                      3D Printing
+                     </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+</left-nav-topic-tracker>
+<left-nav-topic-tracker class="nd:visible" noun="topic_item" topic="artificial_intelligence_and_machine_learning">
+<li class="relative list-none mt-0 s:rounded-r-[8px] border-solid border-transparent border-0 border-l-sm -ml-px hover:border-l-neutral-border" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 s:rounded-r-[8px] bg-transparent no-underline" href="https://reddit.com/t/artificial_intelligence_and_machine_learning/" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                      Artificial Intelligence & Machine Learning
+                     </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+</left-nav-topic-tracker>
+<left-nav-topic-tracker class="nd:visible" noun="topic_item" topic="computers_and_hardware">
+<li class="relative list-none mt-0 s:rounded-r-[8px] border-solid border-transparent border-0 border-l-sm -ml-px hover:border-l-neutral-border" role="presentation" rpl="">
+<a class="flex justify-between relative px-md gap-[0.5rem] text-secondary hover:text-secondary-hover active:bg-interactive-pressed hover:bg-neutral-background-hover hover:no-underline cursor-pointer py-2xs -outline-offset-1 s:rounded-r-[8px] bg-transparent no-underline" href="https://reddit.com/t/computers_and_hardware/" style="padding-right: 16px">
+<span class="flex items-center gap-xs min-w-0 shrink">
+<span class="flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]">
+<span class="text-14">
+                      Computers & Hardware
+                     </span>
+<span class="text-12 text-secondary-weak">
+</span>
+</span>
+</span>
+<span class="flex items-center shrink-0">
+<span class="flex items-center justify-center h-lg">
+</span>
+</span>
+</a>
+</li>
+</left-nav-topic-tracker>
+
+        ```
+        

@@ -1,0 +1,110 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. inspector-issues => Issues were logged in the `Issues` panel in Chrome Devtools: Issues logged to the `Issues` panel in Chrome Devtools indicate unresolved problems. They can come from network request failures, insufficient security controls, and other browser concerns. Open up the Issues panel in Chrome DevTools for more details on each issue.
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        
+<div class="root" id="root">
+<style data-chunk-uuid="01601abe-1041-40fa-9aca-87abb7b6e140">/* chunk_style_01601abe-1041-40fa-9aca-87abb7b6e140 */
+</style>
+<script data-chunk-uuid="9e6ad89d-91ed-4650-83a6-34ebd94cdf5a">// chunk_script_9e6ad89d-91ed-4650-83a6-34ebd94cdf5a
+</script>
+<div class="shell-nav">
+<figure class="shell-nav__logo">
+<svg height="40px" version='1.1' viewbox="0 0 40 40" width="40px" x="0px" y="0px">
+<g fill-rule="evenodd">
+<path d="M19 6v6h-2V6h2zm-7 0h2v6h-2V6zM5 0L0 5v18h6v5l5-5h4l9-9V0H5zm17 13l-4 4h-4l-4 4v-4H6V2h16v11z">
+</path>
+<path d="M18 17l4-4V2H6v15h4v4l4-4h4zM12 6h2v6h-2V6zm7 0h-2v6h2V6z" fill="#FFF">
+</path>
+</g>
+</svg>
+</figure>
+<div class="shell-nav__link-list">
+<div class="shell-nav__link shell-nav__link--discovery">
+</div>
+<div class="shell-nav__link shell-nav__link--follow">
+</div>
+<div class="shell-nav__link shell-nav__link--browse">
+</div>
+</div>
+<div class="shell-nav__ellipsis">
+<figure class="shell__svg--navmore">
+<svg height="20px" version='1.1' viewbox="0 0 20 20" width="20px" x="0px" y="0px">
+<path d="M4 8a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm6 0a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm6 0a2 2 0 1 1 0 4 2 2 0 0 1 0-4z" fill-rule="evenodd">
+</path>
+</svg>
+</figure>
+</div>
+<div class="shell-nav__search-container">
+<div class="shell-nav__search">
+</div>
+</div>
+<div class="shell-nav__user-auth">
+<div class="shell-nav__user-auth-button shell-nav__user-auth-button--login">
+</div>
+<div class="shell-nav__user-auth-button shell-nav__user-auth-button--singup">
+</div>
+</div>
+<div class="shell-nav__user-card">
+<div class="shell-nav__user-card-avatar">
+</div>
+</div>
+</div>
+<div class="shell-loader" data-a-target="shell-loader">
+<div class="shell-loader__spinner">
+</div>
+</div>
+</div>
+<script data-chunk-uuid="8f580a0c-20ef-417e-8534-7f04cda81350">// chunk_script_8f580a0c-20ef-417e-8534-7f04cda81350
+</script>
+<script data-chunk-uuid="149e05dd-1efb-4706-8b28-7ae780f27e3c" crossorigin="anonymous" src="https://assets.twitch.tv/config/settings.ffe973d9a7cbf13a845a23a2598caf27.js">// chunk_script_149e05dd-1efb-4706-8b28-7ae780f27e3c
+</script>
+<script data-chunk-uuid="504446a0-a442-4c08-8d0f-ba081f5d4827">// chunk_script_504446a0-a442-4c08-8d0f-ba081f5d4827
+</script>
+<link href="https://assets.twitch.tv/assets/core-0afbcdeaff154d87e89d.css" rel="stylesheet"></link>
+<script data-chunk-uuid="1b60e8bc-d33f-4dc4-a77b-14d44d291b5e">// chunk_script_1b60e8bc-d33f-4dc4-a77b-14d44d291b5e
+</script>
+<script data-chunk-uuid="1abe5551-6bc1-4154-9797-59fcc039d006" src="https://assets.twitch.tv/assets/vendor-5a3405cf3be13d3fb193.js">// chunk_script_1abe5551-6bc1-4154-9797-59fcc039d006
+</script>
+<script data-chunk-uuid="22daa794-2abc-44e6-876b-b098216e07f9" nomodule="" src="https://assets.twitch.tv/assets/nomodulePolyfills-46100576e19cbb82aad7.js">// chunk_script_22daa794-2abc-44e6-876b-b098216e07f9
+</script>
+<script data-chunk-uuid="13a69a7c-a10a-4daa-b4d3-55821a5feddc" src="https://assets.twitch.tv/assets/polyfills-cc5b9bf3b3f7bc813c6c.js">// chunk_script_13a69a7c-a10a-4daa-b4d3-55821a5feddc
+</script>
+<script data-chunk-uuid="dd192472-2f71-47f1-a3a8-56870b61c3c7" src="https://assets.twitch.tv/assets/core-6770001ba32ecc8e7c53.js">// chunk_script_dd192472-2f71-47f1-a3a8-56870b61c3c7
+</script>
+
+        ```
+        

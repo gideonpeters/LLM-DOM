@@ -1,0 +1,241 @@
+[
+    {
+        "prompt_uuid": "100db9ef-43e2-4fd4-8706-571dd77aa197",
+        "dom_name": "ebay",
+        "prompt_token_size": 3041,
+        "duration": 29.477645874023438,
+        "mode": "single",
+        "audit_key": "uses-long-cache-ttl",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 303.3222365149378,
+            "upload_speed": 295.2150094853965,
+            "ping": 5.022
+        }
+    },
+    {
+        "prompt_uuid": "a576545a-db57-4f79-9581-5372d1a6f67e",
+        "dom_name": "ebay",
+        "prompt_token_size": 12070,
+        "duration": 1.7636048793792725,
+        "mode": "single",
+        "audit_key": "uses-long-cache-ttl",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 416.4318258636461,
+            "upload_speed": 471.4336630548343,
+            "ping": 5.102
+        }
+    },
+    {
+        "prompt_uuid": "304c83b5-7aa1-474f-b4d6-66732641cde4",
+        "dom_name": "ebay",
+        "prompt_token_size": 11722,
+        "duration": 14.092325925827026,
+        "mode": "single",
+        "audit_key": "uses-long-cache-ttl",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 282.6764488376969,
+            "upload_speed": 293.17190733281944,
+            "ping": 5.275
+        }
+    },
+    {
+        "prompt_uuid": "87c25524-a49b-4122-b312-ff343bff7332",
+        "dom_name": "ebay",
+        "prompt_token_size": 12102,
+        "duration": 9.512113094329834,
+        "mode": "single",
+        "audit_key": "uses-long-cache-ttl",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 471.0224011283406,
+            "upload_speed": 523.7288793261008,
+            "ping": 5.135
+        }
+    },
+    {
+        "prompt_uuid": "0b45b609-7d98-4f4a-9b5b-41216bc602cf",
+        "dom_name": "ebay",
+        "prompt_token_size": 12195,
+        "duration": 10.130489110946655,
+        "mode": "single",
+        "audit_key": "uses-long-cache-ttl",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 496.1615718805269,
+            "upload_speed": 502.4095289970646,
+            "ping": 5.908
+        }
+    },
+    {
+        "prompt_uuid": "19ec5bd5-3c4c-4ef2-aa4e-3acfd7052ab7",
+        "dom_name": "ebay",
+        "prompt_token_size": 12157,
+        "duration": 27.392541885375977,
+        "mode": "single",
+        "audit_key": "uses-long-cache-ttl",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 487.2883935219362,
+            "upload_speed": 449.0722348665792,
+            "ping": 5.62
+        }
+    },
+    {
+        "prompt_uuid": "69ebd16a-0f3c-4a7b-95e4-12101e0830a3",
+        "dom_name": "ebay",
+        "prompt_token_size": 12096,
+        "duration": 3.7502498626708984,
+        "mode": "single",
+        "audit_key": "uses-long-cache-ttl",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 247.3574581906108,
+            "upload_speed": 311.2752276798091,
+            "ping": 5.348
+        }
+    },
+    {
+        "prompt_uuid": "44b3c87d-0783-4abd-978c-f608d38032f9",
+        "dom_name": "ebay",
+        "prompt_token_size": 11229,
+        "duration": 162.97927498817444,
+        "mode": "single",
+        "audit_key": "uses-long-cache-ttl",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 437.1184530555062,
+            "upload_speed": 511.48666937682657,
+            "ping": 5.131
+        }
+    },
+    {
+        "prompt_uuid": "b7d83d8c-1849-406e-9794-62fed1dc13fa",
+        "dom_name": "ebay",
+        "prompt_token_size": 12227,
+        "duration": 29.598220825195312,
+        "mode": "single",
+        "audit_key": "uses-long-cache-ttl",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 278.8371169430073,
+            "upload_speed": 199.14566507090944,
+            "ping": 5.009
+        }
+    },
+    {
+        "prompt_uuid": "6c4932e2-673e-47db-ba8c-95ccba0e3930",
+        "dom_name": "ebay",
+        "prompt_token_size": 11928,
+        "duration": 4.402688026428223,
+        "mode": "single",
+        "audit_key": "uses-long-cache-ttl",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 130.90910135705298,
+            "upload_speed": 339.44869943991995,
+            "ping": 21.492
+        }
+    },
+    {
+        "prompt_uuid": "94430d55-4fcc-42ec-ad80-80cd4d61f6a3",
+        "dom_name": "ebay",
+        "prompt_token_size": 11627,
+        "duration": 130.63707995414734,
+        "mode": "single",
+        "audit_key": "uses-long-cache-ttl",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 0,
+            "upload_speed": 0,
+            "ping": 0,
+            "error": "Unable to connect to servers to test latency."
+        }
+    },
+    {
+        "prompt_uuid": "4c8c0a1f-01fb-4e93-b747-1fce7bb02e47",
+        "dom_name": "ebay",
+        "prompt_token_size": 11498,
+        "duration": 172.81097793579102,
+        "mode": "single",
+        "audit_key": "uses-long-cache-ttl",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 265.63336041680697,
+            "upload_speed": 346.66063500337043,
+            "ping": 4.998
+        }
+    },
+    {
+        "prompt_uuid": "fbbef3b9-6bfa-44a5-b26c-476d1f92eeee",
+        "dom_name": "ebay",
+        "prompt_token_size": 11925,
+        "duration": 196.91993284225464,
+        "mode": "single",
+        "audit_key": "uses-long-cache-ttl",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 486.5015264829976,
+            "upload_speed": 304.5848731539602,
+            "ping": 4.931
+        }
+    },
+    {
+        "prompt_uuid": "370686ce-f6c5-4be7-87d1-81da193b31a9",
+        "dom_name": "ebay",
+        "prompt_token_size": 12197,
+        "duration": 3.627418041229248,
+        "mode": "single",
+        "audit_key": "uses-long-cache-ttl",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 365.3227275194971,
+            "upload_speed": 478.7210856507652,
+            "ping": 17.009
+        }
+    },
+    {
+        "prompt_uuid": "f77e3914-42d1-4ef3-8c09-71d4051b4ebd",
+        "dom_name": "ebay",
+        "prompt_token_size": 12146,
+        "duration": 170.73542594909668,
+        "mode": "single",
+        "audit_key": "uses-long-cache-ttl",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 442.1544074015858,
+            "upload_speed": 486.11175182552984,
+            "ping": 4.988
+        }
+    },
+    {
+        "prompt_uuid": "8b97f441-c0f6-44a4-a40f-ccf554912553",
+        "dom_name": "ebay",
+        "prompt_token_size": 12016,
+        "duration": 2.9415817260742188,
+        "mode": "single",
+        "audit_key": "uses-long-cache-ttl",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 165.8308193669048,
+            "upload_speed": 538.0723103815703,
+            "ping": 17.176
+        }
+    },
+    {
+        "prompt_uuid": "2d3f8274-d5d4-434a-bbc7-283d36456c39",
+        "dom_name": "ebay",
+        "prompt_token_size": 5650,
+        "duration": 62.869532346725464,
+        "mode": "single",
+        "audit_key": "uses-long-cache-ttl",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 181.05932008425853,
+            "upload_speed": 282.6526845741176,
+            "ping": 19.451
+        }
+    }
+]

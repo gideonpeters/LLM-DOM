@@ -1,0 +1,101 @@
+[
+    {
+        "prompt_uuid": "12bf0739-27bf-43ec-9a36-419432661857",
+        "dom_name": "aliexpress",
+        "prompt_token_size": 3473,
+        "duration": 41.85856604576111,
+        "mode": "single",
+        "audit_key": "crawlable-anchors",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 343.82989298823804,
+            "upload_speed": 412.92503441267576,
+            "ping": 5.317
+        }
+    },
+    {
+        "prompt_uuid": "9ad095f7-8f64-4ba3-a47e-cbbd38dcfb27",
+        "dom_name": "aliexpress",
+        "prompt_token_size": 11889,
+        "duration": 11.767995119094849,
+        "mode": "single",
+        "audit_key": "crawlable-anchors",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 227.86167669379233,
+            "upload_speed": 465.34949074456074,
+            "ping": 17.277
+        }
+    },
+    {
+        "prompt_uuid": "8f35eaf5-a4fc-4a9f-bbbe-952e41947b41",
+        "dom_name": "aliexpress",
+        "prompt_token_size": 11973,
+        "duration": 205.03846287727356,
+        "mode": "single",
+        "audit_key": "crawlable-anchors",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 479.1712017199733,
+            "upload_speed": 242.98341808031998,
+            "ping": 5.62
+        }
+    },
+    {
+        "prompt_uuid": "9a861ddb-4b2d-4370-b407-dfcd8caae4da",
+        "dom_name": "aliexpress",
+        "prompt_token_size": 11987,
+        "duration": 32.924959897994995,
+        "mode": "single",
+        "audit_key": "crawlable-anchors",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 238.91991347978336,
+            "upload_speed": 453.7280237952479,
+            "ping": 6.43
+        }
+    },
+    {
+        "prompt_uuid": "96033bf1-7739-4c65-9ed0-592499570344",
+        "dom_name": "aliexpress",
+        "prompt_token_size": 11988,
+        "duration": 146.24309301376343,
+        "mode": "single",
+        "audit_key": "crawlable-anchors",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 449.65925641586904,
+            "upload_speed": 523.0097061408003,
+            "ping": 5.043
+        }
+    },
+    {
+        "prompt_uuid": "055f27b5-5d1f-411b-a990-14c65f2f8d06",
+        "dom_name": "aliexpress",
+        "prompt_token_size": 11866,
+        "duration": 4.806678056716919,
+        "mode": "single",
+        "audit_key": "crawlable-anchors",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 473.28807760964304,
+            "upload_speed": 405.06929644254365,
+            "ping": 5.575
+        }
+    },
+    {
+        "prompt_uuid": "2a4a7802-273c-46e3-a35a-2b07906cca62",
+        "dom_name": "aliexpress",
+        "prompt_token_size": 2646,
+        "duration": 29.476253986358643,
+        "mode": "single",
+        "audit_key": "crawlable-anchors",
+        "experiment_name": "xDOM-00001-single",
+        "speed": {
+            "download_speed": 0,
+            "upload_speed": 0,
+            "ping": 0,
+            "error": "Unable to connect to servers to test latency."
+        }
+    }
+]

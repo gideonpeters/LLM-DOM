@@ -1,0 +1,127 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. deprecations => Uses deprecated APIs: Deprecated APIs will eventually be removed from the browser. [Learn more about deprecated APIs](https://developer.chrome.com/docs/lighthouse/best-practices/deprecations/).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        
+<script data-chunk-uuid="99ac3a23-8c0e-4f76-8015-68f0156db701" data-id="_gd" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_99ac3a23-8c0e-4f76-8015-68f0156db701
+</script>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"></meta>
+<meta content="ApvK67ociHgr2egd6c2ZjrfPuRs8BHcvSggogIOPQNH7GJ3cVlyJ1NOq/COCdj0+zxskqHt9HgLLETc8qqD+vwsAAABteyJvcmlnaW4iOiJodHRwczovL3lvdXR1YmUuY29tOjQ0MyIsImZlYXR1cmUiOiJQcml2YWN5U2FuZGJveEFkc0FQSXMiLCJleHBpcnkiOjE2OTUxNjc5OTksImlzU3ViZG9tYWluIjp0cnVlfQ==" http-equiv="origin-trial"></meta>
+<script data-chunk-uuid="b1485c2a-f99b-446f-b77e-0e27c0e9b2a8" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_b1485c2a-f99b-446f-b77e-0e27c0e9b2a8
+</script>
+<script data-chunk-uuid="1da92d68-6fa4-4a8e-8b5a-791cd128461b" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_1da92d68-6fa4-4a8e-8b5a-791cd128461b
+</script>
+<script data-chunk-uuid="11ea79a1-af53-4539-8f1a-e76c79e5b4cd" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_11ea79a1-af53-4539-8f1a-e76c79e5b4cd
+</script>
+<link href="https://www.youtube.com/s/desktop/ed565dc3/img/favicon.ico" rel="shortcut icon" type="image/x-icon"></link>
+<link href="https://www.youtube.com/s/desktop/ed565dc3/img/favicon_32x32.png" rel="icon" sizes="32x32"></link>
+<link href="https://www.youtube.com/s/desktop/ed565dc3/img/favicon_48x48.png" rel="icon" sizes="48x48"></link>
+<link href="https://www.youtube.com/s/desktop/ed565dc3/img/favicon_96x96.png" rel="icon" sizes="96x96"></link>
+<link href="https://www.youtube.com/s/desktop/ed565dc3/img/favicon_144x144.png" rel="icon" sizes="144x144"></link>
+<title>
+   YouTube
+  </title>
+<link href="https://www.youtube.com/" rel="canonical"></link>
+<link href="https://m.youtube.com/" media="handheld" rel="alternate"></link>
+<link href="https://m.youtube.com/" media="only screen and (max-width: 640px)" rel="alternate"></link>
+<meta content="https://www.youtube.com/img/desktop/yt_1200.png" property="og:image"></meta>
+<meta content='87741124305' property="fb:app_id"></meta>
+<link href="android-app://com.google.android.youtube/http/www.youtube.com/" rel="alternate"></link>
+<link href="ios-app://544007664/vnd.youtube/www.youtube.com/" rel="alternate"></link>
+<meta content="Enjoy the videos and music that you love, upload original content and share it all with friends, family and the world on YouTube." name="description"></meta>
+<meta content="video, sharing, camera phone, video phone, free, upload" name="keywords"></meta>
+<script data-chunk-uuid="31768f4d-0495-47ca-88c2-a1011dc49ebb" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_31768f4d-0495-47ca-88c2-a1011dc49ebb
+</script>
+<script data-chunk-uuid="00e338a4-7b81-49b8-b603-098ed5068f92" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_00e338a4-7b81-49b8-b603-098ed5068f92
+</script>
+<script data-chunk-uuid="0d2c1a95-927f-4287-ae5d-0a25341bb57f" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_0d2c1a95-927f-4287-ae5d-0a25341bb57f
+</script>
+<script data-chunk-uuid="2bfc8c38-3a7f-4e6c-917d-d0ea4810e8d1" nonce="D1-qG8YtC9mZN-wGGrOp6g" src="https://www.youtube.com/s/desktop/ed565dc3/jsbin/web-animations-next-lite.min.vflset/web-animations-next-lite.min.js">// chunk_script_2bfc8c38-3a7f-4e6c-917d-d0ea4810e8d1
+</script>
+<script data-chunk-uuid="cf7b536b-6172-4fbd-b705-5f088a0d6c64" nonce="D1-qG8YtC9mZN-wGGrOp6g" src="https://www.youtube.com/s/desktop/ed565dc3/jsbin/webcomponents-all-noPatch.vflset/webcomponents-all-noPatch.js">// chunk_script_cf7b536b-6172-4fbd-b705-5f088a0d6c64
+</script>
+<script data-chunk-uuid="c5b92bd2-64d1-4ca8-aab2-ccbd6f25ff71" nonce="D1-qG8YtC9mZN-wGGrOp6g" src="https://www.youtube.com/s/desktop/ed565dc3/jsbin/fetch-polyfill.vflset/fetch-polyfill.js">// chunk_script_c5b92bd2-64d1-4ca8-aab2-ccbd6f25ff71
+</script>
+<script data-chunk-uuid="0d18dd38-1ea8-44cc-a605-f0647fa0ea55" nonce="D1-qG8YtC9mZN-wGGrOp6g" src="https://www.youtube.com/s/desktop/ed565dc3/jsbin/intersection-observer.min.vflset/intersection-observer.min.js">// chunk_script_0d18dd38-1ea8-44cc-a605-f0647fa0ea55
+</script>
+<script data-chunk-uuid="5486f201-b07b-448f-9429-5abaebfb190c" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_5486f201-b07b-448f-9429-5abaebfb190c
+</script>
+<script data-chunk-uuid="3cc3b906-22ec-44f8-bcc6-0df7240faab7" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_3cc3b906-22ec-44f8-bcc6-0df7240faab7
+</script>
+<script data-chunk-uuid="b619ccbc-700f-4773-ac2d-21eff1448c6f" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_b619ccbc-700f-4773-ac2d-21eff1448c6f
+</script>
+<script data-chunk-uuid="9598c7e4-dd63-4b1a-afe7-0d61f8032482" nonce="D1-qG8YtC9mZN-wGGrOp6g" src="https://www.youtube.com/s/desktop/ed565dc3/jsbin/scheduler.vflset/scheduler.js">// chunk_script_9598c7e4-dd63-4b1a-afe7-0d61f8032482
+</script>
+<script data-chunk-uuid="bf24182e-a862-4ae1-a074-5c427658905b" nonce="D1-qG8YtC9mZN-wGGrOp6g" src="https://www.youtube.com/s/desktop/ed565dc3/jsbin/www-i18n-constants-en_GB.vflset/www-i18n-constants.js">// chunk_script_bf24182e-a862-4ae1-a074-5c427658905b
+</script>
+<script data-chunk-uuid="162c1196-17b5-4150-8fa0-8126203a7a3b" nonce="D1-qG8YtC9mZN-wGGrOp6g" src="https://www.youtube.com/s/desktop/ed565dc3/jsbin/www-tampering.vflset/www-tampering.js">// chunk_script_162c1196-17b5-4150-8fa0-8126203a7a3b
+</script>
+<script data-chunk-uuid="c58c5326-c9a7-429e-a6b1-1d9676b1738b" nonce="D1-qG8YtC9mZN-wGGrOp6g" src="https://www.youtube.com/s/desktop/ed565dc3/jsbin/spf.vflset/spf.js">// chunk_script_c58c5326-c9a7-429e-a6b1-1d9676b1738b
+</script>
+<script data-chunk-uuid="9bb8f66d-169e-4c47-8982-4054015df02b" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_9bb8f66d-169e-4c47-8982-4054015df02b
+</script>
+<script data-chunk-uuid="9448dc94-2974-4dd9-b50b-9ffcb37a6241" nonce="D1-qG8YtC9mZN-wGGrOp6g" src="https://www.youtube.com/s/desktop/ed565dc3/jsbin/network.vflset/network.js">// chunk_script_9448dc94-2974-4dd9-b50b-9ffcb37a6241
+</script>
+<script data-chunk-uuid="966108c1-8086-40cd-bc58-03905a88d000" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_966108c1-8086-40cd-bc58-03905a88d000
+</script>
+<link href="//fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=YouTube+Sans:wght@300..900&display=swap" nonce="mdQLp_bGobZdlcRog1-T7g" rel="stylesheet"></link>
+<script data-chunk-uuid="aa34153c-c027-4e90-b8f7-8eb6a7b30eeb" name="www-roboto" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_aa34153c-c027-4e90-b8f7-8eb6a7b30eeb
+</script>
+<link href="https://www.youtube.com/s/desktop/ed565dc3/cssbin/www-main-desktop-home-page-skeleton.css" nonce="mdQLp_bGobZdlcRog1-T7g" rel="stylesheet"></link>
+<link href="https://www.youtube.com/s/desktop/ed565dc3/cssbin/www-onepick.css" nonce="mdQLp_bGobZdlcRog1-T7g" rel="stylesheet"></link>
+<link href="https://www.youtube.com/s/_/ytmainappweb/_/ss/k=ytmainappweb.kevlar_base.cqHBwRr8PRU.L.X.O/am=AAAQKA/d=0/br=1/rs=AGKMywHY_fwuIl4Aksb_ywn5gQRTanasnw" nonce="mdQLp_bGobZdlcRog1-T7g" rel="stylesheet"></link>
+<style data-chunk-uuid="d5a06c0d-6b9a-4484-91a2-886182ecb033" class="global_styles" nonce="mdQLp_bGobZdlcRog1-T7g">/* chunk_style_d5a06c0d-6b9a-4484-91a2-886182ecb033 */
+</style>
+<style data-chunk-uuid="3b2f8246-7b9a-4547-939f-7eb5a6d9ae06" class="masthead_shell" nonce="mdQLp_bGobZdlcRog1-T7g">/* chunk_style_3b2f8246-7b9a-4547-939f-7eb5a6d9ae06 */
+</style>
+<style data-chunk-uuid="aad980f6-cccf-424b-a373-ab469281d558" class="masthead_custom_styles" id="ext-styles" is="custom-style" nonce="mdQLp_bGobZdlcRog1-T7g">/* chunk_style_aad980f6-cccf-424b-a373-ab469281d558 */
+</style>
+<style data-chunk-uuid="07fdc109-b1b6-4df4-8511-951a59c2a675" class="searchbox" nonce="mdQLp_bGobZdlcRog1-T7g">/* chunk_style_07fdc109-b1b6-4df4-8511-951a59c2a675 */
+</style>
+<style data-chunk-uuid="78729ea2-1063-4a04-a3bf-0dfc9c61b3a9" class="kevlar_global_styles" nonce="mdQLp_bGobZdlcRog1-T7g">/* chunk_style_78729ea2-1063-4a04-a3bf-0dfc9c61b3a9 */
+</style>
+<meta content="rgba(255, 255, 255, 0.98)" name="theme-color"></meta>
+<link href="https://www.youtube.com/opensearch?locale=en_GB" rel="search" title="YouTube" type="application/opensearchdescription+xml"></link>
+<link crossorigin="use-credentials" href="/manifest.webmanifest" rel="manifest"></link>
+<script data-chunk-uuid="a627d475-e416-41e7-9975-ffd4518bc4b1" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_a627d475-e416-41e7-9975-ffd4518bc4b1
+</script>
+<script data-chunk-uuid="6c59322f-ff48-47d5-b225-ab563edbc2ef" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_6c59322f-ff48-47d5-b225-ab563edbc2ef
+</script>
+<script data-chunk-uuid="1e0e77cf-b1e2-43f8-9367-16dccd078150" nonce="D1-qG8YtC9mZN-wGGrOp6g">// chunk_script_1e0e77cf-b1e2-43f8-9367-16dccd078150
+</script>
+
+        ```
+        

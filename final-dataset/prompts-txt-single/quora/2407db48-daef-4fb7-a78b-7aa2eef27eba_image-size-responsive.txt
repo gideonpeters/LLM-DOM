@@ -1,0 +1,94 @@
+
+        You are a web performance expert. 
+        Based on the following Lighthouse audit issue: 
+       
+        __________________
+        "
+            1. image-size-responsive => Serves images with low resolution: Image natural dimensions should be proportional to the display size and the pixel ratio to maximize image clarity. [Learn how to provide responsive images](https://web.dev/articles/serve-responsive-images).
+ 
+
+            "
+        __________________
+
+        Due to the huge token size of HTML files, 
+        You are given the HTML in chunks, one at a time. 
+        Please modify each HTML code chunk to resolve the performance issue given above.
+
+        Make sure you:
+        1. Remember the code is split into chunks and you are only receiving one chunk at a time, there might be some unclosed or cut elements, do not worry about that.
+        2. Consider that a chunk might be a part of a larger element, so the code might not be complete.
+        3. Consider that the HTML as a whole is from production and might be minified, uglified or compressed.
+        4. DO NOT modify class names
+        5. DO NOT remove any comments already in the code.
+        6. DO NOT change any styles or functionalities of the code.
+        7. DO NOT change the structure of the code.
+        8. DO NOT change the order of the code.
+        9. DO NOT remove critical elements.
+        10. If any optimizations are made, return `<!-- Optimized by LLM -->` at the beginning point of only the changed portion
+           and `<!-- End of Optimization: {audit_key of issue being resolved} => {one line short description of elements/things resolved} -->` at the end of the changed portion. 
+           Do not indicate any resolution outside of the End of Optimization comment, where there are multiple resolutions being made, seperate them with commas within the End of optimization comment.
+        11. Return the modified HTML code alone, making only necessary changes for performance optimization.
+        12. If no optimizations are possible, return the original code.
+        13. Never add any additional comments to the code besides that of the instruction in #7.
+        14. If the change is within a `<style>` tag, replace the HTML comment with a CSS comment.
+
+        The original HTML code is as follows:
+
+        ```html
+        
+<div id="staticError" style="display: none;">
+<div style="height: 100vh; display: flex; font-size: 15px;background-color: #fff; color: #282829;flex-direction: column; align-items: center; justify-content: center;font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;">
+<svg height="24px" viewbox="0 0 24 24" width="24px">
+<g fill="none" fillrule="evenodd" id="error" stroke="none" transform="translate(3.000000, 3.000000)">
+<path classname="icon_svg-fill_as_stroke" d="M9,12 C9.55228475,12 10,12.4477153 10,13 C10,13.5522847 9.55228475,14 9,14 C8.44771525,14 8,13.5522847 8,13 C8,12.4477153 8.44771525,12 9,12 Z" fill="#666666" fillrule="nonzero">
+</path>
+<path classname="icon_svg-stroke" d="M9,9.5 L9,4.5 L9,9.5 Z M9,18 C4.029,18 0,13.971 0,9 C0,4.029 4.029,0 9,0 C13.971,0 18,4.029 18,9 C18,13.971 13.971,18 9,18 Z" stroke="#666" strokelinecap="round" strokewidth='1.5'>
+</path>
+</g>
+</svg>
+<p style="text-align: center; margin-top: 8px; max-width: 60vw;margin-bottom: 16px;">
+     Un problème est survenu. Veuillez patienter et réessayer plus tard.
+    </p>
+<button onclick="location.reload();" style="padding: 8px 16px;font-size: 15px; background-color: #2E69FF; color: #fff;border: 0; border-radius: 9999em; appearance: none;cursor:pointer;-webkit-appearance: none;font-family:-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;">
+     Réessayer
+    </button>
+</div>
+</div>
+<script data-chunk-uuid="95a76f23-0ffe-49c7-86cb-a1fe02cd970a" type="text/javascript">// chunk_script_95a76f23-0ffe-49c7-86cb-a1fe02cd970a
+</script>
+<div class="" id="loader" style="height: calc(100vh - 50px);margin-top: 50px;display: flex;font-size: 15px;background-color: #fff;flex-direction: column;align-items: center;justify-content: center;font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif">
+<div style="position: fixed;top: 0;left: 0;right: 0;height: 50px;background-color: #fff;border-bottom: 1px solid rgb(222, 224, 225);box-shadow: 0 3px 6px rgba(0, 0, 0, 0.04)">
+</div>
+<style data-chunk-uuid="71708005-a099-4b06-a30e-a95c8cfc2076">/* chunk_style_71708005-a099-4b06-a30e-a95c8cfc2076 */
+</style>
+<svg fill="none" height='24' viewbox="0 0 24 24" width='24' xmlns="http://www.w3.org/2000/svg">
+<path class="icon_svg-fill_as_stroke" d="M20.7364 19.4633L18.9688 17.6952C20.2382 16.1439 21.0001 14.161 21.0001 12C21 7.02939 16.9705 3 12 3C7.02939 3 3 7.02939 3 12C3 16.9705 7.02948 20.9999 12 21C12.0114 21 12.0226 20.9996 12.0339 20.9996H20.0999C20.9016 20.9996 21.3032 20.0303 20.7364 19.4633ZM6.59998 12C6.59998 9.01765 9.01765 6.59998 12 6.59998C14.9823 6.59998 17.3999 9.01765 17.4 12C17.4 14.9823 14.9823 17.3999 12 17.3999C9.01765 17.4 6.59998 14.9823 6.59998 12Z" fill="#B92B27">
+</path>
+</svg>
+<div style="height: 3px;width: 20px;position: relative;border-radius: 1000px;margin-top: 6px;overflow: hidden;animation: entrance .15s ease-in 1s 1 both">
+<div style="position: absolute;top: 0px;bottom: 0px;left: 0px;width: 100%;background-color: rgba(0, 0, 0, 0.2);border-radius: 1000px;animation: loader-line 1.5s cubic-bezier(0.83, 0, 0.17, 1) 1s infinite both;transform-origin: left center;opacity: 0">
+</div>
+</div>
+</div>
+<script data-chunk-uuid="d49113f3-9186-490a-a2d0-52e3a96fc0f8" type="text/javascript">// chunk_script_d49113f3-9186-490a-a2d0-52e3a96fc0f8
+</script>
+<div id="root">
+</div>
+<noscript>
+   Veuillez activer Javascript et réactualiser la page pour continuer
+  </noscript>
+<script data-chunk-uuid="b54698d9-dca2-44f9-822b-d04aa21d4a24" type="text/javascript">// chunk_script_b54698d9-dca2-44f9-822b-d04aa21d4a24
+</script>
+<script data-chunk-uuid="f009d264-e33a-423d-93e5-ebe55244170b" type="text/javascript">// chunk_script_f009d264-e33a-423d-93e5-ebe55244170b
+</script>
+<script data-chunk-uuid="d8cc6fd0-f9a7-409c-8368-1d7359ce77a0" type="text/javascript">// chunk_script_d8cc6fd0-f9a7-409c-8368-1d7359ce77a0
+</script>
+<script data-chunk-uuid="38f6f0f0-682b-4685-bb34-a70bc5626a2a" type="text/javascript">// chunk_script_38f6f0f0-682b-4685-bb34-a70bc5626a2a
+</script>
+<script data-chunk-uuid="6a510ead-730b-4862-bac3-dc8825ef047d" type="text/javascript">// chunk_script_6a510ead-730b-4862-bac3-dc8825ef047d
+</script>
+<script data-chunk-uuid="24bc373e-b3e7-4ee2-b778-38039d51b2b2" type="text/javascript">// chunk_script_24bc373e-b3e7-4ee2-b778-38039d51b2b2
+</script>
+
+        ```
+        
