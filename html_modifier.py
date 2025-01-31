@@ -20,102 +20,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# OPENAI_KEY = os.getenv("OPENAI_API_KEY")
+OPENAI_KEY = os.getenv("OPENAI_API_KEY")
 TOKEN_LIMIT = 12000
 MAX_LIMIT = 16100
-
-ref_api_keys = [
-    {
-        "api_key": os.getenv("OPENAI_API_KEY_ME"),
-        "key": "me",
-        "rate_limit": 2000000,
-        "tokens_used": 0,
-        "no_of_requests": 0,
-        "last_request": time.time(),
-    },
-     {
-        "api_key": os.getenv("OPENAI_API_KEY_ALOR"),
-        "key": "alor",
-        "rate_limit": 20000000,
-        "tokens_used": 0,
-        "no_of_requests": 0,
-        "last_request": time.time(),
-    },
-     {
-        "api_key": os.getenv("OPENAI_API_KEY_CAREN"),
-        "key": "caren",
-        "rate_limit": 2000000,
-        "tokens_used": 0,
-        "no_of_requests": 0,
-        "last_request": time.time(),
-    },
-     {
-        "api_key": os.getenv("OPENAI_API_KEY_MAYRA"),
-        "key": "mayra",
-        "rate_limit": 2000000,
-        "tokens_used": 0,
-        "no_of_requests": 0,
-        "last_request": time.time(),
-    },
-     {
-        "api_key": os.getenv("OPENAI_API_KEY_CHAIMA"),
-        "key": "chaima",
-        "rate_limit": 2000000,
-        "tokens_used": 0,
-        "no_of_requests": 0,
-        "last_request": time.time(),
-    },
-    {
-        "api_key": os.getenv("OPENAI_API_KEY_WAMIRI"),
-        "key": "wamiri",
-        "rate_limit": 2000000,
-        "tokens_used": 0,
-        "no_of_requests": 0,
-        "last_request": time.time(),
-    }
-]
-
-
-def get_existing_tokens_usage():
-    existing_token_file = "tokens_usage.json"
-
-    existing_usage = []
-    if os.path.exists(existing_token_file):
-        with open(existing_token_file, 'r') as file:
-            existing_usage = json.load(file)
-
-    # existing_usage = []
-    for usage in existing_usage:
-        for key in ref_api_keys:
-            if key['key'] == usage['key']:
-                usage['api_key'] = key['api_key']
-                
-    return existing_usage
-
-def save_tokens_usage(prompt: str, api_key, estimator: callable):
-    try:
-        existing_token_file = "tokens_usage.json"
-
-        existing_usage = get_existing_tokens_usage()
-
-        api_keys = existing_usage
-
-        # Update token usage
-        for key in api_keys:
-            if key['api_key'] == api_key:
-                key['tokens_used'] += estimator(prompt)
-                key['no_of_requests'] += 1
-                key['last_request'] = time.time()
-
-        api_keys_copy = api_keys.copy()
-        for key in api_keys_copy:
-            key.pop("api_key")
-
-        with open(existing_token_file, 'w') as file:
-            json.dump(api_keys_copy, file, indent=4)
-
-    except Exception as e:
-        print(f"Error saving token usage: {e}")
 
 # Class to split HTML into chunks and send each chunk to the LLM for modification
 # Directories
@@ -138,18 +45,14 @@ def save_tokens_usage(prompt: str, api_key, estimator: callable):
 class HTMLModifier:
     def __init__(self, html, dom_name):
         # check_for_existing_tokens_usage()
-        self.api_key = os.getenv("OPENAI_API_KEY_ALOR")
-
-        if self.api_key is None:
-            raise Exception("All API keys have exceeded their rate limits.")
-
+        self.api_key = OPENAI_KEY
         self.html = html
         self.max_tokens = TOKEN_LIMIT
-        self.model = "gpt-4o-mini"
-        self.experiment_name = "html_modifier_batch_0001B-alpha"
+        self.model = "gpt-4o"
+        self.experiment_name = "html_modifier_batch_0001QWWB-alpha"
         self.dom_name = dom_name
         self.no_of_modifications = 0
-        self.temperature = 0.2
+        self.temperature = 0
         self.mode = "single"
         self.audits = {}
         self.formatted_audit_text = ""

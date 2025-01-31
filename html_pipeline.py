@@ -119,7 +119,7 @@ class HTMLPipeline:
 
 def run_pipeline(experiment: str, audit_key=None):
     pipeline = HTMLPipeline()
-    pipeline.experiment_name = "xDOM-00001-single"
+    pipeline.experiment_name = "xDOM-00001DERT-single"
     pipeline.mode = "single"
 
     # Chunk and modify HTML
@@ -133,8 +133,8 @@ def run_pipeline(experiment: str, audit_key=None):
 if  __name__ == "__main__":
     experiments = [
         # 'airbnb', 
-        # 'aliexpress', 
-                   'ebay', 
+        'aliexpress', 
+                #    'ebay', 
                 # 'facebook', 
                 #    'github', 'linkedin', 
                 #    'medium', 'netflix', 

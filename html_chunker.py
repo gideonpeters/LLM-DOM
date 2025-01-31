@@ -257,7 +257,7 @@ class HTMLChunker:
 
         return all_chunks
 
-def rahhh():
+def main():
     files_to_be_chunked_directory = "extracted-doms/original/"
     chunked_file_directory = "chunked-doms/v2/"
 
@@ -317,4 +317,4 @@ def rahhh():
             print(f"Skipping {filename}")
 
 if __name__ == "__main__":
-    rahhh()
+    main()
