@@ -94,7 +94,7 @@
       "score": null,
       "scoreDisplayMode": "error",
       "errorMessage": "Chrome didn't collect any screenshots during the page load. Please make sure there is content visible on the page, and then try re-running Lighthouse. (NO_SCREENSHOTS)",
-      "errorStack": "LighthouseError: NO_SCREENSHOTS\n    at file:///Users/gideonpeters/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/computed/speedline.js:36:15"
+      "errorStack": "LighthouseError: NO_SCREENSHOTS\n    at file:///Users/username/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/computed/speedline.js:36:15"
     },
     "screenshot-thumbnails": {
       "id": "screenshot-thumbnails",
@@ -103,7 +103,7 @@
       "score": null,
       "scoreDisplayMode": "error",
       "errorMessage": "Chrome didn't collect any screenshots during the page load. Please make sure there is content visible on the page, and then try re-running Lighthouse. (NO_SCREENSHOTS)",
-      "errorStack": "LighthouseError: NO_SCREENSHOTS\n    at file:///Users/gideonpeters/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/computed/speedline.js:36:15"
+      "errorStack": "LighthouseError: NO_SCREENSHOTS\n    at file:///Users/username/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/computed/speedline.js:36:15"
     },
     "final-screenshot": {
       "id": "final-screenshot",
@@ -112,7 +112,7 @@
       "score": null,
       "scoreDisplayMode": "error",
       "errorMessage": "Chrome didn't collect any screenshots during the page load. Please make sure there is content visible on the page, and then try re-running Lighthouse. (NO_SCREENSHOTS)",
-      "errorStack": "LighthouseError: NO_SCREENSHOTS\n    at FinalScreenshot.audit (file:///Users/gideonpeters/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/audits/final-screenshot.js:43:13)\n    at async Runner._runAudit (file:///Users/gideonpeters/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/runner.js:424:23)\n    at async Runner._runAudits (file:///Users/gideonpeters/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/runner.js:338:27)\n    at async Runner.audit (file:///Users/gideonpeters/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/runner.js:57:32)\n    at async runLighthouse (file:///Users/gideonpeters/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/gideonpeters/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/cli/index.js:10:1"
+      "errorStack": "LighthouseError: NO_SCREENSHOTS\n    at FinalScreenshot.audit (file:///Users/username/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/audits/final-screenshot.js:43:13)\n    at async Runner._runAudit (file:///Users/username/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/runner.js:424:23)\n    at async Runner._runAudits (file:///Users/username/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/runner.js:338:27)\n    at async Runner.audit (file:///Users/username/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/runner.js:57:32)\n    at async runLighthouse (file:///Users/username/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/username/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/cli/index.js:10:1"
     },
     "total-blocking-time": {
       "id": "total-blocking-time",
@@ -2557,7 +2557,7 @@
       "score": null,
       "scoreDisplayMode": "error",
       "errorMessage": "Chrome didn't collect any screenshots during the page load. Please make sure there is content visible on the page, and then try re-running Lighthouse. (NO_SCREENSHOTS)",
-      "errorStack": "LighthouseError: NO_SCREENSHOTS\n    at file:///Users/gideonpeters/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/computed/speedline.js:36:15"
+      "errorStack": "LighthouseError: NO_SCREENSHOTS\n    at file:///Users/username/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/computed/speedline.js:36:15"
     },
     "resource-summary": {
       "id": "resource-summary",
@@ -7221,7 +7221,7 @@
       "score": null,
       "scoreDisplayMode": "error",
       "errorMessage": "No navigations insights found",
-      "errorStack": "Error: No navigations insights found\n    at NavigationInsights.compute_ (file:///Users/gideonpeters/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/computed/navigation-insights.js:28:29)",
+      "errorStack": "Error: No navigations insights found\n    at NavigationInsights.compute_ (file:///Users/username/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/computed/navigation-insights.js:28:29)",
       "guidanceLevel": 2
     },
     "unminified-css": {

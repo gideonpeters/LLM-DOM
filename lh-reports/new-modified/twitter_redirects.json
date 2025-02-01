@@ -370,7 +370,7 @@
       "score": null,
       "scoreDisplayMode": "error",
       "errorMessage": "Fatal trace logic error - child cannot end after parent",
-      "errorStack": "Error: Fatal trace logic error - child cannot end after parent\n    at MainThreadTasks._createTaskRelationships (file:///Users/gideonpeters/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/lib/tracehouse/main-thread-tasks.js:318:27)\n    at MainThreadTasks._createTasksFromEvents (file:///Users/gideonpeters/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/lib/tracehouse/main-thread-tasks.js:396:21)\n    at MainThreadTasks.getMainThreadTasks (file:///Users/gideonpeters/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/lib/tracehouse/main-thread-tasks.js:575:35)\n    at MainThreadTasks.compute_ (file:///Users/gideonpeters/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/computed/main-thread-tasks.js:19:29)",
+      "errorStack": "Error: Fatal trace logic error - child cannot end after parent\n    at MainThreadTasks._createTaskRelationships (file:///Users/username/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/lib/tracehouse/main-thread-tasks.js:318:27)\n    at MainThreadTasks._createTasksFromEvents (file:///Users/username/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/lib/tracehouse/main-thread-tasks.js:396:21)\n    at MainThreadTasks.getMainThreadTasks (file:///Users/username/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/lib/tracehouse/main-thread-tasks.js:575:35)\n    at MainThreadTasks.compute_ (file:///Users/username/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/computed/main-thread-tasks.js:19:29)",
       "guidanceLevel": 1
     },
     "bootup-time": {
@@ -380,7 +380,7 @@
       "score": null,
       "scoreDisplayMode": "error",
       "errorMessage": "Fatal trace logic error - child cannot end after parent",
-      "errorStack": "Error: Fatal trace logic error - child cannot end after parent\n    at MainThreadTasks._createTaskRelationships (file:///Users/gideonpeters/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/lib/tracehouse/main-thread-tasks.js:318:27)\n    at MainThreadTasks._createTasksFromEvents (file:///Users/gideonpeters/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/lib/tracehouse/main-thread-tasks.js:396:21)\n    at MainThreadTasks.getMainThreadTasks (file:///Users/gideonpeters/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/lib/tracehouse/main-thread-tasks.js:575:35)\n    at MainThreadTasks.compute_ (file:///Users/gideonpeters/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/computed/main-thread-tasks.js:19:29)",
+      "errorStack": "Error: Fatal trace logic error - child cannot end after parent\n    at MainThreadTasks._createTaskRelationships (file:///Users/username/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/lib/tracehouse/main-thread-tasks.js:318:27)\n    at MainThreadTasks._createTasksFromEvents (file:///Users/username/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/lib/tracehouse/main-thread-tasks.js:396:21)\n    at MainThreadTasks.getMainThreadTasks (file:///Users/username/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/lib/tracehouse/main-thread-tasks.js:575:35)\n    at MainThreadTasks.compute_ (file:///Users/username/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/computed/main-thread-tasks.js:19:29)",
       "guidanceLevel": 1
     },
     "uses-rel-preconnect": {
@@ -450,7 +450,7 @@
       "score": null,
       "scoreDisplayMode": "error",
       "errorMessage": "Fatal trace logic error - child cannot end after parent",
-      "errorStack": "Error: Fatal trace logic error - child cannot end after parent\n    at MainThreadTasks._createTaskRelationships (file:///Users/gideonpeters/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/lib/tracehouse/main-thread-tasks.js:318:27)\n    at MainThreadTasks._createTasksFromEvents (file:///Users/gideonpeters/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/lib/tracehouse/main-thread-tasks.js:396:21)\n    at MainThreadTasks.getMainThreadTasks (file:///Users/gideonpeters/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/lib/tracehouse/main-thread-tasks.js:575:35)\n    at MainThreadTasks.compute_ (file:///Users/gideonpeters/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/computed/main-thread-tasks.js:19:29)"
+      "errorStack": "Error: Fatal trace logic error - child cannot end after parent\n    at MainThreadTasks._createTaskRelationships (file:///Users/username/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/lib/tracehouse/main-thread-tasks.js:318:27)\n    at MainThreadTasks._createTasksFromEvents (file:///Users/username/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/lib/tracehouse/main-thread-tasks.js:396:21)\n    at MainThreadTasks.getMainThreadTasks (file:///Users/username/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/lib/tracehouse/main-thread-tasks.js:575:35)\n    at MainThreadTasks.compute_ (file:///Users/username/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/computed/main-thread-tasks.js:19:29)"
     },
     "network-requests": {
       "id": "network-requests",
@@ -1711,7 +1711,7 @@
       "score": null,
       "scoreDisplayMode": "error",
       "errorMessage": "Fatal trace logic error - child cannot end after parent",
-      "errorStack": "Error: Fatal trace logic error - child cannot end after parent\n    at MainThreadTasks._createTaskRelationships (file:///Users/gideonpeters/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/lib/tracehouse/main-thread-tasks.js:318:27)\n    at MainThreadTasks._createTasksFromEvents (file:///Users/gideonpeters/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/lib/tracehouse/main-thread-tasks.js:396:21)\n    at MainThreadTasks.getMainThreadTasks (file:///Users/gideonpeters/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/lib/tracehouse/main-thread-tasks.js:575:35)\n    at MainThreadTasks.compute_ (file:///Users/gideonpeters/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/computed/main-thread-tasks.js:19:29)"
+      "errorStack": "Error: Fatal trace logic error - child cannot end after parent\n    at MainThreadTasks._createTaskRelationships (file:///Users/username/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/lib/tracehouse/main-thread-tasks.js:318:27)\n    at MainThreadTasks._createTasksFromEvents (file:///Users/username/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/lib/tracehouse/main-thread-tasks.js:396:21)\n    at MainThreadTasks.getMainThreadTasks (file:///Users/username/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/lib/tracehouse/main-thread-tasks.js:575:35)\n    at MainThreadTasks.compute_ (file:///Users/username/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/computed/main-thread-tasks.js:19:29)"
     },
     "metrics": {
       "id": "metrics",
@@ -1859,7 +1859,7 @@
       "score": null,
       "scoreDisplayMode": "error",
       "errorMessage": "Fatal trace logic error - child cannot end after parent",
-      "errorStack": "Error: Fatal trace logic error - child cannot end after parent\n    at MainThreadTasks._createTaskRelationships (file:///Users/gideonpeters/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/lib/tracehouse/main-thread-tasks.js:318:27)\n    at MainThreadTasks._createTasksFromEvents (file:///Users/gideonpeters/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/lib/tracehouse/main-thread-tasks.js:396:21)\n    at MainThreadTasks.getMainThreadTasks (file:///Users/gideonpeters/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/lib/tracehouse/main-thread-tasks.js:575:35)\n    at MainThreadTasks.compute_ (file:///Users/gideonpeters/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/computed/main-thread-tasks.js:19:29)",
+      "errorStack": "Error: Fatal trace logic error - child cannot end after parent\n    at MainThreadTasks._createTaskRelationships (file:///Users/username/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/lib/tracehouse/main-thread-tasks.js:318:27)\n    at MainThreadTasks._createTasksFromEvents (file:///Users/username/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/lib/tracehouse/main-thread-tasks.js:396:21)\n    at MainThreadTasks.getMainThreadTasks (file:///Users/username/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/lib/tracehouse/main-thread-tasks.js:575:35)\n    at MainThreadTasks.compute_ (file:///Users/username/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/computed/main-thread-tasks.js:19:29)",
       "guidanceLevel": 1
     },
     "third-party-facades": {
@@ -1869,7 +1869,7 @@
       "score": null,
       "scoreDisplayMode": "error",
       "errorMessage": "Fatal trace logic error - child cannot end after parent",
-      "errorStack": "Error: Fatal trace logic error - child cannot end after parent\n    at MainThreadTasks._createTaskRelationships (file:///Users/gideonpeters/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/lib/tracehouse/main-thread-tasks.js:318:27)\n    at MainThreadTasks._createTasksFromEvents (file:///Users/gideonpeters/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/lib/tracehouse/main-thread-tasks.js:396:21)\n    at MainThreadTasks.getMainThreadTasks (file:///Users/gideonpeters/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/lib/tracehouse/main-thread-tasks.js:575:35)\n    at MainThreadTasks.compute_ (file:///Users/gideonpeters/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/computed/main-thread-tasks.js:19:29)",
+      "errorStack": "Error: Fatal trace logic error - child cannot end after parent\n    at MainThreadTasks._createTaskRelationships (file:///Users/username/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/lib/tracehouse/main-thread-tasks.js:318:27)\n    at MainThreadTasks._createTasksFromEvents (file:///Users/username/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/lib/tracehouse/main-thread-tasks.js:396:21)\n    at MainThreadTasks.getMainThreadTasks (file:///Users/username/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/lib/tracehouse/main-thread-tasks.js:575:35)\n    at MainThreadTasks.compute_ (file:///Users/username/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/computed/main-thread-tasks.js:19:29)",
       "guidanceLevel": 3
     },
     "largest-contentful-paint-element": {
@@ -2078,7 +2078,7 @@
       "score": null,
       "scoreDisplayMode": "error",
       "errorMessage": "Fatal trace logic error - child cannot end after parent",
-      "errorStack": "Error: Fatal trace logic error - child cannot end after parent\n    at MainThreadTasks._createTaskRelationships (file:///Users/gideonpeters/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/lib/tracehouse/main-thread-tasks.js:318:27)\n    at MainThreadTasks._createTasksFromEvents (file:///Users/gideonpeters/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/lib/tracehouse/main-thread-tasks.js:396:21)\n    at MainThreadTasks.getMainThreadTasks (file:///Users/gideonpeters/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/lib/tracehouse/main-thread-tasks.js:575:35)\n    at MainThreadTasks.compute_ (file:///Users/gideonpeters/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/computed/main-thread-tasks.js:19:29)",
+      "errorStack": "Error: Fatal trace logic error - child cannot end after parent\n    at MainThreadTasks._createTaskRelationships (file:///Users/username/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/lib/tracehouse/main-thread-tasks.js:318:27)\n    at MainThreadTasks._createTasksFromEvents (file:///Users/username/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/lib/tracehouse/main-thread-tasks.js:396:21)\n    at MainThreadTasks.getMainThreadTasks (file:///Users/username/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/lib/tracehouse/main-thread-tasks.js:575:35)\n    at MainThreadTasks.compute_ (file:///Users/username/.nvm/versions/node/v21.5.0/lib/node_modules/lighthouse/core/computed/main-thread-tasks.js:19:29)",
       "guidanceLevel": 1
     },
     "non-composited-animations": {
