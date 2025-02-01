@@ -296,6 +296,11 @@ def main():
             for chunk in chunks[1:]:
                 first_chunk = merge_html_chunk(first_chunk, chunk)
 
+            
+            with open('testttingngg.html', 'w', encoding='utf-8') as f:
+                f.write(first_chunk)
+
+            
             # # merge chunks and store them
             # chunked_file = chunked_file_directory + filename + '.json'
             # created_chunks = []

@@ -144,6 +144,8 @@ if  __name__ == "__main__":
                 #    'youtube'
                    ]
 
+    # run_pipeline(experiments[0])
+
     current_experiment = experiments[0]
     print("Running pipeline for: ", current_experiment)
 

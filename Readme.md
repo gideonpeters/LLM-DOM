@@ -1,63 +1,54 @@
-#  Are Large Language Models Good Software Librarians? 
+#  Automated Resolution of Web Performance Issues Using LLMs: A Case Study of GPT-4o-mini
 
 Abstract:
 
-Performance engineering plays a vital role in web development, ensuring that web pages run smoothly in production. This involves following best practices to improve the user experience by speeding up page rendering, making interactions seamless, and preventing hardware overloads that can make pages unresponsive. However, web performance optimization can be time-consuming for developers, who often have to manually address issues uncovered during performance analysis. Automating this process could save developers time, allowing them to focus on other important tasks and speeding up the delivery of performant features to users. 
-Following recent advancements in Large Language Models (LLMs), this paper evaluates the effectiveness of GPT-4o in automating the resolution of web performance issues. For this purpose, we extract the DOM trees of 15 popular websites in production (e.g., Facebook) and generate performance reports using Lighthouse. We then feed the audits in the generated reports along with the corresponding DOM trees into GPT-4o to locate and resolve the performance issues. Finally, we regenerate performance reports for the updated DOM trees, assessing if and how the performance issues are resolved. Our study lays the groundwork for automating web performance issue resolution using LLMs, offering insights into these models' HTML understanding for web performance tasks. Additionally, we provide a dataset of over 200 HTML chunks, split into more than 3,000 prompts, covering 67 different Lighthouse audit types for web performance tasks.
+Users demand fast, seamless experiences when using webpages, while developers face the challenge of meeting these expectations within tight constraints. Creating dynamic and reliable applications often involves balancing innovation with performance optimization—a task that is both critical and time-consuming.
+    Performance engineering addresses this challenge, helping developers optimize webpages for speed, responsiveness, and reliability. However, the process often requires manual effort to analyze performance audits and implement fixes, diverting time from other important tasks. Recent advances in AI, particularly in Large Language Models (LLMs), have shown promise in automating complex tasks that involve natural language understanding and structured data processing. Leveraging LLMs for web performance optimization could transform how developers address performance issues, reducing effort and accelerating feature delivery. This study evaluates GPT-4o-mini’s effectiveness in automating the resolution of web performance issues. For this purpose, we first extracted the Document Object Model (DOM) trees of 15 popular webpages (e.g., Facebook), and then we used Lighthouse to generate performance audits. Subsequently, we passed the extracted DOM trees and their corresponding audits through GPT-4o-mini for resolution. Our study uncovers 67 unique audits which we categorize into seven types. By comparing the audits of the original webpages and that of the GPT-modified webpages, our results show that GPT-4o-mini resolved all SEO or Accessibility related audit issues. We also observed a 14\% decrease in runtime performance issues. However, GPT-4o-mini significantly increased five audit types, with the majority of issues being hallucinated changes. Our study demonstrates the potential of LLMs like GPT-4o-mini to facilitate web development by automating critical performance optimization tasks, offering insights into the feasibility of automating this traditionally manual process. However, it also emphasizes the need for supervision of these tasks. 
 
-##  Directories
+## Directories
 
-`final_dataset.zip` - contains originally extracted DOMs, their chunks, lighthouse reports of original DOMs, lighthouse reports of modified DOMs, prompts and response times of all experiments.
+### Dataset
 
-`scripts_and_data.zip` includes the following directories:
+The `dataset` directory contains the following:
 
-* **data**
-    * **processed_data** (directory containing processed data for chatgpt and human generated code)
-    * **raw_data** (directory containing raw data)
-* **scripts** (directory containing scripts used in the project)
-    * **code_generator.py** (prompt creation and code generation using GPT-3.5 Turbo)
-    * **data_preprocessing.py** (extracts and pre-processes the questions and accepted code snippets from the pickle files)
-    * **doctor.py** (categorizes libraries into standard, third-party, or other)
-    * **hospital.py** (pipeline to execute nurse, doctor, and psychiatrist sequentially)
-    * **lib_io_dependencies.py** (extracts the dependencies of libraries using the libraries.io api)
-    * **lib_io_metadata.py** (extracts various metadata of libraries using the libraries.io api)
-    * **lib_io_published_date.py** (extracts published dates of libraries using the libraries.io api)
-    * **nurse.py** (extracts import statements from the code snippets, always returns the parent)
-    * **psychiatrist.py** (identifies deprecated libraries or libraries explicitly mentioned in the question)
-* **README.md** (the file you are currently reading)
+- **Originally Extracted DOMs**: The original DOM trees extracted from the webpages.
+- **DOM Chunks**: Smaller chunks of the DOM trees, used for processing by GPT-4o-mini.
+- **Lighthouse Reports of Original DOMs**: Performance audits generated by Lighthouse for the original DOM trees.
+- **Lighthouse Reports of Modified DOMs**: Performance audits generated by Lighthouse for the modified DOM trees.
+- **Prompts and Response Times**: The prompts used to interact with GPT-4o-mini and the response times for each experiment.
 
-##  Getting Started
+### Scripts
 
-`pip install -r requirements.txt`
+The `scripts` directory contains the following Python scripts:
 
-##  Data preparation (raw_data)
+- **dom_extractor.py**: Extracts the DOM tree from a webpage.
+- **dom_analyser.py**: Analyzes the DOM tree for its attributes and hierarchical information.
+- **html_mapper.py**: Maps the structure of the HTML content.
+- **html_chunker.py**: Breaks down the DOM tree into smaller chunks for processing.
+- **html_distance_calculator.py**: Calculates the differences between the original and modified DOM trees.
+- **html_modifier.py**: Modifies the DOM tree based on GPT-4o-mini's recommendations.
+- **html_pipeline.py**: Orchestrates the entire process of DOM extraction, analysis, and modification.
+- **report_generator.py**: Generates performance reports using Lighthouse.
+- **requirements.txt**: Lists the Python dependencies required for the project.
+- **Dockerfile**: Defines the Docker image for the project.
+- **docker-compose.yml**: Configures the Docker containers for the project.
+- **entry-point.sh**: The entry point script for the Docker container.
 
-The `pickle` files in the `raw_data` directory contain the raw dataset. 
+## Getting Started
 
-`data_preprocessing.py` extracts the code and the questions to `raw_code_snippets.csv` (the accepted code) and `raw_questions.csv`. Then, it identifies and selects questions for which the corresponding accepted code contains at least one import statement (`import_code_snippets.csv`, `import_questions.csv`).
+To get started with the project, follow these steps:
 
-The code used for the analysis in this paper is in `chatgpt_output.zip`. This contains text files named after the Stack Overflow question ID. Each text file contains the question, the prompt, the accepted code snippet, and ChatGPT-generated code. These files were generated with `code_generator.py`. 
+1. Install the required Python dependencies:
+   ```sh
+   pip install -r requirements.txt
 
-## Analysis (processed_data)
+2. Run the desired Python script:
+    ```sh
+    python script_name.py
 
-Note: The analysis presented below is for ChatGPT-generated code, but we repeated the same process for human-generated code using the same scripts. 
+## Audit Generation using Lighthouse
 
-`hospital.py` will sequentially execute the scripts `nurse.py`, `doctor.py`, and `psychiatrist.py`. 
-
-`nurse.py` - Extracts the import statements from `import_code_snippets.csv`, then extracts the libraries from `import_statements.csv`.  
-* Input: `import_code_snippets.csv`
-* Output: `llm_triaged_libs.csv`
-
-`doctor.py` - Determines if a library is a standard Python library or a third-party library. If the library is neither, it is categorized as "None". 
-* Input: `triaged_libs.csv`
-* Output: `llm_diagnosed_libs.csv`
-
-`psychiatrist.py` - Determines if "None" libraries are deprecated or hard-coded in the question. 
-* Input: `llm_diagnosed_libs.csv`
-* Output: `llm_psych_report.csv`
-
-The scripts `lib_io_dependencies.py`, `lib_io_metadata.py`, and `lib_io_published_date.py` are scripts to mine the metadata of the third-party libraries. 
+To generate performance audits using Lighthouse, run the following command:
 
 ```sh
-    docker run --shm-size=1g -dit -p 8000:8000 report-generator
-```
+docker run --shm-size=1g -dit -p 8000:8000 report-generator
